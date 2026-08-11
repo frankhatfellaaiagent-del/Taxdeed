@@ -24,10 +24,17 @@ def load_run_records(run_dir: str | Path) -> list[AuctionRecord]:
     run_dir = Path(run_dir)
     records: list[AuctionRecord] = []
     for path in sorted(run_dir.glob("*.json")):
-        if path.name in ("run_meta.json", "excluded_foreclosure.json", "findings.json", "status.json"):
+        if path.name in ("run_meta.json", "excluded_foreclosure.json", "findings.json",
+                         "status.json", "counties.json"):
             continue
-        for row in json.loads(path.read_text(encoding="utf-8")):
-            records.append(AuctionRecord.from_dict(row))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        # County record files are lists of dicts; skip anything else that
+        # happens to live in the run dir.
+        if not isinstance(data, list):
+            continue
+        for row in data:
+            if isinstance(row, dict):
+                records.append(AuctionRecord.from_dict(row))
     return records
 
 
