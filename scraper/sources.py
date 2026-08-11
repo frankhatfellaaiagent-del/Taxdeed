@@ -12,7 +12,7 @@ import random
 import re
 import time
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 log = logging.getLogger(__name__)
 
@@ -85,6 +85,9 @@ class LiveSource:
         self._headless = headless
         self._nav_timeout_ms = nav_timeout_ms
         self._app_ext: dict[str, str] = {}  # host root -> "cfm" | "cgi"
+        # Some county certs only cover the bare host, others only www.
+        # (e.g. marion/alachua fail on www.). Learned per host on first error.
+        self._host_swap: dict[str, str] = {}
 
     def _ensure(self):
         if self._page is not None:
@@ -100,11 +103,28 @@ class LiveSource:
         self._page = ctx.new_page()
         self._page.set_default_navigation_timeout(self._nav_timeout_ms)
 
+    @staticmethod
+    def _toggle_www(host: str) -> str:
+        return host[4:] if host.startswith("www.") else "www." + host
+
     def _goto(self, url: str, wait_selector: str | None = None) -> str:
         self._ensure()
+        host = urlparse(url).netloc
+        if host in self._host_swap:
+            url = url.replace(host, self._host_swap[host], 1)
         self.rate.wait()
         log.debug("GET %s", url)
-        self._page.goto(url, wait_until="domcontentloaded")
+        try:
+            self._page.goto(url, wait_until="domcontentloaded")
+        except Exception as e:
+            if "ERR_CERT" not in str(e):
+                raise
+            alt_host = self._toggle_www(urlparse(url).netloc)
+            alt_url = url.replace(urlparse(url).netloc, alt_host, 1)
+            log.warning("TLS cert mismatch on %s — retrying as %s", url, alt_url)
+            self.rate.wait()
+            self._page.goto(alt_url, wait_until="domcontentloaded")
+            self._host_swap[host] = alt_host
         if wait_selector:
             try:
                 self._page.wait_for_selector(wait_selector, timeout=15000)
