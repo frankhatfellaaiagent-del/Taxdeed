@@ -59,6 +59,11 @@ jobs:
         run: |
           python -m scraper -v run --counties "${{ github.event.inputs.counties || 'volusia' }}"
 
+      - name: Capture live pages (debug diagnostics)
+        if: always()
+        continue-on-error: true
+        run: python -m scraper capture --out output/debug
+
       - name: Show results in log
         if: always()
         run: |
@@ -87,6 +92,7 @@ jobs:
           name: pilot-run-outputs
           path: |
             output/runs/
+            output/debug/
             config/counties.json
           if-no-files-found: warn
           retention-days: 30

@@ -16,6 +16,11 @@ from bs4 import BeautifulSoup
 from .models import AuctionRecord
 
 DATE_RE = re.compile(r"\b(\d{2}/\d{2}/\d{4})\b")
+# "FL - Miami-Dade Taxdeed" / "GA - Fulton Foreclosure" style option labels.
+SELECTOR_LABEL_RE = re.compile(
+    r"^\s*([A-Za-z]{2})\s*[-–—]\s*(.+?)\s*(tax\s*deed|taxdeed|foreclosure)\s*$", re.I
+)
+HOST_RE = re.compile(r"(?:[\w-]+\.)+real(?:taxdeed|foreclose)\.com", re.I)
 MONEY_RE = re.compile(r"-?[\d,]+(?:\.\d+)?")
 TIME_RE = re.compile(r"\b(\d{1,2}:\d{2}\s*(?:AM|PM)(?:\s*ET)?)\b", re.I)
 
@@ -107,15 +112,37 @@ def parse_county_selector(html: str, base_url: str = "") -> list[dict]:
             }
         )
 
+    def add_indexed_option(label: str):
+        # Opaque option value ("17") — the site's JS holds the URL mapping, so
+        # derive the host from the label using the platform's uniform naming:
+        # "FL - Marion Taxdeed" -> www.marion.realtaxdeed.com.
+        m = SELECTOR_LABEL_RE.match(label)
+        if not m:
+            return
+        state, county, kind_word = m.group(1).upper(), m.group(2), m.group(3).lower()
+        slug = re.sub(r"[^a-z0-9]", "", county.lower())
+        if not slug:
+            return
+        domain = "realtaxdeed.com" if "tax" in kind_word else "realforeclose.com"
+        add(f"{state} - {county} {m.group(3)}", f"https://www.{slug}.{domain}/")
+
     for select in soup.find_all("select"):
         for opt in select.find_all("option"):
-            add(opt.get_text(" ", strip=True), opt.get("value", ""))
+            label = opt.get_text(" ", strip=True)
+            val = (opt.get("value") or "").strip()
+            if val.startswith("http") or re.match(r"^[\w.-]+\.(com|org|net|gov)", val):
+                add(label, val)
+            else:
+                add_indexed_option(label)
     # Fallback: some skins render the selector as a link list.
     if not entries:
         for a in soup.find_all("a", href=True):
             href = a["href"]
             if "realtaxdeed.com" in href or "realforeclose.com" in href:
                 add(a.get_text(" ", strip=True), href)
+    # Last resort: hosts embedded in inline JS (the numeric-value mapping).
+    for host in sorted(set(h.lower() for h in HOST_RE.findall(html))):
+        add(host, "https://" + host + "/")
     return entries
 
 

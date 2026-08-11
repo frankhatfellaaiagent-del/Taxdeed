@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T04:08:46+00:00",
+  "generated_at": "2026-08-11T13:32:14+00:00",
   "seed_url": "https://www.volusia.realtaxdeed.com/",
   "counties": [
     {
@@ -122,6 +122,13 @@
       "label": "FL - Putnam Taxdeed"
     },
     {
+      "slug": "sumter",
+      "name": "Sumter",
+      "url": "https://www.sumter.realtaxdeed.com/",
+      "host": "www.sumter.realtaxdeed.com",
+      "label": "FL - Sumter Taxdeed"
+    },
+    {
       "slug": "volusia",
       "name": "Volusia",
       "url": "https://www.volusia.realtaxdeed.com",
@@ -170,6 +177,13 @@
       "url": "https://salesweb.civilview.com",
       "host": "salesweb.civilview.com",
       "state": "NJ",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "GA - Cobb Foreclosure",
+      "url": "https://www.cobb.realforeclose.com/",
+      "host": "www.cobb.realforeclose.com",
+      "state": "GA",
       "kind": "foreclosure"
     }
   ]

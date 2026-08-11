@@ -116,12 +116,40 @@ class LiveSource:
         return self._page.content()
 
     def home_html(self, county_slug: str, base_url: str) -> str | None:
-        return self._goto(base_url, wait_selector="select")
+        html = self._goto(base_url, wait_selector="select")
+        self._dismiss_modals()
+        return self._page.content()
+
+    def _dismiss_modals(self):
+        """Best-effort click-through of announcement/terms popups some county
+        skins show before any page content is usable."""
+        for sel in ["button:has-text('Accept')", "button:has-text('I Agree')",
+                    "button:has-text('Agree')", "button:has-text('OK')",
+                    "button:has-text('Continue')", "input[value*='Accept' i]",
+                    "a:has-text('Accept')", ".ui-dialog button"]:
+            try:
+                el = self._page.locator(sel).first
+                if el.count() > 0 and el.is_visible():
+                    el.click(timeout=3000)
+                    log.info("Dismissed a popup via %r", sel)
+                    self._page.wait_for_timeout(500)
+                    return
+            except Exception:
+                continue
 
     def calendar_pages(self, county_slug: str, base_url: str, months: int) -> list[str]:
         """Current month plus `months` following months, via the next-month arrow."""
+        # Land on the home page first: it establishes any session cookies and
+        # is where announcement popups appear.
+        try:
+            self._goto(base_url)
+            self._dismiss_modals()
+        except Exception as e:
+            log.warning("[%s] could not preload home page: %s", county_slug, e)
         url = urljoin(base_url, "/index.cgi?zaction=USER&zmethod=CALENDAR")
-        pages = [self._goto(url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")]
+        self._goto(url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
+        self._dismiss_modals()
+        pages = [self._page.content()]
         for _ in range(months):
             if not self._click_next_month():
                 break
