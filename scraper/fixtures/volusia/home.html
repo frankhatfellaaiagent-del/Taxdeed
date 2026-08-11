@@ -35,10 +35,20 @@
     <option value="www.volusia.realforeclose.com">FL - Volusia Foreclosure</option>
     <option value="www.fulton.realforeclose.com">GA - Fulton Foreclosure</option>
     <option value="salesweb.civilview.com">NJ - Camden Foreclosure</option>
-    <!-- Numeric-value options (the live site's actual shape): the URL must be
-         derived from the label. -->
-    <option value="23">FL - Sumter Taxdeed</option>
-    <option value="44">GA - Cobb Foreclosure</option>
+    <!-- Numeric-value options grouped by state (the live splash page's actual
+         shape): state comes from the optgroup, URL derived from the label. -->
+    <optgroup label="Arizona">
+      <option value="72">Apache Taxdeed</option>
+    </optgroup>
+    <optgroup label="Colorado">
+      <option value="118">Adams Treasurer Deed</option>
+    </optgroup>
+    <optgroup label="Florida">
+      <option value="23">Sumter Taxdeed</option>
+    </optgroup>
+    <optgroup label="Georgia">
+      <option value="44">Cobb Foreclosure</option>
+    </optgroup>
   </select>
 </div>
 </body>

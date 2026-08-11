@@ -20,7 +20,36 @@ DATE_RE = re.compile(r"\b(\d{2}/\d{2}/\d{4})\b")
 SELECTOR_LABEL_RE = re.compile(
     r"^\s*([A-Za-z]{2})\s*[-–—]\s*(.+?)\s*(tax\s*deed|taxdeed|foreclosure)\s*$", re.I
 )
+# "Volusia Taxdeed" / "Adams Treasurer Deed" style labels (state carried by the
+# enclosing <optgroup label="Florida">, as on the live splash page).
+COUNTY_KIND_RE = re.compile(
+    r"^\s*(.+?)\s+(tax\s*deed|taxdeed|foreclosure|treasurer\s*deed)\s*$", re.I
+)
 HOST_RE = re.compile(r"(?:[\w-]+\.)+real(?:taxdeed|foreclose)\.com", re.I)
+
+US_STATE_ABBREV = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR",
+    "california": "CA", "colorado": "CO", "connecticut": "CT", "delaware": "DE",
+    "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID",
+    "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
+    "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD",
+    "massachusetts": "MA", "michigan": "MI", "minnesota": "MN",
+    "mississippi": "MS", "missouri": "MO", "montana": "MT", "nebraska": "NE",
+    "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ",
+    "new mexico": "NM", "new york": "NY", "north carolina": "NC",
+    "north dakota": "ND", "ohio": "OH", "oklahoma": "OK", "oregon": "OR",
+    "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
+    "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT",
+    "vermont": "VT", "virginia": "VA", "washington": "WA",
+    "west virginia": "WV", "wisconsin": "WI", "wyoming": "WY",
+}
+
+
+def _state_abbrev(label: str) -> str:
+    label = (label or "").strip()
+    if len(label) == 2:
+        return label.upper()
+    return US_STATE_ABBREV.get(label.lower(), label)
 MONEY_RE = re.compile(r"-?[\d,]+(?:\.\d+)?")
 TIME_RE = re.compile(r"\b(\d{1,2}:\d{2}\s*(?:AM|PM)(?:\s*ET)?)\b", re.I)
 
@@ -83,7 +112,7 @@ def parse_county_selector(html: str, base_url: str = "") -> list[dict]:
             return "foreclosure"
         return "other"
 
-    def add(label: str, raw_url: str):
+    def add(label: str, raw_url: str, state: str = ""):
         label = re.sub(r"\s+", " ", label or "").strip()
         raw_url = (raw_url or "").strip()
         if not raw_url or raw_url in ("#", "javascript:void(0)"):
@@ -98,51 +127,73 @@ def parse_county_selector(html: str, base_url: str = "") -> list[dict]:
         if not host or host in seen:
             return
         seen.add(host)
-        state = ""
-        m = re.match(r"^\s*([A-Z]{2})\s*[-–]", label)
-        if m:
-            state = m.group(1)
+        if not state:
+            m = re.match(r"^\s*([A-Z]{2})\s*[-–—]", label)
+            if m:
+                state = m.group(1)
         entries.append(
             {
                 "label": label,
                 "url": raw_url,
                 "host": host,
-                "state": state,
+                "state": _state_abbrev(state),
                 "kind": classify(host, label),
             }
         )
 
-    def add_indexed_option(label: str):
-        # Opaque option value ("17") — the site's JS holds the URL mapping, so
-        # derive the host from the label using the platform's uniform naming:
-        # "FL - Marion Taxdeed" -> www.marion.realtaxdeed.com.
-        m = SELECTOR_LABEL_RE.match(label)
-        if not m:
-            return
-        state, county, kind_word = m.group(1).upper(), m.group(2), m.group(3).lower()
+    def derive_and_add(label: str, county: str, kind_word: str, state: str):
+        # Opaque option value — the site's JS holds the URL mapping, so derive
+        # the host from the platform's uniform naming:
+        # "Marion Taxdeed" (in the Florida group) -> www.marion.realtaxdeed.com
         slug = re.sub(r"[^a-z0-9]", "", county.lower())
         if not slug:
             return
-        domain = "realtaxdeed.com" if "tax" in kind_word else "realforeclose.com"
-        add(f"{state} - {county} {m.group(3)}", f"https://www.{slug}.{domain}/")
+        kw = kind_word.lower().replace(" ", "")
+        if "taxdeed" in kw:
+            domain = "realtaxdeed.com"
+        elif "foreclos" in kw:
+            domain = "realforeclose.com"
+        else:
+            return  # e.g. "Treasurer Deed" — different product, never FL taxdeed
+        add(label, f"https://www.{slug}.{domain}/", state=state)
+
+    def add_option(opt, state: str = ""):
+        label = opt.get_text(" ", strip=True)
+        val = (opt.get("value") or "").strip()
+        if val.startswith("http") or re.match(r"^[\w.-]+\.(com|org|net|gov)", val):
+            add(label, val, state=state)
+            return
+        # Opaque value: get state+county from the label ("FL - Marion Taxdeed")
+        # or county from the label with state from the optgroup ("Marion
+        # Taxdeed" under <optgroup label="Florida">).
+        m = SELECTOR_LABEL_RE.match(label)
+        if m:
+            derive_and_add(label, m.group(2), m.group(3), m.group(1).upper())
+            return
+        m = COUNTY_KIND_RE.match(label)
+        if m and state:
+            derive_and_add(label, m.group(1), m.group(2), state)
 
     for select in soup.find_all("select"):
+        for group in select.find_all("optgroup"):
+            state = _state_abbrev(group.get("label", ""))
+            for opt in group.find_all("option"):
+                add_option(opt, state=state)
         for opt in select.find_all("option"):
-            label = opt.get_text(" ", strip=True)
-            val = (opt.get("value") or "").strip()
-            if val.startswith("http") or re.match(r"^[\w.-]+\.(com|org|net|gov)", val):
-                add(label, val)
-            else:
-                add_indexed_option(label)
+            if opt.find_parent("optgroup") is None:
+                add_option(opt)
     # Fallback: some skins render the selector as a link list.
     if not entries:
         for a in soup.find_all("a", href=True):
             href = a["href"]
             if "realtaxdeed.com" in href or "realforeclose.com" in href:
                 add(a.get_text(" ", strip=True), href)
-    # Last resort: hosts embedded in inline JS (the numeric-value mapping).
-    for host in sorted(set(h.lower() for h in HOST_RE.findall(html))):
-        add(host, "https://" + host + "/")
+    # Last resort only (no labeled entries at all): hosts embedded in inline
+    # JS. These carry no state, and realtaxdeed.com is NOT Florida-only
+    # (Arizona uses it too), so this path exists just to give a human a lead.
+    if not entries:
+        for host in sorted(set(h.lower() for h in HOST_RE.findall(html))):
+            add(host, "https://" + host + "/")
     return entries
 
 
