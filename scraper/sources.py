@@ -256,8 +256,13 @@ class LiveSource:
         url = self._app_url(base_url, f"zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date_mmddyyyy}")
         self.last_auction_url = url
         pages = [self._goto(url, wait_selector="div.AUCTION_ITEM")]
-        # Paginate: RealAuction shows "Page N of M" with a right arrow.
+        # Paginate. The page can hold MULTIPLE paginated lists (e.g. an upper
+        # and lower area, each with its own "page ▸ of N" pager and ~10 items
+        # per page). Advance every right-arrow each round — an area already on
+        # its last page is a no-op — and stop when content stops changing.
+        # Downstream dedupe makes any overlap harmless.
         max_pages = self._read_max_pages()
+        prev = pages[0]
         for _ in range(max_pages - 1 if max_pages else 0):
             if not self._click_next_page():
                 break
@@ -265,31 +270,64 @@ class LiveSource:
                 self._page.wait_for_load_state("networkidle", timeout=8000)
             except Exception:
                 pass
-            pages.append(self._page.content())
+            self._page.wait_for_timeout(600)  # let AJAX-swapped items settle
+            html = self._page.content()
+            if html == prev:
+                break
+            pages.append(html)
+            prev = html
         return pages
 
     def _read_max_pages(self) -> int:
+        """Max page count across all pager areas on the page."""
+        counts = [1]
         try:
-            val = self._page.locator("input#maxCA, input[name='maxCA']").first.input_value(timeout=2000)
-            return int(re.sub(r"\D", "", val) or 1)
+            for sel in ("input#maxCA", "input[name='maxCA']", "input#maxWA", "input[name='maxWA']"):
+                loc = self._page.locator(sel)
+                for i in range(min(loc.count(), 4)):
+                    val = loc.nth(i).input_value(timeout=1000)
+                    if val and val.strip().isdigit():
+                        counts.append(int(val.strip()))
         except Exception:
             pass
         try:
             text = self._page.locator("body").inner_text(timeout=2000)
-            m = re.search(r"Page\s+\d+\s+of\s+(\d+)", text)
-            if m:
-                return int(m.group(1))
+            # Current page number often lives in an <input>, so the text reads
+            # "page of 3" (any case) — match with or without the number.
+            for m in re.finditer(r"page\s*\d*\s*of\s*(\d+)", text, re.I):
+                counts.append(int(m.group(1)))
         except Exception:
             pass
-        return 1
+        return max(counts)
 
     def _click_next_page(self) -> bool:
-        for sel in [".PageRight", "img[alt*='Next' i]", "a[title*='Next' i]", "#BID_WINDOW_CONTAINER .Head_C .PageRight"]:
+        """Click every next-page arrow on the page (each list area has its
+        own); returns True if at least one was clicked."""
+        clicked = 0
+        try:
+            arrows = self._page.locator(".PageRight")
+            n = arrows.count()
+            for i in range(min(n, 6)):
+                el = arrows.nth(i)
+                try:
+                    if el.is_visible():
+                        if clicked == 0:
+                            self.rate.wait()
+                        el.click(timeout=3000)
+                        clicked += 1
+                        self._page.wait_for_timeout(250)
+                except Exception:
+                    continue
+        except Exception:
+            pass
+        if clicked:
+            return True
+        for sel in ("img[alt*='Next' i]", "a[title*='Next' i]"):
             try:
                 el = self._page.locator(sel).first
-                if el.count() > 0:
+                if el.count() > 0 and el.is_visible():
                     self.rate.wait()
-                    el.click(timeout=5000)
+                    el.click(timeout=3000)
                     return True
             except Exception:
                 continue
