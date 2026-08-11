@@ -94,6 +94,13 @@ selector-flexible, don't hardcode one skin.
   to confirm nothing else broke, update fixtures if the new markup is now
   canonical, then re-run the live scrape for the affected counties only.
 
+## Dashboard
+
+If the user wants to watch the run, start `python -m scraper dashboard` in the
+background before scraping and tell them to open http://127.0.0.1:8777 — it
+shows live per-county progress, then the latest results and run history with
+Excel download links. It reads `output/` only; safe to leave running.
+
 ## Where things live
 
 - County list (generated): `config/counties.json`

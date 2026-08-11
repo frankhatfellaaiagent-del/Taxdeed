@@ -92,6 +92,25 @@ def write_county_outputs(out_dir: Path, slug: str, result: dict):
             w.writerow(row)
 
 
+def _write_status(out_dir: Path, meta: dict, current: str | None, total: int):
+    """Incremental heartbeat for the dashboard: rewritten after every county."""
+    status = {
+        "run_dir": str(out_dir),
+        "started_at": meta["started_at"],
+        "finished_at": meta.get("finished_at"),
+        "live": meta["live"],
+        "total_counties": total,
+        "current_county": current,
+        "counties": meta["counties"],
+    }
+    try:
+        (out_dir / "status.json").write_text(json.dumps(status, indent=2), encoding="utf-8")
+        pointer = out_dir.parent.parent / "current_run.json"  # output/current_run.json
+        pointer.write_text(json.dumps(status), encoding="utf-8")
+    except OSError as e:
+        log.warning("Could not write status heartbeat: %s", e)
+
+
 def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 2,
                skip_robots: bool = False) -> dict:
     """Scrape a list of counties sequentially. Never raises for a single county."""
@@ -104,6 +123,7 @@ def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 
         "counties": {},
     }
     all_excluded: list[dict] = []
+    _write_status(out_dir, meta, current=counties[0]["slug"] if counties else None, total=len(counties))
 
     for county in counties:
         slug = county["slug"]
@@ -135,9 +155,14 @@ def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 
             centry["error"] = f"{e.__class__.__name__}: {e}"
             centry["traceback"] = traceback.format_exc(limit=5)
             log.error("[%s] FAILED: %s (county skipped, run continues)", slug, e)
+        centry["finished_at"] = _now_iso()
         meta["counties"][slug] = centry
+        done = len(meta["counties"])
+        nxt = counties[done]["slug"] if done < len(counties) else None
+        _write_status(out_dir, meta, current=nxt, total=len(counties))
 
     meta["finished_at"] = _now_iso()
+    _write_status(out_dir, meta, current=None, total=len(counties))
     if all_excluded:
         (out_dir / "excluded_foreclosure.json").write_text(json.dumps(all_excluded, indent=2), encoding="utf-8")
     (out_dir / "run_meta.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")

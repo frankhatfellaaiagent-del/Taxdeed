@@ -35,7 +35,22 @@ python -m scraper report
 
 # Or all in one:
 python -m scraper run --counties volusia,polk
+
+# Watch it live: in a second terminal, then open http://127.0.0.1:8777
+python -m scraper dashboard
 ```
+
+### Dashboard
+
+`python -m scraper dashboard` serves a local page (stdlib only, binds to
+127.0.0.1) that refreshes every 3 seconds:
+
+- **Run in progress** — progress bar, county currently being scraped, and a
+  live feed of finished counties with ok/error/robots-skip status, record
+  counts, and warnings. Start a scrape in another terminal and watch it pull.
+- **Latest results** — auctions, NEW/CHANGED/REMOVED, buy-box matches,
+  county errors; auctions-by-county chart; per-county status table.
+- **Run history** — last 20 runs with links to download each Excel report.
 
 Outputs land in `output/runs/<UTC timestamp>/`:
 

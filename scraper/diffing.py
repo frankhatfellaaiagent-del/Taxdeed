@@ -24,7 +24,7 @@ def load_run_records(run_dir: str | Path) -> list[AuctionRecord]:
     run_dir = Path(run_dir)
     records: list[AuctionRecord] = []
     for path in sorted(run_dir.glob("*.json")):
-        if path.name in ("run_meta.json", "excluded_foreclosure.json", "findings.json"):
+        if path.name in ("run_meta.json", "excluded_foreclosure.json", "findings.json", "status.json"):
             continue
         for row in json.loads(path.read_text(encoding="utf-8")):
             records.append(AuctionRecord.from_dict(row))

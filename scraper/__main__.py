@@ -110,6 +110,17 @@ def cmd_report(args, run_dir: Path | None = None) -> int:
     out_path = Path(args.report_out) if getattr(args, "report_out", None) else run_dir / "tax_deed_scrub.xlsx"
     build_workbook(out_path, records, annotations, diff, run_meta, excluded)
 
+    by_county: dict[str, dict] = {}
+    for rec in records:
+        d = by_county.setdefault(rec.county, {"auctions": 0, "match": 0, "review": 0, "new": 0, "changed": 0})
+        d["auctions"] += 1
+        ann = annotations[rec.key()]
+        d["match"] += ann["buybox"] == "MATCH"
+        d["review"] += ann["buybox"] == "REVIEW"
+        st = diff["status"].get(rec.key(), "")
+        d["new"] += st == "NEW"
+        d["changed"] += st == "CHANGED"
+
     findings = {
         "run": str(run_dir),
         "previous_run": str(prev_dir) if prev_dir else None,
@@ -120,6 +131,7 @@ def cmd_report(args, run_dir: Path | None = None) -> int:
         "removed": len(diff["removed"]),
         "buybox_match": sum(1 for a in annotations.values() if a["buybox"] == "MATCH"),
         "buybox_review": sum(1 for a in annotations.values() if a["buybox"] == "REVIEW"),
+        "by_county": by_county,
         "anomalies": {"|".join(map(str, k)): a["anomalies"] for k, a in annotations.items() if a["anomalies"]},
         "changes": {"|".join(map(str, k)): v for k, v in diff["changes"].items()},
         "excluded_foreclosure": len(excluded),
@@ -158,6 +170,9 @@ def main(argv=None) -> int:
     p.add_argument("--buybox", help="Path to buybox.yaml (default config/buybox.yaml)")
     p.add_argument("--report-out", help="Excel output path (default <run>/tax_deed_scrub.xlsx)")
 
+    p = sub.add_parser("dashboard", help="Serve the local dashboard (watch runs live, browse results)")
+    p.add_argument("--port", type=int, default=8777)
+
     p = sub.add_parser("run", help="scrape + report in one command")
     add_common(p)
     p.add_argument("--counties")
@@ -181,6 +196,10 @@ def main(argv=None) -> int:
         return 0
     if args.cmd == "report":
         return cmd_report(args)
+    if args.cmd == "dashboard":
+        from .dashboard import serve
+        serve(port=args.port)
+        return 0
     if args.cmd == "run":
         run_dir = cmd_scrape(args)
         args.run = None
