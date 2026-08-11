@@ -13,10 +13,23 @@ tax-deed sanity check — foreclosure-looking rows are excluded and logged.
 
 ## Setup
 
+**Mac, no terminal needed:** after cloning, double-click in Finder:
+`Start Dashboard.command` (opens the dashboard in your browser and keeps it
+running), then `Run Demo Scrape.command` (sample data, no internet) or
+`Run Live Pilot.command` (real Volusia scrape). Leave the dashboard window open.
+
+**Terminal:**
+
 ```bash
 pip install -r requirements.txt
 playwright install chromium        # needed for live scraping only
 ```
+
+**Live pilot on GitHub's servers (no local setup):** the
+`Pilot scrape (live)` workflow (Actions tab) runs the real scrape on 1–3
+counties — trigger it with "Run workflow", results appear in the job log and
+as a downloadable artifact. It also runs automatically on pushes that touch
+the scraper.
 
 ## Usage
 

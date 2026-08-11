@@ -1,0 +1,96 @@
+name: Pilot scrape (live)
+
+# Live test of the scraper against the real RealAuction site, run on GitHub's
+# servers. Triggers: manual (Run workflow button) or any push to the dev branch
+# that touches the scraper. Keep this to 1-3 counties — it is a pilot, not the
+# weekly production run.
+
+on:
+  workflow_dispatch:
+    inputs:
+      counties:
+        description: "Comma-separated county slugs (keep small)"
+        default: "volusia"
+        required: false
+  push:
+    branches: [claude/florida-tax-deed-scraper-fqzwzd]
+    paths:
+      - "scraper/**"
+      - "config/**"
+      - "requirements.txt"
+      - ".github/workflows/pilot-scrape.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pilot-scrape
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Offline regression (fixtures)
+        run: |
+          python -m scraper discover --fixtures scraper/fixtures
+          python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots --out output/fixture-regression
+
+      - name: Live county discovery
+        id: discover
+        continue-on-error: true
+        run: python -m scraper -v discover
+
+      - name: Live pilot scrape
+        id: scrape
+        continue-on-error: true
+        run: |
+          python -m scraper -v run --counties "${{ github.event.inputs.counties || 'volusia' }}"
+
+      - name: Show results in log
+        if: always()
+        run: |
+          echo "discover outcome: ${{ steps.discover.outcome }}"
+          echo "scrape outcome:   ${{ steps.scrape.outcome }}"
+          echo "=================== config/counties.json (first 60 lines)"
+          head -60 config/counties.json || true
+          latest=$(ls -td output/runs/*/ 2>/dev/null | head -1 || true)
+          if [ -n "$latest" ]; then
+            echo "=================== $latest/run_meta.json"
+            cat "$latest/run_meta.json" || true
+            echo "=================== $latest/findings.json"
+            cat "$latest/findings.json" || true
+            for f in "$latest"*.csv; do
+              echo "=================== $f (first 5 rows)"
+              head -6 "$f" || true
+            done
+          else
+            echo "No live run directory produced."
+          fi
+
+      - name: Upload run outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-run-outputs
+          path: |
+            output/runs/
+            config/counties.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Fail job if live steps failed
+        if: steps.discover.outcome == 'failure' && steps.scrape.outcome == 'failure'
+        run: exit 1
