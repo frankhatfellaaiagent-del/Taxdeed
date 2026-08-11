@@ -59,7 +59,8 @@ def scrape_county(source, county: dict, months: int = 2) -> dict:
         if not pages or all(not p.strip() for p in pages):
             warnings.append(f"auction {date}: no page content")
             continue
-        page_url = urljoin(base_url, f"/index.cgi?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date}")
+        page_url = getattr(source, "last_auction_url", None) or urljoin(
+            base_url, f"/index.cgi?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date}")
         found_any = False
         for html in pages:
             items = parse_auction_items(html, page_url, county=slug, sale_date=date)

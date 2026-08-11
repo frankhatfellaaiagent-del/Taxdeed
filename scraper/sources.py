@@ -212,6 +212,7 @@ class LiveSource:
 
     def auction_pages(self, county_slug: str, base_url: str, date_mmddyyyy: str) -> list[str]:
         url = self._app_url(base_url, f"zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date_mmddyyyy}")
+        self.last_auction_url = url
         pages = [self._goto(url, wait_selector="div.AUCTION_ITEM")]
         # Paginate: RealAuction shows "Page N of M" with a right arrow.
         max_pages = self._read_max_pages()

@@ -50,6 +50,11 @@ def _diagnose(html: str, name: str):
         print(f"  {fr.name} src={fr.get('src')!r} id={fr.get('id')!r}")
     for s in soup.find_all("script", src=True)[:15]:
         print(f"  script src={s['src']!r}")
+    classes = sorted({c for el in soup.find_all(class_=True) for c in el.get("class", [])})
+    print(f"  distinct classes ({len(classes)}):", ", ".join(classes[:70]))
+    onclicks = sorted({el["onclick"][:80] for el in soup.find_all(onclick=True)})[:15]
+    if onclicks:
+        print("  onclick handlers:", *[f"\n    {o!r}" for o in onclicks])
     markers = {
         "dayid attr": len(soup.find_all(attrs={"dayid": True})),
         "CALBOX-ish class": len(soup.select("[class*=CAL]")),
@@ -122,23 +127,15 @@ def capture(url: str, out_dir: str | Path):
         except Exception as e:
             print(f"  jump-menu drive failed: {e.__class__.__name__}: {e}")
 
-        # 2. Calendar page: prefer clicking the app's own calendar link (the
-        # guessed CGI URL 404s on the new skin), fall back to the classic URL.
-        clicked = False
-        try:
-            link = src._page.locator("a", has_text=re.compile("calendar|tax deed sale", re.I)).first
-            if link.count() > 0:
-                print(f"\n  clicking calendar-ish link: {link.get_attribute('href')!r}")
-                link.click(timeout=8000)
-                src._page.wait_for_load_state("networkidle", timeout=10000)
-                clicked = True
-        except Exception as e:
-            print(f"  calendar link click failed: {e.__class__.__name__}")
-        if clicked:
-            cal_url = src._page.url
-        else:
-            cal_url = src._app_url(url, "zaction=USER&zmethod=CALENDAR")
+        # 2. Calendar page — same path the scraper takes (resolved app URL).
+        cal_url = src._app_url(url, "zaction=USER&zmethod=CALENDAR")
+        if src._page.url.rstrip("/") != cal_url.rstrip("/"):
             src._goto(cal_url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
+        else:
+            try:
+                src._page.wait_for_selector("[dayid], .CALBOX, .CALDAYBOX", timeout=15000)
+            except Exception:
+                pass
         src._dismiss_modals()
         html = src._page.content()
         (out / "calendar.html").write_text(html, encoding="utf-8")
