@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-08-11T04:08:46+00:00",
+  "seed_url": "https://www.volusia.realtaxdeed.com/",
+  "counties": [
+    {
+      "slug": "alachua",
+      "name": "Alachua",
+      "url": "https://www.alachua.realtaxdeed.com",
+      "host": "www.alachua.realtaxdeed.com",
+      "label": "FL - Alachua Taxdeed"
+    },
+    {
+      "slug": "baker",
+      "name": "Baker",
+      "url": "https://www.baker.realtaxdeed.com",
+      "host": "www.baker.realtaxdeed.com",
+      "label": "FL - Baker Taxdeed"
+    },
+    {
+      "slug": "bay",
+      "name": "Bay",
+      "url": "https://www.bay.realtaxdeed.com",
+      "host": "www.bay.realtaxdeed.com",
+      "label": "FL - Bay Taxdeed"
+    },
+    {
+      "slug": "brevard",
+      "name": "Brevard",
+      "url": "https://www.brevard.realtaxdeed.com",
+      "host": "www.brevard.realtaxdeed.com",
+      "label": "FL - Brevard Taxdeed"
+    },
+    {
+      "slug": "broward",
+      "name": "Broward",
+      "url": "https://www.broward.realtaxdeed.com",
+      "host": "www.broward.realtaxdeed.com",
+      "label": "FL - Broward Taxdeed"
+    },
+    {
+      "slug": "calhoun",
+      "name": "Calhoun",
+      "url": "https://www.calhoun.realtaxdeed.com",
+      "host": "www.calhoun.realtaxdeed.com",
+      "label": "FL - Calhoun Taxdeed"
+    },
+    {
+      "slug": "charlotte",
+      "name": "Charlotte",
+      "url": "https://www.charlotte.realtaxdeed.com",
+      "host": "www.charlotte.realtaxdeed.com",
+      "label": "FL - Charlotte Taxdeed"
+    },
+    {
+      "slug": "citrus",
+      "name": "Citrus",
+      "url": "https://www.citrus.realtaxdeed.com",
+      "host": "www.citrus.realtaxdeed.com",
+      "label": "FL - Citrus Taxdeed"
+    },
+    {
+      "slug": "clay",
+      "name": "Clay",
+      "url": "https://www.clay.realtaxdeed.com",
+      "host": "www.clay.realtaxdeed.com",
+      "label": "FL - Clay Taxdeed"
+    },
+    {
+      "slug": "duval",
+      "name": "Duval",
+      "url": "https://www.duval.realtaxdeed.com",
+      "host": "www.duval.realtaxdeed.com",
+      "label": "FL - Duval Taxdeed"
+    },
+    {
+      "slug": "escambia",
+      "name": "Escambia",
+      "url": "https://www.escambia.realtaxdeed.com",
+      "host": "www.escambia.realtaxdeed.com",
+      "label": "FL - Escambia Taxdeed"
+    },
+    {
+      "slug": "flagler",
+      "name": "Flagler",
+      "url": "https://www.flagler.realtaxdeed.com",
+      "host": "www.flagler.realtaxdeed.com",
+      "label": "FL - Flagler Taxdeed"
+    },
+    {
+      "slug": "gilchrist",
+      "name": "Gilchrist",
+      "url": "https://www.gilchrist.realtaxdeed.com",
+      "host": "www.gilchrist.realtaxdeed.com",
+      "label": "FL - Gilchrist Taxdeed"
+    },
+    {
+      "slug": "lake",
+      "name": "Lake",
+      "url": "https://www.lake.realtaxdeed.com",
+      "host": "www.lake.realtaxdeed.com",
+      "label": "FL - Lake Taxdeed"
+    },
+    {
+      "slug": "marion",
+      "name": "Marion",
+      "url": "https://www.marion.realtaxdeed.com",
+      "host": "www.marion.realtaxdeed.com",
+      "label": "FL - Marion Taxdeed"
+    },
+    {
+      "slug": "polk",
+      "name": "Polk",
+      "url": "https://www.polk.realtaxdeed.com",
+      "host": "www.polk.realtaxdeed.com",
+      "label": "FL - Polk Taxdeed"
+    },
+    {
+      "slug": "putnam",
+      "name": "Putnam",
+      "url": "https://www.putnam.realtaxdeed.com",
+      "host": "www.putnam.realtaxdeed.com",
+      "label": "FL - Putnam Taxdeed"
+    },
+    {
+      "slug": "volusia",
+      "name": "Volusia",
+      "url": "https://www.volusia.realtaxdeed.com",
+      "host": "www.volusia.realtaxdeed.com",
+      "label": "FL - Volusia Taxdeed"
+    }
+  ],
+  "rejected": [
+    {
+      "label": "FL - Broward Foreclosure",
+      "url": "https://www.broward.realforeclose.com",
+      "host": "www.broward.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "FL - Duval Foreclosure",
+      "url": "https://www.duval.realforeclose.com",
+      "host": "www.duval.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "FL - Hillsborough Foreclosure",
+      "url": "https://www.hillsborough.realforeclose.com",
+      "host": "www.hillsborough.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "FL - Volusia Foreclosure",
+      "url": "https://www.volusia.realforeclose.com",
+      "host": "www.volusia.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "GA - Fulton Foreclosure",
+      "url": "https://www.fulton.realforeclose.com",
+      "host": "www.fulton.realforeclose.com",
+      "state": "GA",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "NJ - Camden Foreclosure",
+      "url": "https://salesweb.civilview.com",
+      "host": "salesweb.civilview.com",
+      "state": "NJ",
+      "kind": "foreclosure"
+    }
+  ]
+}
