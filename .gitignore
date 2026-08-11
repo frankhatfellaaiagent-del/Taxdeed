@@ -5,4 +5,5 @@ venv/
 output/
 *.xlsx
 !docs/**/*.xlsx
+!data/**/*.xlsx
 .DS_Store
