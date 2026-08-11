@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -42,11 +43,27 @@ def discover_counties(source, seed_slug: str = "volusia", seed_url: str = SEED_U
                          "host": seed_host, "label": f"{slug.title()} Taxdeed (seed site)"})
         counties.sort(key=lambda c: c["slug"])
     log.info("Discovered %d FL taxdeed counties (%d selector entries rejected)", len(counties), len(rejected))
+
+    # Cross-check against the client's authoritative county list, if present.
+    client_missing: list[str] = []
+    client_list = Path(__file__).resolve().parent.parent / "config" / "client_counties.txt"
+    if client_list.exists():
+        wanted = [ln.strip() for ln in client_list.read_text(encoding="utf-8").splitlines()
+                  if ln.strip() and not ln.strip().startswith("#")]
+        have = {c["slug"] for c in counties}
+        client_missing = [w for w in wanted
+                          if re.sub(r"[^a-z0-9]", "", w.lower()) not in have]
+        if client_missing:
+            log.warning("Client counties NOT found by discovery: %s", client_missing)
+        else:
+            log.info("All %d client counties present in discovery", len(wanted))
+
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "seed_url": seed_url,
         "counties": counties,
         "rejected": rejected,
+        "client_list_missing": client_missing,
     }
 
 

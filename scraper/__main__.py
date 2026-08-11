@@ -50,12 +50,25 @@ def cmd_discover(args) -> int:
     return 0
 
 
+def _slugify(name: str) -> str:
+    import re
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def _county_names_from(arg: str) -> list[str]:
+    """Comma-separated slugs, or @path/to/file with one county name per line."""
+    if arg.startswith("@"):
+        lines = Path(arg[1:]).read_text(encoding="utf-8").splitlines()
+        return [ln.strip() for ln in lines if ln.strip() and not ln.strip().startswith("#")]
+    return [c.strip() for c in arg.split(",") if c.strip()]
+
+
 def _select_counties(args) -> list[dict]:
     if not COUNTIES_PATH.exists():
         sys.exit("config/counties.json missing — run `python -m scraper discover` first")
     counties = load_counties(COUNTIES_PATH)
     if args.counties:
-        wanted = [c.strip().lower() for c in args.counties.split(",") if c.strip()]
+        wanted = [_slugify(w) for w in _county_names_from(args.counties)]
         by_slug = {c["slug"]: c for c in counties}
         missing = [w for w in wanted if w not in by_slug]
         if missing:

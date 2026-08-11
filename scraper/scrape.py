@@ -40,18 +40,22 @@ def scrape_county(source, county: dict, months: int = 2) -> dict:
     excluded: list[dict] = []
 
     cal_pages = source.calendar_pages(slug, base_url, months=months)
-    dates: list[str] = []
+    entries: list[dict] = []
     for page in cal_pages:
         for d in parse_calendar_dates(page):
-            if d["date"] not in dates:
-                dates.append(d["date"])
+            if d["date"] not in [e["date"] for e in entries]:
+                entries.append(d)
+    dates = [e["date"] for e in entries]
     if not cal_pages:
         warnings.append("calendar: no pages loaded")
     elif not dates:
         warnings.append("calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)")
 
+    expected_counts: dict[str, int | None] = {}
     today = datetime.now().strftime("%Y%m%d")
-    for date in dates:
+    for entry in entries:
+        date, expected = entry["date"], entry.get("expected")
+        expected_counts[date] = expected
         yyyymmdd = date[6:] + date[:2] + date[3:5]
         if yyyymmdd < today:
             continue  # only upcoming sales
@@ -61,25 +65,30 @@ def scrape_county(source, county: dict, months: int = 2) -> dict:
             continue
         page_url = getattr(source, "last_auction_url", None) or urljoin(
             base_url, f"/index.cgi?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date}")
-        found_any = False
+        found = 0
         for html in pages:
             items = parse_auction_items(html, page_url, county=slug, sale_date=date)
             for rec in items:
-                found_any = True
+                found += 1
                 rec.scraped_at = _now_iso()
                 if looks_like_foreclosure(rec):
                     excluded.append({"reason": "failed taxdeed sanity check (looks like foreclosure)", **rec.to_dict()})
                 else:
                     records.append(rec)
-        if not found_any:
+        if not found:
             warnings.append(f"auction {date}: page loaded but no auction items parsed (structure change?)")
+        elif expected and found < expected:
+            warnings.append(
+                f"auction {date}: parsed {found} items but the calendar advertises {expected} "
+                f"(possible pagination truncation — verify on the site)")
 
     # Deterministic order + in-run dedupe (pagination overlap protection).
     uniq: dict[tuple, AuctionRecord] = {}
     for rec in records:
         uniq.setdefault(rec.key(), rec)
     records = sorted(uniq.values(), key=lambda r: (r.sale_date[6:], r.sale_date[:2], r.sale_date[3:5], r.parcel_id, r.case_number))
-    return {"records": records, "excluded": excluded, "dates": dates, "warnings": warnings}
+    return {"records": records, "excluded": excluded, "dates": dates,
+            "expected_counts": expected_counts, "warnings": warnings}
 
 
 def write_county_outputs(out_dir: Path, slug: str, result: dict):
@@ -146,6 +155,7 @@ def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 
             write_county_outputs(out_dir, slug, result)
             centry["auctions"] = len(result["records"])
             centry["sale_dates"] = result["dates"]
+            centry["expected_counts"] = result["expected_counts"]
             centry["warnings"] = result["warnings"]
             centry["excluded_foreclosure"] = len(result["excluded"])
             all_excluded.extend(result["excluded"])

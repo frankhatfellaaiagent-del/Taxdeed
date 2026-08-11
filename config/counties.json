@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-11T13:42:05+00:00",
+  "generated_at": "2026-08-11T21:08:31+00:00",
   "seed_url": "https://www.volusia.realtaxdeed.com/",
   "counties": [
     {
@@ -200,5 +200,29 @@
       "state": "NJ",
       "kind": "foreclosure"
     }
+  ],
+  "client_list_missing": [
+    "Gulf",
+    "Hendry",
+    "Hernando",
+    "Highlands",
+    "Hillsborough",
+    "Indian River",
+    "Jackson",
+    "Lee",
+    "Leon",
+    "Martin",
+    "Monroe",
+    "Nassau",
+    "Orange",
+    "Osceola",
+    "Palm Beach",
+    "Pasco",
+    "Pinellas",
+    "Santa Rosa",
+    "Sarasota",
+    "Seminole",
+    "Suwannee",
+    "Washington"
   ]
 }

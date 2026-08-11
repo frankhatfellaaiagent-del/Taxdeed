@@ -144,13 +144,25 @@ def capture(url: str, out_dir: str | Path):
         dates = parse_calendar_dates(html)
         print(f"  parse_calendar_dates -> {dates}")
 
-        # 3. First auction page, if we found a date
+        # 3. Auction page for the busiest upcoming date (best pagination test)
         if dates:
-            a_url = urljoin(url, f"/index.cgi?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={dates[0]['date']}")
+            target = max(dates, key=lambda d: d.get("expected") or 0)
+            a_url = src._app_url(url, f"zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={target['date']}")
             html = src._goto(a_url, wait_selector="div.AUCTION_ITEM")
             (out / "auction.html").write_text(html, encoding="utf-8")
             src._page.screenshot(path=str(out / "auction.png"), full_page=True)
-            _diagnose(html, "AUCTION " + a_url)
+            _diagnose(html, f"AUCTION {a_url} (calendar advertises {target.get('expected')} items)")
+            soup = BeautifulSoup(html, "lxml")
+            n_items = len(soup.select("div.AUCTION_ITEM"))
+            print(f"  AUCTION_ITEM divs on page: {n_items}")
+            for m in sorted(set(re.findall(r"Page\s*\S{0,4}\s*of\s*\S+", html))):
+                print(f"  page-text: {m!r}")
+            for inp in soup.find_all("input"):
+                ident = f"{inp.get('id','')}{inp.get('name','')}"
+                if re.search(r"page|cur|max", ident, re.I):
+                    print(f"  input id={inp.get('id')!r} name={inp.get('name')!r} value={inp.get('value')!r}")
+            for el in soup.select("[class*=Page i], [class*=PAGE], [id*=page i]"):
+                print(f"  pager el: <{el.name} id={el.get('id')!r} class={el.get('class')!r}> text={el.get_text(' ', strip=True)[:40]!r}")
     finally:
         src.close()
     print(f"\nSaved captures to {out}/ (home/calendar[/auction] .html + .png)")

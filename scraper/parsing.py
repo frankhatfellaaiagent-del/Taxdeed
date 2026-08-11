@@ -241,7 +241,14 @@ def parse_calendar_dates(html: str) -> list[dict]:
             return
         if re.search(r"tax\s*deed|taxdeed", text_l, re.I):
             seen.add(date)
-            out.append({"date": date, "text": text_l})
+            # Day cells advertise item counts like "14 / 28 TD" — the second
+            # number is the total items for that sale; used to cross-check
+            # that we parsed everything (catches silent pagination breakage).
+            expected = None
+            m = re.search(r"(\d+)\s*/\s*(\d+)\s*TD", text_l, re.I)
+            if m:
+                expected = int(m.group(2))
+            out.append({"date": date, "text": text_l, "expected": expected})
 
     # Primary: RealAuction day cells carry a dayid="MM/DD/YYYY" attribute.
     for el in soup.find_all(attrs={"dayid": True}):
