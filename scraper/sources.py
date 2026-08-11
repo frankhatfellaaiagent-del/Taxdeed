@@ -6,6 +6,7 @@ against saved HTML — that is how the offline demo and regression tests work.
 
 from __future__ import annotations
 
+import datetime
 import logging
 import random
 import re
@@ -181,19 +182,40 @@ class LiveSource:
                 log.warning("Calendar day cells never appeared on %s", url)
         self._dismiss_modals()
         pages = [self._page.content()]
-        for _ in range(months):
-            if not self._click_next_month():
-                break
-            try:
-                self._page.wait_for_load_state("networkidle", timeout=8000)
-            except Exception:
-                pass
-            pages.append(self._page.content())
+
+        # Month stepping: the calendar is server-rendered, so request each
+        # following month directly with selCalDate (deterministic), and only
+        # fall back to clicking the CALNAV arrow if the month didn't change.
+        from .parsing import parse_calendar_month_label
+        prev_label = parse_calendar_month_label(pages[0])
+        today = datetime.date.today().replace(day=1)
+        for i in range(1, months + 1):
+            month = today.month - 1 + i
+            target = today.replace(year=today.year + month // 12, month=month % 12 + 1)
+            month_url = self._app_url(
+                base_url, f"zaction=USER&zmethod=CALENDAR&selCalDate={target.strftime('%m/%d/%Y')}")
+            html = self._goto(month_url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
+            label = parse_calendar_month_label(html)
+            if label and label == prev_label:
+                log.warning("selCalDate did not advance the month (%s); trying the CALNAV arrow", label)
+                if not self._click_next_month():
+                    break
+                try:
+                    self._page.wait_for_load_state("networkidle", timeout=8000)
+                except Exception:
+                    pass
+                html = self._page.content()
+                label = parse_calendar_month_label(html)
+                if label == prev_label:
+                    break
+            prev_label = label or prev_label
+            pages.append(html)
         return pages
 
     def _click_next_month(self) -> bool:
         # RealAuction has used several skins for the calendar nav arrow.
         candidates = [
+            "a.CALNAV >> nth=-1", ".CALNAV >> nth=-1",
             "#CALNAV_RIGHT", ".CALNAVR", ".CalNavRight",
             "a[title*='Next' i]", "img[alt*='Next' i]",
             "text=/next month/i",
