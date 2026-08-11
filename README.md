@@ -146,7 +146,7 @@ python -m scraper discover --fixtures scraper/fixtures
 python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots
 ```
 
-Expected: 19 counties discovered (8 selector entries rejected), 9 records,
+Expected: 20 counties discovered (8 selector entries rejected), 9 records,
 1 excluded foreclosure row, 2 buy-box MATCHes (Polk grazing + timberland).
 
 ## Adding / removing counties

@@ -83,6 +83,7 @@ class LiveSource:
         self._page = None
         self._headless = headless
         self._nav_timeout_ms = nav_timeout_ms
+        self._app_ext: dict[str, str] = {}  # host root -> "cfm" | "cgi"
 
     def _ensure(self):
         if self._page is not None:
@@ -137,6 +138,30 @@ class LiveSource:
             except Exception:
                 continue
 
+    def _looks_like_404(self) -> bool:
+        try:
+            title = self._page.title() or ""
+        except Exception:
+            return False
+        return "404" in title or "not found" in title.lower()
+
+    def _app_url(self, base_url: str, query: str) -> str:
+        """Newer county sites serve the app at /index.cfm, classic ones at
+        /index.cgi. Resolve once per host and remember."""
+        host = urljoin(base_url, "/")
+        ext = self._app_ext.get(host)
+        if ext:
+            return urljoin(base_url, f"/index.{ext}?{query}")
+        for candidate in ("cfm", "cgi"):
+            url = urljoin(base_url, f"/index.{candidate}?{query}")
+            self._goto(url)
+            if not self._looks_like_404():
+                self._app_ext[host] = candidate
+                log.info("App entry point for %s: index.%s", host, candidate)
+                return url
+        log.warning("Both index.cfm and index.cgi 404 on %s", host)
+        return urljoin(base_url, f"/index.cfm?{query}")
+
     def calendar_pages(self, county_slug: str, base_url: str, months: int) -> list[str]:
         """Current month plus `months` following months, via the next-month arrow."""
         # Land on the home page first: it establishes any session cookies and
@@ -146,8 +171,14 @@ class LiveSource:
             self._dismiss_modals()
         except Exception as e:
             log.warning("[%s] could not preload home page: %s", county_slug, e)
-        url = urljoin(base_url, "/index.cgi?zaction=USER&zmethod=CALENDAR")
-        self._goto(url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
+        url = self._app_url(base_url, "zaction=USER&zmethod=CALENDAR")
+        if self._page.url.rstrip("/") != url.rstrip("/"):
+            self._goto(url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
+        else:
+            try:
+                self._page.wait_for_selector("[dayid], .CALBOX, .CALDAYBOX", timeout=15000)
+            except Exception:
+                log.warning("Calendar day cells never appeared on %s", url)
         self._dismiss_modals()
         pages = [self._page.content()]
         for _ in range(months):
@@ -180,7 +211,7 @@ class LiveSource:
         return False
 
     def auction_pages(self, county_slug: str, base_url: str, date_mmddyyyy: str) -> list[str]:
-        url = urljoin(base_url, f"/index.cgi?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date_mmddyyyy}")
+        url = self._app_url(base_url, f"zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE={date_mmddyyyy}")
         pages = [self._goto(url, wait_selector="div.AUCTION_ITEM")]
         # Paginate: RealAuction shows "Page N of M" with a right arrow.
         max_pages = self._read_max_pages()

@@ -32,6 +32,15 @@ def discover_counties(source, seed_slug: str = "volusia", seed_url: str = SEED_U
             "changed. Save the page HTML and inspect for the county dropdown."
         )
     counties, rejected = filter_fl_taxdeed(entries)
+    # The splash page's jump menu omits the site you are already on, so the
+    # seed county must be added explicitly.
+    from urllib.parse import urlparse
+    seed_host = urlparse(seed_url).netloc.lower()
+    if seed_host.endswith("realtaxdeed.com") and not any(c["host"] == seed_host for c in counties):
+        slug = seed_host.replace("www.", "").split(".")[0]
+        counties.append({"slug": slug, "name": slug.title(), "url": seed_url.rstrip("/"),
+                         "host": seed_host, "label": f"{slug.title()} Taxdeed (seed site)"})
+        counties.sort(key=lambda c: c["slug"])
     log.info("Discovered %d FL taxdeed counties (%d selector entries rejected)", len(counties), len(rejected))
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

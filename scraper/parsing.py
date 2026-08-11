@@ -173,6 +173,13 @@ def parse_county_selector(html: str, base_url: str = "") -> list[dict]:
         m = COUNTY_KIND_RE.match(label)
         if m and state:
             derive_and_add(label, m.group(1), m.group(2), state)
+            return
+        # Bare county name in a state group (live site shows e.g. "Baker" with
+        # no kind word). Treat as a taxdeed-site candidate: if the host doesn't
+        # exist the county errors out at scrape time and is reported, and the
+        # per-record sanity check still guards against foreclosure data.
+        if state and re.match(r"^[A-Za-z][A-Za-z .'\-]*$", label):
+            derive_and_add(label + " Taxdeed", label, "taxdeed", state)
 
     for select in soup.find_all("select"):
         for group in select.find_all("optgroup"):

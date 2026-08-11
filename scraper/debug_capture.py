@@ -13,7 +13,7 @@ from __future__ import annotations
 import logging
 import re
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
 
@@ -134,9 +134,10 @@ def capture(url: str, out_dir: str | Path):
                 clicked = True
         except Exception as e:
             print(f"  calendar link click failed: {e.__class__.__name__}")
-        cal_url = src._page.url if clicked else urljoin(src._page.url or url,
-                                                        "/index.cgi?zaction=USER&zmethod=CALENDAR")
-        if not clicked:
+        if clicked:
+            cal_url = src._page.url
+        else:
+            cal_url = src._app_url(url, "zaction=USER&zmethod=CALENDAR")
             src._goto(cal_url, wait_selector="[dayid], .CALBOX, .CALDAYBOX")
         src._dismiss_modals()
         html = src._page.content()
