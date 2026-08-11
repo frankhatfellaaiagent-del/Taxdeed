@@ -301,28 +301,50 @@ class LiveSource:
         return max(counts)
 
     def _click_next_page(self) -> bool:
-        """Click every next-page arrow on the page (each list area has its
-        own); returns True if at least one was clicked."""
+        """Advance each list area by exactly ONE page.
+
+        Every area renders TWO synchronized pagers (top and bottom of the
+        list), so clicking every .PageRight advances an area two pages per
+        round and silently skips the even pages. Group the .PageFrame pagers
+        into areas by their 'page of N' text and click one arrow per area.
+        """
         clicked = 0
         try:
-            arrows = self._page.locator(".PageRight")
-            n = arrows.count()
-            for i in range(min(n, 6)):
-                el = arrows.nth(i)
+            frames = self._page.locator(".PageFrame")
+            n = frames.count()
+            texts = []
+            for i in range(min(n, 8)):
                 try:
-                    if el.is_visible():
+                    texts.append(re.sub(r"\s+", " ", frames.nth(i).inner_text(timeout=1500)).strip())
+                except Exception:
+                    texts.append(f"?{i}")
+            # Duplicate pagers of one area show identical text. Adjacent
+            # pairing (top1,bottom1,top2,bottom2) is the observed layout;
+            # fall back to interleaved pairing if adjacent texts differ.
+            if n >= 2 and texts[0] == texts[1]:
+                indexes = list(range(0, min(n, 8), 2))
+            elif n >= 3 and len(texts) > 2 and texts[0] == texts[2]:
+                indexes = [0, 1][: max(1, n // 2)]
+            elif n:
+                indexes = list(range(min(n, 4)))
+            else:
+                indexes = []
+            for i in indexes:
+                try:
+                    arrow = frames.nth(i).locator(".PageRight").first
+                    if arrow.count() > 0 and arrow.is_visible():
                         if clicked == 0:
                             self.rate.wait()
-                        el.click(timeout=3000)
+                        arrow.click(timeout=3000)
                         clicked += 1
-                        self._page.wait_for_timeout(250)
+                        self._page.wait_for_timeout(300)
                 except Exception:
                     continue
         except Exception:
             pass
         if clicked:
             return True
-        for sel in ("img[alt*='Next' i]", "a[title*='Next' i]"):
+        for sel in (".PageRight", "img[alt*='Next' i]", "a[title*='Next' i]"):
             try:
                 el = self._page.locator(sel).first
                 if el.count() > 0 and el.is_visible():
