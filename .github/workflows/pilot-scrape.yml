@@ -17,7 +17,7 @@ on:
     # client's full county list and refreshes the committed data feeds.
     - cron: "0 10 * * 1"
   push:
-    branches: [claude/florida-tax-deed-scraper-fqzwzd]
+    branches: [main, claude/florida-tax-deed-scraper-fqzwzd]
     paths:
       - "scraper/**"
       - "config/**"

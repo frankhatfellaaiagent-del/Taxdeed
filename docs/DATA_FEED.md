@@ -8,16 +8,16 @@ the frontend and do not read the Google Sheet; both are downstream of these file
 
 | Feed | URL |
 | --- | --- |
-| JSON (use this) | `https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/claude/florida-tax-deed-scraper-fqzwzd/data/exports/master_list.json` |
-| TSV (Google Sheet import) | `https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/claude/florida-tax-deed-scraper-fqzwzd/data/exports/master_list.tsv` |
+| JSON (use this) | `https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json` |
+| TSV (Google Sheet import) | `https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.tsv` |
 
-(When the branch merges to `main`, swap the branch segment of the URL accordingly.)
+(These URLs track `main`, the production branch.)
 
 `raw.githubusercontent.com` serves `Access-Control-Allow-Origin: *`, so a plain
 browser `fetch()` works from any origin:
 
 ```js
-const FEED = "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/claude/florida-tax-deed-scraper-fqzwzd/data/exports/master_list.json";
+const FEED = "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json";
 const { generated_at, counts, records } = await (await fetch(FEED)).json();
 ```
 
