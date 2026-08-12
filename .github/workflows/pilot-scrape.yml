@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  actions: write  # to dispatch the Pages deploy after committing new data
 
 concurrency:
   group: pilot-scrape
@@ -115,6 +116,11 @@ jobs:
           git commit -m "Pilot run data: $name (${{ github.event.inputs.counties }})" || exit 0
           git pull --rebase origin "${{ github.ref_name }}" || true
           git push origin "HEAD:${{ github.ref_name }}"
+          # Token-authored pushes don't fire push-triggered workflows, so
+          # explicitly redeploy the hosted dashboard with the fresh feeds.
+          gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Fail job if live steps failed
         if: steps.discover.outcome == 'failure' && steps.scrape.outcome == 'failure'

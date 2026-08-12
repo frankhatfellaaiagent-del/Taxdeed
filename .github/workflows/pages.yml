@@ -2,8 +2,11 @@ name: Deploy dashboard (GitHub Pages)
 
 # Publishes dashboard/ + the data feeds to GitHub Pages:
 #   https://frankhatfellaaiagent-del.github.io/Taxdeed/
-# Re-deploys whenever the dashboard or the feeds change, so scraper runs
-# refresh the hosted site automatically.
+# by pushing the assembled site to the gh-pages branch — on public repos
+# GitHub auto-enables Pages for that branch, so no repo-settings step is
+# needed. Re-deploys whenever the dashboard or the feeds change (the pilot
+# scrape workflow dispatches this one after committing new data, since
+# pushes made with the workflow token don't trigger push events).
 
 on:
   push:
@@ -15,9 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -26,21 +27,24 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - name: Assemble site
         run: |
           mkdir -p _site/data/exports
           cp -r dashboard/. _site/
           cp data/exports/* _site/data/exports/
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          touch _site/.nojekyll
+      - name: Publish to gh-pages branch
+        run: |
+          cd _site
+          git init -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy dashboard from ${GITHUB_SHA::7}"
+          git push --force \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
+            gh-pages
+      - name: Site URL
+        run: echo "https://frankhatfellaaiagent-del.github.io/Taxdeed/"
