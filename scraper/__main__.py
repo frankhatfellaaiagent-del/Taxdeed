@@ -190,6 +190,9 @@ def main(argv=None) -> int:
     p.add_argument("--url", default="https://www.volusia.realtaxdeed.com/")
     p.add_argument("--out", default="output/debug")
 
+    p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
+    p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
+
     p = sub.add_parser("run", help="scrape + report in one command")
     add_common(p)
     p.add_argument("--counties")
@@ -220,6 +223,21 @@ def main(argv=None) -> int:
     if args.cmd == "capture":
         from .debug_capture import capture
         capture(args.url, args.out)
+        return 0
+    if args.cmd == "export":
+        from .exporter import export_run
+        run_dir = Path(args.run) if args.run else None
+        if run_dir is None:
+            for root in (ROOT / "data" / "runs", RUNS_ROOT):
+                if root.exists():
+                    runs = sorted(d for d in root.iterdir() if (d / "run_meta.json").exists())
+                    if runs:
+                        run_dir = runs[-1]
+                        break
+        if run_dir is None:
+            sys.exit("No run directories found — scrape first")
+        counts = export_run(run_dir)
+        print(json.dumps(counts, indent=2))
         return 0
     if args.cmd == "run":
         run_dir = cmd_scrape(args)

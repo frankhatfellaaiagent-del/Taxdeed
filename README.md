@@ -53,6 +53,12 @@ python -m scraper run --counties volusia,polk
 python -m scraper dashboard
 ```
 
+### Data feed (for the dashboard UI / Google Sheet)
+
+Fixed-URL feeds under `data/exports/` (`master_list.json` + `master_list.tsv`) are
+refreshed by every data run — **see `docs/DATA_FEED.md` for the contract**. The
+client's Google Sheet imports the TSV live; the dashboard frontend fetches the JSON.
+
 ### Dashboard
 
 `python -m scraper dashboard` serves a local page (stdlib only, binds to
