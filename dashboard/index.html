@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MADD Assets — FL Tax Deed Auctions</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>">
+<style>
+  :root {
+    color-scheme: light;
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e;
+    --muted:#898781; --grid:#e1e0d9; --baseline:#c3c2b7;
+    --border:rgba(11,11,11,0.10); --series-1:#2a78d6;
+    --good-text:#006300; --critical:#d03b3b; --note-bg:#f0efec;
+    --chip-on:#2a78d6; --chip-on-ink:#ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+      --muted:#898781; --grid:#2c2c2a; --baseline:#383835;
+      --border:rgba(255,255,255,0.10); --series-1:#3987e5;
+      --good-text:#0ca30c; --critical:#d03b3b; --note-bg:#232322;
+      --chip-on:#3987e5; --chip-on-ink:#0d0d0d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--page); color:var(--ink);
+         font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  .wrap { max-width:1180px; margin:0 auto; padding:22px 18px 48px; }
+  header { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+  h1 { font-size:20px; margin:0; font-weight:650; }
+  .badge { font-size:12px; font-weight:600; padding:2px 10px; border-radius:999px;
+           border:1px solid var(--border); color:var(--good-text); }
+  .sub { color:var(--ink-2); font-size:13px; margin:0 0 16px; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:10px;
+          padding:14px 16px; margin-bottom:14px; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:10px; }
+  .tile { border:1px solid var(--border); border-radius:8px; padding:9px 12px; }
+  .tile .v { font-size:24px; font-weight:650; font-variant-numeric:tabular-nums; }
+  .tile .l { font-size:12px; color:var(--ink-2); margin-top:1px; }
+  .filters { display:flex; flex-wrap:wrap; gap:8px 10px; align-items:center; }
+  select, input[type=search] {
+    font:13px system-ui,sans-serif; color:var(--ink); background:var(--surface);
+    border:1px solid var(--baseline); border-radius:6px; padding:6px 8px;
+  }
+  input[type=search] { min-width:200px; flex:1; }
+  select:focus-visible, input:focus-visible, button:focus-visible { outline:2px solid var(--series-1); outline-offset:1px; }
+  .count-note { color:var(--muted); font-size:12px; margin-left:auto; }
+  .scroll-x { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; min-width:920px; }
+  th { text-align:left; font-size:12px; color:var(--muted); font-weight:600; padding:7px 8px;
+       border-bottom:1px solid var(--baseline); white-space:nowrap; cursor:pointer; user-select:none; }
+  th.num { text-align:right; }
+  .arrow { font-size:10px; }
+  td { padding:6px 8px; border-bottom:1px solid var(--grid); font-size:13px; vertical-align:top; }
+  td.num { text-align:right; white-space:nowrap; }
+  tr.redeemed td { color:var(--muted); }
+  .flag { font-size:11px; font-weight:700; padding:1px 7px; border-radius:999px; border:1px solid var(--border); }
+  .flag.REVIEW { color:var(--series-1); } .flag.NO { color:var(--muted); } .flag.MATCH { color:var(--good-text); }
+  .st-red { color:var(--critical); font-weight:600; font-size:12px; }
+  .ratio-good { color:var(--good-text); font-weight:650; }
+  a { color:var(--series-1); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .addr { max-width:320px; }
+  .more-row { text-align:center; padding:12px; }
+  .more-btn { font:600 13px system-ui,sans-serif; color:var(--series-1); background:none;
+              border:1px solid var(--border); border-radius:6px; padding:8px 18px; cursor:pointer; }
+  .more-btn:hover { border-color:var(--series-1); }
+  #status-msg { padding:40px; text-align:center; color:var(--ink-2); }
+  .note { background:var(--note-bg); border:1px solid var(--border); border-radius:10px;
+          padding:10px 14px; margin-top:14px; font-size:12.5px; color:var(--ink-2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Florida Tax Deed Auctions</h1>
+    <span class="badge" id="stamp">loading…</span>
+  </header>
+  <p class="sub">MADD Assets Office — live feed from the county RealAuction sites. Click column
+  headers to sort; every row links to its auction page and county appraiser record.</p>
+
+  <div id="status-msg">Loading auction data…</div>
+
+  <div id="app" hidden>
+    <div class="card"><div class="tiles" id="tiles"></div></div>
+    <div class="card">
+      <div class="filters">
+        <select id="f-county" aria-label="County"><option value="">All counties</option></select>
+        <select id="f-month" aria-label="Month"><option value="">All months</option></select>
+        <select id="f-status" aria-label="Status">
+          <option value="Scheduled" selected>Upcoming only</option>
+          <option value="">All statuses</option>
+          <option value="Redeemed">Redeemed only</option>
+        </select>
+        <select id="f-buybox" aria-label="Buy-box">
+          <option value="">All buy-box flags</option>
+          <option value="MATCH">MATCH</option>
+          <option value="REVIEW">REVIEW (verify use)</option>
+          <option value="NO">NO</option>
+        </select>
+        <input type="search" id="f-q" placeholder="Search address / parcel / case…" aria-label="Search">
+        <span class="count-note" id="count-note"></span>
+      </div>
+    </div>
+    <div class="card scroll-x">
+      <table id="tbl">
+        <thead><tr>
+          <th data-k="county">County <span class="arrow"></span></th>
+          <th data-k="sale_date">Sale date <span class="arrow"></span></th>
+          <th data-k="parcel_id">Parcel <span class="arrow"></span></th>
+          <th data-k="property_address">Address <span class="arrow"></span></th>
+          <th data-k="opening_bid" class="num">Opening bid <span class="arrow"></span></th>
+          <th data-k="assessed_value" class="num">Assessed <span class="arrow"></span></th>
+          <th data-k="bid_to_value_pct" class="num">Bid/Value <span class="arrow"></span></th>
+          <th data-k="buybox">Buy-box <span class="arrow"></span></th>
+          <th data-k="status">Status <span class="arrow"></span></th>
+          <th>Links</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="more-row" id="more-row" hidden>
+        <button class="more-btn" id="more-btn" type="button"></button>
+      </div>
+    </div>
+    <div class="note"><b>Reading the flags:</b> REVIEW = target county (rural/Central FL) but the
+    auction site doesn't publish land use — confirm via the appraiser link. Redeemed = owner paid
+    the certificate; that auction won't happen. Missing address/assessed value is the county
+    site's own data gap, not an error.</div>
+  </div>
+</div>
+
+<script>
+"use strict";
+// Data feed contract: docs/DATA_FEED.md. Same-origin on GitHub Pages; raw URL as fallback.
+const FEEDS = [
+  "./data/exports/master_list.json",
+  "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/claude/florida-tax-deed-scraper-fqzwzd/data/exports/master_list.json",
+];
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = v => v == null ? "–" : "$" + Math.round(v).toLocaleString("en-US");
+const dkey = d => d ? d.slice(6) + d.slice(0,2) + d.slice(3,5) : "";
+const MONTHS = ["January","February","March","April","May","June","July",
+                "August","September","October","November","December"];
+
+let DATA = [], sortK = "sale_date", sortAsc = true, shown = 100;
+
+async function load() {
+  let feed = null, lastErr = null;
+  for (const url of FEEDS) {
+    try {
+      const res = await fetch(url, {cache: "no-cache"});
+      if (res.ok) { feed = await res.json(); break; }
+      lastErr = new Error("HTTP " + res.status + " for " + url);
+    } catch (e) { lastErr = e; }
+  }
+  if (!feed) {
+    $("status-msg").textContent = "Could not load auction data (" + lastErr + "). Refresh to retry.";
+    return;
+  }
+  DATA = feed.records;
+  $("stamp").textContent = "data as of " + new Date(feed.generated_at).toLocaleString();
+  const counties = [...new Set(DATA.map(r => r.county))].sort();
+  $("f-county").innerHTML += counties.map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join("");
+  const months = [...new Set(DATA.map(r => (r.sale_date || "").slice(0,2)))].sort();
+  $("f-month").innerHTML += months.filter(Boolean).map(m =>
+    `<option value="${m}">${MONTHS[parseInt(m,10)-1] || m}</option>`).join("");
+  for (const id of ["f-county","f-month","f-status","f-buybox"])
+    $(id).addEventListener("change", () => { shown = 100; render(); });
+  $("f-q").addEventListener("input", () => { shown = 100; render(); });
+  document.querySelector("#tbl thead").addEventListener("click", e => {
+    const th = e.target.closest("th[data-k]"); if (!th) return;
+    const k = th.dataset.k;
+    if (sortK === k) sortAsc = !sortAsc; else { sortK = k; sortAsc = true; }
+    render();
+  });
+  $("more-btn").addEventListener("click", () => { shown += 200; render(); });
+  $("status-msg").hidden = true;
+  $("app").hidden = false;
+  render();
+}
+
+function filtered() {
+  const county = $("f-county").value, month = $("f-month").value,
+        status = $("f-status").value, bb = $("f-buybox").value,
+        q = $("f-q").value.trim().toLowerCase();
+  return DATA.filter(r =>
+    (!county || r.county === county) &&
+    (!month || (r.sale_date || "").startsWith(month)) &&
+    (!status || r.status === status) &&
+    (!bb || r.buybox === bb) &&
+    (!q || [r.property_address, r.parcel_id, r.case_number, r.certificate_number]
+        .some(v => (v || "").toLowerCase().includes(q))));
+}
+
+function render() {
+  const rows = filtered();
+  const val = r => sortK === "sale_date" ? dkey(r.sale_date) : r[sortK];
+  rows.sort((a, b) => {
+    let x = val(a), y = val(b);
+    const xn = x == null || x === "", yn = y == null || y === "";
+    if (xn && yn) return 0; if (xn) return 1; if (yn) return -1;
+    if (typeof x === "number" && typeof y === "number") return sortAsc ? x - y : y - x;
+    x = String(x); y = String(y);
+    return sortAsc ? x.localeCompare(y) : y.localeCompare(x);
+  });
+  for (const th of document.querySelectorAll("#tbl th[data-k]"))
+    th.querySelector(".arrow").textContent = th.dataset.k === sortK ? (sortAsc ? "▲" : "▼") : "";
+
+  const up = rows.filter(r => r.status !== "Redeemed");
+  const bids = up.map(r => r.opening_bid).filter(v => v != null).sort((a,b) => a-b);
+  const median = bids.length ? bids[Math.floor(bids.length/2)] : null;
+  $("tiles").innerHTML = [
+    ["Auctions shown", rows.length],
+    ["Upcoming", up.length],
+    ["Redeemed", rows.length - up.length],
+    ["Buy-box REVIEW", rows.filter(r => r.buybox === "REVIEW").length],
+    ["Median opening bid", money(median)],
+    ["Bid ≤ 35% of value", up.filter(r => r.bid_to_value_pct != null && r.bid_to_value_pct <= 35).length],
+  ].map(([l,v]) => `<div class="tile"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+  $("count-note").textContent = rows.length + " of " + DATA.length + " rows";
+
+  const page = rows.slice(0, shown);
+  $("rows").innerHTML = page.map(r => {
+    const red = r.status === "Redeemed";
+    const pct = r.bid_to_value_pct;
+    const ratio = pct == null ? "–"
+      : `<span class="${!red && pct <= 35 ? "ratio-good" : ""}">${pct}%</span>`;
+    return `<tr class="${red ? "redeemed" : ""}">
+      <td>${esc(r.county)}</td>
+      <td>${esc(r.sale_date)}${r.sale_time ? `<br><span style="color:var(--muted);font-size:11px">${esc(r.sale_time)}</span>` : ""}</td>
+      <td>${esc(r.parcel_id)}<br><span style="color:var(--muted);font-size:11px">case ${esc(r.case_number)}</span></td>
+      <td class="addr">${esc(r.property_address) || '<span style="color:var(--muted)">—</span>'}</td>
+      <td class="num">${money(r.opening_bid)}</td>
+      <td class="num">${money(r.assessed_value)}</td>
+      <td class="num">${ratio}</td>
+      <td><span class="flag ${esc(r.buybox)}" title="${esc(r.buybox_notes)}">${esc(r.buybox)}</span></td>
+      <td>${red ? '<span class="st-red">Redeemed</span>' : esc(r.status)}</td>
+      <td><a href="${esc(r.auction_url)}" target="_blank" rel="noopener">auction</a>${
+        r.appraiser_url ? ` · <a href="${esc(r.appraiser_url)}" target="_blank" rel="noopener">appraiser</a>` : ""}</td>
+    </tr>`;
+  }).join("");
+  const remaining = rows.length - page.length;
+  $("more-row").hidden = remaining <= 0;
+  if (remaining > 0) $("more-btn").textContent = `Show more (${remaining} remaining)`;
+}
+load();
+</script>
+</body>
+</html>
