@@ -9,9 +9,13 @@ on:
   workflow_dispatch:
     inputs:
       counties:
-        description: "Comma-separated county slugs (keep small)"
-        default: "volusia"
+        description: "Comma-separated county slugs, or @config/client_counties.txt for all"
+        default: "@config/client_counties.txt"
         required: false
+  schedule:
+    # Weekly production run: Mondays 10:00 UTC (~6:00 AM ET). Scrapes the
+    # client's full county list and refreshes the committed data feeds.
+    - cron: "0 10 * * 1"
   push:
     branches: [claude/florida-tax-deed-scraper-fqzwzd]
     paths:
@@ -58,7 +62,9 @@ jobs:
         id: scrape
         continue-on-error: true
         run: |
-          python -m scraper -v run --counties "${{ github.event.inputs.counties || 'volusia' }}"
+          # Pushes get a quick 1-county smoke test; manual/scheduled runs
+          # default to the client's full 36-county list.
+          python -m scraper -v run --counties "${{ github.event_name == 'push' && 'volusia' || github.event.inputs.counties || '@config/client_counties.txt' }}"
 
       - name: Capture live pages (debug diagnostics)
         if: always()
@@ -98,8 +104,8 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Commit run data to branch (manual runs only)
-        if: github.event_name == 'workflow_dispatch'
+      - name: Commit run data to branch (manual + scheduled runs)
+        if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
           latest=$(ls -td output/runs/*/ 2>/dev/null | head -1 || true)
           [ -z "$latest" ] && { echo "no run to commit"; exit 0; }
@@ -113,7 +119,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/runs data/exports
-          git commit -m "Pilot run data: $name (${{ github.event.inputs.counties }})" || exit 0
+          git commit -m "Pilot run data: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
           git pull --rebase origin "${{ github.ref_name }}" || true
           git push origin "HEAD:${{ github.ref_name }}"
           # Token-authored pushes don't fire push-triggered workflows, so

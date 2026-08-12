@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="ds/styles.css">
+<style>
+html,body{margin:0;height:100%;overflow:hidden}
+a{color:var(--color-accent)}a:hover{color:var(--color-accent-700)}
+.ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
+.ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider)}
+</style>
+</helmet>
+<div style="display:flex;height:100vh;font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
+
+<aside style="width:216px;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--color-divider);padding:20px 14px;gap:4px">
+  <div style="margin-bottom:22px;padding:0 8px">
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED</div>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)">Florida &middot; 36 counties</div>
+  </div>
+  <sc-for list="{{ navItems }}" as="nv" hint-placeholder-count="5">
+    <button onClick="{{ nv.go }}" style="display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid {{ nv.bd }};background:{{ nv.bg }};color:{{ nv.fg }}" style-hover="background:var(--color-accent-100)">
+      <span style="width:6px;height:6px;flex:none;background:{{ nv.dot }};border:1px solid currentColor"></span>{{ nv.label }}
+    </button>
+  </sc-for>
+  <div style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next auto-scrape</div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:16px">Mon Aug 17, 6:00 AM</div>
+    <div class="text-muted">Weekly &middot; all counties</div>
+  </div>
+</aside>
+
+<main style="flex:1;min-width:0;display:flex;flex-direction:column">
+  <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
+    <input class="input" placeholder="Search parcel, address, owner&hellip;" style="max-width:320px" value="{{ query }}" onInput="{{ setQuery }}">
+    <span style="margin-left:auto;font-size:12px" class="text-muted">Last scrape: {{ lastScrape }}</span>
+    <button class="btn btn-secondary" onClick="{{ downloadExcel }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>{{ exportLabel }}</button>
+    <button class="btn btn-primary" onClick="{{ runScrape }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>{{ scrapeLabel }}</button>
+  </header>
+
+  <div style="flex:1;overflow-y:auto;padding:26px 28px 48px">
+
+  <sc-if value="{{ showDashboard }}" hint-placeholder-val="{{ true }}">
+    <h2 style="margin-bottom:18px">Dashboard</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
+      <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+        <div class="blueprint" style="padding:16px 18px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">{{ st.label }}</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">{{ st.value }}</div>
+          <div style="font-size:12px" class="text-muted">{{ st.sub }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="field" style="width:170px"><label>County</label>
+        <select class="input" value="{{ countyFilter }}" onChange="{{ setCounty }}"><option value="All">All counties</option><option>Alachua</option><option>Duval</option><option>Hernando</option><option>Lee</option><option>Marion</option><option>Osceola</option><option>Polk</option><option>Putnam</option><option>Sarasota</option><option>Escambia</option></select>
+      </div>
+      <div class="field" style="width:170px"><label>Property type</label>
+        <select class="input" value="{{ typeFilter }}" onChange="{{ setType }}"><option value="All">All types</option><option>Single family</option><option>Vacant land</option><option>Multi-family</option><option>Commercial</option><option>Condo/Townhome</option><option>Mobile home</option></select>
+      </div>
+      <div class="field" style="width:150px"><label>Max opening bid</label>
+        <input class="input" placeholder="$ any" value="{{ bidFilter }}" onInput="{{ setBidFilter }}">
+      </div>
+      <button class="btn" onClick="{{ toggleMyTypes }}" style="border:1px solid {{ myTypesBd }};background:{{ myTypesBg }};color:{{ myTypesFg }}">&#9733; My types first</button>
+      <span style="font-size:12px;margin-left:auto" class="text-muted">{{ rowCount }} properties</span>
+    </div>
+
+    <div class="blueprint" style="padding:0"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <table class="table">
+        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
+        <tbody>
+          <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+            <tr onClick="{{ r.open }}" style="cursor:pointer">
+              <td style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--color-accent-700)">{{ r.parcel }}</td>
+              <td><div style="font-weight:500">{{ r.addr }}</div><div style="font-size:12px" class="text-muted">{{ r.city }}</div></td>
+              <td>{{ r.county }}</td>
+              <td><span class="tag tag-neutral">{{ r.type }}</span></td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">{{ r.assessedFmt }}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">{{ r.bidFmt }}</td>
+              <td style="font-size:13px">{{ r.auction }}</td>
+              <td><span class="tag {{ r.tagClass }}">{{ r.status }}</span></td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showDetail }}" hint-placeholder-val="{{ false }}">
+    <button class="btn btn-ghost" onClick="{{ backToDash }}" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
+      <h2 style="margin:0">{{ selAddr }}</h2>
+      <span class="tag tag-accent">{{ selType }}</span>
+      <span style="font-size:13px" class="text-muted">{{ selCity }} &middot; {{ selCounty }} County</span>
+    </div>
+    <div style="font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--color-accent-700);margin-bottom:22px">Parcel {{ selParcel }}</div>
+
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
+          <div class="blueprint duotone ph" style="height:190px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><span>property photo &mdash; appraiser scrape</span></div>
+          <div class="blueprint" style="padding:0;display:flex;flex-direction:column"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="display:flex;border-bottom:1px solid var(--color-divider)">
+              <button onClick="{{ mapInteractive }}" style="flex:1;font-family:var(--font-heading);font-weight:600;font-size:12.5px;letter-spacing:.04em;padding:7px;border:none;cursor:pointer;background:{{ mapIntBg }};color:{{ mapIntFg }}">INTERACTIVE</button>
+              <button onClick="{{ mapStatic }}" style="flex:1;font-family:var(--font-heading);font-weight:600;font-size:12.5px;letter-spacing:.04em;padding:7px;border:none;border-left:1px solid var(--color-divider);cursor:pointer;background:{{ mapStatBg }};color:{{ mapStatFg }}">STATIC</button>
+            </div>
+            <div class="ph" style="flex:1;min-height:154px"><span>{{ mapLabel }}</span></div>
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
+            <sc-for list="{{ selFacts }}" as="f" hint-placeholder-count="6">
+              <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">{{ f.k }}</div><div style="font-weight:500">{{ f.v }}</div></div>
+            </sc-for>
+          </div>
+          <div class="hr"></div>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px">
+            <a href="#" onClick="{{ noop }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> {{ selCounty }} Property Appraiser</a>
+            <a href="#" onClick="{{ noop }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Clerk of Court &mdash; case file</a>
+            <a href="#" onClick="{{ noop }}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg> Tax collector record</a>
+          </div>
+        </div>
+
+        <sc-if value="{{ showAi }}" hint-placeholder-val="{{ true }}">
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">AI research</h6>
+            <span class="tag tag-accent">agent</span>
+            <button class="btn btn-ghost" style="margin-left:auto" onClick="{{ rerunAI }}">{{ aiLabel }}</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
+            <sc-for list="{{ aiFindings }}" as="a" hint-placeholder-count="4">
+              <div style="display:flex;gap:12px">
+                <span class="tag {{ a.cls }}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">{{ a.topic }}</span>
+                <span>{{ a.text }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Sources: county appraiser, FEMA flood maps, clerk of court records, recent MLS comps &middot; ran {{ aiRan }}</div>
+        </div>
+        </sc-if>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">My position</h6>
+          <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
+            <sc-for list="{{ statusOpts }}" as="so" hint-placeholder-count="3">
+              <button onClick="{{ so.set }}" style="flex:1;padding:8px 4px;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.03em;border:none;cursor:pointer;background:{{ so.bg }};color:{{ so.fg }}">{{ so.label }}</button>
+            </sc-for>
+          </div>
+          <div class="field" style="margin-bottom:12px"><label>Max I&rsquo;m willing to pay</label>
+            <input class="input" placeholder="$ 0" value="{{ selBid }}" onInput="{{ setSelBid }}" style="font-variant-numeric:tabular-nums;font-weight:500">
+          </div>
+          <div class="field" style="margin-bottom:12px"><label>Add to list</label>
+            <select class="input" value="{{ selList }}" onChange="{{ setSelList }}"><option value="">&mdash; none &mdash;</option><option>A-grade flips</option><option>Land bank</option><option>Rental candidates</option></select>
+          </div>
+          <div class="field"><label>Notes</label>
+            <textarea class="input" placeholder="Anything the team should know&hellip;" value="{{ selNotes }}" onInput="{{ setSelNotes }}"></textarea>
+          </div>
+        </div>
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">{{ selAuction }}</div>
+          <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">{{ selBidFmt }}</b> &middot; Assessed {{ selAssessedFmt }}</div>
+          <div style="font-size:12.5px" class="text-muted">Liens on record: {{ selLiens }}</div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showLists }}" hint-placeholder-val="{{ false }}">
+    <h2 style="margin-bottom:6px">My lists</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Group the properties you&rsquo;re tracking. Click a list to see its parcels.</p>
+    <div style="display:flex;gap:10px;max-width:420px;margin-bottom:24px">
+      <input class="input" placeholder="New list name&hellip;" value="{{ newListName }}" onInput="{{ setNewListName }}">
+      <button class="btn btn-primary" onClick="{{ addList }}" style="flex:none">+ Create</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      <sc-for list="{{ listCards }}" as="lc" hint-placeholder-count="3">
+        <div class="blueprint" style="padding:18px 20px;cursor:pointer" style-hover="background:var(--color-accent-100)"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">{{ lc.name }}</div>
+            <span class="tag tag-accent">{{ lc.count }}</span>
+          </div>
+          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">{{ lc.desc }}</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <sc-for list="{{ lc.items }}" as="li" hint-placeholder-count="2">
+              <button onClick="{{ li.open }}" style="display:flex;gap:10px;align-items:baseline;background:none;border:none;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:inherit;width:100%">
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--color-accent-700)">{{ li.parcel }}</span>
+                <span style="flex:1">{{ li.addr }}</span>
+                <span class="text-muted">{{ li.bidFmt }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showHistory }}" hint-placeholder-val="{{ false }}">
+    <h2 style="margin-bottom:6px">Scrape history</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Automatic runs every Monday 6:00 AM ET, plus any manual runs. Each run sweeps all 36 counties.</p>
+    <div class="blueprint" style="padding:0"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <table class="table">
+        <thead><tr><th>Run</th><th>Trigger</th><th>Counties</th><th style="text-align:right">New records</th><th style="text-align:right">Updated</th><th style="text-align:right">Duration</th><th>Status</th></tr></thead>
+        <tbody>
+          <sc-for list="{{ runs }}" as="rn" hint-placeholder-count="6">
+            <tr>
+              <td style="font-weight:500">{{ rn.date }}</td>
+              <td><span class="tag {{ rn.trigClass }}">{{ rn.trigger }}</span></td>
+              <td>{{ rn.counties }}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">{{ rn.added }}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">{{ rn.updated }}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">{{ rn.dur }}</td>
+              <td><span class="tag {{ rn.statClass }}">{{ rn.status }}</span></td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showSettings }}" hint-placeholder-val="{{ false }}">
+    <h2 style="margin-bottom:20px">Settings</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:960px;align-items:start">
+      <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
+        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when &ldquo;My types first&rdquo; is on.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+          <sc-for list="{{ typePrefs }}" as="tp" hint-placeholder-count="6">
+            <button onClick="{{ tp.toggle }}" style="font-family:var(--font-body);font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid {{ tp.bd }};background:{{ tp.bg }};color:{{ tp.fg }}">{{ tp.label }}</button>
+          </sc-for>
+        </div>
+        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
+          <input class="input" value="{{ budget }}" onInput="{{ setBudget }}" style="max-width:180px;font-variant-numeric:tabular-nums">
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Scrape schedule</h6>
+          <div style="display:flex;border:1px solid var(--color-divider);margin-bottom:12px;max-width:320px">
+            <sc-for list="{{ dayOpts }}" as="d" hint-placeholder-count="7">
+              <button onClick="{{ d.set }}" style="flex:1;padding:7px 0;font-family:var(--font-heading);font-weight:600;font-size:12.5px;border:none;cursor:pointer;background:{{ d.bg }};color:{{ d.fg }}">{{ d.label }}</button>
+            </sc-for>
+          </div>
+          <div style="font-size:13px" class="text-muted">Weekly on <b style="color:var(--color-text)">{{ dayName }}</b> at 6:00 AM ET. Manual runs any time from the top bar.</div>
+        </div>
+        <div class="blueprint" style="padding:18px 20px"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+            <div style="display:flex;justify-content:space-between"><span>fabian@hatfella.com</span><span class="tag tag-accent">owner</span></div>
+            <div style="display:flex;justify-content:space-between"><span>frank@hatfella.com</span><span class="tag tag-neutral">member</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:14px">
+            <input class="input" placeholder="teammate@email.com">
+            <button class="btn btn-secondary" style="flex:none">Invite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  </div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;myTypesFirstDefault&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;showAiResearch&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;defaultMapMode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;interactive&quot;,&quot;static&quot;],&quot;default&quot;:&quot;interactive&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = {
+    screen: 'dashboard', selId: null, query: '', countyFilter: 'All', typeFilter: 'All', bidFilter: '',
+    myTypesFirst: this.props.myTypesFirstDefault ?? true, mapMode: this.props.defaultMapMode ?? 'interactive', scraping: false, exporting: false,
+    newListName: '', scheduleDay: 1, budget: '$ 25,000',
+    myTypes: { 'Single family': true, 'Vacant land': true, 'Multi-family': false, 'Commercial': false, 'Condo/Townhome': false, 'Mobile home': false },
+    interest: {
+      p1: { status: 'Interested', bid: '$ 14,500', list: 'A-grade flips', notes: 'Roof looks recent on street view.' },
+      p4: { status: 'Interested', bid: '$ 6,000', list: 'Land bank', notes: '' },
+      p7: { status: 'Watching', bid: '', list: 'Land bank', notes: '' }
+    }
+  };
+  data = [
+    { id:'p1', parcel:'06860-002-000', addr:'1417 NE 22nd St', city:'Gainesville', county:'Alachua', type:'Single family', assessed:189400, bid:12643, auction:'Sep 3, 2026', lot:'0.24 ac', sqft:'1,462 sqft', owner:'HELMS, R & T', liens:'$4,210 (code enforcement)', zoning:'RSF-2' },
+    { id:'p2', parcel:'12-09-24-0150', addr:'118 Cypress Trail', city:'Interlachen', county:'Putnam', type:'Vacant land', assessed:14200, bid:2890, auction:'Aug 26, 2026', lot:'0.50 ac', sqft:'—', owner:'SUNLAND TRUST', liens:'None found', zoning:'R-2' },
+    { id:'p3', parcel:'2027-11-4415', addr:'872 Palmetto Ave #204', city:'Sarasota', county:'Sarasota', type:'Condo/Townhome', assessed:216000, bid:19750, auction:'Sep 9, 2026', lot:'—', sqft:'1,105 sqft', owner:'BAYLINE HOLDINGS LLC', liens:'$8,930 (HOA)', zoning:'RMF-3' },
+    { id:'p4', parcel:'04-45-27-L2-0090', addr:'Milwaukee Blvd lot 9', city:'Lehigh Acres', county:'Lee', type:'Vacant land', assessed:9800, bid:1975, auction:'Aug 20, 2026', lot:'0.25 ac', sqft:'—', owner:'GARZA, M', liens:'None found', zoning:'RS-1' },
+    { id:'p5', parcel:'R08-222-19-0330', addr:'7211 Fort Dade Ave', city:'Brooksville', county:'Hernando', type:'Single family', assessed:142700, bid:9340, auction:'Sep 16, 2026', lot:'0.31 ac', sqft:'1,218 sqft', owner:'PRICE ESTATE', liens:'$1,120 (utility)', zoning:'R1-C' },
+    { id:'p6', parcel:'23-28-17-141500', addr:'404 Skyview Dr', city:'Lakeland', county:'Polk', type:'Mobile home', assessed:61300, bid:4480, auction:'Aug 27, 2026', lot:'0.18 ac', sqft:'980 sqft', owner:'CARTER, D', liens:'None found', zoning:'RMH' },
+    { id:'p7', parcel:'9024-0871-03', addr:'SW 142nd Ct parcel B', city:'Ocala', county:'Marion', type:'Vacant land', assessed:11600, bid:2310, auction:'Sep 2, 2026', lot:'1.02 ac', sqft:'—', owner:'MARION LAND CO', liens:'None found', zoning:'A-1' },
+    { id:'p8', parcel:'088122-0000', addr:'1530 W 21st St', city:'Jacksonville', county:'Duval', type:'Multi-family', assessed:238900, bid:27460, auction:'Sep 23, 2026', lot:'0.29 ac', sqft:'2,640 sqft', owner:'NORTHBANK PROP LLC', liens:'$12,400 (demolition)', zoning:'RMD-A' },
+    { id:'p9', parcel:'15-2S-30-1901', addr:'2209 N Palafox St', city:'Pensacola', county:'Escambia', type:'Single family', assessed:97500, bid:7120, auction:'Aug 25, 2026', lot:'0.16 ac', sqft:'1,040 sqft', owner:'WEBB, J', liens:'$680 (mowing)', zoning:'HC-1' },
+    { id:'p10', parcel:'07-25-29-3410', addr:'1811 E Vine St', city:'Kissimmee', county:'Osceola', type:'Commercial', assessed:412000, bid:38900, auction:'Oct 1, 2026', lot:'0.44 ac', sqft:'3,850 sqft', owner:'VINE STREET PLAZA INC', liens:'$22,150 (tax certs)', zoning:'C-2' }
+  ];
+  fmt(n) { return '$' + n.toLocaleString('en-US'); }
+  parseBid(s) { const n = parseInt(String(s).replace(/[^0-9]/g, ''), 10); return isNaN(n) ? null : n; }
+  go(screen) { this.setState({ screen }); }
+  openProp(id) { this.setState({ screen: 'detail', selId: id }); }
+  setInterest(id, patch) {
+    this.setState(s => ({ interest: { ...s.interest, [id]: { status: 'Watching', bid: '', list: '', notes: '', ...(s.interest[id] || {}), ...patch } } }));
+  }
+  renderVals() {
+    const s = this.state, S = (k) => s.screen === k;
+    const acc = 'var(--color-accent)', bg = 'var(--color-bg)', txt = 'var(--color-text)', div = 'var(--color-divider)';
+    const navDefs = [['dashboard','Dashboard'],['lists','My lists'],['history','Scrape history'],['settings','Settings']];
+    const navItems = navDefs.map(([k, label]) => {
+      const active = s.screen === k || (k === 'dashboard' && s.screen === 'detail');
+      return { label, go: () => this.go(k), bg: active ? acc : 'transparent', fg: active ? bg : txt, bd: active ? acc : 'transparent', dot: active ? bg : 'transparent' };
+    });
+    let rows = this.data.filter(p =>
+      (s.countyFilter === 'All' || p.county === s.countyFilter) &&
+      (s.typeFilter === 'All' || p.type === s.typeFilter) &&
+      (!s.query || (p.addr + ' ' + p.parcel + ' ' + p.owner + ' ' + p.city).toLowerCase().includes(s.query.toLowerCase())) &&
+      (this.parseBid(s.bidFilter) == null || p.bid <= this.parseBid(s.bidFilter))
+    );
+    if (s.myTypesFirst) rows = [...rows].sort((a, b) => (s.myTypes[b.type] ? 1 : 0) - (s.myTypes[a.type] ? 1 : 0));
+    const rowObjs = rows.map(p => {
+      const it = s.interest[p.id];
+      return { ...p, assessedFmt: this.fmt(p.assessed), bidFmt: this.fmt(p.bid), open: () => this.openProp(p.id),
+        status: it ? it.status : 'New', tagClass: it ? (it.status === 'Interested' ? 'tag-accent' : it.status === 'Pass' ? 'tag-outline' : 'tag-neutral') : 'tag-neutral' };
+    });
+    const sel = this.data.find(p => p.id === s.selId) || this.data[0];
+    const selInt = s.interest[sel.id] || { status: 'Watching', bid: '', list: '', notes: '' };
+    const statusOpts = ['Interested', 'Watching', 'Pass'].map(o => ({
+      label: o.toUpperCase(), set: () => this.setInterest(sel.id, { status: o }),
+      bg: selInt.status === o ? acc : 'transparent', fg: selInt.status === o ? bg : txt
+    }));
+    const lists = [
+      { name: 'A-grade flips', desc: 'Houses worth rehabbing and reselling.' },
+      { name: 'Land bank', desc: 'Cheap lots to hold long-term.' },
+      { name: 'Rental candidates', desc: 'Cashflow if picked up under assessed value.' }
+    ].map(l => {
+      const items = this.data.filter(p => (s.interest[p.id] || {}).list === l.name)
+        .map(p => ({ parcel: p.parcel, addr: p.addr, bidFmt: this.fmt(p.bid), open: () => this.openProp(p.id) }));
+      return { ...l, count: items.length + (items.length === 1 ? ' parcel' : ' parcels'), items };
+    });
+    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const mapInt = s.mapMode === 'interactive';
+    return {
+      navItems, query: s.query, setQuery: e => this.setState({ query: e.target.value }),
+      lastScrape: 'Mon Aug 10, 6:00 AM', 
+      scrapeLabel: s.scraping ? 'Scraping\u2026' : 'Run scrape now',
+      runScrape: () => { if (s.scraping) return; this.setState({ scraping: true }); setTimeout(() => this.setState({ scraping: false }), 2500); },
+      exportLabel: s.exporting ? 'Preparing .xlsx\u2026' : 'Export Excel',
+      downloadExcel: () => { if (s.exporting) return; this.setState({ exporting: true }); setTimeout(() => this.setState({ exporting: false }), 1800); },
+      showDashboard: S('dashboard'), showDetail: S('detail'), showLists: S('lists'), showHistory: S('history'), showSettings: S('settings'),
+      stats: [
+        { label: 'Active properties', value: '1,284', sub: 'across 36 counties' },
+        { label: 'New this week', value: '96', sub: 'from Mon Aug 10 run' },
+        { label: 'Auctions \u2264 14 days', value: '18', sub: 'earliest Aug 20 \u2014 Lee' },
+        { label: 'Marked interested', value: '2', sub: this.fmt(20500) + ' committed max' }
+      ],
+      countyFilter: s.countyFilter, setCounty: e => this.setState({ countyFilter: e.target.value }),
+      typeFilter: s.typeFilter, setType: e => this.setState({ typeFilter: e.target.value }),
+      bidFilter: s.bidFilter, setBidFilter: e => this.setState({ bidFilter: e.target.value }),
+      toggleMyTypes: () => this.setState({ myTypesFirst: !s.myTypesFirst }),
+      myTypesBg: s.myTypesFirst ? acc : 'transparent', myTypesFg: s.myTypesFirst ? bg : txt, myTypesBd: s.myTypesFirst ? acc : div,
+      rowCount: rowObjs.length, rows: rowObjs,
+      backToDash: () => this.go('dashboard'), noop: e => e.preventDefault(),
+      selAddr: sel.addr, selCity: sel.city, selCounty: sel.county, selType: sel.type, selParcel: sel.parcel,
+      selAuction: sel.auction, selBidFmt: this.fmt(sel.bid), selAssessedFmt: this.fmt(sel.assessed), selLiens: sel.liens,
+      selFacts: [
+        { k: 'Owner of record', v: sel.owner }, { k: 'Assessed value', v: this.fmt(sel.assessed) }, { k: 'Opening bid', v: this.fmt(sel.bid) },
+        { k: 'Lot size', v: sel.lot }, { k: 'Building', v: sel.sqft }, { k: 'Zoning', v: sel.zoning }
+      ],
+      mapInteractive: () => this.setState({ mapMode: 'interactive' }), mapStatic: () => this.setState({ mapMode: 'static' }),
+      mapIntBg: mapInt ? acc : 'transparent', mapIntFg: mapInt ? bg : txt,
+      mapStatBg: !mapInt ? acc : 'transparent', mapStatFg: !mapInt ? bg : txt,
+      mapLabel: mapInt ? 'interactive map \u2014 Leaflet / Google Maps embed' : 'static map \u2014 Static Maps API, parcel centroid',
+      statusOpts, selBid: selInt.bid, setSelBid: e => this.setInterest(sel.id, { bid: e.target.value }),
+      selList: selInt.list, setSelList: e => this.setInterest(sel.id, { list: e.target.value }),
+      selNotes: selInt.notes, setSelNotes: e => this.setInterest(sel.id, { notes: e.target.value }),
+      showAi: this.props.showAiResearch ?? true,
+      aiLabel: 'Re-run research', aiRan: 'Aug 10, 6:41 AM', rerunAI: () => {},
+      aiFindings: [
+        { topic: 'Appraisal', cls: 'tag-accent', text: 'County appraiser shows ' + sel.sqft + ' on ' + sel.lot + ', last sale 2011 for $88,000. Just value trending +6%/yr since 2022.' },
+        { topic: 'Flood', cls: 'tag-neutral', text: 'FEMA zone X \u2014 outside the 500-year floodplain. No flood insurance requirement on record.' },
+        { topic: 'Liens', cls: sel.liens === 'None found' ? 'tag-neutral' : 'tag-outline', text: sel.liens === 'None found' ? 'No open liens found at the clerk of court or code enforcement.' : 'Open: ' + sel.liens + '. Survives sale review recommended \u2014 clerk case linked above.' },
+        { topic: 'Comps', cls: 'tag-accent', text: '3 sales within 0.5 mi in 90 days: $168k, $174k, $181k \u2014 median $128/sqft. Subject at opening bid is 7% of comp median.' }
+      ],
+      newListName: s.newListName, setNewListName: e => this.setState({ newListName: e.target.value }),
+      addList: () => this.setState({ newListName: '' }),
+      listCards: lists,
+      runs: [
+        { date: 'Aug 10, 2026', trigger: 'Auto', trigClass: 'tag-neutral', counties: '36 / 36', added: 96, updated: 412, dur: '14m 02s', status: 'Complete', statClass: 'tag-accent' },
+        { date: 'Aug 6, 2026', trigger: 'Manual', trigClass: 'tag-outline', counties: '3 (Lee, Polk, Duval)', added: 11, updated: 58, dur: '2m 48s', status: 'Complete', statClass: 'tag-accent' },
+        { date: 'Aug 3, 2026', trigger: 'Auto', trigClass: 'tag-neutral', counties: '36 / 36', added: 74, updated: 390, dur: '13m 40s', status: 'Complete', statClass: 'tag-accent' },
+        { date: 'Jul 27, 2026', trigger: 'Auto', trigClass: 'tag-neutral', counties: '35 / 36', added: 81, updated: 367, dur: '15m 11s', status: 'Monroe failed', statClass: 'tag-outline' },
+        { date: 'Jul 20, 2026', trigger: 'Auto', trigClass: 'tag-neutral', counties: '36 / 36', added: 68, updated: 344, dur: '13m 55s', status: 'Complete', statClass: 'tag-accent' }
+      ],
+      typePrefs: Object.keys(s.myTypes).map(t => ({
+        label: t, toggle: () => this.setState(st => ({ myTypes: { ...st.myTypes, [t]: !st.myTypes[t] } })),
+        bg: s.myTypes[t] ? acc : 'transparent', fg: s.myTypes[t] ? bg : txt, bd: s.myTypes[t] ? acc : div
+      })),
+      budget: s.budget, setBudget: e => this.setState({ budget: e.target.value }),
+      dayOpts: days.map((d, i) => ({ label: d.toUpperCase(), set: () => this.setState({ scheduleDay: i }),
+        bg: s.scheduleDay === i ? acc : 'transparent', fg: s.scheduleDay === i ? bg : txt })),
+      dayName: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][s.scheduleDay]
+    };
+  }
+}
+</script>
+</body>
+</html>
