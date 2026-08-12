@@ -53,6 +53,15 @@ python -m scraper run --counties volusia,polk
 python -m scraper dashboard
 ```
 
+### Hosted dashboard
+
+**https://frankhatfellaaiagent-del.github.io/Taxdeed/** — searchable/filterable
+view of the latest scraped data, hosted on GitHub Pages. It redeploys
+automatically whenever `dashboard/` or the data feeds change (the
+`Deploy dashboard (GitHub Pages)` workflow publishes to the `gh-pages` branch).
+A custom domain can be pointed at it later via a DNS CNAME + the repo's Pages
+settings, with no rework.
+
 ### Data feed (for the dashboard UI / Google Sheet)
 
 Fixed-URL feeds under `data/exports/` (`master_list.json` + `master_list.tsv`) are
