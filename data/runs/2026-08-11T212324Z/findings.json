@@ -1,0 +1,1182 @@
+{
+  "run": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-08-11T212324Z",
+  "previous_run": null,
+  "records": 519,
+  "duplicates_merged": 0,
+  "new": 519,
+  "changed": 0,
+  "removed": 0,
+  "buybox_match": 0,
+  "buybox_review": 373,
+  "by_county": {
+    "alachua": {
+      "auctions": 13,
+      "match": 0,
+      "review": 13,
+      "new": 13,
+      "changed": 0
+    },
+    "marion": {
+      "auctions": 252,
+      "match": 0,
+      "review": 252,
+      "new": 252,
+      "changed": 0
+    },
+    "polk": {
+      "auctions": 108,
+      "match": 0,
+      "review": 108,
+      "new": 108,
+      "changed": 0
+    },
+    "volusia": {
+      "auctions": 146,
+      "match": 0,
+      "review": 0,
+      "new": 146,
+      "changed": 0
+    }
+  },
+  "anomalies": {
+    "alachua|01386-100-062|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|01550-001-000|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|06650-204-004|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|11570-000-000|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "alachua|00310-012-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|02684-000-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|07214-031-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10733-009-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10893-024-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|06890-036-000|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|07836-014-004|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10733-043-000|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|11063-000-000|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "marion|1802-004-041|08/12/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|1661-012-004|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|1741-005-006|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-002-020|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-003-012|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-004-009|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-004-021|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-005-018|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2001-005-019|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2004-228-036|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2302-010-031|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2303-011-046|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2304-016-025|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2304-016-031|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2304-016-034|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2304-020-064|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2309-117-054|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-125-040|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-126-001|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-126-067|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-204-075|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-206-025|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2312-205-045|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-001-033|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-001-036|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-029|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-053|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-059|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-062|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-071|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-074|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|3490-056-101|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|39430-14-041|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|39430-22-018|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|39430-30-010|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|8003-0408-08|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|8005-0786-13|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|8009-0000-37|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-004-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-006-005|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-008-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-015-006|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-019-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-029-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-029-013|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-016|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-019|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-004|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-026|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-021|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-060-014|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-008|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-012|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-064-002|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-067-008|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-067-025|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-069-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-003|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-010|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-019|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-010|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-015|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-020|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-077-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-080-007|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-081-029|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-083-024|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-085-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-088-001|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-098-004|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-102-011|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-102-012|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2312-022-161|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|8011-1370-26|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1107-14|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1122-13|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-006-001|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-008-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-008-012|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-009-019|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-013-023|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-014-020|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-011-046|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-011-051|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-032-017|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-033-025|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-008|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-031|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-032|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-038-017|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-039-009|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-040-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-040-008|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-041-010|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-041-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-043-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-043-015|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-045-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-046-021|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-018|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-053-004|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-001|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-019|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-006|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-024|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-003|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-018|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-012-045|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-012-051|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1101-09|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9050-1583-07|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9050-1584-04|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|23-28-09-0000-0004-2370|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|23-29-14-1415-0000-0070|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-26-32-1609-4000-0300|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|24-28-29-2477-0000-5040|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-29-18-2857-0000-0021|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-29-23-0000-0001-1050|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|242525000000033190|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|25-27-36-3055-0100-0480|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-28-07-3203-0100-0210|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-28-21-0000-0003-1035|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-30-06-0000-0001-4220|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-30-18-4299-2000-0970|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-31-34-4785-0000-1091|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|26-25-01-4880-3300-0790|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|26-29-15-6885-0301-0950|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|26-30-27-0000-0003-4020|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-11-0000-0003-1080|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-11-7014-0000-0090|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-12-7015-0000-1050|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|27-27-04-7250-0100-1290|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-21-7550-0000-6081|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7820-0000-2030|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7820-0000-2243|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7830-0008-7160|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-30-35-9285-2000-0861|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|28-27-33-9344-6037-6070|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-28-18-0000-0002-4010|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-30-01-9390-3005-6011|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-31-21-0000-0003-2050|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|282707000000031050|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|30-31-04-9941-0003-3001|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|303102000000022160|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|303103000000022050|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|23-26-25-0005-8000-1420|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-10-0256-0000-0431|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-12-0510-0000-3170|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-12-0555-0000-1050|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-15-0855-0000-0506|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-15-0855-0000-0818|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-15-0855-0000-1107|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-22-0910-0000-0404|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-25-1270-0000-6120|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-28-26-0000-0003-2040|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-29-01-0000-0002-1040|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-29-12-0000-0001-3080|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|23-29-20-0000-0003-3090|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-29-23-0000-0004-4070|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-29-31-1422-1700-0070|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-29-33-1423-8300-0820|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|23-30-01-1441-2001-5050|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0001-2180|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0001-3320|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0001-4200|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0001-4250|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0002-1090|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0002-2320|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0002-2390|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0002-4100|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0003-2160|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0003-2230|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0003-4170|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0004-2030|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-24-0000-0004-4030|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-25-0000-0001-1240|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-25-0000-0001-2010|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-25-0000-0001-2300|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-25-0000-0001-3110|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-36-0000-0003-3050|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-26-33-1609-4500-0100|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-27-07-0000-0004-3420|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-28-09-1755-0001-0107|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-28-09-1755-0002-4110|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-28-21-2393-0000-1030|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-28-22-0000-0002-3010|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-28-23-2422-2000-0730|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-28-27-0000-0001-4002|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-28-27-0000-0003-2020|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-29-14-2830-0009-0640|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|25-26-32-0000-0001-3050|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|25-27-06-2983-4000-3180|09/17/2026": [
+      "missing assessed value"
+    ],
+    "polk|24-25-14-0000-0002-1040|10/15/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|530414000629|08/11/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|612101100020|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|612101100030|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|612101110110|08/11/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|612101110180|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|612101110200|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|612801010080|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|613001020230|08/11/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|613101130040|08/11/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|613101150210|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|613301080030|08/11/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|712901020120|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|722501020270|08/11/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|412704000170|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|422530005190|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|502700000670|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|530952001020|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|530953001240|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|530953002200|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|580300000031|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|633733000730|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|700113002430|08/25/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|710601110010|08/25/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "volusia|723601020020|08/25/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|742624002010|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|801108140082|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|813055060070|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|840201018480|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|840201076190|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|843807030060|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|844701002960|08/25/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|32080101B270|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|422014000010|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|422530011002|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|422530011202|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|422530016500|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424219380030|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|424415000470|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|521120000320|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521609000010|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523815090100|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523948180140|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531631001040|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531631004050|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531631004090|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|533934000030|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|534005030017|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|611001240230|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|620602260110|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|634003010070|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|700866000050|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|703301030080|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|731706000130|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|803432110150|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|844702020231|09/01/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|911103001110|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|323102000350|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|420333002050|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521119000170|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521205000800|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|53270805V030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533801150033|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533832000410|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533841000100|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533859020030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533863000070|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533883000140|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533884000030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533888000240|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533898010240|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533901030011|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533978000220|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|534005030015|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|613201160120|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|700501000061|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|700803020150|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701631020200|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|741908000040|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|742603012100|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|793601000420|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|803605050123|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813055270060|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|920701000020|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|950400000012|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|323107000020|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|323107000170|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|423317010150|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424228040300|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424288001020|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|480300000015|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523818020150|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523913000241|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531623000080|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|53270802F040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|5327100121B3|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533862000510|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533876020260|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|533939020030|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533958010010|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533978000480|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|5339A7002040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|534032000140|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|631307011050|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|633708010090|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|634103000040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|721201020041|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|732607000010|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|734306001031|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|740410200041|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|744006160290|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|840201064850|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|910603090030|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|950400000016|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ]
+  },
+  "changes": {},
+  "excluded_foreclosure": 0,
+  "county_errors": {},
+  "county_warnings": {},
+  "report": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-08-11T212324Z/tax_deed_scrub.xlsx"
+}

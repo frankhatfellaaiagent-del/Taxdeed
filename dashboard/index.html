@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MADD Assets — FL Tax Deed Auctions</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>">
+<link rel="stylesheet" href="ds/styles.css">
+<style>
+html,body{margin:0;height:100%}
+@media (min-width:901px){html,body{overflow:hidden}}
+a{color:var(--color-accent)}a:hover{color:var(--color-accent-700)}
+.ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
+.ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
+.nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
+.nav-btn:hover{background:var(--color-accent-100)}
+.nav-btn.active{background:var(--color-accent);color:var(--color-bg);border-color:var(--color-accent)}
+.nav-btn .dot{width:6px;height:6px;flex:none;background:transparent;border:1px solid currentColor}
+.nav-btn.active .dot{background:var(--color-bg)}
+.seg3{flex:1;padding:8px 4px;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.03em;border:none;cursor:pointer;background:transparent;color:var(--color-text)}
+.seg3.on{background:var(--color-accent);color:var(--color-bg)}
+.pillbtn{font-family:var(--font-body);font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--color-divider);background:transparent;color:var(--color-text)}
+.pillbtn.on{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-bg)}
+.mono{font-family:ui-monospace,Menlo,monospace}
+tr.rowlink{cursor:pointer}
+tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
+#load-note{padding:60px 0;text-align:center}
+@media (max-width:900px){
+  #frame{flex-direction:column!important;height:auto!important}
+  aside{width:auto!important;border-right:none!important;border-bottom:1px solid var(--color-divider)}
+  #scroller{overflow:visible!important}
+  header{flex-wrap:wrap}
+  .detail-grid{grid-template-columns:1fr!important}
+  .stats-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+.tablewrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<div id="frame" style="display:flex;height:100vh;font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
+
+<aside style="width:216px;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--color-divider);padding:20px 14px;gap:4px">
+  <div style="margin-bottom:22px;padding:0 8px">
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED</div>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)">Florida &middot; 36 counties</div>
+  </div>
+  <nav id="nav" style="display:flex;flex-direction:column;gap:4px"></nav>
+  <div style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next auto-scrape</div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
+    <div class="text-muted">Weekly &middot; all 36 counties</div>
+  </div>
+</aside>
+
+<main style="flex:1;min-width:0;display:flex;flex-direction:column">
+  <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
+    <input class="input" id="q" placeholder="Search parcel, address, case&hellip;" style="max-width:320px">
+    <span style="margin-left:auto;font-size:12px" class="text-muted" id="last-scrape">loading&hellip;</span>
+    <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export Excel</button>
+    <button class="btn btn-primary" id="btn-scrape"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Run scrape now</button>
+  </header>
+
+  <div id="scroller" style="flex:1;overflow-y:auto;padding:26px 28px 48px">
+    <div id="load-note"><span class="text-muted">Loading live auction data&hellip;</span></div>
+    <section id="scr-dashboard" hidden></section>
+    <section id="scr-detail" hidden></section>
+    <section id="scr-lists" hidden></section>
+    <section id="scr-history" hidden></section>
+    <section id="scr-settings" hidden></section>
+  </div>
+</main>
+</div>
+
+<script>
+/* MADD Assets tax deed dashboard — production port of the Claude Design
+   prototype (design/Tax Deed Dashboard.dc.html). Same Industry design
+   system + screens; data comes from the scraper's committed feed
+   (docs/DATA_FEED.md). Team positions/lists/settings persist in this
+   browser's localStorage until a login backend exists. */
+"use strict";
+
+const FEED_URLS = [
+  "./data/exports/master_list.json",
+  "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json",
+];
+const REPO = "frankhatfellaaiagent-del/Taxdeed";
+const ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/pilot-scrape.yml`;
+const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
+const CORNERS = '<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>';
+const LINK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+
+// ---------- persisted team state (browser-local) ----------
+const store = {
+  get(k, fallback) { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } },
+  set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
+};
+let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
+let lists = store.get("tdd_lists", [
+  { name: "A-grade flips", desc: "Houses worth rehabbing and reselling." },
+  { name: "Land bank", desc: "Cheap lots to hold long-term." },
+  { name: "Rental candidates", desc: "Cashflow if picked up under assessed value." },
+]);
+let prefs = store.get("tdd_prefs", {
+  myTypes: { "Single family": true, "Vacant land": true },
+  myTypesFirst: true, budget: "", scheduleDay: 1,
+});
+const saveInterest = () => store.set("tdd_interest", interest);
+const savePrefs = () => store.set("tdd_prefs", prefs);
+const saveLists = () => store.set("tdd_lists", lists);
+const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
+const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
+
+// ---------- app state ----------
+let DATA = [];            // mapped property records
+let META = null;          // feed counts/generated_at
+let S = {
+  screen: "dashboard", selId: null, q: "",
+  county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "",
+  shown: 150, mapMode: "interactive",
+};
+
+const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+function titleCase(s) { return s ? cap(String(s).toLowerCase()) : s; }
+function splitAddr(a) {
+  if (!a) return { addr: "", city: "" };
+  const parts = a.split(",");
+  const city = parts.length > 1 ? titleCase(parts[1].trim()) : "";
+  // "NO SITUS" = county-speak for "no street address assigned" (common on
+  // vacant land) — treat as unpublished rather than showing it as an address.
+  const first = parts[0].trim();
+  const addr = /^NO\s+SITUS/i.test(first) ? "" : titleCase(first);
+  return { addr, city };
+}
+function parseDate(mdy) {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(mdy || "");
+  return m ? new Date(+m[3], +m[1] - 1, +m[2]) : null;
+}
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
+
+function mapRecord(r, i) {
+  const { addr, city } = splitAddr(r.property_address);
+  const d = parseDate(r.sale_date);
+  return {
+    id: `${r.county}|${r.parcel_id}|${r.case_number}`,
+    idx: i, county: cap(r.county.replace(/_/g, " ")),
+    parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
+    rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
+    assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
+    saleDate: d, auction: fmtDate(d), saleTime: r.sale_time || "",
+    status: r.status, redeemed: r.status === "Redeemed",
+    buybox: r.buybox, buyboxNotes: r.buybox_notes || "", anomalies: r.anomalies || [],
+    auctionUrl: r.auction_url || "", appraiserUrl: r.appraiser_url || "",
+  };
+}
+
+// ---------- data load ----------
+async function loadFeed() {
+  for (const url of FEED_URLS) {
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) continue;
+      const j = await res.json();
+      META = j; DATA = j.records.map(mapRecord);
+      return true;
+    } catch (e) { /* try next */ }
+  }
+  return false;
+}
+
+// ---------- shared header/sidebar ----------
+const NAV = [["dashboard","Dashboard"],["lists","My lists"],["history","Scrape history"],["settings","Settings"]];
+function renderNav() {
+  $("nav").innerHTML = NAV.map(([k, label]) => {
+    const active = S.screen === k || (k === "dashboard" && S.screen === "detail");
+    return `<button class="nav-btn ${active ? "active" : ""}" data-go="${k}"><span class="dot"></span>${label}</button>`;
+  }).join("");
+  $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
+}
+function nextMonday6amET() {
+  // scraper cron: Mondays 10:00 UTC (~6 AM ET)
+  const now = new Date();
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 10, 0, 0));
+  const dow = d.getUTCDay();
+  let add = (1 - dow + 7) % 7;
+  if (add === 0 && now.getTime() > d.getTime()) add = 7;
+  d.setUTCDate(d.getUTCDate() + add);
+  return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 6:00 AM ET`;
+}
+function go(screen, selId) {
+  S.screen = screen;
+  if (selId !== undefined) S.selId = selId;
+  renderNav();
+  for (const k of ["dashboard","detail","lists","history","settings"]) $("scr-" + k).hidden = k !== screen;
+  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+     history: renderHistory, settings: renderSettings })[screen]();
+  $("scroller").scrollTop = 0;
+}
+
+// ---------- filtering ----------
+function filteredRows() {
+  const q = S.q.trim().toLowerCase();
+  const maxBid = parseInt(String(S.maxBid).replace(/[^0-9]/g, ""), 10);
+  let rows = DATA.filter((p) => {
+    const it = getInt(p.id);
+    if (S.county !== "All" && p.county !== S.county) return false;
+    if (S.status !== "All" && p.status !== S.status) return false;
+    if (S.buybox !== "All" && p.buybox !== S.buybox) return false;
+    if (S.type !== "All") {
+      if (S.type === "Unassigned" ? it.type : it.type !== S.type) return false;
+    }
+    if (!isNaN(maxBid) && !(p.bid != null && p.bid <= maxBid)) return false;
+    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  if (prefs.myTypesFirst) {
+    const rank = (p) => {
+      const t = getInt(p.id).type;
+      if (t && prefs.myTypes[t]) return 0;                 // team-assigned preferred type
+      if (p.buybox === "MATCH") return 1;                  // scrub's land-use match
+      if (p.buybox === "REVIEW") return 2;
+      return 3;
+    };
+    rows = [...rows].sort((a, b) => rank(a) - rank(b) || (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15));
+  }
+  return rows;
+}
+
+// ---------- dashboard screen ----------
+function statusTag(p) {
+  if (p.redeemed) return '<span class="tag tag-outline">Redeemed</span>';
+  const st = getInt(p.id).status;
+  if (st === "Interested") return '<span class="tag tag-accent">Interested</span>';
+  if (st === "Watching") return '<span class="tag tag-neutral">Watching</span>';
+  if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
+  return '<span class="tag tag-neutral">New</span>';
+}
+function renderDashboard() {
+  const rows = filteredRows();
+  const upcoming = DATA.filter((p) => !p.redeemed);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const horizon = new Date(today.getTime() + 14 * 864e5);
+  const soon = upcoming.filter((p) => p.saleDate && p.saleDate >= today && p.saleDate <= horizon);
+  const earliest = soon.reduce((a, p) => (!a || p.saleDate < a.saleDate ? p : a), null);
+  const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
+  const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
+  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+
+  const stats = [
+    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), sub: `across ${new Set(upcoming.map((p)=>p.county)).size} counties` },
+    { label: "Auctions ≤ 14 days", value: soon.length.toLocaleString(), sub: earliest ? `earliest ${earliest.auction} — ${earliest.county}` : "none in window" },
+    { label: "Redeemed", value: DATA.filter((p)=>p.redeemed).length.toLocaleString(), sub: "owner paid — auction off" },
+    { label: "Marked interested", value: String(marked.length), sub: committed ? money(committed) + " committed max" : "none yet" },
+  ];
+
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  $("scr-dashboard").innerHTML = `
+    <h2 style="margin-bottom:18px">Dashboard</h2>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
+      ${stats.map((st) => `
+        <div class="blueprint" style="padding:16px 18px">${CORNERS}
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">${st.label}</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">${st.value}</div>
+          <div style="font-size:12px" class="text-muted">${esc(st.sub)}</div>
+        </div>`).join("")}
+    </div>
+
+    <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="field" style="width:160px"><label>County</label>
+        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}</select></div>
+      <div class="field" style="width:160px"><label>Property type</label>
+        <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
+      <div class="field" style="width:130px"><label>Status</label>
+        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
+      <div class="field" style="width:120px"><label>Buy-box</label>
+        <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
+      <div class="field" style="width:130px"><label>Max opening bid</label>
+        <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
+      <button class="btn" id="f-mytypes" style="border:1px solid ${prefs.myTypesFirst ? "var(--color-accent)" : "var(--color-divider)"};background:${prefs.myTypesFirst ? "var(--color-accent)" : "transparent"};color:${prefs.myTypesFirst ? "var(--color-bg)" : "var(--color-text)"}">&#9733; My types first</button>
+      <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
+    </div>
+
+    <div class="blueprint" style="padding:0">${CORNERS}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
+        <tbody>
+          ${rows.slice(0, S.shown).map((p) => {
+            const t = getInt(p.id).type;
+            return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+              <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
+              <td><div style="font-weight:500">${esc(p.addr)}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+              <td>${esc(p.county)}</td>
+              <td>${t ? `<span class="tag tag-neutral">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+              <td style="font-size:13px">${esc(p.auction)}</td>
+              <td>${statusTag(p)}</td>
+            </tr>`;
+          }).join("")}
+        </tbody>
+      </table></div>
+      ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+        <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
+    </div>`;
+
+  $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-mytypes").onclick = () => { prefs.myTypesFirst = !prefs.myTypesFirst; savePrefs(); renderDashboard(); };
+  const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+}
+
+// ---------- detail screen ----------
+function buyboxTag(p) {
+  const cls = p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline";
+  return `<span class="tag ${cls}" title="${esc(p.buyboxNotes)}">Buy-box: ${esc(p.buybox)}</span>`;
+}
+function renderDetail() {
+  const p = DATA.find((x) => x.id === S.selId) || DATA[0];
+  if (!p) { go("dashboard"); return; }
+  const it = getInt(p.id);
+  const hasAddr = p.hasAddr;
+  const mapQ = encodeURIComponent(p.rawAddr.replace(/FL-\s*/, "FL "));
+  const gsearch = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
+  const links = [
+    [p.appraiserUrl || gsearch(`${p.county} County FL property appraiser parcel ${p.parcel}`), `${esc(p.county)} Property Appraiser`],
+    [p.auctionUrl, "Live auction listing (RealAuction)"],
+    [gsearch(`${p.county} County Florida clerk of court records "${p.case_number}"`), "Clerk of Court &mdash; case search"],
+    [hasAddr ? "https://msc.fema.gov/portal/search?AddressQuery=" + mapQ : gsearch(`FEMA flood map ${p.county} county FL parcel ${p.parcel}`), "FEMA flood map"],
+  ].filter(([href]) => href);
+  const pctText = p.pct != null
+    ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
+    : "Assessed value not published on the auction record — confirm value on the appraiser site.";
+  const findings = [
+    { topic: "Buy-box", cls: p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline",
+      text: `${p.buybox} — ${esc(p.buyboxNotes || "no notes")}` },
+    { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
+    { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
+      text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
+    { topic: "Next step", cls: "tag-neutral",
+      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr ? ", and check the FEMA flood zone." : ". County didn't publish an address — the appraiser record is the way in.") },
+  ];
+  const mapInt = S.mapMode === "interactive";
+
+  $("scr-detail").innerHTML = `
+    <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
+      <h2 style="margin:0">${esc(p.addr)}</h2>
+      ${it.type ? `<span class="tag tag-accent">${esc(it.type)}</span>` : ""}
+      ${buyboxTag(p)}
+      ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
+      <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
+    </div>
+    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:22px">Parcel ${esc(p.parcel)}</div>
+
+    <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
+        <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
+          <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>no photo in county data —<br>open the appraiser record</span></div>
+          <div class="blueprint" style="padding:0;display:flex;flex-direction:column">${CORNERS}
+            <div style="display:flex;border-bottom:1px solid var(--color-divider)">
+              <button id="map-int" class="seg3 ${mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px">INTERACTIVE</button>
+              <button id="map-stat" class="seg3 ${!mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px;border-left:1px solid var(--color-divider)">STATIC</button>
+            </div>
+            ${hasAddr
+              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&z=${mapInt ? 16 : 13}&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe>${mapInt ? "" : '<div style="position:absolute;inset:0"></div>'}</div>`
+              : `<div class="ph" style="flex:1;min-height:154px"><span>county didn't publish an address —<br>find it via the appraiser link</span></div>`}
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
+            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
+               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"]]
+              .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
+          </div>
+          <div class="hr"></div>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px">
+            ${links.map(([href, label]) => `<a href="${esc(href)}" target="_blank" rel="noopener">${LINK_SVG} ${label}</a>`).join("")}
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">Scrub findings</h6>
+            <span class="tag tag-accent">agent</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
+            ${findings.map((a) => `<div style="display:flex;gap:12px">
+              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
+              <span>${a.text}</span></div>`).join("")}
+          </div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the scraped county auction record &middot; data as of ${META ? esc(new Date(META.generated_at).toLocaleString()) : "—"}</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">My position</h6>
+          <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
+            ${["Interested","Watching","Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-status="${o}">${o.toUpperCase()}</button>`).join("")}
+          </div>
+          <div class="field" style="margin-bottom:12px"><label>Max I&rsquo;m willing to pay</label>
+            <input class="input" id="pos-bid" placeholder="${esc(prefs.budget || "$ 0")}" value="${esc(it.bid)}" style="font-variant-numeric:tabular-nums;font-weight:500"></div>
+          <div class="field" style="margin-bottom:12px"><label>Property type (from appraiser)</label>
+            <select class="input" id="pos-type"><option value="">&mdash; not set &mdash;</option>${TYPES.map((t) => `<option ${it.type === t ? "selected" : ""}>${t}</option>`).join("")}</select></div>
+          <div class="field" style="margin-bottom:12px"><label>Add to list</label>
+            <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>${lists.map((l) => `<option ${it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</select></div>
+          <div class="field"><label>Notes</label>
+            <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
+          <div style="margin-top:10px;font-size:11px" class="text-muted">Saved in this browser.</div>
+        </div>
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
+          <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
+          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled" + (p.saleTime ? " · " + esc(p.saleTime) : "")}</div>
+        </div>
+      </div>
+    </div>`;
+
+  $("back").onclick = () => go("dashboard");
+  $("map-int").onclick = () => { S.mapMode = "interactive"; renderDetail(); };
+  $("map-stat").onclick = () => { S.mapMode = "static"; renderDetail(); };
+  $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
+    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
+  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
+  $("pos-type").onchange = (e) => { setInt(p.id, { type: e.target.value }); renderDetail(); };
+  $("pos-list").onchange = (e) => setInt(p.id, { list: e.target.value });
+  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
+}
+
+// ---------- lists screen ----------
+function renderLists() {
+  const cards = lists.map((l) => {
+    const items = DATA.filter((p) => getInt(p.id).list === l.name);
+    return { ...l, items };
+  });
+  $("scr-lists").innerHTML = `
+    <h2 style="margin-bottom:6px">My lists</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Group the properties you&rsquo;re tracking. Click a parcel to open it. Lists save in this browser.</p>
+    <div style="display:flex;gap:10px;max-width:420px;margin-bottom:24px">
+      <input class="input" id="new-list" placeholder="New list name&hellip;">
+      <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
+    </div>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      ${cards.map((lc) => `
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
+            <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
+          </div>
+          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            ${lc.items.map((p) => `
+              <button data-open="${esc(p.id)}" style="display:flex;gap:10px;align-items:baseline;background:none;border:none;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:inherit;width:100%">
+                <span class="mono" style="font-size:11.5px;color:var(--color-accent-700)">${esc(p.parcel)}</span>
+                <span style="flex:1">${esc(p.addr)}</span>
+                <span class="text-muted">${money(p.bid)}</span>
+              </button>`).join("") || '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
+          </div>
+        </div>`).join("")}
+    </div>`;
+  $("add-list").onclick = () => {
+    const name = $("new-list").value.trim();
+    if (!name || lists.some((l) => l.name === name)) return;
+    lists.push({ name, desc: "" }); saveLists(); renderLists();
+  };
+  $("scr-lists").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => go("detail", b.dataset.open));
+}
+
+// ---------- history screen ----------
+async function renderHistory() {
+  const feedLine = META
+    ? `Latest data: run <b>${esc(META.source_run)}</b> — ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).`
+    : "";
+  $("scr-history").innerHTML = `
+    <h2 style="margin-bottom:6px">Scrape history</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:8px">Automatic runs weekly (Mon 6:00 AM ET) plus manual runs from the top bar. Live from GitHub Actions.</p>
+    <p style="font-size:13.5px;margin-bottom:20px">${feedLine}</p>
+    <div class="blueprint" style="padding:0">${CORNERS}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Run</th><th>Trigger</th><th style="text-align:right">Duration</th><th>Status</th><th></th></tr></thead>
+        <tbody id="runs-body"><tr><td colspan="5" class="text-muted">Loading run history&hellip;</td></tr></tbody>
+      </table></div>
+    </div>`;
+  try {
+    const res = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=30`);
+    const j = await res.json();
+    const runs = (j.workflow_runs || []).filter((r) => r.name === "Pilot scrape (live)").slice(0, 12);
+    const trig = (e) => e === "schedule" ? ["Auto", "tag-neutral"] : e === "workflow_dispatch" ? ["Manual", "tag-outline"] : ["Code push", "tag-neutral"];
+    const stat = (r) => r.status !== "completed" ? ["Running", "tag-accent-2"] : r.conclusion === "success" ? ["Complete", "tag-accent"] : ["Failed", "tag-outline"];
+    $("runs-body").innerHTML = runs.map((r) => {
+      const [tl, tc] = trig(r.event), [sl, sc] = stat(r);
+      const dur = r.status === "completed" ? Math.round((new Date(r.updated_at) - new Date(r.run_started_at)) / 1000) : null;
+      const durTxt = dur == null ? "—" : `${Math.floor(dur / 60)}m ${String(dur % 60).padStart(2, "0")}s`;
+      const d = new Date(r.run_started_at);
+      return `<tr>
+        <td style="font-weight:500">${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} <span class="text-muted" style="font-size:12px">${d.toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}</span></td>
+        <td><span class="tag ${tc}">${tl}</span></td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${durTxt}</td>
+        <td><span class="tag ${sc}">${sl}</span></td>
+        <td><a href="${esc(r.html_url)}" target="_blank" rel="noopener" style="font-size:12.5px">log</a></td>
+      </tr>`;
+    }).join("") || '<tr><td colspan="5" class="text-muted">No scrape runs found yet.</td></tr>';
+  } catch (e) {
+    $("runs-body").innerHTML = `<tr><td colspan="5" class="text-muted">Couldn't reach GitHub for run history — latest data run is ${esc(META?.source_run || "unknown")}.</td></tr>`;
+  }
+}
+
+// ---------- settings screen ----------
+function renderSettings() {
+  const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  $("scr-settings").innerHTML = `
+    <h2 style="margin-bottom:20px">Settings</h2>
+    <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:960px;align-items:start">
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
+        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when &ldquo;My types first&rdquo; is on (type is assigned per-property from the appraiser record; the scrub's buy-box MATCH/REVIEW ranks the rest).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
+          ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
+        </div>
+        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
+          <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Scrape schedule</h6>
+          <div style="display:flex;border:1px solid var(--color-divider);margin-bottom:12px;max-width:320px">
+            ${days.map((d, i) => `<button class="seg3 ${prefs.scheduleDay === i ? "on" : ""}" data-day="${i}" style="font-size:12.5px;padding:7px 0">${d.toUpperCase()}</button>`).join("")}
+          </div>
+          <div style="font-size:13px" class="text-muted">The automation currently runs weekly on <b style="color:var(--color-text)">Monday</b> at 6:00 AM ET, plus manual runs any time from the top bar. Picking a different day here notes your preference &mdash; ask Claude Code to move the workflow schedule to apply it.</div>
+        </div>
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+            <div style="display:flex;justify-content:space-between"><span>frankhatfellaaiagent@gmail.com</span><span class="tag tag-accent">owner</span></div>
+          </div>
+          <div style="font-size:12.5px;margin-top:12px" class="text-muted">Positions, lists and preferences currently save per-browser. Team accounts need a login backend &mdash; planned follow-up.</div>
+        </div>
+      </div>
+    </div>`;
+  $("type-prefs").querySelectorAll("[data-type]").forEach((b) =>
+    b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderSettings(); });
+  $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
+  $("scr-settings").querySelectorAll("[data-day]").forEach((b) =>
+    b.onclick = () => { prefs.scheduleDay = +b.dataset.day; savePrefs(); renderSettings(); });
+}
+
+// ---------- top bar actions ----------
+function exportCsv() {
+  const rows = filteredRows();
+  const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Buy-box","Buy-box Notes","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
+  const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const lines = [cols.join(",")];
+  for (const p of rows) {
+    const it = getInt(p.id);
+    lines.push([p.county, p.auction, p.saleTime, p.parcel, p.case_number, p.cert, p.rawAddr,
+      p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.buybox, p.buyboxNotes, p.status,
+      it.status, it.bid, it.list, it.type, it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
+  }
+  const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "tax_deed_export_" + new Date().toISOString().slice(0, 10) + ".csv";
+  a.click(); URL.revokeObjectURL(a.href);
+}
+
+// ---------- boot ----------
+(async function boot() {
+  renderNav();
+  $("next-run").textContent = nextMonday6amET();
+  $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };
+  $("btn-export").onclick = exportCsv;
+  $("btn-scrape").onclick = () => window.open(ACTIONS_URL, "_blank", "noopener");
+  const ok = await loadFeed();
+  if (!ok) {
+    $("load-note").innerHTML = '<span class="text-muted">Couldn&rsquo;t load the data feed. Check your connection and reload.</span>';
+    return;
+  }
+  $("load-note").remove();
+  $("last-scrape").textContent = "Data as of " + new Date(META.generated_at).toLocaleString();
+  go("dashboard");
+})();
+</script>
+</body>
+</html>

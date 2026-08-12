@@ -1,0 +1,618 @@
+{
+  "generated_at": "2026-08-11T21:31:44+00:00",
+  "seed_url": "https://www.volusia.realtaxdeed.com/",
+  "counties": [
+    {
+      "slug": "alachua",
+      "name": "Alachua",
+      "url": "https://www.alachua.realtaxdeed.com/",
+      "host": "www.alachua.realtaxdeed.com",
+      "label": "Alachua Taxdeed"
+    },
+    {
+      "slug": "baker",
+      "name": "Baker",
+      "url": "https://www.baker.realtaxdeed.com/",
+      "host": "www.baker.realtaxdeed.com",
+      "label": "Baker Taxdeed"
+    },
+    {
+      "slug": "bay",
+      "name": "Bay",
+      "url": "https://www.bay.realtaxdeed.com/",
+      "host": "www.bay.realtaxdeed.com",
+      "label": "Bay Taxdeed"
+    },
+    {
+      "slug": "brevard",
+      "name": "Brevard",
+      "url": "https://www.brevard.realtaxdeed.com/",
+      "host": "www.brevard.realtaxdeed.com",
+      "label": "Brevard Taxdeed"
+    },
+    {
+      "slug": "broward",
+      "name": "Broward",
+      "url": "https://www.broward.realtaxdeed.com/",
+      "host": "www.broward.realtaxdeed.com",
+      "label": "Broward Taxdeed"
+    },
+    {
+      "slug": "calhoun",
+      "name": "Calhoun",
+      "url": "https://www.calhoun.realtaxdeed.com/",
+      "host": "www.calhoun.realtaxdeed.com",
+      "label": "Calhoun Taxdeed"
+    },
+    {
+      "slug": "charlotte",
+      "name": "Charlotte",
+      "url": "https://www.charlotte.realtaxdeed.com/",
+      "host": "www.charlotte.realtaxdeed.com",
+      "label": "Charlotte Taxdeed"
+    },
+    {
+      "slug": "citrus",
+      "name": "Citrus",
+      "url": "https://www.citrus.realtaxdeed.com/",
+      "host": "www.citrus.realtaxdeed.com",
+      "label": "Citrus Taxdeed"
+    },
+    {
+      "slug": "clay",
+      "name": "Clay",
+      "url": "https://www.clay.realtaxdeed.com/",
+      "host": "www.clay.realtaxdeed.com",
+      "label": "Clay Taxdeed"
+    },
+    {
+      "slug": "duval",
+      "name": "Duval",
+      "url": "https://www.duval.realtaxdeed.com/",
+      "host": "www.duval.realtaxdeed.com",
+      "label": "Duval Tax Deed"
+    },
+    {
+      "slug": "escambia",
+      "name": "Escambia",
+      "url": "https://www.escambia.realtaxdeed.com/",
+      "host": "www.escambia.realtaxdeed.com",
+      "label": "Escambia Taxdeed"
+    },
+    {
+      "slug": "flagler",
+      "name": "Flagler",
+      "url": "https://www.flagler.realtaxdeed.com/",
+      "host": "www.flagler.realtaxdeed.com",
+      "label": "Flagler Taxdeed"
+    },
+    {
+      "slug": "gilchrist",
+      "name": "Gilchrist",
+      "url": "https://www.gilchrist.realtaxdeed.com/",
+      "host": "www.gilchrist.realtaxdeed.com",
+      "label": "Gilchrist Taxdeed"
+    },
+    {
+      "slug": "gulf",
+      "name": "Gulf",
+      "url": "https://www.gulf.realtaxdeed.com/",
+      "host": "www.gulf.realtaxdeed.com",
+      "label": "Gulf Taxdeed"
+    },
+    {
+      "slug": "hendry",
+      "name": "Hendry",
+      "url": "https://www.hendry.realtaxdeed.com/",
+      "host": "www.hendry.realtaxdeed.com",
+      "label": "Hendry TaxDeed"
+    },
+    {
+      "slug": "hernando",
+      "name": "Hernando",
+      "url": "https://www.hernando.realtaxdeed.com/",
+      "host": "www.hernando.realtaxdeed.com",
+      "label": "Hernando Taxdeed"
+    },
+    {
+      "slug": "highlands",
+      "name": "Highlands",
+      "url": "https://www.highlands.realtaxdeed.com/",
+      "host": "www.highlands.realtaxdeed.com",
+      "label": "Highlands Taxdeed"
+    },
+    {
+      "slug": "hillsborough",
+      "name": "Hillsborough",
+      "url": "https://www.hillsborough.realtaxdeed.com/",
+      "host": "www.hillsborough.realtaxdeed.com",
+      "label": "Hillsborough Taxdeed"
+    },
+    {
+      "slug": "indianriver",
+      "name": "Indian River",
+      "url": "https://www.indianriver.realtaxdeed.com/",
+      "host": "www.indianriver.realtaxdeed.com",
+      "label": "Indian River Taxdeed"
+    },
+    {
+      "slug": "jackson",
+      "name": "Jackson",
+      "url": "https://www.jackson.realtaxdeed.com/",
+      "host": "www.jackson.realtaxdeed.com",
+      "label": "Jackson Taxdeed"
+    },
+    {
+      "slug": "lake",
+      "name": "Lake",
+      "url": "https://www.lake.realtaxdeed.com/",
+      "host": "www.lake.realtaxdeed.com",
+      "label": "Lake Taxdeed"
+    },
+    {
+      "slug": "lee",
+      "name": "Lee",
+      "url": "https://www.lee.realtaxdeed.com/",
+      "host": "www.lee.realtaxdeed.com",
+      "label": "Lee Taxdeed"
+    },
+    {
+      "slug": "leon",
+      "name": "Leon",
+      "url": "https://www.leon.realtaxdeed.com/",
+      "host": "www.leon.realtaxdeed.com",
+      "label": "Leon Taxdeed"
+    },
+    {
+      "slug": "manatee",
+      "name": "Manatee",
+      "url": "https://www.manatee.realtaxdeed.com/",
+      "host": "www.manatee.realtaxdeed.com",
+      "label": "Manatee Taxdeed"
+    },
+    {
+      "slug": "marion",
+      "name": "Marion",
+      "url": "https://www.marion.realtaxdeed.com/",
+      "host": "www.marion.realtaxdeed.com",
+      "label": "Marion Taxdeed"
+    },
+    {
+      "slug": "martin",
+      "name": "Martin",
+      "url": "https://www.martin.realtaxdeed.com/",
+      "host": "www.martin.realtaxdeed.com",
+      "label": "Martin Taxdeed"
+    },
+    {
+      "slug": "miamidade",
+      "name": "Miami-Dade",
+      "url": "https://www.miamidade.realtaxdeed.com/",
+      "host": "www.miamidade.realtaxdeed.com",
+      "label": "Miami-Dade Taxdeed"
+    },
+    {
+      "slug": "monroe",
+      "name": "Monroe",
+      "url": "https://www.monroe.realtaxdeed.com/",
+      "host": "www.monroe.realtaxdeed.com",
+      "label": "Monroe Taxdeed"
+    },
+    {
+      "slug": "nassau",
+      "name": "Nassau",
+      "url": "https://www.nassau.realtaxdeed.com/",
+      "host": "www.nassau.realtaxdeed.com",
+      "label": "Nassau Taxdeed"
+    },
+    {
+      "slug": "okeechobee",
+      "name": "Okeechobee",
+      "url": "https://www.okeechobee.realtaxdeed.com/",
+      "host": "www.okeechobee.realtaxdeed.com",
+      "label": "Okeechobee Taxdeed"
+    },
+    {
+      "slug": "orange",
+      "name": "Orange",
+      "url": "https://www.orange.realtaxdeed.com/",
+      "host": "www.orange.realtaxdeed.com",
+      "label": "Orange Taxdeed"
+    },
+    {
+      "slug": "osceola",
+      "name": "Osceola",
+      "url": "https://www.osceola.realtaxdeed.com/",
+      "host": "www.osceola.realtaxdeed.com",
+      "label": "Osceola Taxdeed"
+    },
+    {
+      "slug": "palmbeach",
+      "name": "Palm Beach",
+      "url": "https://www.palmbeach.realtaxdeed.com/",
+      "host": "www.palmbeach.realtaxdeed.com",
+      "label": "Palm Beach Taxdeed"
+    },
+    {
+      "slug": "pasco",
+      "name": "Pasco",
+      "url": "https://www.pasco.realtaxdeed.com/",
+      "host": "www.pasco.realtaxdeed.com",
+      "label": "Pasco Taxdeed"
+    },
+    {
+      "slug": "pinellas",
+      "name": "Pinellas",
+      "url": "https://www.pinellas.realtaxdeed.com/",
+      "host": "www.pinellas.realtaxdeed.com",
+      "label": "Pinellas Taxdeed"
+    },
+    {
+      "slug": "polk",
+      "name": "Polk",
+      "url": "https://www.polk.realtaxdeed.com/",
+      "host": "www.polk.realtaxdeed.com",
+      "label": "Polk Taxdeed"
+    },
+    {
+      "slug": "putnam",
+      "name": "Putnam",
+      "url": "https://www.putnam.realtaxdeed.com/",
+      "host": "www.putnam.realtaxdeed.com",
+      "label": "Putnam Taxdeed"
+    },
+    {
+      "slug": "santarosa",
+      "name": "Santa Rosa",
+      "url": "https://www.santarosa.realtaxdeed.com/",
+      "host": "www.santarosa.realtaxdeed.com",
+      "label": "Santa Rosa Taxdeed"
+    },
+    {
+      "slug": "sarasota",
+      "name": "Sarasota",
+      "url": "https://www.sarasota.realtaxdeed.com/",
+      "host": "www.sarasota.realtaxdeed.com",
+      "label": "Sarasota Taxdeed"
+    },
+    {
+      "slug": "seminole",
+      "name": "Seminole",
+      "url": "https://www.seminole.realtaxdeed.com/",
+      "host": "www.seminole.realtaxdeed.com",
+      "label": "Seminole Taxdeed"
+    },
+    {
+      "slug": "stlucie",
+      "name": "St. Lucie",
+      "url": "https://www.stlucie.realtaxdeed.com/",
+      "host": "www.stlucie.realtaxdeed.com",
+      "label": "St. Lucie Taxdeed"
+    },
+    {
+      "slug": "suwannee",
+      "name": "Suwannee",
+      "url": "https://www.suwannee.realtaxdeed.com/",
+      "host": "www.suwannee.realtaxdeed.com",
+      "label": "Suwannee Taxdeed"
+    },
+    {
+      "slug": "volusia",
+      "name": "Volusia",
+      "url": "https://www.volusia.realtaxdeed.com",
+      "host": "www.volusia.realtaxdeed.com",
+      "label": "Volusia Taxdeed (seed site)"
+    },
+    {
+      "slug": "walton",
+      "name": "Walton",
+      "url": "https://www.walton.realtaxdeed.com/",
+      "host": "www.walton.realtaxdeed.com",
+      "label": "Walton Taxdeed"
+    },
+    {
+      "slug": "washington",
+      "name": "Washington",
+      "url": "https://www.washington.realtaxdeed.com/",
+      "host": "www.washington.realtaxdeed.com",
+      "label": "Washington Taxdeed"
+    }
+  ],
+  "rejected": [
+    {
+      "label": "Apache Taxdeed",
+      "url": "https://www.apache.realtaxdeed.com/",
+      "host": "www.apache.realtaxdeed.com",
+      "state": "AZ",
+      "kind": "taxdeed"
+    },
+    {
+      "label": "Coconino Taxdeed",
+      "url": "https://www.coconino.realtaxdeed.com/",
+      "host": "www.coconino.realtaxdeed.com",
+      "state": "AZ",
+      "kind": "taxdeed"
+    },
+    {
+      "label": "Mohave Taxdeed",
+      "url": "https://www.mohave.realtaxdeed.com/",
+      "host": "www.mohave.realtaxdeed.com",
+      "state": "AZ",
+      "kind": "taxdeed"
+    },
+    {
+      "label": "Adams Foreclosure",
+      "url": "https://www.adams.realforeclose.com/",
+      "host": "www.adams.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Denver Foreclosure",
+      "url": "https://www.denver.realforeclose.com/",
+      "host": "www.denver.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Eagle Foreclosure",
+      "url": "https://www.eagle.realforeclose.com/",
+      "host": "www.eagle.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "El Paso Foreclosure",
+      "url": "https://www.elpaso.realforeclose.com/",
+      "host": "www.elpaso.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Larimer Foreclosure",
+      "url": "https://www.larimer.realforeclose.com/",
+      "host": "www.larimer.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Mesa Foreclosure",
+      "url": "https://www.mesa.realforeclose.com/",
+      "host": "www.mesa.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Summit Foreclosure",
+      "url": "https://www.summit.realforeclose.com/",
+      "host": "www.summit.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Weld Foreclosure",
+      "url": "https://www.weld.realforeclose.com/",
+      "host": "www.weld.realforeclose.com",
+      "state": "CO",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Alachua Foreclosure",
+      "url": "https://www.alachua.realforeclose.com/",
+      "host": "www.alachua.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Bay Foreclosure",
+      "url": "https://www.bay.realforeclose.com/",
+      "host": "www.bay.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Broward Foreclosure",
+      "url": "https://www.broward.realforeclose.com/",
+      "host": "www.broward.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Clay Foreclosure",
+      "url": "https://www.clay.realforeclose.com/",
+      "host": "www.clay.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Duval Foreclosure",
+      "url": "https://www.duval.realforeclose.com/",
+      "host": "www.duval.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Escambia Foreclosure",
+      "url": "https://www.escambia.realforeclose.com/",
+      "host": "www.escambia.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Flagler Foreclosure",
+      "url": "https://www.flagler.realforeclose.com/",
+      "host": "www.flagler.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Gilchrist Foreclosure",
+      "url": "https://www.gilchrist.realforeclose.com/",
+      "host": "www.gilchrist.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Gulf Foreclosure",
+      "url": "https://www.gulf.realforeclose.com/",
+      "host": "www.gulf.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Hillsborough Foreclosure",
+      "url": "https://www.hillsborough.realforeclose.com/",
+      "host": "www.hillsborough.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Indian River Foreclosure",
+      "url": "https://www.indianriver.realforeclose.com/",
+      "host": "www.indianriver.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Jackson Foreclosure",
+      "url": "https://www.jackson.realforeclose.com/",
+      "host": "www.jackson.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Lee Foreclosure",
+      "url": "https://www.lee.realforeclose.com/",
+      "host": "www.lee.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Leon Foreclosure",
+      "url": "https://www.leon.realforeclose.com/",
+      "host": "www.leon.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Marion Foreclosure",
+      "url": "https://www.marion.realforeclose.com/",
+      "host": "www.marion.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Martin Foreclosure",
+      "url": "https://www.martin.realforeclose.com/",
+      "host": "www.martin.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Nassau Foreclosure",
+      "url": "https://www.nassau.realforeclose.com/",
+      "host": "www.nassau.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Orange Foreclosure",
+      "url": "https://www.orange.realforeclose.com/",
+      "host": "www.orange.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Palm Beach Foreclosure",
+      "url": "https://www.palmbeach.realforeclose.com/",
+      "host": "www.palmbeach.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Pasco Foreclosure",
+      "url": "https://www.pasco.realforeclose.com/",
+      "host": "www.pasco.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Pinellas Foreclosure",
+      "url": "https://www.pinellas.realforeclose.com/",
+      "host": "www.pinellas.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Polk Foreclosure",
+      "url": "https://www.polk.realforeclose.com/",
+      "host": "www.polk.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Putnam Foreclosure",
+      "url": "https://www.putnam.realforeclose.com/",
+      "host": "www.putnam.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Saint Johns Foreclosure",
+      "url": "https://www.saintjohns.realforeclose.com/",
+      "host": "www.saintjohns.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Santa Rosa Foreclosure",
+      "url": "https://www.santarosa.realforeclose.com/",
+      "host": "www.santarosa.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Sarasota Foreclosure",
+      "url": "https://www.sarasota.realforeclose.com/",
+      "host": "www.sarasota.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Seminole Foreclosure",
+      "url": "https://www.seminole.realforeclose.com/",
+      "host": "www.seminole.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Volusia Foreclosure",
+      "url": "https://www.volusia.realforeclose.com/",
+      "host": "www.volusia.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Washington Foreclosure",
+      "url": "https://www.washington.realforeclose.com/",
+      "host": "www.washington.realforeclose.com",
+      "state": "FL",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Hardyston Foreclosure",
+      "url": "https://www.hardyston.realforeclose.com/",
+      "host": "www.hardyston.realforeclose.com",
+      "state": "NJ",
+      "kind": "foreclosure"
+    },
+    {
+      "label": "Newark Taxdeed",
+      "url": "https://www.newark.realtaxdeed.com/",
+      "host": "www.newark.realtaxdeed.com",
+      "state": "NJ",
+      "kind": "taxdeed"
+    }
+  ],
+  "client_list_missing": []
+}

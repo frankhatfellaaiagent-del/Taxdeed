@@ -1,0 +1,94 @@
+{
+  "started_at": "2026-08-11T21:23:24+00:00",
+  "months": 2,
+  "live": true,
+  "counties": {
+    "volusia": {
+      "url": "https://www.volusia.realtaxdeed.com",
+      "status": "ok",
+      "auctions": 146,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "08/04/2026",
+        "08/11/2026",
+        "08/25/2026",
+        "09/01/2026",
+        "09/15/2026",
+        "09/29/2026"
+      ],
+      "expected_counts": {
+        "08/04/2026": 29,
+        "08/11/2026": 30,
+        "08/25/2026": 28,
+        "09/01/2026": 31,
+        "09/15/2026": 28,
+        "09/29/2026": 29
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-11T21:24:29+00:00"
+    },
+    "polk": {
+      "url": "https://www.polk.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 108,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "08/20/2026",
+        "09/17/2026",
+        "10/15/2026"
+      ],
+      "expected_counts": {
+        "08/20/2026": 60,
+        "09/17/2026": 47,
+        "10/15/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-11T21:25:20+00:00"
+    },
+    "marion": {
+      "url": "https://www.marion.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 252,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "08/12/2026",
+        "08/13/2026",
+        "08/19/2026",
+        "09/09/2026",
+        "09/16/2026"
+      ],
+      "expected_counts": {
+        "08/12/2026": 3,
+        "08/13/2026": 1,
+        "08/19/2026": 100,
+        "09/09/2026": 100,
+        "09/16/2026": 48
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-11T21:27:26+00:00"
+    },
+    "alachua": {
+      "url": "https://www.alachua.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 13,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/15/2026",
+        "09/22/2026",
+        "10/06/2026"
+      ],
+      "expected_counts": {
+        "09/15/2026": 4,
+        "09/22/2026": 5,
+        "10/06/2026": 4
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-11T21:27:59+00:00"
+    }
+  },
+  "finished_at": "2026-08-11T21:27:59+00:00"
+}

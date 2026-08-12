@@ -1,0 +1,50 @@
+name: Deploy dashboard (GitHub Pages)
+
+# Publishes dashboard/ + the data feeds to GitHub Pages:
+#   https://frankhatfellaaiagent-del.github.io/Taxdeed/
+# by pushing the assembled site to the gh-pages branch — on public repos
+# GitHub auto-enables Pages for that branch, so no repo-settings step is
+# needed. Re-deploys whenever the dashboard or the feeds change (the pilot
+# scrape workflow dispatches this one after committing new data, since
+# pushes made with the workflow token don't trigger push events).
+
+on:
+  push:
+    branches: [claude/florida-tax-deed-scraper-fqzwzd, main]
+    paths:
+      - "dashboard/**"
+      - "data/exports/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: |
+          mkdir -p _site/data/exports
+          cp -r dashboard/. _site/
+          cp data/exports/* _site/data/exports/
+          touch _site/.nojekyll
+      - name: Publish to gh-pages branch
+        run: |
+          cd _site
+          git init -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy dashboard from ${GITHUB_SHA::7}"
+          git push --force \
+            "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
+            gh-pages
+      - name: Site URL
+        run: echo "https://frankhatfellaaiagent-del.github.io/Taxdeed/"

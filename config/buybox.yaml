@@ -1,0 +1,104 @@
+# MADD Assets buy-box: rural/land-focused Central Florida, avoiding coastal
+# areas and high-population centers. EDIT THIS FILE to tune flagging — the
+# scraper always collects everything; this only controls the Buy-Box column.
+#
+# County names are matched case-insensitively with punctuation ignored
+# ("St. Lucie" == stlucie). Counties in neither list get flag NO
+# ("county not in target list"), so new counties are safe by default.
+
+target_counties:
+  - alachua
+  - bradford
+  - columbia
+  - desoto
+  - gilchrist
+  - glades
+  - hamilton
+  - hardee
+  - hendry
+  - highlands
+  - lafayette
+  - lake
+  - levy          # has a small Gulf frontage but is overwhelmingly rural; remove if client objects
+  - madison
+  - marion
+  - okeechobee
+  - osceola
+  - polk
+  - putnam
+  - sumter
+  - suwannee
+  - union
+
+excluded_counties:   # coastal + metro — always flag NO
+  - baker           # not coastal, but NE fringe; move to target if client wants it
+  - bay
+  - brevard
+  - broward
+  - charlotte
+  - citrus
+  - clay
+  - collier
+  - duval
+  - escambia
+  - flagler
+  - franklin
+  - gulf
+  - hernando
+  - hillsborough
+  - indianriver
+  - lee
+  - leon
+  - manatee
+  - martin
+  - miamidade
+  - monroe
+  - nassau
+  - okaloosa
+  - orange
+  - palmbeach
+  - pasco
+  - pinellas
+  - santarosa
+  - sarasota
+  - seminole
+  - stjohns
+  - stlucie
+  - taylor
+  - volusia
+  - wakulla
+  - walton
+
+# Property-use text that marks a listing as land/rural (MATCH when in a
+# target county). Matched against property use AND address text.
+land_use_keywords:
+  - vacant
+  - land
+  - acreage
+  - agricultur
+  - timber
+  - pasture
+  - grove
+  - ranch
+  - farm
+  - rural
+  - grazing
+  - orchard
+  - nursery
+
+# Property-use text that clearly is NOT what the client wants (flag NO even
+# in a target county).
+non_land_keywords:
+  - condo
+  - townhouse
+  - townhome
+  - mobile home park
+  - commercial
+  - industrial
+  - warehouse
+  - office
+  - retail
+
+# Optional caps (null = no cap)
+max_opening_bid: null
+min_acres: null
