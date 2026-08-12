@@ -1,4 +1,4 @@
-# MADD Assets' authoritative Florida tax deed county list (36 counties).
+# MADD Assets' authoritative Florida tax deed county list (37 counties).
 # One county per line; names are matched punctuation/space-insensitively
 # against discovered slugs ("Indian River" == indianriver).
 # Used by: python -m scraper scrape --counties @config/client_counties.txt
@@ -38,4 +38,5 @@ Santa Rosa
 Sarasota
 Seminole
 Suwannee
+Volusia
 Washington
