@@ -27,10 +27,17 @@ unrefined, and don't understand the land-focused business.
   buy-box parcels, pulls the county appraiser record (owner, mailing address,
   land use, acreage) and writes it onto the property card, upgrading or
   eliminating parcels before a human ever looks.
-- **Every research link on one card** — property appraiser record, clerk of
-  courts tax deed files (correct portal per county, including the odd ones),
-  FEMA flood map centered on the parcel, National Wetlands Inventory mapper,
-  satellite view that opens the maps app in the field.
+- **The clerk's case file, per parcel** — not a link to the county's tax deed
+  page, but *this parcel's* case record: deed status (rescheduled, cancelled),
+  the applicant who forced the sale, and every document in the file — All
+  Forms, Tax Deed, Notice of Publication, Clerk's Affidavit, 513 — as a link.
+- **The agent reads the paperwork** — it opens those documents and flags what
+  changes a bid: reschedules, homestead, IRS and municipal liens, mortgages,
+  judgments, bankruptcy, HOA claims, easements. Scanned documents it cannot
+  read are marked as such rather than guessed at.
+- **Every research link on one card** — property appraiser record, FEMA flood
+  map centered on the parcel, National Wetlands Inventory mapper, satellite
+  view that opens the maps app in the field.
 - **Team workflow** — personal notes, Interested/Watching/Pass positions,
   custom lists grouped by sale date and county, max-bid tracking.
 - **Live spreadsheet feed** — a Google Sheet that refreshes itself from every
@@ -48,10 +55,14 @@ never silently invented.
 
 ## Roadmap (next phases)
 
-1. **Enrichment coverage** — appraiser quick-look across all counties and
-   vendor platforms; mailing-address standardization for outreach lists.
-2. **Deeper clerk integration** — case-number deep links where county portals
-   support them; surplus/deposit info surfaced per county.
+1. **Coverage** — appraiser quick-look and clerk case-file resolution across
+   the remaining counties and portal platforms; mailing-address
+   standardization for outreach lists.
+2. **Parcel data (LandGlide's source)** — integration with ReportAll, the
+   parcel database behind LandGlide, is built and waiting on an API key: true
+   parcel boundaries and centroids, owner and mailing data — including for the
+   vacant lots counties publish no address for. Their free trial covers
+   validation before any spend.
 3. **Alerts** — notification when a new parcel hits your buy-box or a tracked
    parcel changes (price drop, redemption, cancellation).
 4. **Private mobile app** — packaged app with push notifications and
