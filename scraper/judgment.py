@@ -26,6 +26,8 @@ def load_buybox(path: str | Path | None = None) -> dict:
         cfg[key] = [str(x).lower() for x in (cfg.get(key) or [])]
     for key in ("target_counties", "excluded_counties"):
         cfg[key] = [_norm_county(str(x)) for x in (cfg.get(key) or [])]
+    cfg["county_caps"] = {_norm_county(str(k)): (v or {})
+                          for k, v in (cfg.get("county_caps") or {}).items()}
     return cfg
 
 
@@ -52,7 +54,9 @@ def buybox_flag(rec: AuctionRecord, cfg: dict) -> tuple[str, str]:
     use = (rec.property_use or "").lower()
     address = (rec.property_address or "").lower()
 
-    max_bid = cfg.get("max_opening_bid")
+    # Per-county cap wins over the global one when both are set.
+    caps = cfg.get("county_caps", {}).get(county, {})
+    max_bid = caps.get("max_bid") or cfg.get("max_opening_bid")
     if max_bid and rec.opening_bid and rec.opening_bid > float(max_bid):
         return "NO", f"opening bid over cap (${rec.opening_bid:,.0f} > ${float(max_bid):,.0f})"
 

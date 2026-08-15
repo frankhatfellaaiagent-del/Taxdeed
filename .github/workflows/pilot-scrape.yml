@@ -13,9 +13,10 @@ on:
         default: "@config/client_counties.txt"
         required: false
   schedule:
-    # Weekly production run: Mondays 10:00 UTC (~6:00 AM ET). Scrapes the
+    # Weekly production run: Mondays 08:00 UTC (4:00 AM ET) — early morning per
+    # client request, so fresh data is waiting before the workday. Scrapes the
     # client's full county list and refreshes the committed data feeds.
-    - cron: "0 10 * * 1"
+    - cron: "0 8 * * 1"
   push:
     branches: [main, claude/florida-tax-deed-scraper-fqzwzd]
     paths:

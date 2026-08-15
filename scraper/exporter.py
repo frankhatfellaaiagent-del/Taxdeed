@@ -16,7 +16,9 @@ import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import diffing, judgment
+import yaml
+
+from . import diffing, geocode, judgment
 
 log = logging.getLogger(__name__)
 
@@ -24,13 +26,28 @@ ROOT = Path(__file__).resolve().parent.parent
 EXPORTS_DIR = ROOT / "data" / "exports"
 
 TSV_COLUMNS = ["County", "Sale Date", "Sale Time", "Parcel ID", "Case #",
-               "Certificate #", "Property Address", "Opening Bid", "Assessed Value",
+               "Certificate #", "Owner", "Property Address", "Property Use",
+               "Acres", "Opening Bid", "Assessed Value",
                "Bid/Value %", "Buy-Box", "Buy-Box Notes", "Status", "Auction Page",
-               "Appraiser Record"]
+               "Appraiser Record", "Latitude", "Longitude"]
 
 
 def _clean(v) -> str:
     return str(v if v is not None else "").replace("\t", " ").replace("\n", " ").strip()
+
+
+def _load_clerk_sites() -> dict:
+    """config/clerk_sites.yaml → {county_slug: {url, search?}} for the feed."""
+    p = ROOT / "config" / "clerk_sites.yaml"
+    if not p.exists():
+        return {}
+    try:
+        raw = yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError as exc:
+        log.warning("clerk_sites.yaml unreadable (%s); feed ships without it", exc)
+        return {}
+    return {slug: {k: v for k, v in (entry or {}).items() if k in ("url", "search")}
+            for slug, entry in raw.items() if (entry or {}).get("url")}
 
 
 def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
@@ -44,6 +61,9 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
     records.sort(key=lambda r: (r.sale_date[6:] + r.sale_date[:2] + r.sale_date[3:5],
                                 r.county, r.parcel_id))
 
+    # Parcel coordinates (cached; only new addresses hit the Census API).
+    coords = geocode.geocode_addresses([r.property_address for r in records])
+
     tsv_lines = ["\t".join(TSV_COLUMNS)]
     json_records = []
     by_county: dict[str, dict] = {}
@@ -55,20 +75,27 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         ratio = round(100 * r.opening_bid / r.assessed_value) \
             if r.opening_bid and r.assessed_value else None
         status = "Redeemed" if redeemed else "Scheduled"
+        latlng = coords.get(r.property_address) or [None, None]
         tsv_lines.append("\t".join(_clean(x) for x in [
             r.county, r.sale_date, r.sale_time, r.parcel_id, r.case_number,
-            r.certificate_number, r.property_address, r.opening_bid or "",
+            r.certificate_number, r.owner_name, r.property_address,
+            r.property_use, r.acreage, r.opening_bid or "",
             r.assessed_value or "", ratio if ratio is not None else "", flag, reasons,
-            status, r.auction_url, r.appraiser_url]))
+            status, r.auction_url, r.appraiser_url,
+            latlng[0] if latlng[0] is not None else "",
+            latlng[1] if latlng[1] is not None else ""]))
         json_records.append({
             "county": r.county, "sale_date": r.sale_date, "sale_time": r.sale_time,
             "parcel_id": r.parcel_id, "case_number": r.case_number,
             "certificate_number": r.certificate_number,
+            "owner_name": r.owner_name,
             "property_address": r.property_address,
+            "property_use": r.property_use, "acreage": r.acreage,
             "opening_bid": r.opening_bid, "assessed_value": r.assessed_value,
             "bid_to_value_pct": ratio, "buybox": flag, "buybox_notes": reasons,
             "anomalies": judgment.find_anomalies(r), "status": status,
             "auction_url": r.auction_url, "appraiser_url": r.appraiser_url,
+            "lat": latlng[0], "lng": latlng[1],
         })
         c = by_county.setdefault(r.county, {"total": 0, "scheduled": 0, "redeemed": 0})
         c["total"] += 1
@@ -85,6 +112,10 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "counties": len(by_county),
             "by_county": dict(sorted(by_county.items())),
         },
+        # Client-set per-county limits from config/buybox.yaml (may be empty).
+        "county_caps": cfg.get("county_caps") or {},
+        # Clerk of Court pages per county from config/clerk_sites.yaml.
+        "clerk_sites": _load_clerk_sites(),
         "records": json_records,
     }
     (out / "master_list.json").write_text(json.dumps(feed, indent=1), encoding="utf-8")

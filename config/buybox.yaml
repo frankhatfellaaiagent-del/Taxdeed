@@ -102,3 +102,17 @@ non_land_keywords:
 # Optional caps (null = no cap)
 max_opening_bid: null
 min_acres: null
+
+# Per-county limits. max_bid flags a listing NO when the opening bid is above
+# it (checked before the global max_opening_bid). deposit is the county
+# deposit capacity you have on hand — it never changes the flag, but the
+# dashboard shows it on each property and can filter "over my deposit"
+# (RealAuction requires ~5% of your anticipated high bid on deposit).
+# County names match like the lists above (case/punctuation ignored).
+#
+# Example:
+#   county_caps:
+#     putnam:
+#       max_bid: 25000
+#       deposit: 2000
+county_caps: {}

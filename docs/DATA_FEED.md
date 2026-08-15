@@ -34,6 +34,9 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
     "counties": 30,
     "by_county": { "putnam": {"total": 361, "scheduled": ..., "redeemed": ...}, ... }
   },
+  "county_caps": {                               // client-set limits from config/buybox.yaml
+    "putnam": { "max_bid": 25000, "deposit": 2000 }   // keys lowercase/no punctuation; may be {}
+  },
   "records": [
     {
       "county": "putnam",
@@ -42,6 +45,9 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "parcel_id": "01-10-26-7200-0070-0010",
       "case_number": "...", "certificate_number": "...",
       "property_address": "400 ASH ST, PALATKA, FL- 32177",  // "" when the county doesn't publish it
+      "owner_name": "",                          // from the auction record; usually "" until appraiser enrichment
+      "property_use": "",                        // appraiser land-use text when the county publishes it
+      "acreage": "",                             // acreage text when available
       "opening_bid": 8474.0,                     // number or null
       "assessed_value": 12000.0,                 // number or null (often null on redeemed/future rows)
       "bid_to_value_pct": 71,                    // integer % or null
@@ -50,11 +56,18 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "anomalies": ["missing assessed value"],   // data-quality flags, may be []
       "status": "Scheduled",                     // Scheduled | Redeemed
       "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?...",   // live auction page
-      "appraiser_url": "http://..."              // county property appraiser record, may be ""
-    }
+      "appraiser_url": "http://...",             // county property appraiser record, may be ""
+      "lat": 29.648251, "lng": -81.637149        // Census-geocoded from the address; null when
+    }                                            // no street address or no geocoder match
   ]
 }
 ```
+
+Coordinates come from the free US Census geocoder (`scraper/geocode.py`), cached in
+`data/geocache.json` so only new addresses are geocoded each run. They power the
+dashboard's parcel-centered links (FEMA flood viewer, USFWS wetlands map, satellite
+view). Treat them as approximate — rooftop/street-segment accuracy, not a surveyed
+parcel centroid.
 
 ## Dashboard guidance
 

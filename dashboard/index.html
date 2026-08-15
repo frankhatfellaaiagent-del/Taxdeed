@@ -118,7 +118,7 @@ let DATA = [];            // mapped property records
 let META = null;          // feed counts/generated_at
 let S = {
   screen: "dashboard", selId: null, q: "",
-  county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "",
+  county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
   shown: 150, mapMode: "interactive",
 };
 
@@ -131,7 +131,7 @@ function splitAddr(a) {
   // "NO SITUS" = county-speak for "no street address assigned" (common on
   // vacant land) — treat as unpublished rather than showing it as an address.
   const first = parts[0].trim();
-  const addr = /^NO\s+SITUS/i.test(first) ? "" : titleCase(first);
+  const addr = /^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first) ? "" : titleCase(first);
   return { addr, city };
 }
 function parseDate(mdy) {
@@ -141,6 +141,18 @@ function parseDate(mdy) {
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
 
+// Bucket the appraiser's land-use text into the dashboard's type filter.
+function typeFromUse(use) {
+  const u = (use || "").toLowerCase();
+  if (!u) return "";
+  if (/vacant|acreage|timber|pasture|agricult|grove|ranch|farm|grazing|orchard|nursery|\bland\b/.test(u)) return "Vacant land";
+  if (/mobile|manufactured/.test(u)) return "Mobile home";
+  if (/condo|town\s?ho/.test(u)) return "Condo/Townhome";
+  if (/multi|duplex|triplex|apart/.test(u)) return "Multi-family";
+  if (/single|sfr|\bres/.test(u)) return "Single family";
+  if (/commer|industr|office|retail|warehouse|store/.test(u)) return "Commercial";
+  return "";
+}
 function mapRecord(r, i) {
   const { addr, city } = splitAddr(r.property_address);
   const d = parseDate(r.sale_date);
@@ -149,6 +161,9 @@ function mapRecord(r, i) {
     idx: i, county: cap(r.county.replace(/_/g, " ")),
     parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
+    owner: r.owner_name || "", use: r.property_use || "", acreage: r.acreage || "",
+    useType: typeFromUse(r.property_use),
+    lat: r.lat ?? null, lng: r.lng ?? null,
     assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
     saleDate: d, auction: fmtDate(d), saleTime: r.sale_time || "",
     status: r.status, redeemed: r.status === "Redeemed",
@@ -156,6 +171,18 @@ function mapRecord(r, i) {
     auctionUrl: r.auction_url || "", appraiserUrl: r.appraiser_url || "",
   };
 }
+// Manual assignment wins; otherwise fall back to the appraiser land-use bucket.
+const effType = (p) => getInt(p.id).type || p.useType;
+// Clerk of Court page per county — served in the feed (config/clerk_sites.yaml).
+// Prefer the county's tax-deed case search portal, then its tax-deed page,
+// then a targeted web search.
+function clerkLink(p) {
+  const t = (META && META.clerk_sites || {})[p.county.toLowerCase().replace(/[^a-z]/g, "")];
+  return (t && (t.search || t.url)) ||
+    "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
+}
+// County keys in config/buybox.yaml county_caps: lowercase, punctuation ignored.
+const countyCaps = (p) => (META && META.county_caps || {})[p.county.toLowerCase().replace(/[^a-z]/g, "")] || {};
 
 // ---------- data load ----------
 async function loadFeed() {
@@ -181,14 +208,14 @@ function renderNav() {
   $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
 }
 function nextMonday6amET() {
-  // scraper cron: Mondays 10:00 UTC (~6 AM ET)
+  // scraper cron: Mondays 08:00 UTC (4 AM ET) — early per client request
   const now = new Date();
-  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 10, 0, 0));
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 8, 0, 0));
   const dow = d.getUTCDay();
   let add = (1 - dow + 7) % 7;
   if (add === 0 && now.getTime() > d.getTime()) add = 7;
   d.setUTCDate(d.getUTCDate() + add);
-  return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 6:00 AM ET`;
+  return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
 }
 function go(screen, selId) {
   S.screen = screen;
@@ -210,9 +237,16 @@ function filteredRows() {
     if (S.status !== "All" && p.status !== S.status) return false;
     if (S.buybox !== "All" && p.buybox !== S.buybox) return false;
     if (S.type !== "All") {
-      if (S.type === "Unassigned" ? it.type : it.type !== S.type) return false;
+      const t = effType(p);
+      if (S.type === "Unassigned" ? t : t !== S.type) return false;
     }
     if (!isNaN(maxBid) && !(p.bid != null && p.bid <= maxBid)) return false;
+    if (S.deposit === "Within") {
+      // RealAuction requires ~5% of your high bid on deposit; keep rows where
+      // the county deposit (config/buybox.yaml) covers at least the opening bid.
+      const dep = countyCaps(p).deposit;
+      if (dep && p.bid != null && p.bid * 0.05 > dep) return false;
+    }
     if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
     return true;
   });
@@ -279,6 +313,8 @@ function renderDashboard() {
         <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
       <div class="field" style="width:130px"><label>Max opening bid</label>
         <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
+      <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
+        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
       <button class="btn" id="f-mytypes" style="border:1px solid ${prefs.myTypesFirst ? "var(--color-accent)" : "var(--color-divider)"};background:${prefs.myTypesFirst ? "var(--color-accent)" : "transparent"};color:${prefs.myTypesFirst ? "var(--color-bg)" : "var(--color-text)"}">&#9733; My types first</button>
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
@@ -288,12 +324,12 @@ function renderDashboard() {
         <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
         <tbody>
           ${rows.slice(0, S.shown).map((p) => {
-            const t = getInt(p.id).type;
+            const t = effType(p);
             return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
               <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
               <td><div style="font-weight:500">${esc(p.addr)}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
               <td>${esc(p.county)}</td>
-              <td>${t ? `<span class="tag tag-neutral">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
+              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
               <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
               <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
               <td style="font-size:13px">${esc(p.auction)}</td>
@@ -311,6 +347,7 @@ function renderDashboard() {
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-mytypes").onclick = () => { prefs.myTypesFirst = !prefs.myTypesFirst; savePrefs(); renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
@@ -328,11 +365,19 @@ function renderDetail() {
   const hasAddr = p.hasAddr;
   const mapQ = encodeURIComponent(p.rawAddr.replace(/FL-\s*/, "FL "));
   const gsearch = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
+  const ll = p.lat != null && p.lng != null;
   const links = [
     [p.appraiserUrl || gsearch(`${p.county} County FL property appraiser parcel ${p.parcel}`), `${esc(p.county)} Property Appraiser`],
     [p.auctionUrl, "Live auction listing (RealAuction)"],
-    [gsearch(`${p.county} County Florida clerk of court records "${p.case_number}"`), "Clerk of Court &mdash; case search"],
-    [hasAddr ? "https://msc.fema.gov/portal/search?AddressQuery=" + mapQ : gsearch(`FEMA flood map ${p.county} county FL parcel ${p.parcel}`), "FEMA flood map"],
+    [clerkLink(p), "Tax deed case records (county)"],
+    [ll ? `https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd&center=${p.lng},${p.lat}&level=16`
+        : hasAddr ? "https://msc.fema.gov/portal/search?AddressQuery=" + mapQ
+        : gsearch(`FEMA flood map ${p.county} county FL parcel ${p.parcel}`), "FEMA flood map"],
+    // The FWS Wetlands Mapper is a custom app with no documented deep-link
+    // params — link it plain; the copyable coordinates below paste straight
+    // into its search box.
+    ["https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/", "Wetlands map (NWI)"],
+    [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
   ].filter(([href]) => href);
   const pctText = p.pct != null
     ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
@@ -344,7 +389,7 @@ function renderDetail() {
     { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
       text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
     { topic: "Next step", cls: "tag-neutral",
-      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr ? ", and check the FEMA flood zone." : ". County didn't publish an address — the appraiser record is the way in.") },
+      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the FEMA flood zone and wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
   ];
   const mapInt = S.mapMode === "interactive";
 
@@ -368,8 +413,8 @@ function renderDetail() {
               <button id="map-int" class="seg3 ${mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px">INTERACTIVE</button>
               <button id="map-stat" class="seg3 ${!mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px;border-left:1px solid var(--color-divider)">STATIC</button>
             </div>
-            ${hasAddr
-              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&z=${mapInt ? 16 : 13}&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe>${mapInt ? "" : '<div style="position:absolute;inset:0"></div>'}</div>`
+            ${hasAddr || ll
+              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${ll ? p.lat + "," + p.lng : mapQ}&t=k&z=${mapInt ? 17 : 13}&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe>${mapInt ? "" : '<div style="position:absolute;inset:0"></div>'}</div>`
               : `<div class="ph" style="flex:1;min-height:154px"><span>county didn't publish an address —<br>find it via the appraiser link</span></div>`}
           </div>
         </div>
@@ -378,13 +423,17 @@ function renderDetail() {
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
             ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
-               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"]]
+               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
+               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"]]
               .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
           </div>
           <div class="hr"></div>
           <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px">
             ${links.map(([href, label]) => `<a href="${esc(href)}" target="_blank" rel="noopener">${LINK_SVG} ${label}</a>`).join("")}
           </div>
+          ${ll ? `<div style="margin-top:10px;font-size:12px" class="text-muted">Coordinates
+            <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
+            &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
         </div>
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
@@ -422,11 +471,23 @@ function renderDetail() {
           <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
           <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
           <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled" + (p.saleTime ? " · " + esc(p.saleTime) : "")}</div>
+          ${(() => { const c = countyCaps(p); if (!c.deposit && !c.max_bid) return "";
+            const need = p.bid != null ? money(p.bid * 0.05) : null;
+            return `<div class="hr" style="margin:10px 0"></div><div style="font-size:12.5px">
+              ${c.deposit ? `County deposit on file: <b>${money(c.deposit)}</b>${need ? ` &middot; ~5% of opening bid is ${need}` : ""}` : ""}
+              ${c.max_bid ? `${c.deposit ? "<br>" : ""}Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b>` : ""}</div>`; })()}
         </div>
       </div>
     </div>`;
 
   $("back").onclick = () => go("dashboard");
+  const cll = $("copy-ll");
+  if (cll) cll.onclick = () => {
+    navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
+      cll.textContent = "copied ✓";
+      setTimeout(() => { cll.textContent = `${p.lat}, ${p.lng}`; }, 1200);
+    });
+  };
   $("map-int").onclick = () => { S.mapMode = "interactive"; renderDetail(); };
   $("map-stat").onclick = () => { S.mapMode = "static"; renderDetail(); };
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
@@ -459,12 +520,26 @@ function renderLists() {
           </div>
           <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}</div>
           <div style="display:flex;flex-direction:column;gap:6px">
-            ${lc.items.map((p) => `
-              <button data-open="${esc(p.id)}" style="display:flex;gap:10px;align-items:baseline;background:none;border:none;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:inherit;width:100%">
-                <span class="mono" style="font-size:11.5px;color:var(--color-accent-700)">${esc(p.parcel)}</span>
-                <span style="flex:1">${esc(p.addr)}</span>
-                <span class="text-muted">${money(p.bid)}</span>
-              </button>`).join("") || '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
+            ${(() => {
+              // Group by sale date (soonest first) so a sale day reads as one
+              // block; within a day, order by county.
+              const sorted = [...lc.items].sort((a, b) =>
+                (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15) ||
+                a.county.localeCompare(b.county));
+              let lastDay = null;
+              return sorted.map((p) => {
+                const day = p.auction;
+                const header = day !== lastDay
+                  ? `<div style="font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-top:8px">${esc(day)}</div>` : "";
+                lastDay = day;
+                return `${header}
+                <button data-open="${esc(p.id)}" style="display:flex;gap:10px;align-items:baseline;background:none;border:none;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:inherit;width:100%">
+                  <span class="mono" style="font-size:11.5px;color:var(--color-accent-700)">${esc(p.parcel)}</span>
+                  <span style="flex:1;min-width:0">${esc(p.addr)}<span class="text-muted"> &middot; ${esc(p.county)}</span></span>
+                  <span class="text-muted" style="flex:none">${p.redeemed ? "Redeemed" : money(p.bid)}</span>
+                </button>`;
+              }).join("");
+            })() || '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
           </div>
         </div>`).join("")}
     </div>`;

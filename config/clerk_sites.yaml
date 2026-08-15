@@ -1,0 +1,145 @@
+# Clerk of Court tax-deed pages per county — the clerk side of each sale
+# (case files, deposits, surplus), as opposed to the RealAuction bidding site.
+#
+# Used by the exporter: each county's `url` is published in the feed
+# (`clerk_sites`) and the dashboard links it from every property card.
+# Counties missing from this file fall back to a targeted web search link.
+#
+# `verified` means the URL was corroborated against the clerk's own indexed
+# pages (Aug 2026); re-check any that stop resolving — clerks move sites often
+# (Polk moved to polkclerkfl.gov, Suwannee lives on suwgov.org, Volusia on
+# clerk.org). `search` (optional) is a deeper case/file search portal.
+
+alachua:
+  url: https://alachuacounty.us/Depts/Clerk/TaxDeeds/pages/taxdeedsales.aspx
+  verified: true
+bay:
+  url: https://www.baycoclerk.com/public-records/property-sales/tax-deed-auctions/
+  search: http://records2.baycoclerk.com/TaxDeed/
+  verified: true
+brevard:
+  url: https://www.brevardclerk.us/tax-deed-sales
+  verified: true
+  notes: searchable tax deed files by sale date / certificate / case status
+broward:
+  url: https://www.broward.org/RecordsTaxesTreasury/
+  verified: true
+  notes: county Records/Taxes/Treasury Division runs tax deeds (not the clerk)
+citrus:
+  url: https://www.citrusclerk.org/207/Tax-Deeds
+  search: https://search.citrusclerk.org/TaxSmartWeb
+  verified: true
+clay:
+  url: https://clayclerk.com/departments/recording/tax-deeds/
+  search: https://landmark.clayclerk.com/TaxDeed/
+  verified: true
+duval:
+  url: https://www.duvalclerk.com/departments/county-services/tax-deed-files
+  search: https://taxdeed.duvalclerk.com/
+  verified: true
+escambia:
+  url: https://www.escambiaclerk.com/362/Tax-Deeds
+  verified: true
+flagler:
+  url: https://flaglerclerk.gov/sales/tax-deeds-sales/
+  verified: true
+gilchrist:
+  url: https://gilchristclerk.com/tax-deeds/
+  verified: true
+gulf:
+  url: https://www.gulfclerk.com/courts/tax-deeds/
+  verified: true
+hendry:
+  url: https://www.hendryclerk.org/tax-deeds/
+  verified: true
+hernando:
+  url: https://hernandoclerk.com/additional-services/tax-deeds/
+  search: https://hernandoclerk.com/additional-services/tax-deeds/tax-deed-file-search/
+  verified: true
+highlands:
+  url: https://www.highlandsclerkfl.gov/clerk_to_the_board/tax_deeds/index.php
+  search: https://highlands.realtdm.com/public/cases/list
+  verified: true
+  notes: pre-2026 files on TributeWeb; Jan 2026+ on RealTDM
+hillsborough:
+  url: https://www.hillsclerk.com/taxdeeds
+  verified: true
+indianriver:
+  url: https://indianriverclerk.com/recording-services/tax-deeds/
+  search: https://taxdeeds.indian-river.org/TaxDeeds
+  verified: true
+jackson:
+  url: https://www.jacksonclerk.com/clerk-services/tax-deed-sales/
+  verified: true
+lake:
+  url: https://www.lakecountyclerkfl.gov/departments/records-administrative-services/official-records/tax-deeds/
+  search: https://taxdeeds.lakecountyclerk.org/
+  verified: true
+lee:
+  url: https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales
+  verified: true
+leon:
+  url: https://leonclerk.com/divisions/property-sales/tax-deeds/
+  search: https://cvweb.leonclerk.com/public/clerk_services/finance/tax_deeds/tax_deeds.asp
+  verified: true
+marion:
+  url: https://www.marioncountyclerk.org/departments/records-recording/tax-deeds-and-lands-available-for-taxes/
+  verified: true
+martin:
+  url: https://www.martinclerk.com/258/Tax-Deeds
+  search: https://www.martinclerk.com/308/Tax-Deed-Files
+  verified: true
+monroe:
+  url: https://monroe-clerk.com/
+  verified: false
+  notes: homepage only — exact tax-deed section URL not corroborated; navigate from Online Tax Deed
+nassau:
+  url: https://www.nassauclerk.com/190/View-Tax-Deed-Sales-and-Foreclosures
+  verified: true
+orange:
+  url: https://www.occompt.com/191/Tax-Deed-Sales
+  search: https://or.occompt.com/recorder/tdsmweb/applicationSearch.jsp?guest=true
+  verified: true
+  notes: Comptroller-run (occompt.com), not the clerk of court
+osceola:
+  url: https://osceolaclerk.com/tax-deeds/
+  verified: true
+palmbeach:
+  url: https://www.mypalmbeachclerk.com/departments/courts/tax-deeds
+  search: https://taxdeed.mypalmbeachclerk.com/
+  verified: true
+pasco:
+  url: https://www.pascoclerk.com/201/Tax-Deed-Sales
+  verified: true
+pinellas:
+  url: https://taxdeedsales.mypinellasclerk.gov/
+  verified: true
+  notes: dedicated portal (post-July-2022 cases); older files on historictaxdeedsales.mypinellasclerk.org
+polk:
+  url: https://www.polkclerkfl.gov/189/Tax-Deeds
+  verified: true
+  notes: view tax deeds by tax number, parcel, or sale date
+putnam:
+  url: https://putnamclerk.com/tax-deed-sales/
+  search: https://apps.putnam-fl.com/coc/taxdeeds/public/disclaimer.php
+  verified: true
+santarosa:
+  url: https://santarosaclerk.com/courts/foreclosures-tax-deeds/
+  verified: true
+sarasota:
+  url: https://www.sarasotaclerk.com/Home-and-Property/Tax-Deeds
+  verified: true
+seminole:
+  url: https://www.seminoleclerk.org/tax-deed-sales/
+  search: https://webapps.seminoleclerk.org/TaxDeedSales/
+  verified: true
+suwannee:
+  url: https://www.suwgov.org/tax-deed-sales/
+  verified: true
+volusia:
+  url: https://www.clerk.org/tax-deeds.aspx
+  search: https://app02.clerk.org/or_td/
+  verified: true
+washington:
+  url: https://www.washingtonclerk.com/public-sales/tax-deeds/
+  verified: true
