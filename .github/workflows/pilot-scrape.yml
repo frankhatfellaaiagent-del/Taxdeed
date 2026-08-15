@@ -93,18 +93,6 @@ jobs:
             echo "No live run directory produced."
           fi
 
-      - name: Upload run outputs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pilot-run-outputs
-          path: |
-            output/runs/
-            output/debug/
-            config/counties.json
-          if-no-files-found: warn
-          retention-days: 30
-
       - name: Commit run data to branch (manual + scheduled runs)
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
@@ -115,11 +103,18 @@ jobs:
           cp -r "$latest" "data/runs/$name"
           cp config/counties.json "data/runs/$name/counties.json" || true
           # Refresh the fixed-URL feeds consumed by the Google Sheet and the
-          # dashboard (docs/DATA_FEED.md documents the contract).
+          # dashboard (docs/DATA_FEED.md documents the contract). First export
+          # builds the feed (geocoding new addresses), then the appraiser
+          # quick-look enrichment runs against it, then a re-export merges the
+          # enrichment in. Enrichment is best-effort — a broken county parser
+          # never blocks the feed.
+          python -m scraper export --run "data/runs/$name" || true
+          python -m scraper -v enrich --limit 200 --debug-dir output/debug/enrich || true
           python -m scraper export --run "data/runs/$name" || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/runs data/exports
+          git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
           git commit -m "Pilot run data: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
           git pull --rebase origin "${{ github.ref_name }}" || true
           git push origin "HEAD:${{ github.ref_name }}"
@@ -128,6 +123,19 @@ jobs:
           gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Upload run outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-run-outputs
+          path: |
+            output/runs/
+            output/debug/
+            data/enrichment.json
+            config/counties.json
+          if-no-files-found: warn
+          retention-days: 30
 
       - name: Fail job if live steps failed
         if: steps.discover.outcome == 'failure' && steps.scrape.outcome == 'failure'

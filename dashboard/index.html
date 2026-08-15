@@ -162,6 +162,7 @@ function mapRecord(r, i) {
     parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
     owner: r.owner_name || "", use: r.property_use || "", acreage: r.acreage || "",
+    mailing: r.mailing_address || "", enriched: !!r.enriched,
     useType: typeFromUse(r.property_use),
     lat: r.lat ?? null, lng: r.lng ?? null,
     assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
@@ -388,6 +389,10 @@ function renderDetail() {
     { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
     { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
       text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
+    { topic: "Quick look", cls: p.enriched ? "tag-accent" : "tag-neutral",
+      text: p.enriched
+        ? "Appraiser record scrubbed automatically — owner, land use, acreage and mailing address above come straight from the county appraiser."
+        : "Appraiser record not scrubbed yet — the weekly agent works through buy-box parcels first; use the appraiser link to check manually." },
     { topic: "Next step", cls: "tag-neutral",
       text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the FEMA flood zone and wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
   ];
@@ -424,7 +429,8 @@ function renderDetail() {
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
             ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
                ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
-               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"]]
+               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"],
+               ["Mailing address", p.mailing || "—"]]
               .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
           </div>
           <div class="hr"></div>

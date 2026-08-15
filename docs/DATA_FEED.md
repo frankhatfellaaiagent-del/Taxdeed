@@ -37,6 +37,9 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
   "county_caps": {                               // client-set limits from config/buybox.yaml
     "putnam": { "max_bid": 25000, "deposit": 2000 }   // keys lowercase/no punctuation; may be {}
   },
+  "clerk_sites": {                               // Clerk of Court tax-deed pages (config/clerk_sites.yaml)
+    "volusia": { "url": "https://www.clerk.org/tax-deeds.aspx", "search": "https://app02.clerk.org/or_td/" }
+  },
   "records": [
     {
       "county": "putnam",
@@ -45,9 +48,11 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "parcel_id": "01-10-26-7200-0070-0010",
       "case_number": "...", "certificate_number": "...",
       "property_address": "400 ASH ST, PALATKA, FL- 32177",  // "" when the county doesn't publish it
-      "owner_name": "",                          // from the auction record; usually "" until appraiser enrichment
-      "property_use": "",                        // appraiser land-use text when the county publishes it
+      "owner_name": "",                          // from the auction record or appraiser enrichment
+      "mailing_address": "",                     // owner's mailing address (appraiser enrichment only)
+      "property_use": "",                        // land-use text (auction record or appraiser enrichment)
       "acreage": "",                             // acreage text when available
+      "enriched": false,                         // true = appraiser quick-look scrub ran for this parcel
       "opening_bid": 8474.0,                     // number or null
       "assessed_value": 12000.0,                 // number or null (often null on redeemed/future rows)
       "bid_to_value_pct": 71,                    // integer % or null
@@ -68,6 +73,13 @@ Coordinates come from the free US Census geocoder (`scraper/geocode.py`), cached
 dashboard's parcel-centered links (FEMA flood viewer, USFWS wetlands map, satellite
 view). Treat them as approximate — rooftop/street-segment accuracy, not a surveyed
 parcel centroid.
+
+Enrichment (`scraper/enrich.py`, `python -m scraper enrich`) fetches county property
+appraiser pages for scheduled buy-box MATCH/REVIEW parcels — owner, mailing address,
+land use, acreage — into `data/enrichment.json`, which the exporter merges into the
+feed before buy-box flagging (an enriched land use can move a REVIEW row to
+MATCH/NO). It runs inside the weekly workflow (bounded per run, rate-limited, best
+effort); coverage grows week over week.
 
 ## Dashboard guidance
 

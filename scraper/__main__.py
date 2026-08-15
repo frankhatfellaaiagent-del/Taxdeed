@@ -193,6 +193,14 @@ def main(argv=None) -> int:
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
+    p = sub.add_parser("enrich", help="Fetch appraiser pages for buy-box rows (quick-look scrub)")
+    p.add_argument("--feed", default=str(ROOT / "data" / "exports" / "master_list.json"),
+                   help="Feed JSON to pick targets from (default data/exports/master_list.json)")
+    p.add_argument("--counties", help="Comma-separated county slugs, or @file (default: all)")
+    p.add_argument("--limit", type=int, default=200, help="Max parcels to fetch this run (default 200)")
+    p.add_argument("--out", help="Enrichment store (default data/enrichment.json)")
+    p.add_argument("--debug-dir", help="Save first fetched HTML pages here for parser tuning")
+
     p = sub.add_parser("run", help="scrape + report in one command")
     add_common(p)
     p.add_argument("--counties")
@@ -238,6 +246,17 @@ def main(argv=None) -> int:
             sys.exit("No run directories found — scrape first")
         counts = export_run(run_dir)
         print(json.dumps(counts, indent=2))
+        return 0
+    if args.cmd == "enrich":
+        from .enrich import enrich_records
+        feed_path = Path(args.feed)
+        if not feed_path.exists():
+            sys.exit(f"Feed not found: {feed_path} — run `python -m scraper export` first")
+        records = json.loads(feed_path.read_text(encoding="utf-8")).get("records", [])
+        counties = [_slugify(c) for c in _county_names_from(args.counties)] if args.counties else None
+        summary = enrich_records(records, counties=counties, limit=args.limit,
+                                 out_path=args.out, debug_dir=args.debug_dir)
+        print(json.dumps(summary, indent=2))
         return 0
     if args.cmd == "run":
         run_dir = cmd_scrape(args)
