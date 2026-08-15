@@ -837,7 +837,6 @@
 },
 "putnam|01-13-26-4910-0070-1950|2024-0000475": {
 "acreage": "0.23",
-"applicant": "123 FOREST ST, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000475",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -893,7 +892,6 @@
 },
 "putnam|02-12-27-1829-0300-0270|2024-0001010": {
 "acreage": "0.72",
-"applicant": "108 RUTH DR, CRESCENT CITY2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240001010",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -916,7 +914,6 @@
 },
 "putnam|03-10-24-2570-0010-0410|2019-0001896": {
 "acreage": "0.06",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190001896",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -939,7 +936,6 @@
 },
 "putnam|03-10-24-9070-0110-0190|2019-0002039": {
 "acreage": "0.06",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002039",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -962,7 +958,6 @@
 },
 "putnam|03-10-24-9070-0120-0090|2020-0002386": {
 "acreage": "0.08",
-"applicant": "00 Unassigned Location RE, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200002386",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -975,7 +970,6 @@
 },
 "putnam|03-10-24-9070-0120-0100|2020-0002385": {
 "acreage": "0.09",
-"applicant": "00 Unassigned Location RE, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200002385",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -998,7 +992,6 @@
 },
 "putnam|04-09-27-0000-0021-1460|2024-0001619": {
 "acreage": "1.14",
-"applicant": "401 NW 8TH AV, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240001619",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1011,7 +1004,6 @@
 },
 "putnam|04-10-24-5531-0050-0510|2019-0002541": {
 "acreage": "0.11",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002541",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1034,7 +1026,6 @@
 },
 "putnam|04-10-24-5540-0020-0100|2019-0002931": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002931",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1047,7 +1038,6 @@
 },
 "putnam|04-10-24-6450-0040-0330|2020-0003125": {
 "acreage": "0.11",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003125",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1060,7 +1050,6 @@
 },
 "putnam|04-10-24-6450-0040-0440|2020-0003096": {
 "acreage": "0.11",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003096",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1133,7 +1122,6 @@
 },
 "putnam|04-10-24-9030-0020-0550|2024-0002477": {
 "acreage": "0.3",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240002477",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1176,7 +1164,6 @@
 },
 "putnam|04-10-24-9035-0010-0890|2019-0003455": {
 "acreage": "0.12",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003455",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1189,7 +1176,6 @@
 },
 "putnam|04-10-24-9035-0010-1010|2020-0003446": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003446",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1222,7 +1208,6 @@
 },
 "putnam|05-10-24-4925-0050-0350|2023-0003407": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230003407",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1235,7 +1220,6 @@
 },
 "putnam|05-10-24-4925-0080-0010|2019-0003870": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003870",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1318,7 +1302,6 @@
 },
 "putnam|05-10-24-4930-0030-0500|2020-0004283": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200004283",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1441,7 +1424,6 @@
 },
 "putnam|05-10-24-4940-0050-0290|2023-0003964": {
 "acreage": "0.11",
-"applicant": "2610 TWIN LAKES BLVD, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230003964",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1454,7 +1436,6 @@
 },
 "putnam|05-10-24-4940-0070-0250|2020-0004153": {
 "acreage": "0.11",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200004153",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1547,7 +1528,6 @@
 },
 "putnam|06-13-27-4910-0060-1320|2023-0004953": {
 "acreage": "0.23",
-"applicant": "125 EDGEMERE DR, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230004953",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1560,7 +1540,6 @@
 },
 "putnam|06-13-27-4910-0060-1730|2023-0004955": {
 "acreage": "0.23",
-"applicant": "110 HAMPTON CIR, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230004955",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1573,7 +1552,6 @@
 },
 "putnam|07-10-24-1650-0150-0020|2019-0005605": {
 "acreage": "0.12",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190005605",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1696,7 +1674,6 @@
 },
 "putnam|07-10-24-7072-0220-0200|2019-0006136": {
 "acreage": "0.11",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190006136",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1719,7 +1696,6 @@
 },
 "putnam|07-13-27-7060-0130-0190|2024-0005196": {
 "acreage": "0.43",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005196",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1732,7 +1708,6 @@
 },
 "putnam|07-13-27-7060-0320-0090|2023-0006020": {
 "acreage": "0.23",
-"applicant": "217 DOGWOOD AV, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230006020",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1745,7 +1720,6 @@
 },
 "putnam|07-13-27-7062-0760-0090|2023-0006154": {
 "acreage": "0.46",
-"applicant": "117 MARIE AV, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230006154",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1768,7 +1742,6 @@
 },
 "putnam|08-10-24-6782-0060-0240|2019-0007107": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007107",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1781,7 +1754,6 @@
 },
 "putnam|08-10-24-6782-0060-0250|2019-0007108": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007108",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1794,7 +1766,6 @@
 },
 "putnam|08-10-24-6782-0060-0260|2019-0007105": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007105",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1807,7 +1778,6 @@
 },
 "putnam|08-10-24-6782-0060-0270|2019-0007106": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007106",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1820,7 +1790,6 @@
 },
 "putnam|08-10-24-6782-0070-0180|2024-0005657": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005657",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1843,7 +1812,6 @@
 },
 "putnam|08-10-24-6782-0080-0060|2019-0007164": {
 "acreage": "0.1",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007164",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1856,7 +1824,6 @@
 },
 "putnam|08-13-27-7061-0480-0030|2024-0005803": {
 "acreage": "0.32",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005803",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1879,7 +1846,6 @@
 },
 "putnam|08-13-27-7063-1320-0080|2019-0007563": {
 "acreage": "0.23",
-"applicant": "215 GARRISON AV, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007563",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1892,7 +1858,6 @@
 },
 "putnam|08-13-27-7063-1320-0240|2019-0007597": {
 "acreage": "0.23",
-"applicant": "204 MANDARIN AV, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007597",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1905,7 +1870,6 @@
 },
 "putnam|08-13-27-7063-1320-0260|2019-0007602": {
 "acreage": "0.23",
-"applicant": "208 MANDARIN AV, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007602",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1918,7 +1882,6 @@
 },
 "putnam|09-10-24-0351-0060-0150|2019-0007783": {
 "acreage": "0.25",
-"applicant": "107 CLAUDETTE ST, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007783",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1931,7 +1894,6 @@
 },
 "putnam|11-10-23-9303-0110-0260|2021-0008073": {
 "acreage": "0.12",
-"applicant": "149 INDIANAPOLIS ST, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20210008073",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1944,7 +1906,6 @@
 },
 "putnam|11-10-24-4075-2370-0120|2024-0007392": {
 "acreage": "0.43",
-"applicant": "124 PHILLIP AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007392",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1970,7 +1931,6 @@
 },
 "putnam|12-10-23-1660-0030-0330|2023-0008982": {
 "acreage": "0.12",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230008982",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1983,7 +1943,6 @@
 },
 "putnam|12-10-23-1660-0040-0260|2023-0009000": {
 "acreage": "0.12",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230009000",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -1996,7 +1955,6 @@
 },
 "putnam|12-10-24-4079-0130-0100|2024-0008166": {
 "acreage": "0.4",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008166",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2009,7 +1967,6 @@
 },
 "putnam|12-11-26-8240-0060-0190|2024-0008337": {
 "acreage": "0.46",
-"applicant": "111 HILLCREST RD, SATSUMA9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008337",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2022,7 +1979,6 @@
 },
 "putnam|12-11-26-8241-0310-0150|2024-0008394": {
 "acreage": "0.23",
-"applicant": "219 SUMMIT RD, SATSUMA9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008394",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2035,7 +1991,6 @@
 },
 "putnam|13-10-26-5630-0010-0150|2024-0008785": {
 "acreage": "0.19",
-"applicant": "2912 BAINBRIDGE RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008785",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2058,7 +2013,6 @@
 },
 "putnam|14-08-24-5102-0061-0110|2024-0009082": {
 "acreage": "0.17",
-"applicant": "205 CALHOUN AV, FLORAHOME0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009082",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2071,7 +2025,6 @@
 },
 "putnam|14-08-24-5104-1120-0230|2019-0012005": {
 "acreage": "0.17",
-"applicant": "218 MARJAK LN, FLORAHOME0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190012005",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2084,7 +2037,6 @@
 },
 "putnam|14-08-24-5104-1130-0240|2019-0011992": {
 "acreage": "0.17",
-"applicant": "108 RICKIE LN, FLORAHOME0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190011992",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2097,7 +2049,6 @@
 },
 "putnam|14-08-24-5104-1140-0090|2019-0011993": {
 "acreage": "0.17",
-"applicant": "117 RICKIE LN, FLORAHOME0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190011993",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2110,7 +2061,6 @@
 },
 "putnam|14-10-23-9314-0010-0410|2019-0012098": {
 "acreage": "0.1",
-"applicant": "327 BADEN POWELL RD, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190012098",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2123,7 +2073,6 @@
 },
 "putnam|14-10-23-9314-0010-0420|2019-0012099": {
 "acreage": "0.1",
-"applicant": "325 BADEN POWELL RD, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190012099",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2136,7 +2085,6 @@
 },
 "putnam|14-10-24-4070-0070-0010|2024-0009331": {
 "acreage": "0.64",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009331",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2149,7 +2097,6 @@
 },
 "putnam|14-12-26-0000-0011-0100|2024-0009441": {
 "acreage": "1.13",
-"applicant": "125 KETNER RD, WELAKA3",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009441",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2185,7 +2132,6 @@
 },
 "putnam|17-09-23-4920-0090-0000|2019-0012842": {
 "acreage": "0.44",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190012842",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2228,7 +2174,6 @@
 },
 "putnam|18-08-25-5106-6180-0150|2024-0010259": {
 "acreage": "0.24",
-"applicant": "649 E HILLSBOROUGH AV, FLORAHOME0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010259",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2241,7 +2186,6 @@
 },
 "putnam|18-09-23-4020-0060-0010|2024-0010321": {
 "acreage": "4.13",
-"applicant": "210 POWER LINE RD, MELROSE6",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010321",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2254,7 +2198,6 @@
 },
 "putnam|18-10-24-1650-0010-1090|2024-0010381": {
 "acreage": "0.26",
-"applicant": "120 SW 60TH AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010381",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2267,7 +2210,6 @@
 },
 "putnam|18-10-24-5112-0010-0050|2024-0010485": {
 "acreage": "0.46",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010485",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2293,7 +2235,6 @@
 },
 "putnam|18-13-28-3343-0080-0030|2024-0010662": {
 "acreage": "0.32",
-"applicant": "118 MICHAEL DR, CRESCENT CITY2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010662",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2339,7 +2280,6 @@
 },
 "putnam|22-10-23-0000-0610-0000|2019-0015088": {
 "acreage": "0.08",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190015088",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2352,7 +2292,6 @@
 },
 "putnam|22-10-23-0000-0624-0000|2019-0015085": {
 "acreage": "0.08",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190015085",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2365,7 +2304,6 @@
 },
 "putnam|22-10-26-5470-0070-0100|2024-0011468": {
 "acreage": "0.32",
-"applicant": "206 BLANCHETTE AV, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011468",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2378,7 +2316,6 @@
 },
 "putnam|23-10-23-0000-0450-0000|2024-0011623": {
 "acreage": "2.03",
-"applicant": "180 S COUNTY RD 21, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011623",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2411,7 +2348,6 @@
 },
 "putnam|23-10-24-4062-0020-0110|2024-0011660": {
 "acreage": "0.46",
-"applicant": "104 ALMOND AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011660",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2424,7 +2360,6 @@
 },
 "putnam|24-09-24-4075-0220-0060|2024-0011867": {
 "acreage": "0.65",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011867",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2437,7 +2372,6 @@
 },
 "putnam|24-09-24-4075-0260-0170|2024-0011898": {
 "acreage": "0.86",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011898",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2450,7 +2384,6 @@
 },
 "putnam|24-09-24-4075-0320-0260|2024-0011953": {
 "acreage": "0.22",
-"applicant": "815 DEL MONACO AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011953",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2496,7 +2429,6 @@
 },
 "putnam|24-12-27-3350-0950-0001|2019-0016533": {
 "acreage": "0.15",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190016533",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2509,7 +2441,6 @@
 },
 "putnam|25-08-25-0000-0100-0020|2024-0012469": {
 "acreage": "0.38",
-"applicant": "143 MYRTLE RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012469",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2532,7 +2463,6 @@
 },
 "putnam|29-09-26-0000-0030-0000|2024-0013669": {
 "acreage": "0.36",
-"applicant": "133 STATE RD 100, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013669",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2545,7 +2475,6 @@
 },
 "putnam|31-10-27-8251-0020-1270|2019-0018477": {
 "acreage": "0.3",
-"applicant": "433 MARINA RD, SATSUMA9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190018477",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2571,7 +2500,6 @@
 },
 "putnam|31-12-28-0000-0590-0020|2024-0014122": {
 "acreage": "3.41",
-"applicant": "100 S AMIN RD, CRESCENT CITY2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240014122",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2584,7 +2512,6 @@
 },
 "putnam|32-11-27-0170-0170-0051|2024-0014219": {
 "acreage": "0.69",
-"applicant": "314 W MAIN ST, POMONA PARK1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240014219",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2597,7 +2524,6 @@
 },
 "putnam|34-09-24-8630-0000-1660|2024-0014986": {
 "acreage": "0.22",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240014986",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2620,7 +2546,6 @@
 },
 "putnam|35-08-27-8151-0000-6300|2024-0015250": {
 "acreage": "0.21",
-"applicant": "881 WEST RIVER RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015250",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2643,7 +2568,6 @@
 },
 "putnam|35-09-24-4075-1560-0280|2024-0015424": {
 "acreage": "0.65",
-"applicant": "319 JANET AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015424",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2656,7 +2580,6 @@
 },
 "putnam|35-09-24-4076-0490-0220|2024-0015693": {
 "acreage": "0.22",
-"applicant": "805 DAWN AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015693",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2669,7 +2592,6 @@
 },
 "putnam|36-09-24-4076-0260-0230|2024-0015984": {
 "acreage": "0.22",
-"applicant": "209 WILSON DR, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015984",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2735,7 +2657,6 @@
 },
 "putnam|37-13-27-7063-1230-0070|2019-0021475": {
 "acreage": "0.24",
-"applicant": "103 ORLEANS CT, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190021475",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2748,7 +2669,6 @@
 },
 "putnam|37-13-27-7063-1280-0050|2019-0021559": {
 "acreage": "0.23",
-"applicant": "309 LAISY DR, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190021559",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2761,7 +2681,6 @@
 },
 "putnam|37-13-27-7063-1280-0220|2019-0021556": {
 "acreage": "0.23",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190021556",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2807,7 +2726,6 @@
 },
 "putnam|39-11-26-9230-0140-0030|2024-0016950": {
 "acreage": "0.26",
-"applicant": "105 COMANCHEE ST, SATSUMA9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016950",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2820,7 +2738,6 @@
 },
 "putnam|41-13-26-1320-0060-0140|2024-0017066": {
 "acreage": "0.34",
-"applicant": "118 BROWNS FISH CAMP RD, CRESCENT CITY2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017066",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2833,7 +2750,6 @@
 },
 "putnam|42-10-27-6850-0060-0010|2024-0017089": {
 "acreage": "0.39",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017089",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2859,7 +2775,6 @@
 },
 "putnam|42-10-27-6850-0620-0050|2024-0017155": {
 "acreage": "0.12",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017155",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2885,7 +2800,6 @@
 },
 "putnam|43-10-27-8255-0050-0080|2024-0017518": {
 "acreage": "0.23",
-"applicant": "215 SUNGLOW AV, SATSUMA9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017518",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",
@@ -2898,7 +2812,6 @@
 },
 "putnam|43-10-27-8255-0100-0140|2024-0017528": {
 "acreage": "0.26",
-"applicant": "00 Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017528",
 "clerk_platform": "template",
 "fetched_at": "2026-08-15T03:56:22+00:00",

@@ -159,6 +159,13 @@ def parse_case_page(html: str, page_url: str) -> dict:
     for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
     out = _labeled_fields(soup, CASE_LABELS)
+    # Label scans occasionally grab the wrong cell; a value that starts like a
+    # street address is not an applicant name — better no field than a wrong
+    # one on the client's card.
+    if re.match(r"^\d+\s", out.get("applicant", "")):
+        out.pop("applicant", None)
+    if len(out.get("deed_status", "")) > 40:
+        out.pop("deed_status", None)
     docs = _doc_rows(soup, page_url)
     if docs:
         out["case_docs"] = docs

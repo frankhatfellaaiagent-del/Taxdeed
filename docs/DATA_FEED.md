@@ -26,7 +26,10 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
 ```jsonc
 {
   "generated_at": "2026-08-11T22:45:00+00:00",   // UTC, when the feed was built
-  "source_run": "2026-08-11T213144Z",            // scraper run the data came from
+  "source_run": "2026-08-11T213144Z",            // most recent run merged into the feed
+  "county_runs": { "putnam": "2026-08-15T035014Z", ... },  // which run each county's rows
+                                                 // came from — partial runs refresh their
+                                                 // counties and carry the rest forward
   "counts": {
     "total": 2648,
     "scheduled": 1894,                           // upcoming auctions

@@ -33,6 +33,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   .detail-grid{grid-template-columns:1fr!important}
   .stats-grid{grid-template-columns:repeat(2,1fr)!important}
 }
+#login-overlay{display:grid}
+#login-overlay[hidden]{display:none}
 .tablewrap{overflow-x:auto}
 </style>
 </head>
@@ -50,6 +52,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
     <div class="text-muted">Weekly &middot; all 37 counties</div>
   </div>
+  <div id="account-box" hidden style="padding:10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5"></div>
 </aside>
 
 <main style="flex:1;min-width:0;display:flex;flex-direction:column">
@@ -71,6 +74,25 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 </main>
 </div>
 
+<div id="login-overlay" hidden style="position:fixed;inset:0;z-index:60;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)">
+  <form id="login-form" class="blueprint" style="width:min(360px,100%);background:var(--color-bg);padding:24px 26px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:2px">Sign in</div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Your lists, notes and positions follow you to any device.</div>
+    <div class="field" style="margin-bottom:12px"><label>Email</label>
+      <input class="input" id="login-email" type="email" autocomplete="username" required></div>
+    <div class="field" style="margin-bottom:6px"><label>Password</label>
+      <input class="input" id="login-pass" type="password" autocomplete="current-password" required></div>
+    <div id="login-error" style="font-size:12.5px;color:var(--color-accent-800);min-height:18px;margin-bottom:8px"></div>
+    <button class="btn btn-primary" type="submit" id="login-submit" style="width:100%">Sign in</button>
+    <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:12.5px">
+      <button class="btn btn-ghost" type="button" id="login-forgot" style="font-size:12.5px;padding:2px 4px">Forgot password?</button>
+      <button class="btn btn-ghost" type="button" id="login-cancel" style="font-size:12.5px;padding:2px 4px">Cancel</button>
+    </div>
+    <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up — accounts are set up for the team. Ask Frank for access.</div>
+  </form>
+</div>
+
 <script>
 /* MADD Assets tax deed dashboard — production port of the Claude Design
    prototype (design/Tax Deed Dashboard.dc.html). Same Industry design
@@ -84,6 +106,14 @@ const FEED_URLS = [
   "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json",
 ];
 const REPO = "frankhatfellaaiagent-del/Taxdeed";
+// Team login + cross-device sync (Firebase Auth + Firestore). Paste the web
+// app config here to switch it on — docs/LOGIN_SETUP.md has the 10-minute
+// checklist. Empty = the dashboard runs local-only, exactly as before. This
+// config is public by design; security lives in firestore.rules and in
+// closed signup (accounts are created in the console, never self-service).
+const FIREBASE_CONFIG = {};
+const SYNC_ON = !!FIREBASE_CONFIG.apiKey;
+const SDK_BASE = "https://www.gstatic.com/firebasejs/10.12.2/";
 const ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/pilot-scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
 const $ = (id) => document.getElementById(id);
@@ -97,21 +127,203 @@ const store = {
   get(k, fallback) { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } },
   set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
 };
-let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
-let lists = store.get("tdd_lists", [
+const DEFAULT_LISTS = [
   { name: "A-grade flips", desc: "Houses worth rehabbing and reselling." },
   { name: "Land bank", desc: "Cheap lots to hold long-term." },
   { name: "Rental candidates", desc: "Cashflow if picked up under assessed value." },
-]);
-let prefs = store.get("tdd_prefs", {
+];
+const DEFAULT_PREFS = {
   myTypes: { "Single family": true, "Vacant land": true },
   myTypesFirst: true, budget: "", scheduleDay: 1,
-});
-const saveInterest = () => store.set("tdd_interest", interest);
-const savePrefs = () => store.set("tdd_prefs", prefs);
-const saveLists = () => store.set("tdd_lists", lists);
+};
+let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
+let lists = store.get("tdd_lists", DEFAULT_LISTS);   // personal lists
+let team = { lists: [], membership: {} };            // shared lists; live only when signed in
+let prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+// localStorage stays the write-through cache (instant render, works offline);
+// when signed in, the same save also pushes to the cloud, debounced.
+const saveInterest = () => { store.set("tdd_interest", interest); cloudPush("interest", () => ({ data: interest })); };
+const savePrefs = () => { store.set("tdd_prefs", prefs); cloudPush("prefs", () => ({ data: prefs })); };
+const saveLists = () => { store.set("tdd_lists", lists); cloudPush("lists", () => ({ data: lists })); };
+const saveTeam = () => cloudPush("team", () => team);
 const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
 const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
+
+// ---------- cloud sync (dormant until FIREBASE_CONFIG is filled) ----------
+let CLOUD = null;                 // {app, auth, authm, db, fsm, user, unsubs}
+const cloudTimers = {};
+
+function rerender() {
+  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+     history: renderHistory, settings: renderSettings })[S.screen]();
+}
+
+function cloudPush(name, payload) {
+  if (!CLOUD || !CLOUD.user) return;
+  clearTimeout(cloudTimers[name]);
+  // Debounced whole-doc set: fine at this team size; the docs are small and
+  // per-person (the shared team doc is the one with a theoretical clobber
+  // window, ~1s, acceptable for a 2-3 person team).
+  cloudTimers[name] = setTimeout(() => {
+    const ref = name === "team" ? teamDocRef() : userDocRef(name);
+    CLOUD.fsm.setDoc(ref, payload()).catch((e) => console.warn("sync push failed:", e));
+  }, 800);
+}
+
+const userDocRef = (name) => CLOUD.fsm.doc(CLOUD.db, "users", CLOUD.user.uid, "state", name);
+const teamDocRef = () => CLOUD.fsm.doc(CLOUD.db, "teams", "madd", "state", "lists");
+
+// Apply a snapshot only when it truly changes state — this also swallows the
+// echo of our own writes, so typing in a notes box never loses the caret.
+function applySnap(current, next) {
+  return JSON.stringify(current) === JSON.stringify(next) ? null : next;
+}
+
+async function cloudSignIn(email, pass) {
+  return CLOUD.authm.signInWithEmailAndPassword(CLOUD.auth, email, pass);
+}
+
+async function onSignedIn(user) {
+  CLOUD.user = user;
+  $("login-overlay").hidden = true;
+  const fs = CLOUD.fsm;
+  try {
+    // First contact: merge this device's local state with the cloud. Cloud
+    // wins per key; anything only known locally is kept (union). After this,
+    // the cloud is the source of truth and listeners keep every device live.
+    const [ci, cp, cl, ct] = await Promise.all(
+      [userDocRef("interest"), userDocRef("prefs"), userDocRef("lists"), teamDocRef()]
+        .map((r) => fs.getDoc(r)));
+    interest = { ...interest, ...((ci.data() || {}).data || {}) };
+    prefs = { ...prefs, ...((cp.data() || {}).data || {}) };
+    const cloudLists = ((cl.data() || {}).data || []).slice();
+    for (const l of lists) if (!cloudLists.some((c) => c.name === l.name)) cloudLists.push(l);
+    lists = cloudLists.length ? cloudLists : lists;
+    team = { lists: (ct.data() || {}).lists || [], membership: (ct.data() || {}).membership || {} };
+    store.set("tdd_interest", interest); store.set("tdd_prefs", prefs); store.set("tdd_lists", lists);
+
+    // Push the merged state up BEFORE attaching listeners, and await it — the
+    // first snapshot each listener receives then echoes exactly what we wrote,
+    // so it can never clobber a merge that hasn't landed yet.
+    await Promise.all([
+      fs.setDoc(userDocRef("interest"), { data: interest }),
+      fs.setDoc(userDocRef("prefs"), { data: prefs }),
+      fs.setDoc(userDocRef("lists"), { data: lists }),
+    ]);
+
+    CLOUD.unsubs = [
+      fs.onSnapshot(userDocRef("interest"), (s) => {
+        if (!s.data()) return;                       // doc not created yet
+        const next = applySnap(interest, s.data().data || {});
+        if (next) { interest = next; store.set("tdd_interest", interest); rerender(); }
+      }),
+      fs.onSnapshot(userDocRef("prefs"), (s) => {
+        if (!s.data()) return;
+        const next = applySnap(prefs, { ...DEFAULT_PREFS, ...(s.data().data || {}) });
+        if (next) { prefs = next; store.set("tdd_prefs", prefs); rerender(); }
+      }),
+      fs.onSnapshot(userDocRef("lists"), (s) => {
+        if (!s.data()) return;
+        const next = applySnap(lists, s.data().data || []);
+        if (next) { lists = next; store.set("tdd_lists", lists); rerender(); }
+      }),
+      fs.onSnapshot(teamDocRef(), (s) => {
+        if (!s.data()) return;
+        const d = s.data();
+        const next = applySnap(team, { lists: d.lists || [], membership: d.membership || {} });
+        if (next) { team = next; rerender(); }
+      }),
+    ];
+  } catch (e) { console.warn("first sync failed:", e); }
+  renderAccount();
+  if (DATA.length) rerender();
+}
+
+function onSignedOut() {
+  if (CLOUD) { (CLOUD.unsubs || []).forEach((u) => u()); CLOUD.unsubs = []; CLOUD.user = null; }
+  team = { lists: [], membership: {} };
+  interest = store.get("tdd_interest", {});
+  lists = store.get("tdd_lists", DEFAULT_LISTS);
+  prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+  renderAccount();
+  if (DATA.length) rerender();
+}
+
+async function initCloud() {
+  renderAccount();
+  if (!SYNC_ON) return;
+  try {
+    const [appM, authM, fsM] = await Promise.all([
+      import(SDK_BASE + "firebase-app.js"),
+      import(SDK_BASE + "firebase-auth.js"),
+      import(SDK_BASE + "firebase-firestore.js"),
+    ]);
+    const app = appM.initializeApp(FIREBASE_CONFIG);
+    CLOUD = { app, authm: authM, fsm: fsM, auth: authM.getAuth(app),
+              db: fsM.getFirestore(app), user: null, unsubs: [] };
+    authM.onAuthStateChanged(CLOUD.auth, (u) => (u ? onSignedIn(u) : onSignedOut()));
+  } catch (e) {
+    console.warn("sync unavailable:", e);
+    CLOUD = null;
+  }
+  renderAccount();
+}
+
+function renderAccount() {
+  const box = $("account-box");
+  if (!SYNC_ON) { box.hidden = true; return; }
+  box.hidden = false;
+  if (CLOUD && CLOUD.user) {
+    box.innerHTML = `
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in &middot; syncing</div>
+      <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div>
+      <button class="btn btn-ghost" id="btn-signout" style="font-size:12px;padding:2px 4px;margin-top:4px">Sign out</button>`;
+    $("btn-signout").onclick = () => CLOUD.authm.signOut(CLOUD.auth);
+  } else {
+    box.innerHTML = `
+      <button class="btn btn-secondary" id="btn-signin" style="width:100%">Sign in</button>
+      <div class="text-muted" style="margin-top:6px">Sync your lists &amp; notes across devices.</div>`;
+    $("btn-signin").onclick = () => {
+      $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
+      $("login-overlay").hidden = false;
+      $("login-email").focus();
+    };
+  }
+}
+
+function wireLogin() {
+  $("login-cancel").onclick = () => { $("login-overlay").hidden = true; };
+  $("login-form").onsubmit = async (e) => {
+    e.preventDefault();
+    if (!CLOUD) return;
+    $("login-error").textContent = "";
+    $("login-submit").disabled = true;
+    try {
+      await cloudSignIn($("login-email").value.trim(), $("login-pass").value);
+      $("login-pass").value = "";
+    } catch (err) {
+      const code = (err && err.code) || "";
+      $("login-error").textContent =
+        /invalid-credential|wrong-password|user-not-found/.test(code)
+          ? "Email or password doesn't match. Try again, or use Forgot password."
+          : /too-many-requests/.test(code)
+            ? "Too many attempts — wait a minute and try again."
+            : "Couldn't sign in (" + (code || "network") + ").";
+    }
+    $("login-submit").disabled = false;
+  };
+  $("login-forgot").onclick = async () => {
+    if (!CLOUD) return;
+    const email = $("login-email").value.trim();
+    if (!email) { $("login-error").textContent = "Type your email above first, then tap Forgot password."; return; }
+    try {
+      await CLOUD.authm.sendPasswordResetEmail(CLOUD.auth, email);
+      $("login-error").textContent = "Reset email sent to " + email + " — check your inbox.";
+    } catch (err) {
+      $("login-error").textContent = "Couldn't send the reset email (" + ((err && err.code) || "network") + ").";
+    }
+  };
+}
 
 // ---------- app state ----------
 let DATA = [];            // mapped property records
@@ -177,6 +389,20 @@ function mapRecord(r, i) {
 }
 // Manual assignment wins; otherwise fall back to the appraiser land-use bucket.
 const effType = (p) => getInt(p.id).type || p.useType;
+// A parcel's list: shared team membership wins over the personal field.
+const effList = (id) => team.membership[id] || getInt(id).list || "";
+// Assign a parcel to a list ("" | "p:Name" | "t:Name" from the dropdown).
+function assignList(id, value) {
+  const wasShared = !!team.membership[id];
+  if (value.startsWith("t:")) {
+    team.membership[id] = value.slice(2);
+    if (getInt(id).list) setInt(id, { list: "" });
+    saveTeam();
+  } else {
+    if (wasShared) { delete team.membership[id]; saveTeam(); }
+    setInt(id, { list: value.startsWith("p:") ? value.slice(2) : "" });
+  }
+}
 // Where to send someone for the clerk's record on THIS parcel: its own case
 // file when the scrub resolved one, else the county's tax-deed portal
 // (config/clerk_sites.yaml, served in the feed), else a targeted web search.
@@ -501,10 +727,13 @@ function renderDetail() {
           <div class="field" style="margin-bottom:12px"><label>Property type (from appraiser)</label>
             <select class="input" id="pos-type"><option value="">&mdash; not set &mdash;</option>${TYPES.map((t) => `<option ${it.type === t ? "selected" : ""}>${t}</option>`).join("")}</select></div>
           <div class="field" style="margin-bottom:12px"><label>Add to list</label>
-            <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>${lists.map((l) => `<option ${it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</select></div>
+            <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>
+              ${lists.length ? `<optgroup label="My lists">${lists.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
+              ${team.lists.length ? `<optgroup label="Team lists (shared)">${team.lists.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
+            </select></div>
           <div class="field"><label>Notes</label>
             <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
-          <div style="margin-top:10px;font-size:11px" class="text-muted">Saved in this browser.</div>
+          <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
         </div>
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
@@ -534,31 +763,40 @@ function renderDetail() {
     b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
   $("pos-type").onchange = (e) => { setInt(p.id, { type: e.target.value }); renderDetail(); };
-  $("pos-list").onchange = (e) => setInt(p.id, { list: e.target.value });
+  $("pos-list").onchange = (e) => assignList(p.id, e.target.value);
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
 }
 
 // ---------- lists screen ----------
 function renderLists() {
-  const cards = lists.map((l) => {
-    const items = DATA.filter((p) => getInt(p.id).list === l.name);
-    return { ...l, items };
-  });
+  const signedIn = !!(CLOUD && CLOUD.user);
+  const cards = [
+    ...lists.map((l) => ({ ...l, shared: false,
+      items: DATA.filter((p) => !team.membership[p.id] && getInt(p.id).list === l.name) })),
+    ...team.lists.map((l) => ({ ...l, shared: true,
+      items: DATA.filter((p) => team.membership[p.id] === l.name) })),
+  ];
   $("scr-lists").innerHTML = `
     <h2 style="margin-bottom:6px">My lists</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Group the properties you&rsquo;re tracking. Click a parcel to open it. Lists save in this browser.</p>
-    <div style="display:flex;gap:10px;max-width:420px;margin-bottom:24px">
-      <input class="input" id="new-list" placeholder="New list name&hellip;">
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
+      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live."
+      : "Group the properties you&rsquo;re tracking. Click a parcel to open it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
+    <div style="display:flex;gap:10px;max-width:560px;margin-bottom:24px;align-items:center;flex-wrap:wrap">
+      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
+      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
+        <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
       <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
     </div>
     <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
       ${cards.map((lc) => `
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
             <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
+            ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
             <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
           </div>
-          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}</div>
+          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}
+            ${signedIn ? ` <button class="btn btn-ghost" data-share-toggle="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:11.5px;padding:1px 4px">${lc.shared ? "Make personal" : "Share with team"}</button>` : ""}</div>
           <div style="display:flex;flex-direction:column;gap:6px">
             ${(() => {
               // Group by sale date (soonest first) so a sale day reads as one
@@ -585,9 +823,31 @@ function renderLists() {
     </div>`;
   $("add-list").onclick = () => {
     const name = $("new-list").value.trim();
-    if (!name || lists.some((l) => l.name === name)) return;
-    lists.push({ name, desc: "" }); saveLists(); renderLists();
+    if (!name || lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) return;
+    const sharedBox = $("new-list-shared");
+    if (sharedBox && sharedBox.checked) { team.lists.push({ name, desc: "" }); saveTeam(); }
+    else { lists.push({ name, desc: "" }); saveLists(); }
+    renderLists();
   };
+  $("scr-lists").querySelectorAll("[data-share-toggle]").forEach((b) => b.onclick = () => {
+    const name = b.dataset.shareToggle;
+    if (b.dataset.shared === "1") {
+      // team → personal: the list and its parcels become mine alone
+      team.lists = team.lists.filter((l) => l.name !== name);
+      if (!lists.some((l) => l.name === name)) lists.push({ name, desc: "" });
+      for (const [id, ln] of Object.entries(team.membership))
+        if (ln === name) { delete team.membership[id]; setInt(id, { list: name }); }
+      saveTeam(); saveLists();
+    } else {
+      // personal → team: everyone sees it and its parcels
+      lists = lists.filter((l) => l.name !== name);
+      if (!team.lists.some((l) => l.name === name)) team.lists.push({ name, desc: "" });
+      for (const [id, it] of Object.entries(interest))
+        if (it.list === name) { team.membership[id] = name; interest[id] = { ...it, list: "" }; }
+      saveInterest(); saveLists(); saveTeam();
+    }
+    renderLists();
+  });
   $("scr-lists").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => go("detail", b.dataset.open));
 }
 
@@ -679,7 +939,7 @@ function exportCsv() {
     const it = getInt(p.id);
     lines.push([p.county, p.auction, p.saleTime, p.parcel, p.case_number, p.cert, p.rawAddr,
       p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.buybox, p.buyboxNotes, p.status,
-      it.status, it.bid, it.list, it.type, it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
+      it.status, it.bid, effList(p.id), it.type, it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
   }
   const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
@@ -691,6 +951,8 @@ function exportCsv() {
 // ---------- boot ----------
 (async function boot() {
   renderNav();
+  wireLogin();
+  initCloud();                      // no await — sync comes up alongside the feed
   $("next-run").textContent = nextMonday6amET();
   $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };
   $("btn-export").onclick = exportCsv;
