@@ -1,0 +1,32 @@
+[
+  {
+    "county": "sarasota",
+    "sale_date": "08/20/2026",
+    "sale_time": "09:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "2026 TD 000117",
+    "certificate_number": "3413.0000",
+    "parcel_id": "0950136214",
+    "owner_name": "",
+    "property_address": "MUNCEY RD, NORTH PORT, FL- 34291",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 3687.42,
+    "assessed_value": 7248.0,
+    "auction_status": "08/20/2026 09:00 AM ET",
+    "auction_url": "https://www.sarasota.realtaxdeed.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=08/20/2026",
+    "appraiser_url": "http://www.sc-pa.com/propertysearch/parcel/0950136214",
+    "source_host": "www.sarasota.realtaxdeed.com",
+    "scraped_at": "2026-08-15T03:54:58+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "2026 TD 000117",
+      "certificate": "3413.0000",
+      "opening bid": "$3,687.42",
+      "parcel id": "0950136214",
+      "property address": "MUNCEY RD",
+      "(cont:property_address)": "NORTH PORT, FL- 34291",
+      "assessed value": "$7,248.00"
+    }
+  }
+]
