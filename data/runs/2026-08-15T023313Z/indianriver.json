@@ -1,0 +1,32 @@
+[
+  {
+    "county": "indianriver",
+    "sale_date": "08/25/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "2026-0018TD",
+    "certificate_number": "2024-2187",
+    "parcel_id": "33392600015000000007.0",
+    "owner_name": "",
+    "property_address": "1095 18TH AVE SW, VERO BEACH, FL- 32962",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 5743.5,
+    "assessed_value": 115793.0,
+    "auction_status": "Canceled per County",
+    "auction_url": "https://www.indianriver.realtaxdeed.com/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=08/25/2026",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33392600015000000007.0",
+    "source_host": "www.indianriver.realtaxdeed.com",
+    "scraped_at": "2026-08-15T02:43:42+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "2026-0018TD",
+      "certificate": "2024-2187",
+      "opening bid": "$5,743.50",
+      "parcel id": "33392600015000000007.0",
+      "property address": "1095 18TH AVE SW",
+      "(cont:property_address)": "VERO BEACH, FL- 32962",
+      "assessed value": "$115,793.00"
+    }
+  }
+]
