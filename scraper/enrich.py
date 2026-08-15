@@ -28,6 +28,9 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+from . import paperwork, reportall
+from .clerk import ClerkResolver
+
 log = logging.getLogger(__name__)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -129,14 +132,36 @@ def load_enrichment(path: str | Path | None = None) -> dict:
     return {}
 
 
+def _fetch_appraiser(rec: dict, session, dbg: Path | None, idx: int) -> dict:
+    """Appraiser page → owner / mailing / use / acreage / values."""
+    url = rec.get("appraiser_url")
+    if not url:
+        return {}
+    try:
+        resp = session.get(url, timeout=TIMEOUT)
+        resp.raise_for_status()
+    except requests.RequestException as exc:
+        return {"appraiser_error": str(exc)[:200]}
+    if dbg and idx < 25:
+        name = re.sub(r"[^A-Za-z0-9]", "_", rec.get("parcel_id", ""))[:40]
+        (dbg / f"{rec['county']}_{name}.html").write_text(resp.text, encoding="utf-8")
+    fields = parse_appraiser_page(resp.text)
+    return fields or {"appraiser_error": "no recognizable fields on page"}
+
+
 def enrich_records(records: list[dict], counties: list[str] | None = None,
                    limit: int | None = 200, out_path: str | Path | None = None,
-                   debug_dir: str | Path | None = None, refresh_days: int = 30) -> dict:
-    """Fetch + parse appraiser pages for the selected records.
+                   debug_dir: str | Path | None = None, refresh_days: int = 30,
+                   read_docs: bool = True, use_browser: bool = True) -> dict:
+    """Run the quick-look scrub over the selected parcels.
 
-    Existing entries younger than refresh_days are kept as-is, so weekly runs
-    spread coverage instead of refetching the same parcels. Returns summary
-    counts."""
+    Per parcel, in order: the county appraiser record, the clerk's case file
+    (scraper/clerk.py), the paperwork inside that file (scraper/paperwork.py),
+    and — only when an API key is configured — the ReportAll parcel record.
+    Every source is optional; whatever answers gets stored.
+
+    Entries younger than refresh_days are left alone, so weekly runs widen
+    coverage instead of refetching the same parcels."""
     out_p = Path(out_path) if out_path else DEFAULT_OUT
     store = load_enrichment(out_p)
     now = datetime.now(timezone.utc)
@@ -152,7 +177,6 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
                if not is_fresh(store.get(record_key(r), {}))]
     if limit:
         targets = targets[:limit]
-    log.info("Enriching %d parcels from appraiser sites", len(targets))
 
     dbg = Path(debug_dir) if debug_dir else None
     if dbg:
@@ -160,44 +184,136 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
 
     session = requests.Session()
     session.headers["User-Agent"] = UA
+
+    clerk_resolver = ClerkResolver(session=requests.Session())
+    browser_ctx = _BrowserPortals() if use_browser else None
+    log.info("Enriching %d parcels (appraiser + clerk case files%s%s)",
+             len(targets),
+             ", paperwork" if read_docs else "",
+             ", ReportAll" if reportall.enabled() else "")
+
     last_hit: dict[str, float] = {}
-    n_ok = n_fail = 0
-    for i, r in enumerate(targets):
-        url = r["appraiser_url"]
-        host = url.split("/")[2] if "//" in url else ""
-        wait = HOST_DELAY - (time.monotonic() - last_hit.get(host, 0))
-        if wait > 0:
-            time.sleep(wait)
-        entry = {"url": url, "fetched_at": now.isoformat(timespec="seconds"),
-                 "ok": False}
-        try:
-            last_hit[host] = time.monotonic()
-            resp = session.get(url, timeout=TIMEOUT)
-            resp.raise_for_status()
-            fields = parse_appraiser_page(resp.text)
-            if dbg and i < 25:
-                (dbg / f"{r['county']}_{re.sub(r'[^A-Za-z0-9]', '_', r['parcel_id'])[:40]}.html") \
-                    .write_text(resp.text, encoding="utf-8")
-            if fields:
-                entry.update(fields)
+    n_ok = n_fail = n_cases = n_docs = n_parcels = 0
+    try:
+        for i, r in enumerate(targets):
+            entry: dict = {"fetched_at": now.isoformat(timespec="seconds"), "ok": False}
+            if r.get("appraiser_url"):
+                entry["url"] = r["appraiser_url"]
+                host = r["appraiser_url"].split("/")[2] if "//" in r["appraiser_url"] else ""
+                wait = HOST_DELAY - (time.monotonic() - last_hit.get(host, 0))
+                if wait > 0:
+                    time.sleep(wait)
+                last_hit[host] = time.monotonic()
+                entry.update(_fetch_appraiser(r, session, dbg, i))
+
+            # Clerk case file — this parcel's own record, not the county page.
+            case: dict = {}
+            try:
+                case = clerk_resolver.resolve(r)
+                if not case and browser_ctx is not None:
+                    case = browser_ctx.resolve(r, clerk_resolver)
+            except Exception as exc:                      # noqa: BLE001
+                log.debug("clerk resolve failed for %s: %s", record_key(r), exc)
+            if case:
+                n_cases += 1
+                entry.update(case)
+                # Read the paperwork the case file links to.
+                if read_docs and case.get("case_docs"):
+                    try:
+                        read = paperwork.read_case_docs(case["case_docs"], session)
+                        entry.update(read)
+                        n_docs += read.get("docs_read", 0)
+                    except Exception as exc:              # noqa: BLE001
+                        log.debug("paperwork read failed: %s", exc)
+
+            # ReportAll parcel record (skipped entirely without an API key).
+            if reportall.enabled():
+                try:
+                    parcel = reportall.lookup(
+                        county=r.get("county", ""), parcel_id=r.get("parcel_id", ""),
+                        address=r.get("property_address", ""),
+                        lat=r.get("lat"), lng=r.get("lng"))
+                    if parcel:
+                        n_parcels += 1
+                        entry["parcel"] = parcel
+                except Exception as exc:                  # noqa: BLE001
+                    log.debug("ReportAll lookup failed: %s", exc)
+
+            # "ok" means at least one source answered with something usable.
+            useful = [k for k in entry
+                      if k not in ("fetched_at", "ok", "url", "appraiser_error")]
+            if useful:
                 entry["ok"] = True
                 n_ok += 1
             else:
-                entry["error"] = "no recognizable fields on page"
+                entry["error"] = entry.pop("appraiser_error", "nothing resolved")
                 n_fail += 1
-        except requests.RequestException as exc:
-            entry["error"] = str(exc)[:200]
-            n_fail += 1
-        store[record_key(r)] = entry
-        if (i + 1) % 25 == 0:
-            log.info("  %d/%d done (%d ok)", i + 1, len(targets), n_ok)
-            out_p.parent.mkdir(parents=True, exist_ok=True)
-            out_p.write_text(json.dumps(store, indent=0, sort_keys=True),
-                             encoding="utf-8")
+
+            store[record_key(r)] = entry
+            if (i + 1) % 25 == 0:
+                log.info("  %d/%d done (%d ok, %d case files, %d docs read)",
+                         i + 1, len(targets), n_ok, n_cases, n_docs)
+                out_p.parent.mkdir(parents=True, exist_ok=True)
+                out_p.write_text(json.dumps(store, indent=0, sort_keys=True),
+                                 encoding="utf-8")
+    finally:
+        if browser_ctx is not None:
+            browser_ctx.close()
 
     out_p.parent.mkdir(parents=True, exist_ok=True)
     out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
     summary = {"attempted": len(targets), "ok": n_ok, "failed": n_fail,
-               "store_total": len(store)}
+               "case_files": n_cases, "docs_read": n_docs,
+               "reportall_parcels": n_parcels, "store_total": len(store)}
     log.info("Enrichment done: %s", summary)
     return summary
+
+
+class _BrowserPortals:
+    """Lazily-started browser for portals that can't be resolved over HTTP.
+
+    Playwright only starts if a record actually needs it (today: Marion's
+    NewVision portal), and any failure downgrades to no browser at all."""
+
+    def __init__(self):
+        self._pw = None
+        self._browser = None
+        self._resolver = None
+        self._broken = False
+
+    def _ensure(self):
+        if self._resolver is not None or self._broken:
+            return self._resolver
+        try:
+            from playwright.sync_api import sync_playwright
+
+            from .clerk_browser import NewVisionResolver
+            self._pw = sync_playwright().start()
+            self._browser = self._pw.chromium.launch()
+            page = self._browser.new_page()
+            self._resolver = NewVisionResolver(page)
+        except Exception as exc:                          # noqa: BLE001
+            log.info("browser portals unavailable (%s)", str(exc)[:120])
+            self._broken = True
+        return self._resolver
+
+    def resolve(self, rec: dict, clerk_resolver) -> dict:
+        cfg = clerk_resolver._county_cfg(rec.get("county", ""))
+        if cfg.get("platform") != "newvision":
+            return {}
+        resolver = self._ensure()
+        if resolver is None:
+            return {}
+        try:
+            return resolver.resolve(rec, cfg)
+        except Exception as exc:                          # noqa: BLE001
+            log.debug("newvision resolve failed: %s", exc)
+            return {}
+
+    def close(self):
+        for obj, meth in ((self._browser, "close"), (self._pw, "stop")):
+            try:
+                if obj is not None:
+                    getattr(obj, meth)()
+            except Exception:                             # noqa: BLE001
+                pass

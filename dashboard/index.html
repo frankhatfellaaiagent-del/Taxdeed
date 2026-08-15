@@ -163,6 +163,9 @@ function mapRecord(r, i) {
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
     owner: r.owner_name || "", use: r.property_use || "", acreage: r.acreage || "",
     mailing: r.mailing_address || "", enriched: !!r.enriched,
+    caseUrl: r.clerk_case_url || "", deedStatus: r.deed_status || "",
+    applicant: r.applicant || "", applicantAddr: r.applicant_address || "",
+    caseDocs: r.case_docs || [], caseFlags: r.case_flags || [],
     useType: typeFromUse(r.property_use),
     lat: r.lat ?? null, lng: r.lng ?? null,
     assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
@@ -174,10 +177,11 @@ function mapRecord(r, i) {
 }
 // Manual assignment wins; otherwise fall back to the appraiser land-use bucket.
 const effType = (p) => getInt(p.id).type || p.useType;
-// Clerk of Court page per county — served in the feed (config/clerk_sites.yaml).
-// Prefer the county's tax-deed case search portal, then its tax-deed page,
-// then a targeted web search.
+// Where to send someone for the clerk's record on THIS parcel: its own case
+// file when the scrub resolved one, else the county's tax-deed portal
+// (config/clerk_sites.yaml, served in the feed), else a targeted web search.
 function clerkLink(p) {
+  if (p.caseUrl) return p.caseUrl;
   const t = (META && META.clerk_sites || {})[p.county.toLowerCase().replace(/[^a-z]/g, "")];
   return (t && (t.search || t.url)) ||
     "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
@@ -370,7 +374,7 @@ function renderDetail() {
   const links = [
     [p.appraiserUrl || gsearch(`${p.county} County FL property appraiser parcel ${p.parcel}`), `${esc(p.county)} Property Appraiser`],
     [p.auctionUrl, "Live auction listing (RealAuction)"],
-    [clerkLink(p), "Tax deed case records (county)"],
+    [clerkLink(p), p.caseUrl ? "This parcel&rsquo;s clerk case file" : "Tax deed case records (county)"],
     [ll ? `https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd&center=${p.lng},${p.lat}&level=16`
         : hasAddr ? "https://msc.fema.gov/portal/search?AddressQuery=" + mapQ
         : gsearch(`FEMA flood map ${p.county} county FL parcel ${p.parcel}`), "FEMA flood map"],
@@ -393,6 +397,13 @@ function renderDetail() {
       text: p.enriched
         ? "Appraiser record scrubbed automatically — owner, land use, acreage and mailing address above come straight from the county appraiser."
         : "Appraiser record not scrubbed yet — the weekly agent works through buy-box parcels first; use the appraiser link to check manually." },
+    { topic: "Case file", cls: p.caseFlags.length ? "tag-outline" : p.caseUrl ? "tag-accent" : "tag-neutral",
+      text: !p.caseUrl
+        ? "Clerk case file not resolved for this parcel yet — the county link above opens the clerk's tax deed search."
+        : p.caseFlags.length
+          ? `Agent read the paperwork and found: ${esc(p.caseFlags.join("; "))}. Confirm each against the documents before bidding.`
+          : (p.deedStatus ? `Clerk shows deed status ${esc(p.deedStatus)}. ` : "") +
+            "Agent read the case documents and found none of its watch-items (liens, homestead, bankruptcy, reschedules)." },
     { topic: "Next step", cls: "tag-neutral",
       text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the FEMA flood zone and wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
   ];
@@ -441,6 +452,29 @@ function renderDetail() {
             <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
             &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
         </div>
+
+        ${p.caseUrl ? `<div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+            <h6 style="color:var(--color-accent-700);margin:0">Clerk case file</h6>
+            ${p.deedStatus ? `<span class="tag ${/resched|cancel/i.test(p.deedStatus) ? "tag-outline" : "tag-accent"}">${esc(p.deedStatus)}</span>` : ""}
+            <a href="${esc(p.caseUrl)}" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px">${LINK_SVG} Open at the clerk</a>
+          </div>
+          ${p.applicant ? `<div style="font-size:14px;margin-bottom:10px">
+            <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Applicant (who forced the sale)</div>
+            <div style="font-weight:500">${esc(p.applicant)}</div>
+            ${p.applicantAddr ? `<div class="text-muted" style="font-size:13px">${esc(p.applicantAddr)}</div>` : ""}
+          </div>` : ""}
+          ${p.caseFlags.length ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+            ${p.caseFlags.map((f) => `<span class="tag tag-outline">${esc(f)}</span>`).join("")}
+          </div>` : ""}
+          ${p.caseDocs.length ? `
+            <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px" class="text-muted">Paperwork in the file</div>
+            <div style="display:flex;flex-direction:column">
+              ${p.caseDocs.map((d) => `<a href="${esc(d.url)}" target="_blank" rel="noopener" style="display:flex;gap:10px;align-items:baseline;font-size:13.5px;padding:5px 0;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);text-decoration:none">
+                <span style="flex:1">${LINK_SVG} ${esc(d.name)}</span>
+                <span class="text-muted" style="font-size:12px">${esc(d.date || "")}</span></a>`).join("")}
+            </div>` : `<div class="text-muted" style="font-size:13px">Case found; the clerk lists no downloadable documents on it.</div>`}
+        </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">

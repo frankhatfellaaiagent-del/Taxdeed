@@ -62,8 +62,18 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "status": "Scheduled",                     // Scheduled | Redeemed
       "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?...",   // live auction page
       "appraiser_url": "http://...",             // county property appraiser record, may be ""
-      "lat": 29.648251, "lng": -81.637149        // Census-geocoded from the address; null when
-    }                                            // no street address or no geocoder match
+      "lat": 29.648251, "lng": -81.637149,       // parcel coordinates; null when unresolved
+
+      // --- clerk case file (present only once the scrub resolves one) ---
+      "clerk_case_url": "https://...",           // THIS parcel's case record at the clerk
+      "deed_status": "RESCHED",                  // clerk's status for the tax deed
+      "applicant": "JOCALBRO INC ...",           // who applied for the deed (forced the sale)
+      "applicant_address": "PO BOX 2407 ...",
+      "case_docs": [                             // paperwork the clerk publishes on the case
+        {"name": "Notice of Publication", "date": "04/30/2026", "url": "https://..."}
+      ],
+      "case_flags": ["homestead", "IRS lien"]    // what the agent read in those documents
+    }
   ]
 }
 ```
@@ -74,12 +84,34 @@ dashboard's parcel-centered links (FEMA flood viewer, USFWS wetlands map, satell
 view). Treat them as approximate — rooftop/street-segment accuracy, not a surveyed
 parcel centroid.
 
-Enrichment (`scraper/enrich.py`, `python -m scraper enrich`) fetches county property
-appraiser pages for scheduled buy-box MATCH/REVIEW parcels — owner, mailing address,
-land use, acreage — into `data/enrichment.json`, which the exporter merges into the
-feed before buy-box flagging (an enriched land use can move a REVIEW row to
-MATCH/NO). It runs inside the weekly workflow (bounded per run, rate-limited, best
-effort); coverage grows week over week.
+## The quick-look scrub
+
+`scraper/enrich.py` (`python -m scraper enrich`) runs over scheduled buy-box
+MATCH/REVIEW parcels and gathers, per parcel:
+
+1. **County appraiser record** — owner, mailing address, land use, acreage.
+2. **Clerk case file** (`scraper/clerk.py`) — resolves the parcel to *its own* case
+   record, not the county's tax-deed page. One resolver per portal platform:
+   `realtdm` (RealAuction's clerk module — index the public case list, then link
+   `…/cases/getCase/caseid/<id>`), `taxsmart` (Pioneer — `…/Home/Details?id=<id>`),
+   `template` (Putnam's certificate-number deep link), and `newvision` (Marion's
+   postback app, driven with a browser in `scraper/clerk_browser.py`). Counties
+   without a resolver keep the county-level link. Platforms are declared per county
+   in `config/clerk_sites.yaml`.
+3. **The paperwork** (`scraper/paperwork.py`) — opens the case's documents and reads
+   the text layer, flagging what changes a bid: reschedules, cancellations,
+   homestead, IRS/municipal liens, mortgages, judgments, bankruptcy, HOA claims,
+   easements. Scanned documents with no text layer are reported, never guessed at.
+4. **ReportAll parcel record** (`scraper/reportall.py`) — the parcel database behind
+   LandGlide. Dormant unless `REPORTALL_API_KEY` is set; when enabled it fills owner,
+   mailing address, acreage, land use and replaces rooftop geocodes with true parcel
+   centroids.
+
+Results accumulate in `data/enrichment.json` and are merged by the exporter *before*
+buy-box flagging, so an enriched land use can move a REVIEW row to MATCH/NO. Each
+source is optional and isolated — a portal that changes shape costs coverage, never
+the feed. Entries refresh every 30 days, so weekly runs widen coverage rather than
+refetching the same parcels.
 
 ## Dashboard guidance
 

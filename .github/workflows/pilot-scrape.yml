@@ -109,6 +109,9 @@ jobs:
           # enrichment in. Enrichment is best-effort — a broken county parser
           # never blocks the feed.
           python -m scraper export --run "data/runs/$name" || true
+          # Quick-look scrub: appraiser record, the parcel's clerk case file, the
+          # paperwork inside it, and (only when REPORTALL_API_KEY is configured)
+          # the ReportAll parcel record.
           python -m scraper -v enrich --limit 200 --debug-dir output/debug/enrich || true
           python -m scraper export --run "data/runs/$name" || true
           git config user.name "github-actions[bot]"
@@ -123,6 +126,9 @@ jobs:
           gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
         env:
           GH_TOKEN: ${{ github.token }}
+          # Optional: add this repository secret to switch on ReportAll parcel
+          # lookups (the LandGlide data). Unset = the step is skipped silently.
+          REPORTALL_API_KEY: ${{ secrets.REPORTALL_API_KEY }}
 
       - name: Upload run outputs
         if: always()

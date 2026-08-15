@@ -30,7 +30,8 @@ TSV_COLUMNS = ["County", "Sale Date", "Sale Time", "Parcel ID", "Case #",
                "Certificate #", "Owner", "Mailing Address", "Property Address",
                "Property Use", "Acres", "Opening Bid", "Assessed Value",
                "Bid/Value %", "Buy-Box", "Buy-Box Notes", "Status", "Auction Page",
-               "Appraiser Record", "Latitude", "Longitude"]
+               "Appraiser Record", "Clerk Case File", "Deed Status", "Case Flags",
+               "Latitude", "Longitude"]
 
 
 def _clean(v) -> str:
@@ -77,24 +78,39 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
     for r in records:
         enr = enrichment.get(f"{r.county}|{r.parcel_id}|{r.case_number}", {})
         mailing = ""
+        case: dict = {}
+        parcel_latlng = None
         if enr.get("ok"):
-            r.owner_name = r.owner_name or enr.get("owner_name", "")
-            r.property_use = r.property_use or enr.get("property_use", "")
-            r.acreage = r.acreage or enr.get("acreage", "")
-            mailing = enr.get("mailing_address", "")
+            parcel = enr.get("parcel") or {}          # ReportAll, when enabled
+            r.owner_name = r.owner_name or enr.get("owner_name", "") or parcel.get("owner", "")
+            r.property_use = (r.property_use or enr.get("property_use", "")
+                              or parcel.get("land_use", ""))
+            r.acreage = r.acreage or enr.get("acreage", "") or str(parcel.get("acreage", "") or "")
+            mailing = enr.get("mailing_address", "") or parcel.get("mailing_address", "")
+            # This parcel's own clerk case file + what the paperwork says.
+            case = {k: enr[k] for k in
+                    ("clerk_case_url", "deed_status", "applicant", "applicant_address",
+                     "case_docs", "case_flags", "docs_read")
+                    if enr.get(k)}
+            # A true parcel centroid beats a rooftop geocode (and works for
+            # the vacant lots that have no street address at all).
+            if parcel.get("lat") is not None and parcel.get("lng") is not None:
+                parcel_latlng = [parcel["lat"], parcel["lng"]]
         flag, reasons = judgment.buybox_flag(r, cfg)
         redeemed = "redeem" in (r.auction_status or "").lower()
         n_redeemed += redeemed
         ratio = round(100 * r.opening_bid / r.assessed_value) \
             if r.opening_bid and r.assessed_value else None
         status = "Redeemed" if redeemed else "Scheduled"
-        latlng = coords.get(r.property_address) or [None, None]
+        latlng = parcel_latlng or coords.get(r.property_address) or [None, None]
         tsv_lines.append("\t".join(_clean(x) for x in [
             r.county, r.sale_date, r.sale_time, r.parcel_id, r.case_number,
             r.certificate_number, r.owner_name, mailing, r.property_address,
             r.property_use, r.acreage, r.opening_bid or "",
             r.assessed_value or "", ratio if ratio is not None else "", flag, reasons,
             status, r.auction_url, r.appraiser_url,
+            case.get("clerk_case_url", ""), case.get("deed_status", ""),
+            "; ".join(case.get("case_flags", [])),
             latlng[0] if latlng[0] is not None else "",
             latlng[1] if latlng[1] is not None else ""]))
         json_records.append({
@@ -110,6 +126,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "anomalies": judgment.find_anomalies(r), "status": status,
             "auction_url": r.auction_url, "appraiser_url": r.appraiser_url,
             "lat": latlng[0], "lng": latlng[1],
+            **case,      # clerk_case_url, deed_status, applicant, case_docs, case_flags
         })
         c = by_county.setdefault(r.county, {"total": 0, "scheduled": 0, "redeemed": 0})
         c["total"] += 1
