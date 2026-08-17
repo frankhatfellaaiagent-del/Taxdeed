@@ -2,7 +2,7 @@
 
 **Prepared for:** MADD Assets (Marlon & Jennifer)
 **Prepared by:** Frank (Hat Fella AI)
-**Date:** August 2026 · Status: beta, in active refinement
+**Date:** August 2026 · Founding-customer subscription
 
 ---
 
@@ -68,24 +68,30 @@ never silently invented.
 4. **Private mobile app** — packaged app with push notifications and
    location-aware parcel lookup for field work.
 
-## Delivery & maintenance model
+## How the subscription works
 
-- Hosted and running now; nothing to install. Weekly automation is scheduled;
-  on-demand refreshes are available.
-- County websites change — the maintenance arrangement covers monitoring,
-  fixing parsers when counties redesign, adding counties, and tuning the
-  buy-box as the business evolves.
+- Hosted and running now; nothing to install or maintain on your side. The
+  subscription includes hosting, the weekly automated refresh (plus on-demand
+  pulls), scraper fixes when county sites change, support, and every platform
+  improvement — the roadmap ships as part of the plan, not as change orders.
+- Your workspace is private to your team (lists, notes, positions, buy box).
+  The license is non-exclusive — the platform serves other investors — but
+  nobody ever sees your research. Founding rate locked 12 months.
+- Month to month; cancel anytime; your data exports with you.
 
-## Commercial terms (to be completed)
+## Founding-customer terms (to be completed)
 
 | Item | Terms |
 | --- | --- |
-| One-time setup & customization | *[to fill]* |
-| Monthly hosting + maintenance | *[to fill]* |
-| Feature development (roadmap items) | *[to fill]* |
-| License scope (company vs. individual) | *[to discuss]* |
+| One-time setup & customization (counties, buy box, accounts) | *[to fill]* |
+| Founding monthly rate — locked 12 months, up to 5 seats | *[to fill]* |
+| Standard rate (what later customers pay) | *[to fill]* |
+| Optional: ReportAll parcel data add-on | at cost + service margin |
+
+In exchange for the founding rate: honest feedback while the beta hardens,
+and a reference when it earns one.
 
 ## Next step
 
-A short call with the decision maker: 15-minute live walkthrough of the
-dashboard on real auction data, then agreement on scope and terms.
+A 15-minute walkthrough with the decision maker on live auction data, pick a
+start date, and the team's logins are issued the same day.

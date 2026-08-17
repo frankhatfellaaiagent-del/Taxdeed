@@ -29,12 +29,33 @@ Jennifer), each with their email and a starting password. Tell them the
 password; the dashboard has a **Forgot password?** link that emails a reset,
 so they can change it themselves.
 
+Note each user's **UID** (shown in the Users table) — you need it in the next
+steps to wire team membership.
+
 ## 4. Create the database and paste the rules
 
 1. **Build → Firestore Database → Create database** → production mode →
    location `nam5 (United States)` → Enable.
 2. **Rules** tab → replace everything with the contents of
    [`firestore.rules`](../firestore.rules) from this repo → **Publish**.
+
+## 4b. Create the team and assign the accounts to it
+
+The dashboard is multi-tenant: every customer is a **team**, and teams are
+fully isolated from each other — one customer can never see another's lists.
+For each team (start with MADD, id `madd`):
+
+1. Firestore → **Start collection** → id `teams` → document id `madd` → fields:
+   - `name` (string): `MADD Assets`
+   - `members` (map): one entry per member — key = the user's **UID** from
+     step 3, value = `true` (boolean).
+2. For each member, also create their profile doc: collection `users` →
+   document id = that user's **UID** → field `team` (string): `madd`.
+
+Onboarding a NEW customer later = repeat steps 3 + 4b with a new team id
+(e.g. `acme`): create their accounts, create `teams/acme` with their UIDs in
+`members`, and set `team: acme` on each of their `users/{uid}` profile docs.
+Nothing else changes — same dashboard, same feed, isolated workspace.
 
 ## 5. Allow the dashboard's domain
 

@@ -171,7 +171,11 @@ function cloudPush(name, payload) {
 }
 
 const userDocRef = (name) => CLOUD.fsm.doc(CLOUD.db, "users", CLOUD.user.uid, "state", name);
-const teamDocRef = () => CLOUD.fsm.doc(CLOUD.db, "teams", "madd", "state", "lists");
+// Which team (customer workspace) this account belongs to — set on the user's
+// profile doc at onboarding (docs/LOGIN_SETUP.md). Every customer's workspace
+// is isolated by firestore.rules; "madd" is the founding team's id.
+let TEAM_ID = "madd";
+const teamDocRef = () => CLOUD.fsm.doc(CLOUD.db, "teams", TEAM_ID, "state", "lists");
 
 // Apply a snapshot only when it truly changes state — this also swallows the
 // echo of our own writes, so typing in a notes box never loses the caret.
@@ -188,6 +192,9 @@ async function onSignedIn(user) {
   $("login-overlay").hidden = true;
   const fs = CLOUD.fsm;
   try {
+    // The profile doc names this account's team workspace.
+    const prof = await fs.getDoc(fs.doc(CLOUD.db, "users", user.uid));
+    TEAM_ID = (prof.data() || {}).team || "madd";
     // First contact: merge this device's local state with the cloud. Cloud
     // wins per key; anything only known locally is kept (union). After this,
     // the cloud is the source of truth and listeners keep every device live.
@@ -241,6 +248,7 @@ async function onSignedIn(user) {
 
 function onSignedOut() {
   if (CLOUD) { (CLOUD.unsubs || []).forEach((u) => u()); CLOUD.unsubs = []; CLOUD.user = null; }
+  TEAM_ID = "madd";
   team = { lists: [], membership: {} };
   interest = store.get("tdd_interest", {});
   lists = store.get("tdd_lists", DEFAULT_LISTS);
