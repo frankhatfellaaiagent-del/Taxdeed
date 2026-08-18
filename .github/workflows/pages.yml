@@ -1,17 +1,20 @@
-name: Deploy dashboard (GitHub Pages)
+name: Deploy site (GitHub Pages)
 
-# Publishes dashboard/ + the data feeds to GitHub Pages:
-#   https://frankhatfellaaiagent-del.github.io/Taxdeed/
-# by pushing the assembled site to the gh-pages branch — on public repos
-# GitHub auto-enables Pages for that branch, so no repo-settings step is
-# needed. Re-deploys whenever the dashboard or the feeds change (the pilot
-# scrape workflow dispatches this one after committing new data, since
-# pushes made with the workflow token don't trigger push events).
+# Publishes the product site to GitHub Pages:
+#   /       — the sales/landing page (site/)
+#   /app/   — the dashboard app (dashboard/) + the data feeds
+#   /data/exports/ — the feeds at a stable root path too (Sheet imports,
+#                    integrations), same files as /app/data/exports/
+# by pushing the assembled site to the gh-pages branch. Re-deploys whenever
+# the site, dashboard or feeds change (the scrape workflow dispatches this
+# one after committing new data, since pushes made with the workflow token
+# don't trigger push events).
 
 on:
   push:
-    branches: [claude/florida-tax-deed-scraper-fqzwzd, main]
+    branches: [main]
     paths:
+      - "site/**"
       - "dashboard/**"
       - "data/exports/**"
       - ".github/workflows/pages.yml"
@@ -31,8 +34,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Assemble site
         run: |
-          mkdir -p _site/data/exports
-          cp -r dashboard/. _site/
+          mkdir -p _site/app/data/exports _site/data/exports
+          cp -r site/. _site/
+          cp -r dashboard/ds _site/ds
+          cp -r dashboard/. _site/app/
+          cp data/exports/* _site/app/data/exports/
           cp data/exports/* _site/data/exports/
           touch _site/.nojekyll
       - name: Publish to gh-pages branch
