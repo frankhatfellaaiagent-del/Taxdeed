@@ -37,11 +37,16 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
     "counties": 30,
     "by_county": { "putnam": {"total": 361, "scheduled": ..., "redeemed": ...}, ... }
   },
-  "county_caps": {                               // client-set limits from config/buybox.yaml
-    "putnam": { "max_bid": 25000, "deposit": 2000 }   // keys lowercase/no punctuation; may be {}
+  "county_caps": {                               // legacy top-level copy of default_buybox.county_caps
+    "putnam": { "max_bid": 25000, "deposit": 2000 }   // (kept for older consumers; see default_buybox)
   },
   "clerk_sites": {                               // Clerk of Court tax-deed pages (config/clerk_sites.yaml)
     "volusia": { "url": "https://www.clerk.org/tax-deeds.aspx", "search": "https://app02.clerk.org/or_td/" }
+  },
+  "default_buybox": {                            // config/buybox.yaml, as every NEW team's starting point
+    "target_counties": ["putnam", "..."], "excluded_counties": ["volusia", "..."],
+    "land_use_keywords": ["vacant", "land", "..."], "non_land_keywords": ["condo", "..."],
+    "max_opening_bid": null, "county_caps": { "putnam": { "max_bid": 25000, "deposit": 2000 } }
   },
   "records": [
     {
@@ -59,8 +64,14 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "opening_bid": 8474.0,                     // number or null
       "assessed_value": 12000.0,                 // number or null (often null on redeemed/future rows)
       "bid_to_value_pct": 71,                    // integer % or null
-      "buybox": "REVIEW",                        // MATCH | REVIEW | NO (client's rural/Central-FL criteria)
+      "buybox": "REVIEW",                        // MATCH | REVIEW | NO computed server-side from
       "buybox_notes": "target county; property use unknown — verify on appraiser site",
+                                                  // config/buybox.yaml (MADD's defaults) — informational
+                                                  // for TSV/Sheet consumers; the dashboard IGNORES these
+                                                  // two fields and recomputes its own per-team flag
+                                                  // client-side from default_buybox (see below), so
+                                                  // different customers see different MATCH/REVIEW/NO
+                                                  // on the identical shared feed
       "anomalies": ["missing assessed value"],   // data-quality flags, may be []
       "status": "Scheduled",                     // Scheduled | Redeemed
       "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?...",   // live auction page
@@ -86,6 +97,26 @@ Coordinates come from the free US Census geocoder (`scraper/geocode.py`), cached
 dashboard's parcel-centered links (FEMA flood viewer, USFWS wetlands map, satellite
 view). Treat them as approximate — rooftop/street-segment accuracy, not a surveyed
 parcel centroid.
+
+## Buy-box is per-team, computed in the browser
+
+The scrape and this feed are the same for every customer — every Florida tax-deed
+county, every property, unfiltered. What used to be baked in server-side
+(`buybox`/`buybox_notes` on each record, computed from the single `config/buybox.yaml`)
+is now only a legacy default for non-JS consumers (the TSV/Google Sheet). The
+dashboard (`dashboard/index.html`) instead:
+
+1. On first load, seeds a per-team buy-box config from `default_buybox` above.
+2. Recomputes MATCH/REVIEW/NO for every record **client-side** (`evalBuybox()`, a
+   direct JS port of `scraper/judgment.py::buybox_flag`) from that config.
+3. Lets each team edit their own target counties, land-use keywords, max bid and
+   per-county caps in Settings — instantly re-flagging the board, no redeploy.
+4. Persists the config per-team (signed in: Firestore `teams/{id}/state/buybox`,
+   shared live across the team; signed out: that browser's localStorage only).
+
+This is what makes the platform multi-tenant on one shared scrape: onboarding a new
+customer with entirely different counties or criteria is a Settings change they make
+themselves, not a code change. See `docs/LOGIN_SETUP.md` for team onboarding.
 
 ## The quick-look scrub
 

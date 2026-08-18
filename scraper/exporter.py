@@ -184,6 +184,19 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         "county_caps": cfg.get("county_caps") or {},
         # Clerk of Court pages per county from config/clerk_sites.yaml.
         "clerk_sites": _load_clerk_sites(),
+        # The full buy-box (config/buybox.yaml) as this feed's DEFAULT. Each
+        # dashboard team gets its own editable copy seeded from this the first
+        # time they open Settings; buy-box flags are computed client-side from
+        # whichever config is active, not baked into the record here — this is
+        # only the starting point every team customizes for themselves.
+        "default_buybox": {
+            "target_counties": cfg.get("target_counties") or [],
+            "excluded_counties": cfg.get("excluded_counties") or [],
+            "land_use_keywords": cfg.get("land_use_keywords") or [],
+            "non_land_keywords": cfg.get("non_land_keywords") or [],
+            "max_opening_bid": cfg.get("max_opening_bid"),
+            "county_caps": cfg.get("county_caps") or {},
+        },
         "records": json_records,
     }
     (out / "master_list.json").write_text(json.dumps(feed, indent=1), encoding="utf-8")

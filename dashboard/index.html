@@ -146,6 +146,67 @@ const saveInterest = () => { store.set("tdd_interest", interest); cloudPush("int
 const savePrefs = () => { store.set("tdd_prefs", prefs); cloudPush("prefs", () => ({ data: prefs })); };
 const saveLists = () => { store.set("tdd_lists", lists); cloudPush("lists", () => ({ data: lists })); };
 const saveTeam = () => cloudPush("team", () => team);
+const saveBuybox = () => { store.set("tdd_buybox", buybox); cloudPush("teambuybox", () => buybox); };
+
+// ---------- buy-box (per-team, editable in Settings) ----------
+// Every team gets its own copy of this, seeded from the feed's
+// default_buybox (config/buybox.yaml) the first time they open Settings, then
+// stored per-team (signed in: Firestore teams/{id}/state/buybox, shared by
+// the whole team; signed out: this browser only). Flags are computed HERE,
+// client-side, from the shared feed — nothing county- or client-specific is
+// baked into the scrape, so any Florida tax-deed investor can run their own
+// buy-box against the same data. This is a JS port of scraper/judgment.py
+// buybox_flag() — keep the two in sync if the logic changes.
+const EMPTY_BUYBOX = { target_counties: [], excluded_counties: [], land_use_keywords: [],
+                       non_land_keywords: [], max_opening_bid: null, county_caps: {} };
+let buybox = store.get("tdd_buybox", null);   // null until the feed's default seeds it
+const normCounty = (s) => (s || "").toLowerCase().replace(/[^a-z]/g, "");
+const csvList = (s) => String(s || "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
+const kwHits = (keywords, text) => keywords.filter((k) => new RegExp("\\b" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(text));
+
+function evalBuybox(r, cfg) {
+  const county = normCounty(r.county);
+  const reasons = [];
+  if (cfg.excluded_counties.includes(county)) return ["NO", "excluded county"];
+  if (!cfg.target_counties.includes(county)) return ["NO", "county not in target list"];
+  reasons.push("target county");
+
+  const use = (r.use || "").toLowerCase();
+  const address = (r.rawAddr || "").toLowerCase();
+  const caps = cfg.county_caps[county] || {};
+  const maxBid = caps.max_bid || cfg.max_opening_bid;
+  if (maxBid && r.bid && r.bid > Number(maxBid))
+    return ["NO", `opening bid over cap ($${Math.round(r.bid).toLocaleString()} > $${Number(maxBid).toLocaleString()})`];
+
+  if (use) {
+    if (kwHits(cfg.non_land_keywords, use).length)
+      return ["NO", `target county but non-land use (${r.use})`];
+    const land = kwHits(cfg.land_use_keywords, use);
+    if (land.length) { reasons.push("land/rural use: " + land.join(", ")); return ["MATCH", reasons.join("; ")]; }
+    return ["NO", `target county but property use not land-like (${r.use})`];
+  }
+  const addrHints = kwHits(cfg.land_use_keywords, address);
+  reasons.push(addrHints.length ? "no property use; address suggests land: " + addrHints.join(", ")
+                                 : "property use unknown — verify on appraiser site");
+  return ["REVIEW", reasons.join("; ")];
+}
+
+// Re-flag every record from the active buy-box config. Called after the feed
+// loads, whenever the config changes, and whenever a team's synced config
+// arrives from another device.
+function recomputeBuybox() {
+  if (!buybox) return;
+  const cfg = { ...EMPTY_BUYBOX, ...buybox,
+    land_use_keywords: (buybox.land_use_keywords || []).map((k) => k.toLowerCase()),
+    non_land_keywords: (buybox.non_land_keywords || []).map((k) => k.toLowerCase()),
+    target_counties: (buybox.target_counties || []).map(normCounty),
+    excluded_counties: (buybox.excluded_counties || []).map(normCounty),
+    county_caps: Object.fromEntries(Object.entries(buybox.county_caps || {}).map(([k, v]) => [normCounty(k), v])) };
+  for (const p of DATA) {
+    const [flag, notes] = evalBuybox(p, cfg);
+    p.buybox = flag; p.buyboxNotes = notes;
+  }
+}
 const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
 const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
 
@@ -158,14 +219,16 @@ function rerender() {
      history: renderHistory, settings: renderSettings })[S.screen]();
 }
 
+const TEAM_DOCS = { team: "lists", teambuybox: "buybox" };   // sync-name -> Firestore doc name
+
 function cloudPush(name, payload) {
   if (!CLOUD || !CLOUD.user) return;
   clearTimeout(cloudTimers[name]);
   // Debounced whole-doc set: fine at this team size; the docs are small and
-  // per-person (the shared team doc is the one with a theoretical clobber
-  // window, ~1s, acceptable for a 2-3 person team).
+  // per-person (the shared team docs are the ones with a theoretical clobber
+  // window, ~1s, acceptable for a small team editing the same list/buy-box).
   cloudTimers[name] = setTimeout(() => {
-    const ref = name === "team" ? teamDocRef() : userDocRef(name);
+    const ref = TEAM_DOCS[name] ? teamDocRef(TEAM_DOCS[name]) : userDocRef(name);
     CLOUD.fsm.setDoc(ref, payload()).catch((e) => console.warn("sync push failed:", e));
   }, 800);
 }
@@ -175,7 +238,7 @@ const userDocRef = (name) => CLOUD.fsm.doc(CLOUD.db, "users", CLOUD.user.uid, "s
 // profile doc at onboarding (docs/LOGIN_SETUP.md). Every customer's workspace
 // is isolated by firestore.rules; "madd" is the founding team's id.
 let TEAM_ID = "madd";
-const teamDocRef = () => CLOUD.fsm.doc(CLOUD.db, "teams", TEAM_ID, "state", "lists");
+const teamDocRef = (doc) => CLOUD.fsm.doc(CLOUD.db, "teams", TEAM_ID, "state", doc);
 
 // Apply a snapshot only when it truly changes state — this also swallows the
 // echo of our own writes, so typing in a notes box never loses the caret.
@@ -198,8 +261,8 @@ async function onSignedIn(user) {
     // First contact: merge this device's local state with the cloud. Cloud
     // wins per key; anything only known locally is kept (union). After this,
     // the cloud is the source of truth and listeners keep every device live.
-    const [ci, cp, cl, ct] = await Promise.all(
-      [userDocRef("interest"), userDocRef("prefs"), userDocRef("lists"), teamDocRef()]
+    const [ci, cp, cl, ct, cb] = await Promise.all(
+      [userDocRef("interest"), userDocRef("prefs"), userDocRef("lists"), teamDocRef("lists"), teamDocRef("buybox")]
         .map((r) => fs.getDoc(r)));
     interest = { ...interest, ...((ci.data() || {}).data || {}) };
     prefs = { ...prefs, ...((cp.data() || {}).data || {}) };
@@ -207,6 +270,11 @@ async function onSignedIn(user) {
     for (const l of lists) if (!cloudLists.some((c) => c.name === l.name)) cloudLists.push(l);
     lists = cloudLists.length ? cloudLists : lists;
     team = { lists: (ct.data() || {}).lists || [], membership: (ct.data() || {}).membership || {} };
+    // Team's buy-box wins over anything local — a whole team shares one buy
+    // box, so a personal edit made before signing in is a starting point,
+    // not something that should silently override what the team already set.
+    const cloudBuybox = cb.data();
+    if (cloudBuybox) buybox = { ...EMPTY_BUYBOX, ...cloudBuybox };
     store.set("tdd_interest", interest); store.set("tdd_prefs", prefs); store.set("tdd_lists", lists);
 
     // Push the merged state up BEFORE attaching listeners, and await it — the
@@ -216,6 +284,7 @@ async function onSignedIn(user) {
       fs.setDoc(userDocRef("interest"), { data: interest }),
       fs.setDoc(userDocRef("prefs"), { data: prefs }),
       fs.setDoc(userDocRef("lists"), { data: lists }),
+      ...(cloudBuybox ? [] : [fs.setDoc(teamDocRef("buybox"), buybox || EMPTY_BUYBOX)]),
     ]);
 
     CLOUD.unsubs = [
@@ -234,11 +303,16 @@ async function onSignedIn(user) {
         const next = applySnap(lists, s.data().data || []);
         if (next) { lists = next; store.set("tdd_lists", lists); rerender(); }
       }),
-      fs.onSnapshot(teamDocRef(), (s) => {
+      fs.onSnapshot(teamDocRef("lists"), (s) => {
         if (!s.data()) return;
         const d = s.data();
         const next = applySnap(team, { lists: d.lists || [], membership: d.membership || {} });
         if (next) { team = next; rerender(); }
+      }),
+      fs.onSnapshot(teamDocRef("buybox"), (s) => {
+        if (!s.data()) return;
+        const next = applySnap(buybox, { ...EMPTY_BUYBOX, ...s.data() });
+        if (next) { buybox = next; recomputeBuybox(); rerender(); }
       }),
     ];
   } catch (e) { console.warn("first sync failed:", e); }
@@ -253,6 +327,9 @@ function onSignedOut() {
   interest = store.get("tdd_interest", {});
   lists = store.get("tdd_lists", DEFAULT_LISTS);
   prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+  buybox = store.get("tdd_buybox", null) ||
+    (META && META.default_buybox ? { ...EMPTY_BUYBOX, ...META.default_buybox } : { ...EMPTY_BUYBOX });
+  recomputeBuybox();
   renderAccount();
   if (DATA.length) rerender();
 }
@@ -420,8 +497,8 @@ function clerkLink(p) {
   return (t && (t.search || t.url)) ||
     "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
 }
-// County keys in config/buybox.yaml county_caps: lowercase, punctuation ignored.
-const countyCaps = (p) => (META && META.county_caps || {})[p.county.toLowerCase().replace(/[^a-z]/g, "")] || {};
+// The active buy-box's per-county caps — editable in Settings, not the feed.
+const countyCaps = (p) => (buybox && buybox.county_caps || {})[normCounty(p.county)] || {};
 
 // ---------- data load ----------
 async function loadFeed() {
@@ -431,6 +508,10 @@ async function loadFeed() {
       if (!res.ok) continue;
       const j = await res.json();
       META = j; DATA = j.records.map(mapRecord);
+      // Seed this team's buy-box from the feed's default the first time
+      // there's nothing saved yet (new team, or first load ever).
+      if (!buybox) buybox = j.default_buybox ? { ...EMPTY_BUYBOX, ...j.default_buybox } : { ...EMPTY_BUYBOX };
+      recomputeBuybox();
       return true;
     } catch (e) { /* try next */ }
   }
@@ -899,34 +980,109 @@ async function renderHistory() {
 }
 
 // ---------- settings screen ----------
+function renderBuyboxCard() {
+  const cfg = buybox || EMPTY_BUYBOX;
+  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  const targetSet = new Set((cfg.target_counties || []).map(normCounty));
+  const targeted = counties.filter((c) => targetSet.has(normCounty(c)));
+  recomputeBuybox();
+  const match = DATA.filter((p) => p.buybox === "MATCH").length;
+  const review = DATA.filter((p) => p.buybox === "REVIEW").length;
+  return `
+    <div class="blueprint" style="padding:18px 20px">${CORNERS}
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap">
+        <h6 style="color:var(--color-accent-700);margin:0">Buy box</h6>
+        <span class="tag tag-accent">${match} MATCH</span><span class="tag tag-neutral">${review} REVIEW</span>
+        ${CLOUD && CLOUD.user ? '<span class="text-muted" style="font-size:12px;margin-left:auto">Shared with your team &mdash; live for everyone signed in</span>' : ""}
+      </div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:14px">This is what turns the raw auction list into MATCH / REVIEW / NO &mdash; computed here in the dashboard, so it&rsquo;s entirely yours: pick your counties, your land types, your limits. Nobody else's buy box affects what you see.</p>
+
+      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px" class="text-muted">Target counties</div>
+      <div id="bb-counties" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:4px 10px;max-height:180px;overflow-y:auto;padding:10px;border:1px solid var(--color-divider);margin-bottom:16px">
+        ${counties.map((c) => `<label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
+          <input type="checkbox" data-county="${esc(normCounty(c))}" ${targetSet.has(normCounty(c)) ? "checked" : ""}> ${esc(c)}</label>`).join("")}
+      </div>
+
+      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div class="field"><label>Land / rural keywords (MATCH)</label>
+          <input class="input" id="bb-land" value="${esc((cfg.land_use_keywords || []).join(", "))}" placeholder="vacant, land, acreage, ranch&hellip;"></div>
+        <div class="field"><label>Non-land keywords (always NO)</label>
+          <input class="input" id="bb-nonland" value="${esc((cfg.non_land_keywords || []).join(", "))}" placeholder="condo, commercial, warehouse&hellip;"></div>
+      </div>
+      <div class="field" style="max-width:220px;margin-bottom:${targeted.length ? "16px" : "0"}"><label>Max opening bid, any county</label>
+        <input class="input" id="bb-maxbid" value="${cfg.max_opening_bid != null ? esc(cfg.max_opening_bid) : ""}" placeholder="$ no cap" style="font-variant-numeric:tabular-nums"></div>
+
+      ${targeted.length ? `
+        <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px" class="text-muted">Per-county limits (optional &mdash; overrides the max above)</div>
+        <div class="tablewrap"><table class="table" style="max-width:520px">
+          <thead><tr><th>County</th><th>Max bid</th><th>Deposit on hand</th></tr></thead>
+          <tbody>${targeted.map((c) => { const k = normCounty(c); const cap = (cfg.county_caps || {})[k] || {};
+            return `<tr><td>${esc(c)}</td>
+              <td><input class="input" data-cap-max="${esc(k)}" value="${cap.max_bid != null ? esc(cap.max_bid) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td>
+              <td><input class="input" data-cap-dep="${esc(k)}" value="${cap.deposit != null ? esc(cap.deposit) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td></tr>`; }).join("")}
+          </tbody>
+        </table></div>` : ""}
+    </div>`;
+}
+
+function wireBuyboxCard() {
+  const num = (v) => { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) ? null : n; };
+  const update = (patch) => { buybox = { ...EMPTY_BUYBOX, ...buybox, ...patch }; saveBuybox(); recomputeBuybox(); };
+  $("bb-counties").querySelectorAll("[data-county]").forEach((cb) => cb.onchange = () => {
+    const set = new Set(buybox.target_counties || []);
+    cb.checked ? set.add(cb.dataset.county) : set.delete(cb.dataset.county);
+    update({ target_counties: [...set] });
+    renderSettings();
+  });
+  $("bb-land").onchange = (e) => update({ land_use_keywords: csvList(e.target.value) });
+  $("bb-nonland").onchange = (e) => update({ non_land_keywords: csvList(e.target.value) });
+  $("bb-maxbid").onchange = (e) => update({ max_opening_bid: num(e.target.value) });
+  $("scr-settings").querySelectorAll("[data-cap-max],[data-cap-dep]").forEach((inp) => inp.onchange = () => {
+    const k = inp.dataset.capMax || inp.dataset.capDep;
+    const caps = { ...(buybox.county_caps || {}) };
+    const existing = caps[k] || {};
+    const maxEl = $("scr-settings").querySelector(`[data-cap-max="${k}"]`);
+    const depEl = $("scr-settings").querySelector(`[data-cap-dep="${k}"]`);
+    const next = { max_bid: num(maxEl.value), deposit: num(depEl.value) };
+    if (next.max_bid == null && next.deposit == null) delete caps[k]; else caps[k] = next;
+    update({ county_caps: caps });
+  });
+}
+
 function renderSettings() {
   const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   $("scr-settings").innerHTML = `
     <h2 style="margin-bottom:20px">Settings</h2>
-    <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:960px;align-items:start">
-      <div class="blueprint" style="padding:18px 20px">${CORNERS}
-        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
-        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when &ldquo;My types first&rdquo; is on (type is assigned per-property from the appraiser record; the scrub's buy-box MATCH/REVIEW ranks the rest).</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
-          ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
-        </div>
-        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
-          <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:26px">
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:960px">
+      ${renderBuyboxCard()}
+      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start">
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Scrape schedule</h6>
-          <div style="display:flex;border:1px solid var(--color-divider);margin-bottom:12px;max-width:320px">
-            ${days.map((d, i) => `<button class="seg3 ${prefs.scheduleDay === i ? "on" : ""}" data-day="${i}" style="font-size:12.5px;padding:7px 0">${d.toUpperCase()}</button>`).join("")}
+          <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
+          <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when &ldquo;My types first&rdquo; is on (type is assigned per-property from the appraiser record; the buy-box's MATCH/REVIEW ranks the rest).</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
+            ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
           </div>
-          <div style="font-size:13px" class="text-muted">The automation currently runs weekly on <b style="color:var(--color-text)">Monday</b> at 6:00 AM ET, plus manual runs any time from the top bar. Picking a different day here notes your preference &mdash; ask Claude Code to move the workflow schedule to apply it.</div>
+          <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
+            <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
         </div>
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
-          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
-            <div style="display:flex;justify-content:space-between"><span>frankhatfellaaiagent@gmail.com</span><span class="tag tag-accent">owner</span></div>
+        <div style="display:flex;flex-direction:column;gap:26px">
+          <div class="blueprint" style="padding:18px 20px">${CORNERS}
+            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Scrape schedule</h6>
+            <div style="display:flex;border:1px solid var(--color-divider);margin-bottom:12px;max-width:320px">
+              ${days.map((d, i) => `<button class="seg3 ${prefs.scheduleDay === i ? "on" : ""}" data-day="${i}" style="font-size:12.5px;padding:7px 0">${d.toUpperCase()}</button>`).join("")}
+            </div>
+            <div style="font-size:13px" class="text-muted">The automation currently runs weekly on <b style="color:var(--color-text)">Monday</b> at 4:00 AM ET, plus manual runs any time from the top bar. Picking a different day here notes your preference &mdash; ask Claude Code to move the workflow schedule to apply it.</div>
           </div>
-          <div style="font-size:12.5px;margin-top:12px" class="text-muted">Positions, lists and preferences currently save per-browser. Team accounts need a login backend &mdash; planned follow-up.</div>
+          <div class="blueprint" style="padding:18px 20px">${CORNERS}
+            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
+            ${CLOUD && CLOUD.user ? `
+              <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+                <div style="display:flex;justify-content:space-between"><span>${esc(CLOUD.user.email)}</span><span class="tag tag-accent">signed in</span></div>
+              </div>
+              <div style="font-size:12.5px;margin-top:12px" class="text-muted">Buy box and shared lists sync live across every device your team signs in on.</div>`
+              : `<div style="font-size:13.5px">Not signed in.</div>
+                 <div style="font-size:12.5px;margin-top:10px" class="text-muted">${SYNC_ON ? "Positions and buy box save in this browser only until you sign in (top of the sidebar)." : "Positions, lists and buy box save in this browser."}</div>`}
+          </div>
         </div>
       </div>
     </div>`;
@@ -935,6 +1091,7 @@ function renderSettings() {
   $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
   $("scr-settings").querySelectorAll("[data-day]").forEach((b) =>
     b.onclick = () => { prefs.scheduleDay = +b.dataset.day; savePrefs(); renderSettings(); });
+  wireBuyboxCard();
 }
 
 // ---------- top bar actions ----------
