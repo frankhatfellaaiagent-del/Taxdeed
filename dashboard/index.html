@@ -70,6 +70,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <section id="scr-dashboard" hidden></section>
     <section id="scr-detail" hidden></section>
     <section id="scr-lists" hidden></section>
+    <section id="scr-listdetail" hidden></section>
     <section id="scr-history" hidden></section>
     <section id="scr-settings" hidden></section>
   </div>
@@ -222,7 +223,7 @@ const cloudTimers = {};
 
 function rerender() {
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     history: renderHistory, settings: renderSettings })[S.screen]();
+     listdetail: renderListDetail, history: renderHistory, settings: renderSettings })[S.screen]();
 }
 
 const TEAM_DOCS = { team: "lists", teambuybox: "buybox" };   // sync-name -> Firestore doc name
@@ -449,6 +450,9 @@ let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
   shown: 150,
+  // Which list is open on its own page, and that page's own filter/sort state.
+  listName: null, listShared: false,
+  ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
 };
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -525,6 +529,66 @@ function assignList(id, value) {
     setInt(id, { list: value.startsWith("p:") ? value.slice(2) : "" });
   }
 }
+// The parcels in a given list (personal or shared).
+function listItems(name, shared) {
+  return shared
+    ? DATA.filter((p) => team.membership[p.id] === name)
+    : DATA.filter((p) => !team.membership[p.id] && getInt(p.id).list === name);
+}
+// Find a list object by name across both collections.
+const findList = (name, shared) => (shared ? team.lists : lists).find((l) => l.name === name);
+// Rename a list and re-point every parcel assigned to it.
+function renameList(oldName, newName, shared) {
+  newName = newName.trim();
+  if (!newName || newName === oldName) return false;
+  if (lists.some((l) => l.name === newName) || team.lists.some((l) => l.name === newName)) return false;
+  const l = findList(oldName, shared); if (!l) return false;
+  l.name = newName;
+  if (shared) {
+    for (const [id, ln] of Object.entries(team.membership)) if (ln === oldName) team.membership[id] = newName;
+    saveTeam();
+  } else {
+    for (const [id, it] of Object.entries(interest)) if (it.list === oldName) interest[id] = { ...it, list: newName };
+    saveInterest(); saveLists();
+  }
+  if (S.listName === oldName) S.listName = newName;
+  return true;
+}
+function setListDesc(name, shared, desc) {
+  const l = findList(name, shared); if (!l) return;
+  l.desc = desc;
+  shared ? saveTeam() : saveLists();
+}
+// Archive is non-destructive: the list and its parcels stay, it just drops off
+// the main grid until restored.
+function setListArchived(name, shared, val) {
+  const l = findList(name, shared); if (!l) return;
+  l.archived = val;
+  shared ? saveTeam() : saveLists();
+}
+// Delete removes the list and unassigns its parcels (the parcels themselves and
+// any notes/positions on them are untouched).
+function deleteList(name, shared) {
+  if (shared) {
+    team.lists = team.lists.filter((l) => l.name !== name);
+    for (const [id, ln] of Object.entries(team.membership)) if (ln === name) delete team.membership[id];
+    saveTeam();
+  } else {
+    lists = lists.filter((l) => l.name !== name);
+    for (const [id, it] of Object.entries(interest)) if (it.list === name) interest[id] = { ...it, list: "" };
+    saveInterest(); saveLists();
+  }
+}
+// Pull a single parcel out of a list from the list page.
+function removeFromList(id, name, shared) {
+  if (shared) { if (team.membership[id] === name) { delete team.membership[id]; saveTeam(); } }
+  else if (getInt(id).list === name) setInt(id, { list: "" });
+}
+function openList(name, shared) {
+  S.listName = name; S.listShared = shared;
+  S.ld = { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" };
+  go("listdetail");
+}
 // Where to send someone for the clerk's record on THIS parcel: its own case
 // file when the scrub resolved one, else the county's tax-deed portal
 // (config/clerk_sites.yaml, served in the feed), else a targeted web search.
@@ -559,7 +623,9 @@ async function loadFeed() {
 const NAV = [["dashboard","Dashboard"],["lists","My lists"],["history","Data updates"],["settings","Settings"]];
 function renderNav() {
   $("nav").innerHTML = NAV.map(([k, label]) => {
-    const active = S.screen === k || (k === "dashboard" && S.screen === "detail");
+    const active = S.screen === k
+      || (k === "dashboard" && S.screen === "detail")
+      || (k === "lists" && S.screen === "listdetail");
     return `<button class="nav-btn ${active ? "active" : ""}" data-go="${k}"><span class="dot"></span>${label}</button>`;
   }).join("");
   $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
@@ -578,9 +644,9 @@ function go(screen, selId) {
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
-  for (const k of ["dashboard","detail","lists","history","settings"]) $("scr-" + k).hidden = k !== screen;
+  for (const k of ["dashboard","detail","lists","listdetail","history","settings"]) $("scr-" + k).hidden = k !== screen;
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     history: renderHistory, settings: renderSettings })[screen]();
+     listdetail: renderListDetail, history: renderHistory, settings: renderSettings })[screen]();
   $("scroller").scrollTop = 0;
 }
 
@@ -888,88 +954,232 @@ function renderDetail() {
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
 }
 
-// ---------- lists screen ----------
+// ---------- lists screen (grid of every list) ----------
 function renderLists() {
   const signedIn = !!(CLOUD && CLOUD.user);
-  const cards = [
-    ...lists.map((l) => ({ ...l, shared: false,
-      items: DATA.filter((p) => !team.membership[p.id] && getInt(p.id).list === l.name) })),
-    ...team.lists.map((l) => ({ ...l, shared: true,
-      items: DATA.filter((p) => team.membership[p.id] === l.name) })),
-  ];
+  const all = [
+    ...lists.map((l) => ({ ...l, shared: false })),
+    ...team.lists.map((l) => ({ ...l, shared: true })),
+  ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
+  const active = all.filter((l) => !l.archived);
+  const archived = all.filter((l) => l.archived);
+
   $("scr-lists").innerHTML = `
     <h2 style="margin-bottom:6px">My lists</h2>
     <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
-      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live."
-      : "Group the properties you&rsquo;re tracking. Click a parcel to open it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
+      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
+      : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
     <div style="display:flex;gap:10px;max-width:560px;margin-bottom:24px;align-items:center;flex-wrap:wrap">
       <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
       ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
         <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
       <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
     </div>
-    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-      ${cards.map((lc) => `
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+    ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      ${active.map((lc) => {
+        const sorted = [...lc.items].sort((a, b) =>
+          (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15) || a.county.localeCompare(b.county));
+        const preview = sorted.slice(0, 4);
+        return `
+        <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
           <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
             <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
             ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
             <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
           </div>
-          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}
-            ${signedIn ? ` <button class="btn btn-ghost" data-share-toggle="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:11.5px;padding:1px 4px">${lc.shared ? "Make personal" : "Share with team"}</button>` : ""}</div>
+          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}</div>
           <div style="display:flex;flex-direction:column;gap:6px">
-            ${(() => {
-              // Group by sale date (soonest first) so a sale day reads as one
-              // block; within a day, order by county.
-              const sorted = [...lc.items].sort((a, b) =>
-                (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15) ||
-                a.county.localeCompare(b.county));
-              let lastDay = null;
-              return sorted.map((p) => {
-                const day = p.auction;
-                const header = day !== lastDay
-                  ? `<div style="font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-top:8px">${esc(day)}</div>` : "";
-                lastDay = day;
-                return `${header}
-                <button data-open="${esc(p.id)}" style="display:flex;gap:10px;align-items:baseline;background:none;border:none;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;cursor:pointer;text-align:left;font:inherit;font-size:13px;color:inherit;width:100%">
+            ${preview.length ? preview.map((p) => `
+                <div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;font-size:13px">
                   <span class="mono" style="font-size:11.5px;color:var(--color-accent-700)">${esc(p.parcel)}</span>
-                  <span style="flex:1;min-width:0">${esc(p.addr)}<span class="text-muted"> &middot; ${esc(p.county)}</span></span>
+                  <span style="flex:1;min-width:0">${esc(p.addr || "—")}<span class="text-muted"> &middot; ${esc(p.county)}</span></span>
                   <span class="text-muted" style="flex:none">${p.redeemed ? "Redeemed" : money(p.bid)}</span>
-                </button>`;
-              }).join("");
-            })() || '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
+                </div>`).join("")
+              : '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
           </div>
-        </div>`).join("")}
-    </div>`;
+          <div style="margin-top:12px;font-size:13px;font-weight:500;color:var(--color-accent-700)">
+            Open list${sorted.length > preview.length ? ` &middot; ${sorted.length - preview.length} more` : ""} &rarr;</div>
+        </div>`;
+      }).join("")}
+    </div>` : `<div class="text-muted" style="font-size:13.5px">${archived.length ? "All your lists are archived — restore one below." : "No lists yet — create one above, then add parcels to it from any property page."}</div>`}
+    ${archived.length ? `
+      <h3 style="margin:34px 0 10px;font-size:16px">Archived</h3>
+      <div class="blueprint" style="padding:6px 18px">${CORNERS}
+        ${archived.map((lc) => `
+          <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
+            <div style="flex:1;min-width:140px">
+              <span style="font-weight:500">${esc(lc.name)}</span>
+              ${lc.shared ? ' <span class="tag tag-outline">team</span>' : ""}
+              <span class="text-muted" style="font-size:12.5px"> &middot; ${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
+            </div>
+            <button class="btn btn-secondary" data-restore="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 10px">Restore</button>
+            <button class="btn btn-ghost" data-delete="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 8px;color:var(--color-danger,#b3261e)">Delete</button>
+          </div>`).join("")}
+      </div>` : ""}`;
+
   $("add-list").onclick = () => {
     const name = $("new-list").value.trim();
     if (!name || lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) return;
     const sharedBox = $("new-list-shared");
     if (sharedBox && sharedBox.checked) { team.lists.push({ name, desc: "" }); saveTeam(); }
     else { lists.push({ name, desc: "" }); saveLists(); }
-    renderLists();
+    openList(name, !!(sharedBox && sharedBox.checked));
   };
-  $("scr-lists").querySelectorAll("[data-share-toggle]").forEach((b) => b.onclick = () => {
-    const name = b.dataset.shareToggle;
-    if (b.dataset.shared === "1") {
-      // team → personal: the list and its parcels become mine alone
+  $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
+    openList(c.dataset.openlist, c.dataset.shared === "1"));
+  $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
+    setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
+  });
+  $("scr-lists").querySelectorAll("[data-delete]").forEach((b) => b.onclick = () => {
+    if (!confirm(`Delete the list “${b.dataset.delete}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
+    deleteList(b.dataset.delete, b.dataset.shared === "1"); renderLists();
+  });
+}
+
+// ---------- single-list page: filter, sort, manage ----------
+const LIST_SORTS = [
+  ["soonest", "Auction — soonest first"],
+  ["latest", "Auction — latest first"],
+  ["bid-asc", "Opening bid — low to high"],
+  ["bid-desc", "Opening bid — high to low"],
+  ["assessed-desc", "Assessed value — high to low"],
+  ["county", "County (A–Z)"],
+];
+function sortListItems(items, sort) {
+  const t = (p) => p.saleDate?.getTime() ?? 9e15;
+  const bid = (p) => p.bid ?? Infinity, bidD = (p) => p.bid ?? -Infinity;
+  const asv = (p) => p.assessed ?? -Infinity;
+  const arr = [...items];
+  const cmp = {
+    soonest: (a, b) => t(a) - t(b) || a.county.localeCompare(b.county),
+    latest: (a, b) => t(b) - t(a) || a.county.localeCompare(b.county),
+    "bid-asc": (a, b) => bid(a) - bid(b),
+    "bid-desc": (a, b) => bidD(b) - bidD(a),
+    "assessed-desc": (a, b) => asv(b) - asv(a),
+    county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
+  }[sort] || ((a, b) => t(a) - t(b));
+  return arr.sort(cmp);
+}
+function renderListDetail() {
+  const name = S.listName, shared = S.listShared;
+  const listObj = findList(name, shared);
+  if (!listObj) { go("lists"); return; }   // deleted out from under us
+  const signedIn = !!(CLOUD && CLOUD.user);
+  const ld = S.ld;
+  const all = listItems(name, shared);
+  const counties = [...new Set(all.map((p) => p.county))].sort();
+  const q = ld.q.trim().toLowerCase();
+  let rows = all.filter((p) => {
+    if (ld.county !== "All" && p.county !== ld.county) return false;
+    if (ld.status !== "All" && p.status !== ld.status) return false;
+    if (ld.buybox !== "All" && p.buybox !== ld.buybox) return false;
+    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  rows = sortListItems(rows, ld.sort);
+  const totalBid = all.reduce((s, p) => s + (p.redeemed ? 0 : (p.bid || 0)), 0);
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+
+  $("scr-listdetail").innerHTML = `
+    <button class="btn btn-ghost" id="ld-back" style="padding:2px 4px;font-size:13px;margin-bottom:10px">&larr; All lists</button>
+    <div style="display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:4px">
+      <div style="flex:1;min-width:220px">
+        <h2 style="margin:0;display:inline-block">${esc(name)}</h2>
+        ${shared ? ' <span class="tag tag-outline" style="vertical-align:6px">team</span>' : ""}
+        <div class="text-muted" style="font-size:13.5px;margin-top:4px">${esc(listObj.desc || "No description yet.")}</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-secondary" id="ld-rename" style="font-size:12.5px;padding:5px 11px">Rename</button>
+        <button class="btn btn-secondary" id="ld-desc" style="font-size:12.5px;padding:5px 11px">Edit description</button>
+        ${signedIn ? `<button class="btn btn-secondary" id="ld-share" style="font-size:12.5px;padding:5px 11px">${shared ? "Make personal" : "Share with team"}</button>` : ""}
+        <button class="btn btn-secondary" id="ld-archive" style="font-size:12.5px;padding:5px 11px">Archive</button>
+        <button class="btn btn-ghost" id="ld-delete" style="font-size:12.5px;padding:5px 9px;color:var(--color-danger,#b3261e)">Delete</button>
+      </div>
+    </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:18px">${all.length} ${all.length === 1 ? "parcel" : "parcels"}${totalBid ? ` &middot; ${money(totalBid)} in opening bids` : ""}</div>
+
+    <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="field" style="width:170px"><label>County</label>
+        <select class="input" id="ld-county">${opt("All", ld.county, "All counties")}${counties.map((c) => opt(c, ld.county)).join("")}</select></div>
+      <div class="field" style="width:130px"><label>Status</label>
+        <select class="input" id="ld-status">${opt("All", ld.status, "All")}${opt("Scheduled", ld.status)}${opt("Redeemed", ld.status)}</select></div>
+      <div class="field" style="width:120px"><label>Buy box</label>
+        <select class="input" id="ld-buybox">${opt("All", ld.buybox, "All")}${opt("MATCH", ld.buybox)}${opt("REVIEW", ld.buybox)}${opt("NO", ld.buybox)}</select></div>
+      <div class="field" style="width:210px"><label>Sort by</label>
+        <select class="input" id="ld-sort">${LIST_SORTS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
+      <div class="field" style="flex:1;min-width:150px"><label>Search</label>
+        <input class="input" id="ld-q" placeholder="parcel, address, case #" value="${esc(ld.q)}"></div>
+      <span style="font-size:12px" class="text-muted">${rows.length.toLocaleString()} shown</span>
+    </div>
+
+    <div class="blueprint" style="padding:0">${CORNERS}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          ${rows.length ? rows.map((p) => {
+            const t = effType(p);
+            return `<tr class="${p.redeemed ? "redeem" : ""}">
+              <td class="mono rowlink" data-open="${esc(p.id)}" style="font-size:12.5px;color:var(--color-accent-700);cursor:pointer">${esc(p.parcel)}</td>
+              <td class="rowlink" data-open="${esc(p.id)}" style="cursor:pointer"><div style="font-weight:500">${esc(p.addr || "—")}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+              <td>${esc(p.county)}</td>
+              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+              <td style="font-size:13px">${esc(p.auction)}</td>
+              <td>${statusTag(p)}</td>
+              <td style="text-align:right"><button class="btn btn-ghost" data-remove="${esc(p.id)}" title="Remove from this list" style="font-size:11.5px;padding:2px 7px">Remove</button></td>
+            </tr>`;
+          }).join("")
+          : `<tr><td colspan="9" style="padding:22px;text-align:center" class="text-muted">${all.length ? "No parcels match these filters." : "This list is empty. Open any property and use “Add to list” to put it here."}</td></tr>`}
+        </tbody>
+      </table></div>
+    </div>`;
+
+  $("ld-back").onclick = () => go("lists");
+  $("ld-county").onchange = (e) => { ld.county = e.target.value; renderListDetail(); };
+  $("ld-status").onchange = (e) => { ld.status = e.target.value; renderListDetail(); };
+  $("ld-buybox").onchange = (e) => { ld.buybox = e.target.value; renderListDetail(); };
+  $("ld-sort").onchange = (e) => { ld.sort = e.target.value; renderListDetail(); };
+  $("ld-q").oninput = (e) => { ld.q = e.target.value; };
+  $("ld-q").onchange = () => renderListDetail();
+  $("ld-rename").onclick = () => {
+    const nn = prompt("Rename list:", name);
+    if (nn == null) return;
+    if (!renameList(name, nn, shared)) { if (nn.trim() && nn.trim() !== name) alert("That name is already taken."); return; }
+    renderListDetail();
+  };
+  $("ld-desc").onclick = () => {
+    const d = prompt("List description:", listObj.desc || "");
+    if (d == null) return;
+    setListDesc(name, shared, d.trim()); renderListDetail();
+  };
+  $("ld-archive").onclick = () => { setListArchived(name, shared, true); go("lists"); };
+  $("ld-delete").onclick = () => {
+    if (!confirm(`Delete the list “${name}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
+    deleteList(name, shared); go("lists");
+  };
+  const shareBtn = $("ld-share");
+  if (shareBtn) shareBtn.onclick = () => {
+    if (shared) {
       team.lists = team.lists.filter((l) => l.name !== name);
-      if (!lists.some((l) => l.name === name)) lists.push({ name, desc: "" });
+      if (!lists.some((l) => l.name === name)) lists.push({ name, desc: listObj.desc || "", archived: listObj.archived });
       for (const [id, ln] of Object.entries(team.membership))
         if (ln === name) { delete team.membership[id]; setInt(id, { list: name }); }
       saveTeam(); saveLists();
     } else {
-      // personal → team: everyone sees it and its parcels
       lists = lists.filter((l) => l.name !== name);
-      if (!team.lists.some((l) => l.name === name)) team.lists.push({ name, desc: "" });
+      if (!team.lists.some((l) => l.name === name)) team.lists.push({ name, desc: listObj.desc || "", archived: listObj.archived });
       for (const [id, it] of Object.entries(interest))
         if (it.list === name) { team.membership[id] = name; interest[id] = { ...it, list: "" }; }
       saveInterest(); saveLists(); saveTeam();
     }
-    renderLists();
+    S.listShared = !shared; renderListDetail();
+  };
+  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => go("detail", el.dataset.open));
+  $("scr-listdetail").querySelectorAll("[data-remove]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    removeFromList(b.dataset.remove, name, shared); renderListDetail();
   });
-  $("scr-lists").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => go("detail", b.dataset.open));
 }
 
 // ---------- history screen ----------
