@@ -13,9 +13,10 @@ on:
         default: "@config/client_counties.txt"
         required: false
   schedule:
-    # Weekly production run: Mondays 10:00 UTC (~6:00 AM ET). Scrapes the
+    # Weekly production run: Mondays 08:00 UTC (4:00 AM ET) — early morning per
+    # client request, so fresh data is waiting before the workday. Scrapes the
     # client's full county list and refreshes the committed data feeds.
-    - cron: "0 10 * * 1"
+    - cron: "0 8 * * 1"
   push:
     branches: [main, claude/florida-tax-deed-scraper-fqzwzd]
     paths:
@@ -92,18 +93,6 @@ jobs:
             echo "No live run directory produced."
           fi
 
-      - name: Upload run outputs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: pilot-run-outputs
-          path: |
-            output/runs/
-            output/debug/
-            config/counties.json
-          if-no-files-found: warn
-          retention-days: 30
-
       - name: Commit run data to branch (manual + scheduled runs)
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
@@ -114,19 +103,61 @@ jobs:
           cp -r "$latest" "data/runs/$name"
           cp config/counties.json "data/runs/$name/counties.json" || true
           # Refresh the fixed-URL feeds consumed by the Google Sheet and the
-          # dashboard (docs/DATA_FEED.md documents the contract).
+          # dashboard (docs/DATA_FEED.md documents the contract). First export
+          # builds the feed (geocoding new addresses), then the appraiser
+          # quick-look enrichment runs against it, then a re-export merges the
+          # enrichment in. Enrichment is best-effort — a broken county parser
+          # never blocks the feed.
+          python -m scraper export --run "data/runs/$name" || true
+          # Quick-look scrub: appraiser record, the parcel's clerk case file, the
+          # paperwork inside it, and (only when REPORTALL_API_KEY is configured)
+          # the ReportAll parcel record.
+          python -m scraper -v enrich --limit 200 --debug-dir output/debug/enrich || true
           python -m scraper export --run "data/runs/$name" || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/runs data/exports
+          git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
           git commit -m "Pilot run data: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
-          git pull --rebase origin "${{ github.ref_name }}" || true
-          git push origin "HEAD:${{ github.ref_name }}"
+          # Anything pushed to the branch while the scrape was running (another
+          # run, or a person) rejects this push. Rebase onto the new tip and try
+          # again rather than losing an hour of scraping. On a conflict in the
+          # generated feeds, -X theirs keeps THIS run's data: during a rebase
+          # "theirs" is the commit being replayed, i.e. ours, and the fresher
+          # scrape is the one worth keeping.
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
+            echo "push rejected (attempt $attempt) — rebasing onto the latest tip"
+            git fetch origin "${{ github.ref_name }}" || true
+            git rebase -X theirs "origin/${{ github.ref_name }}" || git rebase --abort || true
+            sleep $((attempt * 5))
+          done
+          if [ "$pushed" != 1 ]; then
+            echo "::error::could not push run data after 5 attempts"
+            exit 1
+          fi
           # Token-authored pushes don't fire push-triggered workflows, so
           # explicitly redeploy the hosted dashboard with the fresh feeds.
           gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
         env:
           GH_TOKEN: ${{ github.token }}
+          # Optional: add this repository secret to switch on ReportAll parcel
+          # lookups (the LandGlide data). Unset = the step is skipped silently.
+          REPORTALL_API_KEY: ${{ secrets.REPORTALL_API_KEY }}
+
+      - name: Upload run outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pilot-run-outputs
+          path: |
+            output/runs/
+            output/debug/
+            data/enrichment.json
+            config/counties.json
+          if-no-files-found: warn
+          retention-days: 30
 
       - name: Fail job if live steps failed
         if: steps.discover.outcome == 'failure' && steps.scrape.outcome == 'failure'

@@ -26,13 +26,22 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
 ```jsonc
 {
   "generated_at": "2026-08-11T22:45:00+00:00",   // UTC, when the feed was built
-  "source_run": "2026-08-11T213144Z",            // scraper run the data came from
+  "source_run": "2026-08-11T213144Z",            // most recent run merged into the feed
+  "county_runs": { "putnam": "2026-08-15T035014Z", ... },  // which run each county's rows
+                                                 // came from — partial runs refresh their
+                                                 // counties and carry the rest forward
   "counts": {
     "total": 2648,
     "scheduled": 1894,                           // upcoming auctions
     "redeemed": 754,                             // owner paid; auction cancelled
     "counties": 30,
     "by_county": { "putnam": {"total": 361, "scheduled": ..., "redeemed": ...}, ... }
+  },
+  "county_caps": {                               // client-set limits from config/buybox.yaml
+    "putnam": { "max_bid": 25000, "deposit": 2000 }   // keys lowercase/no punctuation; may be {}
+  },
+  "clerk_sites": {                               // Clerk of Court tax-deed pages (config/clerk_sites.yaml)
+    "volusia": { "url": "https://www.clerk.org/tax-deeds.aspx", "search": "https://app02.clerk.org/or_td/" }
   },
   "records": [
     {
@@ -42,6 +51,11 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "parcel_id": "01-10-26-7200-0070-0010",
       "case_number": "...", "certificate_number": "...",
       "property_address": "400 ASH ST, PALATKA, FL- 32177",  // "" when the county doesn't publish it
+      "owner_name": "",                          // from the auction record or appraiser enrichment
+      "mailing_address": "",                     // owner's mailing address (appraiser enrichment only)
+      "property_use": "",                        // land-use text (auction record or appraiser enrichment)
+      "acreage": "",                             // acreage text when available
+      "enriched": false,                         // true = appraiser quick-look scrub ran for this parcel
       "opening_bid": 8474.0,                     // number or null
       "assessed_value": 12000.0,                 // number or null (often null on redeemed/future rows)
       "bid_to_value_pct": 71,                    // integer % or null
@@ -50,11 +64,57 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "anomalies": ["missing assessed value"],   // data-quality flags, may be []
       "status": "Scheduled",                     // Scheduled | Redeemed
       "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?...",   // live auction page
-      "appraiser_url": "http://..."              // county property appraiser record, may be ""
+      "appraiser_url": "http://...",             // county property appraiser record, may be ""
+      "lat": 29.648251, "lng": -81.637149,       // parcel coordinates; null when unresolved
+
+      // --- clerk case file (present only once the scrub resolves one) ---
+      "clerk_case_url": "https://...",           // THIS parcel's case record at the clerk
+      "deed_status": "RESCHED",                  // clerk's status for the tax deed
+      "applicant": "JOCALBRO INC ...",           // who applied for the deed (forced the sale)
+      "applicant_address": "PO BOX 2407 ...",
+      "case_docs": [                             // paperwork the clerk publishes on the case
+        {"name": "Notice of Publication", "date": "04/30/2026", "url": "https://..."}
+      ],
+      "case_flags": ["homestead", "IRS lien"]    // what the agent read in those documents
     }
   ]
 }
 ```
+
+Coordinates come from the free US Census geocoder (`scraper/geocode.py`), cached in
+`data/geocache.json` so only new addresses are geocoded each run. They power the
+dashboard's parcel-centered links (FEMA flood viewer, USFWS wetlands map, satellite
+view). Treat them as approximate — rooftop/street-segment accuracy, not a surveyed
+parcel centroid.
+
+## The quick-look scrub
+
+`scraper/enrich.py` (`python -m scraper enrich`) runs over scheduled buy-box
+MATCH/REVIEW parcels and gathers, per parcel:
+
+1. **County appraiser record** — owner, mailing address, land use, acreage.
+2. **Clerk case file** (`scraper/clerk.py`) — resolves the parcel to *its own* case
+   record, not the county's tax-deed page. One resolver per portal platform:
+   `realtdm` (RealAuction's clerk module — index the public case list, then link
+   `…/cases/getCase/caseid/<id>`), `taxsmart` (Pioneer — `…/Home/Details?id=<id>`),
+   `template` (Putnam's certificate-number deep link), and `newvision` (Marion's
+   postback app, driven with a browser in `scraper/clerk_browser.py`). Counties
+   without a resolver keep the county-level link. Platforms are declared per county
+   in `config/clerk_sites.yaml`.
+3. **The paperwork** (`scraper/paperwork.py`) — opens the case's documents and reads
+   the text layer, flagging what changes a bid: reschedules, cancellations,
+   homestead, IRS/municipal liens, mortgages, judgments, bankruptcy, HOA claims,
+   easements. Scanned documents with no text layer are reported, never guessed at.
+4. **ReportAll parcel record** (`scraper/reportall.py`) — the parcel database behind
+   LandGlide. Dormant unless `REPORTALL_API_KEY` is set; when enabled it fills owner,
+   mailing address, acreage, land use and replaces rooftop geocodes with true parcel
+   centroids.
+
+Results accumulate in `data/enrichment.json` and are merged by the exporter *before*
+buy-box flagging, so an enriched land use can move a REVIEW row to MATCH/NO. Each
+source is optional and isolated — a portal that changes shape costs coverage, never
+the feed. Entries refresh every 30 days, so weekly runs widen coverage rather than
+refetching the same parcels.
 
 ## Dashboard guidance
 

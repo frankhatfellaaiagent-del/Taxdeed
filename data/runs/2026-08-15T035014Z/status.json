@@ -1,0 +1,123 @@
+{
+  "run_dir": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-08-15T035014Z",
+  "started_at": "2026-08-15T03:50:14+00:00",
+  "finished_at": "2026-08-15T03:56:13+00:00",
+  "live": true,
+  "total_counties": 5,
+  "current_county": null,
+  "counties": {
+    "marion": {
+      "url": "https://www.marion.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 248,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "08/12/2026",
+        "08/13/2026",
+        "08/19/2026",
+        "09/09/2026",
+        "09/16/2026"
+      ],
+      "expected_counts": {
+        "08/12/2026": 3,
+        "08/13/2026": 1,
+        "08/19/2026": 100,
+        "09/09/2026": 100,
+        "09/16/2026": 48
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-15T03:52:09+00:00"
+    },
+    "putnam": {
+      "url": "https://www.putnam.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 327,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "08/05/2026",
+        "08/12/2026",
+        "08/19/2026",
+        "08/26/2026",
+        "09/02/2026",
+        "09/16/2026",
+        "09/30/2026"
+      ],
+      "expected_counts": {
+        "08/05/2026": 64,
+        "08/12/2026": 37,
+        "08/19/2026": 71,
+        "08/26/2026": 46,
+        "09/02/2026": 74,
+        "09/16/2026": 69,
+        "09/30/2026": 67
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-15T03:54:33+00:00"
+    },
+    "sarasota": {
+      "url": "https://www.sarasota.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 1,
+      "warnings": [
+        "auction 09/10/2026: page loaded but no auction items parsed (structure change?)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "08/04/2026",
+        "08/06/2026",
+        "08/07/2026",
+        "08/11/2026",
+        "08/20/2026",
+        "09/10/2026"
+      ],
+      "expected_counts": {
+        "08/04/2026": 30,
+        "08/06/2026": 30,
+        "08/07/2026": 31,
+        "08/11/2026": 33,
+        "08/20/2026": 1,
+        "09/10/2026": 2
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-15T03:55:16+00:00"
+    },
+    "alachua": {
+      "url": "https://www.alachua.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 13,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/15/2026",
+        "09/22/2026",
+        "10/06/2026"
+      ],
+      "expected_counts": {
+        "09/15/2026": 4,
+        "09/22/2026": 5,
+        "10/06/2026": 4
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-15T03:55:48+00:00"
+    },
+    "citrus": {
+      "url": "https://www.citrus.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 18,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "08/12/2026",
+        "09/16/2026"
+      ],
+      "expected_counts": {
+        "08/12/2026": 12,
+        "09/16/2026": 18
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-08-15T03:56:13+00:00"
+    }
+  }
+}
