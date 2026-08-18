@@ -93,7 +93,6 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             # the vacant lots that have no street address at all).
             if parcel.get("lat") is not None and parcel.get("lng") is not None:
                 parcel_latlng = [parcel["lat"], parcel["lng"]]
-        flag, reasons = judgment.buybox_flag(r, cfg)
         redeemed = "redeem" in (r.auction_status or "").lower()
         ratio = round(100 * r.opening_bid / r.assessed_value) \
             if r.opening_bid and r.assessed_value else None
@@ -108,7 +107,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "property_use": r.property_use, "acreage": r.acreage,
             "enriched": bool(enr.get("ok")),
             "opening_bid": r.opening_bid, "assessed_value": r.assessed_value,
-            "bid_to_value_pct": ratio, "buybox": flag, "buybox_notes": reasons,
+            "bid_to_value_pct": ratio,
             "anomalies": judgment.find_anomalies(r), "status": status,
             "auction_url": r.auction_url, "appraiser_url": r.appraiser_url,
             "lat": latlng[0], "lng": latlng[1],
@@ -129,6 +128,10 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             carried = [rec for rec in prior.get("records", [])
                        if rec.get("county") not in run_counties]
             for rec in carried:
+                # Older feeds baked per-record flags in; the JSON no longer
+                # carries them (the dashboard computes per-team flags itself).
+                rec.pop("buybox", None)
+                rec.pop("buybox_notes", None)
                 county_runs.setdefault(rec["county"],
                                        (prior.get("county_runs") or {}).get(rec["county"],
                                                                             prior.get("source_run", "")))
@@ -154,6 +157,10 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         c = by_county.setdefault(rec["county"], {"total": 0, "scheduled": 0, "redeemed": 0})
         c["total"] += 1
         c["redeemed" if redeemed else "scheduled"] += 1
+        # The TSV (the operator's Google Sheet mirror) still carries buy-box
+        # columns, computed here from config/buybox.yaml. The public JSON does
+        # not — each dashboard team computes its own flags client-side.
+        flag, reasons = judgment.buybox_flag(judgment.record_from_feed(rec), cfg)
         tsv_lines.append("\t".join(_clean(x) for x in [
             rec["county"], rec["sale_date"], rec["sale_time"], rec["parcel_id"],
             rec["case_number"], rec["certificate_number"], rec.get("owner_name", ""),
@@ -161,7 +168,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             rec.get("property_use", ""), rec.get("acreage", ""),
             rec["opening_bid"] or "", rec["assessed_value"] or "",
             rec["bid_to_value_pct"] if rec["bid_to_value_pct"] is not None else "",
-            rec["buybox"], rec["buybox_notes"], rec["status"],
+            flag, reasons, rec["status"],
             rec["auction_url"], rec["appraiser_url"],
             rec.get("clerk_case_url", ""), rec.get("deed_status", ""),
             "; ".join(rec.get("case_flags", [])),
@@ -180,22 +187,23 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "counties": len(by_county),
             "by_county": dict(sorted(by_county.items())),
         },
-        # Client-set per-county limits from config/buybox.yaml (may be empty).
-        "county_caps": cfg.get("county_caps") or {},
         # Clerk of Court pages per county from config/clerk_sites.yaml.
         "clerk_sites": _load_clerk_sites(),
-        # The full buy-box (config/buybox.yaml) as this feed's DEFAULT. Each
-        # dashboard team gets its own editable copy seeded from this the first
-        # time they open Settings; buy-box flags are computed client-side from
-        # whichever config is active, not baked into the record here — this is
-        # only the starting point every team customizes for themselves.
+        # A NEUTRAL buy-box template — the starting point every new team's
+        # editable buy-box is seeded from (flags are computed client-side).
+        # Deliberately generic: all counties targeted, common land vocabulary,
+        # no caps. No customer's actual criteria ever ships in the public feed;
+        # each team's real buy-box lives in their private Firestore doc.
         "default_buybox": {
-            "target_counties": cfg.get("target_counties") or [],
-            "excluded_counties": cfg.get("excluded_counties") or [],
-            "land_use_keywords": cfg.get("land_use_keywords") or [],
-            "non_land_keywords": cfg.get("non_land_keywords") or [],
-            "max_opening_bid": cfg.get("max_opening_bid"),
-            "county_caps": cfg.get("county_caps") or {},
+            "target_counties": sorted(by_county),
+            "excluded_counties": [],
+            "land_use_keywords": ["vacant", "land", "acreage", "agricultur", "timber",
+                                   "pasture", "grove", "ranch", "farm", "rural",
+                                   "grazing", "orchard", "nursery"],
+            "non_land_keywords": ["condo", "townhouse", "townhome", "mobile home park",
+                                   "commercial", "industrial", "warehouse", "office", "retail"],
+            "max_opening_bid": None,
+            "county_caps": {},
         },
         "records": json_records,
     }

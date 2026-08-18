@@ -31,6 +31,17 @@ def load_buybox(path: str | Path | None = None) -> dict:
     return cfg
 
 
+def record_from_feed(rec: dict) -> AuctionRecord:
+    """Adapt a feed JSON record (exporter output) back into an AuctionRecord
+    with just the fields buy-box flagging reads."""
+    return AuctionRecord(
+        county=rec.get("county", ""),
+        property_use=rec.get("property_use", "") or "",
+        property_address=rec.get("property_address", "") or "",
+        opening_bid=rec.get("opening_bid"),
+    )
+
+
 def buybox_flag(rec: AuctionRecord, cfg: dict) -> tuple[str, str]:
     """Return (flag, reasons). Flag is MATCH / REVIEW / NO.
 

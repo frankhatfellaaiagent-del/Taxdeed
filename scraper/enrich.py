@@ -63,16 +63,28 @@ def record_key(r: dict) -> str:
 
 def select_targets(records: list[dict], counties: list[str] | None = None,
                    limit: int | None = None) -> list[dict]:
-    """Scheduled + buy-box MATCH/REVIEW + has an appraiser link, soonest first."""
+    """Scheduled + buy-box MATCH/REVIEW + has an appraiser link, soonest first.
+
+    The feed no longer ships per-record flags (each dashboard team computes its
+    own), so targeting recomputes them here from config/buybox.yaml — the
+    operator's config decides where enrichment effort goes first."""
+    from . import judgment
+    cfg = judgment.load_buybox(None)
+
     def date_key(r):
         d = r.get("sale_date") or ""
         return d[6:] + d[:2] + d[3:5] if len(d) == 10 else "99999999"
 
+    def flag(r):
+        if r.get("buybox"):                      # older feeds still carry it
+            return r["buybox"]
+        return judgment.buybox_flag(judgment.record_from_feed(r), cfg)[0]
+
     out = [r for r in records
            if r.get("status") != "Redeemed"
-           and r.get("buybox") in ("MATCH", "REVIEW")
            and r.get("appraiser_url")
-           and (not counties or r.get("county") in counties)]
+           and (not counties or r.get("county") in counties)
+           and flag(r) in ("MATCH", "REVIEW")]
     out.sort(key=date_key)
     return out[:limit] if limit else out
 

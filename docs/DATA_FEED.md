@@ -37,13 +37,12 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
     "counties": 30,
     "by_county": { "putnam": {"total": 361, "scheduled": ..., "redeemed": ...}, ... }
   },
-  "county_caps": {                               // legacy top-level copy of default_buybox.county_caps
-    "putnam": { "max_bid": 25000, "deposit": 2000 }   // (kept for older consumers; see default_buybox)
-  },
   "clerk_sites": {                               // Clerk of Court tax-deed pages (config/clerk_sites.yaml)
     "volusia": { "url": "https://www.clerk.org/tax-deeds.aspx", "search": "https://app02.clerk.org/or_td/" }
   },
-  "default_buybox": {                            // config/buybox.yaml, as every NEW team's starting point
+  "default_buybox": {                            // NEUTRAL template every new team's buy-box seeds from
+                                                 // (all counties targeted, generic land vocabulary — no
+                                                 // customer's real criteria ever ships in the feed)
     "target_counties": ["putnam", "..."], "excluded_counties": ["volusia", "..."],
     "land_use_keywords": ["vacant", "land", "..."], "non_land_keywords": ["condo", "..."],
     "max_opening_bid": null, "county_caps": { "putnam": { "max_bid": 25000, "deposit": 2000 } }
@@ -64,14 +63,6 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "opening_bid": 8474.0,                     // number or null
       "assessed_value": 12000.0,                 // number or null (often null on redeemed/future rows)
       "bid_to_value_pct": 71,                    // integer % or null
-      "buybox": "REVIEW",                        // MATCH | REVIEW | NO computed server-side from
-      "buybox_notes": "target county; property use unknown — verify on appraiser site",
-                                                  // config/buybox.yaml (MADD's defaults) — informational
-                                                  // for TSV/Sheet consumers; the dashboard IGNORES these
-                                                  // two fields and recomputes its own per-team flag
-                                                  // client-side from default_buybox (see below), so
-                                                  // different customers see different MATCH/REVIEW/NO
-                                                  // on the identical shared feed
       "anomalies": ["missing assessed value"],   // data-quality flags, may be []
       "status": "Scheduled",                     // Scheduled | Redeemed
       "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?...",   // live auction page
