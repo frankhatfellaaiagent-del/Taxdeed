@@ -16,8 +16,8 @@ unrefined, and don't understand the land-focused business.
 
 ## What the tool does today (live)
 
-- **One dashboard for 37 Florida counties** — every upcoming tax deed auction
-  on the RealAuction platform, scraped automatically every Monday at 4:00 AM,
+- **One dashboard for every covered Florida county** — every upcoming tax deed
+  auction on the RealAuction platform, refreshed automatically every Monday at 4:00 AM,
   with per-county filtering, full-text search, and redeemed sales separated
   out. Tax deeds only — foreclosure auctions are detected and excluded.
 - **Buy-box first-wave filter** — every parcel is flagged MATCH / REVIEW / NO
@@ -27,11 +27,12 @@ unrefined, and don't understand the land-focused business.
   buy-box parcels, pulls the county appraiser record (owner, mailing address,
   land use, acreage) and writes it onto the property card, upgrading or
   eliminating parcels before a human ever looks.
-- **The clerk's case file, per parcel** — not a link to the county's tax deed
-  page, but *this parcel's* case record: deed status (rescheduled, cancelled),
+- **The clerk's case file, per parcel** (rolling out county by county) — not a
+  link to the county's tax deed page, but *this parcel's* case record: deed status (rescheduled, cancelled),
   the applicant who forced the sale, and every document in the file — All
   Forms, Tax Deed, Notice of Publication, Clerk's Affidavit, 513 — as a link.
-- **The agent reads the paperwork** — it opens those documents and flags what
+- **The agent reads the paperwork** (as case files roll out) — it opens those
+  documents and flags what
   changes a bid: reschedules, homestead, IRS and municipal liens, mortgages,
   judgments, bankruptcy, HOA claims, easements. Scanned documents it cannot
   read are marked as such rather than guessed at.

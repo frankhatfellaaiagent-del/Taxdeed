@@ -1,9 +1,9 @@
-name: Pilot scrape (live)
+name: Weekly data refresh
 
-# Live test of the scraper against the real RealAuction site, run on GitHub's
-# servers. Triggers: manual (Run workflow button) or any push to the dev branch
-# that touches the scraper. Keep this to 1-3 counties — it is a pilot, not the
-# weekly production run.
+# The production data pipeline: collect every county's upcoming tax deed
+# auctions, verify against county records (enrichment), and refresh the
+# committed feeds. Scheduled weekly; manual dispatch for on-demand refreshes;
+# pushes touching the scraper run a 1-county smoke test (no commit).
 
 on:
   workflow_dispatch:
@@ -13,28 +13,26 @@ on:
         default: "@config/client_counties.txt"
         required: false
   schedule:
-    # Weekly production run: Mondays 08:00 UTC (4:00 AM ET) — early morning per
-    # client request, so fresh data is waiting before the workday. Scrapes the
-    # client's full county list and refreshes the committed data feeds.
+    # Mondays 08:00 UTC (4:00 AM ET) — fresh data waiting before the workday.
     - cron: "0 8 * * 1"
   push:
-    branches: [main, claude/florida-tax-deed-scraper-fqzwzd]
+    branches: [main]
     paths:
       - "scraper/**"
       - "config/**"
       - "requirements.txt"
-      - ".github/workflows/pilot-scrape.yml"
+      - ".github/workflows/scrape.yml"
 
 permissions:
   contents: write
   actions: write  # to dispatch the Pages deploy after committing new data
 
 concurrency:
-  group: pilot-scrape
+  group: data-pipeline   # shared with the daily enrichment workflow
   cancel-in-progress: false
 
 jobs:
-  pilot:
+  refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -59,12 +57,12 @@ jobs:
         continue-on-error: true
         run: python -m scraper -v discover
 
-      - name: Live pilot scrape
+      - name: Live scrape
         id: scrape
         continue-on-error: true
         run: |
           # Pushes get a quick 1-county smoke test; manual/scheduled runs
-          # default to the client's full 36-county list.
+          # default to the full county list.
           python -m scraper -v run --counties "${{ github.event_name == 'push' && 'volusia' || github.event.inputs.counties || '@config/client_counties.txt' }}"
 
       - name: Capture live pages (debug diagnostics)
@@ -112,13 +110,18 @@ jobs:
           # Quick-look scrub: appraiser record, the parcel's clerk case file, the
           # paperwork inside it, and (only when REPORTALL_API_KEY is configured)
           # the ReportAll parcel record.
-          python -m scraper -v enrich --limit 200 --debug-dir output/debug/enrich || true
+          python -m scraper -v enrich --limit 300 --debug-dir output/debug/enrich || true
           python -m scraper export --run "data/runs/$name" || true
+          # Retention: the feeds carry the merged history; keep only the last
+          # 4 raw run directories so the repo doesn't grow forever.
+          keep=4
+          prune=$(ls -d data/runs/*/ 2>/dev/null | sort | head -n -$keep || true)
+          [ -n "$prune" ] && git rm -rq $prune || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/runs data/exports
           git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
-          git commit -m "Pilot run data: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
+          git commit -m "Data refresh: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
           # Anything pushed to the branch while the scrape was running (another
           # run, or a person) rejects this push. Rebase onto the new tip and try
           # again rather than losing an hour of scraping. On a conflict in the
@@ -150,7 +153,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: pilot-run-outputs
+          name: refresh-run-outputs
           path: |
             output/runs/
             output/debug/

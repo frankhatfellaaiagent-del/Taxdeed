@@ -1,0 +1,95 @@
+name: Daily enrichment
+
+# Widens verification coverage a little every night: appraiser records, clerk
+# case files and case paperwork for buy-box parcels the store hasn't seen (or
+# whose entries have gone stale). The weekly refresh rebuilds the board; this
+# just keeps making it deeper. Best-effort by design — a county portal
+# misbehaving costs coverage, never the feed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max parcels to enrich this run"
+        default: "400"
+        required: false
+  schedule:
+    # Daily 06:00 UTC (2:00 AM ET), Tue-Sun — Monday belongs to the weekly
+    # refresh, which runs its own enrichment pass.
+    - cron: "0 6 * * 2-7"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: data-pipeline   # never race the weekly refresh
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Enrich + rebuild feed
+        run: |
+          python -m scraper -v enrich --limit "${{ github.event.inputs.limit || '400' }}" --debug-dir output/debug/enrich || true
+          latest=$(ls -d data/runs/*/ 2>/dev/null | sort | tail -1 || true)
+          [ -z "$latest" ] && { echo "no run directory to export from"; exit 0; }
+          python -m scraper export --run "$latest"
+        env:
+          REPORTALL_API_KEY: ${{ secrets.REPORTALL_API_KEY }}
+
+      - name: Coverage report
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open("data/exports/master_list.json"))
+          recs = d["records"]
+          n = len(recs)
+          def pct(k): return f"{sum(1 for r in recs if r.get(k))}/{n}"
+          print(f"enriched: {pct('enriched')}  property_use: {pct('property_use')}  "
+                f"owner: {pct('owner_name')}  case files: {pct('clerk_case_url')}  "
+                f"case docs: {pct('case_docs')}")
+          e = json.load(open("data/enrichment.json"))
+          print(f"store: {len(e)} entries, {sum(1 for v in e.values() if v.get('ok'))} ok")
+          EOF
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f data/exports
+          git add -f data/enrichment.json data/geocache.json 2>/dev/null || true
+          git commit -m "Nightly enrichment: deeper verification coverage" || { echo "nothing new"; exit 0; }
+          pushed=0
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
+            git fetch origin "${{ github.ref_name }}" || true
+            git rebase -X theirs "origin/${{ github.ref_name }}" || git rebase --abort || true
+            sleep $((attempt * 5))
+          done
+          [ "$pushed" = 1 ] || { echo "::error::push failed after retries"; exit 1; }
+          gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Upload debug snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: enrich-debug
+          path: output/debug/
+          if-no-files-found: ignore
+          retention-days: 14

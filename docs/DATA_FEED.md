@@ -155,6 +155,7 @@ refetching the same parcels.
 
 Feeds are written by `python -m scraper export` (see `scraper/exporter.py`) from the
 latest committed run in `data/runs/<timestamp>/`, and refreshed automatically by the
-"Pilot scrape (live)" GitHub Actions workflow after each manual data run. The Google
+"Weekly data refresh" GitHub Actions workflow after each run (plus the nightly
+enrichment workflow). The Google
 Sheet ("MADD Assets — FL Tax Deed Auctions") imports the TSV via IMPORTDATA and
 refreshes itself; treat it as a human-facing mirror, not a source.

@@ -119,7 +119,7 @@ const SDK_BASE = "https://www.gstatic.com/firebasejs/10.12.2/";
 const SCHEDULE_UTC = { day: 1, hour: 8 };            // Monday 08:00 UTC = 4:00 AM ET
 const SCHEDULE_TEXT = "Monday at 4:00 AM ET";
 // Operators only — never rendered for customers (see isAdmin()).
-const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/pilot-scrape.yml`;
+const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));

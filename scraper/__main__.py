@@ -183,9 +183,6 @@ def main(argv=None) -> int:
     p.add_argument("--buybox", help="Path to buybox.yaml (default config/buybox.yaml)")
     p.add_argument("--report-out", help="Excel output path (default <run>/tax_deed_scrub.xlsx)")
 
-    p = sub.add_parser("dashboard", help="Serve the local dashboard (watch runs live, browse results)")
-    p.add_argument("--port", type=int, default=8777)
-
     p = sub.add_parser("capture", help="Save live page HTML/screenshots + structure diagnostics (debug)")
     p.add_argument("--url", default="https://www.volusia.realtaxdeed.com/")
     p.add_argument("--out", default="output/debug")
@@ -224,10 +221,6 @@ def main(argv=None) -> int:
         return 0
     if args.cmd == "report":
         return cmd_report(args)
-    if args.cmd == "dashboard":
-        from .dashboard import serve
-        serve(port=args.port)
-        return 0
     if args.cmd == "capture":
         from .debug_capture import capture
         capture(args.url, args.out)
