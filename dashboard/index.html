@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MADD Assets — FL Tax Deed Auctions</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏝️</text></svg>">
+<title>Tax Deed Radar</title>
+<meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
 <link rel="stylesheet" href="ds/styles.css">
 <style>
 html,body{margin:0;height:100%}
@@ -34,7 +35,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   .stats-grid{grid-template-columns:repeat(2,1fr)!important}
 }
 #login-overlay{display:grid}
-#login-overlay[hidden]{display:none}
+/* [hidden] must always win — several component classes set their own display */
+[hidden]{display:none!important}
 .tablewrap{overflow-x:auto}
 </style>
 </head>
@@ -43,14 +45,14 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 
 <aside style="width:216px;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--color-divider);padding:20px 14px;gap:4px">
   <div style="margin-bottom:22px;padding:0 8px">
-    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED</div>
-    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)">Florida &middot; 37 counties</div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED RADAR</div>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)" id="brand-sub">Florida</div>
   </div>
   <nav id="nav" style="display:flex;flex-direction:column;gap:4px"></nav>
   <div style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next auto-scrape</div>
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next data refresh</div>
     <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
-    <div class="text-muted">Weekly &middot; all 37 counties</div>
+    <div class="text-muted" id="next-run-sub">Automatic &middot; weekly</div>
   </div>
   <div id="account-box" hidden style="padding:10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5"></div>
 </aside>
@@ -59,8 +61,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
     <input class="input" id="q" placeholder="Search parcel, address, case&hellip;" style="max-width:320px">
     <span style="margin-left:auto;font-size:12px" class="text-muted" id="last-scrape">loading&hellip;</span>
-    <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export Excel</button>
-    <button class="btn btn-primary" id="btn-scrape"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Run scrape now</button>
+    <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export CSV</button>
+    <button class="btn btn-primary" id="btn-refresh-admin" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Trigger refresh</button>
   </header>
 
   <div id="scroller" style="flex:1;overflow-y:auto;padding:26px 28px 48px">
@@ -89,15 +91,13 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
       <button class="btn btn-ghost" type="button" id="login-forgot" style="font-size:12.5px;padding:2px 4px">Forgot password?</button>
       <button class="btn btn-ghost" type="button" id="login-cancel" style="font-size:12.5px;padding:2px 4px">Cancel</button>
     </div>
-    <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up — accounts are set up for the team. Ask Frank for access.</div>
+    <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up &mdash; accounts are set up by your workspace admin.</div>
   </form>
 </div>
 
 <script>
-/* MADD Assets tax deed dashboard — production port of the Claude Design
-   prototype (design/Tax Deed Dashboard.dc.html). Same Industry design
-   system + screens; data comes from the scraper's committed feed
-   (docs/DATA_FEED.md). Team positions/lists/settings persist in this
+/* Florida tax deed dashboard. Industry design system; data comes from the
+   platform's committed feed (docs/DATA_FEED.md). Positions/lists/settings persist in this
    browser's localStorage until a login backend exists. */
 "use strict";
 
@@ -114,7 +114,12 @@ const REPO = "frankhatfellaaiagent-del/Taxdeed";
 const FIREBASE_CONFIG = {};
 const SYNC_ON = !!FIREBASE_CONFIG.apiKey;
 const SDK_BASE = "https://www.gstatic.com/firebasejs/10.12.2/";
-const ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/pilot-scrape.yml`;
+// The one truth about the refresh schedule — every screen derives from these.
+// Keep in sync with the cron in the scraper workflow (0 8 * * 1 UTC).
+const SCHEDULE_UTC = { day: 1, hour: 8 };            // Monday 08:00 UTC = 4:00 AM ET
+const SCHEDULE_TEXT = "Monday at 4:00 AM ET";
+// Operators only — never rendered for customers (see isAdmin()).
+const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/pilot-scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -134,7 +139,7 @@ const DEFAULT_LISTS = [
 ];
 const DEFAULT_PREFS = {
   myTypes: { "Single family": true, "Vacant land": true },
-  myTypesFirst: true, budget: "", scheduleDay: 1,
+  myTypesFirst: true, budget: "",
 };
 let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
 let lists = store.get("tdd_lists", DEFAULT_LISTS);   // personal lists
@@ -205,6 +210,7 @@ function recomputeBuybox() {
   for (const p of DATA) {
     const [flag, notes] = evalBuybox(p, cfg);
     p.buybox = flag; p.buyboxNotes = notes;
+    p.useType = typeFromUse(p.use);   // Type buckets follow the buy-box keywords
   }
 }
 const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
@@ -229,7 +235,9 @@ function cloudPush(name, payload) {
   // window, ~1s, acceptable for a small team editing the same list/buy-box).
   cloudTimers[name] = setTimeout(() => {
     const ref = TEAM_DOCS[name] ? teamDocRef(TEAM_DOCS[name]) : userDocRef(name);
-    CLOUD.fsm.setDoc(ref, payload()).catch((e) => console.warn("sync push failed:", e));
+    CLOUD.fsm.setDoc(ref, payload())
+      .then(() => { if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); } })
+      .catch((e) => { console.warn("sync push failed:", e); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } });
   }, 800);
 }
 
@@ -238,6 +246,9 @@ const userDocRef = (name) => CLOUD.fsm.doc(CLOUD.db, "users", CLOUD.user.uid, "s
 // profile doc at onboarding (docs/LOGIN_SETUP.md). Every customer's workspace
 // is isolated by firestore.rules; "madd" is the founding team's id.
 let TEAM_ID = "madd";
+let IS_ADMIN = false;        // operator flag from the profile doc — gates dev-only controls
+let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
+let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
 const teamDocRef = (doc) => CLOUD.fsm.doc(CLOUD.db, "teams", TEAM_ID, "state", doc);
 
 // Apply a snapshot only when it truly changes state — this also swallows the
@@ -255,9 +266,21 @@ async function onSignedIn(user) {
   $("login-overlay").hidden = true;
   const fs = CLOUD.fsm;
   try {
-    // The profile doc names this account's team workspace.
+    // The profile doc names this account's team workspace (and flags the
+    // platform operator, who gets the admin-only controls). A missing profile
+    // means the account wasn't fully onboarded — fail VISIBLY rather than
+    // silently dropping the user into the wrong workspace.
     const prof = await fs.getDoc(fs.doc(CLOUD.db, "users", user.uid));
-    TEAM_ID = (prof.data() || {}).team || "madd";
+    const profile = prof.data();
+    if (!profile || !profile.team) {
+      WORKSPACE_ERROR = true;
+      renderAccount();
+      return;
+    }
+    WORKSPACE_ERROR = false;
+    TEAM_ID = profile.team;
+    IS_ADMIN = !!profile.admin;
+    $("btn-refresh-admin").hidden = !IS_ADMIN;
     // First contact: merge this device's local state with the cloud. Cloud
     // wins per key; anything only known locally is kept (union). After this,
     // the cloud is the source of truth and listeners keep every device live.
@@ -323,6 +346,10 @@ async function onSignedIn(user) {
 function onSignedOut() {
   if (CLOUD) { (CLOUD.unsubs || []).forEach((u) => u()); CLOUD.unsubs = []; CLOUD.user = null; }
   TEAM_ID = "madd";
+  IS_ADMIN = false;
+  WORKSPACE_ERROR = false;
+  SYNC_ERROR = false;
+  $("btn-refresh-admin").hidden = true;
   team = { lists: [], membership: {} };
   interest = store.get("tdd_interest", {});
   lists = store.get("tdd_lists", DEFAULT_LISTS);
@@ -359,8 +386,13 @@ function renderAccount() {
   if (!SYNC_ON) { box.hidden = true; return; }
   box.hidden = false;
   if (CLOUD && CLOUD.user) {
-    box.innerHTML = `
-      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in &middot; syncing</div>
+    const status = WORKSPACE_ERROR
+      ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Your workspace isn&rsquo;t set up yet &mdash; changes won&rsquo;t sync. Contact your workspace admin.</div>'
+      : SYNC_ERROR
+        ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Sync issue &mdash; recent changes are saved on this device and will retry.</div>'
+        : "";
+    box.innerHTML = `${status}
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in${WORKSPACE_ERROR ? "" : " &middot; syncing"}</div>
       <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div>
       <button class="btn btn-ghost" id="btn-signout" style="font-size:12px;padding:2px 4px;margin-top:4px">Sign out</button>`;
     $("btn-signout").onclick = () => CLOUD.authm.signOut(CLOUD.auth);
@@ -416,7 +448,7 @@ let META = null;          // feed counts/generated_at
 let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
-  shown: 150, mapMode: "interactive",
+  shown: 150,
 };
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -439,10 +471,15 @@ const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov
 function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
 
 // Bucket the appraiser's land-use text into the dashboard's type filter.
+// The "Vacant land" bucket uses the ACTIVE buy-box's land keywords, so a team
+// that adds e.g. "homesite" to their buy box sees the Type column follow suit.
 function typeFromUse(use) {
   const u = (use || "").toLowerCase();
   if (!u) return "";
-  if (/vacant|acreage|timber|pasture|agricult|grove|ranch|farm|grazing|orchard|nursery|\bland\b/.test(u)) return "Vacant land";
+  const landKws = (buybox && buybox.land_use_keywords && buybox.land_use_keywords.length)
+    ? buybox.land_use_keywords : ["vacant", "land", "acreage", "agricultur", "timber",
+                                  "pasture", "grove", "ranch", "farm", "rural", "grazing", "orchard", "nursery"];
+  if (kwHits(landKws.map((k) => k.toLowerCase()), u).length) return "Vacant land";
   if (/mobile|manufactured/.test(u)) return "Mobile home";
   if (/condo|town\s?ho/.test(u)) return "Condo/Townhome";
   if (/multi|duplex|triplex|apart/.test(u)) return "Multi-family";
@@ -519,7 +556,7 @@ async function loadFeed() {
 }
 
 // ---------- shared header/sidebar ----------
-const NAV = [["dashboard","Dashboard"],["lists","My lists"],["history","Scrape history"],["settings","Settings"]];
+const NAV = [["dashboard","Dashboard"],["lists","My lists"],["history","Data updates"],["settings","Settings"]];
 function renderNav() {
   $("nav").innerHTML = NAV.map(([k, label]) => {
     const active = S.screen === k || (k === "dashboard" && S.screen === "detail");
@@ -527,12 +564,12 @@ function renderNav() {
   }).join("");
   $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
 }
-function nextMonday6amET() {
-  // scraper cron: Mondays 08:00 UTC (4 AM ET) — early per client request
+function nextRefreshText() {
+  // Derived from SCHEDULE_UTC — the single source of truth for the cadence.
   const now = new Date();
-  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 8, 0, 0));
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), SCHEDULE_UTC.hour, 0, 0));
   const dow = d.getUTCDay();
-  let add = (1 - dow + 7) % 7;
+  let add = (SCHEDULE_UTC.day - dow + 7) % 7;
   if (add === 0 && now.getTime() > d.getTime()) add = 7;
   d.setUTCDate(d.getUTCDate() + add);
   return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
@@ -629,7 +666,7 @@ function renderDashboard() {
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:130px"><label>Status</label>
         <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:120px"><label>Buy-box</label>
+      <div class="field" style="width:120px"><label>Buy box <button id="bb-help" title="Every property is graded against YOUR buy box — the counties, property types and price limits you set. MATCH fits it, REVIEW needs a look, NO doesn't fit. Click to set yours." style="border:1px solid var(--color-divider);background:none;cursor:pointer;font-size:10px;padding:0 5px;color:var(--color-accent-700)">?</button></label>
         <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
       <div class="field" style="width:130px"><label>Max opening bid</label>
         <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
@@ -666,6 +703,7 @@ function renderDashboard() {
   $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
+  $("bb-help").onclick = () => go("settings");
   $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-mytypes").onclick = () => { prefs.myTypesFirst = !prefs.myTypesFirst; savePrefs(); renderDashboard(); };
@@ -710,19 +748,18 @@ function renderDetail() {
       text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
     { topic: "Quick look", cls: p.enriched ? "tag-accent" : "tag-neutral",
       text: p.enriched
-        ? "Appraiser record scrubbed automatically — owner, land use, acreage and mailing address above come straight from the county appraiser."
-        : "Appraiser record not scrubbed yet — the weekly agent works through buy-box parcels first; use the appraiser link to check manually." },
+        ? "Verified against the county appraiser — the owner, land use, acreage and mailing address above come straight from the official record."
+        : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
     { topic: "Case file", cls: p.caseFlags.length ? "tag-outline" : p.caseUrl ? "tag-accent" : "tag-neutral",
       text: !p.caseUrl
         ? "Clerk case file not resolved for this parcel yet — the county link above opens the clerk's tax deed search."
         : p.caseFlags.length
-          ? `Agent read the paperwork and found: ${esc(p.caseFlags.join("; "))}. Confirm each against the documents before bidding.`
+          ? `The case paperwork mentions: ${esc(p.caseFlags.join("; "))}. Confirm each in the documents before bidding.`
           : (p.deedStatus ? `Clerk shows deed status ${esc(p.deedStatus)}. ` : "") +
-            "Agent read the case documents and found none of its watch-items (liens, homestead, bankruptcy, reschedules)." },
+            "The case documents were reviewed and none of the watch-items (liens, homestead, bankruptcy, reschedules) came up." },
     { topic: "Next step", cls: "tag-neutral",
       text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the FEMA flood zone and wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
   ];
-  const mapInt = S.mapMode === "interactive";
 
   $("scr-detail").innerHTML = `
     <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
@@ -738,15 +775,12 @@ function renderDetail() {
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
         <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
-          <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>no photo in county data —<br>open the appraiser record</span></div>
+          <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>No photo in the county data.<br>The appraiser record has one.</span></div>
           <div class="blueprint" style="padding:0;display:flex;flex-direction:column">${CORNERS}
-            <div style="display:flex;border-bottom:1px solid var(--color-divider)">
-              <button id="map-int" class="seg3 ${mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px">INTERACTIVE</button>
-              <button id="map-stat" class="seg3 ${!mapInt ? "on" : ""}" style="font-size:12.5px;letter-spacing:.04em;padding:7px;border-left:1px solid var(--color-divider)">STATIC</button>
-            </div>
+            <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
             ${hasAddr || ll
-              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${ll ? p.lat + "," + p.lng : mapQ}&t=k&z=${mapInt ? 17 : 13}&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe>${mapInt ? "" : '<div style="position:absolute;inset:0"></div>'}</div>`
-              : `<div class="ph" style="flex:1;min-height:154px"><span>county didn't publish an address —<br>find it via the appraiser link</span></div>`}
+              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${ll ? p.lat + "," + p.lng : mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
+              : `<div class="ph" style="flex:1;min-height:154px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
           </div>
         </div>
 
@@ -793,15 +827,15 @@ function renderDetail() {
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-            <h6 style="color:var(--color-accent-700);margin:0">Scrub findings</h6>
-            <span class="tag tag-accent">agent</span>
+            <h6 style="color:var(--color-accent-700);margin:0">Property analysis</h6>
+            <span class="tag tag-accent">automated</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
             ${findings.map((a) => `<div style="display:flex;gap:12px">
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
               <span>${a.text}</span></div>`).join("")}
           </div>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the scraped county auction record &middot; data as of ${META ? esc(new Date(META.generated_at).toLocaleString()) : "—"}</div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(new Date(META.generated_at).toLocaleString()) : "—"}</div>
         </div>
       </div>
 
@@ -846,8 +880,6 @@ function renderDetail() {
       setTimeout(() => { cll.textContent = `${p.lat}, ${p.lng}`; }, 1200);
     });
   };
-  $("map-int").onclick = () => { S.mapMode = "interactive"; renderDetail(); };
-  $("map-stat").onclick = () => { S.mapMode = "static"; renderDetail(); };
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
     b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
@@ -941,42 +973,44 @@ function renderLists() {
 }
 
 // ---------- history screen ----------
-async function renderHistory() {
-  const feedLine = META
-    ? `Latest data: run <b>${esc(META.source_run)}</b> — ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).`
-    : "";
+function renderHistory() {
+  // Everything on this screen comes from the feed itself — no external calls.
+  const gen = META ? new Date(META.generated_at) : null;
+  const runs = META && META.county_runs ? META.county_runs : {};
+  // Group counties by the refresh that produced their rows, newest first.
+  const groups = {};
+  for (const [county, run] of Object.entries(runs)) (groups[run] = groups[run] || []).push(county);
+  const runDate = (run) => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})/.exec(run || "");
+    return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5])) : null;
+  };
+  const byCounty = META ? META.counts.by_county : {};
+  const rows = Object.entries(groups)
+    .sort((a, b) => b[0].localeCompare(a[0]))
+    .map(([run, counties]) => {
+      const d = runDate(run);
+      const total = counties.reduce((s, c) => s + ((byCounty[c] || {}).total || 0), 0);
+      counties.sort();
+      const label = counties.length > 6
+        ? cap(counties.slice(0, 6).join(", ")) + ` +${counties.length - 6} more`
+        : cap(counties.join(", "));
+      return `<tr>
+        <td style="font-weight:500;white-space:nowrap">${d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : esc(run)}</td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${counties.length}</td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${total.toLocaleString()}</td>
+        <td style="font-size:12.5px" class="text-muted">${esc(label)}</td>
+      </tr>`;
+    }).join("");
   $("scr-history").innerHTML = `
-    <h2 style="margin-bottom:6px">Scrape history</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:8px">Automatic runs weekly (Mon 6:00 AM ET) plus manual runs from the top bar. Live from GitHub Actions.</p>
-    <p style="font-size:13.5px;margin-bottom:20px">${feedLine}</p>
+    <h2 style="margin-bottom:6px">Data updates</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT}. Each county's rows come from its most recent refresh.</p>
+    <p style="font-size:13.5px;margin-bottom:20px">${META ? `Current data as of <b>${esc(gen.toLocaleString())}</b> — ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
     <div class="blueprint" style="padding:0">${CORNERS}
       <div class="tablewrap"><table class="table">
-        <thead><tr><th>Run</th><th>Trigger</th><th style="text-align:right">Duration</th><th>Status</th><th></th></tr></thead>
-        <tbody id="runs-body"><tr><td colspan="5" class="text-muted">Loading run history&hellip;</td></tr></tbody>
+        <thead><tr><th>Refreshed</th><th style="text-align:right">Counties</th><th style="text-align:right">Auctions</th><th>Coverage</th></tr></thead>
+        <tbody>${rows || '<tr><td colspan="4" class="text-muted">No refresh data yet.</td></tr>'}</tbody>
       </table></div>
     </div>`;
-  try {
-    const res = await fetch(`https://api.github.com/repos/${REPO}/actions/runs?per_page=30`);
-    const j = await res.json();
-    const runs = (j.workflow_runs || []).filter((r) => r.name === "Pilot scrape (live)").slice(0, 12);
-    const trig = (e) => e === "schedule" ? ["Auto", "tag-neutral"] : e === "workflow_dispatch" ? ["Manual", "tag-outline"] : ["Code push", "tag-neutral"];
-    const stat = (r) => r.status !== "completed" ? ["Running", "tag-accent-2"] : r.conclusion === "success" ? ["Complete", "tag-accent"] : ["Failed", "tag-outline"];
-    $("runs-body").innerHTML = runs.map((r) => {
-      const [tl, tc] = trig(r.event), [sl, sc] = stat(r);
-      const dur = r.status === "completed" ? Math.round((new Date(r.updated_at) - new Date(r.run_started_at)) / 1000) : null;
-      const durTxt = dur == null ? "—" : `${Math.floor(dur / 60)}m ${String(dur % 60).padStart(2, "0")}s`;
-      const d = new Date(r.run_started_at);
-      return `<tr>
-        <td style="font-weight:500">${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} <span class="text-muted" style="font-size:12px">${d.toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}</span></td>
-        <td><span class="tag ${tc}">${tl}</span></td>
-        <td style="text-align:right;font-variant-numeric:tabular-nums">${durTxt}</td>
-        <td><span class="tag ${sc}">${sl}</span></td>
-        <td><a href="${esc(r.html_url)}" target="_blank" rel="noopener" style="font-size:12.5px">log</a></td>
-      </tr>`;
-    }).join("") || '<tr><td colspan="5" class="text-muted">No scrape runs found yet.</td></tr>';
-  } catch (e) {
-    $("runs-body").innerHTML = `<tr><td colspan="5" class="text-muted">Couldn't reach GitHub for run history — latest data run is ${esc(META?.source_run || "unknown")}.</td></tr>`;
-  }
 }
 
 // ---------- settings screen ----------
@@ -1050,7 +1084,6 @@ function wireBuyboxCard() {
 }
 
 function renderSettings() {
-  const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
   $("scr-settings").innerHTML = `
     <h2 style="margin-bottom:20px">Settings</h2>
     <div style="display:flex;flex-direction:column;gap:26px;max-width:960px">
@@ -1067,11 +1100,9 @@ function renderSettings() {
         </div>
         <div style="display:flex;flex-direction:column;gap:26px">
           <div class="blueprint" style="padding:18px 20px">${CORNERS}
-            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Scrape schedule</h6>
-            <div style="display:flex;border:1px solid var(--color-divider);margin-bottom:12px;max-width:320px">
-              ${days.map((d, i) => `<button class="seg3 ${prefs.scheduleDay === i ? "on" : ""}" data-day="${i}" style="font-size:12.5px;padding:7px 0">${d.toUpperCase()}</button>`).join("")}
-            </div>
-            <div style="font-size:13px" class="text-muted">The automation currently runs weekly on <b style="color:var(--color-text)">Monday</b> at 4:00 AM ET, plus manual runs any time from the top bar. Picking a different day here notes your preference &mdash; ask Claude Code to move the workflow schedule to apply it.</div>
+            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Data refresh</h6>
+            <div style="font-size:14px;margin-bottom:6px">Every <b>${SCHEDULE_TEXT}</b>, automatically.</div>
+            <div style="font-size:13px" class="text-muted">Next refresh: ${nextRefreshText()}. All counties are re-checked on every refresh; each property card shows when its county's data was last updated.</div>
           </div>
           <div class="blueprint" style="padding:18px 20px">${CORNERS}
             <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
@@ -1089,8 +1120,6 @@ function renderSettings() {
   $("type-prefs").querySelectorAll("[data-type]").forEach((b) =>
     b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderSettings(); });
   $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
-  $("scr-settings").querySelectorAll("[data-day]").forEach((b) =>
-    b.onclick = () => { prefs.scheduleDay = +b.dataset.day; savePrefs(); renderSettings(); });
   wireBuyboxCard();
 }
 
@@ -1118,10 +1147,10 @@ function exportCsv() {
   renderNav();
   wireLogin();
   initCloud();                      // no await — sync comes up alongside the feed
-  $("next-run").textContent = nextMonday6amET();
+  $("next-run").textContent = nextRefreshText();
   $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };
   $("btn-export").onclick = exportCsv;
-  $("btn-scrape").onclick = () => window.open(ACTIONS_URL, "_blank", "noopener");
+  $("btn-refresh-admin").onclick = () => window.open(ADMIN_ACTIONS_URL, "_blank", "noopener");
   const ok = await loadFeed();
   if (!ok) {
     $("load-note").innerHTML = '<span class="text-muted">Couldn&rsquo;t load the data feed. Check your connection and reload.</span>';
@@ -1129,6 +1158,7 @@ function exportCsv() {
   }
   $("load-note").remove();
   $("last-scrape").textContent = "Data as of " + new Date(META.generated_at).toLocaleString();
+  $("brand-sub").textContent = `Florida · ${META.counts.counties} counties`;
   go("dashboard");
 })();
 </script>
