@@ -14,9 +14,11 @@ on:
         default: "400"
         required: false
   schedule:
-    # Daily 06:00 UTC (2:00 AM ET), Tue-Sun — Monday belongs to the weekly
-    # refresh, which runs its own enrichment pass.
-    - cron: "0 6 * * 2-7"
+    # Daily 06:00 UTC (2:00 AM ET), every day but Monday — Monday belongs to
+    # the weekly refresh, which runs its own enrichment pass. GitHub cron
+    # counts days of the week 0-6 (Sun-Sat); "7" for Sunday makes the whole
+    # workflow file invalid, which silently disabled this schedule once.
+    - cron: "0 6 * * 0,2-6"
 
 permissions:
   contents: write
