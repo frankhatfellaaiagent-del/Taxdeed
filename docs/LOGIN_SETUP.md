@@ -48,13 +48,18 @@ example values. This is the whole per-customer setup — no code changes.
      insert into auth.users (
        instance_id, id, aud, role, email, encrypted_password,
        email_confirmed_at, created_at, updated_at,
-       raw_app_meta_data, raw_user_meta_data, is_sso_user, is_anonymous
+       raw_app_meta_data, raw_user_meta_data, is_sso_user, is_anonymous,
+       -- GoTrue's login query scans these as strings; they MUST be '' not NULL,
+       -- or sign-in fails with "Database error querying schema".
+       confirmation_token, recovery_token, email_change, email_change_token_new,
+       email_change_token_current, phone_change, phone_change_token, reauthentication_token
      ) values (
        '00000000-0000-0000-0000-000000000000', gen_random_uuid(),
        'authenticated', 'authenticated', 'owner@acme.com',
        extensions.crypt('TEMP-PASSWORD', extensions.gen_salt('bf')),
        now(), now(), now(),
-       '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false, false
+       '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false, false,
+       '', '', '', '', '', '', '', ''
      )
      returning id, email
    ),
