@@ -1,0 +1,5481 @@
+{
+  "run": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-08-19T135419Z",
+  "previous_run": null,
+  "records": 2506,
+  "duplicates_merged": 0,
+  "new": 2506,
+  "changed": 0,
+  "removed": 0,
+  "buybox_match": 0,
+  "buybox_review": 927,
+  "by_county": {
+    "alachua": {
+      "auctions": 13,
+      "match": 0,
+      "review": 13,
+      "new": 13,
+      "changed": 0
+    },
+    "bay": {
+      "auctions": 55,
+      "match": 0,
+      "review": 0,
+      "new": 55,
+      "changed": 0
+    },
+    "broward": {
+      "auctions": 6,
+      "match": 0,
+      "review": 0,
+      "new": 6,
+      "changed": 0
+    },
+    "citrus": {
+      "auctions": 18,
+      "match": 0,
+      "review": 0,
+      "new": 18,
+      "changed": 0
+    },
+    "clay": {
+      "auctions": 52,
+      "match": 0,
+      "review": 0,
+      "new": 52,
+      "changed": 0
+    },
+    "duval": {
+      "auctions": 299,
+      "match": 0,
+      "review": 0,
+      "new": 299,
+      "changed": 0
+    },
+    "escambia": {
+      "auctions": 161,
+      "match": 0,
+      "review": 0,
+      "new": 161,
+      "changed": 0
+    },
+    "flagler": {
+      "auctions": 4,
+      "match": 0,
+      "review": 0,
+      "new": 4,
+      "changed": 0
+    },
+    "gilchrist": {
+      "auctions": 6,
+      "match": 0,
+      "review": 6,
+      "new": 6,
+      "changed": 0
+    },
+    "hernando": {
+      "auctions": 29,
+      "match": 0,
+      "review": 0,
+      "new": 29,
+      "changed": 0
+    },
+    "highlands": {
+      "auctions": 185,
+      "match": 0,
+      "review": 185,
+      "new": 185,
+      "changed": 0
+    },
+    "hillsborough": {
+      "auctions": 107,
+      "match": 0,
+      "review": 0,
+      "new": 107,
+      "changed": 0
+    },
+    "indianriver": {
+      "auctions": 1,
+      "match": 0,
+      "review": 0,
+      "new": 1,
+      "changed": 0
+    },
+    "jackson": {
+      "auctions": 10,
+      "match": 0,
+      "review": 0,
+      "new": 10,
+      "changed": 0
+    },
+    "lee": {
+      "auctions": 252,
+      "match": 0,
+      "review": 0,
+      "new": 252,
+      "changed": 0
+    },
+    "leon": {
+      "auctions": 46,
+      "match": 0,
+      "review": 0,
+      "new": 46,
+      "changed": 0
+    },
+    "marion": {
+      "auctions": 248,
+      "match": 0,
+      "review": 248,
+      "new": 248,
+      "changed": 0
+    },
+    "nassau": {
+      "auctions": 10,
+      "match": 0,
+      "review": 0,
+      "new": 10,
+      "changed": 0
+    },
+    "orange": {
+      "auctions": 91,
+      "match": 0,
+      "review": 0,
+      "new": 91,
+      "changed": 0
+    },
+    "osceola": {
+      "auctions": 19,
+      "match": 0,
+      "review": 19,
+      "new": 19,
+      "changed": 0
+    },
+    "palmbeach": {
+      "auctions": 122,
+      "match": 0,
+      "review": 0,
+      "new": 122,
+      "changed": 0
+    },
+    "pasco": {
+      "auctions": 58,
+      "match": 0,
+      "review": 0,
+      "new": 58,
+      "changed": 0
+    },
+    "polk": {
+      "auctions": 108,
+      "match": 0,
+      "review": 108,
+      "new": 108,
+      "changed": 0
+    },
+    "putnam": {
+      "auctions": 327,
+      "match": 0,
+      "review": 327,
+      "new": 327,
+      "changed": 0
+    },
+    "santarosa": {
+      "auctions": 15,
+      "match": 0,
+      "review": 0,
+      "new": 15,
+      "changed": 0
+    },
+    "sarasota": {
+      "auctions": 3,
+      "match": 0,
+      "review": 0,
+      "new": 3,
+      "changed": 0
+    },
+    "seminole": {
+      "auctions": 23,
+      "match": 0,
+      "review": 0,
+      "new": 23,
+      "changed": 0
+    },
+    "suwannee": {
+      "auctions": 21,
+      "match": 0,
+      "review": 21,
+      "new": 21,
+      "changed": 0
+    },
+    "volusia": {
+      "auctions": 148,
+      "match": 0,
+      "review": 0,
+      "new": 148,
+      "changed": 0
+    },
+    "washington": {
+      "auctions": 69,
+      "match": 0,
+      "review": 0,
+      "new": 69,
+      "changed": 0
+    }
+  },
+  "anomalies": {
+    "alachua|01386-100-062|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|01550-001-000|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|06650-204-004|09/15/2026": [
+      "missing assessed value"
+    ],
+    "alachua|11570-000-000|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "alachua|00310-012-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|02684-000-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|07214-031-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10733-009-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10893-024-000|09/22/2026": [
+      "missing assessed value"
+    ],
+    "alachua|06890-036-000|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|07836-014-004|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|10733-043-000|10/06/2026": [
+      "missing assessed value"
+    ],
+    "alachua|11063-000-000|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "bay|08428-150-470|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|30166-602-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|30374-000-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|30585-648-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|31416-278-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|33802-019-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|34779-082-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|34801-302-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|34881-390-913|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|36463-170-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|36463-184-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|38335-396-311|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|38461-106-000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|40000-300-001|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|40000-850-020|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|40001-000-197|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "bay|06788-532-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|11715-014-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|12034-010-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|13026-056-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|18548-000-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|20422-000-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|25539-020-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|25548-000-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|31437-209-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|32976-000-000|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "bay|33802-106-000|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "bay|34133-010-000|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "bay|07400-200-000|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "bay|22434-000-000|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "bay|22491-000-000|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "bay|24144-000-000|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "bay|01865-000-000|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "bay|11436-000-000|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "bay|30197-635-000|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "broward|484122-AK-0260|10/26/2026": [
+      "missing assessed value"
+    ],
+    "broward|484134-AB-0200|10/26/2026": [
+      "missing assessed value"
+    ],
+    "broward|494123-DJ-0310|10/26/2026": [
+      "missing assessed value"
+    ],
+    "broward|494204-DK-0600|10/26/2026": [
+      "missing assessed value"
+    ],
+    "broward|514024-03-0181|10/26/2026": [
+      "missing assessed value"
+    ],
+    "broward|514119-06-0741|10/26/2026": [
+      "missing assessed value"
+    ],
+    "citrus|1652847|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "citrus|2041978|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "citrus|2052325|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "citrus|2080612|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "citrus|3279711|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "clay|090524-005953-944-00|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "clay|090823-001039-006-06|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "clay|090823-001039-006-07|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "clay|210823-002384-000-00|08/19/2026": [
+      "status: Canceled per County"
+    ],
+    "clay|220424-005570-000-00|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "clay|340626-015715-001-19|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "clay|140823-001437-467-00|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "clay|160524-005954-930-00|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "clay|220823-003972-000-00|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "clay|250423-000194-003-00|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "clay|290524-006711-001-00|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "clay|090524-005953-480-00|09/23/2026": [
+      "status: Redeemed"
+    ],
+    "clay|270425-008033-001-00|09/23/2026": [
+      "status: Redeemed"
+    ],
+    "clay|280823-003222-000-00|09/23/2026": [
+      "status: Redeemed"
+    ],
+    "clay|360423-000382-004-00|09/23/2026": [
+      "status: Redeemed"
+    ],
+    "clay|380626-017452-000-00|09/23/2026": [
+      "status: Redeemed"
+    ],
+    "clay|010425-011621-000-00|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "clay|080425-007876-002-83|10/07/2026": [
+      "missing assessed value"
+    ],
+    "clay|110823-001229-000-00|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "clay|170727-016083-001-42|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "clay|250726-015972-001-00|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "clay|390525-010097-010-45|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "clay|010425-011708-000-00|10/21/2026": [
+      "status: Redeemed"
+    ],
+    "clay|030425-007864-008-65|10/21/2026": [
+      "status: Redeemed"
+    ],
+    "duval|107932-0000|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|003097-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|006223-0142|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|007445-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|011418-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|013212-0020|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|016468-5040|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|018577-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|019924-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|022838-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|025837-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|027949-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|028051-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|028088-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|028224-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|030060-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|030072-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|032200-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|034667-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|037474-0010|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|040536-0030|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|040722-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|042547-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|049076-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|050011-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|051081-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|053712-0000|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|053741-0000|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|054695-0000|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|054696-0000|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|061894-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|065857-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|071858-0020|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|084574-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|085445-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|087958-0050|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|095973-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|097007-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|098220-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|099199-0536|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|100552-0220|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|101293-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|103087-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|103104-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|104573-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|106178-0020|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|106208-0640|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|106702-1750|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|113874-0210|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|115034-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|120618-0110|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|133686-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|143830-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|147979-1012|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|148657-1510|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|154378-3705|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|155922-0090|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|156056-0705|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|158136-3210|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|162990-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|163303-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|164599-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|165286-5370|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|167316-4805|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|167725-5038|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|167865-1640|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|172131-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|175333-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|175429-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|175710-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|177224-0000|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|181779-0560|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|181780-0278|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "duval|016337-0000|10/14/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|026843-0000|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "duval|041390-0000|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "duval|046282-0000|10/14/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "duval|056643-0050|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|042S306001011028|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|042S306001015011|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|042S306001040017|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|052S306900001014|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|082S304001001001|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|092S300700150003|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|092S300900010005|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|092S300901023004|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|092S301100000092|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|102S301000004020|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|102S301000008029|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|102S301000019002|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|102S301000029015|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|102S301001011012|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|152S306200004001|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|162S301801001029|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|162S301801001080|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|162S304000140001|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|162S304900015002|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301000001002|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301200001002|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301200011007|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301300002007|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301400004068|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301600120120|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301600130130|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S301600134134|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S305006010005|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|172S305009000065|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|182S303101050007|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|182S306000004047|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|182S306000008047|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|182S306000190025|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|322S301000003211|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S301000011007|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S301400000012|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S301600121004|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S303100014003|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S303300004262|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|332S303300010261|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300060090006|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300140001014|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300280004028|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300380002038|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300380037038|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300380039038|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300823000004|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300860004001|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|022S313000005005|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|061S311301002007|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|071S314101000001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|121S313203000008|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|122S311107000001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|192S314209000001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|292S312103000021|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|292S312103000033|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S300930010003|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S301151010006|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S301151017007|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S301151038008|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S301151400004|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|342S301172090003|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|352S303100002006|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|352S308000320002|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|352S311000011037|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|352S311000020099|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|362S301500001006|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|362S303302001004|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|372S301001003004|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|372S301001006006|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|372S301001008005|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|372S301001010006|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S305000017001|10/07/2026": [
+      "status: Canceled per County"
+    ],
+    "escambia|502S305000150014|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S305020021001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S305020184003|10/07/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "escambia|502S305060018001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S305090014002|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S306060012001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S306061100002|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|502S306061130002|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "escambia|512S306000000001|10/07/2026": [
+      "status: Redeemed"
+    ],
+    "flagler|0711317023000800330|09/08/2026": [
+      "status: Redeemed"
+    ],
+    "flagler|0711317023002800260|09/08/2026": [
+      "status: Redeemed"
+    ],
+    "flagler|0711317024000700120|10/13/2026": [
+      "missing assessed value",
+      "status: Canceled per County"
+    ],
+    "gilchrist|021014-00000004-0025|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "gilchrist|021014-00000004-0027|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "gilchrist|091015-01080000-1460|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "hernando|00008244|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00131627|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00297725|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00464811|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00510539|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00560084|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|00651814|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|01211940|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|01318470|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hernando|01782663|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-04-34-28-110-1890-0160|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-1900-0190|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-1920-0120|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-04-34-28-110-1950-0220|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-04-34-28-110-1950-0280|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-04-34-28-110-2030-0070|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-20-36-30-070-0060-0350|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-20-36-30-090-0070-0280|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-20-36-30-100-0140-0110|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-20-36-30-100-0190-0070|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-20-36-30-100-0220-0070|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-20-36-30-110-0010-0220|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-21-34-29-060-0000-1430|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-020-0640-0230|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-040-0200-0070|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0270-0160|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0310-0180|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0510-0050|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0520-0040|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0530-0210|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-060-0240-0030|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-060-0280-0130|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-090-0810-0220|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-110-1040-0360|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-160-1670-0390|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-160-1680-0110|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-170-1730-0160|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-010-0000-3190|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-040-0160-0040|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-0050-014B|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-0060-0390|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-007A-0420|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-180-0830-0100|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|S-21-34-29-100-3960-0110|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-102-6200-0100|08/26/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-1830-0330|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-1900-0240|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-1920-0390|08/26/2026": [
+      "status: Redeemed"
+    ],
+    "highlands|C-22-37-30-020-0390-0030|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0480-0180|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0510-0210|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0530-0220|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0540-0180|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0560-0040|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-060-0550-0090|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-070-0680-0030|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0570-0180|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0690-0160|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-090-0820-0150|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-110-1040-0190|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-160-1680-0190|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-191-1960-0670|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-030-0040-0110|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-040-0040-0070|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-009A-0380|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-120-0090-0010|08/26/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-35-34-28-021-0060-0180|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-22-37-30-020-0440-0110|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-040-0200-0140|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0280-0040|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0320-0090|09/02/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "highlands|C-22-37-30-050-0480-0190|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0500-0030|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0510-0100|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0540-0190|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0550-0220|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-060-0240-0130|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-070-0870-0060|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-070-0890-0120|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0690-0070|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0690-0090|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0720-0200|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0760-0180|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-080-0890-0340|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-090-0570-0150|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-090-0770-0230|09/02/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "highlands|C-22-37-30-110-1040-0150|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-110-1080-0200|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-120-1060-0040|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-160-1660-0060|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-170-1740-0050|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-170-1750-0190|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-170-1770-0050|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-010-0000-3841|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-050-0010-0230|09/02/2026": [
+      "status: Redeemed"
+    ],
+    "highlands|C-24-35-28-050-0050-0020|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-100-009A-0180|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-0050-014C|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-0060-0240|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-0060-0400|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-007A-0300|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-007A-0460|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-101-009A-0210|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-120-0160-0140|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-150-0460-0070|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-160-0530-0370|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-180-0830-0050|09/02/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-020-0460-0180|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-020-0650-0080|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-040-0260-0050|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-050-0320-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-050-0470-0040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-050-0500-0040|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0500-0080|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-050-0550-0210|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-050-0680-0140|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-060-0230-0210|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-060-0550-0060|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-060-0620-0070|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-22-37-30-070-0680-0220|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-070-0890-0140|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-070-0910-0220|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-080-0510-0020|09/16/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "highlands|C-22-37-30-080-0690-0080|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-080-0700-0180|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-080-0890-0050|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-090-0790-0070|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-090-0810-0270|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-110-0950-0060|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-110-1040-0590|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-110-1080-0220|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-160-1660-0330|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-160-1660-0350|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-160-1680-0390|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-170-1760-0040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-170-1770-0070|09/16/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "highlands|C-22-37-30-190-2190-0540|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-191-1840-0090|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-400-0070-0130|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-22-37-30-400-0090-0140|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-040-0040-0050|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-100-009A-0580|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-101-0050-014D|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-101-0060-0270|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-101-009B-1310|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-101-009B-1360|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-101-009B-1410|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-24-35-28-121-0100-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-160-0530-0600|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-24-35-28-180-0830-0190|09/16/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-100-1700-0120|10/07/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-1890-0520|10/07/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-1900-0540|10/07/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-1950-0230|10/07/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-1960-0200|10/07/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-2000-0250|10/07/2026": [
+      "missing assessed value"
+    ],
+    "highlands|C-04-34-28-110-2020-0030|10/07/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "highlands|C-04-34-28-110-2070-0320|10/07/2026": [
+      "missing assessed value",
+      "status: Canceled per County"
+    ],
+    "hillsborough|0343300000|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0380970048|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0541912406|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0767387664|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0856105604|08/20/2026": [
+      "missing assessed value",
+      "status: Canceled per Bankruptcy"
+    ],
+    "hillsborough|0870981662|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1392470100|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1488340000|08/20/2026": [
+      "status: Canceled per Bankruptcy"
+    ],
+    "hillsborough|1588360000|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|2043780000|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|2051190000|08/20/2026": [
+      "opening bid <= 0"
+    ],
+    "hillsborough|0026801148|08/27/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0242025110|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0592270300|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1142930376|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1368870500|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1417800000|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1589930000|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1749640000|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1807390000|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0353240000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0431800000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0592511932|09/03/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0789910000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0792910000|09/03/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0809931002|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0850985032|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0911920080|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1107920000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1535810000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|183224196000021000010U|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|2040250000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0509940000|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|1206130000|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1293756234|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|1388230100|09/17/2026": [
+      "missing assessed value"
+    ],
+    "hillsborough|1592380000|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1764070005|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0370965252|09/24/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0744840200|09/24/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0773610534|09/24/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0347563982|10/01/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0382556022|10/01/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|2051604900|10/01/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0140840128|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0395340000|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0430890000|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0435870000|10/08/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|0714332240|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0816500100|10/08/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "hillsborough|1881620000|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|1887600000|10/08/2026": [
+      "status: Redeemed"
+    ],
+    "hillsborough|0014440000|10/15/2026": [
+      "missing assessed value"
+    ],
+    "indianriver|33392600015000000007.0|08/25/2026": [
+      "status: Canceled per County"
+    ],
+    "jackson|01-6N-12-0000-0250-0000|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "jackson|02-2N-11-0083-00V0-0010|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "lee|11-45-26-06-00065.0230|08/25/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|36-44-26-13-00120.0010|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "lee|01-44-22-C3-05227.0030|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-48-25-B2-00200.0790|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-48-25-B4-02911.0201|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|03-44-27-01-0000C.0040|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|05-44-27-03-00160.0060|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|06-46-24-32-00000.0610|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|07-44-23-C2-04131.0360|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|07-45-24-C2-05300.0100|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|10-45-22-05-00000.2920|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|10-45-23-C4-03377.0170|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|11-44-24-22-00000.0040|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|11-45-26-07-00072.0170|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|12-45-23-C3-02200.0090|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|14-44-23-C3-00100.2020|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|14-44-23-C3-00100.2060|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|16-45-23-C2-0100B.0203|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|19-46-22-T2-00500.0740|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|20-46-25-00-00017.0110|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|25-43-22-C2-05185.0290|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|25-43-22-C3-05184.0290|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|26-43-24-04-00000.0700|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|26-44-23-C2-03081.0390|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|27-44-23-C1-04414.0630|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|27-45-24-34-00105.1010|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|27-47-25-B2-00412.0020|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|28-44-27-03-00011.0200|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|29-43-26-05-00089.0200|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|30-43-26-01-00002.0310|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|31-43-23-C4-04315.0030|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|31-45-24-55-00004.0103|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|32-43-23-C4-04093.0470|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|33-43-23-C1-03853.0010|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "lee|33-44-23-C1-05890.0320|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-44-27-L1-12048.0040|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|01-46-23-06-00004.0560|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-46-23-06-00016.2220|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-46-23-06-00018.2530|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|01-46-23-06-00022.3130|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|01-46-23-21-00003.1565|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|02-44-23-C2-02623.0110|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-44-27-15-00057.0160|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|02-45-26-06-00051.0130|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|03-44-27-00-00002.0580|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-44-27-05-00015.0120|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-44-27-07-00025.0100|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|03-44-27-12-00041.0070|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-45-26-12-00111.0040|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-47-24-W1-05600.4810|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|04-44-23-C2-03800.0350|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|04-44-23-C4-03828.0080|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|04-44-27-10-00069.0050|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|04-44-27-10-00069.0060|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|05-45-26-06-00001.0310|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "lee|06-44-23-C3-04211.0450|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|06-44-23-C4-04217.0310|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|06-44-23-C4-04226.0250|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|06-44-27-02-00238.0010|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|06-44-27-03-00239.0060|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|06-44-27-10-00276.0030|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|07-43-23-C4-06080.0010|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|08-44-22-01-0000B.0350|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|08-44-23-C1-03991.0200|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|10-45-26-03-00034.0240|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|11-45-23-C4-01713.0090|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|12-45-26-06-00063.0100|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "lee|12-46-24-05-00000.9047|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|13-43-22-C3-05454.0450|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-43-22-C3-05462.0050|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-45-26-01-00003.0040|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|16-44-27-02-00008.0230|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|18-43-23-C1-05495.0070|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|18-43-23-C4-05509.0310|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|19-44-25-P1-00209.0010|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|19-44-25-P2-005J0.0160|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|20-46-23-T4-04100.0070|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|21-45-27-07-00033.0050|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-16-00112.0110|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|22-44-23-C4-04436.0030|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|22-45-27-L3-13082.0050|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|24-43-24-03-00017.0430|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|24-46-22-T3-0010D.0040|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-22-C1-05189.0030|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-22-C2-05199.0280|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-22-C3-05179.0500|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-23-C3-02342.0250|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|27-43-23-C2-02995.0290|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|27-43-24-02-00009.0270|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|28-43-23-C4-05083.0340|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|34-43-23-C1-02942.B080|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|34-43-24-02-00028.0230|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-43-23-C1-02732.0130|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-43-23-C3-02707.0130|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-44-26-11-00097.0020|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-23-C3-02484.0150|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-27-L3-01001.0380|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-27-L3-01003.0110|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-27-L3-01004.0070|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-27-L3-01005.0190|09/15/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-44-26-07-00058.0120|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-45-26-02-00020.0130|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|01-45-26-07-00077.0020|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|01-45-26-11-00118.0130|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-44-23-C3-02671.0330|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|02-44-23-C3-02678.0160|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-44-27-L1-11042.0060|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-45-26-04-00030.0110|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-45-26-06-00057.0100|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-45-26-07-00060.0100|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|02-45-26-09-00090.0050|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-44-23-C2-02903.0090|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-45-26-L3-12106.0050|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-45-26-L3-12106.0060|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|04-45-26-01-00009.0080|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|10-45-26-04-00055.0040|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|10-45-26-04-00058.0100|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|11-45-26-10-00089.0020|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|12-44-27-11-00042.0030|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|12-44-27-12-00047.0190|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|12-44-27-12-00048.0190|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|12-45-26-05-00052.0050|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|13-43-22-C3-05454.0140|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-27-02-00007.0070|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|13-44-27-02-00007.0110|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-27-03-00010.0200|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-27-06-00015.0140|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-27-07-00034.0180|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|13-45-26-01-00005.0060|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-45-26-02-00018.0090|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|21-45-27-14-00095.0020|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-L2-02009.0090|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-L2-02009.0100|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-L2-02010.0060|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|22-45-27-L1-01003.0250|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|24-43-22-C1-05435.0310|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|24-43-22-C4-05410.0290|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-22-C3-05178.0050|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|25-43-23-C2-02313.0190|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|26-43-23-C3-02762.0130|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|27-43-23-C3-02991.0320|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|27-43-23-C3-02998.0410|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|28-43-23-C1-05103.0010|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|28-43-23-C2-05120.0450|09/22/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-43-23-C4-02721.0100|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|35-44-26-12-00111.0050|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|02-44-27-L1-07028.0090|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|08-44-27-L3-04016.0080|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|11-44-27-L1-12045.013B|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|11-44-27-L2-09035.024A|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|11-44-27-L3-05017.001B|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|11-45-23-C4-0120B.2010|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|12-44-27-11-00041.013A|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|13-44-27-07-00035.001A|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|18-44-25-P4-002K0.0100|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|19-44-25-P3-00916.0050|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-L2-05024.0120|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|21-45-27-L2-09045.0020|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-45-27-L2-10053.0070|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|22-45-27-L1-01005.0210|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-43-23-C4-02305.0200|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|25-43-24-02-00000.1710|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|34-43-23-C3-02910.0190|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-27-L3-01012.0380|09/29/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-44-27-12-00048.0170|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|01-45-27-L4-09052.0090|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-45-27-L3-12080.0080|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|07-45-27-L1-01005.0170|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|10-44-24-00-00026.0000|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-45-27-L4-09049.0160|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-44-27-10-00037.0050|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-44-27-10-00040.0050|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-44-27-12-00047.0160|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|15-44-27-09-00034.0210|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|17-44-27-01-00003.0030|10/06/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-44-26-01-00008.0140|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|02-44-26-07-00066.0050|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|03-44-26-13-00074.0170|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|11-44-26-01-00005.0030|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|11-44-26-10-00092.0140|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|12-44-26-07-00066.0190|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|12-44-27-07-00025.0180|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-01-00011.0080|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-06-00056.0200|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-10-00099.0080|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-10-00099.0090|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-10-00103.0240|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|13-44-26-11-00110.0190|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-44-26-01-00002.0010|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-44-26-03-00028.0100|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|14-45-27-05-00028.0250|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|16-46-25-07-00103.0060|10/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|19-43-26-04-0000D.021D|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|19-46-24-00-00010.0000|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|21-47-25-B3-0300E.0102|10/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|22-45-27-L1-02010.0010|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|22-45-27-L1-02010.0120|10/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|25-44-25-P2-00300.0080|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-45-27-05-00030.0030|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-45-27-05-00030.0040|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-45-27-07-00042.0110|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|25-45-27-09-00054.0190|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|26-45-21-26-0000C.3030|10/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "lee|26-47-25-B3-00541.0000|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|29-43-26-06-00067.0120|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|32-44-25-P4-19000.2260|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|34-45-24-02-00000.0230|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-44-26-03-00022.0100|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-44-26-03-00023.0010|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|35-44-27-07-00027.0230|10/20/2026": [
+      "missing assessed value"
+    ],
+    "lee|36-43-23-C3-02500.0170|10/20/2026": [
+      "missing assessed value"
+    ],
+    "leon|110250T0040|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|121905B0170|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2115350000120|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2116080000110|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2116080000150|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|211718E0440|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2122200190000|08/19/2026": [
+      "status: Canceled per County"
+    ],
+    "leon|212224A0140|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2125202240000|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2126150000020|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|2127320000560|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|213061C0580|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "leon|2236202320000|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|410156C0070|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "leon|410255B0090|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|411315E0200|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|4126130000180|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|4126130000470|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|4308200080000|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "leon|110250CD0150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|1109204470000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|1115202000000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|1618204680000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|1635202410000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|210370E0220|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|210610A0010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|210650D0310|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|2115450000040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|2116080000130|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|2121210066020|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|2121320080010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212525A0090|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212528A0080|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212635N0040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212635N0090|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212635N0210|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212645A0440|09/16/2026": [
+      "missing assessed value"
+    ],
+    "leon|212851E0001|09/16/2026": [
+      "missing assessed value"
+    ],
+    "marion|1661-012-004|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|1741-005-006|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-002-020|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-003-012|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-004-009|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-004-021|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-005-018|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2001-005-019|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2003-147-015|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2004-228-036|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2302-010-031|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2303-011-046|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2303-011-082|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2303-014-069|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2304-016-025|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2304-016-031|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2304-016-034|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2304-020-064|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2306-001-096|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2309-117-054|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-125-040|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-126-001|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-126-067|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-204-075|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2311-206-025|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2312-205-045|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-001-033|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-001-036|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-029|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-053|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-059|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-062|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-071|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-004-074|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|3490-056-101|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|39430-14-041|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|39430-22-018|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|39430-30-010|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|8003-0408-08|08/19/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|8005-0786-13|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|8007-1036-31|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|8009-0000-37|08/19/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|8010-0897-32|08/19/2026": [
+      "status: Redeemed"
+    ],
+    "marion|2001-004-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-006-005|09/09/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2001-008-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-015-006|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-019-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-029-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-029-013|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-016|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-042-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-019|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-004|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-026|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-021|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-060-014|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-008|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-012|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-063-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-064-002|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-067-008|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-067-025|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-069-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-003|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-009|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-010|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-075-019|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-010|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-015|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-076-020|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-077-018|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-080-007|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-081-029|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-083-024|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-085-017|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-088-001|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-098-004|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-102-011|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2003-102-012|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2312-022-161|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|4710-155-016|09/09/2026": [
+      "status: Redeemed"
+    ],
+    "marion|8011-1370-26|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1107-14|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1122-13|09/09/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-006-001|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-008-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-008-012|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-009-019|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-013-023|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2001-014-020|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-011-046|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-011-051|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-032-017|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-033-025|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-008|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-031|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-034-032|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-038-017|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-039-009|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-040-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-040-008|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-041-010|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-041-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-043-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-043-015|09/16/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "marion|2002-045-011|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-046-021|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-007|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-052-018|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-053-004|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-001|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-056-019|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-006|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-058-024|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-003|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2002-059-018|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-012-045|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|2313-012-051|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9033-1101-09|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9050-1583-07|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "marion|9050-1584-04|09/16/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "nassau|00-00-31-101G-0001-2169|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "nassau|16-4N-24-0000-0004-0080|09/29/2026": [
+      "missing assessed value"
+    ],
+    "nassau|00-00-31-1800-0161-0080|10/13/2026": [
+      "missing assessed value"
+    ],
+    "nassau|35-4N-25-4220-0002-0020|10/13/2026": [
+      "missing assessed value"
+    ],
+    "nassau|08-3N-24-2380-0103-0110|10/20/2026": [
+      "missing assessed value"
+    ],
+    "nassau|31-2N-28-1601-0062-0000|10/20/2026": [
+      "missing assessed value"
+    ],
+    "nassau|39-2N-27-0000-0001-0020|10/27/2026": [
+      "missing assessed value"
+    ],
+    "nassau|42-2N-27-4613-0008-0010|10/27/2026": [
+      "missing assessed value"
+    ],
+    "orange|132229066844180|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|152128000000221|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|182228712606010|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|182233621700080|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|222232071202270|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|222232071218190|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|222232071218410|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|222232071220505|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|222232071225026|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|252428584400031|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|252428584400991|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|262428000000004|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|332028710600120|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "orange|352327543200940|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|032328657801610|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|222232072820194|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|242232621401470|08/27/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|242232621405050|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|272128980500643|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|272128980900815|08/27/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|272332118108020|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|332028710400780|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "orange|182229860000470|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|182231342100090|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|212027000000010|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|262332117330890|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|272128980500427|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|272230353900090|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|302232233802080|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "orange|022329382801010|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|032329018014160|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|032329018024060|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|152232233601650|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|172231629614090|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|172231629614100|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|262332117311220|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|302228380300213|09/10/2026": [
+      "status: Redeemed"
+    ],
+    "orange|352428435601702|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "orange|032229262802011|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|032329018313040|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|102329372617104|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|102332118427090|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|152232233600890|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|152232233601622|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|332229000000070|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "orange|342329010802132|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "osceola|172629325900010570|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "osceola|252628610005290210|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "osceola|252628610006100460|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "osceola|252628610006500040|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "osceola|252628611815430190|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "osceola|252628612818090080|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "osceola|2725273038000N101N|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "osceola|322530540200012702|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "palmbeach|00-37-41-33-01-001-0010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-26-12-000-0330|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-45-23-16-000-3711|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-45-27-02-007-0280|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-46-10-01-001-0181|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-46-11-07-001-1660|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-46-21-10-000-0703|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-43-44-32-02-000-0240|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|04-37-43-31-01-030-0830|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|04-37-43-31-16-000-0111|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-31-27-004-0060|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|06-43-47-16-08-004-6010|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "palmbeach|06-43-47-17-19-000-0920|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|08-43-45-27-27-000-0230|09/16/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|12-43-46-20-13-013-0130|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|30-42-41-01-07-011-0130|09/16/2026": [
+      "missing assessed value",
+      "status: Canceled per County"
+    ],
+    "palmbeach|38-43-44-21-15-250-0091|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|41-41-43-17-01-133-0010|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|41-41-43-17-01-349-0040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|41-41-43-32-04-000-0010|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|41-41-43-32-04-000-0032|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|46-43-45-34-38-006-2040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|48-37-42-08-03-000-0400|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|50-43-43-23-05-001-0190|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|50-43-43-23-25-002-0510|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|56-43-42-29-02-007-0400|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|56-43-42-29-03-012-0450|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|68-43-42-17-32-000-3070|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|68-43-42-17-38-817-0040|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|73-41-44-04-01-073-0030|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|73-41-44-04-10-014-0040|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|73-41-44-14-46-003-1030|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|74-42-43-11-07-000-1010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-42-43-12-23-000-1500|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|74-43-43-04-05-024-0570|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-04-05-026-0501|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|74-43-43-16-02-035-0080|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-17-01-052-0170|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-17-18-000-2050|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|74-43-43-19-02-005-0060|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-20-07-002-0320|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|74-43-43-22-38-009-9150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-27-50-002-3070|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-34-15-000-1150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-44-03-11-000-0150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-44-09-05-000-5570|09/16/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-37-41-33-03-047-0101|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-40-43-24-00-000-3070|10/14/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "palmbeach|00-41-41-16-00-000-5210|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-41-42-18-00-000-1860|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-41-42-19-00-000-6070|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-41-43-11-00-000-1470|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-41-47-25-02-000-0930|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-41-47-36-03-000-6210|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "palmbeach|00-42-40-27-00-000-3040|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-41-03-11-000-0022|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-42-24-01-000-0632|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-01-05-018-0220|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-23-20-004-0780|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-23-22-006-2110|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-23-22-008-2470|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-23-22-009-2600|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-23-35-010-1960|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-25-03-000-0750|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-28-07-007-1640|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-43-28-24-005-2250|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-29-21-001-3040|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-29-22-017-0010|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-43-30-27-000-0280|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-43-35-16-000-0440|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-44-01-06-002-0040|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-44-14-01-011-0060|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-44-14-50-000-0320|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-44-21-22-000-5210|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-44-25-00-000-6730|10/14/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "palmbeach|00-42-44-25-14-006-0012|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-45-26-21-056-2010|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-45-26-32-002-3010|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-46-02-13-001-2010|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-46-15-25-028-2060|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-46-22-17-008-3720|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-46-23-26-006-2120|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|00-42-47-08-04-007-2860|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-47-22-07-006-0030|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-42-47-30-40-000-0270|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|00-43-42-17-02-001-0120|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|00-43-45-06-03-009-0070|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|04-37-43-31-01-030-0700|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-41-07-002-0251|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-42-03-007-0110|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-42-05-003-0150|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-42-07-002-0181|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|04-37-43-42-07-007-0200|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|08-43-45-33-22-010-1040|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|12-43-46-08-32-000-0810|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|12-43-46-18-64-003-1020|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|12-43-46-18-64-003-1040|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|24-43-47-04-56-002-0050|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|28-43-41-28-21-001-1203|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|30-42-41-03-14-000-0165|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|30-43-41-08-15-000-1100|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|38-43-44-20-01-004-0090|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|40-43-45-03-10-007-0201|10/14/2026": [
+      "status: Redeemed"
+    ],
+    "palmbeach|48-37-42-19-01-000-0260|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|50-43-44-35-13-003-0090|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|56-43-42-22-28-004-0220|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|56-43-42-27-04-000-4670|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|56-43-42-33-11-000-5650|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|62-43-44-35-01-000-0170|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|62-43-44-35-12-000-2070|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|73-41-44-10-06-000-0171|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "palmbeach|73-42-44-08-05-000-0100|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-10-35-002-4020|10/14/2026": [
+      "missing assessed value"
+    ],
+    "palmbeach|74-43-43-15-43-000-0202|10/14/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "pasco|04-24-21-0000-00100-0065|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "pasco|04-26-16-0020-00000-0110|08/27/2026": [
+      "missing assessed value"
+    ],
+    "pasco|04-26-16-0020-00000-0120|08/27/2026": [
+      "missing assessed value"
+    ],
+    "pasco|04-26-16-0020-00000-0130|08/27/2026": [
+      "missing assessed value"
+    ],
+    "pasco|04-26-16-0020-00000-0140|08/27/2026": [
+      "missing assessed value"
+    ],
+    "pasco|08-24-18-0030-00000-1590|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "pasco|10-25-16-0610-00000-7180|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "pasco|11-26-16-0010-01400-0020|08/27/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "pasco|11-26-16-0010-01400-0031|08/27/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "pasco|15-24-16-0010-00600-0130|08/27/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "pasco|16-26-21-0010-05200-0010|08/27/2026": [
+      "status: Canceled per Bankruptcy"
+    ],
+    "pasco|25-24-21-0020-00C00-0000|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "pasco|26-24-21-0120-00000-00B1|08/27/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "pasco|27-24-21-0460-02400-0010|08/27/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "pasco|33-25-21-0010-00800-0040|08/27/2026": [
+      "status: Redeemed"
+    ],
+    "pasco|17-26-16-0550-00000-0260|09/24/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "pasco|28-24-16-0200-00000-0020|09/24/2026": [
+      "missing property address"
+    ],
+    "polk|23-28-09-0000-0004-2370|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|23-29-14-1415-0000-0070|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|23-29-33-1423-8300-0130|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|232736016026000790|08/20/2026": [
+      "status: Canceled per County"
+    ],
+    "polk|24-26-32-1609-4000-0300|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|24-28-29-2477-0000-5040|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-29-18-2857-0000-0021|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-29-23-0000-0001-1050|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|242525000000033190|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|25-26-23-0000-0001-2020|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|25-27-36-3055-0100-0480|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-28-07-3203-0100-0210|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-28-09-3213-2000-1260|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|25-28-21-0000-0001-4070|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|25-28-21-0000-0003-1035|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-30-06-0000-0001-4220|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-30-18-4299-2000-0970|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|25-31-34-4785-0000-1091|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|252824353600004074|08/20/2026": [
+      "status: Canceled per County"
+    ],
+    "polk|26-25-01-4880-3300-0790|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|26-29-15-6885-0301-0950|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|26-30-27-0000-0003-4020|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-11-0000-0003-1080|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-11-7014-0000-0090|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-26-12-7015-0000-1050|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|27-27-04-7250-0100-1290|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-21-7550-0000-6081|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-21-7565-1000-6040|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7820-0000-2030|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7820-0000-2243|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-27-29-7830-0008-7160|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|27-30-35-9285-2000-0861|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|28-27-33-9344-6037-6070|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-28-15-9353-6002-2070|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|28-28-15-9353-6003-2030|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|28-28-18-0000-0002-4010|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-30-01-9390-3005-6011|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-30-18-9472-2000-0450|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|28-31-21-0000-0003-2050|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|28-31-22-0000-0004-1030|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|282707000000031050|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|29-30-22-9999-9700-4810|08/20/2026": [
+      "status: Redeemed"
+    ],
+    "polk|30-31-04-9941-0003-3001|08/20/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|303102000000022160|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|303103000000022050|08/20/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|23-28-10-0256-0000-0431|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|23-28-12-0510-0000-3170|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "polk|23-29-12-0000-0001-3080|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-28-09-1755-0002-4110|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-28-21-2393-0000-1030|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-28-22-0000-0002-3010|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|242524000000012180|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000013320|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000014200|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000014250|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000021090|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000022320|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000022390|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000024100|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000032160|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000032230|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000034170|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000042030|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242524000000044030|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242525000000011240|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242525000000012010|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|242525000000012300|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "polk|25-26-32-0000-0001-3050|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "polk|24-25-14-0000-0002-1040|10/15/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "putnam|02-10-24-4075-2250-0030|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0110-0180|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0120-0080|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0150-0050|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0050-0240|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0060-0240|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0060-0300|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0060-0310|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9025-0030-0290|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9025-0030-0310|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9030-0080-0340|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9030-0080-0370|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9030-0080-0380|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-12-27-0000-0160-0010|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4927-0020-0180|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|05-10-24-4927-0060-0430|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4928-0050-0080|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4928-0050-0580|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0010-0160|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0030-0050|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0030-0060|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0030-0070|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0060|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0070|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0080|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0090|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0100|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0110|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0120|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0130|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0140|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0150|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0040-0160|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0080-0130|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0100-0150|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0100-0250|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0100-0260|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-9045-0080-0150|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0190-0200|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0190-0210|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0190-0220|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0190-0230|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0200-0320|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0200-0330|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0200-0340|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0200-0350|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0210-0180|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0210-0200|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0220-0030|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-25-4082-0010-0230|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0080-0030|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-11-26-8244-0400-0110|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|15-10-24-4050-0020-0390|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-09-27-0000-0100-0010|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-10-24-1520-0020-0270|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-08-25-5106-6150-0100|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|19-08-25-5106-6060-0050|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|19-08-25-5109-9020-0020|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-10-24-4061-0130-0120|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-10-24-4061-0130-0130|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0460-0190|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0510-0210|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|25-09-24-4075-0900-0050|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|34-10-23-4520-0060-0030|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-08-27-8152-0160-0070|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7061-0460-0390|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|37-13-27-7061-0460-0400|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|37-13-27-7063-1100-0060|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7063-1100-0090|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|38-12-26-0000-0040-0002|08/19/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|39-10-27-7750-0110-0170|08/19/2026": [
+      "missing assessed value"
+    ],
+    "putnam|01-10-26-1470-0020-0180|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|01-10-26-7200-0090-0050|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-10-24-4075-1870-0070|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-12-27-0000-0240-0002|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-12-27-5571-0000-0120|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5532-0050-0140|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-25-4077-0210-0080|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-11-26-0000-8888-1056|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-11-26-0000-8888-1083|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-11-26-0000-8888-1127|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-13-27-9020-0000-0171|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7061-0500-0160|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7063-1320-0080|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-10-24-4075-2370-0120|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-24-4075-2500-0140|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|12-10-26-2670-0000-0010|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|12-11-26-8241-0310-0150|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-08-24-5104-1120-0230|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-08-24-5104-1130-0240|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-08-24-5104-1140-0090|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-10-23-9314-0010-0410|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-10-23-9314-0010-0420|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|16-10-24-4066-0190-0060|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|16-10-24-4066-0210-0080|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|18-10-24-1650-0010-1090|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-10-24-5112-0030-0430|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|21-10-27-0000-0490-0000|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|22-10-26-5470-0050-0010|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|22-10-26-5470-0070-0100|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-10-23-0000-0450-0000|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-10-24-4062-0020-0110|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0320-0260|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|29-09-26-0000-0030-0000|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|31-12-26-0000-0025-0030|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|31-12-28-0000-0590-0020|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|34-09-24-3245-0110-0240|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|35-08-27-8151-0000-6300|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-09-24-4076-0110-0020|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|35-09-24-4076-0490-0220|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|36-09-24-4076-0260-0230|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7063-1230-0070|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7063-1280-0050|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7063-1280-0220|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0060-0010|08/26/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-2520-0800|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|49-09-27-0220-0030-0081|08/26/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|01-13-26-4910-0070-1950|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-10-26-0000-0960-0000|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-12-27-1829-0300-0270|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-2570-0010-0410|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0110-0190|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0120-0090|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0120-0100|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-09-27-0000-0021-1460|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5531-0050-0510|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5540-0020-0100|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0040-0330|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0040-0440|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9030-0020-0550|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9035-0010-0890|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9035-0010-1010|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4925-0050-0350|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4925-0080-0010|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4930-0030-0500|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0050-0290|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0070-0250|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-13-27-4910-0060-1320|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-13-27-4910-0060-1730|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-1650-0150-0020|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7072-0220-0200|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-13-27-7060-0130-0190|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-13-27-7060-0320-0090|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-13-27-7062-0760-0090|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0060-0240|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0060-0250|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0060-0260|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0060-0270|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0070-0180|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-24-6782-0080-0060|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7061-0480-0030|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7063-1320-0240|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7063-1320-0260|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|09-10-24-0351-0060-0150|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-10-23-9303-0110-0260|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-11-26-8243-0320-0720|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-23-1660-0030-0330|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-23-1660-0040-0260|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-24-4079-0130-0100|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-11-26-8240-0060-0190|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-10-26-5630-0010-0150|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-08-24-5102-0061-0110|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-10-24-4070-0070-0010|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-12-26-0000-0011-0100|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-09-23-4920-0090-0000|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-08-25-5106-6180-0150|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-09-23-4020-0060-0010|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-10-24-5112-0010-0050|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-13-28-3343-0080-0030|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|22-10-23-0000-0610-0000|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|22-10-23-0000-0624-0000|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0220-0060|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0260-0170|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-09-24-4075-0380-0040|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-12-27-3350-0950-0001|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|25-08-25-0000-0100-0020|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|31-10-27-8251-0020-1270|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|32-11-27-0170-0170-0051|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|34-09-24-8630-0000-1660|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-09-24-4075-1560-0280|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-10-26-6850-3240-0150|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-13-27-7061-0620-0260|09/02/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|39-11-26-0000-0050-0050|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-11-26-9230-0140-0030|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|41-13-26-1320-0060-0140|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0330-0010|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0620-0050|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-2640-0013|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|43-10-27-8255-0050-0080|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|43-10-27-8255-0100-0140|09/02/2026": [
+      "missing assessed value"
+    ],
+    "putnam|49-09-27-0015-0000-0180|09/02/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|01-10-23-5740-0090-0090|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|01-10-24-4075-2040-0130|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|01-10-26-0000-0180-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|01-13-26-0000-0020-0010|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|02-10-24-4075-1880-0180|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|02-10-24-4075-1890-0240|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-10-24-4075-1900-0280|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-10-24-4075-2130-0050|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-10-26-8520-0000-0560|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-10-24-9070-0130-0020|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|03-12-27-0000-0330-0010|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|04-10-24-6450-0040-0340|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-11-26-0000-8888-0986|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-13-27-4910-0040-0170|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-13-27-4910-0040-0820|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-1650-0150-0030|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-4211-0060-0160|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7070-0020-0210|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-24-7070-0040-0240|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-10-25-4095-0010-0030|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|07-13-27-7060-0250-0180|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7061-0560-0180|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|09-09-23-0000-0510-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|09-10-24-4067-0240-0240|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-10-26-0000-0300-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-11-26-8243-0320-0710|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-24-0000-0030-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-24-4075-2450-0490|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-24-4075-2600-0150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-26-7970-0000-0050|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-12-26-2730-0000-4930|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-09-24-4075-0100-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-10-26-2550-0020-0070|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|15-10-26-0000-0080-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|16-10-24-4066-0210-0250|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-10-23-7075-0040-0020|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-09-26-0000-0020-0033|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-10-24-1650-0040-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-10-24-4860-0040-0400|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-10-24-6520-0040-0390|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|21-10-27-0000-0270-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|22-10-23-0000-0210-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|22-10-23-0000-0880-0010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-08-27-0000-0061-0060|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|23-12-26-0000-0020-0013|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-10-23-4074-0600-0140|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-12-27-0000-0120-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-12-27-0540-0000-0370|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-12-27-3350-1100-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|25-09-24-4075-0910-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|27-10-23-0000-0330-0000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|31-10-26-0000-8888-1427|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|31-10-27-8251-0020-1390|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|32-10-26-8179-1850-0220|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|32-11-27-0170-0010-0033|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|33-09-25-4077-0220-0440|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|33-10-26-8177-0180-0150|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|34-09-24-8630-0000-1479|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-10-23-0000-0014-0020|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-10-26-6850-3230-0020|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-10-26-6850-3420-0090|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|37-11-27-8254-0010-0740|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|37-13-27-7061-0620-0270|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-11-26-0000-0052-0010|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|41-12-26-8792-0000-3000|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0070-0030|09/16/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|42-10-27-6850-2200-0800|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|43-10-27-8252-0140-0130|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|49-09-27-0220-0040-0100|09/16/2026": [
+      "missing assessed value"
+    ],
+    "putnam|02-11-23-0000-0060-0010|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5532-0110-0170|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5532-0110-0180|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-5540-0070-0380|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0010-0100|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0010-0110|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-6450-0010-0470|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9035-0080-0010|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|04-10-24-9040-0110-0170|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-24-4940-0070-0500|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-10-27-9570-0020-0040|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|05-11-26-0000-8888-0017|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|06-13-27-4910-0060-1830|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-10-26-0000-0170-0000|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|08-13-27-7061-0490-0370|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|09-10-24-4068-0460-0030|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|11-11-26-8243-0170-0010|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-09-24-0000-0041-0020|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-26-6620-0000-0160|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-10-26-8450-0000-0800|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|12-11-26-8240-0160-0070|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-10-24-4080-0020-0150|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-10-26-6550-0050-0040|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|13-11-26-8244-0340-0070|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|14-08-24-5100-0090-0040|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-09-27-0000-0120-0000|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|17-10-24-1520-0040-0230|09/30/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|17-11-23-4090-1080-0020|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-08-25-5106-6120-0080|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-08-25-5106-6120-0310|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-08-25-5106-6130-0320|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|18-12-27-4941-0020-0120|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|19-08-25-5109-9020-0080|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|19-09-23-9370-0000-0038|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|19-10-24-4074-0310-0250|09/30/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|20-10-24-4074-0180-0070|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|20-10-24-4074-0180-0080|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|20-10-24-4074-0270-0160|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|21-10-23-0000-0130-0000|09/30/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|21-10-23-3646-0000-0010|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|21-10-26-0000-0060-0020|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-09-24-4076-1140-0180|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|23-12-27-0000-0110-0050|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-08-24-5100-0180-0060|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|24-12-27-3350-1370-0060|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|26-08-27-8152-0090-0240|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|26-10-23-0000-0160-0011|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|30-08-27-0750-0320-0020|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|30-12-28-1750-0120-0030|09/30/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "putnam|31-10-26-0000-8888-1610|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-09-24-4075-1820-0020|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-09-24-4076-0110-0040|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|35-09-24-4076-0360-0120|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|36-09-24-4075-1310-0240|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-11-26-8231-0120-0110|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-11-26-8470-0110-0201|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-11-26-8470-0210-0100|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|39-13-26-0000-0010-0280|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|41-13-26-0000-0260-0000|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|41-13-26-5500-0000-0011|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0160-0011|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-0630-0051|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-2610-0040|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|42-10-27-6850-3100-0110|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|43-10-27-8252-0080-0200|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|43-10-27-8252-0130-0170|09/30/2026": [
+      "missing assessed value"
+    ],
+    "putnam|48-10-27-4570-0030-0070|09/30/2026": [
+      "missing assessed value"
+    ],
+    "santarosa|03-2S-27-0000-00441-0000|08/24/2026": [
+      "status: Redeemed"
+    ],
+    "santarosa|12-1N-29-0000-01000-0000|08/24/2026": [
+      "status: Redeemed"
+    ],
+    "santarosa|41-5N-29-1970-00A00-0320|08/24/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "santarosa|06-1N-26-0000-00118-0000|08/31/2026": [
+      "status: Redeemed"
+    ],
+    "santarosa|13-1N-28-0000-02808-0000|08/31/2026": [
+      "status: Redeemed"
+    ],
+    "santarosa|15-5N-29-0000-00402-0000|08/31/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "santarosa|28-2S-26-9180-00500-0017|08/31/2026": [
+      "status: Redeemed"
+    ],
+    "santarosa|39-1S-27-0000-02128-0000|08/31/2026": [
+      "status: Redeemed"
+    ],
+    "seminole|08-21-29-508-0A00-0020|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|13-20-29-514-0700-3290|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|13-21-29-521-0000-2310|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|13-21-31-5PW-0000-0600|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|19-20-30-522-0000-0670|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|20-21-30-504-0000-0330|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|21-21-29-517-0200-0150|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|23-21-29-516-0000-048K|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|26-19-30-504-0000-0010|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|34-21-30-530-0000-1110|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|36-19-29-5NH-0000-0230|09/10/2026": [
+      "missing assessed value"
+    ],
+    "seminole|36-19-30-524-0400-0170|09/10/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|10-21-29-528-1300-1030|10/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|11-21-31-504-0B00-0150|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|14-21-29-5SB-0200-2080|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|15-21-29-509-1700-0080|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|17-21-29-5BG-0000-018A|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|20-20-30-502-0C00-0090|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|20-21-30-503-0F00-0030|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|21-21-32-5CF-4400-0080|10/15/2026": [
+      "missing assessed value"
+    ],
+    "seminole|25-19-30-5AG-0X00-0050|10/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|31-20-30-501-0000-0560|10/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "seminole|36-19-30-542-0000-013A|10/15/2026": [
+      "missing assessed value"
+    ],
+    "suwannee|11787000000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "suwannee|1437000001|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|1460830210|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "suwannee|2220000000|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|2710000000|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|2823005000|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|5293010100|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "suwannee|9386120010|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|9391120410|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|9415170290|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|9446100060|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|9474160210|09/03/2026": [
+      "missing property address"
+    ],
+    "suwannee|9873002000|09/03/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|32080101B270|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|422014000010|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|422530016500|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|424219380030|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|424415000470|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|521120000320|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|531631004050|09/01/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|531631004090|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|533934000030|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|611001240230|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|634003010070|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|700866000050|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|703301030080|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|731706000130|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|803432110150|09/01/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|844702020231|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|911103001110|09/01/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "volusia|323102000350|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|420333002050|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521119000170|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521205000800|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|53270805V030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533801150033|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533832000410|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533841000100|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533859020030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533863000070|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533883000140|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533884000030|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533888000240|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533898010240|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533901030011|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533978000220|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|534005030015|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|613201160120|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|700803020150|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701631020200|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|741908000040|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|742603012100|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|793601000420|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "volusia|803605050123|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813055270060|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|920701000020|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|950400000012|09/15/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|323107000020|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|323107000170|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|423317010150|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424228040300|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424288001020|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|480300000015|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523818020150|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523913000241|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531623000080|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|53270802F040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|5327100121B3|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533862000510|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533876020260|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|533939020030|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533958010010|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533978000480|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|5339A7002040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|534032000140|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|631307011050|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|633708010090|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|634103000040|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|721201020041|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|732607000010|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|734306001031|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|740410200041|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|744006160290|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|840201064850|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|910603090030|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|950400000016|09/29/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|323430000010|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|412505001540|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424208010030|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424220110410|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424222220100|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|483401040050|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|520806007750|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521119000670|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523705000820|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|523812001050|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523822000390|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|523907310060|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|530917000150|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533748010102|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533801110087|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533961000080|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|631202000020|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|631618290050|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701702010050|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701714060070|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|741808170140|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|803411130310|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|803421150080|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813019050050|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813044230030|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "volusia|813069010020|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|950400000015|10/06/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|313601180010|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|322102000690|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|322112020040|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|412301000310|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|42251600D100|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|422517000161|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|422522005880|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|424294000240|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|521901003310|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|522209000440|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|530952002060|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|531631008220|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|5327100115B2|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|533978000280|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|602903030080|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|613201120260|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|630242000504|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|632300000130|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|633013003070|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|641936008403|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|700603001080|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701534000080|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|701800000440|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|801403110050|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|802303000220|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|803405060020|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|803605050124|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813024030080|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813065130050|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813074040060|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|813074050040|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|840500000120|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "volusia|853000000110|10/13/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "washington|00000000-00-6184-0004|08/25/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "washington|00000000-02-0250-0019|08/25/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-04-1642-0007|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-08-0485-0010|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-08-0523-0026|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-06-0407-0005|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-06-0411-0022|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "washington|00000000-06-0348-0005|10/06/2026": [
+      "status: Redeemed"
+    ]
+  },
+  "changes": {},
+  "excluded_foreclosure": 0,
+  "county_errors": {},
+  "county_warnings": {
+    "brevard": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "gulf": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "lake": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "martin": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "monroe": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "pinellas": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "volusia": [
+      "auction 08/25/2026: page loaded but no auction items parsed (structure change?)"
+    ]
+  },
+  "report": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-08-19T135419Z/tax_deed_scrub.xlsx"
+}
