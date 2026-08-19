@@ -339,6 +339,15 @@ def parse_auction_items(html: str, page_url: str, county: str, sale_date: str) -
                 link = value_cell.find("a", href=True)
                 if link:
                     rec.appraiser_url = urljoin(page_url, link["href"])
+            elif attr == "case_number":
+                # Several counties hyperlink the case number straight to the
+                # clerk's tax deed record/PDF (Volusia:
+                # app02.clerk.org/or_td/pdf_taxdeed.aspx?id=...). That's the
+                # only case-file link we get for counties with no clerk-portal
+                # resolver, so keep whatever the auction page publishes.
+                link = value_cell.find("a", href=True)
+                if link and not link["href"].lower().startswith("javascript:"):
+                    rec.clerk_case_url = urljoin(page_url, link["href"])
             last_attr = attr
 
         # Status/time box that sits beside the details table.

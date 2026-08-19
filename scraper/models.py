@@ -24,6 +24,7 @@ class AuctionRecord:
     auction_status: str = ""       # free text from the status box, if any
     auction_url: str = ""          # the preview page this row came from
     appraiser_url: str = ""        # parcel link captured from the site or template
+    clerk_case_url: str = ""       # clerk case/deed link when the auction page publishes one
     source_host: str = ""          # e.g. www.volusia.realtaxdeed.com
     scraped_at: str = ""           # ISO timestamp (UTC)
     raw_fields: dict = field(default_factory=dict)  # every label/value pair seen
@@ -60,6 +61,7 @@ CSV_COLUMNS = [
     "auction_type",
     "auction_url",
     "appraiser_url",
+    "clerk_case_url",
     "source_host",
     "scraped_at",
 ]

@@ -69,7 +69,8 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
       "appraiser_url": "http://...",             // county property appraiser record, may be ""
       "lat": 29.648251, "lng": -81.637149,       // parcel coordinates; null when unresolved
 
-      // --- clerk case file (present only once the scrub resolves one) ---
+      // --- clerk case file (from the scrub, or from the auction page itself
+      //     where the county hyperlinks the case number to the clerk record) ---
       "clerk_case_url": "https://...",           // THIS parcel's case record at the clerk
       "deed_status": "RESCHED",                  // clerk's status for the tax deed
       "applicant": "JOCALBRO INC ...",           // who applied for the deed (forced the sale)
@@ -115,7 +116,11 @@ themselves, not a code change. See `docs/LOGIN_SETUP.md` for team onboarding.
 MATCH/REVIEW parcels and gathers, per parcel:
 
 1. **County appraiser record** — owner, mailing address, land use, acreage.
-2. **Clerk case file** (`scraper/clerk.py`) — resolves the parcel to *its own* case
+2. **Clerk case file** — some counties (Volusia among them) hyperlink the case
+   number on the auction page straight to the clerk's tax deed record; the
+   scraper keeps that link, which is the only case-file link available where no
+   portal resolver exists. Where a resolver does exist, `scraper/clerk.py`
+   resolves the parcel to *its own* case
    record, not the county's tax-deed page. One resolver per portal platform:
    `realtdm` (RealAuction's clerk module — index the public case list, then link
    `…/cases/getCase/caseid/<id>`), `taxsmart` (Pioneer — `…/Home/Details?id=<id>`),
