@@ -121,6 +121,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/runs data/exports
           git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
+          # The discovery step rewrites this tracked file. Stage it with the run
+          # (it IS part of the refresh) — and leaving it unstaged used to wedge
+          # the rebase below with "cannot rebase: You have unstaged changes".
+          git add -f config/counties.json 2>/dev/null || true
           git commit -m "Data refresh: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
           # Anything pushed to the branch while the scrape was running (another
           # run, or a person) rejects this push. Rebase onto the new tip and try
@@ -129,15 +133,19 @@ jobs:
           # "theirs" is the commit being replayed, i.e. ours, and the fresher
           # scrape is the one worth keeping.
           pushed=0
-          for attempt in 1 2 3 4 5; do
+          for attempt in 1 2 3 4 5 6 7 8; do
             if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
             echo "push rejected (attempt $attempt) — rebasing onto the latest tip"
             git fetch origin "${{ github.ref_name }}" || true
-            git rebase -X theirs "origin/${{ github.ref_name }}" || git rebase --abort || true
-            sleep $((attempt * 5))
+            # --autostash so a stray unstaged file (debug output, a regenerated
+            # config) can never stop the rebase and strand an hour of scraping.
+            if ! git rebase --autostash -X theirs "origin/${{ github.ref_name }}"; then
+              git rebase --abort 2>/dev/null || true
+            fi
+            sleep $((attempt * 10))
           done
           if [ "$pushed" != 1 ]; then
-            echo "::error::could not push run data after 5 attempts"
+            echo "::error::could not push run data after 8 attempts"
             exit 1
           fi
           # Token-authored pushes don't fire push-triggered workflows, so

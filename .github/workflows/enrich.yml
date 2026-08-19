@@ -74,11 +74,15 @@ jobs:
           git add -f data/enrichment.json data/geocache.json 2>/dev/null || true
           git commit -m "Nightly enrichment: deeper verification coverage" || { echo "nothing new"; exit 0; }
           pushed=0
-          for attempt in 1 2 3 4 5; do
+          for attempt in 1 2 3 4 5 6 7 8; do
             if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
+            echo "push rejected (attempt $attempt) — rebasing onto the latest tip"
             git fetch origin "${{ github.ref_name }}" || true
-            git rebase -X theirs "origin/${{ github.ref_name }}" || git rebase --abort || true
-            sleep $((attempt * 5))
+            # --autostash: an unstaged leftover must never wedge the rebase.
+            if ! git rebase --autostash -X theirs "origin/${{ github.ref_name }}"; then
+              git rebase --abort 2>/dev/null || true
+            fi
+            sleep $((attempt * 10))
           done
           [ "$pushed" = 1 ] || { echo "::error::push failed after retries"; exit 1; }
           gh workflow run pages.yml --ref "${{ github.ref_name }}" || true
