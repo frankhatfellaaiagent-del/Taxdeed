@@ -527,8 +527,8 @@ const normSort = (s) => (SORT_KEYS.has(s) ? s : "soonest");
 // "My preferred types first" ranks by whether a row matches your buy box /
 // preferred types, then falls back to soonest auction within each group.
 function typeRank(p) {
-  const t = getInt(p.id).type;
-  if (t && prefs.myTypes[t]) return 0;   // manually tagged as a preferred type
+  const t = effType(p);
+  if (t && prefs.myTypes[t]) return 0;   // one of your preferred property types
   if (p.buybox === "MATCH") return 1;     // scrub's land-use match
   if (p.buybox === "REVIEW") return 2;
   return 3;
@@ -919,9 +919,6 @@ function renderDetail() {
     [appraiserLink(p), `${esc(p.county)} Property Appraiser`],
     [p.auctionUrl, "Live auction listing (RealAuction)"],
     [clerkLink(p), p.caseUrl ? "This parcel&rsquo;s clerk case file" : "Tax deed case records (county)"],
-    [ll ? `https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd&center=${p.lng},${p.lat}&level=16`
-        : hasAddr ? "https://msc.fema.gov/portal/search?AddressQuery=" + mapQ
-        : gsearch(`FEMA flood map ${p.county} county FL parcel ${p.parcel}`), "FEMA flood map"],
     // The FWS Wetlands Mapper is a custom app with no documented deep-link
     // params — link it plain; the copyable coordinates below paste straight
     // into its search box.
@@ -949,14 +946,14 @@ function renderDetail() {
           : (p.deedStatus ? `Clerk shows deed status ${esc(p.deedStatus)}. ` : "") +
             "The case documents were reviewed and none of the watch-items (liens, homestead, bankruptcy, reschedules) came up." },
     { topic: "Next step", cls: "tag-neutral",
-      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the FEMA flood zone and wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
+      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
   ];
 
   $("scr-detail").innerHTML = `
     <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
       <h2 style="margin:0">${esc(p.addr)}</h2>
-      ${it.type ? `<span class="tag tag-accent">${esc(it.type)}</span>` : ""}
+      ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
       ${buyboxTag(p)}
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
       <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
@@ -1041,8 +1038,6 @@ function renderDetail() {
           </div>
           <div class="field" style="margin-bottom:12px"><label>Max I&rsquo;m willing to pay</label>
             <input class="input" id="pos-bid" placeholder="${esc(prefs.budget || "$ 0")}" value="${esc(it.bid)}" style="font-variant-numeric:tabular-nums;font-weight:500"></div>
-          <div class="field" style="margin-bottom:12px"><label>Property type (from appraiser)</label>
-            <select class="input" id="pos-type"><option value="">&mdash; not set &mdash;</option>${TYPES.map((t) => `<option ${it.type === t ? "selected" : ""}>${t}</option>`).join("")}</select></div>
           <div class="field" style="margin-bottom:12px"><label>Add to list</label>
             <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>
               ${lists.length ? `<optgroup label="My lists">${lists.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
@@ -1084,7 +1079,6 @@ function renderDetail() {
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
     b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
-  $("pos-type").onchange = (e) => { setInt(p.id, { type: e.target.value }); renderDetail(); };
   $("pos-list").onchange = (e) => assignList(p.id, e.target.value);
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
 }
@@ -1650,7 +1644,7 @@ function exportCsv() {
     const it = getInt(p.id);
     lines.push([p.county, p.auction, p.saleTime, p.parcel, p.case_number, p.cert, p.rawAddr,
       p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.buybox, p.buyboxNotes, p.status,
-      it.status, it.bid, effList(p.id), it.type, it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
+      it.status, it.bid, effList(p.id), effType(p), it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
   }
   const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
