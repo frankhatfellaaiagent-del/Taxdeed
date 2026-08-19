@@ -93,6 +93,16 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             # the vacant lots that have no street address at all).
             if parcel.get("lat") is not None and parcel.get("lng") is not None:
                 parcel_latlng = [parcel["lat"], parcel["lng"]]
+        # Some counties hyperlink the case number on the auction page straight
+        # to the clerk's tax deed record — the only case-file link available
+        # where no clerk-portal resolver exists. Surface it as the case link
+        # plus one document row; a resolved case file (richer: real doc list,
+        # applicant, deed status) overrides it below via **case.
+        scraped_case = {}
+        if r.clerk_case_url:
+            scraped_case = {"clerk_case_url": r.clerk_case_url,
+                            "case_docs": [{"name": "Tax deed record (clerk)",
+                                           "date": "", "url": r.clerk_case_url}]}
         redeemed = "redeem" in (r.auction_status or "").lower()
         ratio = round(100 * r.opening_bid / r.assessed_value) \
             if r.opening_bid and r.assessed_value else None
@@ -111,6 +121,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "anomalies": judgment.find_anomalies(r), "status": status,
             "auction_url": r.auction_url, "appraiser_url": r.appraiser_url,
             "lat": latlng[0], "lng": latlng[1],
+            **scraped_case,   # case link published on the auction page itself
             **case,      # clerk_case_url, deed_status, applicant, case_docs, case_flags
         })
 
