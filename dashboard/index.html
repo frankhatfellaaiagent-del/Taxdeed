@@ -140,7 +140,7 @@ const DEFAULT_LISTS = [
 ];
 const DEFAULT_PREFS = {
   myTypes: { "Single family": true, "Vacant land": true },
-  myTypesFirst: true, budget: "",
+  sort: "soonest", budget: "",
 };
 let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
 let lists = store.get("tdd_lists", DEFAULT_LISTS);   // personal lists
@@ -449,7 +449,7 @@ let META = null;          // feed counts/generated_at
 let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
-  sort: "soonest", shown: 150,
+  sort: prefs.sort || "soonest", shown: 150,
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
@@ -464,7 +464,17 @@ const SORT_OPTIONS = [
   ["bid-desc", "Opening bid — high to low"],
   ["assessed-desc", "Assessed value — high to low"],
   ["county", "County (A–Z)"],
+  ["mytypes", "★ My preferred types first"],
 ];
+// "My preferred types first" ranks by whether a row matches your buy box /
+// preferred types, then falls back to soonest auction within each group.
+function typeRank(p) {
+  const t = getInt(p.id).type;
+  if (t && prefs.myTypes[t]) return 0;   // manually tagged as a preferred type
+  if (p.buybox === "MATCH") return 1;     // scrub's land-use match
+  if (p.buybox === "REVIEW") return 2;
+  return 3;
+}
 function sortComparator(sort) {
   const t = (p) => p.saleDate?.getTime() ?? 9e15;   // undated rows sort last
   const bid = (p) => p.bid ?? Infinity, bidD = (p) => p.bid ?? -Infinity;
@@ -476,6 +486,7 @@ function sortComparator(sort) {
     "bid-desc": (a, b) => bidD(b) - bidD(a),
     "assessed-desc": (a, b) => asv(b) - asv(a),
     county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
+    mytypes: (a, b) => typeRank(a) - typeRank(b) || t(a) - t(b),
   }[sort] || ((a, b) => t(a) - t(b));
 }
 
@@ -697,22 +708,9 @@ function filteredRows() {
     if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
     return true;
   });
-  const cmp = sortComparator(S.sort);
-  if (prefs.myTypesFirst) {
-    // "My types first" stays a primary grouping key; the Sort dropdown orders
-    // rows within each group.
-    const rank = (p) => {
-      const t = getInt(p.id).type;
-      if (t && prefs.myTypes[t]) return 0;                 // team-assigned preferred type
-      if (p.buybox === "MATCH") return 1;                  // scrub's land-use match
-      if (p.buybox === "REVIEW") return 2;
-      return 3;
-    };
-    rows = [...rows].sort((a, b) => rank(a) - rank(b) || cmp(a, b));
-  } else {
-    rows = [...rows].sort(cmp);
-  }
-  return rows;
+  // A single ordering key (the Sort dropdown) — "My preferred types first" is
+  // one of its options rather than a competing toggle.
+  return [...rows].sort(sortComparator(S.sort));
 }
 
 // ---------- dashboard screen ----------
@@ -767,9 +765,8 @@ function renderDashboard() {
         <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
       <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
         <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
-      <div class="field" style="width:210px"><label>Sort by</label>
+      <div class="field" style="width:230px"><label>Sort by</label>
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
-      <button class="btn" id="f-mytypes" style="border:1px solid ${prefs.myTypesFirst ? "var(--color-accent)" : "var(--color-divider)"};background:${prefs.myTypesFirst ? "var(--color-accent)" : "transparent"};color:${prefs.myTypesFirst ? "var(--color-bg)" : "var(--color-text)"}">&#9733; My types first</button>
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
 
@@ -803,8 +800,7 @@ function renderDashboard() {
   $("bb-help").onclick = () => go("settings");
   $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-sort").onchange = (e) => { S.sort = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-mytypes").onclick = () => { prefs.myTypesFirst = !prefs.myTypesFirst; savePrefs(); renderDashboard(); };
+  $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
 }
@@ -1310,7 +1306,7 @@ function renderSettings() {
       <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start">
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
-          <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when &ldquo;My types first&rdquo; is on (type is assigned per-property from the appraiser record; the buy-box's MATCH/REVIEW ranks the rest).</p>
+          <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when the dashboard&rsquo;s Sort is set to &ldquo;My preferred types first&rdquo; (type is assigned per-property from the appraiser record; the buy-box's MATCH/REVIEW ranks the rest).</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
             ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
           </div>
