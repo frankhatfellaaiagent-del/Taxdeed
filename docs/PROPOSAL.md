@@ -80,13 +80,12 @@ never silently invented.
   nobody ever sees your research. Founding rate locked 12 months.
 - Month to month; cancel anytime; your data exports with you.
 
-## Founding-customer terms (to be completed)
+## Founding-customer terms
 
 | Item | Terms |
 | --- | --- |
-| One-time setup & customization (counties, buy box, accounts) | *[to fill]* |
-| Founding monthly rate — locked 12 months, up to 5 seats | *[to fill]* |
-| Standard rate (what later customers pay) | *[to fill]* |
+| One-time setup & customization (counties, buy box, accounts) | **$500** |
+| Monthly subscription — locked 12 months, up to 5 seats | **$197 / month** |
 | Optional: ReportAll parcel data add-on | at cost + service margin |
 
 In exchange for the founding rate: honest feedback while the beta hardens,
