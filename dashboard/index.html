@@ -636,13 +636,15 @@ function clerkLink(p) {
   return (t && (t.search || t.url)) ||
     "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
 }
-// Duval's property appraiser retired its Detail.aspx?RE= deep link — the page
-// that RealAuction still links to loads blank. Route to the working search
-// page instead; duvalRE() gives the RE to paste (offered as a one-tap copy).
+// Duval's property appraiser retired its Detail.aspx?RE= deep link (the page
+// RealAuction still links to loads blank). The county property map, however,
+// takes the RE directly in its *hyphenated* form — which is how we already
+// store the parcel — and opens the parcel with the appraiser panel (pao=pao).
 const isDuvalPao = (p) => /paopropertysearch\.coj\.net/i.test(p.appraiserUrl || "");
-const duvalRE = (p) => (isDuvalPao(p) ? (p.parcel || "").replace(/\D/g, "") : "");
+const duvalRE = (p) => (isDuvalPao(p) ? (p.parcel || "").trim() : "");   // hyphenated RE
 function appraiserLink(p) {
-  if (isDuvalPao(p)) return "https://paopropertysearch.coj.net/Basic/Search.aspx";
+  if (isDuvalPao(p) && duvalRE(p))
+    return "https://maps.coj.net/duvalproperty/default.aspx?RE=" + encodeURIComponent(duvalRE(p)) + "&pao=pao";
   return p.appraiserUrl ||
     "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County FL property appraiser parcel ${p.parcel}`);
 }
@@ -903,8 +905,8 @@ function renderDetail() {
             <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
             &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
           ${duvalRE(p) ? `<div style="margin-top:8px;font-size:12px" class="text-muted">Duval RE&nbsp;#
-            <button id="copy-re" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the appraiser search box">${esc(duvalRE(p))}</button>
-            &middot; paste into the appraiser search above (Duval&rsquo;s direct links are retired)</div>` : ""}
+            <button id="copy-re" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — for the classic paopropertysearch.coj.net record">${esc(duvalRE(p))}</button>
+            &middot; the appraiser link opens this parcel on the county map; copy the RE for the classic record if you want it</div>` : ""}
         </div>
 
         ${p.caseUrl ? `<div class="blueprint" style="padding:18px 20px">${CORNERS}
