@@ -133,6 +133,32 @@ const PLAN = {
   name: "Standard", status: "active", price: "$199 / month",
   note: "Includes every covered Florida county, the weekly refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
 };
+// ---------- Florida time ----------
+// Auctions are Florida events, so every date the app reasons about or prints
+// runs on America/New_York — never the device's clock. A laptop set to UTC or
+// Pacific must still agree on what "today" is, and DST is handled for us.
+const ET_ZONE = "America/New_York";
+const ET_YMD = new Intl.DateTimeFormat("en-CA", { timeZone: ET_ZONE, year: "numeric", month: "2-digit", day: "2-digit" });
+const ET_STAMP = new Intl.DateTimeFormat("en-US", { timeZone: ET_ZONE, dateStyle: "medium", timeStyle: "short" });
+const ET_FULL = new Intl.DateTimeFormat("en-US", { timeZone: ET_ZONE, weekday: "long", month: "short", day: "numeric", year: "numeric" });
+// A calendar day as a plain integer, so comparisons never touch clocks/offsets.
+const dayNum = (y, m, d) => Math.round(Date.UTC(y, m - 1, d) / 864e5);
+function etToday() {
+  const [y, m, d] = ET_YMD.format(new Date()).split("-").map(Number);
+  return dayNum(y, m, d);
+}
+// Records carry sale_date as MM/DD/YYYY parsed to a local midnight Date; read
+// its calendar parts (not its instant) so it compares cleanly against etToday.
+const saleDay = (p) => p.saleDate
+  ? dayNum(p.saleDate.getFullYear(), p.saleDate.getMonth() + 1, p.saleDate.getDate()) : null;
+// Days remaining in the current ET week (through Sunday).
+function etDaysLeftInWeek() {
+  const [y, m, d] = ET_YMD.format(new Date()).split("-").map(Number);
+  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay();   // 0 = Sunday
+  return dow === 0 ? 0 : 7 - dow;
+}
+const etStamp = (d) => ET_STAMP.format(d) + " ET";
+
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
@@ -472,6 +498,30 @@ const SORT_OPTIONS = [
   ["mytypes", "★ My preferred types first"],
 ];
 const SORT_KEYS = new Set(SORT_OPTIONS.map(([v]) => v));
+// Auction-date windows, all measured from "today" in Florida.
+const WHEN_OPTIONS = [
+  ["all", "All dates"],
+  ["today", "Today"],
+  ["week", "This week"],
+  ["7", "Next 7 days"],
+  ["14", "Next 14 days"],
+];
+// Inclusive [firstDay, lastDay] as day numbers; null = no date limit.
+// "This week" runs through Sunday, so late in the week it honestly shows
+// little — "Next 7 days" is the rolling window.
+function whenRange(when) {
+  const t = etToday();
+  if (when === "today") return [t, t];
+  if (when === "week") return [t, t + etDaysLeftInWeek()];
+  if (when === "7") return [t, t + 7];
+  if (when === "14") return [t, t + 14];
+  return null;
+}
+const inWhen = (p, range) => {
+  if (!range) return true;
+  const d = saleDay(p);
+  return d != null && d >= range[0] && d <= range[1];
+};
 // Old feeds/browsers may hold a retired sort key — fall back to soonest.
 const normSort = (s) => (SORT_KEYS.has(s) ? s : "soonest");
 // "My preferred types first" ranks by whether a row matches your buy box /
@@ -498,7 +548,7 @@ function sortComparator(sort) {
 let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
-  sort: normSort(prefs.sort), shown: 150,
+  when: "all", sort: normSort(prefs.sort), shown: 150,
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
@@ -716,7 +766,9 @@ function go(screen, selId) {
 // ---------- filtering ----------
 function filteredRows() {
   const q = S.q.trim().toLowerCase();
+  const range = whenRange(S.when);
   let rows = DATA.filter((p) => {
+    if (!inWhen(p, range)) return false;
     const it = getInt(p.id);
     if (S.county !== "All" && p.county !== S.county) return false;
     if (S.status !== "All" && p.status !== S.status) return false;
@@ -751,27 +803,38 @@ function statusTag(p) {
 function renderDashboard() {
   const rows = filteredRows();
   const upcoming = DATA.filter((p) => !p.redeemed);
-  const today = new Date(); today.setHours(0,0,0,0);
-  const horizon = new Date(today.getTime() + 14 * 864e5);
-  const soon = upcoming.filter((p) => p.saleDate && p.saleDate >= today && p.saleDate <= horizon);
-  const earliest = soon.reduce((a, p) => (!a || p.saleDate < a.saleDate ? p : a), null);
+  // Sale-day windows are measured in Florida time, so "today" is today in
+  // Florida no matter where the person's device thinks it is.
+  const todayRange = whenRange("today"), weekRange = whenRange("week");
+  const todayRows = upcoming.filter((p) => inWhen(p, todayRange));
+  const weekRows = upcoming.filter((p) => inWhen(p, weekRange));
+  const nextUp = upcoming.filter((p) => saleDay(p) != null && saleDay(p) >= etToday())
+    .reduce((a, p) => (!a || saleDay(p) < saleDay(a) ? p : a), null);
   const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
   const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
   const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  const cty = (rs) => new Set(rs.map((p) => p.county)).size;
 
   const stats = [
-    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), sub: `across ${new Set(upcoming.map((p)=>p.county)).size} counties` },
-    { label: "Auctions ≤ 14 days", value: soon.length.toLocaleString(), sub: earliest ? `earliest ${earliest.auction} — ${earliest.county}` : "none in window" },
-    { label: "Redeemed", value: DATA.filter((p)=>p.redeemed).length.toLocaleString(), sub: "owner paid — auction off" },
-    { label: "Marked interested", value: String(marked.length), sub: committed ? money(committed) + " committed max" : "none yet" },
+    { label: "Today's auctions", value: todayRows.length.toLocaleString(), when: "today",
+      sub: todayRows.length ? `across ${cty(todayRows)} ${cty(todayRows) === 1 ? "county" : "counties"}`
+                            : nextUp ? `none today — next ${nextUp.auction}` : "none today" },
+    { label: "This week", value: weekRows.length.toLocaleString(), when: "week",
+      sub: weekRows.length ? `through Sunday · ${cty(weekRows)} ${cty(weekRows) === 1 ? "county" : "counties"}`
+                           : "nothing left this week" },
+    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), when: "all",
+      sub: `across ${cty(upcoming)} counties` },
+    { label: "Marked interested", value: String(marked.length),
+      sub: committed ? money(committed) + " committed max" : "none yet" },
   ];
 
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
   $("scr-dashboard").innerHTML = `
-    <h2 style="margin-bottom:18px">Dashboard</h2>
+    <h2 style="margin-bottom:4px">Dashboard</h2>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; all auction times are Florida (ET)</div>
     <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
       ${stats.map((st) => `
-        <div class="blueprint" style="padding:16px 18px">${CORNERS}
+        <div class="blueprint" ${st.when ? `data-when="${st.when}" title="Show these on the board"` : ""} style="padding:16px 18px${st.when ? ";cursor:pointer" : ""}">${CORNERS}
           <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">${st.label}</div>
           <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">${st.value}</div>
           <div style="font-size:12px" class="text-muted">${esc(st.sub)}</div>
@@ -783,6 +846,8 @@ function renderDashboard() {
         <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}</select></div>
       <div class="field" style="width:160px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
+      <div class="field" style="width:150px"><label>Auction date</label>
+        <select class="input" id="f-when">${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
       <div class="field" style="width:130px"><label>Status</label>
         <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
       <div class="field" style="width:120px"><label>Buy box <button id="bb-help" title="Every property is graded against YOUR buy box — the counties, property types and price limits you set. MATCH fits it, REVIEW needs a look, NO doesn't fit. Click to set yours." style="border:1px solid var(--color-divider);background:none;cursor:pointer;font-size:10px;padding:0 5px;color:var(--color-accent-700)">?</button></label>
@@ -817,6 +882,15 @@ function renderDashboard() {
         <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
     </div>`;
 
+  // Picking a date window means "what's coming up", so order it soonest-first.
+  const setWhen = (v) => {
+    S.when = v;
+    if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
+    if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
+    S.shown = 150; renderDashboard();
+  };
+  $("f-when").onchange = (e) => setWhen(e.target.value);
+  $("scr-dashboard").querySelectorAll("[data-when]").forEach((c) => c.onclick = () => setWhen(c.dataset.when));
   $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
@@ -955,7 +1029,7 @@ function renderDetail() {
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
               <span>${a.text}</span></div>`).join("")}
           </div>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(new Date(META.generated_at).toLocaleString()) : "—"}</div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
@@ -1238,7 +1312,7 @@ function dataUpdatesHtml() {
     <div class="blueprint" style="padding:18px 20px">${CORNERS}
       <h6 style="color:var(--color-accent-700);margin-bottom:4px">Data updates</h6>
       <p class="text-muted" style="font-size:13px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT} &mdash; next refresh ${nextRefreshText()}. Each county's rows come from its most recent refresh.</p>
-      <p style="font-size:13.5px;margin-bottom:16px">${META ? `Current data as of <b>${esc(gen.toLocaleString())}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
+      <p style="font-size:13.5px;margin-bottom:16px">${META ? `Current data as of <b>${esc(etStamp(gen))}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
       <div class="tablewrap"><table class="table">
         <thead><tr><th>Refreshed</th><th style="text-align:right">Counties</th><th style="text-align:right">Auctions</th><th>Coverage</th></tr></thead>
         <tbody>${rows || '<tr><td colspan="4" class="text-muted">No refresh data yet.</td></tr>'}</tbody>
@@ -1414,7 +1488,7 @@ function renderBuyboxScreen() {
   if (mk) mk.onclick = () => {
     const el = $("bbm-listname");
     const name = (el.value || "").trim() ||
-      `Buy-box matches — ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })}`;
+      `Buy-box matches — ${new Date(etToday() * 864e5).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}`;
     if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
       alert("You already have a list with that name — pick another."); return;
     }
@@ -1434,7 +1508,7 @@ function renderBuyboxScreen() {
 // sent to the browser's print dialog, where "Save as PDF" is the usual target —
 // no external library, works offline.
 function exportMatchesPdf(rows) {
-  const when = new Date().toLocaleString();
+  const when = etStamp(new Date());
   const cfg = buybox || EMPTY_BUYBOX;
   const countyList = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
   const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
@@ -1470,7 +1544,7 @@ function exportMatchesPdf(rows) {
       &middot; ${money(bidSum)} in opening bids
       &middot; ${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}${S.bb.scheduledOnly ? " &middot; upcoming auctions only" : ""}
       <br>Counties: ${esc(countyList)}
-      <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(new Date(META.generated_at).toLocaleString())}` : ""}</div>
+      <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(etStamp(new Date(META.generated_at)))}` : ""}</div>
     <table><thead><tr>
       <th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th>
       <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Buy box</th>
@@ -1581,7 +1655,7 @@ function exportCsv() {
   const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "tax_deed_export_" + new Date().toISOString().slice(0, 10) + ".csv";
+  a.download = "tax_deed_export_" + ET_YMD.format(new Date()) + ".csv";
   a.click(); URL.revokeObjectURL(a.href);
 }
 
@@ -1600,7 +1674,7 @@ function exportCsv() {
     return;
   }
   $("load-note").remove();
-  $("last-scrape").textContent = "Data as of " + new Date(META.generated_at).toLocaleString();
+  $("last-scrape").textContent = "Data as of " + etStamp(new Date(META.generated_at));
   $("brand-sub").textContent = `Florida · ${META.counts.counties} counties`;
   go("dashboard");
 })();
