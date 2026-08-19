@@ -1002,31 +1002,16 @@ function renderLists() {
       <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
     </div>
     ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-      ${active.map((lc) => {
-        const sorted = [...lc.items].sort((a, b) =>
-          (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15) || a.county.localeCompare(b.county));
-        const preview = sorted.slice(0, 4);
-        return `
+      ${active.map((lc) => `
         <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
           <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
             <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
             ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
             <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
           </div>
-          <div style="font-size:13px;margin:6px 0 12px" class="text-muted">${esc(lc.desc || "")}</div>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            ${preview.length ? preview.map((p) => `
-                <div style="display:flex;gap:10px;align-items:baseline;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);padding:7px 0 2px;font-size:13px">
-                  <span class="mono" style="font-size:11.5px;color:var(--color-accent-700)">${esc(p.parcel)}</span>
-                  <span style="flex:1;min-width:0">${esc(p.addr || "—")}<span class="text-muted"> &middot; ${esc(p.county)}</span></span>
-                  <span class="text-muted" style="flex:none">${p.redeemed ? "Redeemed" : money(p.bid)}</span>
-                </div>`).join("")
-              : '<div class="text-muted" style="font-size:13px">Empty — add parcels from a property page.</div>'}
-          </div>
-          <div style="margin-top:12px;font-size:13px;font-weight:500;color:var(--color-accent-700)">
-            Open list${sorted.length > preview.length ? ` &middot; ${sorted.length - preview.length} more` : ""} &rarr;</div>
-        </div>`;
-      }).join("")}
+          <div style="font-size:13px;margin:6px 0 14px" class="text-muted">${esc(lc.desc || "") || (lc.items.length ? "" : "Empty — add parcels from a property page.")}</div>
+          <div style="font-size:13px;font-weight:500;color:var(--color-accent-700)">Open list &rarr;</div>
+        </div>`).join("")}
     </div>` : `<div class="text-muted" style="font-size:13.5px">${archived.length ? "All your lists are archived — restore one below." : "No lists yet — create one above, then add parcels to it from any property page."}</div>`}
     ${archived.length ? `
       <h3 style="margin:34px 0 10px;font-size:16px">Archived</h3>
