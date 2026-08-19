@@ -1,12 +1,16 @@
-# MADD Assets' authoritative Florida tax deed county list (37 counties).
+# Florida tax deed county list (45 counties — every county on the RealAuction
+# platform per discovery).
 # One county per line; names are matched punctuation/space-insensitively
-# against discovered slugs ("Indian River" == indianriver).
+# against discovered slugs ("Indian River" == indianriver, "Miami-Dade" == miamidade).
 # Used by: python -m scraper scrape --counties @config/client_counties.txt
 # Discovery cross-checks this list and warns about any county it can't find.
 Alachua
+Baker
 Bay
 Brevard
 Broward
+Calhoun
+Charlotte
 Citrus
 Clay
 Duval
@@ -23,10 +27,13 @@ Jackson
 Lake
 Lee
 Leon
+Manatee
 Marion
 Martin
+Miami-Dade
 Monroe
 Nassau
+Okeechobee
 Orange
 Osceola
 Palm Beach
@@ -37,6 +44,8 @@ Putnam
 Santa Rosa
 Sarasota
 Seminole
+St. Lucie
 Suwannee
 Volusia
+Walton
 Washington

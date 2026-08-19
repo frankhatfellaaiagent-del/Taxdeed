@@ -187,6 +187,10 @@ def main(argv=None) -> int:
     p.add_argument("--url", default="https://www.volusia.realtaxdeed.com/")
     p.add_argument("--out", default="output/debug")
 
+    p = sub.add_parser("coverage", help="Probe non-RealAuction counties against DeedAuction; write coverage.json + HTML evidence")
+    p.add_argument("--out", default="output/coverage")
+    p.add_argument("--delay", type=float, default=3.0, help="Base seconds between requests (default 3.0)")
+
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
@@ -224,6 +228,10 @@ def main(argv=None) -> int:
     if args.cmd == "capture":
         from .debug_capture import capture
         capture(args.url, args.out)
+        return 0
+    if args.cmd == "coverage":
+        from .coverage_probe import probe_coverage
+        probe_coverage(args.out, delay=args.delay)
         return 0
     if args.cmd == "export":
         from .exporter import export_run
