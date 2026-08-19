@@ -1,0 +1,41 @@
+name: County coverage audit
+
+# One-off audit tool: probes the Florida counties NOT covered by RealAuction
+# discovery (plus Broward) against Grant Street's DeedAuction platform and
+# uploads the HTML evidence + coverage.json as an artifact. Read-only — it
+# commits nothing and stays out of the data-pipeline concurrency group.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coverage-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Probe coverage
+        run: python -m scraper -v coverage --out output/coverage
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-audit
+          path: output/coverage/
+          if-no-files-found: error
+          retention-days: 30
