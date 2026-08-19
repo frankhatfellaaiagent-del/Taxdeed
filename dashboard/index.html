@@ -446,26 +446,19 @@ function wireLogin() {
 // ---------- app state ----------
 let DATA = [];            // mapped property records
 let META = null;          // feed counts/generated_at
-let S = {
-  screen: "dashboard", selId: null, q: "",
-  county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
-  sort: prefs.sort || "soonest", shown: 150,
-  // Which list is open on its own page, and that page's own filter/sort state.
-  listName: null, listShared: false,
-  ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
-};
-
 // Shared "Sort by" options + comparators, used by the dashboard filter row and
-// each list's page so the two behave identically.
+// each list's page so the two behave identically. Defined before S because S's
+// initial sort is normalized through normSort().
 const SORT_OPTIONS = [
   ["soonest", "Auction date — soonest first"],
   ["latest", "Auction date — latest first"],
-  ["bid-asc", "Opening bid — low to high"],
-  ["bid-desc", "Opening bid — high to low"],
   ["assessed-desc", "Assessed value — high to low"],
   ["county", "County (A–Z)"],
   ["mytypes", "★ My preferred types first"],
 ];
+const SORT_KEYS = new Set(SORT_OPTIONS.map(([v]) => v));
+// Old feeds/browsers may hold a retired sort key — fall back to soonest.
+const normSort = (s) => (SORT_KEYS.has(s) ? s : "soonest");
 // "My preferred types first" ranks by whether a row matches your buy box /
 // preferred types, then falls back to soonest auction within each group.
 function typeRank(p) {
@@ -477,18 +470,24 @@ function typeRank(p) {
 }
 function sortComparator(sort) {
   const t = (p) => p.saleDate?.getTime() ?? 9e15;   // undated rows sort last
-  const bid = (p) => p.bid ?? Infinity, bidD = (p) => p.bid ?? -Infinity;
   const asv = (p) => p.assessed ?? -Infinity;
   return {
     soonest: (a, b) => t(a) - t(b) || a.county.localeCompare(b.county),
     latest: (a, b) => t(b) - t(a) || a.county.localeCompare(b.county),
-    "bid-asc": (a, b) => bid(a) - bid(b),
-    "bid-desc": (a, b) => bidD(b) - bidD(a),
     "assessed-desc": (a, b) => asv(b) - asv(a),
     county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
     mytypes: (a, b) => typeRank(a) - typeRank(b) || t(a) - t(b),
   }[sort] || ((a, b) => t(a) - t(b));
 }
+
+let S = {
+  screen: "dashboard", selId: null, q: "",
+  county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
+  sort: normSort(prefs.sort), shown: 150,
+  // Which list is open on its own page, and that page's own filter/sort state.
+  listName: null, listShared: false,
+  ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
+};
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
 function titleCase(s) { return s ? cap(String(s).toLowerCase()) : s; }
