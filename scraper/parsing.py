@@ -288,6 +288,19 @@ def parse_auction_items(html: str, page_url: str, county: str, sale_date: str) -
 
     for item in items:
         rec = AuctionRecord(county=county, sale_date=sale_date, auction_url=page_url, source_host=host)
+        # RealAuction tags every item with its own auction id (aid="1507375",
+        # mirrored in id="AITEM_1507375") right on the public preview page, and
+        # that id is the handle its details view uses. Deep-link straight to
+        # THIS parcel's auction record instead of the whole day's list;
+        # bypassPage=1 skips the interstitial for signed-out visitors. Items
+        # without an id (fallback selector) keep the date-level page.
+        aid = (item.get("aid") or "").strip()
+        if not aid:
+            m = re.match(r"AITEM_(\d+)$", item.get("id") or "")
+            aid = m.group(1) if m else ""
+        if aid.isdigit():
+            rec.auction_url = urljoin(
+                page_url, f"/index.cfm?zaction=auction&zmethod=details&AID={aid}&bypassPage=1")
         last_attr = None
         for row in item.find_all("tr"):
             cells = row.find_all(["th", "td"])
