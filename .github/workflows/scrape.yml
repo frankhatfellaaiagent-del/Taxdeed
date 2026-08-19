@@ -28,7 +28,11 @@ permissions:
   actions: write  # to dispatch the Pages deploy after committing new data
 
 concurrency:
-  group: data-pipeline   # shared with the daily enrichment workflow
+  # Real data runs (manual + scheduled) serialize with the nightly enrichment on
+  # "data-pipeline", since they both commit to the same files. The push-triggered
+  # smoke test commits nothing, so it gets its own lane — sharing the group let a
+  # routine merge cancel a queued refresh, which is exactly what happened once.
+  group: ${{ github.event_name == 'push' && 'scrape-smoke' || 'data-pipeline' }}
   cancel-in-progress: false
 
 jobs:
