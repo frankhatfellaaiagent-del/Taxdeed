@@ -1200,7 +1200,11 @@ function renderListDetail() {
         <select class="input" id="ld-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
       <div class="field" style="flex:1;min-width:150px"><label>Search</label>
         <input class="input" id="ld-q" placeholder="parcel, address, case #" value="${esc(ld.q)}"></div>
-      <span style="font-size:12px" class="text-muted">${rows.length.toLocaleString()} shown</span>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-secondary" id="ld-pdf" style="font-size:12.5px;padding:6px 11px" ${rows.length ? "" : "disabled"}>Export PDF</button>
+        <button class="btn btn-secondary" id="ld-csv" style="font-size:12.5px;padding:6px 11px" ${rows.length ? "" : "disabled"}>Export CSV</button>
+        <span style="font-size:12px" class="text-muted">${rows.length.toLocaleString()} shown</span>
+      </div>
     </div>
 
     <div class="blueprint" style="padding:0">${CORNERS}
@@ -1227,6 +1231,14 @@ function renderListDetail() {
     </div>`;
 
   $("ld-back").onclick = () => go("lists");
+  // Export the list as it stands on screen — filters and sort included, so what
+  // the client sees is exactly what goes out.
+  const listSubtitle = `List: ${name}${shared ? " (shared with team)" : ""}`
+    + (rows.length !== all.length ? ` · filtered view (${rows.length} of ${all.length})` : "");
+  const pdfBtn = $("ld-pdf");
+  if (pdfBtn) pdfBtn.onclick = () => exportRowsPdf(rows, name, listSubtitle);
+  const csvBtn = $("ld-csv");
+  if (csvBtn) csvBtn.onclick = () => exportRowsCsv(rows, name);
   $("ld-county").onchange = (e) => { ld.county = e.target.value; renderListDetail(); };
   $("ld-status").onchange = (e) => { ld.status = e.target.value; renderListDetail(); };
   $("ld-buybox").onchange = (e) => { ld.buybox = e.target.value; renderListDetail(); };
@@ -1494,17 +1506,22 @@ function renderBuyboxScreen() {
     openList(name, false);
   };
   const pdf = $("bbm-pdf");
-  if (pdf) pdf.onclick = () => exportMatchesPdf(buyboxMatches());
+  if (pdf) pdf.onclick = () => {
+    const cfg = buybox || EMPTY_BUYBOX;
+    const counties = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
+    exportRowsPdf(buyboxMatches(), "buy-box matches",
+      `${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}`
+      + `${S.bb.scheduledOnly ? " · upcoming auctions only" : ""} · Counties: ${counties}`);
+  };
   wireBuyboxCard();   // counties, keywords, caps — the criteria inputs above
 }
 
-// Printable report of the matched properties. Rendered into a hidden iframe and
-// sent to the browser's print dialog, where "Save as PDF" is the usual target —
-// no external library, works offline.
-function exportMatchesPdf(rows) {
+// Printable report of any set of properties — the buy-box matches, or a list
+// exactly as the client built it. Rendered into a hidden iframe and sent to the
+// browser's print dialog, where "Save as PDF" is the usual target: no external
+// library, works offline.
+function exportRowsPdf(rows, title, subtitle) {
   const when = etStamp(new Date());
-  const cfg = buybox || EMPTY_BUYBOX;
-  const countyList = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
   const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
   const body = rows.map((p) => `<tr>
       <td class="mono">${esc(p.parcel)}</td>
@@ -1517,7 +1534,7 @@ function exportMatchesPdf(rows) {
       <td>${esc(p.buybox)}</td>
     </tr>`).join("");
   const doc = `<!doctype html><html><head><meta charset="utf-8">
-    <title>Buy-box matches — ${esc(BRAND)}</title>
+    <title>${esc(title)} — ${esc(BRAND)}</title>
     <style>
       @page { size: letter landscape; margin: 14mm; }
       body { font: 11px/1.45 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:#111; }
@@ -1533,11 +1550,10 @@ function exportMatchesPdf(rows) {
       .muted { color:#666; }
       .foot { margin-top:12px; color:#666; font-size:10px; }
     </style></head><body>
-    <h1>${esc(BRAND)} &mdash; buy-box matches</h1>
+    <h1>${esc(BRAND)} &mdash; ${esc(title)}</h1>
     <div class="sub">${rows.length.toLocaleString()} ${rows.length === 1 ? "property" : "properties"}
       &middot; ${money(bidSum)} in opening bids
-      &middot; ${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}${S.bb.scheduledOnly ? " &middot; upcoming auctions only" : ""}
-      <br>Counties: ${esc(countyList)}
+      ${subtitle ? `<br>${esc(subtitle)}` : ""}
       <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(etStamp(new Date(META.generated_at)))}` : ""}</div>
     <table><thead><tr>
       <th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th>
@@ -1634,9 +1650,11 @@ function renderSettings() {
   };
 }
 
-// ---------- top bar actions ----------
-function exportCsv() {
-  const rows = filteredRows();
+// ---------- exports ----------
+// Any set of rows -> CSV. Used by the dashboard (the filtered board), and by a
+// list's own page (that list, as the client built it).
+const slugify = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "export";
+function exportRowsCsv(rows, name) {
   const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Buy-box","Buy-box Notes","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
   const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const lines = [cols.join(",")];
@@ -1649,9 +1667,10 @@ function exportCsv() {
   const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "tax_deed_export_" + ET_YMD.format(new Date()) + ".csv";
+  a.download = `${slugify(name)}_${ET_YMD.format(new Date())}.csv`;
   a.click(); URL.revokeObjectURL(a.href);
 }
+const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
 
 // ---------- boot ----------
 (async function boot() {
