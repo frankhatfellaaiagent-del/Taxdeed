@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-19T18:14:35+00:00",
+ "generated_at": "2026-08-19T20:33:50+00:00",
  "source_run": "2026-08-19T172458Z",
  "county_runs": {
   "alachua": "2026-08-19T172458Z",
@@ -40,6 +40,7 @@
   "scheduled": 1925,
   "redeemed": 660,
   "counties": 32,
+  "counties_total": 67,
   "by_county": {
    "alachua": {
     "total": 13,
@@ -331,6 +332,454 @@
    "url": "https://www.washingtonclerk.com/public-sales/tax-deeds/"
   }
  },
+ "counties_registry": [
+  {
+   "slug": "alachua",
+   "name": "Alachua",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "baker",
+   "name": "Baker",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "bay",
+   "name": "Bay",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "bradford",
+   "name": "Bradford",
+   "coverage": "in-person",
+   "sale_info": "In person at the Bradford County Courthouse (945 N. Temple Ave, Starke), sales begin 11:00 AM on scheduled dates.",
+   "clerk_url": "https://bradfordclerk.com/tax-deeds-and-foreclosure-sales/",
+   "sale_list_url": "https://bradfordclerk.com/tax-deeds-and-foreclosure-sales/"
+  },
+  {
+   "slug": "brevard",
+   "name": "Brevard",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "broward",
+   "name": "Broward",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "calhoun",
+   "name": "Calhoun",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "charlotte",
+   "name": "Charlotte",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "citrus",
+   "name": "Citrus",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "clay",
+   "name": "Clay",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "collier",
+   "name": "Collier",
+   "coverage": "in-person",
+   "sale_info": "In person on scheduled Mondays at 1:00 PM, Collier County Administration Building, 7th floor room 711, Naples.",
+   "clerk_url": "https://www.collierclerk.com/tax-deed-sales/",
+   "sale_list_url": "https://apps.collierclerk.com/tax-deeds-upcoming-sales-list"
+  },
+  {
+   "slug": "columbia",
+   "name": "Columbia",
+   "coverage": "in-person",
+   "sale_info": "In person at 11:00 AM, Columbia County Courthouse 3rd floor Courtroom 1, 173 NE Hernando Ave, Lake City.",
+   "clerk_url": "https://columbiaclerk.com/clerk-services/tax-deeds/",
+   "sale_list_url": "https://columbiaclerk.com/clerk-services/tax-deeds/upcoming-tax-deed-sales/"
+  },
+  {
+   "slug": "desoto",
+   "name": "DeSoto",
+   "coverage": "in-person",
+   "sale_info": "In person at the courthouse in Arcadia, sales start 11:00 AM; bidders register by 10:30 AM with a 5% deposit.",
+   "clerk_url": "https://www.desotoclerk.com/public-sales/tax-deeds/",
+   "sale_list_url": "https://www.desotoclerk.com/public-sales/tax-deeds/"
+  },
+  {
+   "slug": "dixie",
+   "name": "Dixie",
+   "coverage": "in-person",
+   "sale_info": "In person in the Courthouse Board Room on scheduled Tuesdays at 11:00 AM; register 30 minutes before the sale.",
+   "clerk_url": "https://dixieclerk.com/departments-services/court-services/tax-deed-sales/",
+   "sale_list_url": "https://dixieclerk.com/departments-services/court-services/tax-deed-sales/"
+  },
+  {
+   "slug": "duval",
+   "name": "Duval",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "escambia",
+   "name": "Escambia",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "flagler",
+   "name": "Flagler",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "franklin",
+   "name": "Franklin",
+   "coverage": "in-person",
+   "sale_info": "In person, generally the first Monday of the month at 11:00 AM, front hallway of the Main Courthouse facing Hwy 98, 33 Market St, Apalachicola.",
+   "clerk_url": "https://www.franklinclerk.com/public-sales/tax-deeds/",
+   "sale_list_url": "https://www.franklinclerk.com/public-sales/tax-deeds/"
+  },
+  {
+   "slug": "gadsden",
+   "name": "Gadsden",
+   "coverage": "in-person",
+   "sale_info": "In person on the south side of the courthouse square facing US Hwy 90, Gadsden County Courthouse, Quincy; sales typically begin 11:00 AM.",
+   "clerk_url": "https://www.gadsdenclerk.com/Tax_deeds/Tax_deeds.htm",
+   "sale_list_url": "https://www.gadsdenclerk.com/Tax_deeds/Tax_deeds.htm"
+  },
+  {
+   "slug": "gilchrist",
+   "name": "Gilchrist",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "glades",
+   "name": "Glades",
+   "coverage": "in-person",
+   "sale_info": "In person at the Glades County Courthouse first-floor lobby, Moore Haven; sales begin 11:00 AM (register in Room 102 by 10:30 AM).",
+   "clerk_url": "https://gladesclerk.com/clerk-services/tax-deeds/",
+   "sale_list_url": "https://gladesclerk.com/clerk-services/tax-deeds/"
+  },
+  {
+   "slug": "gulf",
+   "name": "Gulf",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "hamilton",
+   "name": "Hamilton",
+   "coverage": "in-person",
+   "sale_info": "In person at the courthouse, 207 NE First St, Jasper; the high bidder posts a $200 cash deposit at the time of sale.",
+   "clerk_url": "https://hamiltonclerk.com/tax-deeds/",
+   "sale_list_url": "https://hamiltonclerk.com/tax-deeds/"
+  },
+  {
+   "slug": "hardee",
+   "name": "Hardee",
+   "coverage": "in-person",
+   "sale_info": "In person at the Hardee County Courthouse, Wauchula, conducted by the Clerk.",
+   "clerk_url": "https://www.hardeeclerk.com/departments/tax-deeds/",
+   "sale_list_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/"
+  },
+  {
+   "slug": "hendry",
+   "name": "Hendry",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "hernando",
+   "name": "Hernando",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "highlands",
+   "name": "Highlands",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "hillsborough",
+   "name": "Hillsborough",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "holmes",
+   "name": "Holmes",
+   "coverage": "in-person",
+   "sale_info": "In person at the courthouse in Bonifay; sales begin 11:00 AM (cash or cashier's check; $200 or 5% deposit).",
+   "clerk_url": "https://holmesclerk.com/courts/foreclosures-tax-deeds/tax-deeds/",
+   "sale_list_url": "https://holmesclerk.com/courts/foreclosures-tax-deeds/tax-deeds/"
+  },
+  {
+   "slug": "indianriver",
+   "name": "Indian River",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "jackson",
+   "name": "Jackson",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "jefferson",
+   "name": "Jefferson",
+   "coverage": "in-person",
+   "sale_info": "In person at the courthouse, 1 Courthouse Circle, Monticello; upcoming sales are listed on the clerk's site and advertised in the Monticello News.",
+   "clerk_url": "https://www.jeffersonclerk.com/clerk-services/property-sales/tax-deed-sales/",
+   "sale_list_url": "https://www.jeffersonclerk.com/clerk-services/property-sales/tax-deed-sales/"
+  },
+  {
+   "slug": "lafayette",
+   "name": "Lafayette",
+   "coverage": "in-person",
+   "sale_info": "In person on the north steps of the Lafayette County Courthouse, 120 W Main St, Mayo.",
+   "clerk_url": "https://www.lafayetteclerk.com/tax-deeds/",
+   "sale_list_url": "https://www.lafayetteclerk.com/tax-deeds/"
+  },
+  {
+   "slug": "lake",
+   "name": "Lake",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "lee",
+   "name": "Lee",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "leon",
+   "name": "Leon",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "levy",
+   "name": "Levy",
+   "coverage": "in-person",
+   "sale_info": "In person at the Levy County Government Center BoCC Meeting Room, 310 School St, Bronson; sign in with the Clerk before the sale.",
+   "clerk_url": "https://levyclerk.com/departments-services/administration/tax-deed-sales/",
+   "sale_list_url": "https://online.levyclerk.com/TaxSmartWeb"
+  },
+  {
+   "slug": "liberty",
+   "name": "Liberty",
+   "coverage": "in-person",
+   "sale_info": "In person at 11:00 AM on the front steps of the Liberty County Courthouse facing Hwy 20, Bristol.",
+   "clerk_url": "https://libertyclerk.com/courts/tax-deeds/",
+   "sale_list_url": "https://libertyclerk.com/courts/tax-deeds/"
+  },
+  {
+   "slug": "madison",
+   "name": "Madison",
+   "coverage": "in-person",
+   "sale_info": "In person on the courthouse steps, 125 SW Range Ave, Madison; sale dates set by the Clerk's office.",
+   "clerk_url": "https://www.madisonclerk.com/departments-services/property-sales/tax-deed-sales/",
+   "sale_list_url": "https://www.madisonclerk.com/departments-services/property-sales/tax-deed-sales/"
+  },
+  {
+   "slug": "manatee",
+   "name": "Manatee",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "marion",
+   "name": "Marion",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "martin",
+   "name": "Martin",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "miamidade",
+   "name": "Miami-Dade",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "monroe",
+   "name": "Monroe",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "nassau",
+   "name": "Nassau",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "okaloosa",
+   "name": "Okaloosa",
+   "coverage": "online-other",
+   "sale_info": "Online via Bid4Assets (bid4assets.com/OkaloosaFLTax) \u2014 a separate auction platform; registration and a 5% advance deposit required. Not yet in the live feed.",
+   "clerk_url": "https://okaloosaclerk.com/board-services/tax-deed-sales/",
+   "sale_list_url": "https://www.bid4assets.com/OkaloosaFLTax/listings"
+  },
+  {
+   "slug": "okeechobee",
+   "name": "Okeechobee",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "orange",
+   "name": "Orange",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "osceola",
+   "name": "Osceola",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "palmbeach",
+   "name": "Palm Beach",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "pasco",
+   "name": "Pasco",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "pinellas",
+   "name": "Pinellas",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "polk",
+   "name": "Polk",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "putnam",
+   "name": "Putnam",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "santarosa",
+   "name": "Santa Rosa",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "sarasota",
+   "name": "Sarasota",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "seminole",
+   "name": "Seminole",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "stjohns",
+   "name": "St. Johns",
+   "coverage": "in-person",
+   "sale_info": "In person, generally Wednesdays at 12:00 PM at the Richard O. Watson Judicial Center, 4010 Lewis Speedway, St. Augustine; arrive 15 minutes early to bid.",
+   "clerk_url": "https://stjohnsclerk.com/foreclosure/tax-deeds-2/",
+   "sale_list_url": "https://apps.stjohnsclerk.com/TaxSmart"
+  },
+  {
+   "slug": "stlucie",
+   "name": "St. Lucie",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "sumter",
+   "name": "Sumter",
+   "coverage": "in-person",
+   "sale_info": "In person, generally Thursdays at 11:00 AM, Sumter County Courthouse Historic Wing, 3rd floor Courtroom F, 215 E McCollum Ave, Bushnell.",
+   "clerk_url": "https://www.sumterclerk.com/public-records/tax-deeds/tax-deed-sales/",
+   "sale_list_url": "https://www.sumterclerk.com/tax-deed-sales"
+  },
+  {
+   "slug": "suwannee",
+   "name": "Suwannee",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "taylor",
+   "name": "Taylor",
+   "coverage": "in-person",
+   "sale_info": "In person at 11:00 AM on the east steps of the Taylor County Courthouse, 108 N Jefferson St, Perry ($50 bid increments, $200 cash deposit).",
+   "clerk_url": "https://taylorclerk.com/departments/tax-deeds/",
+   "sale_list_url": "https://taylorclerk.com/departments/tax-deeds/"
+  },
+  {
+   "slug": "union",
+   "name": "Union",
+   "coverage": "in-person",
+   "sale_info": "In person in the lobby of the Union County Courthouse, 55 W Main St, Lake Butler, starting 11:00 AM.",
+   "clerk_url": "https://unionclerk.com/departments-services/clerk-services/tax-deed-sales/",
+   "sale_list_url": "https://unionclerk.com/departments-services/clerk-services/tax-deed-sales/"
+  },
+  {
+   "slug": "volusia",
+   "name": "Volusia",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "wakulla",
+   "name": "Wakulla",
+   "coverage": "in-person",
+   "sale_info": "In person, generally Wednesdays at 10:00 AM in the main first-floor lobby outside Official Records Room 121, Wakulla County Courthouse, Crawfordville.",
+   "clerk_url": "https://wakullaclerk.org/official_records/tax_deed_sales.php",
+   "sale_list_url": "https://wakullaclerk.org/official_records/tax_deed_sales.php"
+  },
+  {
+   "slug": "walton",
+   "name": "Walton",
+   "coverage": "online",
+   "platform": "realauction"
+  },
+  {
+   "slug": "washington",
+   "name": "Washington",
+   "coverage": "online",
+   "platform": "realauction"
+  }
+ ],
  "default_buybox": {
   "target_counties": [
    "alachua",
