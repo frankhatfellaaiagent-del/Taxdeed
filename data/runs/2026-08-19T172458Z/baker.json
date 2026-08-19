@@ -1,0 +1,33 @@
+[
+  {
+    "county": "baker",
+    "sale_date": "09/29/2026",
+    "sale_time": "11:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "022026XX000002TDAXMX",
+    "certificate_number": "",
+    "parcel_id": "35-2S-20-0000-0000-0035",
+    "owner_name": "",
+    "property_address": "COUNTY ROAD 229 SANDERSON, SANDERSON, FL- 32087",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 3142.16,
+    "assessed_value": 10650.0,
+    "auction_status": "09/29/2026 11:00 AM ET",
+    "auction_url": "https://www.baker.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1515540&bypassPage=1",
+    "appraiser_url": "http://bakerpa.com/propertydetails.php?parcel=352S20000000000035",
+    "clerk_case_url": "",
+    "source_host": "www.baker.realtaxdeed.com",
+    "scraped_at": "2026-08-19T17:25:55+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "022026XX000002TDAXMX",
+      "certificate": "",
+      "opening bid": "$3,142.16",
+      "parcel id": "35-2S-20-0000-0000-0035",
+      "property address": "COUNTY ROAD 229 SANDERSON",
+      "(cont:property_address)": "SANDERSON, FL- 32087",
+      "assessed value": "$10,650.00"
+    }
+  }
+]
