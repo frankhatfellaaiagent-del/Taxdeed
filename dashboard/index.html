@@ -107,14 +107,14 @@ const FEED_URLS = [
   "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json",
 ];
 const REPO = "frankhatfellaaiagent-del/Taxdeed";
-// Team login + cross-device sync (Firebase Auth + Firestore). Paste the web
-// app config here to switch it on — docs/LOGIN_SETUP.md has the 10-minute
-// checklist. Empty = the dashboard runs local-only, exactly as before. This
-// config is public by design; security lives in firestore.rules and in
-// closed signup (accounts are created in the console, never self-service).
-const FIREBASE_CONFIG = {};
-const SYNC_ON = !!FIREBASE_CONFIG.apiKey;
-const SDK_BASE = "https://www.gstatic.com/firebasejs/10.12.2/";
+// Team login + cross-device sync (Supabase Auth + Postgres + Realtime). The URL
+// and publishable key are public by design; security lives in the database's
+// row-level-security policies and in closed signup (accounts are created by the
+// operator, never self-service). Empty URL = the dashboard runs local-only.
+const SUPABASE_URL = "https://refjpdposfqlihsfbrri.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_7oPO41UqZrDS6dlpWwHwnA_up4VPiGR";
+const SYNC_ON = /^https:\/\//.test(SUPABASE_URL);
+const SUPABASE_SDK = "https://esm.sh/@supabase/supabase-js@2";
 // The one truth about the refresh schedule — every screen derives from these.
 // Keep in sync with the cron in the scraper workflow (0 8 * * 1 UTC).
 const SCHEDULE_UTC = { day: 1, hour: 8 };            // Monday 08:00 UTC = 4:00 AM ET
@@ -157,8 +157,8 @@ const saveBuybox = () => { store.set("tdd_buybox", buybox); cloudPush("teambuybo
 // ---------- buy-box (per-team, editable in Settings) ----------
 // Every team gets its own copy of this, seeded from the feed's
 // default_buybox (config/buybox.yaml) the first time they open Settings, then
-// stored per-team (signed in: Firestore teams/{id}/state/buybox, shared by
-// the whole team; signed out: this browser only). Flags are computed HERE,
+// stored per-team (signed in: team_state row key 'buybox', shared by the whole
+// team; signed out: this browser only). Flags are computed HERE,
 // client-side, from the shared feed — nothing county- or client-specific is
 // baked into the scrape, so any Florida tax-deed investor can run their own
 // buy-box against the same data. This is a JS port of scraper/judgment.py
@@ -217,8 +217,12 @@ function recomputeBuybox() {
 const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
 const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
 
-// ---------- cloud sync (dormant until FIREBASE_CONFIG is filled) ----------
-let CLOUD = null;                 // {app, auth, authm, db, fsm, user, unsubs}
+// ---------- cloud sync (Supabase Auth + Postgres + Realtime) ----------
+// Dormant when SUPABASE_URL is a placeholder. State lives in two tables:
+//   user_state(user_id, key, data)  — personal: interest / prefs / lists
+//   team_state(team_id, key, data)  — shared:   buybox / lists(+membership)
+// Row-level-security keeps each user to their own rows and their team's rows.
+let CLOUD = null;                 // { sb, user, channels: [] }
 const cloudTimers = {};
 
 function rerender() {
@@ -226,127 +230,130 @@ function rerender() {
      listdetail: renderListDetail, history: renderHistory, settings: renderSettings })[S.screen]();
 }
 
-const TEAM_DOCS = { team: "lists", teambuybox: "buybox" };   // sync-name -> Firestore doc name
+// sync-name -> where it's stored. Personal keys go to user_state; the two team
+// keys go to team_state. The stored jsonb is the value itself (no {data:} wrap).
+const SYNC_MAP = {
+  interest:    { scope: "user", key: "interest", value: (p) => p().data },
+  prefs:       { scope: "user", key: "prefs",    value: (p) => p().data },
+  lists:       { scope: "user", key: "lists",    value: (p) => p().data },
+  team:        { scope: "team", key: "lists",    value: (p) => p() },       // {lists, membership}
+  teambuybox:  { scope: "team", key: "buybox",   value: (p) => p() },       // buybox object
+};
+
+// Which team (customer workspace) this account belongs to — from the profiles
+// row, set by the operator at onboarding. Every workspace is isolated by RLS.
+let TEAM_ID = null;
+let IS_ADMIN = false;        // operator flag from the profile row — gates dev-only controls
+let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
+let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
 
 function cloudPush(name, payload) {
-  if (!CLOUD || !CLOUD.user) return;
+  if (!CLOUD || !CLOUD.user || !TEAM_ID) return;
+  const m = SYNC_MAP[name]; if (!m) return;
   clearTimeout(cloudTimers[name]);
-  // Debounced whole-doc set: fine at this team size; the docs are small and
-  // per-person (the shared team docs are the ones with a theoretical clobber
-  // window, ~1s, acceptable for a small team editing the same list/buy-box).
-  cloudTimers[name] = setTimeout(() => {
-    const ref = TEAM_DOCS[name] ? teamDocRef(TEAM_DOCS[name]) : userDocRef(name);
-    CLOUD.fsm.setDoc(ref, payload())
-      .then(() => { if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); } })
-      .catch((e) => { console.warn("sync push failed:", e); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } });
+  // Debounced whole-row upsert: rows are small and mostly per-person (the two
+  // shared team rows have a ~1s clobber window, fine for a small team).
+  cloudTimers[name] = setTimeout(async () => {
+    const row = m.scope === "team"
+      ? { team_id: TEAM_ID, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() }
+      : { user_id: CLOUD.user.id, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() };
+    const table = m.scope === "team" ? "team_state" : "user_state";
+    const onConflict = m.scope === "team" ? "team_id,key" : "user_id,key";
+    const { error } = await CLOUD.sb.from(table).upsert(row, { onConflict });
+    if (error) { console.warn("sync push failed:", error.message); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } }
+    else if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
   }, 800);
 }
 
-const userDocRef = (name) => CLOUD.fsm.doc(CLOUD.db, "users", CLOUD.user.uid, "state", name);
-// Which team (customer workspace) this account belongs to — set on the user's
-// profile doc at onboarding (docs/LOGIN_SETUP.md). Every customer's workspace
-// is isolated by firestore.rules; "madd" is the founding team's id.
-let TEAM_ID = "madd";
-let IS_ADMIN = false;        // operator flag from the profile doc — gates dev-only controls
-let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
-let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
-const teamDocRef = (doc) => CLOUD.fsm.doc(CLOUD.db, "teams", TEAM_ID, "state", doc);
-
-// Apply a snapshot only when it truly changes state — this also swallows the
-// echo of our own writes, so typing in a notes box never loses the caret.
+// Apply an incoming change only when it truly differs — this swallows the echo
+// of our own writes, so typing in a notes box never loses the caret.
 function applySnap(current, next) {
   return JSON.stringify(current) === JSON.stringify(next) ? null : next;
 }
 
 async function cloudSignIn(email, pass) {
-  return CLOUD.authm.signInWithEmailAndPassword(CLOUD.auth, email, pass);
+  const { error } = await CLOUD.sb.auth.signInWithPassword({ email, password: pass });
+  if (error) throw error;
+}
+
+// A realtime row -> update the matching global + rerender.
+function applyUserRow(key, data) {
+  if (key === "interest") { const n = applySnap(interest, data || {}); if (n) { interest = n; store.set("tdd_interest", interest); rerender(); } }
+  else if (key === "prefs") { const n = applySnap(prefs, { ...DEFAULT_PREFS, ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
+  else if (key === "lists") { const n = applySnap(lists, data || []); if (n) { lists = n; store.set("tdd_lists", lists); rerender(); } }
+}
+function applyTeamRow(key, data) {
+  if (key === "lists") { const n = applySnap(team, { lists: (data && data.lists) || [], membership: (data && data.membership) || {} }); if (n) { team = n; rerender(); } }
+  else if (key === "buybox") { const n = applySnap(buybox, { ...EMPTY_BUYBOX, ...(data || {}) }); if (n) { buybox = n; recomputeBuybox(); rerender(); } }
 }
 
 async function onSignedIn(user) {
   CLOUD.user = user;
   $("login-overlay").hidden = true;
-  const fs = CLOUD.fsm;
+  const sb = CLOUD.sb;
   try {
-    // The profile doc names this account's team workspace (and flags the
-    // platform operator, who gets the admin-only controls). A missing profile
-    // means the account wasn't fully onboarded — fail VISIBLY rather than
-    // silently dropping the user into the wrong workspace.
-    const prof = await fs.getDoc(fs.doc(CLOUD.db, "users", user.uid));
-    const profile = prof.data();
-    if (!profile || !profile.team) {
-      WORKSPACE_ERROR = true;
-      renderAccount();
-      return;
-    }
+    // The profiles row names this account's team workspace (and flags the
+    // platform operator). A missing profile/team means the account wasn't fully
+    // onboarded — fail VISIBLY rather than syncing into the wrong workspace.
+    const { data: profile } = await sb.from("profiles").select("team_id, is_admin").eq("id", user.id).maybeSingle();
+    if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; renderAccount(); return; }
     WORKSPACE_ERROR = false;
-    TEAM_ID = profile.team;
-    IS_ADMIN = !!profile.admin;
+    TEAM_ID = profile.team_id;
+    IS_ADMIN = !!profile.is_admin;
     $("btn-refresh-admin").hidden = !IS_ADMIN;
-    // First contact: merge this device's local state with the cloud. Cloud
-    // wins per key; anything only known locally is kept (union). After this,
-    // the cloud is the source of truth and listeners keep every device live.
-    const [ci, cp, cl, ct, cb] = await Promise.all(
-      [userDocRef("interest"), userDocRef("prefs"), userDocRef("lists"), teamDocRef("lists"), teamDocRef("buybox")]
-        .map((r) => fs.getDoc(r)));
-    interest = { ...interest, ...((ci.data() || {}).data || {}) };
-    prefs = { ...prefs, ...((cp.data() || {}).data || {}) };
-    const cloudLists = ((cl.data() || {}).data || []).slice();
+
+    // First contact: merge this device's local state with the cloud. Cloud wins
+    // per key; anything only known locally is kept (union). After this the cloud
+    // is the source of truth and realtime keeps every device live.
+    const [us, ts] = await Promise.all([
+      sb.from("user_state").select("key, data").eq("user_id", user.id),
+      sb.from("team_state").select("key, data").eq("team_id", TEAM_ID),
+    ]);
+    const U = Object.fromEntries((us.data || []).map((r) => [r.key, r.data]));
+    const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
+    interest = { ...interest, ...(U.interest || {}) };
+    prefs = { ...prefs, ...(U.prefs || {}) };
+    const cloudLists = (U.lists || []).slice();
     for (const l of lists) if (!cloudLists.some((c) => c.name === l.name)) cloudLists.push(l);
     lists = cloudLists.length ? cloudLists : lists;
-    team = { lists: (ct.data() || {}).lists || [], membership: (ct.data() || {}).membership || {} };
-    // Team's buy-box wins over anything local — a whole team shares one buy
-    // box, so a personal edit made before signing in is a starting point,
-    // not something that should silently override what the team already set.
-    const cloudBuybox = cb.data();
+    team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
+    // The team shares one buy box — a personal edit made before signing in is a
+    // starting point, not something that overrides what the team already set.
+    const cloudBuybox = T.buybox;
     if (cloudBuybox) buybox = { ...EMPTY_BUYBOX, ...cloudBuybox };
     store.set("tdd_interest", interest); store.set("tdd_prefs", prefs); store.set("tdd_lists", lists);
 
-    // Push the merged state up BEFORE attaching listeners, and await it — the
-    // first snapshot each listener receives then echoes exactly what we wrote,
-    // so it can never clobber a merge that hasn't landed yet.
+    // Push the merged state up. Realtime echoes come back through applySnap,
+    // which no-ops on identical values, so the merge can't be clobbered.
+    const stamp = new Date().toISOString();
     await Promise.all([
-      fs.setDoc(userDocRef("interest"), { data: interest }),
-      fs.setDoc(userDocRef("prefs"), { data: prefs }),
-      fs.setDoc(userDocRef("lists"), { data: lists }),
-      ...(cloudBuybox ? [] : [fs.setDoc(teamDocRef("buybox"), buybox || EMPTY_BUYBOX)]),
+      sb.from("user_state").upsert({ user_id: user.id, key: "interest", data: interest, updated_at: stamp }, { onConflict: "user_id,key" }),
+      sb.from("user_state").upsert({ user_id: user.id, key: "prefs", data: prefs, updated_at: stamp }, { onConflict: "user_id,key" }),
+      sb.from("user_state").upsert({ user_id: user.id, key: "lists", data: lists, updated_at: stamp }, { onConflict: "user_id,key" }),
+      ...(cloudBuybox ? [] : [sb.from("team_state").upsert({ team_id: TEAM_ID, key: "buybox", data: buybox || EMPTY_BUYBOX, updated_at: stamp }, { onConflict: "team_id,key" })]),
     ]);
 
-    CLOUD.unsubs = [
-      fs.onSnapshot(userDocRef("interest"), (s) => {
-        if (!s.data()) return;                       // doc not created yet
-        const next = applySnap(interest, s.data().data || {});
-        if (next) { interest = next; store.set("tdd_interest", interest); rerender(); }
-      }),
-      fs.onSnapshot(userDocRef("prefs"), (s) => {
-        if (!s.data()) return;
-        const next = applySnap(prefs, { ...DEFAULT_PREFS, ...(s.data().data || {}) });
-        if (next) { prefs = next; store.set("tdd_prefs", prefs); rerender(); }
-      }),
-      fs.onSnapshot(userDocRef("lists"), (s) => {
-        if (!s.data()) return;
-        const next = applySnap(lists, s.data().data || []);
-        if (next) { lists = next; store.set("tdd_lists", lists); rerender(); }
-      }),
-      fs.onSnapshot(teamDocRef("lists"), (s) => {
-        if (!s.data()) return;
-        const d = s.data();
-        const next = applySnap(team, { lists: d.lists || [], membership: d.membership || {} });
-        if (next) { team = next; rerender(); }
-      }),
-      fs.onSnapshot(teamDocRef("buybox"), (s) => {
-        if (!s.data()) return;
-        const next = applySnap(buybox, { ...EMPTY_BUYBOX, ...s.data() });
-        if (next) { buybox = next; recomputeBuybox(); rerender(); }
-      }),
-    ];
+    // Live subscriptions: this user's personal rows + the whole team's shared rows.
+    const userCh = sb.channel("user_state:" + user.id)
+      .on("postgres_changes", { event: "*", schema: "public", table: "user_state", filter: "user_id=eq." + user.id },
+          (p) => { const r = p.new || {}; applyUserRow(r.key, r.data); })
+      .subscribe();
+    const teamCh = sb.channel("team_state:" + TEAM_ID)
+      .on("postgres_changes", { event: "*", schema: "public", table: "team_state", filter: "team_id=eq." + TEAM_ID },
+          (p) => { const r = p.new || {}; applyTeamRow(r.key, r.data); })
+      .subscribe();
+    CLOUD.channels = [userCh, teamCh];
   } catch (e) { console.warn("first sync failed:", e); }
   renderAccount();
   if (DATA.length) rerender();
 }
 
 function onSignedOut() {
-  if (CLOUD) { (CLOUD.unsubs || []).forEach((u) => u()); CLOUD.unsubs = []; CLOUD.user = null; }
-  TEAM_ID = "madd";
+  if (CLOUD) {
+    (CLOUD.channels || []).forEach((c) => { try { CLOUD.sb.removeChannel(c); } catch {} });
+    CLOUD.channels = []; CLOUD.user = null;
+  }
+  TEAM_ID = null;
   IS_ADMIN = false;
   WORKSPACE_ERROR = false;
   SYNC_ERROR = false;
@@ -366,15 +373,14 @@ async function initCloud() {
   renderAccount();
   if (!SYNC_ON) return;
   try {
-    const [appM, authM, fsM] = await Promise.all([
-      import(SDK_BASE + "firebase-app.js"),
-      import(SDK_BASE + "firebase-auth.js"),
-      import(SDK_BASE + "firebase-firestore.js"),
-    ]);
-    const app = appM.initializeApp(FIREBASE_CONFIG);
-    CLOUD = { app, authm: authM, fsm: fsM, auth: authM.getAuth(app),
-              db: fsM.getFirestore(app), user: null, unsubs: [] };
-    authM.onAuthStateChanged(CLOUD.auth, (u) => (u ? onSignedIn(u) : onSignedOut()));
+    const { createClient } = await import(SUPABASE_SDK);
+    const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true } });
+    CLOUD = { sb, user: null, channels: [] };
+    sb.auth.onAuthStateChange((_event, session) => {
+      const u = session && session.user;
+      if (u && (!CLOUD.user || CLOUD.user.id !== u.id)) onSignedIn(u);
+      else if (!u && CLOUD.user) onSignedOut();
+    });
   } catch (e) {
     console.warn("sync unavailable:", e);
     CLOUD = null;
@@ -396,7 +402,7 @@ function renderAccount() {
       <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in${WORKSPACE_ERROR ? "" : " &middot; syncing"}</div>
       <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div>
       <button class="btn btn-ghost" id="btn-signout" style="font-size:12px;padding:2px 4px;margin-top:4px">Sign out</button>`;
-    $("btn-signout").onclick = () => CLOUD.authm.signOut(CLOUD.auth);
+    $("btn-signout").onclick = () => CLOUD.sb.auth.signOut();
   } else {
     box.innerHTML = `
       <button class="btn btn-secondary" id="btn-signin" style="width:100%">Sign in</button>
@@ -420,13 +426,13 @@ function wireLogin() {
       await cloudSignIn($("login-email").value.trim(), $("login-pass").value);
       $("login-pass").value = "";
     } catch (err) {
-      const code = (err && err.code) || "";
+      const msg = ((err && err.message) || "").toLowerCase();
       $("login-error").textContent =
-        /invalid-credential|wrong-password|user-not-found/.test(code)
+        /invalid login|invalid credentials|email not confirmed/.test(msg)
           ? "Email or password doesn't match. Try again, or use Forgot password."
-          : /too-many-requests/.test(code)
+          : /rate limit|too many/.test(msg)
             ? "Too many attempts — wait a minute and try again."
-            : "Couldn't sign in (" + (code || "network") + ").";
+            : "Couldn't sign in (" + ((err && err.message) || "network") + ").";
     }
     $("login-submit").disabled = false;
   };
@@ -434,12 +440,10 @@ function wireLogin() {
     if (!CLOUD) return;
     const email = $("login-email").value.trim();
     if (!email) { $("login-error").textContent = "Type your email above first, then tap Forgot password."; return; }
-    try {
-      await CLOUD.authm.sendPasswordResetEmail(CLOUD.auth, email);
-      $("login-error").textContent = "Reset email sent to " + email + " — check your inbox.";
-    } catch (err) {
-      $("login-error").textContent = "Couldn't send the reset email (" + ((err && err.code) || "network") + ").";
-    }
+    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(email);
+    $("login-error").textContent = error
+      ? "Couldn't send the reset email (" + error.message + ")."
+      : "Reset email sent to " + email + " — check your inbox.";
   };
 }
 

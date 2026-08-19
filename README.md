@@ -18,24 +18,25 @@ GitHub Actions (weekly cron, Mon 08:00 UTC)
 data/exports/master_list.json   the feed — one file, all counties, no flags
   └─ dashboard/index.html       static app (GitHub Pages /app/)
       ├─ per-team buy box       flags computed client-side from team settings
-      └─ Firebase Auth+Firestore  login, cross-device sync, team workspaces
+      └─ Supabase Auth+Postgres   login, cross-device sync, team workspaces
 site/index.html                 sales landing page (Pages root)
 ```
 
 Key properties:
 
 - **One scrape serves every customer.** The feed is neutral (no flags, no
-  customer criteria); each team's buy box lives in their private Firestore doc
-  and MATCH/REVIEW/NO is computed in the browser (`evalBuybox` in
-  `dashboard/index.html`, mirrored server-side by `scraper/judgment.py` for the
-  operator's TSV mirror).
+  customer criteria); each team's buy box lives in their private Supabase
+  `team_state` row and MATCH/REVIEW/NO is computed in the browser (`evalBuybox`
+  in `dashboard/index.html`, mirrored server-side by `scraper/judgment.py` for
+  the operator's TSV mirror).
 - **Partial runs merge, never replace.** `scraper/exporter.py` refreshes the
   counties a run scraped and carries every other county forward;
   `county_runs` in the feed records each county's source run.
 - **Tax deeds only.** Discovery validates the state and auction type from the
   platform's own selector; foreclosure-looking rows are excluded and logged.
-- **Tenant isolation** is enforced by `firestore.rules` (operator-managed
-  member lists per team) plus closed signup. See `docs/LOGIN_SETUP.md` for
+- **Tenant isolation** is enforced by Supabase row-level security (each user
+  scoped to their own rows and their team's, keyed off an operator-set
+  `profiles.team_id`) plus closed signup. See `docs/LOGIN_SETUP.md` for
   provisioning a customer.
 
 ## Repository map
@@ -51,7 +52,7 @@ Key properties:
 | `data/runs/` | Committed raw runs (retention: pruned by the weekly workflow) |
 | `data/exports/` | The feeds consumed by the app and the Google Sheet |
 | `docs/DATA_FEED.md` | Feed contract |
-| `docs/LOGIN_SETUP.md` | Operator runbook: Firebase setup + customer onboarding |
+| `docs/LOGIN_SETUP.md` | Operator runbook: Supabase login + customer onboarding |
 | `.github/workflows/` | Weekly scrape + enrichment + Pages deploy |
 
 ## Running it
@@ -87,9 +88,9 @@ the county before bidding.
 
 - Fixture regression: `python -m scraper run --fixtures scraper/fixtures ...`
   runs the full parse pipeline against saved HTML (also runs in CI on push).
-- Five Playwright suites cover the dashboard (rendering, filters, case-file
-  block, login/sync against a stubbed Firebase, per-team buy-box, branding and
-  failure states); they live in the operator's session scratchpad and run
+- Playwright suites cover the dashboard (rendering, filters, case-file block,
+  login/sync against a stubbed Supabase, per-team buy-box, lists, sort, branding
+  and failure states); they live in the operator's session scratchpad and run
   before every deploy.
 - When a county site changes shape: `python -m scraper capture --url <page>`
   saves HTML + structure diagnostics to iterate parsers against.
