@@ -1,103 +1,95 @@
-# Turning on team login + cross-device sync
+# Team login + cross-device sync (Supabase)
 
-The dashboard ships with login built in but **dormant** — until the config below
-is pasted in, it runs exactly as before (everything saved in the browser only).
-This is Frank's one-time setup, about 10 minutes, all in the browser.
+Login and cross-device sync are **live**, backed by a dedicated Supabase project
+("Tax Deed Radar"). Each person signs in with an email + password, and their
+lists, notes, max bids and Interested/Watching/Pass marks follow them to any
+device. Lists marked **Shared with team** and the team's buy box are live for
+everyone on the team — a parcel one teammate adds shows up on another's screen
+within a second or two.
 
-What the team gets once it's on: each person signs in with an email + password,
-and their lists, notes, max bids and Interested/Watching/Pass marks follow them
-to any device. Lists marked **Shared with team** are live for everyone — a
-parcel Jennifer adds on her phone shows up on Marlon's laptop.
+Signup is **closed**: there is no sign-up form. The operator creates every
+account, so the accounts that exist are the entire access list.
 
-## 1. Create the Firebase project (free)
+## How it's wired
 
-1. Go to <https://console.firebase.google.com> (any Google account) → **Add project**.
-2. Name it e.g. `madd-taxdeed`. Google Analytics: **off** (not needed). Create.
+- **Auth**: Supabase email/password. Sessions persist per browser.
+- **Data**: two Postgres tables — `user_state` (per person: `interest`, `prefs`,
+  `lists`) and `team_state` (per team: `buybox`, shared `lists` + membership).
+- **Isolation**: row-level security. A user can read/write only their own
+  `user_state` rows and only their team's `team_state` rows; `profiles.team_id`
+  (set by the operator) decides which team that is. One customer can never see
+  another's data. Verified: a signed-in user sees only their team's rows and
+  cannot write to another team's.
+- **Live updates**: Supabase Realtime on both tables, filtered to the signed-in
+  user / their team.
+- The dashboard config (`SUPABASE_URL`, `SUPABASE_ANON_KEY` in
+  `dashboard/index.html`) is public by design — security lives in the RLS
+  policies and the closed account list, not in hiding the key.
 
-## 2. Turn on email/password sign-in
+## Onboarding a customer (operator, via the Supabase MCP or SQL editor)
 
-1. In the project: **Build → Authentication → Get started**.
-2. **Sign-in method** tab → **Email/Password** → Enable → Save.
-3. Do **NOT** enable anything that lets people self-register (no "anonymous",
-   no third-party providers). The dashboard has no sign-up form — the accounts
-   you create here are the entire access list.
+Everything below is run against the **Tax Deed Radar** project. Replace the
+example values. This is the whole per-customer setup — no code changes.
 
-## 3. Create the team's accounts
+1. **Create the team** (skip if it exists):
 
-Authentication → **Users** tab → **Add user** — one per person (Frank, Marlon,
-Jennifer), each with their email and a starting password. Tell them the
-password; the dashboard has a **Forgot password?** link that emails a reset,
-so they can change it themselves.
-
-Note each user's **UID** (shown in the Users table) — you need it in the next
-steps to wire team membership.
-
-## 4. Create the database and paste the rules
-
-1. **Build → Firestore Database → Create database** → production mode →
-   location `nam5 (United States)` → Enable.
-2. **Rules** tab → replace everything with the contents of
-   [`firestore.rules`](../firestore.rules) from this repo → **Publish**.
-
-## 4b. Create the team and assign the accounts to it
-
-The dashboard is multi-tenant: every customer is a **team**, and teams are
-fully isolated from each other — one customer can never see another's lists.
-For each team (start with MADD, id `madd`):
-
-1. Firestore → **Start collection** → id `teams` → document id `madd` → fields:
-   - `name` (string): `MADD Assets`
-   - `members` (map): one entry per member — key = the user's **UID** from
-     step 3, value = `true` (boolean).
-2. For each member, also create their profile doc: collection `users` →
-   document id = that user's **UID** → field `team` (string): `madd`.
-
-Onboarding a NEW customer later = repeat steps 3 + 4b with a new team id
-(e.g. `acme`): create their accounts, create `teams/acme` with their UIDs in
-`members`, and set `team: acme` on each of their `users/{uid}` profile docs.
-Nothing else changes — same dashboard, same feed, isolated workspace.
-
-## 5. Allow the dashboard's domain
-
-**Authentication → Settings → Authorized domains → Add domain** →
-`frankhatfellaaiagent-del.github.io`
-(add your custom domain here too if one is attached later).
-
-## 6. Paste the config into the dashboard
-
-1. Project settings (gear icon) → **General** → *Your apps* → **</>** (Web) →
-   register app (name `dashboard`, no hosting) → copy the `firebaseConfig`
-   object it shows.
-2. In this repo, edit `dashboard/index.html` and replace the empty object at
-   `const FIREBASE_CONFIG = {};` with what you copied, e.g.:
-
-   ```js
-   const FIREBASE_CONFIG = {
-     apiKey: "AIza…",
-     authDomain: "madd-taxdeed.firebaseapp.com",
-     projectId: "madd-taxdeed",
-     storageBucket: "madd-taxdeed.appspot.com",
-     messagingSenderId: "…",
-     appId: "…",
-   };
+   ```sql
+   insert into public.teams (id, name) values ('acme', 'ACME Land Co')
+   on conflict (id) do nothing;
    ```
 
-3. Commit and push — the Pages deploy makes it live. A **Sign in** button
-   appears in the dashboard sidebar.
+2. **Create each person's account** (repeat per member). This makes a
+   confirmed email/password user and their profile row pointing at the team.
+   Set `is_admin => true` only for the platform operator (it unlocks the
+   admin-only "refresh data" control); customers get `false`.
 
-This config is **not a secret** (every Firebase web app ships it publicly);
-access is controlled by the rules from step 4 and the closed account list from
-step 3.
+   ```sql
+   with new_user as (
+     insert into auth.users (
+       instance_id, id, aud, role, email, encrypted_password,
+       email_confirmed_at, created_at, updated_at,
+       raw_app_meta_data, raw_user_meta_data, is_sso_user, is_anonymous
+     ) values (
+       '00000000-0000-0000-0000-000000000000', gen_random_uuid(),
+       'authenticated', 'authenticated', 'owner@acme.com',
+       extensions.crypt('TEMP-PASSWORD', extensions.gen_salt('bf')),
+       now(), now(), now(),
+       '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false, false
+     )
+     returning id, email
+   ),
+   ident as (
+     insert into auth.identities (provider_id, user_id, identity_data, provider,
+                                  last_sign_in_at, created_at, updated_at)
+     select id::text, id,
+            jsonb_build_object('sub', id::text, 'email', email, 'email_verified', true),
+            'email', now(), now(), now()
+     from new_user returning user_id
+   )
+   insert into public.profiles (id, team_id, is_admin, email)
+   select id, 'acme', false, email from new_user;
+   ```
+
+3. Give each person their email + temporary password. The dashboard's
+   **Forgot password?** link emails a reset so they can set their own.
+
+That's it — same dashboard, same feed, isolated workspace. To seed a team's
+starting buy box (their real counties/criteria), upsert a `team_state` row with
+`key = 'buybox'` and the buy-box JSON as `data`.
 
 ## Checking it worked
 
-Sign in on two devices (or one normal + one private browser window) with the
-same account: add a note on one — it appears on the other within a second or
-two. Make a list **Shared with team**, sign in as a different account, and the
-list is there.
+Sign in on two devices (or one normal + one private window) with the same
+account: add a note or a list on one — it appears on the other within a second
+or two. Make a list **Shared with team**, sign in as a different teammate, and
+the list is there.
 
-## Costs
+## Notes
 
-Firebase's free tier (Spark) covers this comfortably: it allows ~50k reads and
-~20k writes **per day**; a three-person team touching a few hundred parcels a
-week uses a fraction of one percent of that. No credit card required.
+- **Password resets** use Supabase's built-in email. For heavy use, attach a
+  custom SMTP sender in the project's Auth settings.
+- **Authorized redirect/site URL**: set the project's Auth **Site URL** to the
+  app origin (`https://frankhatfellaaiagent-del.github.io`, plus any custom
+  domain) so password-reset links point back to the app.
+- The old Firebase path is retired; there is no `firestore.rules` anymore — the
+  schema and policies live in the project's SQL migrations.

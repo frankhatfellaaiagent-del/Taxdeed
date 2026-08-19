@@ -102,8 +102,8 @@ dashboard (`dashboard/index.html`) instead:
    direct JS port of `scraper/judgment.py::buybox_flag`) from that config.
 3. Lets each team edit their own target counties, land-use keywords, max bid and
    per-county caps in Settings — instantly re-flagging the board, no redeploy.
-4. Persists the config per-team (signed in: Firestore `teams/{id}/state/buybox`,
-   shared live across the team; signed out: that browser's localStorage only).
+4. Persists the config per-team (signed in: Supabase `team_state` row keyed
+   `buybox`, shared live across the team; signed out: that browser's localStorage only).
 
 This is what makes the platform multi-tenant on one shared scrape: onboarding a new
 customer with entirely different counties or criteria is a Settings change they make
