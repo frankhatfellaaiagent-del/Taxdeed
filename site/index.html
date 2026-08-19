@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tax Deed Radar — Florida tax deed auctions, graded against your buy box</title>
-<meta name="description" content="Every upcoming Florida tax deed auction on one board — checked against the county appraiser and clerk records, graded against your buy box, refreshed automatically every week.">
+<meta name="description" content="All 67 Florida counties on one tax deed board — live auction feeds for every county that sells online, sale schedules and clerk records for the rest. Checked against county records, graded against your buy box, refreshed automatically.">
 <meta property="og:title" content="Tax Deed Radar">
 <meta property="og:description" content="Every Florida tax deed auction on one board — verified against county records, graded against your buy box.">
 <meta property="og:image" content="https://frankhatfellaaiagent-del.github.io/Taxdeed/shots/dashboard.png">
@@ -48,7 +48,8 @@
       <p style="font-size:17px;max-width:54ch">Stop clicking through dozens of county auction sites, appraiser pages and
       clerk portals. Tax Deed Radar collects every upcoming sale, verifies it against the county records, and grades
       each property <b>MATCH / REVIEW / NO</b> against the criteria you set &mdash; so your week starts with a short
-      list instead of a haystack.</p>
+      list instead of a haystack. All 67 Florida counties on one board &mdash; live auction feeds for every county
+      that sells online, sale schedules and clerk records for the ones that sell at the courthouse.</p>
       <div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap">
         <a class="btn btn-primary" href="app/" style="font-size:16px;padding:12px 22px">See the live board &rarr;</a>
         <a class="btn btn-secondary" href="mailto:frankhatfellaaiagent@gmail.com?subject=Tax%20Deed%20Radar%20walkthrough" style="font-size:16px;padding:12px 22px">Book a walkthrough</a>
@@ -62,7 +63,7 @@
 
   <div class="statbar" style="margin-top:44px">
     <div><div class="statnum" id="st-total">2,400+</div><div class="text-muted" style="font-size:12px">auctions on the board now</div></div>
-    <div><div class="statnum" id="st-counties">29</div><div class="text-muted" style="font-size:12px">Florida counties covered</div></div>
+    <div><div class="statnum" id="st-counties">67</div><div class="text-muted" style="font-size:12px">Florida counties &mdash; all of them</div></div>
     <div><div class="statnum">Weekly</div><div class="text-muted" style="font-size:12px">automatic refresh &middot; Mondays 4 AM ET</div></div>
     <div><div class="statnum" id="st-updated">&mdash;</div><div class="text-muted" style="font-size:12px">data last updated</div></div>
   </div>
@@ -156,7 +157,7 @@
 // about the board it's selling.
 fetch("app/data/exports/master_list.json", { cache: "no-cache" }).then((r) => r.json()).then((j) => {
   document.getElementById("st-total").textContent = j.counts.total.toLocaleString();
-  document.getElementById("st-counties").textContent = j.counts.counties;
+  document.getElementById("st-counties").textContent = j.counts.counties_total || j.counts.counties;
   const d = new Date(j.generated_at);
   document.getElementById("st-updated").textContent =
     d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
