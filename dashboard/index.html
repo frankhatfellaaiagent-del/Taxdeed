@@ -448,7 +448,7 @@ let DATA = [];            // mapped property records
 let META = null;          // feed counts/generated_at
 let S = {
   screen: "dashboard", selId: null, q: "",
-  county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
+  county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
   sort: prefs.sort || "soonest", shown: 150,
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
@@ -688,7 +688,6 @@ function go(screen, selId) {
 // ---------- filtering ----------
 function filteredRows() {
   const q = S.q.trim().toLowerCase();
-  const maxBid = parseInt(String(S.maxBid).replace(/[^0-9]/g, ""), 10);
   let rows = DATA.filter((p) => {
     const it = getInt(p.id);
     if (S.county !== "All" && p.county !== S.county) return false;
@@ -698,7 +697,6 @@ function filteredRows() {
       const t = effType(p);
       if (S.type === "Unassigned" ? t : t !== S.type) return false;
     }
-    if (!isNaN(maxBid) && !(p.bid != null && p.bid <= maxBid)) return false;
     if (S.deposit === "Within") {
       // RealAuction requires ~5% of your high bid on deposit; keep rows where
       // the county deposit (config/buybox.yaml) covers at least the opening bid.
@@ -761,8 +759,6 @@ function renderDashboard() {
         <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
       <div class="field" style="width:120px"><label>Buy box <button id="bb-help" title="Every property is graded against YOUR buy box — the counties, property types and price limits you set. MATCH fits it, REVIEW needs a look, NO doesn't fit. Click to set yours." style="border:1px solid var(--color-divider);background:none;cursor:pointer;font-size:10px;padding:0 5px;color:var(--color-accent-700)">?</button></label>
         <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
-      <div class="field" style="width:130px"><label>Max opening bid</label>
-        <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
       <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
         <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
       <div class="field" style="width:230px"><label>Sort by</label>
@@ -798,7 +794,6 @@ function renderDashboard() {
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
   $("bb-help").onclick = () => go("settings");
-  $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
