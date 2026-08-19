@@ -449,11 +449,35 @@ let META = null;          // feed counts/generated_at
 let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", maxBid: "", deposit: "All",
-  shown: 150,
+  sort: "soonest", shown: 150,
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
 };
+
+// Shared "Sort by" options + comparators, used by the dashboard filter row and
+// each list's page so the two behave identically.
+const SORT_OPTIONS = [
+  ["soonest", "Auction date — soonest first"],
+  ["latest", "Auction date — latest first"],
+  ["bid-asc", "Opening bid — low to high"],
+  ["bid-desc", "Opening bid — high to low"],
+  ["assessed-desc", "Assessed value — high to low"],
+  ["county", "County (A–Z)"],
+];
+function sortComparator(sort) {
+  const t = (p) => p.saleDate?.getTime() ?? 9e15;   // undated rows sort last
+  const bid = (p) => p.bid ?? Infinity, bidD = (p) => p.bid ?? -Infinity;
+  const asv = (p) => p.assessed ?? -Infinity;
+  return {
+    soonest: (a, b) => t(a) - t(b) || a.county.localeCompare(b.county),
+    latest: (a, b) => t(b) - t(a) || a.county.localeCompare(b.county),
+    "bid-asc": (a, b) => bid(a) - bid(b),
+    "bid-desc": (a, b) => bidD(b) - bidD(a),
+    "assessed-desc": (a, b) => asv(b) - asv(a),
+    county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
+  }[sort] || ((a, b) => t(a) - t(b));
+}
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
 function titleCase(s) { return s ? cap(String(s).toLowerCase()) : s; }
@@ -673,7 +697,10 @@ function filteredRows() {
     if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
     return true;
   });
+  const cmp = sortComparator(S.sort);
   if (prefs.myTypesFirst) {
+    // "My types first" stays a primary grouping key; the Sort dropdown orders
+    // rows within each group.
     const rank = (p) => {
       const t = getInt(p.id).type;
       if (t && prefs.myTypes[t]) return 0;                 // team-assigned preferred type
@@ -681,7 +708,9 @@ function filteredRows() {
       if (p.buybox === "REVIEW") return 2;
       return 3;
     };
-    rows = [...rows].sort((a, b) => rank(a) - rank(b) || (a.saleDate?.getTime() || 9e15) - (b.saleDate?.getTime() || 9e15));
+    rows = [...rows].sort((a, b) => rank(a) - rank(b) || cmp(a, b));
+  } else {
+    rows = [...rows].sort(cmp);
   }
   return rows;
 }
@@ -738,6 +767,8 @@ function renderDashboard() {
         <input class="input" id="f-maxbid" placeholder="$ any" value="${esc(S.maxBid)}"></div>
       <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
         <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
+      <div class="field" style="width:210px"><label>Sort by</label>
+        <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
       <button class="btn" id="f-mytypes" style="border:1px solid ${prefs.myTypesFirst ? "var(--color-accent)" : "var(--color-divider)"};background:${prefs.myTypesFirst ? "var(--color-accent)" : "transparent"};color:${prefs.myTypesFirst ? "var(--color-bg)" : "var(--color-text)"}">&#9733; My types first</button>
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
@@ -772,6 +803,7 @@ function renderDashboard() {
   $("bb-help").onclick = () => go("settings");
   $("f-maxbid").onchange = (e) => { S.maxBid = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-sort").onchange = (e) => { S.sort = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-mytypes").onclick = () => { prefs.myTypesFirst = !prefs.myTypesFirst; savePrefs(); renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
@@ -1037,29 +1069,6 @@ function renderLists() {
 }
 
 // ---------- single-list page: filter, sort, manage ----------
-const LIST_SORTS = [
-  ["soonest", "Auction — soonest first"],
-  ["latest", "Auction — latest first"],
-  ["bid-asc", "Opening bid — low to high"],
-  ["bid-desc", "Opening bid — high to low"],
-  ["assessed-desc", "Assessed value — high to low"],
-  ["county", "County (A–Z)"],
-];
-function sortListItems(items, sort) {
-  const t = (p) => p.saleDate?.getTime() ?? 9e15;
-  const bid = (p) => p.bid ?? Infinity, bidD = (p) => p.bid ?? -Infinity;
-  const asv = (p) => p.assessed ?? -Infinity;
-  const arr = [...items];
-  const cmp = {
-    soonest: (a, b) => t(a) - t(b) || a.county.localeCompare(b.county),
-    latest: (a, b) => t(b) - t(a) || a.county.localeCompare(b.county),
-    "bid-asc": (a, b) => bid(a) - bid(b),
-    "bid-desc": (a, b) => bidD(b) - bidD(a),
-    "assessed-desc": (a, b) => asv(b) - asv(a),
-    county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
-  }[sort] || ((a, b) => t(a) - t(b));
-  return arr.sort(cmp);
-}
 function renderListDetail() {
   const name = S.listName, shared = S.listShared;
   const listObj = findList(name, shared);
@@ -1076,7 +1085,7 @@ function renderListDetail() {
     if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county).toLowerCase().includes(q)) return false;
     return true;
   });
-  rows = sortListItems(rows, ld.sort);
+  rows = [...rows].sort(sortComparator(ld.sort));
   const totalBid = all.reduce((s, p) => s + (p.redeemed ? 0 : (p.bid || 0)), 0);
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
 
@@ -1106,7 +1115,7 @@ function renderListDetail() {
       <div class="field" style="width:120px"><label>Buy box</label>
         <select class="input" id="ld-buybox">${opt("All", ld.buybox, "All")}${opt("MATCH", ld.buybox)}${opt("REVIEW", ld.buybox)}${opt("NO", ld.buybox)}</select></div>
       <div class="field" style="width:210px"><label>Sort by</label>
-        <select class="input" id="ld-sort">${LIST_SORTS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
+        <select class="input" id="ld-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
       <div class="field" style="flex:1;min-width:150px"><label>Search</label>
         <input class="input" id="ld-q" placeholder="parcel, address, case #" value="${esc(ld.q)}"></div>
       <span style="font-size:12px" class="text-muted">${rows.length.toLocaleString()} shown</span>
