@@ -636,6 +636,16 @@ function clerkLink(p) {
   return (t && (t.search || t.url)) ||
     "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
 }
+// Duval's property appraiser retired its Detail.aspx?RE= deep link — the page
+// that RealAuction still links to loads blank. Route to the working search
+// page instead; duvalRE() gives the RE to paste (offered as a one-tap copy).
+const isDuvalPao = (p) => /paopropertysearch\.coj\.net/i.test(p.appraiserUrl || "");
+const duvalRE = (p) => (isDuvalPao(p) ? (p.parcel || "").replace(/\D/g, "") : "");
+function appraiserLink(p) {
+  if (isDuvalPao(p)) return "https://paopropertysearch.coj.net/Basic/Search.aspx";
+  return p.appraiserUrl ||
+    "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County FL property appraiser parcel ${p.parcel}`);
+}
 // The active buy-box's per-county caps — editable in Settings, not the feed.
 const countyCaps = (p) => (buybox && buybox.county_caps || {})[normCounty(p.county)] || {};
 
@@ -817,7 +827,7 @@ function renderDetail() {
   const gsearch = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
   const ll = p.lat != null && p.lng != null;
   const links = [
-    [p.appraiserUrl || gsearch(`${p.county} County FL property appraiser parcel ${p.parcel}`), `${esc(p.county)} Property Appraiser`],
+    [appraiserLink(p), `${esc(p.county)} Property Appraiser`],
     [p.auctionUrl, "Live auction listing (RealAuction)"],
     [clerkLink(p), p.caseUrl ? "This parcel&rsquo;s clerk case file" : "Tax deed case records (county)"],
     [ll ? `https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd&center=${p.lng},${p.lat}&level=16`
@@ -892,6 +902,9 @@ function renderDetail() {
           ${ll ? `<div style="margin-top:10px;font-size:12px" class="text-muted">Coordinates
             <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
             &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
+          ${duvalRE(p) ? `<div style="margin-top:8px;font-size:12px" class="text-muted">Duval RE&nbsp;#
+            <button id="copy-re" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the appraiser search box">${esc(duvalRE(p))}</button>
+            &middot; paste into the appraiser search above (Duval&rsquo;s direct links are retired)</div>` : ""}
         </div>
 
         ${p.caseUrl ? `<div class="blueprint" style="padding:18px 20px">${CORNERS}
@@ -972,6 +985,13 @@ function renderDetail() {
       setTimeout(() => { cll.textContent = `${p.lat}, ${p.lng}`; }, 1200);
     });
   };
+  const cre = $("copy-re");
+  if (cre) { const re = duvalRE(p); cre.onclick = () => {
+    navigator.clipboard?.writeText(re).then(() => {
+      cre.textContent = "copied ✓";
+      setTimeout(() => { cre.textContent = re; }, 1200);
+    });
+  }; }
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
     b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
