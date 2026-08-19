@@ -592,12 +592,26 @@ function typeFromUse(use) {
   if (/commer|industr|office|retail|warehouse|store/.test(u)) return "Commercial";
   return "";
 }
+// ---------- 67-county registry (feed's counties_registry) ----------
+// Every Florida county, including the ones with no online auction. Names come
+// from here so "miamidade" renders as "Miami-Dade", not "Miamidade".
+const REG = () => (META && META.counties_registry) || [];
+const regByName = () => Object.fromEntries(REG().map((c) => [c.name, c]));
+// Memoized per feed load — mapRecord calls this once per record.
+const countyDisplayName = (() => {
+  let src = null, names = {};
+  return (slug) => {
+    if (src !== META) { src = META; names = Object.fromEntries(REG().map((c) => [c.slug, c.name])); }
+    return names[slug] || cap(String(slug).replace(/_/g, " "));
+  };
+})();
+
 function mapRecord(r, i) {
   const { addr, city } = splitAddr(r.property_address);
   const d = parseDate(r.sale_date);
   return {
     id: `${r.county}|${r.parcel_id}|${r.case_number}`,
-    idx: i, county: cap(r.county.replace(/_/g, " ")),
+    idx: i, county: countyDisplayName(r.county),
     parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
     owner: r.owner_name || "", use: r.property_use || "", acreage: r.acreage || "",
@@ -800,6 +814,29 @@ function statusTag(p) {
   if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
   return '<span class="tag tag-neutral">New</span>';
 }
+// A county with no rows in the feed still gets a real page: how it sells
+// (from the 67-county registry) and where its clerk publishes the sales.
+function countyInfoCard(c) {
+  const title = c.coverage === "in-person" ? "sells tax deeds in person"
+    : c.coverage === "online-other" ? "sells online on another platform"
+    : "no records in the current feed yet";
+  const note = c.coverage === "in-person"
+    ? "There is no online auction feed for this county — sales are held in person at the courthouse. The clerk links below carry the sale schedule and any published sale list."
+    : c.coverage === "online-other"
+      ? "This county's auctions run on a platform the live feed doesn't cover yet, so its parcels don't appear on the board."
+      : "This county sells online and is covered — its parcels appear after the next data refresh.";
+  const links = [];
+  if (c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.clerk_url)}" target="_blank" rel="noopener">Clerk&rsquo;s tax deed page</a>`);
+  if (c.sale_list_url && c.sale_list_url !== c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.sale_list_url)}" target="_blank" rel="noopener">Published sale list</a>`);
+  return `
+    <div class="blueprint" id="county-card" style="padding:22px 24px">${CORNERS}
+      <h6 style="color:var(--color-accent-700);margin-bottom:6px">${esc(c.name)} County &mdash; ${esc(title)}</h6>
+      ${c.sale_info ? `<p style="font-size:14px;margin-bottom:6px;max-width:680px">${esc(c.sale_info)}</p>` : ""}
+      <p class="text-muted" style="font-size:13px;margin-bottom:${links.length ? "14px" : "0"};max-width:680px">${esc(note)}</p>
+      ${links.length ? `<div style="display:flex;gap:10px;flex-wrap:wrap">${links.join("")}</div>` : ""}
+    </div>`;
+}
+
 function renderDashboard() {
   const rows = filteredRows();
   const upcoming = DATA.filter((p) => !p.redeemed);
@@ -813,6 +850,14 @@ function renderDashboard() {
   const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
   const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
   const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  // Every Florida county belongs in the filter — the ones without records in
+  // the feed (in-person sales, other platforms, or awaiting a first refresh)
+  // are grouped below the live ones. Registry ships inside the feed itself.
+  const extras = REG().filter((c) => !counties.includes(c.name));
+  const extraOnline = extras.filter((c) => c.coverage === "online").map((c) => c.name).sort();
+  const extraOther = extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort();
+  // A county with no rows gets an info card instead of an empty table.
+  const regSel = S.county !== "All" && !counties.includes(S.county) ? regByName()[S.county] : null;
   const cty = (rs) => new Set(rs.map((p) => p.county)).size;
 
   const stats = [
@@ -843,7 +888,7 @@ function renderDashboard() {
 
     <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
       <div class="field" style="width:160px"><label>County</label>
-        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}</select></div>
+        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — awaiting first refresh">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
       <div class="field" style="width:160px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:150px"><label>Auction date</label>
@@ -859,7 +904,7 @@ function renderDashboard() {
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
 
-    <div class="blueprint" style="padding:0">${CORNERS}
+    ${regSel ? countyInfoCard(regSel) : `<div class="blueprint" style="padding:0">${CORNERS}
       <div class="tablewrap"><table class="table">
         <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
         <tbody>
@@ -880,7 +925,7 @@ function renderDashboard() {
       </table></div>
       ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
         <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
-    </div>`;
+    </div>`}`;
 
   // Picking a date window means "what's coming up", so order it soonest-first.
   const setWhen = (v) => {
@@ -1318,7 +1363,8 @@ function dataUpdatesHtml() {
     <div class="blueprint" style="padding:18px 20px">${CORNERS}
       <h6 style="color:var(--color-accent-700);margin-bottom:4px">Data updates</h6>
       <p class="text-muted" style="font-size:13px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT} &mdash; next refresh ${nextRefreshText()}. Each county's rows come from its most recent refresh.</p>
-      <p style="font-size:13.5px;margin-bottom:16px">${META ? `Current data as of <b>${esc(etStamp(gen))}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
+      <p style="font-size:13.5px;margin-bottom:8px">${META ? `Current data as of <b>${esc(etStamp(gen))}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
+      ${REG().length ? `<p class="text-muted" style="font-size:13px;margin-bottom:16px">All ${REG().length} Florida counties are on the board: live auction feeds for the ${REG().filter((c) => c.coverage === "online").length} that sell online, and each remaining county&rsquo;s sale schedule and clerk links (pick it in the Dashboard county filter).</p>` : ""}
       <div class="tablewrap"><table class="table">
         <thead><tr><th>Refreshed</th><th style="text-align:right">Counties</th><th style="text-align:right">Auctions</th><th>Coverage</th></tr></thead>
         <tbody>${rows || '<tr><td colspan="4" class="text-muted">No refresh data yet.</td></tr>'}</tbody>
@@ -1688,7 +1734,7 @@ const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
   }
   $("load-note").remove();
   $("last-scrape").textContent = "Data as of " + etStamp(new Date(META.generated_at));
-  $("brand-sub").textContent = `Florida · ${META.counts.counties} counties`;
+  $("brand-sub").textContent = `Florida · ${META.counts.counties_total || META.counts.counties} counties`;
   go("dashboard");
 })();
 </script>

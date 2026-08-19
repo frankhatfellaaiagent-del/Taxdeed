@@ -38,6 +38,23 @@ def _clean(v) -> str:
     return str(v if v is not None else "").replace("\t", " ").replace("\n", " ").strip()
 
 
+def _load_counties_registry() -> list[dict]:
+    """config/florida_counties.json → all 67 counties with coverage status.
+
+    The registry is what lets the app show EVERY Florida county — the ones with
+    no online auction included — with each county's sale method and clerk links.
+    """
+    p = ROOT / "config" / "florida_counties.json"
+    if not p.exists():
+        return []
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        log.warning("florida_counties.json unreadable (%s); feed ships without the registry", exc)
+        return []
+    return data.get("counties", [])
+
+
 def _load_clerk_sites() -> dict:
     """config/clerk_sites.yaml → {county_slug: {url, search?}} for the feed."""
     p = ROOT / "config" / "clerk_sites.yaml"
@@ -196,10 +213,15 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "scheduled": len(json_records) - n_redeemed,
             "redeemed": n_redeemed,
             "counties": len(by_county),
+            "counties_total": 67,
             "by_county": dict(sorted(by_county.items())),
         },
         # Clerk of Court pages per county from config/clerk_sites.yaml.
         "clerk_sites": _load_clerk_sites(),
+        # ALL 67 Florida counties with how each sells tax deeds
+        # (config/florida_counties.json) — so the app can show every county,
+        # including the ones that only sell in person at the courthouse.
+        "counties_registry": _load_counties_registry(),
         # A NEUTRAL buy-box template — the starting point every new team's
         # editable buy-box is seeded from (flags are computed client-side).
         # Deliberately generic: all counties targeted, common land vocabulary,
