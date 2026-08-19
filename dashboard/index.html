@@ -71,7 +71,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <section id="scr-detail" hidden></section>
     <section id="scr-lists" hidden></section>
     <section id="scr-listdetail" hidden></section>
-    <section id="scr-history" hidden></section>
+    <section id="scr-buybox" hidden></section>
     <section id="scr-settings" hidden></section>
   </div>
 </main>
@@ -122,6 +122,17 @@ const SCHEDULE_TEXT = "Monday at 4:00 AM ET";
 // Operators only — never rendered for customers (see isAdmin()).
 const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
+// Product name (one constant — swaps everywhere when the real name is picked)
+// and where account/billing requests go while billing is handled by hand.
+const BRAND = "Tax Deed Radar";
+const SUPPORT_EMAIL = "frankhatfellaaiagent@gmail.com";
+// The customer's plan as shown in Settings. Per-customer billing state will
+// come from the account record once self-serve billing exists; until then this
+// describes the standard subscription rather than inventing a billing date.
+const PLAN = {
+  name: "Standard", status: "active", price: "$199 / month",
+  note: "Includes every covered Florida county, the weekly refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
+};
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
@@ -227,7 +238,7 @@ const cloudTimers = {};
 
 function rerender() {
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     listdetail: renderListDetail, history: renderHistory, settings: renderSettings })[S.screen]();
+     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[S.screen]();
 }
 
 // sync-name -> where it's stored. Personal keys go to user_state; the two team
@@ -491,6 +502,8 @@ let S = {
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
+  // Buy-box screen: the saved-search runner.
+  bb: { ran: false, includeReview: false, scheduledOnly: true, sort: "soonest", shown: 100 },
 };
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -670,7 +683,7 @@ async function loadFeed() {
 }
 
 // ---------- shared header/sidebar ----------
-const NAV = [["dashboard","Dashboard"],["lists","My lists"],["history","Data updates"],["settings","Settings"]];
+const NAV = [["dashboard","Dashboard"],["lists","My lists"],["buybox","Buy box"],["settings","Settings"]];
 function renderNav() {
   $("nav").innerHTML = NAV.map(([k, label]) => {
     const active = S.screen === k
@@ -694,9 +707,9 @@ function go(screen, selId) {
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
-  for (const k of ["dashboard","detail","lists","listdetail","history","settings"]) $("scr-" + k).hidden = k !== screen;
+  for (const k of ["dashboard","detail","lists","listdetail","buybox","settings"]) $("scr-" + k).hidden = k !== screen;
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     listdetail: renderListDetail, history: renderHistory, settings: renderSettings })[screen]();
+     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[screen]();
   $("scroller").scrollTop = 0;
 }
 
@@ -808,7 +821,7 @@ function renderDashboard() {
   $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
-  $("bb-help").onclick = () => go("settings");
+  $("bb-help").onclick = () => go("buybox");
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
@@ -1192,9 +1205,9 @@ function renderListDetail() {
   });
 }
 
-// ---------- history screen ----------
-function renderHistory() {
-  // Everything on this screen comes from the feed itself — no external calls.
+// ---------- data updates (a Settings section) ----------
+function dataUpdatesHtml() {
+  // Everything here comes from the feed itself — no external calls.
   const gen = META ? new Date(META.generated_at) : null;
   const runs = META && META.county_runs ? META.county_runs : {};
   // Group counties by the refresh that produced their rows, newest first.
@@ -1221,11 +1234,11 @@ function renderHistory() {
         <td style="font-size:12.5px" class="text-muted">${esc(label)}</td>
       </tr>`;
     }).join("");
-  $("scr-history").innerHTML = `
-    <h2 style="margin-bottom:6px">Data updates</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT}. Each county's rows come from its most recent refresh.</p>
-    <p style="font-size:13.5px;margin-bottom:20px">${META ? `Current data as of <b>${esc(gen.toLocaleString())}</b> — ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
-    <div class="blueprint" style="padding:0">${CORNERS}
+  return `
+    <div class="blueprint" style="padding:18px 20px">${CORNERS}
+      <h6 style="color:var(--color-accent-700);margin-bottom:4px">Data updates</h6>
+      <p class="text-muted" style="font-size:13px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT} &mdash; next refresh ${nextRefreshText()}. Each county's rows come from its most recent refresh.</p>
+      <p style="font-size:13.5px;margin-bottom:16px">${META ? `Current data as of <b>${esc(gen.toLocaleString())}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
       <div class="tablewrap"><table class="table">
         <thead><tr><th>Refreshed</th><th style="text-align:right">Counties</th><th style="text-align:right">Auctions</th><th>Coverage</th></tr></thead>
         <tbody>${rows || '<tr><td colspan="4" class="text-muted">No refresh data yet.</td></tr>'}</tbody>
@@ -1267,7 +1280,8 @@ function renderBuyboxCard() {
         <input class="input" id="bb-maxbid" value="${cfg.max_opening_bid != null ? esc(cfg.max_opening_bid) : ""}" placeholder="$ no cap" style="font-variant-numeric:tabular-nums"></div>
 
       ${targeted.length ? `
-        <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px" class="text-muted">Per-county limits (optional &mdash; overrides the max above)</div>
+        <details ${Object.keys(cfg.county_caps || {}).length ? "open" : ""}>
+          <summary style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;cursor:pointer;color:var(--color-accent-700)">Per-county limits (optional &mdash; overrides the max above)${Object.keys(cfg.county_caps || {}).length ? ` &middot; ${Object.keys(cfg.county_caps).length} set` : ""}</summary>
         <div class="tablewrap"><table class="table" style="max-width:520px">
           <thead><tr><th>County</th><th>Max bid</th><th>Deposit on hand</th></tr></thead>
           <tbody>${targeted.map((c) => { const k = normCounty(c); const cap = (cfg.county_caps || {})[k] || {};
@@ -1275,7 +1289,7 @@ function renderBuyboxCard() {
               <td><input class="input" data-cap-max="${esc(k)}" value="${cap.max_bid != null ? esc(cap.max_bid) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td>
               <td><input class="input" data-cap-dep="${esc(k)}" value="${cap.deposit != null ? esc(cap.deposit) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td></tr>`; }).join("")}
           </tbody>
-        </table></div>` : ""}
+        </table></div></details>` : ""}
     </div>`;
 }
 
@@ -1286,61 +1300,270 @@ function wireBuyboxCard() {
     const set = new Set(buybox.target_counties || []);
     cb.checked ? set.add(cb.dataset.county) : set.delete(cb.dataset.county);
     update({ target_counties: [...set] });
-    renderSettings();
+    renderBuyboxScreen();
   });
-  $("bb-land").onchange = (e) => update({ land_use_keywords: csvList(e.target.value) });
-  $("bb-nonland").onchange = (e) => update({ non_land_keywords: csvList(e.target.value) });
-  $("bb-maxbid").onchange = (e) => update({ max_opening_bid: num(e.target.value) });
-  $("scr-settings").querySelectorAll("[data-cap-max],[data-cap-dep]").forEach((inp) => inp.onchange = () => {
+  const reRender = () => renderBuyboxScreen();
+  $("bb-land").onchange = (e) => { update({ land_use_keywords: csvList(e.target.value) }); reRender(); };
+  $("bb-nonland").onchange = (e) => { update({ non_land_keywords: csvList(e.target.value) }); reRender(); };
+  $("bb-maxbid").onchange = (e) => { update({ max_opening_bid: num(e.target.value) }); reRender(); };
+  $("scr-buybox").querySelectorAll("[data-cap-max],[data-cap-dep]").forEach((inp) => inp.onchange = () => {
     const k = inp.dataset.capMax || inp.dataset.capDep;
     const caps = { ...(buybox.county_caps || {}) };
-    const existing = caps[k] || {};
-    const maxEl = $("scr-settings").querySelector(`[data-cap-max="${k}"]`);
-    const depEl = $("scr-settings").querySelector(`[data-cap-dep="${k}"]`);
+    const maxEl = $("scr-buybox").querySelector(`[data-cap-max="${k}"]`);
+    const depEl = $("scr-buybox").querySelector(`[data-cap-dep="${k}"]`);
     const next = { max_bid: num(maxEl.value), deposit: num(depEl.value) };
     if (next.max_bid == null && next.deposit == null) delete caps[k]; else caps[k] = next;
     update({ county_caps: caps });
+    reRender();
   });
 }
 
-function renderSettings() {
-  $("scr-settings").innerHTML = `
-    <h2 style="margin-bottom:20px">Settings</h2>
-    <div style="display:flex;flex-direction:column;gap:26px;max-width:960px">
+// ---------- buy box screen: criteria + saved-search runner ----------
+// Every property the buy box currently accepts, so a search can be turned into
+// a list or a PDF in one step.
+function buyboxMatches() {
+  const want = S.bb.includeReview ? ["MATCH", "REVIEW"] : ["MATCH"];
+  let rows = DATA.filter((p) => want.includes(p.buybox));
+  if (S.bb.scheduledOnly) rows = rows.filter((p) => !p.redeemed);
+  return [...rows].sort(sortComparator(S.bb.sort));
+}
+function renderBuyboxScreen() {
+  recomputeBuybox();
+  const rows = buyboxMatches();
+  const matchTotal = DATA.filter((p) => p.buybox === "MATCH").length;
+  const reviewTotal = DATA.filter((p) => p.buybox === "REVIEW").length;
+  const counties = [...new Set(rows.map((p) => p.county))].sort();
+  const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const shown = rows.slice(0, S.bb.shown);
+
+  $("scr-buybox").innerHTML = `
+    <h2 style="margin-bottom:6px">Buy box</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:22px">Set what you&rsquo;re looking for, then run it against every upcoming auction. Turn the results into a list or a PDF.</p>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:1000px">
       ${renderBuyboxCard()}
-      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start">
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
-          <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when the dashboard&rsquo;s Sort is set to &ldquo;My preferred types first&rdquo; (type is assigned per-property from the appraiser record; the buy-box's MATCH/REVIEW ranks the rest).</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
-            ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
-          </div>
-          <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
-            <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
+
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
+        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when the dashboard&rsquo;s Sort is set to &ldquo;My preferred types first&rdquo; (type comes from the appraiser record; the buy box's MATCH/REVIEW ranks the rest).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
+          ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
         </div>
-        <div style="display:flex;flex-direction:column;gap:26px">
-          <div class="blueprint" style="padding:18px 20px">${CORNERS}
-            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Data refresh</h6>
-            <div style="font-size:14px;margin-bottom:6px">Every <b>${SCHEDULE_TEXT}</b>, automatically.</div>
-            <div style="font-size:13px" class="text-muted">Next refresh: ${nextRefreshText()}. All counties are re-checked on every refresh; each property card shows when its county's data was last updated.</div>
-          </div>
-          <div class="blueprint" style="padding:18px 20px">${CORNERS}
-            <h6 style="color:var(--color-accent-700);margin-bottom:12px">Team</h6>
-            ${CLOUD && CLOUD.user ? `
-              <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
-                <div style="display:flex;justify-content:space-between"><span>${esc(CLOUD.user.email)}</span><span class="tag tag-accent">signed in</span></div>
-              </div>
-              <div style="font-size:12.5px;margin-top:12px" class="text-muted">Buy box and shared lists sync live across every device your team signs in on.</div>`
-              : `<div style="font-size:13.5px">Not signed in.</div>
-                 <div style="font-size:12.5px;margin-top:10px" class="text-muted">${SYNC_ON ? "Positions and buy box save in this browser only until you sign in (top of the sidebar)." : "Positions, lists and buy box save in this browser."}</div>`}
+        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
+          <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
+      </div>
+
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px">
+          <h6 style="color:var(--color-accent-700);margin:0">Matches</h6>
+          <span class="tag tag-accent">${matchTotal} MATCH</span><span class="tag tag-neutral">${reviewTotal} REVIEW</span>
+        </div>
+        <p class="text-muted" style="font-size:13px;margin-bottom:14px">Every property that fits the buy box above, across all ${META ? META.counts.counties : ""} counties. Re-runs itself whenever you change the criteria or the data refreshes.</p>
+
+        <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px">
+          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="bbm-review" ${S.bb.includeReview ? "checked" : ""}> Include REVIEW (needs a look)</label>
+          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="bbm-sched" ${S.bb.scheduledOnly ? "checked" : ""}> Upcoming auctions only</label>
+          <div class="field" style="width:230px;margin-left:auto"><label>Sort by</label>
+            <select class="input" id="bbm-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.bb.sort, l)).join("")}</select></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);margin-bottom:14px">
+          <div style="font-size:14px"><b style="font-family:var(--font-heading);font-size:22px">${rows.length.toLocaleString()}</b>
+            <span class="text-muted">${rows.length === 1 ? "property" : "properties"} matched${counties.length ? ` &middot; ${counties.length} ${counties.length === 1 ? "county" : "counties"}` : ""}${bidSum ? ` &middot; ${money(bidSum)} in opening bids` : ""}</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-left:auto">
+            <input class="input" id="bbm-listname" placeholder="New list name&hellip;" style="width:190px" ${rows.length ? "" : "disabled"}>
+            <button class="btn btn-primary" id="bbm-makelist" ${rows.length ? "" : "disabled"}>+ Create list from these</button>
+            <button class="btn btn-secondary" id="bbm-pdf" ${rows.length ? "" : "disabled"}>Export PDF</button>
           </div>
         </div>
+
+        ${rows.length ? `
+          <div class="tablewrap"><table class="table">
+            <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Buy box</th></tr></thead>
+            <tbody>
+              ${shown.map((p) => `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+                <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
+                <td><div style="font-weight:500">${esc(p.addr || "—")}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+                <td>${esc(p.county)}</td>
+                <td>${effType(p) ? `<span class="tag tag-neutral">${esc(effType(p))}</span>` : '<span class="text-muted">—</span>'}</td>
+                <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+                <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+                <td style="font-size:13px">${esc(p.auction)}</td>
+                <td><span class="tag ${p.buybox === "MATCH" ? "tag-accent" : "tag-neutral"}">${esc(p.buybox)}</span></td>
+              </tr>`).join("")}
+            </tbody>
+          </table></div>
+          ${rows.length > S.bb.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+            <button class="btn btn-secondary" id="bbm-more">Show ${Math.min(200, rows.length - S.bb.shown)} more (${(rows.length - S.bb.shown).toLocaleString()} hidden)</button></div>` : ""}`
+        : `<div class="text-muted" style="font-size:13.5px;padding:6px 0">Nothing matches yet &mdash; pick your target counties above, or switch on REVIEW to include properties whose land use the county hasn&rsquo;t published.</div>`}
       </div>
     </div>`;
+
   $("type-prefs").querySelectorAll("[data-type]").forEach((b) =>
-    b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderSettings(); });
+    b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderBuyboxScreen(); });
   $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
-  wireBuyboxCard();
+  $("bbm-review").onchange = (e) => { S.bb.includeReview = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
+  $("bbm-sched").onchange = (e) => { S.bb.scheduledOnly = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
+  $("bbm-sort").onchange = (e) => { S.bb.sort = e.target.value; renderBuyboxScreen(); };
+  const more = $("bbm-more"); if (more) more.onclick = () => { S.bb.shown += 200; renderBuyboxScreen(); };
+  $("scr-buybox").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+
+  const mk = $("bbm-makelist");
+  if (mk) mk.onclick = () => {
+    const el = $("bbm-listname");
+    const name = (el.value || "").trim() ||
+      `Buy-box matches — ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })}`;
+    if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
+      alert("You already have a list with that name — pick another."); return;
+    }
+    const matched = buyboxMatches();
+    lists.push({ name, desc: `${matched.length} ${matched.length === 1 ? "property" : "properties"} matching your buy box.` });
+    saveLists();
+    for (const p of matched) setInt(p.id, { list: name });
+    el.value = "";
+    openList(name, false);
+  };
+  const pdf = $("bbm-pdf");
+  if (pdf) pdf.onclick = () => exportMatchesPdf(buyboxMatches());
+  wireBuyboxCard();   // counties, keywords, caps — the criteria inputs above
+}
+
+// Printable report of the matched properties. Rendered into a hidden iframe and
+// sent to the browser's print dialog, where "Save as PDF" is the usual target —
+// no external library, works offline.
+function exportMatchesPdf(rows) {
+  const when = new Date().toLocaleString();
+  const cfg = buybox || EMPTY_BUYBOX;
+  const countyList = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
+  const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
+  const body = rows.map((p) => `<tr>
+      <td class="mono">${esc(p.parcel)}</td>
+      <td>${esc(p.addr || "(no street address published)")}${p.city ? `<br><span class="muted">${esc(p.city)}</span>` : ""}</td>
+      <td>${esc(p.county)}</td>
+      <td>${esc(effType(p) || "—")}</td>
+      <td class="num">${p.assessed == null ? "—" : money(p.assessed)}</td>
+      <td class="num">${p.bid == null ? "—" : money(p.bid)}</td>
+      <td>${esc(p.auction)}</td>
+      <td>${esc(p.buybox)}</td>
+    </tr>`).join("");
+  const doc = `<!doctype html><html><head><meta charset="utf-8">
+    <title>Buy-box matches — ${esc(BRAND)}</title>
+    <style>
+      @page { size: letter landscape; margin: 14mm; }
+      body { font: 11px/1.45 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:#111; }
+      h1 { font-size: 17px; margin: 0 0 2px; }
+      .sub { color:#555; font-size: 11px; margin-bottom: 12px; }
+      table { width:100%; border-collapse: collapse; }
+      th, td { text-align:left; padding:5px 7px; border-bottom:1px solid #ddd; vertical-align:top; }
+      th { font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:#444; border-bottom:1.5px solid #888; }
+      tr { break-inside: avoid; }
+      thead { display: table-header-group; }
+      .num { text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; }
+      .muted { color:#666; }
+      .foot { margin-top:12px; color:#666; font-size:10px; }
+    </style></head><body>
+    <h1>${esc(BRAND)} &mdash; buy-box matches</h1>
+    <div class="sub">${rows.length.toLocaleString()} ${rows.length === 1 ? "property" : "properties"}
+      &middot; ${money(bidSum)} in opening bids
+      &middot; ${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}${S.bb.scheduledOnly ? " &middot; upcoming auctions only" : ""}
+      <br>Counties: ${esc(countyList)}
+      <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(new Date(META.generated_at).toLocaleString())}` : ""}</div>
+    <table><thead><tr>
+      <th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th>
+      <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Buy box</th>
+    </tr></thead><tbody>${body}</tbody></table>
+    <div class="foot">Values are the county's published figures. Confirm land use, liens and case status before bidding.</div>
+    </body></html>`;
+
+  const frame = document.createElement("iframe");
+  frame.setAttribute("aria-hidden", "true");
+  frame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0";
+  document.body.appendChild(frame);
+  frame.srcdoc = doc;
+  frame.onload = () => {
+    try { frame.contentWindow.focus(); frame.contentWindow.print(); }
+    catch (e) { console.warn("print failed:", e); }
+    // Leave the frame up long enough for the print dialog to read it.
+    setTimeout(() => frame.remove(), 60000);
+  };
+}
+
+// ---------- settings screen: the person's account + workspace ----------
+function renderSettings() {
+  const signedIn = !!(CLOUD && CLOUD.user);
+  $("scr-settings").innerHTML = `
+    <h2 style="margin-bottom:6px">Settings</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:22px">Your account, your plan, and where the data comes from.</p>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:1000px">
+      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start">
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Account</h6>
+          ${signedIn ? `
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+              <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Signed in as</div>
+                <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div></div>
+              <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Workspace</div>
+                <div style="font-weight:500">${esc(TEAM_ID || "—")}${IS_ADMIN ? ' <span class="tag tag-accent">admin</span>' : ""}</div></div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+              <button class="btn btn-secondary" id="acct-password" style="font-size:12.5px;padding:5px 11px">Change password</button>
+              <button class="btn btn-ghost" id="acct-signout" style="font-size:12.5px;padding:5px 9px">Sign out</button>
+            </div>
+            <div style="font-size:12.5px;margin-top:12px" class="text-muted">Your lists, notes and positions sync to this account on every device you sign in on.</div>`
+          : `<div style="font-size:13.5px;margin-bottom:10px">You&rsquo;re not signed in.</div>
+             <div class="text-muted" style="font-size:12.5px;margin-bottom:12px">${SYNC_ON
+               ? "Lists, notes and your buy box are saved in this browser only. Sign in to carry them to your phone and every other device."
+               : "Lists, notes and your buy box are saved in this browser."}</div>
+             ${SYNC_ON ? '<button class="btn btn-primary" id="acct-signin">Sign in</button>' : ""}`}
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Subscription</h6>
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">${esc(PLAN.name)}</div>
+            <span class="tag tag-accent">${esc(PLAN.status)}</span>
+          </div>
+          <div style="font-size:13.5px;margin-bottom:4px">${esc(PLAN.price)}</div>
+          <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">${esc(PLAN.note)}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-secondary" id="sub-upgrade" style="font-size:12.5px;padding:5px 11px">Change plan</button>
+            <button class="btn btn-ghost" id="sub-cancel" style="font-size:12.5px;padding:5px 9px;color:var(--color-danger,#b3261e)">Cancel subscription</button>
+          </div>
+          <div class="text-muted" style="font-size:12px;margin-top:12px">Billing is handled by your account manager today &mdash; these open an email. Self-serve billing is coming.</div>
+        </div>
+      </div>
+
+      ${dataUpdatesHtml()}
+    </div>`;
+
+  const so = $("acct-signout");
+  if (so) so.onclick = () => CLOUD.sb.auth.signOut();
+  const si = $("acct-signin");
+  if (si) si.onclick = () => {
+    $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
+    $("login-overlay").hidden = false; $("login-email").focus();
+  };
+  const pw = $("acct-password");
+  if (pw) pw.onclick = async () => {
+    if (!CLOUD || !CLOUD.user) return;
+    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(CLOUD.user.email);
+    alert(error ? "Couldn't send the reset email (" + error.message + ")."
+                : "Password reset email sent to " + CLOUD.user.email + " — check your inbox.");
+  };
+  const mailto = (subject) => {
+    const who = signedIn ? CLOUD.user.email : "(not signed in)";
+    return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}`
+         + `&body=${encodeURIComponent(`Account: ${who}\nWorkspace: ${TEAM_ID || "—"}\n\n`)}`;
+  };
+  $("sub-upgrade").onclick = () => { window.location.href = mailto(`${BRAND} — change my plan`); };
+  $("sub-cancel").onclick = () => {
+    if (!confirm("Request cancellation? This opens an email to your account manager — nothing is cancelled until they confirm.")) return;
+    window.location.href = mailto(`${BRAND} — cancel my subscription`);
+  };
 }
 
 // ---------- top bar actions ----------
