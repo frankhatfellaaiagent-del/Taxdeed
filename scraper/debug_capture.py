@@ -155,6 +155,25 @@ def capture(url: str, out_dir: str | Path):
             soup = BeautifulSoup(html, "lxml")
             n_items = len(soup.select("div.AUCTION_ITEM"))
             print(f"  AUCTION_ITEM divs on page: {n_items}")
+
+            # Deep-link probe: does the ANONYMOUS preview expose the per-item
+            # auction id (AID) that zmethod=details links need? If it does, the
+            # scraper can build a straight-to-the-case URL; if not, the id only
+            # lives behind bidder login and no public deep link is possible.
+            aids = re.findall(r"AID=(\d+)", html, re.I)
+            details = re.findall(r"z?method=details[^\"'<> ]*", html, re.I)
+            print(f"  [AID PROBE] AID= occurrences: {len(aids)} (distinct {len(set(aids))}); sample {sorted(set(aids))[:6]}")
+            print(f"  [AID PROBE] method=details refs: {len(details)}; sample {details[:3]}")
+            item0 = soup.select_one("div.AUCTION_ITEM")
+            if item0:
+                for el in [item0] + item0.find_all(True):
+                    interesting = {k: (v if isinstance(v, str) else " ".join(v))
+                                   for k, v in el.attrs.items()
+                                   if k in ("id", "onclick") or k.startswith("data-")}
+                    if interesting:
+                        print(f"  [AID PROBE] <{el.name}> {interesting}")
+                print("  [AID PROBE] first AUCTION_ITEM raw (1200 chars):")
+                print(str(item0)[:1200])
             for m in sorted(set(re.findall(r"Page\s*\S{0,4}\s*of\s*\S+", html))):
                 print(f"  page-text: {m!r}")
             for inp in soup.find_all("input"):
