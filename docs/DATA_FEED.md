@@ -34,12 +34,22 @@ const { generated_at, counts, records } = await (await fetch(FEED)).json();
     "total": 2648,
     "scheduled": 1894,                           // upcoming auctions
     "redeemed": 754,                             // owner paid; auction cancelled
-    "counties": 30,
+    "counties": 30,                              // counties WITH records in the feed
+    "counties_total": 67,                        // every Florida county (registry below)
     "by_county": { "putnam": {"total": 361, "scheduled": ..., "redeemed": ...}, ... }
   },
   "clerk_sites": {                               // Clerk of Court tax-deed pages (config/clerk_sites.yaml)
     "volusia": { "url": "https://www.clerk.org/tax-deeds.aspx", "search": "https://app02.clerk.org/or_td/" }
   },
+  "counties_registry": [                         // ALL 67 Florida counties and how each sells
+                                                 // (config/florida_counties.json, hand-maintained;
+                                                 // evidence: docs/COVERAGE.md). The app shows every
+                                                 // county — an info card where there's no online feed.
+    { "slug": "alachua", "name": "Alachua", "coverage": "online", "platform": "realauction" },
+    { "slug": "dixie", "name": "Dixie", "coverage": "in-person",  // or "online-other" (Okaloosa/Bid4Assets)
+      "sale_info": "In person in the Courthouse Board Room ...",
+      "clerk_url": "https://dixieclerk.com/...", "sale_list_url": "https://dixieclerk.com/..." }
+  ],
   "default_buybox": {                            // NEUTRAL template every new team's buy-box seeds from
                                                  // (all counties targeted, generic land vocabulary — no
                                                  // customer's real criteria ever ships in the feed)

@@ -8,18 +8,21 @@
 
 ## The problem
 
-Working Florida tax deed sales today means clicking in and out of 37 county
-auction sites, appraiser sites and clerk portals, copying rows into
+Working Florida tax deed sales today means clicking in and out of dozens of
+county auction sites, appraiser sites and clerk portals, copying rows into
 spreadsheets, and manually filtering out redeemed sales, foreclosures and
 properties that never fit your criteria. Third-party lead lists are stale,
 unrefined, and don't understand the land-focused business.
 
 ## What the tool does today (live)
 
-- **One dashboard for every covered Florida county** — every upcoming tax deed
-  auction on the RealAuction platform, refreshed automatically every Monday at 4:00 AM,
-  with per-county filtering, full-text search, and redeemed sales separated
-  out. Tax deeds only — foreclosure auctions are detected and excluded.
+- **All 67 Florida counties on one board** — a live auction feed for every
+  county that sells tax deeds online (45 counties on the RealAuction platform,
+  refreshed automatically every Monday at 4:00 AM), and for the counties that
+  sell in person at the courthouse, the county's sale schedule and clerk
+  records right in the app. Per-county filtering, full-text search, redeemed
+  sales separated out. Tax deeds only — foreclosure auctions are detected and
+  excluded. The evidence behind the claim is documented county by county.
 - **Buy-box first-wave filter** — every parcel is flagged MATCH / REVIEW / NO
   against your criteria (target counties, land-focused use, max bid caps,
   county deposit limits), so the day's list starts pre-sorted to your business.
@@ -56,9 +59,10 @@ never silently invented.
 
 ## Roadmap (next phases)
 
-1. **Coverage** — appraiser quick-look and clerk case-file resolution across
-   the remaining counties and portal platforms; mailing-address
-   standardization for outreach lists.
+1. **Coverage depth** — appraiser quick-look and clerk case-file resolution
+   across the remaining counties and portal platforms; parsing the sale lists
+   the in-person counties' clerks publish (and Okaloosa's Bid4Assets auctions)
+   into the feed itself; mailing-address standardization for outreach lists.
 2. **Parcel data (LandGlide's source)** — integration with ReportAll, the
    parcel database behind LandGlide, is built and waiting on an API key: true
    parcel boundaries and centroids, owner and mailing data — including for the
