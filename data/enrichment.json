@@ -1,673 +1,721 @@
 {
+"alachua|00310-012-000|TD 2026-027": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=00310-012-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=00310-012-000"
+},
 "alachua|01386-100-062|TD 2026-020": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062"
 },
 "alachua|01550-001-000|TD 2026-021": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000"
 },
+"alachua|02684-000-000|TD 2026-024": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000"
+},
 "alachua|06650-204-004|TD 2026-022": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004"
 },
+"alachua|06890-036-000|TD 2026-029": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
+},
+"alachua|07214-031-000|TD 2026-028": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07214-031-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07214-031-000"
+},
+"alachua|07836-014-004|TD 2026-030": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
+},
+"alachua|10733-009-000|TD 2026-025": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
+},
+"alachua|10733-043-000|TD 2026-031": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
+},
+"alachua|10893-024-000|TD 2026-026": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000"
+},
 "gilchrist|090715-00770000-0240|26-0013-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240"
 },
 "gilchrist|161015-00000048-0010|26-0006-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010"
 },
 "gilchrist|320715-00360019-0070|26-0010-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070"
 },
 "marion|0051-103-015|4862016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=17922&YR=2026&mName=False&mSitus=False"
 },
 "marion|0052-017-018|5512021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2420073&YR=2026&mName=False&mSitus=False"
 },
 "marion|03695-003-00|8812021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=52779&YR=2026&mName=False&mSitus=False"
 },
 "marion|06892-000-00|20342017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=105848&YR=2026&mName=False&mSitus=False"
 },
 "marion|09680-000-00|31502018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=170089&YR=2026&mName=False&mSitus=False"
 },
 "marion|1534-010-005|48292021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2376953&YR=2026&mName=False&mSitus=False"
 },
 "marion|1740-001-011|59592018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2254939&YR=2026&mName=False&mSitus=False"
 },
 "marion|1741-005-006|62692017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=346446&YR=2026&mName=False&mSitus=False"
 },
 "marion|1805-011-025|62692021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=394416&YR=2026&mName=False&mSitus=False"
 },
 "marion|1807-014-016|70092018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=407381&YR=2026&mName=False&mSitus=False"
 },
 "marion|1812-010-018|75572019": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=436739&YR=2026&mName=False&mSitus=False"
 },
 "marion|1814-026-008|79592018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=457647&YR=2026&mName=False&mSitus=False"
 },
 "marion|1814-037-044|81332019": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=462306&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-002-020|87422017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=478008&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-003-012|87452017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=478172&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-004-009|87472017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=478342&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-004-017|87482017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=478407&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-004-021|87492017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2709022&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-006-001|87612017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=478687&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-008-011|87702017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=479098&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-008-012|87712017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3515838&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-008-017|87722017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=479128&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-009-019|87772017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=479314&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-013-023|87862017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=479993&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-014-020|87892017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=480100&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-015-006|87932017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=480215&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-019-009|88062017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=481017&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-029-009|88362017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=482412&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-029-013|88372017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=482447&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-011-046|88472017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=482901&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-011-051|88482017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2382279&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-032-017|88522017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=483036&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-033-025|88582017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=483222&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-034-008|88622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=483346&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-034-031|88652017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=483486&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-034-032|88662017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384334&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-038-017|88752017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=483966&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-039-009|88812017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1726751&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-040-007|88832017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1959136&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-040-008|88842017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=484261&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-041-010|88882017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=484491&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-041-011|88892017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=484504&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-042-016|88952017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=484725&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-042-017|88962017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384351&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-042-018|88972017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384369&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-043-007|89022017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=484865&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-045-011|89142017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=485241&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-046-021|89202017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=485471&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-052-007|89342017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486086&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-052-018|89382017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486159&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-052-019|89392017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486167&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-053-004|89402017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486213&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-056-001|89572017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486752&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-056-004|89582017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486779&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-056-019|89602017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=486876&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-058-006|89652017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487074&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-058-024|89692017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487236&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-058-026|89712017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487252&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-059-003|89742017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487309&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-059-018|89752017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487384&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-059-021|89772017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487414&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-060-014|89832017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=487538&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-063-008|89962017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=488101&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-063-012|89982017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=488135&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-063-018|90002017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=488160&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-064-002|90062017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3460383&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-067-008|90142017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=488828&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-067-025|90192017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2382708&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-069-017|90282017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=489166&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-075-003|90602017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490016&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-075-009|90632017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490059&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-075-010|90642017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490067&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-075-019|90682017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490105&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-076-010|90722017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490211&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-076-015|90752017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1798574&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-076-020|90782017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490296&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-077-018|90822017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490458&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-080-007|90982017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=490806&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-081-029|91042017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=491152&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-083-024|91162017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=491489&YR=2026&mName=False&mSitus=False"
 },
 "marion|2002-085-017|91212017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=491756&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-088-001|91432017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=492728&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-088-024|91472017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2682159&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-098-004|91502017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386045&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-102-011|91682017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2359188&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-102-012|91692017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2531703&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-104-007|91792017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=493864&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-104-009|91812017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=493881&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-105-006|91842017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3378032&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-105-009|91872017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=494101&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-116-010|92122017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386118&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-117-013|92152017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=495387&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-118-025|92202017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=495531&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-124-140|92622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3489853&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-127-018|92782017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=497240&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-137-007|84692021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=498599&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-139-004|93082017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=498815&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-139-014|93112017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3512731&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-141-007|93132017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384611&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-141-008|93142017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384638&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-142-001|93152017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385961&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-142-002|93162017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=499013&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-144-005|93232017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3465849&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-144-011|93242017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2119586&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-144-017|93262017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384662&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-144-020|93272017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=499315&YR=2026&mName=False&mSitus=False"
 },
@@ -679,265 +727,265 @@
 },
 "marion|2003-148-031|93492017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385979&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-148-032|93502017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385995&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-148-033|93512017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386002&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-149-016|93572017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=499994&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-150-012|93592017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=500143&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-150-015|93602017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2216557&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-152-035|93712017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386029&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-152-036|93722017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386037&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-153-005|93742017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3496477&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-153-018|93772017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3333209&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-154-006|93802017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=500631&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-155-001|93882017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=500691&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-155-002|93892017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384431&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-155-003|93902017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384440&YR=2026&mName=False&mSitus=False"
 },
 "marion|2003-163-007|93952017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3466314&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-157-004|94032017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=501336&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-159-009|94082017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=501557&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-160-016|94142017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=501727&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-160-017|94152017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=501735&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-161-021|94182017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=501875&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-161-026|94202017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3407610&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-165-023|94272017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=502146&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-167-023|94332017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=502481&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-169-001|94362017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386703&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-176-021|94622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=503568&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-176-048|86432021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=503711&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-177-002|94672017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=503738&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-177-006|94682017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3466403&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-191-033|98042020": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=506303&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-204-014|87672021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=507521&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-208-019|93182018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3417321&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-216-015|88402021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=509191&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-231-007|100172020": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=512010&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-239-018|89802021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=513121&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-240-026|89832021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=513296&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-240-027|89842021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384555&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-240-028|89852021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384563&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-245-009|90012021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=513873&YR=2026&mName=False&mSitus=False"
 },
 "marion|2301-005-021|113622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=566594&YR=2026&mName=False&mSitus=False"
 },
 "marion|2302-008-031|113702017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=566934&YR=2026&mName=False&mSitus=False"
 },
 "marion|2302-010-031|113812017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=567345&YR=2026&mName=False&mSitus=False"
 },
 "marion|2302-010-106|113832017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=567418&YR=2026&mName=False&mSitus=False"
 },
 "marion|2303-008-088|113912017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=567973&YR=2026&mName=False&mSitus=False"
 },
 "marion|2303-011-046|113992017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=568210&YR=2026&mName=False&mSitus=False"
 },
@@ -955,379 +1003,379 @@
 },
 "marion|2304-017-069|114192017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=569038&YR=2026&mName=False&mSitus=False"
 },
 "marion|2304-017-081|114202017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=569054&YR=2026&mName=False&mSitus=False"
 },
 "marion|2304-020-007|114292017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=569402&YR=2026&mName=False&mSitus=False"
 },
 "marion|2304-020-064|114332017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=569518&YR=2026&mName=False&mSitus=False"
 },
 "marion|2309-117-054|115782017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3634853&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-125-040|116322017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=576255&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-126-001|116362017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=576395&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-126-067|116442017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=576506&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-204-075|116572017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=577031&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-206-007|105672021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=577197&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-206-025|112642018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=577227&YR=2026&mName=False&mSitus=False"
 },
 "marion|2312-022-161|116622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=577316&YR=2026&mName=False&mSitus=False"
 },
 "marion|2312-205-045|116742017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=577677&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-001-033|116862017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2092947&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-001-036|116872017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=578177&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-029|116892017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=578673&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-053|116902017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3133722&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-059|116912017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3135628&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-062|116922017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3119321&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-071|116932017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=578746&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-004-074|116942017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=578754&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-012-045|106352021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=579912&YR=2026&mName=False&mSitus=False"
 },
 "marion|2313-012-051|106362021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=579939&YR=2026&mName=False&mSitus=False"
 },
 "marion|2618-002-009|112962021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1250501&YR=2026&mName=False&mSitus=False"
 },
 "marion|3490-056-101|152432017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=824224&YR=2026&mName=False&mSitus=False"
 },
 "marion|3582-125-006|148152021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3388364&YR=2026&mName=False&mSitus=False"
 },
 "marion|3582-296-004|169322016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=726745&YR=2026&mName=False&mSitus=False"
 },
 "marion|3680-003-008|150922021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=917214&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-15-453|177582017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=967122&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-31-023|157852021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=968617&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-38-013|157992021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=969214&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-39-001|158032021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2104040&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-41-001|178622017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1742609&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-42-016|178652017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3480465&YR=2026&mName=False&mSitus=False"
 },
 "marion|4013-014-014|181062017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1642795&YR=2026&mName=False&mSitus=False"
 },
 "marion|4018-015-013|161222021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=986577&YR=2026&mName=False&mSitus=False"
 },
 "marion|4018-015-118|161272021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=986704&YR=2026&mName=False&mSitus=False"
 },
 "marion|4018-017-010|175442018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=986933&YR=2026&mName=False&mSitus=False"
 },
 "marion|4018-207-014|176102018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=989801&YR=2026&mName=False&mSitus=False"
 },
 "marion|4088-206-000|185842017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1007585&YR=2026&mName=False&mSitus=False"
 },
 "marion|4122-297-000|191392015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1021847&YR=2026&mName=False&mSitus=False"
 },
 "marion|4505-013-019|199052017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092230&YR=2026&mName=False&mSitus=False"
 },
 "marion|4505-014-002|199062017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092256&YR=2026&mName=False&mSitus=False"
 },
 "marion|4505-017-014|199122017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092884&YR=2026&mName=False&mSitus=False"
 },
 "marion|4505-020-009|199202017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1093414&YR=2026&mName=False&mSitus=False"
 },
 "marion|4505-024-022|175882021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1094186&YR=2026&mName=False&mSitus=False"
 },
 "marion|4551-009-037|178312021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1107059&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-001-003|208812016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415819&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-001-005|208822016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1111463&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-002-002|208842016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415886&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-002-003|208852016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415924&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-002-012|208872016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416181&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-003-004|208882016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416301&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-003-005|208892016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416319&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-003-006|208902016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416351&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-003-007|208912016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416386&YR=2026&mName=False&mSitus=False"
 },
 "marion|4593-017-011|180302021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3709535&YR=2026&mName=False&mSitus=False"
 },
 "marion|4716-014-003|182982021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1152232&YR=2026&mName=False&mSitus=False"
 },
 "marion|5068-226-000|190692021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1194521&YR=2026&mName=False&mSitus=False"
 },
 "marion|5075-012-001|218522017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1679095&YR=2026&mName=False&mSitus=False"
 },
 "marion|7013-006-040|197232021": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2703822&YR=2026&mName=False&mSitus=False"
 },
 "marion|8005-0786-13|243172014": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1641985&YR=2026&mName=False&mSitus=False"
 },
 "marion|8006-0735-14|234482018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1672511&YR=2026&mName=False&mSitus=False"
 },
@@ -1339,19 +1387,19 @@
 },
 "marion|8009-0000-37|273482016": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1330289&YR=2026&mName=False&mSitus=False"
 },
 "marion|8009-1155-20|237042018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1926921&YR=2026&mName=False&mSitus=False"
 },
 "marion|8009-1262-15|240312018": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2016949&YR=2026&mName=False&mSitus=False"
 },
@@ -1363,85 +1411,85 @@
 },
 "marion|8011-1370-26|283382017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2579170&YR=2026&mName=False&mSitus=False"
 },
 "marion|8011-1372-66|258542014": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2580496&YR=2026&mName=False&mSitus=False"
 },
 "marion|9009-0053-21|264712014": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1356300&YR=2026&mName=False&mSitus=False"
 },
 "marion|9028-0840-14|256572019": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2047224&YR=2026&mName=False&mSitus=False"
 },
 "marion|9033-1101-09|276702015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1465621&YR=2026&mName=False&mSitus=False"
 },
 "marion|9033-1107-14|276782015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1465923&YR=2026&mName=False&mSitus=False"
 },
 "marion|9033-1122-13|276842015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1466288&YR=2026&mName=False&mSitus=False"
 },
 "marion|9034-1051-12|309132017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1467594&YR=2026&mName=False&mSitus=False"
 },
 "marion|9035-1010-02|311162017": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1473977&YR=2026&mName=False&mSitus=False"
 },
 "marion|9038-1258-24|281362020": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2514167&YR=2026&mName=False&mSitus=False"
 },
 "marion|9050-1583-07|301042015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1505054&YR=2026&mName=False&mSitus=False"
 },
 "marion|9050-1584-04|301082015": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2362855&YR=2026&mName=False&mSitus=False"
 },
 "osceola|0926315330000B0092|19972024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092"
 },
 "osceola|112528539700030280|22382024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280"
 },
@@ -1459,85 +1507,85 @@
 },
 "osceola|202531426000010255|39172024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202531426000010255",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202531426000010255"
 },
 "osceola|2125291900000D0090|40212024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090"
 },
 "osceola|242730000000150000|43972024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000"
 },
 "osceola|243033000000550000|44612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000"
 },
 "osceola|252628610005640170|45842024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170"
 },
 "osceola|252628610006100460|46032024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006100460",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006100460"
 },
 "osceola|252628610006500040|46142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040"
 },
 "osceola|252628611815430190|47332024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190"
 },
 "osceola|252628612818090080|47692024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628612818090080",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628612818090080"
 },
 "osceola|262630061300012490|58392019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490"
 },
 "osceola|262630061300012500|58402019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500"
 },
 "osceola|2725273038000N101N|51362024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N"
 },
 "osceola|292529112400010060|52122024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=292529112400010060",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=292529112400010060"
 },
 "osceola|332529215400014310|57732024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=332529215400014310",
-"fetched_at": "2026-08-19T17:58:20+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=332529215400014310"
 },
@@ -1581,12 +1629,55 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000506"
 },
+"polk|232815085500000818|00111-2026": {
+"acreage": "0.17",
+"assessed_value": 17680.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000818"
+},
+"polk|232815085500001107|00112-2026": {
+"acreage": "0.21",
+"assessed_value": 28432.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500001107"
+},
+"polk|232822091000000404|00136-2026": {
+"acreage": "1.45",
+"assessed_value": 106774.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232822091000000404"
+},
 "polk|232822093500007220|00043-2026": {
 "acreage": "0.18",
 "assessed_value": 7857.0,
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232822093500007220"
+},
+"polk|232825127000006120|00139-2026": {
+"acreage": "0.14",
+"assessed_value": 136214.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232825127000006120"
+},
+"polk|232826000000032040|00128-2026": {
+"acreage": "0.21",
+"assessed_value": 32156.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232826000000032040"
+},
+"polk|232901000000021040|00116-2026": {
+"acreage": "0.58",
+"assessed_value": 40194.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232901000000021040"
 },
 "polk|232906139596000100|00058-2026": {
 "acreage": "0.60",
@@ -1595,12 +1686,229 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232906139596000100"
 },
+"polk|232920000000033090|00129-2026": {
+"acreage": "2.18",
+"assessed_value": 99406.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232920000000033090"
+},
+"polk|232923000000044070|00140-2026": {
+"acreage": "0.65",
+"assessed_value": 321083.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232923000000044070"
+},
+"polk|232931142217000070|00107-2026": {
+"acreage": "0.37",
+"assessed_value": 73874.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232931142217000070"
+},
+"polk|232933142383000820|00108-2026": {
+"acreage": "0.28",
+"assessed_value": 31000.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232933142383000820"
+},
+"polk|233001144120015050|00109-2026": {
+"acreage": "0.40",
+"assessed_value": 279843.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233001144120015050"
+},
+"polk|24-25-14-0000-0002-1040|01091-2025": {
+"acreage": "0.00",
+"assessed_value": 1006.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242514000000021040"
+},
+"polk|242524000000012180|00094-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000012180"
+},
+"polk|242524000000013320|00095-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000013320"
+},
+"polk|242524000000014200|00096-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000014200"
+},
+"polk|242524000000014250|00097-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000014250"
+},
+"polk|242524000000021090|00098-2026": {
+"acreage": "1.18",
+"assessed_value": 588.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000021090"
+},
+"polk|242524000000022320|00099-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000022320"
+},
+"polk|242524000000022390|00100-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000022390"
+},
+"polk|242524000000024100|00101-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000024100"
+},
+"polk|242524000000032160|00102-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000032160"
+},
+"polk|242524000000032230|00103-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000032230"
+},
+"polk|242524000000034170|00104-2026": {
+"acreage": "1.23",
+"assessed_value": 613.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000034170"
+},
+"polk|242524000000042030|00105-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000042030"
+},
+"polk|242524000000044030|00106-2026": {
+"acreage": "0.95",
+"assessed_value": 475.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000044030"
+},
+"polk|242525000000011240|00133-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000011240"
+},
+"polk|242525000000012010|00120-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000012010"
+},
+"polk|242525000000012300|00121-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000012300"
+},
+"polk|242525000000013110|00122-2026": {
+"acreage": "2.20",
+"assessed_value": 1102.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000013110"
+},
 "polk|242525000000033190|00038-2026": {
 "acreage": "1.10",
 "assessed_value": 551.0,
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000033190"
+},
+"polk|242536000000033050|00138-2026": {
+"acreage": "4.27",
+"assessed_value": 200679.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242536000000033050"
+},
+"polk|242633160945000100|00114-2026": {
+"acreage": "0.69",
+"assessed_value": 174290.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242633160945000100"
+},
+"polk|242707000000043420|00117-2026": {
+"acreage": "0.28",
+"assessed_value": 35982.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242707000000043420"
+},
+"polk|242809175500010107|00130-2026": {
+"acreage": "0.08",
+"assessed_value": 44392.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242809175500010107"
+},
+"polk|242823242220000730|00143-2026": {
+"acreage": "0.14",
+"assessed_value": 73874.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242823242220000730"
+},
+"polk|242827000000014002|00144-2026": {
+"acreage": "0.17",
+"assessed_value": 54541.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000014002"
+},
+"polk|242827000000032020|00145-2026": {
+"acreage": "0.15",
+"assessed_value": 42930.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000032020"
+},
+"polk|242914283000090640|00149-2026": {
+"acreage": "0.19",
+"assessed_value": 29684.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283000090640"
 },
 "polk|252604000000011110|00013-2026": {
 "acreage": "4.13",
@@ -1615,6 +1923,13 @@
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252623000000012020"
+},
+"polk|252706298340003180|00148-2026": {
+"acreage": "0.22",
+"assessed_value": 86491.0,
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252706298340003180"
 },
 "polk|252706298366000491|00063-2026": {
 "acreage": "0.24",
@@ -1904,6 +2219,19 @@
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=02-10-26-8520-0000-0560"
 },
+"putnam|02-11-23-0000-0060-0010|2024-0000880": {
+"acreage": "4.51",
+"applicant": "PP 139 HIDDEN LAKE TRL, HAWTHORNE0",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000880",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 55160.0,
+"mailing_address": "C/O TIMOTHY R RUSHING 139 HIDDEN LAKE TR HAWTHORNE FL 32640",
+"ok": true,
+"owner_name": "RUSHING TIMOTHY + ASHLEY K RUSHING (TIC)",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=02-11-23-0000-0060-0010"
+},
 "putnam|02-12-27-0000-0240-0002|2024-0000939": {
 "acreage": "0.24",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -2060,6 +2388,30 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5532-0050-0140"
 },
+"putnam|04-10-24-5532-0110-0170|2019-0002700": {
+"acreage": "0.07",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002700",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1250.0,
+"mailing_address": "671 EAST 64TH STREET HIALEAH FL 33013",
+"ok": true,
+"owner_name": "DOWNS GLADYS V + SYLVESTER J DOWNS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5532-0110-0170"
+},
+"putnam|04-10-24-5532-0110-0180|2019-0002739": {
+"acreage": "0.07",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002739",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1250.0,
+"mailing_address": "6780 WEST 2ND COURT #401 HIALEAH FL 33012",
+"ok": true,
+"owner_name": "DOWNS GLADYS V + SYLVESTER J DOWNS + LLOYD A DOWNS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5532-0110-0180"
+},
 "putnam|04-10-24-5540-0020-0100|2019-0002931": {
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002931",
@@ -2071,6 +2423,57 @@
 "owner_name": "DAPCHA HOLDING COMPANY LLC",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5540-0020-0100"
+},
+"putnam|04-10-24-5540-0070-0380|2024-0002183": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240002183",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1880.0,
+"mailing_address": "1241 NW 196TH ST MIAMI FL 33169-3079",
+"ok": true,
+"owner_name": "BURNEY JAMES EDWARD JR",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5540-0070-0380"
+},
+"putnam|04-10-24-6450-0010-0100|2019-0003038": {
+"acreage": "0.11",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003038",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1960.0,
+"mailing_address": "CALLE PRINCIPAL #22 BOX 365 PALMER PR 00721-2001",
+"ok": true,
+"owner_name": "CALZADA JULIO RIVERA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-6450-0010-0100"
+},
+"putnam|04-10-24-6450-0010-0110|2019-0003039": {
+"acreage": "0.11",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003039",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1960.0,
+"mailing_address": "CALLE PRINCIPAL #22 BOX 365 PALMER PR 00721-2001",
+"ok": true,
+"owner_name": "CALZADA JULIO RIVERA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-6450-0010-0110"
+},
+"putnam|04-10-24-6450-0010-0470|2019-0003093": {
+"acreage": "0.11",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003093",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1940.0,
+"mailing_address": "824 POPLARWOOD LN KISSIMMEE FL 34743",
+"ok": true,
+"owner_name": "RIVERA PEDRO",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-6450-0010-0470"
 },
 "putnam|04-10-24-6450-0040-0330|2020-0003125": {
 "acreage": "0.11",
@@ -2234,6 +2637,30 @@
 "owner_name": "REVENE DONALD",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0010-1010"
+},
+"putnam|04-10-24-9035-0080-0010|2020-0003782": {
+"acreage": "0.11",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003782",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 2250.0,
+"mailing_address": "2617 WOODLAND DR EDGEWATER FL 32141",
+"ok": true,
+"owner_name": "DOANE MARY ANN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0080-0010"
+},
+"putnam|04-10-24-9040-0110-0170|2019-0003633": {
+"acreage": "0.21",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003633",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5310.0,
+"mailing_address": "1647 GARVEY PLACE SAN JOSE CA 95132-2111",
+"ok": true,
+"owner_name": "LIN ALBERT",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9040-0110-0170"
 },
 "putnam|04-10-25-4077-0210-0080|2024-0002780": {
 "acreage": "2.5",
@@ -2495,6 +2922,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-4940-0070-0250"
 },
+"putnam|05-10-24-4940-0070-0500|2019-0004443": {
+"acreage": "0.11",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190004443",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1920.0,
+"mailing_address": "PO BOX 5182 JINJA UGANDA EAST AFRICA",
+"ok": true,
+"owner_name": "PILLAI MOHANDAS MADHAVAN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-4940-0070-0500"
+},
 "putnam|05-10-24-4940-0080-0130|2020-0004317": {
 "acreage": "0.11",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -2544,6 +2983,32 @@
 "owner_name": "MKIBA ISSA SAID",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-9045-0080-0150"
+},
+"putnam|05-10-27-9570-0020-0040|2024-0003915": {
+"acreage": "0.14",
+"applicant": "PP 406 WARWICK ST, EAST PALATKA1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003915",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 1570.0,
+"mailing_address": "C/O MITCHELL A DINKIN PA 4095 S STATE ROAD 7 STE L-134 WELLINGTON FL 33449",
+"ok": true,
+"owner_name": "DOVE INVESTMENT CORP",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-27-9570-0020-0040"
+},
+"putnam|05-11-26-0000-8888-0017|2019-0004906": {
+"acreage": "1.25",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190004906",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 20000.0,
+"mailing_address": "PO BOX 667 INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "PUTNAM LAND CONSERVANCY INC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-11-26-0000-8888-0017"
 },
 "putnam|06-11-26-0000-8888-0986|2019-0005293": {
 "acreage": "1.25",
@@ -2634,6 +3099,18 @@
 "owner_name": "CARRETERO LUIS R",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-13-27-4910-0060-1730"
+},
+"putnam|06-13-27-4910-0060-1830|2024-0004370": {
+"acreage": "0.46",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004370",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 15150.0,
+"mailing_address": "92 BURKE ST CASTLEWOOD VA 24224",
+"ok": true,
+"owner_name": "CASTLE SELWYN GLENN",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-13-27-4910-0060-1830"
 },
 "putnam|07-10-24-1650-0150-0020|2019-0005605": {
 "acreage": "0.12",
@@ -2979,6 +3456,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-10-24-6782-0080-0060"
 },
+"putnam|08-10-26-0000-0170-0000|2024-0005707": {
+"acreage": "1.29",
+"applicant": "PP 107 SILVER LAKE RD, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005707",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 24800.0,
+"mailing_address": "TERRY E GORE TRUSTEE 107 FRATERNAL AVE PALATKA FL 32177",
+"ok": true,
+"owner_name": "THOMAS JOEL BROOK SELF-SETTLED SPEC NEEDS TRUST",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-10-26-0000-0170-0000"
+},
 "putnam|08-13-27-7061-0480-0030|2024-0005803": {
 "acreage": "0.32",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005803",
@@ -2990,6 +3480,18 @@
 "owner_name": "DAVIS ROBERT + SHIRLEY H/W",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-13-27-7061-0480-0030"
+},
+"putnam|08-13-27-7061-0490-0370|2024-0005815": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005815",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 8620.0,
+"mailing_address": "4185 N BLOOMINGTON AVE APT 103 ARLINGTON HEIGHTS IL 60004",
+"ok": true,
+"owner_name": "GHORMOZ ROBERT S HEIRS OF",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-13-27-7061-0490-0370"
 },
 "putnam|08-13-27-7061-0500-0160|2023-0006632": {
 "acreage": "0.46",
@@ -3086,6 +3588,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0240-0240"
 },
+"putnam|09-10-24-4068-0460-0030|2019-0008015": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190008015",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 6380.0,
+"mailing_address": "411 W SEMINOLE AVE EUSTIS FL 32726",
+"ok": true,
+"owner_name": "WILLOUGHBY DOROTHY E ET AL",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4068-0460-0030"
+},
 "putnam|11-10-23-9303-0110-0260|2021-0008073": {
 "acreage": "0.12",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20210008073",
@@ -3123,6 +3637,19 @@
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-26-0000-0300-0000"
 },
+"putnam|11-11-26-8243-0170-0010|2024-0007541": {
+"acreage": "0.31",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007541",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 7730.0,
+"mailing_address": "4471 CARSON AVE INDIANAPOLIS IN 46227-6678",
+"ok": true,
+"owner_name": "HARVEY CHARLES W + NEVA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-11-26-8243-0170-0010"
+},
 "putnam|11-11-26-8243-0320-0710|2024-0007594": {
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007594",
@@ -3147,6 +3674,19 @@
 "owner_name": "LARGAY JOSEPH",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-11-26-8243-0320-0720"
+},
+"putnam|12-09-24-0000-0041-0020|2024-0007678": {
+"acreage": "2",
+"applicant": "PP 986 STATE RD 100, FLORAHOME0",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007678",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 28000.0,
+"mailing_address": "C/O EDWARD WILLIAMS 986 STATE RD 100 FLORAHME FL 32140",
+"ok": true,
+"owner_name": "WILLIAMS EDWARD + TIFFANY COLSON (JTRS)",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-09-24-0000-0041-0020"
 },
 "putnam|12-10-23-1660-0030-0330|2023-0008982": {
 "acreage": "0.12",
@@ -3220,6 +3760,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-24-4079-0130-0100"
 },
+"putnam|12-10-26-6620-0000-0160|2024-0008271": {
+"acreage": "0.13",
+"applicant": "PP 312 FERN ST, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008271",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 10600.0,
+"mailing_address": "C/O DEVIN BEAUFORD PERSONAL REP 131 AZALEA CIR PALATKA FL 32177",
+"ok": true,
+"owner_name": "BEAUFORD SHARON LOUISE HEIRS OF ET AL (TIC)",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-26-6620-0000-0160"
+},
 "putnam|12-10-26-7970-0000-0050|2024-0008277": {
 "acreage": "0.41",
 "applicant": "PP 116 CLEVELAND AV, PALATKA7",
@@ -3233,6 +3786,19 @@
 "property_use": "00800 - MFR <10 UNITS",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-26-7970-0000-0050"
 },
+"putnam|12-10-26-8450-0000-0800|2024-0008291": {
+"acreage": "0.21",
+"applicant": "PP 131 AZALEA CIR, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008291",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 13870.0,
+"mailing_address": "131 AZALEA CIR PALATKA FL 32177-4205",
+"ok": true,
+"owner_name": "BEAUFORD SHARON L HEIRS OF",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-26-8450-0000-0800"
+},
 "putnam|12-11-26-8240-0060-0190|2024-0008337": {
 "acreage": "0.46",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008337",
@@ -3244,6 +3810,18 @@
 "owner_name": "A1A AERIAL SERVICES INC",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-11-26-8240-0060-0190"
+},
+"putnam|12-11-26-8240-0160-0070|2024-0008372": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008372",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5300.0,
+"mailing_address": "506 QUAIL HOLLOW ROAD SATSUMA FL 32189",
+"ok": true,
+"owner_name": "FRENCH DEANNA",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-11-26-8240-0160-0070"
 },
 "putnam|12-11-26-8241-0310-0150|2024-0008394": {
 "acreage": "0.23",
@@ -3282,6 +3860,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-24-4075-0100-0100"
 },
+"putnam|13-10-24-4080-0020-0150|2024-0008742": {
+"acreage": "0.34",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008742",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5660.0,
+"mailing_address": "2 CATHERINE ST LONG VALLEY NJ 07853",
+"ok": true,
+"owner_name": "BENDER KATHERINE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-24-4080-0020-0150"
+},
 "putnam|13-10-26-2550-0020-0070|2024-0008774": {
 "acreage": "0.22",
 "applicant": "PP 2601 SILVER LAKE DR, PALATKA7",
@@ -3307,6 +3897,31 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-26-5630-0010-0150"
 },
+"putnam|13-10-26-6550-0050-0040|2024-0008793": {
+"acreage": "0.27",
+"applicant": "PP 2325 WESTOVER DR, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008793",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 17260.0,
+"mailing_address": "11856 NORTHWEST 12TH MANOR CORAL SPRINGS FL 33071",
+"ok": true,
+"owner_name": "MIRNEI HOLDING LLC",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-26-6550-0050-0040"
+},
+"putnam|13-11-26-8244-0340-0070|2024-0008942": {
+"acreage": "0.37",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008942",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 6500.0,
+"mailing_address": "401 WAYNE AVENUE DEFIANCE OH 43512-2682",
+"ok": true,
+"owner_name": "GEBHARDT ROBERT E",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-11-26-8244-0340-0070"
+},
 "putnam|13-11-26-8244-0400-0110|2019-0011763": {
 "acreage": "0.23",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -3316,6 +3931,18 @@
 "owner_name": "GOMEZ ROSE HEIRS OF",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-11-26-8244-0400-0110"
+},
+"putnam|14-08-24-5100-0090-0040|2024-0009032": {
+"acreage": "0.33",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009032",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 7210.0,
+"mailing_address": "700 ROUTE 130 N SUITE 101 RIVERTON NJ 08077",
+"ok": true,
+"owner_name": "COMIAN XI TAX LIEN FUND LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-08-24-5100-0090-0040"
 },
 "putnam|14-08-24-5102-0061-0110|2024-0009082": {
 "acreage": "0.17",
@@ -3483,6 +4110,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-09-27-0000-0100-0010"
 },
+"putnam|17-09-27-0000-0120-0000|2024-0009837": {
+"acreage": "1.03",
+"applicant": "PP 332 WEST RIVER RD, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009837",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 18540.0,
+"mailing_address": "332 WEST RIVER RD PALATKA FL 32177",
+"ok": true,
+"owner_name": "LARGACCI JUSTIN LANE",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-09-27-0000-0120-0000"
+},
 "putnam|17-10-23-7075-0040-0020|2023-0011417": {
 "acreage": "0.2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230011417",
@@ -3504,6 +4144,54 @@
 "owner_name": "MISKIEWICZ MARISOL",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-10-24-1520-0020-0270"
+},
+"putnam|17-11-23-4090-1080-0020|2019-0013286": {
+"acreage": "0.96",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190013286",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 12480.0,
+"mailing_address": "6221 EMERSON RD BROOKSVILLE FL 34601",
+"ok": true,
+"owner_name": "EXUM BARRY RAY + SHEILA ANN MCDARIS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-11-23-4090-1080-0020"
+},
+"putnam|18-08-25-5106-6120-0080|2024-0010219": {
+"acreage": "0.34",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010219",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 10130.0,
+"mailing_address": "700 ROUTE 130 N SUITE 101 RIVERTON NJ 08077",
+"ok": true,
+"owner_name": "COMIAN XI TAX LIEN FUND LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6120-0080"
+},
+"putnam|18-08-25-5106-6120-0310|2024-0010228": {
+"acreage": "0.21",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010228",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 6840.0,
+"mailing_address": "700 ROUTE 130 N SUITE 101 RIVERTON NJ 08077",
+"ok": true,
+"owner_name": "COMIAN XI TAX LIEN FUND LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6120-0310"
+},
+"putnam|18-08-25-5106-6130-0320|2023-0011845": {
+"acreage": "0.17",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230011845",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5060.0,
+"mailing_address": "C/O JARRETT BLOW 1952 COLCHESTER POINT RD COLCHESTER VT 05446",
+"ok": true,
+"owner_name": "BLOW JOSEPH F + ELIZABETH C POHOPIN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6130-0320"
 },
 "putnam|18-08-25-5106-6150-0100|2023-0011854": {
 "acreage": "0.22",
@@ -3608,6 +4296,18 @@
 "ok": true,
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-6520-0040-0390"
 },
+"putnam|18-12-27-4941-0020-0120|2019-0013951": {
+"acreage": "1.03",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190013951",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 850.0,
+"mailing_address": "C/O MELANIE TESTER FLEMING 1933 BELMONT AVE NW SHAKOPEE MN 55379",
+"ok": true,
+"owner_name": "TESTER RODNEY S MRS TREASURER OF STONY BROOK CORP",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-12-27-4941-0020-0120"
+},
 "putnam|18-13-28-3343-0080-0030|2024-0010662": {
 "acreage": "0.32",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010662",
@@ -3639,6 +4339,93 @@
 "owner_name": "PIRKLE J A + RUBY B",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-08-25-5109-9020-0020"
+},
+"putnam|19-08-25-5109-9020-0080|2024-0010708": {
+"acreage": "0.17",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010708",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5060.0,
+"mailing_address": "C/O JEFFREY HALL 2849 HILSDALE HARBOR WAY JACKSONVILLE FL 32216",
+"ok": true,
+"owner_name": "HALL MALCOLM W + SHIRLEY C HALL",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-08-25-5109-9020-0080"
+},
+"putnam|19-09-23-9370-0000-0038|2024-0010744": {
+"acreage": "9.09",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010744",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 219460.0,
+"mailing_address": "111 PINE TREE LANE MELROSE FL 32666",
+"ok": true,
+"owner_name": "HARRISON BARBARA MARIA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-09-23-9370-0000-0038"
+},
+"putnam|20-10-24-4074-0180-0070|2019-0014591": {
+"acreage": "0.37",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190014591",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 4500.0,
+"mailing_address": "702 VALLEY RIDGE WAY PENSACOLA FL 32514",
+"ok": true,
+"owner_name": "MILLER ADOLFINA + ANGELICA CALZADA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=20-10-24-4074-0180-0070"
+},
+"putnam|20-10-24-4074-0180-0080|2019-0014592": {
+"acreage": "0.37",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190014592",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 4500.0,
+"mailing_address": "702 VALLEY RIDGE WAY PENSACOLA FL 32514",
+"ok": true,
+"owner_name": "MILLER ADOLFINA L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=20-10-24-4074-0180-0080"
+},
+"putnam|20-10-24-4074-0270-0160|2024-0011047": {
+"acreage": "0.23",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011047",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 4500.0,
+"mailing_address": "6941NW 46TH CT LAUDERHILL FL 33319",
+"ok": true,
+"owner_name": "PIERRE AMOS + KARINE JOSEPH",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=20-10-24-4074-0270-0160"
+},
+"putnam|21-10-23-3646-0000-0010|2024-0011198": {
+"acreage": "0.57",
+"applicant": "PP 1864 STATE RD 20, HAWTHORNE0",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011198",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 6840.0,
+"mailing_address": "1864 STATE RD 20 HAWTHORNE FL 32640",
+"ok": true,
+"owner_name": "ABERNETHY SUZANNE M",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=21-10-23-3646-0000-0010"
+},
+"putnam|21-10-26-0000-0060-0020|2024-0011230": {
+"acreage": "3.47",
+"applicant": "PP 367 HORSEMAN CLUB RD, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011230",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 56000.0,
+"mailing_address": "367 HORSEMAN CLUB RD PALATKA FL 32177-9547",
+"ok": true,
+"owner_name": "FUTCH CAROLYN HEIRS OF",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=21-10-26-0000-0060-0020"
 },
 "putnam|21-10-27-0000-0270-0100|2024-0011253": {
 "appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
@@ -3713,6 +4500,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=22-10-26-5470-0070-0100"
 },
+"putnam|23-09-24-4076-1140-0180|2024-0011567": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011567",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 4040.0,
+"mailing_address": "C/O MEGHANN FARR 1400 MALTAS AVE INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "FARR PAMELA HEIRS OF",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-09-24-4076-1140-0180"
+},
 "putnam|23-10-23-0000-0450-0000|2024-0011623": {
 "acreage": "2.03",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011623",
@@ -3764,6 +4563,30 @@
 "fetched_at": "2026-08-19T17:58:20+00:00",
 "ok": true,
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-12-26-0000-0020-0013"
+},
+"putnam|23-12-27-0000-0110-0050|2024-0011754": {
+"acreage": "1.44",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011754",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 18720.0,
+"mailing_address": "125 BLOSSOM TRAIL CRESCENT CITY FL 32112",
+"ok": true,
+"owner_name": "WINSLOW CHRISTINE ANN ET AL (TIC)",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-12-27-0000-0110-0050"
+},
+"putnam|24-08-24-5100-0180-0060|2024-0011798": {
+"acreage": "0.34",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011798",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 7420.0,
+"mailing_address": "700 ROUTE 130 N SUITE 101 RIVERTON NJ 08077",
+"ok": true,
+"owner_name": "COMIAN XI TAX LIEN FUND LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-08-24-5100-0180-0060"
 },
 "putnam|24-09-24-4075-0220-0060|2024-0011867": {
 "acreage": "0.65",
@@ -3892,6 +4715,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-12-27-3350-1100-0000"
 },
+"putnam|24-12-27-3350-1370-0060|2024-0012458": {
+"acreage": "0.48",
+"applicant": "PP 1136 HUNTINGTON RD, CRESCENT CITY2",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012458",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 11870.0,
+"mailing_address": "1136 HUNTINGTON RD CRESCENT CITY FL 32112",
+"ok": true,
+"owner_name": "SHAFFER MARK PHILIP",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-12-27-3350-1370-0060"
+},
 "putnam|25-08-25-0000-0100-0020|2024-0012469": {
 "acreage": "0.38",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012469",
@@ -3927,6 +4763,31 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0910-0100"
 },
+"putnam|26-08-27-8152-0090-0240|2023-0015114": {
+"acreage": "0.46",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230015114",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 15680.0,
+"mailing_address": "533 PALMETTO BLUFF RD PALATKA FL 32177",
+"ok": true,
+"owner_name": "HAMILTON LLOYD J JR",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-08-27-8152-0090-0240"
+},
+"putnam|26-10-23-0000-0160-0011|2024-0013368": {
+"acreage": "2.5",
+"applicant": "PP 104 KARRIE WAY, HAWTHORNE0",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013368",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 30000.0,
+"mailing_address": "104 KARRIE WAY HAWTHORNE FL 32640",
+"ok": true,
+"owner_name": "WERNINCK SARA A",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-10-23-0000-0160-0011"
+},
 "putnam|27-10-23-0000-0330-0000|2024-0013482": {
 "acreage": "1.06",
 "applicant": "PP 839 LAKE KEMPTON DR, HAWTHORNE0",
@@ -3952,6 +4813,19 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=29-09-26-0000-0030-0000"
 },
+"putnam|30-08-27-0750-0320-0020|2024-0013796": {
+"acreage": "0.52",
+"applicant": "PP 119 CARRAWAY ST, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013796",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 9360.0,
+"mailing_address": "PO BOX 12 BOSTWICK FL 32007-0012",
+"ok": true,
+"owner_name": "KITE SHANE K",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=30-08-27-0750-0320-0020"
+},
 "putnam|31-10-26-0000-8888-1427|2023-0016045": {
 "acreage": "0.87",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230016045",
@@ -3963,6 +4837,18 @@
 "owner_name": "CAMPBELL EMMALING + AN MEI LI CAMPBELL (TIC)",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=31-10-26-0000-8888-1427"
+},
+"putnam|31-10-26-0000-8888-1610|2019-0018467": {
+"acreage": "1.06",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190018467",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 11000.0,
+"mailing_address": "C/O GARY BOGGS 149 CEDAR CIRCLE THOMASVILLE NC 27360",
+"ok": true,
+"owner_name": "OXFORD FINANCE COMPANIES INC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=31-10-26-0000-8888-1610"
 },
 "putnam|31-10-27-8251-0020-1270|2019-0018477": {
 "acreage": "0.3",
@@ -4144,6 +5030,43 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4075-1560-0280"
 },
+"putnam|35-09-24-4075-1820-0020|2019-0020205": {
+"acreage": "0.24",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190020205",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5020.0,
+"mailing_address": "244 LOUIS AVE S FLORIDA PARK NY 11001",
+"ok": true,
+"owner_name": "LEE BRIAN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4075-1820-0020"
+},
+"putnam|35-09-24-4076-0110-0040|2024-0015513": {
+"acreage": "0.36",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015513",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 5340.0,
+"mailing_address": "1894 BRANCHWATER TRAIL ORLANDO FL 32825",
+"ok": true,
+"owner_name": "HILTZ LINDA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4076-0110-0040"
+},
+"putnam|35-09-24-4076-0360-0120|2019-0020417": {
+"acreage": "0.33",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190020417",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 4740.0,
+"mailing_address": "161-19 128TH AVE SPRINGFIELD GARDENS NY 11434",
+"ok": true,
+"owner_name": "LOVELACE PAULINE A",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4076-0360-0120"
+},
 "putnam|35-09-24-4076-0490-0220|2024-0015693": {
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015693",
@@ -4167,6 +5090,19 @@
 "owner_name": "NELSON RONALD LEE REV ET AL",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-10-23-0000-0014-0020"
+},
+"putnam|36-09-24-4075-1310-0240|2024-0015929": {
+"acreage": "0.43",
+"applicant": "PP 211 NEISMAN AV, INTERLACHEN8",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015929",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 8090.0,
+"mailing_address": "C/O JOHN C BERNINI 3069 BIRCH CIRCLE WEST WHITEHALL PA 18052-3450",
+"ok": true,
+"owner_name": "BERNINI MARY DIANE HEIRS OF",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1310-0240"
 },
 "putnam|36-09-24-4076-0260-0230|2024-0015984": {
 "acreage": "0.22",
@@ -4352,6 +5288,42 @@
 "property_use": "09600 - SEWG/WASTE LAND",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-11-26-0000-0052-0010"
 },
+"putnam|39-11-26-8231-0120-0110|2024-0016742": {
+"acreage": "1.6",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016742",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 28800.0,
+"mailing_address": "PO BOX 33 SATSUMA FL 32189",
+"ok": true,
+"owner_name": "ROBINSON JAMES",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-11-26-8231-0120-0110"
+},
+"putnam|39-11-26-8470-0110-0201|2024-0016884": {
+"acreage": "7.19",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016884",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 148200.0,
+"mailing_address": "1160 SOUTH US HIGHWAY 17 SATSUMA FL 32189",
+"ok": true,
+"owner_name": "BIRKETT BRUCE + VICKIE H/W",
+"property_use": "01000 - VACANT COMM",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-11-26-8470-0110-0201"
+},
+"putnam|39-11-26-8470-0210-0100|2024-0016901": {
+"acreage": "6.05",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016901",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 70790.0,
+"mailing_address": "177 DOBY RD SATSUMA FL 32189",
+"ok": true,
+"owner_name": "WALKER WILLIE JR",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-11-26-8470-0210-0100"
+},
 "putnam|39-11-26-9230-0140-0030|2024-0016950": {
 "acreage": "0.26",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016950",
@@ -4363,6 +5335,18 @@
 "owner_name": "OLSHEFSKI CAROL A",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-11-26-9230-0140-0030"
+},
+"putnam|39-13-26-0000-0010-0280|2024-0016965": {
+"acreage": "0.82",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016965",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 24080.0,
+"mailing_address": "18203 CEDARHURST RD ORLANDO FL 32820",
+"ok": true,
+"owner_name": "WAUFLE STEPHEN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=39-13-26-0000-0010-0280"
 },
 "putnam|41-12-26-8792-0000-3000|2024-0017021": {
 "acreage": "0.26",
@@ -4376,6 +5360,19 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=41-12-26-8792-0000-3000"
 },
+"putnam|41-13-26-0000-0260-0000|2024-0017061": {
+"acreage": "1.61",
+"applicant": "PP 111 PORT COVE LANDING RD, GEORGETOWN9",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017061",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 588490.0,
+"mailing_address": "6140 SW 78TH ST MIAMI FL 33143",
+"ok": true,
+"owner_name": "MASSON JUAN + YOANIA C H/W",
+"property_use": "03600 - CAMPS",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=41-13-26-0000-0260-0000"
+},
 "putnam|41-13-26-1320-0060-0140|2024-0017066": {
 "acreage": "0.34",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017066",
@@ -4388,6 +5385,19 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=41-13-26-1320-0060-0140"
 },
+"putnam|41-13-26-5500-0000-0011|2024-0017084": {
+"acreage": "4.55",
+"applicant": "PP 108 PORT COVE LANDING RD, GEORGETOWN9",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017084",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 272310.0,
+"mailing_address": "6140 SW 78TH ST MIAMI FL 33143",
+"ok": true,
+"owner_name": "MASSON JUAN + YOANIA C H/W",
+"property_use": "03600 - CAMPS",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=41-13-26-5500-0000-0011"
+},
 "putnam|42-10-27-6850-0060-0010|2024-0017089": {
 "acreage": "0.39",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017089",
@@ -4399,6 +5409,19 @@
 "owner_name": "RODRICK FRANK A",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-0060-0010"
+},
+"putnam|42-10-27-6850-0160-0011|2024-0017095": {
+"acreage": "0.14",
+"applicant": "PP 213 N 4TH ST, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017095",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 17820.0,
+"mailing_address": "213 N 4TH ST PALATKA FL 32177-3711",
+"ok": true,
+"owner_name": "GUARANTY TITLE CO OF PALATKA",
+"property_use": "01900 - PROF OFFICES",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-0160-0011"
 },
 "putnam|42-10-27-6850-0330-0010|2024-0017111": {
 "acreage": "0.12",
@@ -4425,6 +5448,19 @@
 "property_use": "01000 - VACANT COMM",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-0620-0050"
 },
+"putnam|42-10-27-6850-0630-0051|2024-0017158": {
+"acreage": "0.22",
+"applicant": "PP 805 ST JOHNS AV, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017158",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 57500.0,
+"mailing_address": "805 ST JOHNS AV PALATKA FL 32177",
+"ok": true,
+"owner_name": "HILL TERRILL",
+"property_use": "01200 - STORE/OFF/RES",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-0630-0051"
+},
 "putnam|42-10-27-6850-2200-0800|2024-0017266": {
 "acreage": "0.17",
 "applicant": "PP 1207 BRONSON ST, PALATKA7",
@@ -4438,6 +5474,19 @@
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-2200-0800"
 },
+"putnam|42-10-27-6850-2610-0040|2024-0017322": {
+"acreage": "0.12",
+"applicant": "PP 1412 CARR ST, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017322",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 9000.0,
+"mailing_address": "1412 CARR ST PALATKA FL 32177",
+"ok": true,
+"owner_name": "MCDONALD JIMMY HOWARD HEIRS OF",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-2610-0040"
+},
 "putnam|42-10-27-6850-2640-0013|2024-0017331": {
 "acreage": "0.12",
 "applicant": "PP 119 N 15TH ST, PALATKA7",
@@ -4450,6 +5499,43 @@
 "owner_name": "FELLS WARREN ET AL",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-2640-0013"
+},
+"putnam|42-10-27-6850-3100-0110|2024-0017368": {
+"acreage": "0.17",
+"applicant": "PP 1618 EAGLE ST, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017368",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 2650.0,
+"mailing_address": "C/O JAMES PURDY 1618 EAGLE ST PALATKA FL 32177-3053",
+"ok": true,
+"owner_name": "PURDY DORIS HEIRS OF",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-3100-0110"
+},
+"putnam|43-10-27-8252-0080-0200|2024-0017465": {
+"acreage": "0.7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017465",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 22730.0,
+"mailing_address": "PO BOX 53 SAN MATEO FL 32187-0053",
+"ok": true,
+"owner_name": "TRICKETT LILLIE M HEIRS OF",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=43-10-27-8252-0080-0200"
+},
+"putnam|43-10-27-8252-0130-0170|2024-0017483": {
+"acreage": "0.6",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017483",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 17440.0,
+"mailing_address": "735 16TH AVE S JACKSONVILLE BEACH FL 32250",
+"ok": true,
+"owner_name": "VILLA BELLA PROPERTIES LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=43-10-27-8252-0130-0170"
 },
 "putnam|43-10-27-8252-0140-0130|2024-0017491": {
 "acreage": "0.6",
@@ -4487,6 +5573,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=43-10-27-8255-0100-0140"
 },
+"putnam|48-10-27-4570-0030-0070|2024-0017617": {
+"acreage": "0.83",
+"applicant": "PP 119 CULPEPPER RD, SAN MATEO7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017617",
+"clerk_platform": "template",
+"fetched_at": "2026-08-20T06:55:20+00:00",
+"just_value": 8060.0,
+"mailing_address": "C/O TRACY L MONROE 119 CULPEPPER RD SAN MATEO FL 32187",
+"ok": true,
+"owner_name": "MONROE TRACY L LIFE ESTATE",
+"property_use": "00100 - SINGLE FAMILY",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=48-10-27-4570-0030-0070"
+},
 "putnam|49-09-27-0220-0040-0100|2024-0017651": {
 "acreage": "1.7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017651",
@@ -4501,103 +5600,103 @@
 },
 "suwannee|10025005000|4694": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|10720001040|4675": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|1437000001|4741": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2220000000|4752": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2490003000|4754": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2535000060|4756": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2710000000|4758": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2823005000|4760": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|4591000000|4704": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|8016001000|4684": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9071010010|4682": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|930003011|4698": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9386120010|4678": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9391120410|4680": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9415170290|4677": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9446100060|4679": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9474160210|4681": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-19T20:27:15+00:00",
+"fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 }
