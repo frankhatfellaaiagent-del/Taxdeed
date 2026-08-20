@@ -1375,7 +1375,11 @@ function dataUpdatesHtml() {
 // ---------- settings screen ----------
 function renderBuyboxCard() {
   const cfg = buybox || EMPTY_BUYBOX;
-  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  // Every Florida county is a valid target — not just the ones with auctions
+  // in the feed right now. Registry names first (all 67, or however many
+  // shipped), falling back to whatever counties the feed itself carries.
+  const regNames = REG().map((c) => c.name);
+  const counties = [...new Set([...regNames, ...DATA.map((p) => p.county)])].sort();
   const targetSet = new Set((cfg.target_counties || []).map(normCounty));
   const targeted = counties.filter((c) => targetSet.has(normCounty(c)));
   recomputeBuybox();
