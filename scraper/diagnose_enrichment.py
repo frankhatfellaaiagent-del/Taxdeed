@@ -254,6 +254,35 @@ def diagnose_marion_clerk() -> None:
                         except Exception as exc:          # noqa: BLE001
                             print(f"        (error reading element: {exc})")
 
+                    # Several duplicate "Search" buttons exist (one per tab
+                    # panel) — find which one shares an ancestor with the
+                    # filled input, since that's the one that actually belongs
+                    # to the active panel.
+                    print("      ancestor chain of the filled input (up to 6 levels):")
+                    anc = box.evaluate("""el => {
+                        const out = []; let n = el.parentElement;
+                        for (let i = 0; i < 6 && n; i++) {
+                            out.push(n.tagName + (n.className ? '.' + String(n.className).replace(/\\s+/g,'.') : '')
+                                     + (n.getAttribute('ng-show') ? '[ng-show=' + n.getAttribute('ng-show') + ']' : ''));
+                            n = n.parentElement;
+                        }
+                        return out;
+                    }""")
+                    for line in anc:
+                        print(f"        {line}")
+                    print("      same for each 'Search' button's ancestor chain:")
+                    for i, btn in enumerate(page2.locator("button", has_text="Search").all()):
+                        anc_b = btn.evaluate("""el => {
+                            const out = []; let n = el.parentElement;
+                            for (let i = 0; i < 6 && n; i++) {
+                                out.push(n.tagName + (n.className ? '.' + String(n.className).replace(/\\s+/g,'.') : '')
+                                         + (n.getAttribute('ng-show') ? '[ng-show=' + n.getAttribute('ng-show') + ']' : ''));
+                                n = n.parentElement;
+                            }
+                            return out;
+                        }""")
+                        print(f"        [{i}] visible={btn.is_visible()}: {anc_b}")
+
                     nv._submit()
                     try:
                         page2.wait_for_load_state("networkidle", timeout=nv.timeout)
