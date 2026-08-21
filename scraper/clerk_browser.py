@@ -29,6 +29,14 @@ SEARCH_FIELDS = [
     ("parcel_id", ["parcel", "parcelno", "parcel #", "parcel number"]),
 ]
 
+# Marion's portal (and likely other NewVision installs) gates each
+# identifier's input behind a category tab — only the Name input is visible
+# until its tab is clicked, so _find_input never finds Tax Number/Parcel
+# Number otherwise. The tab is a plain <a> naming the category; clicking it
+# is a harmless no-op on a portal that doesn't use this pattern (nothing
+# matches, so the click is skipped).
+TAB_LABELS = {"tax_number": "Tax Number", "parcel_id": "Parcel Number"}
+
 
 class NewVisionResolver:
     """Resolve records through a NewVision SearchNG/BrowserView portal."""
@@ -69,6 +77,20 @@ class NewVisionResolver:
                 continue
         return None
 
+    def _select_search_tab(self, field: str) -> None:
+        """Click the category tab that reveals this field's input, if the
+        portal uses that pattern (Marion's NewVision does)."""
+        label = TAB_LABELS.get(field)
+        if not label:
+            return
+        try:
+            tab = self.page.locator("a", has_text=label).first
+            if tab.count() and tab.is_visible():
+                tab.click(timeout=5000)
+                self.page.wait_for_timeout(300)
+        except Exception:                              # noqa: BLE001
+            pass
+
     def _submit(self) -> None:
         for sel in ('input[type="submit"]', 'button[type="submit"]',
                     'input[value*="Search" i]', 'button:has-text("Search")',
@@ -91,6 +113,7 @@ class NewVisionResolver:
             value = str(rec.get(field) or rec.get("case_number") or "").strip()
             if not value:
                 continue
+            self._select_search_tab(field)
             box = self._find_input(keywords)
             if box is None:
                 continue

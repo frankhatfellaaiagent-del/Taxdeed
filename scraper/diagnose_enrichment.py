@@ -217,6 +217,23 @@ def diagnose_marion_clerk() -> None:
                         print(f"    {sel}: visible={loc.is_visible()}")
             except Exception as exc:                      # noqa: BLE001
                 print(f"    click failed: {exc.__class__.__name__}: {exc}")
+
+            # End-to-end: does the fixed resolver actually get a case now?
+            print("  step: NewVisionResolver.resolve() end to end (fresh page)")
+            from .clerk_browser import NewVisionResolver
+            page2 = browser.new_page()
+            try:
+                nv = NewVisionResolver(page2)
+                result = nv.resolve(rec, cfg)
+                print(f"    result keys: {list(result.keys()) or '(empty — still unresolved)'}")
+                if result.get("clerk_case_url"):
+                    print(f"    clerk_case_url: {result['clerk_case_url']}")
+                if result.get("case_docs"):
+                    print(f"    case_docs: {len(result['case_docs'])} document(s)")
+            except Exception as exc:                      # noqa: BLE001
+                print(f"    EXCEPTION: {exc.__class__.__name__}: {exc}")
+            finally:
+                page2.close()
         except Exception as exc:                          # noqa: BLE001
             print(f"  EXCEPTION during portal load: {exc.__class__.__name__}: {exc}")
         finally:
