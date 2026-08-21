@@ -195,6 +195,9 @@ def main(argv=None) -> int:
     p.add_argument("--out", default="output/link-check")
     p.add_argument("--delay", type=float, default=2.0, help="Base seconds between requests (default 2.0)")
 
+    p = sub.add_parser("diagnose-enrichment", help="Debug why appraiser/clerk enrichment fails for specific counties")
+    p.add_argument("--out", default="output/diagnose")
+
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
@@ -241,6 +244,10 @@ def main(argv=None) -> int:
         from .verify_links import verify_links
         result = verify_links(args.out, delay=args.delay)
         return 1 if result["failed"] else 0
+    if args.cmd == "diagnose-enrichment":
+        from .diagnose_enrichment import diagnose_enrichment
+        diagnose_enrichment(args.out)
+        return 0
     if args.cmd == "export":
         from .exporter import export_run
         run_dir = Path(args.run) if args.run else None
