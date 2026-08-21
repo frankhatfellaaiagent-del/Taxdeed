@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T07:08:13+00:00",
+ "generated_at": "2026-08-21T07:05:22+00:00",
  "source_run": "2026-08-19T172458Z",
  "county_runs": {
   "alachua": "2026-08-19T172458Z",
@@ -401,7 +401,7 @@
    "coverage": "in-person",
    "sale_info": "In person on scheduled Mondays at 1:00 PM, Collier County Administration Building, 7th floor room 711, Naples.",
    "clerk_url": "https://www.collierclerk.com/tax-deed-sales/",
-   "sale_list_url": "https://apps.collierclerk.com/tax-deeds-upcoming-sales-list"
+   "sale_list_url": "https://www.collierclerk.com/tax-deed-sales/search-upcoming-sales-list/"
   },
   {
    "slug": "columbia",
@@ -750,8 +750,8 @@
    "name": "Union",
    "coverage": "in-person",
    "sale_info": "In person in the lobby of the Union County Courthouse, 55 W Main St, Lake Butler, starting 11:00 AM.",
-   "clerk_url": "https://unionclerk.com/departments-services/clerk-services/tax-deed-sales/",
-   "sale_list_url": "https://unionclerk.com/departments-services/clerk-services/tax-deed-sales/"
+   "clerk_url": "https://unionclerk.com/tax-deed-sales/",
+   "sale_list_url": "https://unionclerk.com/tax-deed-sales/"
   },
   {
    "slug": "volusia",
