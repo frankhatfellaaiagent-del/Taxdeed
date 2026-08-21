@@ -25,7 +25,9 @@ log = logging.getLogger(__name__)
 # Search inputs on these portals are labeled by what they hold; try the most
 # specific identifier first so we land on one case instead of a list.
 SEARCH_FIELDS = [
-    ("tax_number", ["tax number", "taxnumber", "tax no", "taxno", "tax deed"]),
+    # Marion's own field is labeled "Tax Value" (id="txtTaxValue"), not "tax
+    # number" — the certificate/tax-deed number is still what goes in it.
+    ("tax_number", ["tax number", "taxnumber", "tax no", "taxno", "tax deed", "tax value"]),
     ("parcel_id", ["parcel", "parcelno", "parcel #", "parcel number"]),
 ]
 
