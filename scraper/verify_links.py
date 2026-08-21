@@ -32,6 +32,14 @@ _PARKED_MARKERS = ("domain is for sale", "buy this domain", "this domain may be 
                    "godaddy.com/domains", "future home of something quite cool")
 
 
+def _base_domain(host: str) -> str:
+    """Naive eTLD+1: last two dot-labels. Good enough to tell a same-org
+    subdomain move (app.x.com <- www.x.com) from a genuine domain change
+    (x.com -> unrelated-y.com) for the .com/.org/.gov/.net hosts clerks use."""
+    parts = host.lower().split(".")
+    return ".".join(parts[-2:]) if len(parts) >= 2 else host.lower()
+
+
 def _fetch(session: requests.Session, url: str, timeout: float = 20.0) -> dict:
     try:
         resp = session.get(url, timeout=timeout, allow_redirects=True)
@@ -42,8 +50,11 @@ def _fetch(session: requests.Session, url: str, timeout: float = 20.0) -> dict:
     parked = any(m in text for m in _PARKED_MARKERS)
     req_host = urlparse(url).netloc
     final_host = urlparse(resp.url).netloc
-    strip_www = lambda h: h.lower().removeprefix("www.")  # www. is a normal, benign redirect target
-    cross_domain = bool(final_host) and strip_www(final_host) != strip_www(req_host)
+    # A redirect to a different SUBDOMAIN of the same organization (e.g. an
+    # apps./online. portal) is normal and common among these clerk sites —
+    # only a different registrable domain entirely is a red flag (expired
+    # domain sold off, parked, or genuinely wrong link).
+    cross_domain = bool(final_host) and _base_domain(final_host) != _base_domain(req_host)
     same_host_redirect_to_root = (not cross_domain
                                    and resp.url.rstrip("/") == f"{urlparse(url).scheme}://{req_host}"
                                    and urlparse(url).path not in ("", "/"))
