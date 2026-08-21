@@ -533,15 +533,21 @@ function typeRank(p) {
   if (p.buybox === "REVIEW") return 2;
   return 3;
 }
+// A Scheduled row whose sale date already passed with no result posted yet
+// (the site hadn't updated when we last scraped) isn't meaningfully
+// "upcoming" — "soonest" should mean soonest UPCOMING, so every date-based
+// sort buckets these behind genuinely future rows instead of at the top.
+const isPastDue = (p) => !p.redeemed && saleDay(p) != null && saleDay(p) < etToday();
 function sortComparator(sort) {
   const t = (p) => p.saleDate?.getTime() ?? 9e15;   // undated rows sort last
+  const pd = (p) => (isPastDue(p) ? 1 : 0);
   const asv = (p) => p.assessed ?? -Infinity;
   return {
-    soonest: (a, b) => t(a) - t(b) || a.county.localeCompare(b.county),
-    latest: (a, b) => t(b) - t(a) || a.county.localeCompare(b.county),
+    soonest: (a, b) => pd(a) - pd(b) || t(a) - t(b) || a.county.localeCompare(b.county),
+    latest: (a, b) => pd(a) - pd(b) || t(b) - t(a) || a.county.localeCompare(b.county),
     "assessed-desc": (a, b) => asv(b) - asv(a),
-    county: (a, b) => a.county.localeCompare(b.county) || t(a) - t(b),
-    mytypes: (a, b) => typeRank(a) - typeRank(b) || t(a) - t(b),
+    county: (a, b) => a.county.localeCompare(b.county) || pd(a) - pd(b) || t(a) - t(b),
+    mytypes: (a, b) => typeRank(a) - typeRank(b) || pd(a) - pd(b) || t(a) - t(b),
   }[sort] || ((a, b) => t(a) - t(b));
 }
 
@@ -812,6 +818,7 @@ function statusTag(p) {
   if (st === "Interested") return '<span class="tag tag-accent">Interested</span>';
   if (st === "Watching") return '<span class="tag tag-neutral">Watching</span>';
   if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
+  if (isPastDue(p)) return '<span class="tag tag-outline" title="This auction’s date has passed and the county site had not posted a result as of the last refresh &mdash; check back after the next refresh">Past date</span>';
   return '<span class="tag tag-neutral">New</span>';
 }
 // A county with no rows in the feed still gets a real page: how it sells
@@ -839,7 +846,10 @@ function countyInfoCard(c) {
 
 function renderDashboard() {
   const rows = filteredRows();
-  const upcoming = DATA.filter((p) => !p.redeemed);
+  // "Upcoming" excludes past-due rows too — an auction whose date already
+  // passed with no result posted yet isn't upcoming, even though the site
+  // hadn't marked it Redeemed as of the last refresh.
+  const upcoming = DATA.filter((p) => !p.redeemed && !isPastDue(p));
   // Sale-day windows are measured in Florida time, so "today" is today in
   // Florida no matter where the person's device thinks it is.
   const todayRange = whenRange("today"), weekRange = whenRange("week");
