@@ -187,6 +187,36 @@ def diagnose_marion_clerk() -> None:
 
             body_text = page.locator("body").inner_text()[:800]
             print(f"  page body text (first 800 chars):\n    {body_text}")
+
+            # The parcel/tax-number inputs came back not-visible — this portal
+            # likely gates them behind a search-type tab/selector. Find every
+            # clickable element whose text names a search category, so we know
+            # exactly what to click before the right input appears.
+            print("  step: clickable elements matching search-category labels")
+            for label in ["Tax Number", "Parcel Number", "Name", "Sale Date", "Lands Available"]:
+                try:
+                    els = page.get_by_text(label, exact=False).all()
+                    for el in els[:5]:
+                        tag = el.evaluate("e => e.tagName")
+                        cls = el.get_attribute("class")
+                        role = el.get_attribute("role")
+                        onclick = el.get_attribute("onclick")
+                        print(f"    {label!r}: <{tag}> class={cls!r} role={role!r} "
+                              f"onclick={(onclick or '')[:60]!r} visible={el.is_visible()}")
+                except Exception as exc:                  # noqa: BLE001
+                    print(f"    {label!r}: (error: {exc})")
+
+            # Try clicking "Tax Number" directly and see what becomes visible.
+            try:
+                print("  step: click 'Tax Number' tab, then re-check input visibility")
+                page.get_by_text("Tax Number", exact=False).first.click(timeout=5000)
+                page.wait_for_timeout(1000)
+                for sel in ["#txtTaxValue", "#txtParcelValue"]:
+                    loc = page.locator(sel)
+                    if loc.count():
+                        print(f"    {sel}: visible={loc.is_visible()}")
+            except Exception as exc:                      # noqa: BLE001
+                print(f"    click failed: {exc.__class__.__name__}: {exc}")
         except Exception as exc:                          # noqa: BLE001
             print(f"  EXCEPTION during portal load: {exc.__class__.__name__}: {exc}")
         finally:
