@@ -242,8 +242,23 @@ def diagnose_marion_clerk() -> None:
                         continue
                     box.fill("")
                     box.fill(value)
+
+                    # Before submitting: what's actually clickable here? _submit()'s
+                    # selectors may not match this Angular app's real trigger.
+                    print("      buttons/links on the page after fill:")
+                    for el in page2.locator("button, a, input[type=submit], input[type=button]").all()[:20]:
+                        try:
+                            print(f"        <{el.evaluate('e => e.tagName')}> "
+                                  f"text={el.inner_text()[:30]!r} visible={el.is_visible()} "
+                                  f"class={el.get_attribute('class')!r}")
+                        except Exception as exc:          # noqa: BLE001
+                            print(f"        (error reading element: {exc})")
+
                     nv._submit()
-                    page2.wait_for_load_state("networkidle", timeout=nv.timeout)
+                    try:
+                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
+                    except Exception as exc:              # noqa: BLE001
+                        print(f"      wait_for_load_state after submit failed: {exc}")
                     print(f"      after submit, url: {page2.url}")
                     row = page2.locator('table tr:has(a), tr[onclick], a:has-text("View")').first
                     print(f"      result row present: {row.count() > 0}")
