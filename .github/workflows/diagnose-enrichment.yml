@@ -1,0 +1,44 @@
+name: Diagnose enrichment failures
+
+# One-off debug tool: why do appraiser/clerk enrichment fail for specific
+# counties? Fetches live sample pages and narrates each step (Marion's
+# NewVision clerk portal especially) so the actual failure is visible instead
+# of the silent best-effort behavior enrich.py uses in production. Read-only
+# — commits nothing, stays out of the data-pipeline concurrency group.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: diagnose-enrichment
+  cancel-in-progress: false
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Diagnose
+        run: python -m scraper -v diagnose-enrichment --out output/diagnose
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnose-enrichment
+          path: output/diagnose/
+          if-no-files-found: warn
+          retention-days: 14
