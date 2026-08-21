@@ -1,0 +1,43 @@
+name: Verify county registry links
+
+# One-off audit tool: fetches every clerk_url/sale_list_url in
+# config/florida_counties.json and reports which ones don't resolve. Those
+# links were compiled from research, not fetched — this closes the loop with
+# a live check. Read-only — commits nothing, stays out of the data-pipeline
+# concurrency group.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-links
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verify links
+        run: python -m scraper -v verify-links --out output/link-check
+        continue-on-error: true
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check
+          path: output/link-check/
+          if-no-files-found: error
+          retention-days: 30

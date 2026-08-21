@@ -191,6 +191,10 @@ def main(argv=None) -> int:
     p.add_argument("--out", default="output/coverage")
     p.add_argument("--delay", type=float, default=3.0, help="Base seconds between requests (default 3.0)")
 
+    p = sub.add_parser("verify-links", help="Fetch every clerk_url/sale_list_url in config/florida_counties.json and report broken ones")
+    p.add_argument("--out", default="output/link-check")
+    p.add_argument("--delay", type=float, default=2.0, help="Base seconds between requests (default 2.0)")
+
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
@@ -233,6 +237,10 @@ def main(argv=None) -> int:
         from .coverage_probe import probe_coverage
         probe_coverage(args.out, delay=args.delay)
         return 0
+    if args.cmd == "verify-links":
+        from .verify_links import verify_links
+        result = verify_links(args.out, delay=args.delay)
+        return 1 if result["failed"] else 0
     if args.cmd == "export":
         from .exporter import export_run
         run_dir = Path(args.run) if args.run else None
