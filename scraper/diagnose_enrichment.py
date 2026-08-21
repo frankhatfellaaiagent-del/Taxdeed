@@ -219,17 +219,47 @@ def diagnose_marion_clerk() -> None:
                 print(f"    click failed: {exc.__class__.__name__}: {exc}")
 
             # End-to-end: does the fixed resolver actually get a case now?
-            print("  step: NewVisionResolver.resolve() end to end (fresh page)")
-            from .clerk_browser import NewVisionResolver
+            # Narrated manually (not just calling resolve()) so a silent {}
+            # shows exactly which stage failed.
+            print("  step: NewVisionResolver flow, narrated (fresh page)")
+            from .clerk_browser import NewVisionResolver, SEARCH_FIELDS
             page2 = browser.new_page()
             try:
                 nv = NewVisionResolver(page2)
-                result = nv.resolve(rec, cfg)
-                print(f"    result keys: {list(result.keys()) or '(empty — still unresolved)'}")
-                if result.get("clerk_case_url"):
-                    print(f"    clerk_case_url: {result['clerk_case_url']}")
-                if result.get("case_docs"):
-                    print(f"    case_docs: {len(result['case_docs'])} document(s)")
+                opened = nv._open_portal(portal)
+                print(f"    portal opened: {opened}")
+                for field, keywords in SEARCH_FIELDS:
+                    value = str(rec.get(field) or rec.get("case_number") or "").strip()
+                    if not value:
+                        print(f"    field={field}: record has no value, skipped")
+                        continue
+                    print(f"    field={field} value={value!r}")
+                    nv._select_search_tab(field)
+                    box = nv._find_input(keywords)
+                    print(f"      input found: {box is not None}"
+                          + (f" (visible={box.is_visible()})" if box is not None else ""))
+                    if box is None:
+                        continue
+                    box.fill("")
+                    box.fill(value)
+                    nv._submit()
+                    page2.wait_for_load_state("networkidle", timeout=nv.timeout)
+                    print(f"      after submit, url: {page2.url}")
+                    row = page2.locator('table tr:has(a), tr[onclick], a:has-text("View")').first
+                    print(f"      result row present: {row.count() > 0}")
+                    if row.count():
+                        row.click(timeout=5000)
+                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
+                        print(f"      after row click, url: {page2.url}")
+                    html = page2.content()
+                    import re as _re
+                    from .clerk import parse_case_page
+                    parsed = parse_case_page(html, page2.url)
+                    hay = _re.sub(r"[^A-Za-z0-9]", "", html).upper()
+                    value_found = _re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay
+                    print(f"      value found on final page: {value_found}")
+                    print(f"      parsed fields: {parsed}")
+                    print(f"      page text sample: {page2.locator('body').inner_text()[:400]!r}")
             except Exception as exc:                      # noqa: BLE001
                 print(f"    EXCEPTION: {exc.__class__.__name__}: {exc}")
             finally:
