@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T07:05:22+00:00",
+ "generated_at": "2026-08-22T07:00:33+00:00",
  "source_run": "2026-08-19T172458Z",
  "county_runs": {
   "alachua": "2026-08-19T172458Z",
@@ -2688,7 +2688,7 @@
    "property_address": "NO SITUS, FORT MCCOY, FL- 32134",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3919.74,
    "assessed_value": 4519.0,
    "bid_to_value_pct": 87,
@@ -2697,7 +2697,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508822&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=17922&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+   "applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258"
   },
   {
    "county": "marion",
@@ -2784,7 +2788,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34431",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5519.68,
    "assessed_value": 6844.0,
    "bid_to_value_pct": 81,
@@ -2793,7 +2797,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508826&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=407381&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -2807,7 +2815,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6934.09,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -2818,7 +2826,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508830&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=478008&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -2832,7 +2844,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6878.12,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -2843,7 +2855,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508831&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=478172&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -2857,7 +2873,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6821.28,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -2868,7 +2884,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508832&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=478342&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -2882,7 +2902,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6941.77,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -2893,7 +2913,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508833&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2709022&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -2959,7 +2983,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3986.58,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 56,
@@ -2968,7 +2992,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508827&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=498599&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3007,7 +3035,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3329.44,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -3016,7 +3044,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508844&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=503568&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3030,7 +3062,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3256.5,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -3039,7 +3071,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508829&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=503711&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3053,7 +3089,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3268.13,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -3062,7 +3098,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508845&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=503738&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3076,7 +3116,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3276.97,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -3085,7 +3125,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508846&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3466403&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3099,7 +3143,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3538.52,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 50,
@@ -3108,7 +3152,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508847&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=506303&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "EREBUS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3122,7 +3170,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4867.77,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 69,
@@ -3131,7 +3179,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508836&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=507521&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3145,7 +3197,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2867.4,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 81,
@@ -3154,7 +3206,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508843&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3417321&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "5T WEALTH PARTNERS LP",
+   "applicant_address": "PO BOX 162121 ALTAMONTE SPRINGS FL 32716"
   },
   {
    "county": "marion",
@@ -3168,7 +3224,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4846.87,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 68,
@@ -3177,7 +3233,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508837&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=509191&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3216,7 +3276,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3581.13,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 51,
@@ -3225,7 +3285,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508750&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=512010&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3239,7 +3303,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4794.98,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 68,
@@ -3248,7 +3312,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508838&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=513121&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3262,7 +3330,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3237.49,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 91,
@@ -3271,7 +3339,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508839&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=513296&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3285,7 +3357,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3237.49,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 91,
@@ -3294,7 +3366,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508840&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384555&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3308,7 +3384,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3238.32,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 91,
@@ -3317,7 +3393,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508841&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384563&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3331,7 +3411,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4312.36,
    "assessed_value": 7086.0,
    "bid_to_value_pct": 61,
@@ -3340,7 +3420,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508842&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=513873&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "VINMAS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -3354,7 +3438,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4338.62,
    "assessed_value": 4348.0,
    "bid_to_value_pct": 100,
@@ -3363,7 +3447,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508752&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=566594&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3377,7 +3465,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7207.69,
    "assessed_value": 8697.0,
    "bid_to_value_pct": 83,
@@ -3386,7 +3474,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508753&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=566934&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3400,7 +3492,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4358.02,
    "assessed_value": 4348.0,
    "bid_to_value_pct": 100,
@@ -3411,7 +3503,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508754&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=567345&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3425,7 +3521,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6512.64,
    "assessed_value": 8697.0,
    "bid_to_value_pct": 75,
@@ -3434,7 +3530,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508755&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=567418&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3448,7 +3548,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4293.1,
    "assessed_value": 4348.0,
    "bid_to_value_pct": 99,
@@ -3457,7 +3557,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508756&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=567973&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3471,7 +3575,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5129.96,
    "assessed_value": 4348.0,
    "bid_to_value_pct": 118,
@@ -3482,7 +3586,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508757&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=568210&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3624,7 +3732,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7142.77,
    "assessed_value": 8697.0,
    "bid_to_value_pct": 82,
@@ -3633,7 +3741,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508763&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=569038&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3647,7 +3759,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5509.09,
    "assessed_value": 5798.0,
    "bid_to_value_pct": 95,
@@ -3656,7 +3768,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508764&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=569054&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3670,7 +3786,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7431.49,
    "assessed_value": 8697.0,
    "bid_to_value_pct": 85,
@@ -3679,7 +3795,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508765&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=569402&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3693,7 +3813,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4652.84,
    "assessed_value": 4348.0,
    "bid_to_value_pct": 107,
@@ -3704,7 +3824,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508766&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=569518&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3743,7 +3867,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2207.91,
    "assessed_value": 2124.0,
    "bid_to_value_pct": 104,
@@ -3754,7 +3878,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508768&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3634853&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3768,7 +3896,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3087.97,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 109,
@@ -3779,7 +3907,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508769&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=576255&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3793,7 +3925,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3274.68,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 116,
@@ -3804,7 +3936,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508770&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=576395&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3818,7 +3954,7 @@
    "property_address": "1555 NW 53RD AVE, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3147.26,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -3829,7 +3965,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508771&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=576506&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3843,7 +3983,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3230.66,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 114,
@@ -3854,7 +3994,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508772&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=577031&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3868,7 +4012,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2883.0,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 102,
@@ -3879,7 +4023,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508751&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=577227&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3893,7 +4041,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3167.13,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 112,
@@ -3904,7 +4052,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508773&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=577677&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3918,7 +4070,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3145.71,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -3929,7 +4081,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508774&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2092947&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3943,7 +4099,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3145.71,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -3954,7 +4110,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508775&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=578177&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3968,7 +4128,7 @@
    "property_address": "5810 NW 16TH ST, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3152.9,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -3979,7 +4139,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508776&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=578673&YR=2026&mName=False&mSitus=False",
    "lat": 29.201912,
-   "lng": -82.216028
+   "lng": -82.216028,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -3993,7 +4157,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3133.17,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -4004,7 +4168,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508777&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3133722&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4018,7 +4186,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3133.17,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 111,
@@ -4029,7 +4197,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508778&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3135628&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4043,7 +4215,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3289.08,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 116,
@@ -4054,7 +4226,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508779&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3119321&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4068,7 +4244,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3251.15,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 115,
@@ -4079,7 +4255,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508780&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=578746&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4093,7 +4273,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3251.15,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 115,
@@ -4104,7 +4284,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508781&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=578754&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4118,7 +4302,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34432",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 15781.25,
    "assessed_value": 15730.0,
    "bid_to_value_pct": 100,
@@ -4129,7 +4313,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508783&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=824224&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4143,7 +4331,7 @@
    "property_address": "5231 SE 29TH CT, OCALA, FL- 34480",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 30118.98,
    "assessed_value": 40631.0,
    "bid_to_value_pct": 74,
@@ -4152,7 +4340,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508848&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=726745&YR=2026&mName=False&mSitus=False",
    "lat": 29.134953,
-   "lng": -82.096285
+   "lng": -82.096285,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "RESCHED",
+   "applicant": "BUFFALO BILL LLC",
+   "applicant_address": "1500 HIGHWAY A1A VERO BEACH FL 32963"
   },
   {
    "county": "marion",
@@ -4166,7 +4358,7 @@
    "property_address": "3488 SE 92ND ST, OCALA, FL- 34480",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 20161.96,
    "assessed_value": 72390.0,
    "bid_to_value_pct": 28,
@@ -4175,7 +4367,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508782&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=917214&YR=2026&mName=False&mSitus=False",
    "lat": 29.088498,
-   "lng": -82.088679
+   "lng": -82.088679,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "MIKON FINANCIAL SERVICES INC AND OCEAN BANK",
+   "applicant_address": "780 NW 42ND AVE #204 MIAMI FL 33126"
   },
   {
    "county": "marion",
@@ -4214,7 +4410,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5983.01,
    "assessed_value": 10398.0,
    "bid_to_value_pct": 58,
@@ -4223,7 +4419,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508793&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=967122&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4287,7 +4487,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4393.77,
    "assessed_value": 6149.0,
    "bid_to_value_pct": 71,
@@ -4296,7 +4496,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508784&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=968617&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4310,7 +4514,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4345.58,
    "assessed_value": 6149.0,
    "bid_to_value_pct": 71,
@@ -4319,7 +4523,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508785&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=969214&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4333,7 +4541,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4780.49,
    "assessed_value": 6149.0,
    "bid_to_value_pct": 78,
@@ -4342,7 +4550,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508786&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2104040&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4356,7 +4568,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4880.07,
    "assessed_value": 6149.0,
    "bid_to_value_pct": 79,
@@ -4365,7 +4577,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508796&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1742609&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4379,7 +4595,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4415.76,
    "assessed_value": 6149.0,
    "bid_to_value_pct": 72,
@@ -4388,7 +4604,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508797&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3480465&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4402,7 +4622,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5568.3,
    "assessed_value": 11979.0,
    "bid_to_value_pct": 46,
@@ -4411,7 +4631,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508798&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1642795&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4425,7 +4649,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4856.2,
    "assessed_value": 11751.0,
    "bid_to_value_pct": 41,
@@ -4434,7 +4658,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508787&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=986577&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "VINMAS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4448,7 +4676,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3662.11,
    "assessed_value": 6717.0,
    "bid_to_value_pct": 55,
@@ -4457,7 +4685,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508788&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=986704&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "EREBUS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4471,7 +4703,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2975.33,
    "assessed_value": 4073.0,
    "bid_to_value_pct": 73,
@@ -4480,7 +4712,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508789&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=986933&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "5T WEALTH PARTNERS LP",
+   "applicant_address": "PO BOX 162121 ALTAMONTE SPRINGS FL 32716"
   },
   {
    "county": "marion",
@@ -4494,7 +4730,7 @@
    "property_address": "19090 SE 95TH PL, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2862.35,
    "assessed_value": 3208.0,
    "bid_to_value_pct": 89,
@@ -4503,7 +4739,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508791&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=989801&YR=2026&mName=False&mSitus=False",
    "lat": 29.083509,
-   "lng": -81.833585
+   "lng": -81.833585,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "5T WEALTH PARTNERS LP",
+   "applicant_address": "PO BOX 162121 ALTAMONTE SPRINGS FL 32716"
   },
   {
    "county": "marion",
@@ -4517,7 +4757,7 @@
    "property_address": "NO SITUS, BELLEVIEW, FL- 34420",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4922.85,
    "assessed_value": 10394.0,
    "bid_to_value_pct": 47,
@@ -4526,7 +4766,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508799&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092256&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4540,7 +4784,7 @@
    "property_address": "NO SITUS, BELLEVIEW, FL- 34420",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6362.9,
    "assessed_value": 16239.0,
    "bid_to_value_pct": 39,
@@ -4549,7 +4793,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508800&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092884&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4563,7 +4811,7 @@
    "property_address": "NO SITUS, BELLEVIEW, FL- 34420",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3317.06,
    "assessed_value": 4431.0,
    "bid_to_value_pct": 75,
@@ -4572,7 +4820,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508801&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1093414&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4586,7 +4838,7 @@
    "property_address": "NO SITUS, BELLEVIEW, FL- 34420",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4268.85,
    "assessed_value": 6210.0,
    "bid_to_value_pct": 69,
@@ -4595,7 +4847,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508790&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1094186&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -4609,7 +4865,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6366.06,
    "assessed_value": 11014.0,
    "bid_to_value_pct": 58,
@@ -4618,7 +4874,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508802&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415819&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4632,7 +4892,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6383.94,
    "assessed_value": 11014.0,
    "bid_to_value_pct": 58,
@@ -4641,7 +4901,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508803&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1111463&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4655,7 +4919,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7637.82,
    "assessed_value": 14355.0,
    "bid_to_value_pct": 53,
@@ -4664,7 +4928,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508804&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415886&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4678,7 +4946,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6620.83,
    "assessed_value": 11632.0,
    "bid_to_value_pct": 57,
@@ -4687,7 +4955,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508805&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2415924&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4701,7 +4973,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 8559.48,
    "assessed_value": 16645.0,
    "bid_to_value_pct": 51,
@@ -4710,7 +4982,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508806&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416181&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4724,7 +5000,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6675.27,
    "assessed_value": 11748.0,
    "bid_to_value_pct": 57,
@@ -4733,7 +5009,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508807&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416301&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4747,7 +5027,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6656.37,
    "assessed_value": 11748.0,
    "bid_to_value_pct": 57,
@@ -4756,7 +5036,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508808&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416319&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4770,7 +5054,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6675.27,
    "assessed_value": 11748.0,
    "bid_to_value_pct": 57,
@@ -4779,7 +5063,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508809&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416351&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4793,7 +5081,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6675.27,
    "assessed_value": 11748.0,
    "bid_to_value_pct": 57,
@@ -4802,7 +5090,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508810&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2416386&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4816,7 +5108,7 @@
    "property_address": "NO SITUS, UMATILLA, FL- 32784",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4735.04,
    "assessed_value": 9946.0,
    "bid_to_value_pct": 48,
@@ -4825,7 +5117,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508811&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1679095&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -4865,7 +5161,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 8807.82,
    "assessed_value": 5613.0,
    "bid_to_value_pct": 157,
@@ -4876,7 +5172,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508818&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1641985&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "CERTMAX LLC",
+   "applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243"
   },
   {
    "county": "marion",
@@ -4890,7 +5190,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5628.6,
    "assessed_value": 6015.0,
    "bid_to_value_pct": 94,
@@ -4899,7 +5199,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508812&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1672511&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "CERTMAX LLC",
+   "applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243"
   },
   {
    "county": "marion",
@@ -4938,7 +5242,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4121.79,
    "assessed_value": 1771.0,
    "bid_to_value_pct": 233,
@@ -4949,7 +5253,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508819&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1330289&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "GARY CHOSEWOOD",
+   "applicant_address": "569 MARION OAKS PASS OCALA FL 34473"
   },
   {
    "county": "marion",
@@ -4963,7 +5271,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5471.59,
    "assessed_value": 6720.0,
    "bid_to_value_pct": 81,
@@ -4972,7 +5280,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508814&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1926921&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "CERTMAX LLC",
+   "applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243"
   },
   {
    "county": "marion",
@@ -4986,7 +5298,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6371.64,
    "assessed_value": 6490.0,
    "bid_to_value_pct": 98,
@@ -4995,7 +5307,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508816&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2016949&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "CERTMAX LLC",
+   "applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243"
   },
   {
    "county": "marion",
@@ -5034,7 +5350,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5022.87,
    "assessed_value": 5314.0,
    "bid_to_value_pct": 95,
@@ -5043,7 +5359,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508821&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1467594&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -5057,7 +5377,7 @@
    "property_address": "44 GUAVA PASS DR, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3385.13,
    "assessed_value": 6589.0,
    "bid_to_value_pct": 51,
@@ -5066,7 +5386,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508820&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2514167&YR=2026&mName=False&mSitus=False",
    "lat": 29.049602,
-   "lng": -81.905022
+   "lng": -81.905022,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "VINMAS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "putnam",
@@ -25390,7 +25714,7 @@
    "property_address": "17269 NE 18TH AVE, CITRA, FL- 32113",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 24072.09,
    "assessed_value": 31428.0,
    "bid_to_value_pct": 77,
@@ -25399,7 +25723,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512048&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=52779&YR=2026&mName=False&mSitus=False",
    "lat": 29.401315,
-   "lng": -82.114942
+   "lng": -82.114942,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -25413,7 +25741,7 @@
    "property_address": "1115 NW 44TH ST, OCALA, FL- 34475",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5186.6,
    "assessed_value": 14531.0,
    "bid_to_value_pct": 36,
@@ -25422,7 +25750,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512041&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2376953&YR=2026&mName=False&mSitus=False",
    "lat": 29.232871,
-   "lng": -82.147491
+   "lng": -82.147491,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -25436,7 +25768,7 @@
    "property_address": "4251 SW SHASTA CT, DUNNELLON, FL- 34431",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 90607.02,
    "assessed_value": 133393.0,
    "bid_to_value_pct": 68,
@@ -25445,7 +25777,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512042&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=394416&YR=2026&mName=False&mSitus=False",
    "lat": 29.136967,
-   "lng": -82.502857
+   "lng": -82.502857,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -25459,7 +25795,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6936.32,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -25470,7 +25806,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512043&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=478407&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25510,7 +25850,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7061.87,
    "assessed_value": 5227.0,
    "bid_to_value_pct": 135,
@@ -25521,7 +25861,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512045&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=479128&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25535,7 +25879,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6903.52,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -25546,7 +25890,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512046&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=480215&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25560,7 +25908,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6881.49,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -25571,7 +25919,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512047&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=481017&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25585,7 +25937,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6959.53,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -25596,7 +25948,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512049&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=482412&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25610,7 +25966,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6893.62,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -25621,7 +25977,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512050&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=482447&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25635,7 +25995,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6956.37,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -25646,7 +26006,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512051&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=484725&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25660,7 +26024,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6956.37,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -25671,7 +26035,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512052&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384351&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25685,7 +26053,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6966.28,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -25696,7 +26064,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512053&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384369&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25710,7 +26082,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6824.65,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -25721,7 +26093,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512054&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486167&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25735,7 +26111,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6867.35,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -25746,7 +26122,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512055&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486779&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25760,7 +26140,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6866.15,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -25771,7 +26151,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512056&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487252&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25785,7 +26169,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6802.43,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 192,
@@ -25796,7 +26180,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512057&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487414&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25810,7 +26198,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6837.11,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 241,
@@ -25821,7 +26209,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512058&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487538&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25835,7 +26227,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6923.42,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -25846,7 +26238,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512059&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=488101&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25860,7 +26256,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6875.45,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -25871,7 +26267,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512060&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=488135&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25885,7 +26285,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6873.15,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -25896,7 +26296,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512061&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=488160&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25910,7 +26314,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6597.57,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 233,
@@ -25921,7 +26325,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512062&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3460383&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25935,7 +26343,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6891.68,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -25946,7 +26354,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512063&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=488828&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25960,7 +26372,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6956.37,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -25971,7 +26383,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512064&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2382708&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -25985,7 +26401,7 @@
    "property_address": "14783 SW 21ST PL, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6823.3,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -25996,7 +26412,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512065&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=489166&YR=2026&mName=False&mSitus=False",
    "lat": 29.167689,
-   "lng": -82.363897
+   "lng": -82.363897,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26010,7 +26430,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6770.6,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 239,
@@ -26021,7 +26441,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512066&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490016&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26035,7 +26459,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6585.52,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 232,
@@ -26046,7 +26470,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512067&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490059&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26060,7 +26488,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6639.33,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 234,
@@ -26071,7 +26499,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512068&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490067&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26085,7 +26517,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6965.82,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -26096,7 +26528,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512069&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490105&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26110,7 +26546,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6916.8,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -26121,7 +26557,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512070&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490211&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26135,7 +26575,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6956.75,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -26146,7 +26586,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512071&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1798574&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26160,7 +26604,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6975.91,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -26171,7 +26615,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512072&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490296&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26185,7 +26633,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6919.97,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -26196,7 +26644,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512073&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490458&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26210,7 +26662,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6955.94,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -26221,7 +26673,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512074&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=490806&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26235,7 +26691,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6649.9,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 235,
@@ -26246,7 +26702,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512075&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=491152&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26260,7 +26720,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6956.37,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -26271,7 +26731,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512076&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=491489&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26285,7 +26749,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6760.99,
    "assessed_value": 2835.0,
    "bid_to_value_pct": 238,
@@ -26296,7 +26760,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512077&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=491756&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26310,7 +26778,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3325.5,
    "assessed_value": 2872.0,
    "bid_to_value_pct": 116,
@@ -26321,7 +26789,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512078&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=492728&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26335,7 +26807,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3389.24,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 96,
@@ -26344,7 +26816,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512079&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2682159&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26358,7 +26834,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3349.92,
    "assessed_value": 3194.0,
    "bid_to_value_pct": 105,
@@ -26369,7 +26845,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512080&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386045&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26383,7 +26863,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3261.36,
    "assessed_value": 3194.0,
    "bid_to_value_pct": 102,
@@ -26394,7 +26874,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512081&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2359188&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26408,7 +26892,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3359.82,
    "assessed_value": 3194.0,
    "bid_to_value_pct": 105,
@@ -26419,7 +26903,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512082&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2531703&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26433,7 +26921,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3335.96,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26442,7 +26930,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512083&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=493864&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26456,7 +26948,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3435.5,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26465,7 +26957,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512084&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=493881&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26479,7 +26975,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3357.64,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26488,7 +26984,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512085&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3378032&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26502,7 +27002,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3357.64,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26511,7 +27011,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512086&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=494101&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26525,7 +27029,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3425.19,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26534,7 +27038,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512087&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386118&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26548,7 +27056,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3425.19,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26557,7 +27065,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512088&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=495387&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26571,7 +27083,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3368.08,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26580,7 +27092,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512089&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=495531&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26594,7 +27110,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3271.7,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -26603,7 +27119,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512090&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3489853&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26617,7 +27137,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3347.73,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26626,7 +27146,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512091&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=497240&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26640,7 +27164,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3435.09,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26649,7 +27173,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512092&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=498815&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26663,7 +27191,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3335.42,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26672,7 +27200,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512093&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3512731&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26686,7 +27218,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3393.35,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 96,
@@ -26695,7 +27227,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512094&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384611&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26709,7 +27245,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3392.69,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 96,
@@ -26718,7 +27254,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512095&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384638&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26732,7 +27272,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3425.85,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26741,7 +27281,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512096&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385961&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26755,7 +27299,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3336.63,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26764,7 +27308,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512097&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=499013&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26778,7 +27326,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3359.86,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26787,7 +27335,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512098&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3465849&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26801,7 +27353,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3346.53,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26810,7 +27362,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512099&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2119586&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26824,7 +27380,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3383.45,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26833,7 +27389,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512100&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2384662&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26847,7 +27407,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3368.75,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -26856,7 +27416,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512101&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=499315&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26870,7 +27434,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3435.09,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26879,7 +27443,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512102&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385979&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26893,7 +27461,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3435.09,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26902,7 +27470,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512103&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2385995&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26916,7 +27488,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3435.75,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -26925,7 +27497,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512104&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386002&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26939,7 +27515,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 2895.56,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 82,
@@ -26948,7 +27524,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512105&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=499994&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26962,7 +27542,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3336.63,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -26971,7 +27551,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512106&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=500143&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -26985,7 +27569,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3393.35,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 96,
@@ -26994,7 +27578,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512107&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2216557&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27008,7 +27596,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3436.56,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -27017,7 +27605,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512108&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386029&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27031,7 +27623,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3436.56,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -27040,7 +27632,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512109&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386037&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27054,7 +27650,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3337.03,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -27063,7 +27659,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512110&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3496477&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27077,7 +27677,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3261.39,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -27086,7 +27686,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512111&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3333209&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27100,7 +27704,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3273.02,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -27109,7 +27713,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512112&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=500631&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27123,7 +27731,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3427.85,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -27132,7 +27740,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512113&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=500691&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27146,7 +27758,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3427.07,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -27155,7 +27767,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512114&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384431&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27169,7 +27785,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3437.64,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 97,
@@ -27178,7 +27794,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512115&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384440&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27192,7 +27812,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3292.71,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 93,
@@ -27201,7 +27821,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512116&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3466314&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27215,7 +27839,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3261.57,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -27224,7 +27848,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512117&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=501336&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27238,7 +27866,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3249.92,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -27247,7 +27875,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512118&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=501557&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27261,7 +27893,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3240.01,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 91,
@@ -27270,7 +27902,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512119&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=501727&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27284,7 +27920,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3240.01,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 91,
@@ -27293,7 +27929,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512120&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=501735&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27307,7 +27947,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3282.94,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 93,
@@ -27316,7 +27956,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512121&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=501875&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27330,7 +27974,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3317.74,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 94,
@@ -27339,7 +27983,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512122&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3407610&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27353,7 +28001,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3294.48,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 93,
@@ -27362,7 +28010,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512123&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=502146&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27376,7 +28028,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3367.98,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 95,
@@ -27385,7 +28037,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512124&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=502481&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27399,7 +28055,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3274.92,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 92,
@@ -27408,7 +28064,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512125&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386703&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27422,7 +28082,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3171.92,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 112,
@@ -27433,7 +28093,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512027&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=577316&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27447,7 +28111,7 @@
    "property_address": "1117 NE 8TH AVE, OCALA, FL- 34470",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 12636.4,
    "assessed_value": 49814.0,
    "bid_to_value_pct": 25,
@@ -27456,7 +28120,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512026&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1250501&YR=2026&mName=False&mSitus=False",
    "lat": 29.197605,
-   "lng": -82.129625
+   "lng": -82.129625,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27470,7 +28138,7 @@
    "property_address": "5221 SE 31ST CT, OCALA, FL- 34480",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 10545.64,
    "assessed_value": 46936.0,
    "bid_to_value_pct": 22,
@@ -27479,7 +28147,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512028&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3388364&YR=2026&mName=False&mSitus=False",
    "lat": 29.135192,
-   "lng": -82.092589
+   "lng": -82.092589,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27493,7 +28165,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34432",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6478.57,
    "assessed_value": 9388.0,
    "bid_to_value_pct": 69,
@@ -27502,7 +28174,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512033&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1007585&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27516,7 +28192,7 @@
    "property_address": "10565 SE 131ST PL, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 16441.55,
    "assessed_value": 24557.0,
    "bid_to_value_pct": 67,
@@ -27525,7 +28201,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512029&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1107059&YR=2026&mName=False&mSitus=False",
    "lat": 29.031037,
-   "lng": -81.977544
+   "lng": -81.977544,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27539,7 +28219,7 @@
    "property_address": "14472 SE 91ST CT, SUMMERFIELD, FL- 34491",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 12533.47,
    "assessed_value": 56979.0,
    "bid_to_value_pct": 22,
@@ -27548,7 +28228,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512030&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3709535&YR=2026&mName=False&mSitus=False",
    "lat": 29.011133,
-   "lng": -82.001709
+   "lng": -82.001709,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27587,7 +28271,7 @@
    "property_address": "16610 SE 104TH AVENUE RD, SUMMERFIELD, FL- 34491",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 12773.26,
    "assessed_value": 57289.0,
    "bid_to_value_pct": 22,
@@ -27596,7 +28280,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512032&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1152232&YR=2026&mName=False&mSitus=False",
    "lat": 28.980922,
-   "lng": -81.980792
+   "lng": -81.980792,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27610,7 +28298,7 @@
    "property_address": "15671 SE 203RD AVE, UMATILLA, FL- 32784",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6493.34,
    "assessed_value": 6796.0,
    "bid_to_value_pct": 96,
@@ -27619,7 +28307,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512034&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1194521&YR=2026&mName=False&mSitus=False",
    "lat": 28.994501,
-   "lng": -81.818814
+   "lng": -81.818814,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27633,7 +28325,7 @@
    "property_address": "8041 SW 115TH LOOP, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 21867.96,
    "assessed_value": 132130.0,
    "bid_to_value_pct": 17,
@@ -27642,7 +28334,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512035&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2703822&YR=2026&mName=False&mSitus=False",
    "lat": 29.05497,
-   "lng": -82.253132
+   "lng": -82.253132,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FIG 20 LLC",
+   "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -27656,7 +28352,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7408.0,
    "assessed_value": 4670.0,
    "bid_to_value_pct": 159,
@@ -27667,7 +28363,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512040&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2579170&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27681,7 +28381,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34473",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 8611.16,
    "assessed_value": 21300.0,
    "bid_to_value_pct": 40,
@@ -27690,7 +28390,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512036&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2580496&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "PETER J KLAERNER",
+   "applicant_address": "2680 LAS MERCEDES CIRCLE CORONA CA 92879"
   },
   {
    "county": "marion",
@@ -27704,7 +28408,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7922.18,
    "assessed_value": 8820.0,
    "bid_to_value_pct": 90,
@@ -27713,7 +28417,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512037&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1356300&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "BEAMIF A LLC",
+   "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -27727,7 +28435,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5820.43,
    "assessed_value": 4831.0,
    "bid_to_value_pct": 120,
@@ -27738,7 +28446,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512038&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1465923&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -27752,7 +28464,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5756.48,
    "assessed_value": 4831.0,
    "bid_to_value_pct": 119,
@@ -27763,7 +28475,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1512039&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1466288&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "orange",
@@ -40848,7 +41564,7 @@
    "property_address": "14510 NW 27TH AVE, CITRA, FL- 32113",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 19005.77,
    "assessed_value": 69694.0,
    "bid_to_value_pct": 27,
@@ -40857,7 +41573,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513197&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=105848&YR=2026&mName=False&mSitus=False",
    "lat": 29.359848,
-   "lng": -82.172557
+   "lng": -82.172557,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -40871,7 +41591,7 @@
    "property_address": "6650 E HWY 316, CITRA, FL- 32113",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 26582.77,
    "assessed_value": 113240.0,
    "bid_to_value_pct": 23,
@@ -40880,7 +41600,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513203&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=170089&YR=2026&mName=False&mSitus=False",
    "lat": 29.368704,
-   "lng": -82.044617
+   "lng": -82.044617,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "FCAP AS CUST FOR FTCFIMT LLC",
+   "applicant_address": "FL TAXCERT FUND I MUNI TAXLLC P O BOX 12222 NEWARK NJ 07101-3411"
   },
   {
    "county": "marion",
@@ -40894,7 +41618,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34432",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 19803.23,
    "assessed_value": 22704.0,
    "bid_to_value_pct": 87,
@@ -40903,7 +41627,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513204&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2254939&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -40917,7 +41645,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34431",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4453.01,
    "assessed_value": 6844.0,
    "bid_to_value_pct": 65,
@@ -40926,7 +41654,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513205&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=436739&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -40940,7 +41672,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34431",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 5533.1,
    "assessed_value": 6844.0,
    "bid_to_value_pct": 81,
@@ -40949,7 +41681,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513206&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=457647&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -40963,7 +41699,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34431",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6169.1,
    "assessed_value": 13690.0,
    "bid_to_value_pct": 45,
@@ -40972,7 +41708,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513207&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=462306&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -40986,7 +41726,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7011.12,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 198,
@@ -40997,7 +41737,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513208&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=478687&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41011,7 +41755,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7026.24,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 198,
@@ -41022,7 +41766,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513209&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=479098&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41036,7 +41784,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6935.22,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 196,
@@ -41047,7 +41795,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513210&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3515838&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41061,7 +41813,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6981.0,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41072,7 +41824,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513211&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=479314&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41086,7 +41842,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 7037.31,
    "assessed_value": 5227.0,
    "bid_to_value_pct": 135,
@@ -41097,7 +41853,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513212&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=479993&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41111,7 +41871,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6879.6,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41122,7 +41882,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513213&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=480100&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41136,7 +41900,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6901.4,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41147,7 +41911,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513214&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=482901&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41161,7 +41929,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6900.95,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41172,7 +41940,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513215&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2382279&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41186,7 +41958,7 @@
    "property_address": "14525 SW 21ST PL, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6846.25,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41197,7 +41969,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513216&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=483036&YR=2026&mName=False&mSitus=False",
    "lat": 29.167693,
-   "lng": -82.360875
+   "lng": -82.360875,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41211,7 +41987,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6966.01,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41222,7 +41998,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513217&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=483222&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41236,7 +42016,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6922.31,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41247,7 +42027,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513218&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=483346&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41261,7 +42045,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6968.48,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41272,7 +42056,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513219&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=483486&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41286,7 +42074,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6968.48,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41297,7 +42085,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513220&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384334&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41311,7 +42103,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6836.78,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41322,7 +42114,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513221&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=483966&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41336,7 +42132,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6845.66,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41347,7 +42143,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513222&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1726751&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41361,7 +42161,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6977.56,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41372,7 +42172,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513223&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1959136&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41386,7 +42190,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6965.82,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 197,
@@ -41397,7 +42201,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513224&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=484261&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41411,7 +42219,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6888.62,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41422,7 +42230,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513225&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=484491&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41436,7 +42248,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6890.41,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41447,7 +42259,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513226&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=484504&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41461,7 +42277,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6911.79,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41472,7 +42288,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513227&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=484865&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41512,7 +42332,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6834.94,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41523,7 +42343,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513229&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=485241&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41537,7 +42361,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6878.46,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41548,7 +42372,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513230&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=485471&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41562,7 +42390,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6823.44,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41573,7 +42401,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513231&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486086&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41587,7 +42419,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6899.48,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41598,7 +42430,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513232&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486159&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41612,7 +42448,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6823.44,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41623,7 +42459,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513233&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486213&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41637,7 +42477,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6827.78,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41648,7 +42488,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513234&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486752&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41662,7 +42506,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6867.35,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41673,7 +42517,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513235&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=486876&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41687,7 +42535,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6878.99,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41698,7 +42546,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513236&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487074&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41712,7 +42564,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6898.43,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 195,
@@ -41723,7 +42575,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513237&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487236&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41737,7 +42593,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6823.63,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 193,
@@ -41748,7 +42604,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513238&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487309&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41762,7 +42622,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34481",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6866.72,
    "assessed_value": 3543.0,
    "bid_to_value_pct": 194,
@@ -41773,7 +42633,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513239&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=487384&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41787,7 +42651,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4418.04,
    "assessed_value": 5656.0,
    "bid_to_value_pct": 78,
@@ -41796,7 +42660,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513192&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=577197&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "EREBUS HOLDINGS LLC",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -41810,7 +42678,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3325.02,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 117,
@@ -41821,7 +42689,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513193&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=579912&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "PALLUM 401K PLAN",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -41835,7 +42707,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34482",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3323.36,
    "assessed_value": 2830.0,
    "bid_to_value_pct": 117,
@@ -41846,7 +42718,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513194&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=579939&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "PALLUM 401K PLAN",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
@@ -41860,7 +42736,7 @@
    "property_address": "NO SITUS, DUNNELLON, FL- 34432",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6255.51,
    "assessed_value": 7983.0,
    "bid_to_value_pct": 78,
@@ -41869,7 +42745,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513195&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1021847&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41883,7 +42763,7 @@
    "property_address": "12351 SE 106TH AVE, BELLEVIEW, FL- 34420",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 4907.81,
    "assessed_value": 10394.0,
    "bid_to_value_pct": 47,
@@ -41892,7 +42772,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513196&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1092230&YR=2026&mName=False&mSitus=False",
    "lat": 29.042382,
-   "lng": -81.97685
+   "lng": -81.97685,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41906,7 +42790,7 @@
    "property_address": "314 OAK TRACK CRSE, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 24398.64,
    "assessed_value": 92294.0,
    "bid_to_value_pct": 26,
@@ -41915,7 +42799,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513198&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2047224&YR=2026&mName=False&mSitus=False",
    "lat": 29.082481,
-   "lng": -81.980487
+   "lng": -81.980487,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "MIKON FINANCIAL SERVICES INC AND OCEAN BANK",
+   "applicant_address": "780 NW 42ND AVE #204 MIAMI FL 33126"
   },
   {
    "county": "marion",
@@ -41929,7 +42817,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6510.18,
    "assessed_value": 5845.0,
    "bid_to_value_pct": 111,
@@ -41940,7 +42828,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513199&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1465621&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41954,7 +42846,7 @@
    "property_address": "NO SITUS, OCKLAWAHA, FL- 32179",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3561.3,
    "assessed_value": 4027.0,
    "bid_to_value_pct": 88,
@@ -41963,7 +42855,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513202&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1473977&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -41977,7 +42873,7 @@
    "property_address": "NO SITUS, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6586.52,
    "assessed_value": 4716.0,
    "bid_to_value_pct": 140,
@@ -41988,7 +42884,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513200&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=1505054&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "marion",
@@ -42002,7 +42902,7 @@
    "property_address": "207 OAK LANE RUN, OCALA, FL- 34472",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 6045.75,
    "assessed_value": 4716.0,
    "bid_to_value_pct": 128,
@@ -42013,7 +42913,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1513201&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2362855&YR=2026&mName=False&mSitus=False",
    "lat": 29.090132,
-   "lng": -81.971916
+   "lng": -81.971916,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "READYSALE",
+   "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+   "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407"
   },
   {
    "county": "palmbeach",
