@@ -163,7 +163,7 @@ def diagnose_marion_clerk() -> None:
     print(f"  portal: {portal}")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = p.chromium.launch(args=["--disable-http2"])
         page = browser.new_page()
         try:
             print("  step: goto portal...")
