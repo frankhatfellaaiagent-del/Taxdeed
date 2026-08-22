@@ -301,7 +301,10 @@ class _BrowserPortals:
 
             from .clerk_browser import NewVisionResolver
             self._pw = sync_playwright().start()
-            self._browser = self._pw.chromium.launch()
+            # Marion's portal errors on its search navigation over HTTP/2
+            # (net::ERR_HTTP2_PROTOCOL_ERROR, reproducible every time) —
+            # force HTTP/1.1 so that request goes through.
+            self._browser = self._pw.chromium.launch(args=["--disable-http2"])
             page = self._browser.new_page()
             self._resolver = NewVisionResolver(page)
         except Exception as exc:                          # noqa: BLE001
