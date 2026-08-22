@@ -150,6 +150,7 @@ class NewVisionResolver:
                 log.debug("newvision search failed (%s=%s): %s", field, value, exc)
                 self._loaded = None                    # force a clean reload next time
                 continue
+            log.debug("newvision search submitted (%s=%s), now at %s", field, value, self.page.url)
 
             # A results grid appears before the document view; open the first row.
             # It can render below the fold (Marion's grid does), so Playwright's
@@ -162,19 +163,24 @@ class NewVisionResolver:
                     row.scroll_into_view_if_needed(timeout=5000)
                     row.click(timeout=5000)
                     self.page.wait_for_load_state("networkidle", timeout=self.timeout)
-            except Exception:                          # noqa: BLE001
-                pass
+                    log.debug("newvision result row clicked, now at %s", self.page.url)
+                else:
+                    log.debug("newvision no result row found after search (%s=%s)", field, value)
+            except Exception as exc:                   # noqa: BLE001
+                log.debug("newvision result row click failed (%s=%s): %s", field, value, exc)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
             # Confirm we actually landed on this parcel's record before trusting it.
             hay = re.sub(r"[^A-Za-z0-9]", "", html).upper()
-            if re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay and (
-                    parsed.get("deed_status") or parsed.get("case_docs")):
+            value_present = re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay
+            if value_present and (parsed.get("deed_status") or parsed.get("case_docs")):
                 parsed["clerk_case_url"] = self.page.url
                 parsed["clerk_platform"] = "newvision"
                 parsed["clerk_search_value"] = value
                 self._loaded = None                    # reset for the next record
                 return parsed
+            log.debug("newvision unresolved (%s=%s): value_on_page=%s parsed_keys=%s",
+                      field, value, value_present, list(parsed.keys()))
             self._loaded = None
         return {}
