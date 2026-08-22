@@ -168,14 +168,22 @@ class NewVisionResolver:
                         'table tr:has(a), tr[onclick], a:has-text("View")').first
                 if row.count():
                     row.scroll_into_view_if_needed(timeout=5000)
-                    # A single click only selects the ag-Grid row (as seen on
-                    # 5/5 sample records: correct row confirmed on page, but
-                    # the Deed Status/Date Received panel stayed empty every
-                    # time) — ag-Grid commonly needs a double-click to open a
-                    # row's full detail view.
-                    row.dblclick(timeout=5000)
+                    # Neither a single nor a double click on the value cell
+                    # populates Deed Status/Date Received (confirmed on 5/5
+                    # sample records, byte-identical empty result every time)
+                    # — dump every cell in this row (class + text) once to see
+                    # if there's a distinct "view/select" action cell/icon we
+                    # should be clicking instead of the plain value cell.
+                    try:
+                        cells_info = row.evaluate("""el => [...el.querySelectorAll('.ag-cell')].map(
+                            c => ({cls: c.className, text: c.textContent.trim().slice(0, 60),
+                                   html: c.innerHTML.slice(0, 150)}))""")
+                        print(f"[newvision] row cells: {cells_info}", flush=True)
+                    except Exception as exc:                # noqa: BLE001
+                        print(f"[newvision] row cell dump failed: {exc}", flush=True)
+                    row.click(timeout=5000)
                     self.page.wait_for_load_state("networkidle", timeout=self.timeout)
-                    print(f"[newvision] result row double-clicked, now at {self.page.url}", flush=True)
+                    print(f"[newvision] result row clicked, now at {self.page.url}", flush=True)
                 else:
                     print(f"[newvision] no result row found after search ({field}={value})", flush=True)
             except Exception as exc:                   # noqa: BLE001
