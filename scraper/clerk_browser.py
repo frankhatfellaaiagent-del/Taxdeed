@@ -177,25 +177,10 @@ class NewVisionResolver:
                 print(f"[newvision] result row click failed ({field}={value}): "
                       f"{exc.__class__.__name__}: {exc}", flush=True)
 
-            # The click only selects the row; Angular fills the detail panel's
-            # ng-binding cells (Deed Status, Date Received, ...) asynchronously
-            # afterward, so networkidle alone isn't enough — the labels can be
-            # present with their value cells still empty. Wait for the Deed
-            # Status binding specifically to have real content.
-            try:
-                self.page.wait_for_function(
-                    """() => {
-                        const label = [...document.querySelectorAll('td')].find(
-                            td => td.textContent.trim().startsWith('Deed Status'));
-                        if (!label) return false;
-                        const sib = label.nextElementSibling;
-                        return !!(sib && sib.textContent.trim());
-                    }""",
-                    timeout=8000,
-                )
-            except Exception as exc:                   # noqa: BLE001
-                print(f"[newvision] deed-status binding wait timed out ({field}={value}): "
-                      f"{exc.__class__.__name__}: {exc}", flush=True)
+            # The click only selects the row; give Angular a moment to fill the
+            # detail panel's ng-binding cells afterward, since networkidle
+            # alone doesn't guarantee the digest cycle has finished.
+            self.page.wait_for_timeout(800)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
@@ -229,5 +214,21 @@ class NewVisionResolver:
             else:
                 print("[newvision] none of the expected case-detail label strings "
                       "appear anywhere in the page HTML", flush=True)
+            # _doc_rows() (scraper/clerk.py) only looks at <a href="..."> tags.
+            # The "513 Form" link we found earlier used ng-click with no href
+            # at all (Angular's usual pattern) — if Marion's real document
+            # links are the same, case_docs can never populate here regardless
+            # of what the record's actual status is. Count both link styles to
+            # tell a genuinely-empty case apart from a parser gap.
+            href_count = len(re.findall(r"<a\b[^>]*\bhref\s*=", html, re.I))
+            ngclick_count = len(re.findall(r"<a\b[^>]*\bng-click\s*=", html, re.I))
+            print(f"[newvision] link styles on page: <a href>={href_count} "
+                  f"<a ng-click>={ngclick_count}", flush=True)
+            m = re.search(r"Date Received:</td>\s*<td[^>]*>([^<]*)</td>", html)
+            if m:
+                print(f"[newvision] Date Received value: {m.group(1)!r} "
+                      "(non-empty here but deed_status empty would mean this "
+                      "case genuinely has no deed status yet, not a parser bug)",
+                      flush=True)
             self._loaded = None
         return {}
