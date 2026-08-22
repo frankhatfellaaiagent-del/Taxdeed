@@ -212,7 +212,14 @@ def diagnose_marion_clerk() -> None:
                         continue
                     box.fill("")
                     box.fill(value)
-                    nv._submit(box)
+                    try:
+                        near_result = nv._submit_near(box)
+                        print(f"      _submit_near(box) returned: {near_result}")
+                    except Exception as exc:                  # noqa: BLE001
+                        print(f"      _submit_near(box) raised: {exc.__class__.__name__}: {exc}")
+                        near_result = None
+                    if not near_result:
+                        nv._submit(box)
                     try:
                         page2.wait_for_load_state("networkidle", timeout=nv.timeout)
                     except Exception as exc:                  # noqa: BLE001
