@@ -157,8 +157,9 @@ class NewVisionResolver:
             # actionability check sees it as present but not visible until
             # scrolled into view.
             try:
-                row = self.page.locator(
-                    'table tr:has(a), tr[onclick], a:has-text("View")').first
+                candidates = self.page.locator(
+                    'table tr:has(a), tr[onclick], a:has-text("View")')
+                row = candidates.first
                 if row.count():
                     row.scroll_into_view_if_needed(timeout=5000)
                     row.click(timeout=5000)
@@ -167,7 +168,17 @@ class NewVisionResolver:
                 else:
                     print(f"[newvision] no result row found after search ({field}={value})", flush=True)
             except Exception as exc:                   # noqa: BLE001
-                print(f"[newvision] result row click failed ({field}={value}): {exc.__class__.__name__}: {exc}", flush=True)
+                try:
+                    total = candidates.count()
+                    outer = row.evaluate("el => el.outerHTML")[:400]
+                    cls = row.evaluate("el => el.className")
+                    visible = row.is_visible()
+                except Exception as exc2:              # noqa: BLE001
+                    total = outer = cls = visible = None
+                    print(f"[newvision] (row introspection also failed: {exc2})", flush=True)
+                print(f"[newvision] result row click failed ({field}={value}): "
+                      f"{exc.__class__.__name__}: {exc}  matches={total} visible={visible} "
+                      f"class={cls!r} html={outer!r}", flush=True)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
