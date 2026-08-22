@@ -15,12 +15,9 @@ installed in CI.
 
 from __future__ import annotations
 
-import logging
 import re
 
 from .clerk import parse_case_page
-
-log = logging.getLogger(__name__)
 
 # Search inputs on these portals are labeled by what they hold; try the most
 # specific identifier first so we land on one case instead of a list.
@@ -57,7 +54,7 @@ class NewVisionResolver:
             self._loaded = portal
             return True
         except Exception as exc:                       # noqa: BLE001 - portal may be down
-            log.debug("newvision portal unreachable %s: %s", portal, exc)
+            print(f"[newvision] portal unreachable {portal}: {exc}", flush=True)
             return False
 
     def _find_input(self, keywords: list[str]):
@@ -133,16 +130,16 @@ class NewVisionResolver:
         if not portal or not self._open_portal(portal):
             return {}
 
-        log.debug("newvision portal ready: %s", portal)
+        print(f"[newvision] portal ready: {portal}", flush=True)
         for field, keywords in SEARCH_FIELDS:
             value = str(rec.get(field) or rec.get("case_number") or "").strip()
             if not value:
-                log.debug("newvision field=%s: record has no value, skipped", field)
+                print(f"[newvision] field={field}: record has no value, skipped", flush=True)
                 continue
             self._select_search_tab(field)
             box = self._find_input(keywords)
             if box is None:
-                log.debug("newvision field=%s value=%s: no fillable input found", field, value)
+                print(f"[newvision] field={field} value={value}: no fillable input found", flush=True)
                 continue
             try:
                 box.fill("")
@@ -150,10 +147,10 @@ class NewVisionResolver:
                 self._submit(box)
                 self.page.wait_for_load_state("networkidle", timeout=self.timeout)
             except Exception as exc:                   # noqa: BLE001
-                log.debug("newvision search failed (%s=%s): %s", field, value, exc)
+                print(f"[newvision] search failed ({field}={value}): {exc.__class__.__name__}: {exc}", flush=True)
                 self._loaded = None                    # force a clean reload next time
                 continue
-            log.debug("newvision search submitted (%s=%s), now at %s", field, value, self.page.url)
+            print(f"[newvision] search submitted ({field}={value}), now at {self.page.url}", flush=True)
 
             # A results grid appears before the document view; open the first row.
             # It can render below the fold (Marion's grid does), so Playwright's
@@ -166,24 +163,26 @@ class NewVisionResolver:
                     row.scroll_into_view_if_needed(timeout=5000)
                     row.click(timeout=5000)
                     self.page.wait_for_load_state("networkidle", timeout=self.timeout)
-                    log.debug("newvision result row clicked, now at %s", self.page.url)
+                    print(f"[newvision] result row clicked, now at {self.page.url}", flush=True)
                 else:
-                    log.debug("newvision no result row found after search (%s=%s)", field, value)
+                    print(f"[newvision] no result row found after search ({field}={value})", flush=True)
             except Exception as exc:                   # noqa: BLE001
-                log.debug("newvision result row click failed (%s=%s): %s", field, value, exc)
+                print(f"[newvision] result row click failed ({field}={value}): {exc.__class__.__name__}: {exc}", flush=True)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
             # Confirm we actually landed on this parcel's record before trusting it.
             hay = re.sub(r"[^A-Za-z0-9]", "", html).upper()
             value_present = re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay
+            print(f"[newvision] page content: {len(html)} bytes, value_on_page={value_present}, "
+                  f"parsed_keys={list(parsed.keys())}", flush=True)
             if value_present and (parsed.get("deed_status") or parsed.get("case_docs")):
                 parsed["clerk_case_url"] = self.page.url
                 parsed["clerk_platform"] = "newvision"
                 parsed["clerk_search_value"] = value
                 self._loaded = None                    # reset for the next record
                 return parsed
-            log.debug("newvision unresolved (%s=%s): value_on_page=%s parsed_keys=%s",
-                      field, value, value_present, list(parsed.keys()))
+            print(f"[newvision] unresolved ({field}={value}): value_on_page={value_present} "
+                  f"parsed_keys={list(parsed.keys())}", flush=True)
             self._loaded = None
         return {}
