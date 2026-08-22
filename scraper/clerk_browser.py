@@ -152,14 +152,20 @@ class NewVisionResolver:
                 continue
             print(f"[newvision] search submitted ({field}={value}), now at {self.page.url}", flush=True)
 
-            # A results grid appears before the document view; open the first row.
-            # It can render below the fold (Marion's grid does), so Playwright's
-            # actionability check sees it as present but not visible until
-            # scrolled into view.
+            # A results grid appears before the document view; open the row that
+            # holds this search's value. Marion's grid is an ag-Grid virtual
+            # table (div.ag-row / div.ag-cell), not an HTML <table> — a plain
+            # table/tr selector can silently match an unrelated element
+            # elsewhere in this single-page app instead of a real result, so
+            # look for the searched value itself first and only fall back to a
+            # generic clickable-row selector for portals that use a real table.
             try:
-                candidates = self.page.locator(
-                    'table tr:has(a), tr[onclick], a:has-text("View")')
-                row = candidates.first
+                cell = self.page.locator(".ag-cell", has_text=value).first
+                if cell.count():
+                    row = cell.locator("xpath=ancestor::div[contains(@class,'ag-row')][1]")
+                else:
+                    row = self.page.locator(
+                        'table tr:has(a), tr[onclick], a:has-text("View")').first
                 if row.count():
                     row.scroll_into_view_if_needed(timeout=5000)
                     row.click(timeout=5000)
@@ -168,39 +174,8 @@ class NewVisionResolver:
                 else:
                     print(f"[newvision] no result row found after search ({field}={value})", flush=True)
             except Exception as exc:                   # noqa: BLE001
-                try:
-                    total = candidates.count()
-                    outer = row.evaluate("el => el.outerHTML")[:400]
-                    cls = row.evaluate("el => el.className")
-                    visible = row.is_visible()
-                except Exception as exc2:              # noqa: BLE001
-                    total = outer = cls = visible = None
-                    print(f"[newvision] (row introspection also failed: {exc2})", flush=True)
                 print(f"[newvision] result row click failed ({field}={value}): "
-                      f"{exc.__class__.__name__}: {exc}  matches={total} visible={visible} "
-                      f"class={cls!r} html={outer!r}", flush=True)
-                # The generic clickable-row selector above can match an unrelated
-                # element elsewhere in this single-page app (e.g. a permanently
-                # hidden "513 Form" link) instead of the real results grid.
-                # Locate the actual result by searching for the value itself and
-                # walking up its ancestor chain to see the grid's real markup.
-                try:
-                    hits = self.page.get_by_text(value, exact=False)
-                    hit_count = hits.count()
-                    chain = hits.first.evaluate("""el => {
-                        const out = [];
-                        let node = el;
-                        for (let i = 0; i < 6 && node; i++) {
-                            out.push(node.tagName + (node.className ? '.' + node.className : '') +
-                                      (node.id ? '#' + node.id : ''));
-                            node = node.parentElement;
-                        }
-                        return out;
-                    }""")
-                    print(f"[newvision] value {value!r} found in {hit_count} element(s); "
-                          f"first match's ancestor chain (self..6 levels up): {chain}", flush=True)
-                except Exception as exc3:              # noqa: BLE001
-                    print(f"[newvision] value-based lookup also failed: {exc3}", flush=True)
+                      f"{exc.__class__.__name__}: {exc}", flush=True)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
