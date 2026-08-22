@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax Deed Radar</title>
+<meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
+<link rel="stylesheet" href="ds/styles.css">
+<style>
+html,body{margin:0;height:100%}
+@media (min-width:901px){html,body{overflow:hidden}}
+a{color:var(--color-accent)}a:hover{color:var(--color-accent-700)}
+.ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
+.ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
+.nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
+.nav-btn:hover{background:var(--color-accent-100)}
+.nav-btn.active{background:var(--color-accent);color:var(--color-bg);border-color:var(--color-accent)}
+.nav-btn .dot{width:6px;height:6px;flex:none;background:transparent;border:1px solid currentColor}
+.nav-btn.active .dot{background:var(--color-bg)}
+.seg3{flex:1;padding:8px 4px;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.03em;border:none;cursor:pointer;background:transparent;color:var(--color-text)}
+.seg3.on{background:var(--color-accent);color:var(--color-bg)}
+.pillbtn{font-family:var(--font-body);font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--color-divider);background:transparent;color:var(--color-text)}
+.pillbtn.on{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-bg)}
+.mono{font-family:ui-monospace,Menlo,monospace}
+tr.rowlink{cursor:pointer}
+tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
+#load-note{padding:60px 0;text-align:center}
+@media (max-width:900px){
+  #frame{flex-direction:column!important;height:auto!important}
+  aside{width:auto!important;border-right:none!important;border-bottom:1px solid var(--color-divider)}
+  #scroller{overflow:visible!important}
+  header{flex-wrap:wrap}
+  .detail-grid{grid-template-columns:1fr!important}
+  .stats-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+#login-overlay{display:grid}
+/* [hidden] must always win — several component classes set their own display */
+[hidden]{display:none!important}
+.tablewrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<div id="frame" style="display:flex;height:100vh;font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
+
+<aside style="width:216px;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--color-divider);padding:20px 14px;gap:4px">
+  <div style="margin-bottom:22px;padding:0 8px">
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED RADAR</div>
+    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)" id="brand-sub">Florida</div>
+  </div>
+  <nav id="nav" style="display:flex;flex-direction:column;gap:4px"></nav>
+  <div style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next data refresh</div>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
+    <div class="text-muted" id="next-run-sub">Automatic &middot; weekly</div>
+  </div>
+  <div id="account-box" hidden style="padding:10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5"></div>
+</aside>
+
+<main style="flex:1;min-width:0;display:flex;flex-direction:column">
+  <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
+    <input class="input" id="q" placeholder="Search parcel, address, case&hellip;" style="max-width:320px">
+    <span style="margin-left:auto;font-size:12px" class="text-muted" id="last-scrape">loading&hellip;</span>
+    <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export CSV</button>
+    <button class="btn btn-primary" id="btn-refresh-admin" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Trigger refresh</button>
+  </header>
+
+  <div id="scroller" style="flex:1;overflow-y:auto;padding:26px 28px 48px">
+    <div id="load-note"><span class="text-muted">Loading live auction data&hellip;</span></div>
+    <section id="scr-dashboard" hidden></section>
+    <section id="scr-detail" hidden></section>
+    <section id="scr-lists" hidden></section>
+    <section id="scr-listdetail" hidden></section>
+    <section id="scr-buybox" hidden></section>
+    <section id="scr-settings" hidden></section>
+  </div>
+</main>
+</div>
+
+<div id="login-overlay" hidden style="position:fixed;inset:0;z-index:60;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)">
+  <form id="login-form" class="blueprint" style="width:min(360px,100%);background:var(--color-bg);padding:24px 26px">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:2px">Sign in</div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Your lists, notes and positions follow you to any device.</div>
+    <div class="field" style="margin-bottom:12px"><label>Email</label>
+      <input class="input" id="login-email" type="email" autocomplete="username" required></div>
+    <div class="field" style="margin-bottom:6px"><label>Password</label>
+      <input class="input" id="login-pass" type="password" autocomplete="current-password" required></div>
+    <div id="login-error" style="font-size:12.5px;color:var(--color-accent-800);min-height:18px;margin-bottom:8px"></div>
+    <button class="btn btn-primary" type="submit" id="login-submit" style="width:100%">Sign in</button>
+    <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:12.5px">
+      <button class="btn btn-ghost" type="button" id="login-forgot" style="font-size:12.5px;padding:2px 4px">Forgot password?</button>
+      <button class="btn btn-ghost" type="button" id="login-cancel" style="font-size:12.5px;padding:2px 4px">Cancel</button>
+    </div>
+    <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up &mdash; accounts are set up by your workspace admin.</div>
+  </form>
+</div>
+
+<script>
+/* Florida tax deed dashboard. Industry design system; data comes from the
+   platform's committed feed (docs/DATA_FEED.md). Positions/lists/settings persist in this
+   browser's localStorage until a login backend exists. */
+"use strict";
+
+const FEED_URLS = [
+  "./data/exports/master_list.json",
+  "https://raw.githubusercontent.com/frankhatfellaaiagent-del/Taxdeed/main/data/exports/master_list.json",
+];
+const REPO = "frankhatfellaaiagent-del/Taxdeed";
+// Team login + cross-device sync (Supabase Auth + Postgres + Realtime). The URL
+// and publishable key are public by design; security lives in the database's
+// row-level-security policies and in closed signup (accounts are created by the
+// operator, never self-service). Empty URL = the dashboard runs local-only.
+const SUPABASE_URL = "https://refjpdposfqlihsfbrri.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_7oPO41UqZrDS6dlpWwHwnA_up4VPiGR";
+const SYNC_ON = /^https:\/\//.test(SUPABASE_URL);
+const SUPABASE_SDK = "https://esm.sh/@supabase/supabase-js@2";
+// The one truth about the refresh schedule — every screen derives from these.
+// Keep in sync with the cron in the scraper workflow (0 8 * * 1 UTC).
+const SCHEDULE_UTC = { day: 1, hour: 8 };            // Monday 08:00 UTC = 4:00 AM ET
+const SCHEDULE_TEXT = "Monday at 4:00 AM ET";
+// Operators only — never rendered for customers (see isAdmin()).
+const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scrape.yml`;
+const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
+// Product name (one constant — swaps everywhere when the real name is picked)
+// and where account/billing requests go while billing is handled by hand.
+const BRAND = "Tax Deed Radar";
+const SUPPORT_EMAIL = "frankhatfellaaiagent@gmail.com";
+// The customer's plan as shown in Settings. Per-customer billing state will
+// come from the account record once self-serve billing exists; until then this
+// describes the standard subscription rather than inventing a billing date.
+const PLAN = {
+  name: "Standard", status: "active", price: "$197 / month",
+  note: "Includes every covered Florida county, the weekly refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
+};
+// ---------- Florida time ----------
+// Auctions are Florida events, so every date the app reasons about or prints
+// runs on America/New_York — never the device's clock. A laptop set to UTC or
+// Pacific must still agree on what "today" is, and DST is handled for us.
+const ET_ZONE = "America/New_York";
+const ET_YMD = new Intl.DateTimeFormat("en-CA", { timeZone: ET_ZONE, year: "numeric", month: "2-digit", day: "2-digit" });
+const ET_STAMP = new Intl.DateTimeFormat("en-US", { timeZone: ET_ZONE, dateStyle: "medium", timeStyle: "short" });
+const ET_FULL = new Intl.DateTimeFormat("en-US", { timeZone: ET_ZONE, weekday: "long", month: "short", day: "numeric", year: "numeric" });
+// A calendar day as a plain integer, so comparisons never touch clocks/offsets.
+const dayNum = (y, m, d) => Math.round(Date.UTC(y, m - 1, d) / 864e5);
+function etToday() {
+  const [y, m, d] = ET_YMD.format(new Date()).split("-").map(Number);
+  return dayNum(y, m, d);
+}
+// Records carry sale_date as MM/DD/YYYY parsed to a local midnight Date; read
+// its calendar parts (not its instant) so it compares cleanly against etToday.
+const saleDay = (p) => p.saleDate
+  ? dayNum(p.saleDate.getFullYear(), p.saleDate.getMonth() + 1, p.saleDate.getDate()) : null;
+// Days remaining in the current ET week (through Sunday).
+function etDaysLeftInWeek() {
+  const [y, m, d] = ET_YMD.format(new Date()).split("-").map(Number);
+  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay();   // 0 = Sunday
+  return dow === 0 ? 0 : 7 - dow;
+}
+const etStamp = (d) => ET_STAMP.format(d) + " ET";
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
+const CORNERS = '<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>';
+const LINK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+
+// ---------- persisted team state (browser-local) ----------
+const store = {
+  get(k, fallback) { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } },
+  set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
+};
+const DEFAULT_LISTS = [
+  { name: "A-grade flips", desc: "Houses worth rehabbing and reselling." },
+  { name: "Land bank", desc: "Cheap lots to hold long-term." },
+  { name: "Rental candidates", desc: "Cashflow if picked up under assessed value." },
+];
+const DEFAULT_PREFS = {
+  myTypes: { "Single family": true, "Vacant land": true },
+  sort: "soonest", budget: "",
+};
+let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
+let lists = store.get("tdd_lists", DEFAULT_LISTS);   // personal lists
+let team = { lists: [], membership: {} };            // shared lists; live only when signed in
+let prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+// localStorage stays the write-through cache (instant render, works offline);
+// when signed in, the same save also pushes to the cloud, debounced.
+const saveInterest = () => { store.set("tdd_interest", interest); cloudPush("interest", () => ({ data: interest })); };
+const savePrefs = () => { store.set("tdd_prefs", prefs); cloudPush("prefs", () => ({ data: prefs })); };
+const saveLists = () => { store.set("tdd_lists", lists); cloudPush("lists", () => ({ data: lists })); };
+const saveTeam = () => cloudPush("team", () => team);
+const saveBuybox = () => { store.set("tdd_buybox", buybox); cloudPush("teambuybox", () => buybox); };
+
+// ---------- buy-box (per-team, editable in Settings) ----------
+// Every team gets its own copy of this, seeded from the feed's
+// default_buybox (config/buybox.yaml) the first time they open Settings, then
+// stored per-team (signed in: team_state row key 'buybox', shared by the whole
+// team; signed out: this browser only). Flags are computed HERE,
+// client-side, from the shared feed — nothing county- or client-specific is
+// baked into the scrape, so any Florida tax-deed investor can run their own
+// buy-box against the same data. This is a JS port of scraper/judgment.py
+// buybox_flag() — keep the two in sync if the logic changes.
+const EMPTY_BUYBOX = { target_counties: [], excluded_counties: [], land_use_keywords: [],
+                       non_land_keywords: [], max_opening_bid: null, county_caps: {} };
+let buybox = store.get("tdd_buybox", null);   // null until the feed's default seeds it
+const normCounty = (s) => (s || "").toLowerCase().replace(/[^a-z]/g, "");
+const csvList = (s) => String(s || "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
+const kwHits = (keywords, text) => keywords.filter((k) => new RegExp("\\b" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(text));
+
+function evalBuybox(r, cfg) {
+  const county = normCounty(r.county);
+  const reasons = [];
+  if (cfg.excluded_counties.includes(county)) return ["NO", "excluded county"];
+  if (!cfg.target_counties.includes(county)) return ["NO", "county not in target list"];
+  reasons.push("target county");
+
+  const use = (r.use || "").toLowerCase();
+  const address = (r.rawAddr || "").toLowerCase();
+  const caps = cfg.county_caps[county] || {};
+  const maxBid = caps.max_bid || cfg.max_opening_bid;
+  if (maxBid && r.bid && r.bid > Number(maxBid))
+    return ["NO", `opening bid over cap ($${Math.round(r.bid).toLocaleString()} > $${Number(maxBid).toLocaleString()})`];
+
+  if (use) {
+    if (kwHits(cfg.non_land_keywords, use).length)
+      return ["NO", `target county but non-land use (${r.use})`];
+    const land = kwHits(cfg.land_use_keywords, use);
+    if (land.length) { reasons.push("land/rural use: " + land.join(", ")); return ["MATCH", reasons.join("; ")]; }
+    return ["NO", `target county but property use not land-like (${r.use})`];
+  }
+  const addrHints = kwHits(cfg.land_use_keywords, address);
+  reasons.push(addrHints.length ? "no property use; address suggests land: " + addrHints.join(", ")
+                                 : "property use unknown — verify on appraiser site");
+  return ["REVIEW", reasons.join("; ")];
+}
+
+// Re-flag every record from the active buy-box config. Called after the feed
+// loads, whenever the config changes, and whenever a team's synced config
+// arrives from another device.
+function recomputeBuybox() {
+  if (!buybox) return;
+  const cfg = { ...EMPTY_BUYBOX, ...buybox,
+    land_use_keywords: (buybox.land_use_keywords || []).map((k) => k.toLowerCase()),
+    non_land_keywords: (buybox.non_land_keywords || []).map((k) => k.toLowerCase()),
+    target_counties: (buybox.target_counties || []).map(normCounty),
+    excluded_counties: (buybox.excluded_counties || []).map(normCounty),
+    county_caps: Object.fromEntries(Object.entries(buybox.county_caps || {}).map(([k, v]) => [normCounty(k), v])) };
+  for (const p of DATA) {
+    const [flag, notes] = evalBuybox(p, cfg);
+    p.buybox = flag; p.buyboxNotes = notes;
+    p.useType = typeFromUse(p.use);   // Type buckets follow the buy-box keywords
+  }
+}
+const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
+const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
+
+// ---------- cloud sync (Supabase Auth + Postgres + Realtime) ----------
+// Dormant when SUPABASE_URL is a placeholder. State lives in two tables:
+//   user_state(user_id, key, data)  — personal: interest / prefs / lists
+//   team_state(team_id, key, data)  — shared:   buybox / lists(+membership)
+// Row-level-security keeps each user to their own rows and their team's rows.
+let CLOUD = null;                 // { sb, user, channels: [] }
+const cloudTimers = {};
+
+function rerender() {
+  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[S.screen]();
+}
+
+// sync-name -> where it's stored. Personal keys go to user_state; the two team
+// keys go to team_state. The stored jsonb is the value itself (no {data:} wrap).
+const SYNC_MAP = {
+  interest:    { scope: "user", key: "interest", value: (p) => p().data },
+  prefs:       { scope: "user", key: "prefs",    value: (p) => p().data },
+  lists:       { scope: "user", key: "lists",    value: (p) => p().data },
+  team:        { scope: "team", key: "lists",    value: (p) => p() },       // {lists, membership}
+  teambuybox:  { scope: "team", key: "buybox",   value: (p) => p() },       // buybox object
+};
+
+// Which team (customer workspace) this account belongs to — from the profiles
+// row, set by the operator at onboarding. Every workspace is isolated by RLS.
+let TEAM_ID = null;
+let IS_ADMIN = false;        // operator flag from the profile row — gates dev-only controls
+let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
+let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
+
+function cloudPush(name, payload) {
+  if (!CLOUD || !CLOUD.user || !TEAM_ID) return;
+  const m = SYNC_MAP[name]; if (!m) return;
+  clearTimeout(cloudTimers[name]);
+  // Debounced whole-row upsert: rows are small and mostly per-person (the two
+  // shared team rows have a ~1s clobber window, fine for a small team).
+  cloudTimers[name] = setTimeout(async () => {
+    const row = m.scope === "team"
+      ? { team_id: TEAM_ID, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() }
+      : { user_id: CLOUD.user.id, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() };
+    const table = m.scope === "team" ? "team_state" : "user_state";
+    const onConflict = m.scope === "team" ? "team_id,key" : "user_id,key";
+    const { error } = await CLOUD.sb.from(table).upsert(row, { onConflict });
+    if (error) { console.warn("sync push failed:", error.message); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } }
+    else if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+  }, 800);
+}
+
+// Apply an incoming change only when it truly differs — this swallows the echo
+// of our own writes, so typing in a notes box never loses the caret.
+function applySnap(current, next) {
+  return JSON.stringify(current) === JSON.stringify(next) ? null : next;
+}
+
+async function cloudSignIn(email, pass) {
+  const { error } = await CLOUD.sb.auth.signInWithPassword({ email, password: pass });
+  if (error) throw error;
+}
+
+// A realtime row -> update the matching global + rerender.
+function applyUserRow(key, data) {
+  if (key === "interest") { const n = applySnap(interest, data || {}); if (n) { interest = n; store.set("tdd_interest", interest); rerender(); } }
+  else if (key === "prefs") { const n = applySnap(prefs, { ...DEFAULT_PREFS, ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
+  else if (key === "lists") { const n = applySnap(lists, data || []); if (n) { lists = n; store.set("tdd_lists", lists); rerender(); } }
+}
+function applyTeamRow(key, data) {
+  if (key === "lists") { const n = applySnap(team, { lists: (data && data.lists) || [], membership: (data && data.membership) || {} }); if (n) { team = n; rerender(); } }
+  else if (key === "buybox") { const n = applySnap(buybox, { ...EMPTY_BUYBOX, ...(data || {}) }); if (n) { buybox = n; recomputeBuybox(); rerender(); } }
+}
+
+async function onSignedIn(user) {
+  CLOUD.user = user;
+  $("login-overlay").hidden = true;
+  const sb = CLOUD.sb;
+  try {
+    // The profiles row names this account's team workspace (and flags the
+    // platform operator). A missing profile/team means the account wasn't fully
+    // onboarded — fail VISIBLY rather than syncing into the wrong workspace.
+    const { data: profile } = await sb.from("profiles").select("team_id, is_admin").eq("id", user.id).maybeSingle();
+    if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; renderAccount(); return; }
+    WORKSPACE_ERROR = false;
+    TEAM_ID = profile.team_id;
+    IS_ADMIN = !!profile.is_admin;
+    $("btn-refresh-admin").hidden = !IS_ADMIN;
+
+    // First contact: merge this device's local state with the cloud. Cloud wins
+    // per key; anything only known locally is kept (union). After this the cloud
+    // is the source of truth and realtime keeps every device live.
+    const [us, ts] = await Promise.all([
+      sb.from("user_state").select("key, data").eq("user_id", user.id),
+      sb.from("team_state").select("key, data").eq("team_id", TEAM_ID),
+    ]);
+    const U = Object.fromEntries((us.data || []).map((r) => [r.key, r.data]));
+    const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
+    interest = { ...interest, ...(U.interest || {}) };
+    prefs = { ...prefs, ...(U.prefs || {}) };
+    const cloudLists = (U.lists || []).slice();
+    for (const l of lists) if (!cloudLists.some((c) => c.name === l.name)) cloudLists.push(l);
+    lists = cloudLists.length ? cloudLists : lists;
+    team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
+    // The team shares one buy box — a personal edit made before signing in is a
+    // starting point, not something that overrides what the team already set.
+    const cloudBuybox = T.buybox;
+    if (cloudBuybox) buybox = { ...EMPTY_BUYBOX, ...cloudBuybox };
+    store.set("tdd_interest", interest); store.set("tdd_prefs", prefs); store.set("tdd_lists", lists);
+
+    // Push the merged state up. Realtime echoes come back through applySnap,
+    // which no-ops on identical values, so the merge can't be clobbered.
+    const stamp = new Date().toISOString();
+    await Promise.all([
+      sb.from("user_state").upsert({ user_id: user.id, key: "interest", data: interest, updated_at: stamp }, { onConflict: "user_id,key" }),
+      sb.from("user_state").upsert({ user_id: user.id, key: "prefs", data: prefs, updated_at: stamp }, { onConflict: "user_id,key" }),
+      sb.from("user_state").upsert({ user_id: user.id, key: "lists", data: lists, updated_at: stamp }, { onConflict: "user_id,key" }),
+      ...(cloudBuybox ? [] : [sb.from("team_state").upsert({ team_id: TEAM_ID, key: "buybox", data: buybox || EMPTY_BUYBOX, updated_at: stamp }, { onConflict: "team_id,key" })]),
+    ]);
+
+    // Live subscriptions: this user's personal rows + the whole team's shared rows.
+    const userCh = sb.channel("user_state:" + user.id)
+      .on("postgres_changes", { event: "*", schema: "public", table: "user_state", filter: "user_id=eq." + user.id },
+          (p) => { const r = p.new || {}; applyUserRow(r.key, r.data); })
+      .subscribe();
+    const teamCh = sb.channel("team_state:" + TEAM_ID)
+      .on("postgres_changes", { event: "*", schema: "public", table: "team_state", filter: "team_id=eq." + TEAM_ID },
+          (p) => { const r = p.new || {}; applyTeamRow(r.key, r.data); })
+      .subscribe();
+    CLOUD.channels = [userCh, teamCh];
+  } catch (e) { console.warn("first sync failed:", e); }
+  renderAccount();
+  if (DATA.length) rerender();
+}
+
+function onSignedOut() {
+  if (CLOUD) {
+    (CLOUD.channels || []).forEach((c) => { try { CLOUD.sb.removeChannel(c); } catch {} });
+    CLOUD.channels = []; CLOUD.user = null;
+  }
+  TEAM_ID = null;
+  IS_ADMIN = false;
+  WORKSPACE_ERROR = false;
+  SYNC_ERROR = false;
+  $("btn-refresh-admin").hidden = true;
+  team = { lists: [], membership: {} };
+  interest = store.get("tdd_interest", {});
+  lists = store.get("tdd_lists", DEFAULT_LISTS);
+  prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+  buybox = store.get("tdd_buybox", null) ||
+    (META && META.default_buybox ? { ...EMPTY_BUYBOX, ...META.default_buybox } : { ...EMPTY_BUYBOX });
+  recomputeBuybox();
+  renderAccount();
+  if (DATA.length) rerender();
+}
+
+async function initCloud() {
+  renderAccount();
+  if (!SYNC_ON) return;
+  try {
+    const { createClient } = await import(SUPABASE_SDK);
+    const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true } });
+    CLOUD = { sb, user: null, channels: [] };
+    sb.auth.onAuthStateChange((_event, session) => {
+      const u = session && session.user;
+      if (u && (!CLOUD.user || CLOUD.user.id !== u.id)) onSignedIn(u);
+      else if (!u && CLOUD.user) onSignedOut();
+    });
+  } catch (e) {
+    console.warn("sync unavailable:", e);
+    CLOUD = null;
+  }
+  renderAccount();
+}
+
+function renderAccount() {
+  const box = $("account-box");
+  if (!SYNC_ON) { box.hidden = true; return; }
+  box.hidden = false;
+  if (CLOUD && CLOUD.user) {
+    const status = WORKSPACE_ERROR
+      ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Your workspace isn&rsquo;t set up yet &mdash; changes won&rsquo;t sync. Contact your workspace admin.</div>'
+      : SYNC_ERROR
+        ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Sync issue &mdash; recent changes are saved on this device and will retry.</div>'
+        : "";
+    box.innerHTML = `${status}
+      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in${WORKSPACE_ERROR ? "" : " &middot; syncing"}</div>
+      <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div>
+      <button class="btn btn-ghost" id="btn-signout" style="font-size:12px;padding:2px 4px;margin-top:4px">Sign out</button>`;
+    $("btn-signout").onclick = () => CLOUD.sb.auth.signOut();
+  } else {
+    box.innerHTML = `
+      <button class="btn btn-secondary" id="btn-signin" style="width:100%">Sign in</button>
+      <div class="text-muted" style="margin-top:6px">Sync your lists &amp; notes across devices.</div>`;
+    $("btn-signin").onclick = () => {
+      $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
+      $("login-overlay").hidden = false;
+      $("login-email").focus();
+    };
+  }
+}
+
+function wireLogin() {
+  $("login-cancel").onclick = () => { $("login-overlay").hidden = true; };
+  $("login-form").onsubmit = async (e) => {
+    e.preventDefault();
+    if (!CLOUD) return;
+    $("login-error").textContent = "";
+    $("login-submit").disabled = true;
+    try {
+      await cloudSignIn($("login-email").value.trim(), $("login-pass").value);
+      $("login-pass").value = "";
+    } catch (err) {
+      const msg = ((err && err.message) || "").toLowerCase();
+      $("login-error").textContent =
+        /invalid login|invalid credentials|email not confirmed/.test(msg)
+          ? "Email or password doesn't match. Try again, or use Forgot password."
+          : /rate limit|too many/.test(msg)
+            ? "Too many attempts — wait a minute and try again."
+            : "Couldn't sign in (" + ((err && err.message) || "network") + ").";
+    }
+    $("login-submit").disabled = false;
+  };
+  $("login-forgot").onclick = async () => {
+    if (!CLOUD) return;
+    const email = $("login-email").value.trim();
+    if (!email) { $("login-error").textContent = "Type your email above first, then tap Forgot password."; return; }
+    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(email);
+    $("login-error").textContent = error
+      ? "Couldn't send the reset email (" + error.message + ")."
+      : "Reset email sent to " + email + " — check your inbox.";
+  };
+}
+
+// ---------- app state ----------
+let DATA = [];            // mapped property records
+let META = null;          // feed counts/generated_at
+// Shared "Sort by" options + comparators, used by the dashboard filter row and
+// each list's page so the two behave identically. Defined before S because S's
+// initial sort is normalized through normSort().
+const SORT_OPTIONS = [
+  ["soonest", "Auction date — soonest first"],
+  ["latest", "Auction date — latest first"],
+  ["assessed-desc", "Assessed value — high to low"],
+  ["county", "County (A–Z)"],
+  ["mytypes", "★ My preferred types first"],
+];
+const SORT_KEYS = new Set(SORT_OPTIONS.map(([v]) => v));
+// Auction-date windows, all measured from "today" in Florida.
+const WHEN_OPTIONS = [
+  ["all", "All dates"],
+  ["today", "Today"],
+  ["week", "This week"],
+  ["7", "Next 7 days"],
+  ["14", "Next 14 days"],
+];
+// Inclusive [firstDay, lastDay] as day numbers; null = no date limit.
+// "This week" runs through Sunday, so late in the week it honestly shows
+// little — "Next 7 days" is the rolling window.
+function whenRange(when) {
+  const t = etToday();
+  if (when === "today") return [t, t];
+  if (when === "week") return [t, t + etDaysLeftInWeek()];
+  if (when === "7") return [t, t + 7];
+  if (when === "14") return [t, t + 14];
+  return null;
+}
+const inWhen = (p, range) => {
+  if (!range) return true;
+  const d = saleDay(p);
+  return d != null && d >= range[0] && d <= range[1];
+};
+// Old feeds/browsers may hold a retired sort key — fall back to soonest.
+const normSort = (s) => (SORT_KEYS.has(s) ? s : "soonest");
+// "My preferred types first" ranks by whether a row matches your buy box /
+// preferred types, then falls back to soonest auction within each group.
+function typeRank(p) {
+  const t = effType(p);
+  if (t && prefs.myTypes[t]) return 0;   // one of your preferred property types
+  if (p.buybox === "MATCH") return 1;     // scrub's land-use match
+  if (p.buybox === "REVIEW") return 2;
+  return 3;
+}
+// A Scheduled row whose sale date already passed with no result posted yet
+// (the site hadn't updated when we last scraped) isn't meaningfully
+// "upcoming" — "soonest" should mean soonest UPCOMING, so every date-based
+// sort buckets these behind genuinely future rows instead of at the top.
+const isPastDue = (p) => !p.redeemed && saleDay(p) != null && saleDay(p) < etToday();
+function sortComparator(sort) {
+  const t = (p) => p.saleDate?.getTime() ?? 9e15;   // undated rows sort last
+  const pd = (p) => (isPastDue(p) ? 1 : 0);
+  const asv = (p) => p.assessed ?? -Infinity;
+  return {
+    soonest: (a, b) => pd(a) - pd(b) || t(a) - t(b) || a.county.localeCompare(b.county),
+    latest: (a, b) => pd(a) - pd(b) || t(b) - t(a) || a.county.localeCompare(b.county),
+    "assessed-desc": (a, b) => asv(b) - asv(a),
+    county: (a, b) => a.county.localeCompare(b.county) || pd(a) - pd(b) || t(a) - t(b),
+    mytypes: (a, b) => typeRank(a) - typeRank(b) || pd(a) - pd(b) || t(a) - t(b),
+  }[sort] || ((a, b) => t(a) - t(b));
+}
+
+let S = {
+  screen: "dashboard", selId: null, q: "",
+  county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
+  when: "all", sort: normSort(prefs.sort), shown: 150,
+  // Which list is open on its own page, and that page's own filter/sort state.
+  listName: null, listShared: false,
+  ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
+  // Buy-box screen: the saved-search runner.
+  bb: { ran: false, includeReview: false, scheduledOnly: true, sort: "soonest", shown: 100 },
+};
+
+const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
+function titleCase(s) { return s ? cap(String(s).toLowerCase()) : s; }
+function splitAddr(a) {
+  if (!a) return { addr: "", city: "" };
+  const parts = a.split(",");
+  const city = parts.length > 1 ? titleCase(parts[1].trim()) : "";
+  // "NO SITUS" = county-speak for "no street address assigned" (common on
+  // vacant land) — treat as unpublished rather than showing it as an address.
+  const first = parts[0].trim();
+  const addr = /^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first) ? "" : titleCase(first);
+  return { addr, city };
+}
+function parseDate(mdy) {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(mdy || "");
+  return m ? new Date(+m[3], +m[1] - 1, +m[2]) : null;
+}
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
+
+// Bucket the appraiser's land-use text into the dashboard's type filter.
+// The "Vacant land" bucket uses the ACTIVE buy-box's land keywords, so a team
+// that adds e.g. "homesite" to their buy box sees the Type column follow suit.
+function typeFromUse(use) {
+  const u = (use || "").toLowerCase();
+  if (!u) return "";
+  const landKws = (buybox && buybox.land_use_keywords && buybox.land_use_keywords.length)
+    ? buybox.land_use_keywords : ["vacant", "land", "acreage", "agricultur", "timber",
+                                  "pasture", "grove", "ranch", "farm", "rural", "grazing", "orchard", "nursery"];
+  if (kwHits(landKws.map((k) => k.toLowerCase()), u).length) return "Vacant land";
+  if (/mobile|manufactured/.test(u)) return "Mobile home";
+  if (/condo|town\s?ho/.test(u)) return "Condo/Townhome";
+  if (/multi|duplex|triplex|apart/.test(u)) return "Multi-family";
+  if (/single|sfr|\bres/.test(u)) return "Single family";
+  if (/commer|industr|office|retail|warehouse|store/.test(u)) return "Commercial";
+  return "";
+}
+// ---------- 67-county registry (feed's counties_registry) ----------
+// Every Florida county, including the ones with no online auction. Names come
+// from here so "miamidade" renders as "Miami-Dade", not "Miamidade".
+const REG = () => (META && META.counties_registry) || [];
+const regByName = () => Object.fromEntries(REG().map((c) => [c.name, c]));
+// Memoized per feed load — mapRecord calls this once per record.
+const countyDisplayName = (() => {
+  let src = null, names = {};
+  return (slug) => {
+    if (src !== META) { src = META; names = Object.fromEntries(REG().map((c) => [c.slug, c.name])); }
+    return names[slug] || cap(String(slug).replace(/_/g, " "));
+  };
+})();
+
+function mapRecord(r, i) {
+  const { addr, city } = splitAddr(r.property_address);
+  const d = parseDate(r.sale_date);
+  return {
+    id: `${r.county}|${r.parcel_id}|${r.case_number}`,
+    idx: i, county: countyDisplayName(r.county),
+    parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
+    rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
+    owner: r.owner_name || "", use: r.property_use || "", acreage: r.acreage || "",
+    mailing: r.mailing_address || "", enriched: !!r.enriched,
+    caseUrl: r.clerk_case_url || "", deedStatus: r.deed_status || "",
+    applicant: r.applicant || "", applicantAddr: r.applicant_address || "",
+    caseDocs: r.case_docs || [], caseFlags: r.case_flags || [],
+    useType: typeFromUse(r.property_use),
+    lat: r.lat ?? null, lng: r.lng ?? null,
+    assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
+    saleDate: d, auction: fmtDate(d), saleTime: r.sale_time || "",
+    status: r.status, redeemed: r.status === "Redeemed",
+    buybox: r.buybox, buyboxNotes: r.buybox_notes || "", anomalies: r.anomalies || [],
+    auctionUrl: r.auction_url || "", appraiserUrl: r.appraiser_url || "",
+  };
+}
+// Manual assignment wins; otherwise fall back to the appraiser land-use bucket.
+const effType = (p) => getInt(p.id).type || p.useType;
+// A parcel's list: shared team membership wins over the personal field.
+const effList = (id) => team.membership[id] || getInt(id).list || "";
+// Assign a parcel to a list ("" | "p:Name" | "t:Name" from the dropdown).
+function assignList(id, value) {
+  const wasShared = !!team.membership[id];
+  if (value.startsWith("t:")) {
+    team.membership[id] = value.slice(2);
+    if (getInt(id).list) setInt(id, { list: "" });
+    saveTeam();
+  } else {
+    if (wasShared) { delete team.membership[id]; saveTeam(); }
+    setInt(id, { list: value.startsWith("p:") ? value.slice(2) : "" });
+  }
+}
+// The parcels in a given list (personal or shared).
+function listItems(name, shared) {
+  return shared
+    ? DATA.filter((p) => team.membership[p.id] === name)
+    : DATA.filter((p) => !team.membership[p.id] && getInt(p.id).list === name);
+}
+// Find a list object by name across both collections.
+const findList = (name, shared) => (shared ? team.lists : lists).find((l) => l.name === name);
+// Rename a list and re-point every parcel assigned to it.
+function renameList(oldName, newName, shared) {
+  newName = newName.trim();
+  if (!newName || newName === oldName) return false;
+  if (lists.some((l) => l.name === newName) || team.lists.some((l) => l.name === newName)) return false;
+  const l = findList(oldName, shared); if (!l) return false;
+  l.name = newName;
+  if (shared) {
+    for (const [id, ln] of Object.entries(team.membership)) if (ln === oldName) team.membership[id] = newName;
+    saveTeam();
+  } else {
+    for (const [id, it] of Object.entries(interest)) if (it.list === oldName) interest[id] = { ...it, list: newName };
+    saveInterest(); saveLists();
+  }
+  if (S.listName === oldName) S.listName = newName;
+  return true;
+}
+function setListDesc(name, shared, desc) {
+  const l = findList(name, shared); if (!l) return;
+  l.desc = desc;
+  shared ? saveTeam() : saveLists();
+}
+// Archive is non-destructive: the list and its parcels stay, it just drops off
+// the main grid until restored.
+function setListArchived(name, shared, val) {
+  const l = findList(name, shared); if (!l) return;
+  l.archived = val;
+  shared ? saveTeam() : saveLists();
+}
+// Delete removes the list and unassigns its parcels (the parcels themselves and
+// any notes/positions on them are untouched).
+function deleteList(name, shared) {
+  if (shared) {
+    team.lists = team.lists.filter((l) => l.name !== name);
+    for (const [id, ln] of Object.entries(team.membership)) if (ln === name) delete team.membership[id];
+    saveTeam();
+  } else {
+    lists = lists.filter((l) => l.name !== name);
+    for (const [id, it] of Object.entries(interest)) if (it.list === name) interest[id] = { ...it, list: "" };
+    saveInterest(); saveLists();
+  }
+}
+// Pull a single parcel out of a list from the list page.
+function removeFromList(id, name, shared) {
+  if (shared) { if (team.membership[id] === name) { delete team.membership[id]; saveTeam(); } }
+  else if (getInt(id).list === name) setInt(id, { list: "" });
+}
+function openList(name, shared) {
+  S.listName = name; S.listShared = shared;
+  S.ld = { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" };
+  go("listdetail");
+}
+// Where to send someone for the clerk's record on THIS parcel: its own case
+// file when the scrub resolved one, else the county's tax-deed portal
+// (config/clerk_sites.yaml, served in the feed), else a targeted web search.
+function clerkLink(p) {
+  if (p.caseUrl) return p.caseUrl;
+  const t = (META && META.clerk_sites || {})[p.county.toLowerCase().replace(/[^a-z]/g, "")];
+  return (t && (t.search || t.url)) ||
+    "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County Florida clerk of court tax deed "${p.case_number}"`);
+}
+// Duval's property appraiser retired its Detail.aspx?RE= deep link (the page
+// RealAuction still links to loads blank). The county property map, however,
+// takes the RE directly in its *hyphenated* form — which is how we already
+// store the parcel — and opens the parcel with the appraiser panel (pao=pao).
+const isDuvalPao = (p) => /paopropertysearch\.coj\.net/i.test(p.appraiserUrl || "");
+const duvalRE = (p) => (isDuvalPao(p) ? (p.parcel || "").trim() : "");   // hyphenated RE
+function appraiserLink(p) {
+  if (isDuvalPao(p) && duvalRE(p))
+    return "https://maps.coj.net/duvalproperty/default.aspx?RE=" + encodeURIComponent(duvalRE(p)) + "&pao=pao";
+  return p.appraiserUrl ||
+    "https://www.google.com/search?q=" + encodeURIComponent(`${p.county} County FL property appraiser parcel ${p.parcel}`);
+}
+// The active buy-box's per-county caps — editable in Settings, not the feed.
+const countyCaps = (p) => (buybox && buybox.county_caps || {})[normCounty(p.county)] || {};
+
+// ---------- data load ----------
+async function loadFeed() {
+  for (const url of FEED_URLS) {
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) continue;
+      const j = await res.json();
+      META = j; DATA = j.records.map(mapRecord);
+      // Seed this team's buy-box from the feed's default the first time
+      // there's nothing saved yet (new team, or first load ever).
+      if (!buybox) buybox = j.default_buybox ? { ...EMPTY_BUYBOX, ...j.default_buybox } : { ...EMPTY_BUYBOX };
+      recomputeBuybox();
+      return true;
+    } catch (e) { /* try next */ }
+  }
+  return false;
+}
+
+// ---------- shared header/sidebar ----------
+const NAV = [["dashboard","Dashboard"],["lists","My lists"],["buybox","Buy box"],["settings","Settings"]];
+function renderNav() {
+  $("nav").innerHTML = NAV.map(([k, label]) => {
+    const active = S.screen === k
+      || (k === "dashboard" && S.screen === "detail")
+      || (k === "lists" && S.screen === "listdetail");
+    return `<button class="nav-btn ${active ? "active" : ""}" data-go="${k}"><span class="dot"></span>${label}</button>`;
+  }).join("");
+  $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
+}
+function nextRefreshText() {
+  // Derived from SCHEDULE_UTC — the single source of truth for the cadence.
+  const now = new Date();
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), SCHEDULE_UTC.hour, 0, 0));
+  const dow = d.getUTCDay();
+  let add = (SCHEDULE_UTC.day - dow + 7) % 7;
+  if (add === 0 && now.getTime() > d.getTime()) add = 7;
+  d.setUTCDate(d.getUTCDate() + add);
+  return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
+}
+function go(screen, selId) {
+  S.screen = screen;
+  if (selId !== undefined) S.selId = selId;
+  renderNav();
+  for (const k of ["dashboard","detail","lists","listdetail","buybox","settings"]) $("scr-" + k).hidden = k !== screen;
+  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[screen]();
+  $("scroller").scrollTop = 0;
+}
+
+// ---------- filtering ----------
+function filteredRows() {
+  const q = S.q.trim().toLowerCase();
+  const range = whenRange(S.when);
+  let rows = DATA.filter((p) => {
+    if (!inWhen(p, range)) return false;
+    const it = getInt(p.id);
+    if (S.county !== "All" && p.county !== S.county) return false;
+    if (S.status !== "All" && p.status !== S.status) return false;
+    if (S.buybox !== "All" && p.buybox !== S.buybox) return false;
+    if (S.type !== "All") {
+      const t = effType(p);
+      if (S.type === "Unassigned" ? t : t !== S.type) return false;
+    }
+    if (S.deposit === "Within") {
+      // RealAuction requires ~5% of your high bid on deposit; keep rows where
+      // the county deposit (config/buybox.yaml) covers at least the opening bid.
+      const dep = countyCaps(p).deposit;
+      if (dep && p.bid != null && p.bid * 0.05 > dep) return false;
+    }
+    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  // A single ordering key (the Sort dropdown) — "My preferred types first" is
+  // one of its options rather than a competing toggle.
+  return [...rows].sort(sortComparator(S.sort));
+}
+
+// ---------- dashboard screen ----------
+function statusTag(p) {
+  if (p.redeemed) return '<span class="tag tag-outline">Redeemed</span>';
+  const st = getInt(p.id).status;
+  if (st === "Interested") return '<span class="tag tag-accent">Interested</span>';
+  if (st === "Watching") return '<span class="tag tag-neutral">Watching</span>';
+  if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
+  if (isPastDue(p)) return '<span class="tag tag-outline" title="This auction’s date has passed and the county site had not posted a result as of the last refresh &mdash; check back after the next refresh">Past date</span>';
+  return '<span class="tag tag-neutral">New</span>';
+}
+// A county with no rows in the feed still gets a real page: how it sells
+// (from the 67-county registry) and where its clerk publishes the sales.
+function countyInfoCard(c) {
+  const title = c.coverage === "in-person" ? "sells tax deeds in person"
+    : c.coverage === "online-other" ? "sells online on another platform"
+    : "no records in the current feed yet";
+  const note = c.coverage === "in-person"
+    ? "There is no online auction feed for this county — sales are held in person at the courthouse. The clerk links below carry the sale schedule and any published sale list."
+    : c.coverage === "online-other"
+      ? "This county's auctions run on a platform the live feed doesn't cover yet, so its parcels don't appear on the board."
+      : "This county sells online and is covered — its parcels appear after the next data refresh.";
+  const links = [];
+  if (c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.clerk_url)}" target="_blank" rel="noopener">Clerk&rsquo;s tax deed page</a>`);
+  if (c.sale_list_url && c.sale_list_url !== c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.sale_list_url)}" target="_blank" rel="noopener">Published sale list</a>`);
+  return `
+    <div class="blueprint" id="county-card" style="padding:22px 24px">${CORNERS}
+      <h6 style="color:var(--color-accent-700);margin-bottom:6px">${esc(c.name)} County &mdash; ${esc(title)}</h6>
+      ${c.sale_info ? `<p style="font-size:14px;margin-bottom:6px;max-width:680px">${esc(c.sale_info)}</p>` : ""}
+      <p class="text-muted" style="font-size:13px;margin-bottom:${links.length ? "14px" : "0"};max-width:680px">${esc(note)}</p>
+      ${links.length ? `<div style="display:flex;gap:10px;flex-wrap:wrap">${links.join("")}</div>` : ""}
+    </div>`;
+}
+
+function renderDashboard() {
+  const rows = filteredRows();
+  // "Upcoming" excludes past-due rows too — an auction whose date already
+  // passed with no result posted yet isn't upcoming, even though the site
+  // hadn't marked it Redeemed as of the last refresh.
+  const upcoming = DATA.filter((p) => !p.redeemed && !isPastDue(p));
+  // Sale-day windows are measured in Florida time, so "today" is today in
+  // Florida no matter where the person's device thinks it is.
+  const todayRange = whenRange("today"), weekRange = whenRange("week");
+  const todayRows = upcoming.filter((p) => inWhen(p, todayRange));
+  const weekRows = upcoming.filter((p) => inWhen(p, weekRange));
+  const nextUp = upcoming.filter((p) => saleDay(p) != null && saleDay(p) >= etToday())
+    .reduce((a, p) => (!a || saleDay(p) < saleDay(a) ? p : a), null);
+  const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
+  const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
+  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  // Every Florida county belongs in the filter — the ones without records in
+  // the feed (in-person sales, other platforms, or awaiting a first refresh)
+  // are grouped below the live ones. Registry ships inside the feed itself.
+  const extras = REG().filter((c) => !counties.includes(c.name));
+  const extraOnline = extras.filter((c) => c.coverage === "online").map((c) => c.name).sort();
+  const extraOther = extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort();
+  // A county with no rows gets an info card instead of an empty table.
+  const regSel = S.county !== "All" && !counties.includes(S.county) ? regByName()[S.county] : null;
+  const cty = (rs) => new Set(rs.map((p) => p.county)).size;
+
+  const stats = [
+    { label: "Today's auctions", value: todayRows.length.toLocaleString(), when: "today",
+      sub: todayRows.length ? `across ${cty(todayRows)} ${cty(todayRows) === 1 ? "county" : "counties"}`
+                            : nextUp ? `none today — next ${nextUp.auction}` : "none today" },
+    { label: "This week", value: weekRows.length.toLocaleString(), when: "week",
+      sub: weekRows.length ? `through Sunday · ${cty(weekRows)} ${cty(weekRows) === 1 ? "county" : "counties"}`
+                           : "nothing left this week" },
+    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), when: "all",
+      sub: `across ${cty(upcoming)} counties` },
+    { label: "Marked interested", value: String(marked.length),
+      sub: committed ? money(committed) + " committed max" : "none yet" },
+  ];
+
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  $("scr-dashboard").innerHTML = `
+    <h2 style="margin-bottom:4px">Dashboard</h2>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; all auction times are Florida (ET)</div>
+    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
+      ${stats.map((st) => `
+        <div class="blueprint" ${st.when ? `data-when="${st.when}" title="Show these on the board"` : ""} style="padding:16px 18px${st.when ? ";cursor:pointer" : ""}">${CORNERS}
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">${st.label}</div>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">${st.value}</div>
+          <div style="font-size:12px" class="text-muted">${esc(st.sub)}</div>
+        </div>`).join("")}
+    </div>
+
+    <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="field" style="width:160px"><label>County</label>
+        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — awaiting first refresh">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
+      <div class="field" style="width:160px"><label>Property type</label>
+        <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
+      <div class="field" style="width:150px"><label>Auction date</label>
+        <select class="input" id="f-when">${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
+      <div class="field" style="width:130px"><label>Status</label>
+        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
+      <div class="field" style="width:120px"><label>Buy box <button id="bb-help" title="Every property is graded against YOUR buy box — the counties, property types and price limits you set. MATCH fits it, REVIEW needs a look, NO doesn't fit. Click to set yours." style="border:1px solid var(--color-divider);background:none;cursor:pointer;font-size:10px;padding:0 5px;color:var(--color-accent-700)">?</button></label>
+        <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
+      <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
+        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
+      <div class="field" style="width:230px"><label>Sort by</label>
+        <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
+      <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
+    </div>
+
+    ${regSel ? countyInfoCard(regSel) : `<div class="blueprint" style="padding:0">${CORNERS}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
+        <tbody>
+          ${rows.slice(0, S.shown).map((p) => {
+            const t = effType(p);
+            return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+              <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
+              <td><div style="font-weight:500">${esc(p.addr)}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+              <td>${esc(p.county)}</td>
+              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+              <td style="font-size:13px">${esc(p.auction)}</td>
+              <td>${statusTag(p)}</td>
+            </tr>`;
+          }).join("")}
+        </tbody>
+      </table></div>
+      ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+        <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
+    </div>`}`;
+
+  // Picking a date window means "what's coming up", so order it soonest-first.
+  const setWhen = (v) => {
+    S.when = v;
+    if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
+    if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
+    S.shown = 150; renderDashboard();
+  };
+  $("f-when").onchange = (e) => setWhen(e.target.value);
+  $("scr-dashboard").querySelectorAll("[data-when]").forEach((c) => c.onclick = () => setWhen(c.dataset.when));
+  $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
+  $("bb-help").onclick = () => go("buybox");
+  $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
+  const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+}
+
+// ---------- detail screen ----------
+function buyboxTag(p) {
+  const cls = p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline";
+  return `<span class="tag ${cls}" title="${esc(p.buyboxNotes)}">Buy-box: ${esc(p.buybox)}</span>`;
+}
+function renderDetail() {
+  const p = DATA.find((x) => x.id === S.selId) || DATA[0];
+  if (!p) { go("dashboard"); return; }
+  const it = getInt(p.id);
+  const hasAddr = p.hasAddr;
+  const mapQ = encodeURIComponent(p.rawAddr.replace(/FL-\s*/, "FL "));
+  const gsearch = (q) => "https://www.google.com/search?q=" + encodeURIComponent(q);
+  const ll = p.lat != null && p.lng != null;
+  const links = [
+    [appraiserLink(p), `${esc(p.county)} Property Appraiser`],
+    [p.auctionUrl, "Live auction listing (RealAuction)"],
+    [clerkLink(p), p.caseUrl ? "This parcel&rsquo;s clerk case file" : "Tax deed case records (county)"],
+    // The FWS Wetlands Mapper is a custom app with no documented deep-link
+    // params — link it plain; the copyable coordinates below paste straight
+    // into its search box.
+    ["https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/", "Wetlands map (NWI)"],
+    [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
+  ].filter(([href]) => href);
+  const pctText = p.pct != null
+    ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
+    : "Assessed value not published on the auction record — confirm value on the appraiser site.";
+  const findings = [
+    { topic: "Buy-box", cls: p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline",
+      text: `${p.buybox} — ${esc(p.buyboxNotes || "no notes")}` },
+    { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
+    { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
+      text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
+    { topic: "Quick look", cls: p.enriched ? "tag-accent" : "tag-neutral",
+      text: p.enriched
+        ? "Verified against the county appraiser — the owner, land use, acreage and mailing address above come straight from the official record."
+        : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
+    { topic: "Case file", cls: p.caseFlags.length ? "tag-outline" : p.caseUrl ? "tag-accent" : "tag-neutral",
+      text: !p.caseUrl
+        ? "Clerk case file not resolved for this parcel yet — the county link above opens the clerk's tax deed search."
+        : p.caseFlags.length
+          ? `The case paperwork mentions: ${esc(p.caseFlags.join("; "))}. Confirm each in the documents before bidding.`
+          : (p.deedStatus ? `Clerk shows deed status ${esc(p.deedStatus)}. ` : "") +
+            "The case documents were reviewed and none of the watch-items (liens, homestead, bankruptcy, reschedules) came up." },
+    { topic: "Next step", cls: "tag-neutral",
+      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
+  ];
+
+  $("scr-detail").innerHTML = `
+    <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
+      <h2 style="margin:0">${esc(p.addr)}</h2>
+      ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
+      ${buyboxTag(p)}
+      ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
+      <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
+    </div>
+    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:22px">Parcel ${esc(p.parcel)}</div>
+
+    <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
+        <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
+          <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>No photo in the county data.<br>The appraiser record has one.</span></div>
+          <div class="blueprint" style="padding:0;display:flex;flex-direction:column">${CORNERS}
+            <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
+            ${hasAddr || ll
+              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${ll ? p.lat + "," + p.lng : mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
+              : `<div class="ph" style="flex:1;min-height:154px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
+          </div>
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
+            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
+               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
+               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"],
+               ["Mailing address", p.mailing || "—"]]
+              .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
+          </div>
+          <div class="hr"></div>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px">
+            ${links.map(([href, label]) => `<a href="${esc(href)}" target="_blank" rel="noopener">${LINK_SVG} ${label}</a>`).join("")}
+          </div>
+          ${ll ? `<div style="margin-top:10px;font-size:12px" class="text-muted">Coordinates
+            <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
+            &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
+          ${duvalRE(p) ? `<div style="margin-top:8px;font-size:12px" class="text-muted">Duval RE&nbsp;#
+            <button id="copy-re" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — for the classic paopropertysearch.coj.net record">${esc(duvalRE(p))}</button>
+            &middot; the appraiser link opens this parcel on the county map; copy the RE for the classic record if you want it</div>` : ""}
+        </div>
+
+        ${p.caseUrl ? `<div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+            <h6 style="color:var(--color-accent-700);margin:0">Clerk case file</h6>
+            ${p.deedStatus ? `<span class="tag ${/resched|cancel/i.test(p.deedStatus) ? "tag-outline" : "tag-accent"}">${esc(p.deedStatus)}</span>` : ""}
+            <a href="${esc(p.caseUrl)}" target="_blank" rel="noopener" style="margin-left:auto;font-size:13px">${LINK_SVG} Open at the clerk</a>
+          </div>
+          ${p.applicant ? `<div style="font-size:14px;margin-bottom:10px">
+            <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Applicant (who forced the sale)</div>
+            <div style="font-weight:500">${esc(p.applicant)}</div>
+            ${p.applicantAddr ? `<div class="text-muted" style="font-size:13px">${esc(p.applicantAddr)}</div>` : ""}
+          </div>` : ""}
+          ${p.caseFlags.length ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+            ${p.caseFlags.map((f) => `<span class="tag tag-outline">${esc(f)}</span>`).join("")}
+          </div>` : ""}
+          ${p.caseDocs.length ? `
+            <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px" class="text-muted">Paperwork in the file</div>
+            <div style="display:flex;flex-direction:column">
+              ${p.caseDocs.map((d) => `<a href="${esc(d.url)}" target="_blank" rel="noopener" style="display:flex;gap:10px;align-items:baseline;font-size:13.5px;padding:5px 0;border-top:1px solid color-mix(in srgb, var(--color-text) 8%, transparent);text-decoration:none">
+                <span style="flex:1">${LINK_SVG} ${esc(d.name)}</span>
+                <span class="text-muted" style="font-size:12px">${esc(d.date || "")}</span></a>`).join("")}
+            </div>` : `<div class="text-muted" style="font-size:13px">Case found; the clerk lists no downloadable documents on it.</div>`}
+        </div>` : ""}
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">Property analysis</h6>
+            <span class="tag tag-accent">automated</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
+            ${findings.map((a) => `<div style="display:flex;gap:12px">
+              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
+              <span>${a.text}</span></div>`).join("")}
+          </div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">My position</h6>
+          <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
+            ${["Interested","Watching","Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-status="${o}">${o.toUpperCase()}</button>`).join("")}
+          </div>
+          <div class="field" style="margin-bottom:12px"><label>Max I&rsquo;m willing to pay</label>
+            <input class="input" id="pos-bid" placeholder="${esc(prefs.budget || "$ 0")}" value="${esc(it.bid)}" style="font-variant-numeric:tabular-nums;font-weight:500"></div>
+          <div class="field" style="margin-bottom:12px"><label>Add to list</label>
+            <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>
+              ${lists.length ? `<optgroup label="My lists">${lists.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
+              ${team.lists.length ? `<optgroup label="Team lists (shared)">${team.lists.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
+            </select></div>
+          <div class="field"><label>Notes</label>
+            <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
+          <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
+        </div>
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
+          <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
+          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled" + (p.saleTime ? " · " + esc(p.saleTime) : "")}</div>
+          ${(() => { const c = countyCaps(p); if (!c.deposit && !c.max_bid) return "";
+            const need = p.bid != null ? money(p.bid * 0.05) : null;
+            return `<div class="hr" style="margin:10px 0"></div><div style="font-size:12.5px">
+              ${c.deposit ? `County deposit on file: <b>${money(c.deposit)}</b>${need ? ` &middot; ~5% of opening bid is ${need}` : ""}` : ""}
+              ${c.max_bid ? `${c.deposit ? "<br>" : ""}Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b>` : ""}</div>`; })()}
+        </div>
+      </div>
+    </div>`;
+
+  $("back").onclick = () => go("dashboard");
+  const cll = $("copy-ll");
+  if (cll) cll.onclick = () => {
+    navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
+      cll.textContent = "copied ✓";
+      setTimeout(() => { cll.textContent = `${p.lat}, ${p.lng}`; }, 1200);
+    });
+  };
+  const cre = $("copy-re");
+  if (cre) { const re = duvalRE(p); cre.onclick = () => {
+    navigator.clipboard?.writeText(re).then(() => {
+      cre.textContent = "copied ✓";
+      setTimeout(() => { cre.textContent = re; }, 1200);
+    });
+  }; }
+  $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
+    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
+  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
+  $("pos-list").onchange = (e) => assignList(p.id, e.target.value);
+  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
+}
+
+// ---------- lists screen (grid of every list) ----------
+function renderLists() {
+  const signedIn = !!(CLOUD && CLOUD.user);
+  const all = [
+    ...lists.map((l) => ({ ...l, shared: false })),
+    ...team.lists.map((l) => ({ ...l, shared: true })),
+  ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
+  const active = all.filter((l) => !l.archived);
+  const archived = all.filter((l) => l.archived);
+
+  $("scr-lists").innerHTML = `
+    <h2 style="margin-bottom:6px">My lists</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
+      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
+      : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
+    <div style="display:flex;gap:10px;max-width:560px;margin-bottom:24px;align-items:center;flex-wrap:wrap">
+      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
+      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
+        <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
+      <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
+    </div>
+    ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+      ${active.map((lc) => `
+        <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
+            ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
+            <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
+          </div>
+          <div style="font-size:13px;margin:6px 0 14px" class="text-muted">${esc(lc.desc || "") || (lc.items.length ? "" : "Empty — add parcels from a property page.")}</div>
+          <div style="font-size:13px;font-weight:500;color:var(--color-accent-700)">Open list &rarr;</div>
+        </div>`).join("")}
+    </div>` : `<div class="text-muted" style="font-size:13.5px">${archived.length ? "All your lists are archived — restore one below." : "No lists yet — create one above, then add parcels to it from any property page."}</div>`}
+    ${archived.length ? `
+      <h3 style="margin:34px 0 10px;font-size:16px">Archived</h3>
+      <div class="blueprint" style="padding:6px 18px">${CORNERS}
+        ${archived.map((lc) => `
+          <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
+            <div style="flex:1;min-width:140px">
+              <span style="font-weight:500">${esc(lc.name)}</span>
+              ${lc.shared ? ' <span class="tag tag-outline">team</span>' : ""}
+              <span class="text-muted" style="font-size:12.5px"> &middot; ${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
+            </div>
+            <button class="btn btn-secondary" data-restore="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 10px">Restore</button>
+            <button class="btn btn-ghost" data-delete="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 8px;color:var(--color-danger,#b3261e)">Delete</button>
+          </div>`).join("")}
+      </div>` : ""}`;
+
+  $("add-list").onclick = () => {
+    const name = $("new-list").value.trim();
+    if (!name || lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) return;
+    const sharedBox = $("new-list-shared");
+    if (sharedBox && sharedBox.checked) { team.lists.push({ name, desc: "" }); saveTeam(); }
+    else { lists.push({ name, desc: "" }); saveLists(); }
+    openList(name, !!(sharedBox && sharedBox.checked));
+  };
+  $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
+    openList(c.dataset.openlist, c.dataset.shared === "1"));
+  $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
+    setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
+  });
+  $("scr-lists").querySelectorAll("[data-delete]").forEach((b) => b.onclick = () => {
+    if (!confirm(`Delete the list “${b.dataset.delete}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
+    deleteList(b.dataset.delete, b.dataset.shared === "1"); renderLists();
+  });
+}
+
+// ---------- single-list page: filter, sort, manage ----------
+function renderListDetail() {
+  const name = S.listName, shared = S.listShared;
+  const listObj = findList(name, shared);
+  if (!listObj) { go("lists"); return; }   // deleted out from under us
+  const signedIn = !!(CLOUD && CLOUD.user);
+  const ld = S.ld;
+  const all = listItems(name, shared);
+  const counties = [...new Set(all.map((p) => p.county))].sort();
+  const q = ld.q.trim().toLowerCase();
+  let rows = all.filter((p) => {
+    if (ld.county !== "All" && p.county !== ld.county) return false;
+    if (ld.status !== "All" && p.status !== ld.status) return false;
+    if (ld.buybox !== "All" && p.buybox !== ld.buybox) return false;
+    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  rows = [...rows].sort(sortComparator(ld.sort));
+  const totalBid = all.reduce((s, p) => s + (p.redeemed ? 0 : (p.bid || 0)), 0);
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+
+  $("scr-listdetail").innerHTML = `
+    <button class="btn btn-ghost" id="ld-back" style="padding:2px 4px;font-size:13px;margin-bottom:10px">&larr; All lists</button>
+    <div style="display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:4px">
+      <div style="flex:1;min-width:220px">
+        <h2 style="margin:0;display:inline-block">${esc(name)}</h2>
+        ${shared ? ' <span class="tag tag-outline" style="vertical-align:6px">team</span>' : ""}
+        <div class="text-muted" style="font-size:13.5px;margin-top:4px">${esc(listObj.desc || "No description yet.")}</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-secondary" id="ld-rename" style="font-size:12.5px;padding:5px 11px">Rename</button>
+        <button class="btn btn-secondary" id="ld-desc" style="font-size:12.5px;padding:5px 11px">Edit description</button>
+        ${signedIn ? `<button class="btn btn-secondary" id="ld-share" style="font-size:12.5px;padding:5px 11px">${shared ? "Make personal" : "Share with team"}</button>` : ""}
+        <button class="btn btn-secondary" id="ld-archive" style="font-size:12.5px;padding:5px 11px">Archive</button>
+        <button class="btn btn-ghost" id="ld-delete" style="font-size:12.5px;padding:5px 9px;color:var(--color-danger,#b3261e)">Delete</button>
+      </div>
+    </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:18px">${all.length} ${all.length === 1 ? "parcel" : "parcels"}${totalBid ? ` &middot; ${money(totalBid)} in opening bids` : ""}</div>
+
+    <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
+      <div class="field" style="width:170px"><label>County</label>
+        <select class="input" id="ld-county">${opt("All", ld.county, "All counties")}${counties.map((c) => opt(c, ld.county)).join("")}</select></div>
+      <div class="field" style="width:130px"><label>Status</label>
+        <select class="input" id="ld-status">${opt("All", ld.status, "All")}${opt("Scheduled", ld.status)}${opt("Redeemed", ld.status)}</select></div>
+      <div class="field" style="width:120px"><label>Buy box</label>
+        <select class="input" id="ld-buybox">${opt("All", ld.buybox, "All")}${opt("MATCH", ld.buybox)}${opt("REVIEW", ld.buybox)}${opt("NO", ld.buybox)}</select></div>
+      <div class="field" style="width:210px"><label>Sort by</label>
+        <select class="input" id="ld-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
+      <div class="field" style="flex:1;min-width:150px"><label>Search</label>
+        <input class="input" id="ld-q" placeholder="parcel, address, case #" value="${esc(ld.q)}"></div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-secondary" id="ld-pdf" style="font-size:12.5px;padding:6px 11px" ${rows.length ? "" : "disabled"}>Export PDF</button>
+        <button class="btn btn-secondary" id="ld-csv" style="font-size:12.5px;padding:6px 11px" ${rows.length ? "" : "disabled"}>Export CSV</button>
+        <span style="font-size:12px" class="text-muted">${rows.length.toLocaleString()} shown</span>
+      </div>
+    </div>
+
+    <div class="blueprint" style="padding:0">${CORNERS}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          ${rows.length ? rows.map((p) => {
+            const t = effType(p);
+            return `<tr class="${p.redeemed ? "redeem" : ""}">
+              <td class="mono rowlink" data-open="${esc(p.id)}" style="font-size:12.5px;color:var(--color-accent-700);cursor:pointer">${esc(p.parcel)}</td>
+              <td class="rowlink" data-open="${esc(p.id)}" style="cursor:pointer"><div style="font-weight:500">${esc(p.addr || "—")}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+              <td>${esc(p.county)}</td>
+              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+              <td style="font-size:13px">${esc(p.auction)}</td>
+              <td>${statusTag(p)}</td>
+              <td style="text-align:right"><button class="btn btn-ghost" data-remove="${esc(p.id)}" title="Remove from this list" style="font-size:11.5px;padding:2px 7px">Remove</button></td>
+            </tr>`;
+          }).join("")
+          : `<tr><td colspan="9" style="padding:22px;text-align:center" class="text-muted">${all.length ? "No parcels match these filters." : "This list is empty. Open any property and use “Add to list” to put it here."}</td></tr>`}
+        </tbody>
+      </table></div>
+    </div>`;
+
+  $("ld-back").onclick = () => go("lists");
+  // Export the list as it stands on screen — filters and sort included, so what
+  // the client sees is exactly what goes out.
+  const listSubtitle = `List: ${name}${shared ? " (shared with team)" : ""}`
+    + (rows.length !== all.length ? ` · filtered view (${rows.length} of ${all.length})` : "");
+  const pdfBtn = $("ld-pdf");
+  if (pdfBtn) pdfBtn.onclick = () => exportRowsPdf(rows, name, listSubtitle);
+  const csvBtn = $("ld-csv");
+  if (csvBtn) csvBtn.onclick = () => exportRowsCsv(rows, name);
+  $("ld-county").onchange = (e) => { ld.county = e.target.value; renderListDetail(); };
+  $("ld-status").onchange = (e) => { ld.status = e.target.value; renderListDetail(); };
+  $("ld-buybox").onchange = (e) => { ld.buybox = e.target.value; renderListDetail(); };
+  $("ld-sort").onchange = (e) => { ld.sort = e.target.value; renderListDetail(); };
+  $("ld-q").oninput = (e) => { ld.q = e.target.value; };
+  $("ld-q").onchange = () => renderListDetail();
+  $("ld-rename").onclick = () => {
+    const nn = prompt("Rename list:", name);
+    if (nn == null) return;
+    if (!renameList(name, nn, shared)) { if (nn.trim() && nn.trim() !== name) alert("That name is already taken."); return; }
+    renderListDetail();
+  };
+  $("ld-desc").onclick = () => {
+    const d = prompt("List description:", listObj.desc || "");
+    if (d == null) return;
+    setListDesc(name, shared, d.trim()); renderListDetail();
+  };
+  $("ld-archive").onclick = () => { setListArchived(name, shared, true); go("lists"); };
+  $("ld-delete").onclick = () => {
+    if (!confirm(`Delete the list “${name}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
+    deleteList(name, shared); go("lists");
+  };
+  const shareBtn = $("ld-share");
+  if (shareBtn) shareBtn.onclick = () => {
+    if (shared) {
+      team.lists = team.lists.filter((l) => l.name !== name);
+      if (!lists.some((l) => l.name === name)) lists.push({ name, desc: listObj.desc || "", archived: listObj.archived });
+      for (const [id, ln] of Object.entries(team.membership))
+        if (ln === name) { delete team.membership[id]; setInt(id, { list: name }); }
+      saveTeam(); saveLists();
+    } else {
+      lists = lists.filter((l) => l.name !== name);
+      if (!team.lists.some((l) => l.name === name)) team.lists.push({ name, desc: listObj.desc || "", archived: listObj.archived });
+      for (const [id, it] of Object.entries(interest))
+        if (it.list === name) { team.membership[id] = name; interest[id] = { ...it, list: "" }; }
+      saveInterest(); saveLists(); saveTeam();
+    }
+    S.listShared = !shared; renderListDetail();
+  };
+  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => go("detail", el.dataset.open));
+  $("scr-listdetail").querySelectorAll("[data-remove]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    removeFromList(b.dataset.remove, name, shared); renderListDetail();
+  });
+}
+
+// ---------- data updates (a Settings section) ----------
+function dataUpdatesHtml() {
+  // Everything here comes from the feed itself — no external calls.
+  const gen = META ? new Date(META.generated_at) : null;
+  const runs = META && META.county_runs ? META.county_runs : {};
+  // Group counties by the refresh that produced their rows, newest first.
+  const groups = {};
+  for (const [county, run] of Object.entries(runs)) (groups[run] = groups[run] || []).push(county);
+  const runDate = (run) => {
+    const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})/.exec(run || "");
+    return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5])) : null;
+  };
+  const byCounty = META ? META.counts.by_county : {};
+  const rows = Object.entries(groups)
+    .sort((a, b) => b[0].localeCompare(a[0]))
+    .map(([run, counties]) => {
+      const d = runDate(run);
+      const total = counties.reduce((s, c) => s + ((byCounty[c] || {}).total || 0), 0);
+      counties.sort();
+      const label = counties.length > 6
+        ? cap(counties.slice(0, 6).join(", ")) + ` +${counties.length - 6} more`
+        : cap(counties.join(", "));
+      return `<tr>
+        <td style="font-weight:500;white-space:nowrap">${d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : esc(run)}</td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${counties.length}</td>
+        <td style="text-align:right;font-variant-numeric:tabular-nums">${total.toLocaleString()}</td>
+        <td style="font-size:12.5px" class="text-muted">${esc(label)}</td>
+      </tr>`;
+    }).join("");
+  return `
+    <div class="blueprint" style="padding:18px 20px">${CORNERS}
+      <h6 style="color:var(--color-accent-700);margin-bottom:4px">Data updates</h6>
+      <p class="text-muted" style="font-size:13px;margin-bottom:8px">The data refreshes automatically every ${SCHEDULE_TEXT} &mdash; next refresh ${nextRefreshText()}. Each county's rows come from its most recent refresh.</p>
+      <p style="font-size:13.5px;margin-bottom:8px">${META ? `Current data as of <b>${esc(etStamp(gen))}</b> &mdash; ${META.counts.total.toLocaleString()} auctions across ${META.counts.counties} counties (${META.counts.scheduled.toLocaleString()} scheduled, ${META.counts.redeemed.toLocaleString()} redeemed).` : ""}</p>
+      ${REG().length ? `<p class="text-muted" style="font-size:13px;margin-bottom:16px">All ${REG().length} Florida counties are on the board: live auction feeds for the ${REG().filter((c) => c.coverage === "online").length} that sell online, and each remaining county&rsquo;s sale schedule and clerk links (pick it in the Dashboard county filter).</p>` : ""}
+      <div class="tablewrap"><table class="table">
+        <thead><tr><th>Refreshed</th><th style="text-align:right">Counties</th><th style="text-align:right">Auctions</th><th>Coverage</th></tr></thead>
+        <tbody>${rows || '<tr><td colspan="4" class="text-muted">No refresh data yet.</td></tr>'}</tbody>
+      </table></div>
+    </div>`;
+}
+
+// ---------- settings screen ----------
+function renderBuyboxCard() {
+  const cfg = buybox || EMPTY_BUYBOX;
+  // Every Florida county is a valid target — not just the ones with auctions
+  // in the feed right now. Registry names first (all 67, or however many
+  // shipped), falling back to whatever counties the feed itself carries.
+  const regNames = REG().map((c) => c.name);
+  const counties = [...new Set([...regNames, ...DATA.map((p) => p.county)])].sort();
+  const targetSet = new Set((cfg.target_counties || []).map(normCounty));
+  const targeted = counties.filter((c) => targetSet.has(normCounty(c)));
+  recomputeBuybox();
+  const match = DATA.filter((p) => p.buybox === "MATCH").length;
+  const review = DATA.filter((p) => p.buybox === "REVIEW").length;
+  return `
+    <div class="blueprint" style="padding:18px 20px">${CORNERS}
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap">
+        <h6 style="color:var(--color-accent-700);margin:0">Buy box</h6>
+        <span class="tag tag-accent">${match} MATCH</span><span class="tag tag-neutral">${review} REVIEW</span>
+        ${CLOUD && CLOUD.user ? '<span class="text-muted" style="font-size:12px;margin-left:auto">Shared with your team &mdash; live for everyone signed in</span>' : ""}
+      </div>
+      <p class="text-muted" style="font-size:13px;margin-bottom:14px">This is what turns the raw auction list into MATCH / REVIEW / NO &mdash; computed here in the dashboard, so it&rsquo;s entirely yours: pick your counties, your land types, your limits. Nobody else's buy box affects what you see.</p>
+
+      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px" class="text-muted">Target counties</div>
+      <div id="bb-counties" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:4px 10px;max-height:180px;overflow-y:auto;padding:10px;border:1px solid var(--color-divider);margin-bottom:16px">
+        ${counties.map((c) => `<label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
+          <input type="checkbox" data-county="${esc(normCounty(c))}" ${targetSet.has(normCounty(c)) ? "checked" : ""}> ${esc(c)}</label>`).join("")}
+      </div>
+
+      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+        <div class="field"><label>Land / rural keywords (MATCH)</label>
+          <input class="input" id="bb-land" value="${esc((cfg.land_use_keywords || []).join(", "))}" placeholder="vacant, land, acreage, ranch&hellip;"></div>
+        <div class="field"><label>Non-land keywords (always NO)</label>
+          <input class="input" id="bb-nonland" value="${esc((cfg.non_land_keywords || []).join(", "))}" placeholder="condo, commercial, warehouse&hellip;"></div>
+      </div>
+      <div class="field" style="max-width:220px;margin-bottom:${targeted.length ? "16px" : "0"}"><label>Max opening bid, any county</label>
+        <input class="input" id="bb-maxbid" value="${cfg.max_opening_bid != null ? esc(cfg.max_opening_bid) : ""}" placeholder="$ no cap" style="font-variant-numeric:tabular-nums"></div>
+
+      ${targeted.length ? `
+        <details ${Object.keys(cfg.county_caps || {}).length ? "open" : ""}>
+          <summary style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;cursor:pointer;color:var(--color-accent-700)">Per-county limits (optional &mdash; overrides the max above)${Object.keys(cfg.county_caps || {}).length ? ` &middot; ${Object.keys(cfg.county_caps).length} set` : ""}</summary>
+        <div class="tablewrap"><table class="table" style="max-width:520px">
+          <thead><tr><th>County</th><th>Max bid</th><th>Deposit on hand</th></tr></thead>
+          <tbody>${targeted.map((c) => { const k = normCounty(c); const cap = (cfg.county_caps || {})[k] || {};
+            return `<tr><td>${esc(c)}</td>
+              <td><input class="input" data-cap-max="${esc(k)}" value="${cap.max_bid != null ? esc(cap.max_bid) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td>
+              <td><input class="input" data-cap-dep="${esc(k)}" value="${cap.deposit != null ? esc(cap.deposit) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td></tr>`; }).join("")}
+          </tbody>
+        </table></div></details>` : ""}
+    </div>`;
+}
+
+function wireBuyboxCard() {
+  const num = (v) => { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) ? null : n; };
+  const update = (patch) => { buybox = { ...EMPTY_BUYBOX, ...buybox, ...patch }; saveBuybox(); recomputeBuybox(); };
+  $("bb-counties").querySelectorAll("[data-county]").forEach((cb) => cb.onchange = () => {
+    const set = new Set(buybox.target_counties || []);
+    cb.checked ? set.add(cb.dataset.county) : set.delete(cb.dataset.county);
+    update({ target_counties: [...set] });
+    renderBuyboxScreen();
+  });
+  const reRender = () => renderBuyboxScreen();
+  $("bb-land").onchange = (e) => { update({ land_use_keywords: csvList(e.target.value) }); reRender(); };
+  $("bb-nonland").onchange = (e) => { update({ non_land_keywords: csvList(e.target.value) }); reRender(); };
+  $("bb-maxbid").onchange = (e) => { update({ max_opening_bid: num(e.target.value) }); reRender(); };
+  $("scr-buybox").querySelectorAll("[data-cap-max],[data-cap-dep]").forEach((inp) => inp.onchange = () => {
+    const k = inp.dataset.capMax || inp.dataset.capDep;
+    const caps = { ...(buybox.county_caps || {}) };
+    const maxEl = $("scr-buybox").querySelector(`[data-cap-max="${k}"]`);
+    const depEl = $("scr-buybox").querySelector(`[data-cap-dep="${k}"]`);
+    const next = { max_bid: num(maxEl.value), deposit: num(depEl.value) };
+    if (next.max_bid == null && next.deposit == null) delete caps[k]; else caps[k] = next;
+    update({ county_caps: caps });
+    reRender();
+  });
+}
+
+// ---------- buy box screen: criteria + saved-search runner ----------
+// Every property the buy box currently accepts, so a search can be turned into
+// a list or a PDF in one step.
+function buyboxMatches() {
+  const want = S.bb.includeReview ? ["MATCH", "REVIEW"] : ["MATCH"];
+  let rows = DATA.filter((p) => want.includes(p.buybox));
+  if (S.bb.scheduledOnly) rows = rows.filter((p) => !p.redeemed);
+  return [...rows].sort(sortComparator(S.bb.sort));
+}
+function renderBuyboxScreen() {
+  recomputeBuybox();
+  const rows = buyboxMatches();
+  const matchTotal = DATA.filter((p) => p.buybox === "MATCH").length;
+  const reviewTotal = DATA.filter((p) => p.buybox === "REVIEW").length;
+  const counties = [...new Set(rows.map((p) => p.county))].sort();
+  const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const shown = rows.slice(0, S.bb.shown);
+
+  $("scr-buybox").innerHTML = `
+    <h2 style="margin-bottom:6px">Buy box</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:22px">Set what you&rsquo;re looking for, then run it against every upcoming auction. Turn the results into a list or a PDF.</p>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:1000px">
+      ${renderBuyboxCard()}
+
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
+        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when the dashboard&rsquo;s Sort is set to &ldquo;My preferred types first&rdquo; (type comes from the appraiser record; the buy box's MATCH/REVIEW ranks the rest).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
+          ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
+        </div>
+        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
+          <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
+      </div>
+
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px">
+          <h6 style="color:var(--color-accent-700);margin:0">Matches</h6>
+          <span class="tag tag-accent">${matchTotal} MATCH</span><span class="tag tag-neutral">${reviewTotal} REVIEW</span>
+        </div>
+        <p class="text-muted" style="font-size:13px;margin-bottom:14px">Every property that fits the buy box above, across all ${META ? META.counts.counties : ""} counties. Re-runs itself whenever you change the criteria or the data refreshes.</p>
+
+        <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px">
+          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="bbm-review" ${S.bb.includeReview ? "checked" : ""}> Include REVIEW (needs a look)</label>
+          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="bbm-sched" ${S.bb.scheduledOnly ? "checked" : ""}> Upcoming auctions only</label>
+          <div class="field" style="width:230px;margin-left:auto"><label>Sort by</label>
+            <select class="input" id="bbm-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.bb.sort, l)).join("")}</select></div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);margin-bottom:14px">
+          <div style="font-size:14px"><b style="font-family:var(--font-heading);font-size:22px">${rows.length.toLocaleString()}</b>
+            <span class="text-muted">${rows.length === 1 ? "property" : "properties"} matched${counties.length ? ` &middot; ${counties.length} ${counties.length === 1 ? "county" : "counties"}` : ""}${bidSum ? ` &middot; ${money(bidSum)} in opening bids` : ""}</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-left:auto">
+            <input class="input" id="bbm-listname" placeholder="New list name&hellip;" style="width:190px" ${rows.length ? "" : "disabled"}>
+            <button class="btn btn-primary" id="bbm-makelist" ${rows.length ? "" : "disabled"}>+ Create list from these</button>
+            <button class="btn btn-secondary" id="bbm-pdf" ${rows.length ? "" : "disabled"}>Export PDF</button>
+          </div>
+        </div>
+
+        ${rows.length ? `
+          <div class="tablewrap"><table class="table">
+            <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Buy box</th></tr></thead>
+            <tbody>
+              ${shown.map((p) => `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+                <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
+                <td><div style="font-weight:500">${esc(p.addr || "—")}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
+                <td>${esc(p.county)}</td>
+                <td>${effType(p) ? `<span class="tag tag-neutral">${esc(effType(p))}</span>` : '<span class="text-muted">—</span>'}</td>
+                <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
+                <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
+                <td style="font-size:13px">${esc(p.auction)}</td>
+                <td><span class="tag ${p.buybox === "MATCH" ? "tag-accent" : "tag-neutral"}">${esc(p.buybox)}</span></td>
+              </tr>`).join("")}
+            </tbody>
+          </table></div>
+          ${rows.length > S.bb.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+            <button class="btn btn-secondary" id="bbm-more">Show ${Math.min(200, rows.length - S.bb.shown)} more (${(rows.length - S.bb.shown).toLocaleString()} hidden)</button></div>` : ""}`
+        : `<div class="text-muted" style="font-size:13.5px;padding:6px 0">Nothing matches yet &mdash; pick your target counties above, or switch on REVIEW to include properties whose land use the county hasn&rsquo;t published.</div>`}
+      </div>
+    </div>`;
+
+  $("type-prefs").querySelectorAll("[data-type]").forEach((b) =>
+    b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderBuyboxScreen(); });
+  $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
+  $("bbm-review").onchange = (e) => { S.bb.includeReview = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
+  $("bbm-sched").onchange = (e) => { S.bb.scheduledOnly = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
+  $("bbm-sort").onchange = (e) => { S.bb.sort = e.target.value; renderBuyboxScreen(); };
+  const more = $("bbm-more"); if (more) more.onclick = () => { S.bb.shown += 200; renderBuyboxScreen(); };
+  $("scr-buybox").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+
+  const mk = $("bbm-makelist");
+  if (mk) mk.onclick = () => {
+    const el = $("bbm-listname");
+    const name = (el.value || "").trim() ||
+      `Buy-box matches — ${new Date(etToday() * 864e5).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}`;
+    if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
+      alert("You already have a list with that name — pick another."); return;
+    }
+    const matched = buyboxMatches();
+    lists.push({ name, desc: `${matched.length} ${matched.length === 1 ? "property" : "properties"} matching your buy box.` });
+    saveLists();
+    for (const p of matched) setInt(p.id, { list: name });
+    el.value = "";
+    openList(name, false);
+  };
+  const pdf = $("bbm-pdf");
+  if (pdf) pdf.onclick = () => {
+    const cfg = buybox || EMPTY_BUYBOX;
+    const counties = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
+    exportRowsPdf(buyboxMatches(), "buy-box matches",
+      `${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}`
+      + `${S.bb.scheduledOnly ? " · upcoming auctions only" : ""} · Counties: ${counties}`);
+  };
+  wireBuyboxCard();   // counties, keywords, caps — the criteria inputs above
+}
+
+// Printable report of any set of properties — the buy-box matches, or a list
+// exactly as the client built it. Rendered into a hidden iframe and sent to the
+// browser's print dialog, where "Save as PDF" is the usual target: no external
+// library, works offline.
+function exportRowsPdf(rows, title, subtitle) {
+  const when = etStamp(new Date());
+  const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
+  const body = rows.map((p) => `<tr>
+      <td class="mono">${esc(p.parcel)}</td>
+      <td>${esc(p.addr || "(no street address published)")}${p.city ? `<br><span class="muted">${esc(p.city)}</span>` : ""}</td>
+      <td>${esc(p.county)}</td>
+      <td>${esc(effType(p) || "—")}</td>
+      <td class="num">${p.assessed == null ? "—" : money(p.assessed)}</td>
+      <td class="num">${p.bid == null ? "—" : money(p.bid)}</td>
+      <td>${esc(p.auction)}</td>
+      <td>${esc(p.buybox)}</td>
+    </tr>`).join("");
+  const doc = `<!doctype html><html><head><meta charset="utf-8">
+    <title>${esc(title)} — ${esc(BRAND)}</title>
+    <style>
+      @page { size: letter landscape; margin: 14mm; }
+      body { font: 11px/1.45 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:#111; }
+      h1 { font-size: 17px; margin: 0 0 2px; }
+      .sub { color:#555; font-size: 11px; margin-bottom: 12px; }
+      table { width:100%; border-collapse: collapse; }
+      th, td { text-align:left; padding:5px 7px; border-bottom:1px solid #ddd; vertical-align:top; }
+      th { font-size:9.5px; letter-spacing:.06em; text-transform:uppercase; color:#444; border-bottom:1.5px solid #888; }
+      tr { break-inside: avoid; }
+      thead { display: table-header-group; }
+      .num { text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; }
+      .muted { color:#666; }
+      .foot { margin-top:12px; color:#666; font-size:10px; }
+    </style></head><body>
+    <h1>${esc(BRAND)} &mdash; ${esc(title)}</h1>
+    <div class="sub">${rows.length.toLocaleString()} ${rows.length === 1 ? "property" : "properties"}
+      &middot; ${money(bidSum)} in opening bids
+      ${subtitle ? `<br>${esc(subtitle)}` : ""}
+      <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(etStamp(new Date(META.generated_at)))}` : ""}</div>
+    <table><thead><tr>
+      <th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th>
+      <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Buy box</th>
+    </tr></thead><tbody>${body}</tbody></table>
+    <div class="foot">Values are the county's published figures. Confirm land use, liens and case status before bidding.</div>
+    </body></html>`;
+
+  const frame = document.createElement("iframe");
+  frame.setAttribute("aria-hidden", "true");
+  frame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0";
+  document.body.appendChild(frame);
+  frame.srcdoc = doc;
+  frame.onload = () => {
+    try { frame.contentWindow.focus(); frame.contentWindow.print(); }
+    catch (e) { console.warn("print failed:", e); }
+    // Leave the frame up long enough for the print dialog to read it.
+    setTimeout(() => frame.remove(), 60000);
+  };
+}
+
+// ---------- settings screen: the person's account + workspace ----------
+function renderSettings() {
+  const signedIn = !!(CLOUD && CLOUD.user);
+  $("scr-settings").innerHTML = `
+    <h2 style="margin-bottom:6px">Settings</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:22px">Your account, your plan, and where the data comes from.</p>
+    <div style="display:flex;flex-direction:column;gap:26px;max-width:1000px">
+      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start">
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Account</h6>
+          ${signedIn ? `
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+              <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Signed in as</div>
+                <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div></div>
+              <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Workspace</div>
+                <div style="font-weight:500">${esc(TEAM_ID || "—")}${IS_ADMIN ? ' <span class="tag tag-accent">admin</span>' : ""}</div></div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+              <button class="btn btn-secondary" id="acct-password" style="font-size:12.5px;padding:5px 11px">Change password</button>
+              <button class="btn btn-ghost" id="acct-signout" style="font-size:12.5px;padding:5px 9px">Sign out</button>
+            </div>
+            <div style="font-size:12.5px;margin-top:12px" class="text-muted">Your lists, notes and positions sync to this account on every device you sign in on.</div>`
+          : `<div style="font-size:13.5px;margin-bottom:10px">You&rsquo;re not signed in.</div>
+             <div class="text-muted" style="font-size:12.5px;margin-bottom:12px">${SYNC_ON
+               ? "Lists, notes and your buy box are saved in this browser only. Sign in to carry them to your phone and every other device."
+               : "Lists, notes and your buy box are saved in this browser."}</div>
+             ${SYNC_ON ? '<button class="btn btn-primary" id="acct-signin">Sign in</button>' : ""}`}
+        </div>
+
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Subscription</h6>
+          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">${esc(PLAN.name)}</div>
+            <span class="tag tag-accent">${esc(PLAN.status)}</span>
+          </div>
+          <div style="font-size:13.5px;margin-bottom:4px">${esc(PLAN.price)}</div>
+          <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">${esc(PLAN.note)}</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-secondary" id="sub-upgrade" style="font-size:12.5px;padding:5px 11px">Change plan</button>
+            <button class="btn btn-ghost" id="sub-cancel" style="font-size:12.5px;padding:5px 9px;color:var(--color-danger,#b3261e)">Cancel subscription</button>
+          </div>
+          <div class="text-muted" style="font-size:12px;margin-top:12px">Billing is handled by your account manager today &mdash; these open an email. Self-serve billing is coming.</div>
+        </div>
+      </div>
+
+      ${dataUpdatesHtml()}
+    </div>`;
+
+  const so = $("acct-signout");
+  if (so) so.onclick = () => CLOUD.sb.auth.signOut();
+  const si = $("acct-signin");
+  if (si) si.onclick = () => {
+    $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
+    $("login-overlay").hidden = false; $("login-email").focus();
+  };
+  const pw = $("acct-password");
+  if (pw) pw.onclick = async () => {
+    if (!CLOUD || !CLOUD.user) return;
+    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(CLOUD.user.email);
+    alert(error ? "Couldn't send the reset email (" + error.message + ")."
+                : "Password reset email sent to " + CLOUD.user.email + " — check your inbox.");
+  };
+  const mailto = (subject) => {
+    const who = signedIn ? CLOUD.user.email : "(not signed in)";
+    return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}`
+         + `&body=${encodeURIComponent(`Account: ${who}\nWorkspace: ${TEAM_ID || "—"}\n\n`)}`;
+  };
+  $("sub-upgrade").onclick = () => { window.location.href = mailto(`${BRAND} — change my plan`); };
+  $("sub-cancel").onclick = () => {
+    if (!confirm("Request cancellation? This opens an email to your account manager — nothing is cancelled until they confirm.")) return;
+    window.location.href = mailto(`${BRAND} — cancel my subscription`);
+  };
+}
+
+// ---------- exports ----------
+// Any set of rows -> CSV. Used by the dashboard (the filtered board), and by a
+// list's own page (that list, as the client built it).
+const slugify = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "export";
+function exportRowsCsv(rows, name) {
+  const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Buy-box","Buy-box Notes","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
+  const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+  const lines = [cols.join(",")];
+  for (const p of rows) {
+    const it = getInt(p.id);
+    lines.push([p.county, p.auction, p.saleTime, p.parcel, p.case_number, p.cert, p.rawAddr,
+      p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.buybox, p.buyboxNotes, p.status,
+      it.status, it.bid, effList(p.id), effType(p), it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
+  }
+  const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `${slugify(name)}_${ET_YMD.format(new Date())}.csv`;
+  a.click(); URL.revokeObjectURL(a.href);
+}
+const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
+
+// ---------- boot ----------
+(async function boot() {
+  renderNav();
+  wireLogin();
+  initCloud();                      // no await — sync comes up alongside the feed
+  $("next-run").textContent = nextRefreshText();
+  $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };
+  $("btn-export").onclick = exportCsv;
+  $("btn-refresh-admin").onclick = () => window.open(ADMIN_ACTIONS_URL, "_blank", "noopener");
+  const ok = await loadFeed();
+  if (!ok) {
+    $("load-note").innerHTML = '<span class="text-muted">Couldn&rsquo;t load the data feed. Check your connection and reload.</span>';
+    return;
+  }
+  $("load-note").remove();
+  $("last-scrape").textContent = "Data as of " + etStamp(new Date(META.generated_at));
+  $("brand-sub").textContent = `Florida · ${META.counts.counties_total || META.counts.counties} counties`;
+  go("dashboard");
+})();
+</script>
+</body>
+</html>
