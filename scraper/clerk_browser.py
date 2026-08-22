@@ -159,6 +159,7 @@ class NewVisionResolver:
             # elsewhere in this single-page app instead of a real result, so
             # look for the searched value itself first and only fall back to a
             # generic clickable-row selector for portals that use a real table.
+            row_status = None
             try:
                 cell = self.page.locator(".ag-cell", has_text=value).first
                 if cell.count():
@@ -168,35 +169,46 @@ class NewVisionResolver:
                         'table tr:has(a), tr[onclick], a:has-text("View")').first
                 if row.count():
                     row.scroll_into_view_if_needed(timeout=5000)
-                    # Neither a single nor a double click on the value cell
-                    # populates Deed Status/Date Received (confirmed on 5/5
-                    # sample records, byte-identical empty result every time)
-                    # — dump every cell in this row (class + text) once to see
-                    # if there's a distinct "view/select" action cell/icon we
-                    # should be clicking instead of the plain value cell.
+                    # The grid row itself already carries the case's outcome
+                    # (e.g. "SOLD"/"REDEEM") in one of its plain cells — a
+                    # reliable status signal that needs no click at all.
                     try:
-                        cells_info = row.evaluate("""el => [...el.querySelectorAll('.ag-cell')].map(
-                            c => ({cls: c.className, text: c.textContent.trim().slice(0, 60),
-                                   html: c.innerHTML.slice(0, 150)}))""")
-                        print(f"[newvision] row cells: {cells_info}", flush=True)
-                    except Exception as exc:                # noqa: BLE001
-                        print(f"[newvision] row cell dump failed: {exc}", flush=True)
-                    row.click(timeout=5000)
+                        cell_texts = row.evaluate(
+                            "el => [...el.querySelectorAll('.ag-cell')].map(c => c.textContent.trim())")
+                        row_status = next(
+                            (t for t in cell_texts
+                             if t.upper() in ("SOLD", "REDEEM", "REDEEMED", "CANCELLED", "CANCELED")),
+                            None)
+                    except Exception:                       # noqa: BLE001
+                        pass
+                    # Clicking the row itself never opens the case detail
+                    # (confirmed on 5/5 sample records with both single- and
+                    # double-click). The row's own "View" button
+                    # (ng-click="fetchDocument(id, 1)") is the real trigger.
+                    view_btn = row.locator('button:has-text("View")').first
+                    if view_btn.count():
+                        view_btn.click(timeout=5000)
+                    else:
+                        row.click(timeout=5000)
                     self.page.wait_for_load_state("networkidle", timeout=self.timeout)
-                    print(f"[newvision] result row clicked, now at {self.page.url}", flush=True)
+                    print(f"[newvision] row_status={row_status!r}, View button clicked, "
+                          f"now at {self.page.url}", flush=True)
                 else:
                     print(f"[newvision] no result row found after search ({field}={value})", flush=True)
             except Exception as exc:                   # noqa: BLE001
                 print(f"[newvision] result row click failed ({field}={value}): "
                       f"{exc.__class__.__name__}: {exc}", flush=True)
 
-            # The click only selects the row; give Angular a moment to fill the
-            # detail panel's ng-binding cells afterward, since networkidle
-            # alone doesn't guarantee the digest cycle has finished.
+            # The click triggers an async fetchDocument() call; give Angular a
+            # moment to fill the detail panel's ng-binding cells afterward,
+            # since networkidle alone doesn't guarantee the digest cycle has
+            # finished.
             self.page.wait_for_timeout(800)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
+            if not parsed.get("deed_status") and row_status:
+                parsed["deed_status"] = row_status
             # Confirm we actually landed on this parcel's record before trusting it.
             hay = re.sub(r"[^A-Za-z0-9]", "", html).upper()
             value_present = re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay
@@ -210,38 +222,5 @@ class NewVisionResolver:
                 return parsed
             print(f"[newvision] unresolved ({field}={value}): value_on_page={value_present} "
                   f"parsed_keys={list(parsed.keys())}", flush=True)
-            # parse_case_page only scans td/th/dt/label/strong/b/span for a
-            # label cell — never div. If Marion's document view lays out
-            # labels in divs (common in Angular apps), the scan would miss it
-            # entirely regardless of whether the click landed correctly.
-            # Confirm by looking for the raw label text and dumping its
-            # surrounding markup.
-            for kw in ("deed status", "case status", "appl. name", "applicant",
-                       "tax deed", "document"):
-                idx = html.lower().find(kw)
-                if idx != -1:
-                    snippet = html[max(0, idx - 80):idx + 250]
-                    print(f"[newvision] found {kw!r} in raw HTML at offset {idx}; "
-                          f"surrounding markup: {snippet!r}", flush=True)
-                    break
-            else:
-                print("[newvision] none of the expected case-detail label strings "
-                      "appear anywhere in the page HTML", flush=True)
-            # _doc_rows() (scraper/clerk.py) only looks at <a href="..."> tags.
-            # The "513 Form" link we found earlier used ng-click with no href
-            # at all (Angular's usual pattern) — if Marion's real document
-            # links are the same, case_docs can never populate here regardless
-            # of what the record's actual status is. Count both link styles to
-            # tell a genuinely-empty case apart from a parser gap.
-            href_count = len(re.findall(r"<a\b[^>]*\bhref\s*=", html, re.I))
-            ngclick_count = len(re.findall(r"<a\b[^>]*\bng-click\s*=", html, re.I))
-            print(f"[newvision] link styles on page: <a href>={href_count} "
-                  f"<a ng-click>={ngclick_count}", flush=True)
-            m = re.search(r"Date Received:</td>\s*<td[^>]*>([^<]*)</td>", html)
-            if m:
-                print(f"[newvision] Date Received value: {m.group(1)!r} "
-                      "(non-empty here but deed_status empty would mean this "
-                      "case genuinely has no deed status yet, not a parser bug)",
-                      flush=True)
             self._loaded = None
         return {}
