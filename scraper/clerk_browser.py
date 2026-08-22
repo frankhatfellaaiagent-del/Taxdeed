@@ -179,6 +179,28 @@ class NewVisionResolver:
                 print(f"[newvision] result row click failed ({field}={value}): "
                       f"{exc.__class__.__name__}: {exc}  matches={total} visible={visible} "
                       f"class={cls!r} html={outer!r}", flush=True)
+                # The generic clickable-row selector above can match an unrelated
+                # element elsewhere in this single-page app (e.g. a permanently
+                # hidden "513 Form" link) instead of the real results grid.
+                # Locate the actual result by searching for the value itself and
+                # walking up its ancestor chain to see the grid's real markup.
+                try:
+                    hits = self.page.get_by_text(value, exact=False)
+                    hit_count = hits.count()
+                    chain = hits.first.evaluate("""el => {
+                        const out = [];
+                        let node = el;
+                        for (let i = 0; i < 6 && node; i++) {
+                            out.push(node.tagName + (node.className ? '.' + node.className : '') +
+                                      (node.id ? '#' + node.id : ''));
+                            node = node.parentElement;
+                        }
+                        return out;
+                    }""")
+                    print(f"[newvision] value {value!r} found in {hit_count} element(s); "
+                          f"first match's ancestor chain (self..6 levels up): {chain}", flush=True)
+                except Exception as exc3:              # noqa: BLE001
+                    print(f"[newvision] value-based lookup also failed: {exc3}", flush=True)
 
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
