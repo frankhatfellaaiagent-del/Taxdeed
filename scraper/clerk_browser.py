@@ -177,6 +177,26 @@ class NewVisionResolver:
                 print(f"[newvision] result row click failed ({field}={value}): "
                       f"{exc.__class__.__name__}: {exc}", flush=True)
 
+            # The click only selects the row; Angular fills the detail panel's
+            # ng-binding cells (Deed Status, Date Received, ...) asynchronously
+            # afterward, so networkidle alone isn't enough — the labels can be
+            # present with their value cells still empty. Wait for the Deed
+            # Status binding specifically to have real content.
+            try:
+                self.page.wait_for_function(
+                    """() => {
+                        const label = [...document.querySelectorAll('td')].find(
+                            td => td.textContent.trim().startsWith('Deed Status'));
+                        if (!label) return false;
+                        const sib = label.nextElementSibling;
+                        return !!(sib && sib.textContent.trim());
+                    }""",
+                    timeout=8000,
+                )
+            except Exception as exc:                   # noqa: BLE001
+                print(f"[newvision] deed-status binding wait timed out ({field}={value}): "
+                      f"{exc.__class__.__name__}: {exc}", flush=True)
+
             html = self.page.content()
             parsed = parse_case_page(html, self.page.url)
             # Confirm we actually landed on this parcel's record before trusting it.
