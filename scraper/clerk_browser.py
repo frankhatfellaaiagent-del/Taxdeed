@@ -133,13 +133,16 @@ class NewVisionResolver:
         if not portal or not self._open_portal(portal):
             return {}
 
+        log.debug("newvision portal ready: %s", portal)
         for field, keywords in SEARCH_FIELDS:
             value = str(rec.get(field) or rec.get("case_number") or "").strip()
             if not value:
+                log.debug("newvision field=%s: record has no value, skipped", field)
                 continue
             self._select_search_tab(field)
             box = self._find_input(keywords)
             if box is None:
+                log.debug("newvision field=%s value=%s: no fillable input found", field, value)
                 continue
             try:
                 box.fill("")
