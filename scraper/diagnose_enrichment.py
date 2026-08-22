@@ -14,9 +14,10 @@ and prints enough of each response to diagnose the cause: status, final URL
 after redirects, and a chunk of the actual page text. It also probes the five
 online counties whose clerk portal isn't yet classified to a resolver
 platform (Bay, Clay, Lake, Leon, Orange), and Marion's NewVision clerk portal
-end to end (a real resolve() call, now that the resolver's tab-reveal
-gating, wrong-panel submit, tax_number keyword mismatch, HTTP/2 navigation
-failure and off-screen results row have all been fixed in clerk_browser.py).
+end to end (real resolve() calls against several sample records, now that
+the resolver's tab-reveal gating, wrong-panel submit, tax_number keyword
+mismatch, HTTP/2 navigation failure, off-screen results row, ag-Grid row
+click and Angular render timing have all been fixed in clerk_browser.py).
 
 Read-only, prints everything to stdout for log-based review.
 
@@ -151,11 +152,13 @@ def diagnose_marion_clerk() -> None:
         return
 
     feed = json.loads(FEED_PATH.read_text(encoding="utf-8"))
-    rec = next((r for r in feed["records"] if r.get("county") == "marion"), None)
-    if not rec:
+    recs = [r for r in feed["records"] if r.get("county") == "marion"][:5]
+    if not recs:
         print("  no Marion record found in the feed")
         return
-    print(f"  sample: parcel {rec['parcel_id']}  case {rec['case_number']}  tax_number={rec.get('certificate_number')}")
+    print(f"  trying up to {len(recs)} Marion record(s) — the first sample case was")
+    print("  confirmed to genuinely have no Deed Status/Date Received/documents yet"
+          " (a not-yet-processed case), so try more until one actually resolves.")
 
     sites = yaml.safe_load(CLERK_SITES_PATH.read_text(encoding="utf-8")) or {}
     cfg = sites.get("marion", {})
@@ -168,16 +171,24 @@ def diagnose_marion_clerk() -> None:
             from .clerk_browser import NewVisionResolver
             page = browser.new_page()
             nv = NewVisionResolver(page)
-            result = nv.resolve(rec, cfg)
-            print(f"  result keys: {list(result.keys()) or '(empty — still unresolved)'}")
-            if result.get("clerk_case_url"):
-                print(f"  clerk_case_url: {result['clerk_case_url']}")
-            if result.get("case_docs"):
-                print(f"  case_docs: {len(result['case_docs'])} document(s)")
-            if result.get("deed_status"):
-                print(f"  deed_status: {result['deed_status']}")
-        except Exception as exc:                              # noqa: BLE001
-            print(f"  EXCEPTION: {exc.__class__.__name__}: {exc}")
+            for i, rec in enumerate(recs):
+                print(f"  --- record {i + 1}/{len(recs)}: parcel {rec['parcel_id']} "
+                      f"case {rec['case_number']} tax_number={rec.get('certificate_number')} ---")
+                try:
+                    result = nv.resolve(rec, cfg)
+                except Exception as exc:                       # noqa: BLE001
+                    print(f"  EXCEPTION: {exc.__class__.__name__}: {exc}")
+                    continue
+                print(f"  result keys: {list(result.keys()) or '(empty — still unresolved)'}")
+                if result.get("clerk_case_url"):
+                    print(f"  clerk_case_url: {result['clerk_case_url']}")
+                if result.get("case_docs"):
+                    print(f"  case_docs: {len(result['case_docs'])} document(s)")
+                if result.get("deed_status"):
+                    print(f"  deed_status: {result['deed_status']}")
+                if result:
+                    print("  RESOLVED — stopping here.")
+                    break
         finally:
             browser.close()
 
