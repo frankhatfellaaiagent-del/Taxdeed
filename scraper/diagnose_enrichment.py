@@ -212,6 +212,16 @@ def diagnose_marion_clerk() -> None:
                         continue
                     box.fill("")
                     box.fill(value)
+
+                    # A whole-tab navigation to chrome-error:// means a
+                    # top-level request failed at the network layer (not a
+                    # JS/XHR error) — capture exactly which URL and why.
+                    failures = []
+                    requests_seen = []
+                    page2.on("requestfailed", lambda r: failures.append(
+                        (r.url, r.failure, r.method)))
+                    page2.on("framenavigated", lambda f: requests_seen.append(f.url))
+
                     try:
                         near_result = nv._submit_near(box)
                         print(f"      _submit_near(box) returned: {near_result}")
@@ -220,6 +230,9 @@ def diagnose_marion_clerk() -> None:
                         near_result = None
                     if not near_result:
                         nv._submit(box)
+                    page2.wait_for_timeout(1000)
+                    print(f"      frame navigations: {requests_seen}")
+                    print(f"      failed requests: {failures}")
                     try:
                         page2.wait_for_load_state("networkidle", timeout=nv.timeout)
                     except Exception as exc:                  # noqa: BLE001
