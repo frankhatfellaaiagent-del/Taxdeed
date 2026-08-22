@@ -188,122 +188,21 @@ def diagnose_marion_clerk() -> None:
             body_text = page.locator("body").inner_text()[:800]
             print(f"  page body text (first 800 chars):\n    {body_text}")
 
-            # The parcel/tax-number inputs came back not-visible — this portal
-            # likely gates them behind a search-type tab/selector. Find every
-            # clickable element whose text names a search category, so we know
-            # exactly what to click before the right input appears.
-            print("  step: clickable elements matching search-category labels")
-            for label in ["Tax Number", "Parcel Number", "Name", "Sale Date", "Lands Available"]:
-                try:
-                    els = page.get_by_text(label, exact=False).all()
-                    for el in els[:5]:
-                        tag = el.evaluate("e => e.tagName")
-                        cls = el.get_attribute("class")
-                        role = el.get_attribute("role")
-                        onclick = el.get_attribute("onclick")
-                        print(f"    {label!r}: <{tag}> class={cls!r} role={role!r} "
-                              f"onclick={(onclick or '')[:60]!r} visible={el.is_visible()}")
-                except Exception as exc:                  # noqa: BLE001
-                    print(f"    {label!r}: (error: {exc})")
-
-            # Try clicking "Tax Number" directly and see what becomes visible.
-            try:
-                print("  step: click 'Tax Number' tab, then re-check input visibility")
-                page.get_by_text("Tax Number", exact=False).first.click(timeout=5000)
-                page.wait_for_timeout(1000)
-                for sel in ["#txtTaxValue", "#txtParcelValue"]:
-                    loc = page.locator(sel)
-                    if loc.count():
-                        print(f"    {sel}: visible={loc.is_visible()}")
-            except Exception as exc:                      # noqa: BLE001
-                print(f"    click failed: {exc.__class__.__name__}: {exc}")
-
-            # End-to-end: does the fixed resolver actually get a case now?
-            # Narrated manually (not just calling resolve()) so a silent {}
-            # shows exactly which stage failed.
-            print("  step: NewVisionResolver flow, narrated (fresh page)")
-            from .clerk_browser import NewVisionResolver, SEARCH_FIELDS
+            # End-to-end: does the resolver actually get a case now, with the
+            # row-scoped tab-click + submit fix in place?
+            print("  step: NewVisionResolver.resolve() end to end (fresh page)")
+            from .clerk_browser import NewVisionResolver
             page2 = browser.new_page()
             try:
                 nv = NewVisionResolver(page2)
-                opened = nv._open_portal(portal)
-                print(f"    portal opened: {opened}")
-                for field, keywords in SEARCH_FIELDS:
-                    value = str(rec.get(field) or rec.get("case_number") or "").strip()
-                    if not value:
-                        print(f"    field={field}: record has no value, skipped")
-                        continue
-                    print(f"    field={field} value={value!r}")
-                    nv._select_search_tab(field)
-                    box = nv._find_input(keywords)
-                    print(f"      input found: {box is not None}"
-                          + (f" (visible={box.is_visible()})" if box is not None else ""))
-                    if box is None:
-                        continue
-                    box.fill("")
-                    box.fill(value)
-
-                    # Before submitting: what's actually clickable here? _submit()'s
-                    # selectors may not match this Angular app's real trigger.
-                    print("      buttons/links on the page after fill:")
-                    for el in page2.locator("button, a, input[type=submit], input[type=button]").all()[:20]:
-                        try:
-                            print(f"        <{el.evaluate('e => e.tagName')}> "
-                                  f"text={el.inner_text()[:30]!r} visible={el.is_visible()} "
-                                  f"class={el.get_attribute('class')!r}")
-                        except Exception as exc:          # noqa: BLE001
-                            print(f"        (error reading element: {exc})")
-
-                    # Several duplicate "Search" buttons exist (one per tab
-                    # panel) — find which one shares an ancestor with the
-                    # filled input, since that's the one that actually belongs
-                    # to the active panel.
-                    print("      ancestor chain of the filled input (up to 6 levels):")
-                    anc = box.evaluate("""el => {
-                        const out = []; let n = el.parentElement;
-                        for (let i = 0; i < 6 && n; i++) {
-                            out.push(n.tagName + (n.className ? '.' + String(n.className).replace(/\\s+/g,'.') : '')
-                                     + (n.getAttribute('ng-show') ? '[ng-show=' + n.getAttribute('ng-show') + ']' : ''));
-                            n = n.parentElement;
-                        }
-                        return out;
-                    }""")
-                    for line in anc:
-                        print(f"        {line}")
-                    print("      same for each 'Search' button's ancestor chain:")
-                    for i, btn in enumerate(page2.locator("button", has_text="Search").all()):
-                        anc_b = btn.evaluate("""el => {
-                            const out = []; let n = el.parentElement;
-                            for (let i = 0; i < 6 && n; i++) {
-                                out.push(n.tagName + (n.className ? '.' + String(n.className).replace(/\\s+/g,'.') : '')
-                                         + (n.getAttribute('ng-show') ? '[ng-show=' + n.getAttribute('ng-show') + ']' : ''));
-                                n = n.parentElement;
-                            }
-                            return out;
-                        }""")
-                        print(f"        [{i}] visible={btn.is_visible()}: {anc_b}")
-
-                    nv._submit()
-                    try:
-                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
-                    except Exception as exc:              # noqa: BLE001
-                        print(f"      wait_for_load_state after submit failed: {exc}")
-                    print(f"      after submit, url: {page2.url}")
-                    row = page2.locator('table tr:has(a), tr[onclick], a:has-text("View")').first
-                    print(f"      result row present: {row.count() > 0}")
-                    if row.count():
-                        row.click(timeout=5000)
-                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
-                        print(f"      after row click, url: {page2.url}")
-                    html = page2.content()
-                    import re as _re
-                    from .clerk import parse_case_page
-                    parsed = parse_case_page(html, page2.url)
-                    hay = _re.sub(r"[^A-Za-z0-9]", "", html).upper()
-                    value_found = _re.sub(r"[^A-Za-z0-9]", "", value).upper() in hay
-                    print(f"      value found on final page: {value_found}")
-                    print(f"      parsed fields: {parsed}")
-                    print(f"      page text sample: {page2.locator('body').inner_text()[:400]!r}")
+                result = nv.resolve(rec, cfg)
+                print(f"    result keys: {list(result.keys()) or '(empty — still unresolved)'}")
+                if result.get("clerk_case_url"):
+                    print(f"    clerk_case_url: {result['clerk_case_url']}")
+                if result.get("case_docs"):
+                    print(f"    case_docs: {len(result['case_docs'])} document(s)")
+                if result.get("deed_status"):
+                    print(f"    deed_status: {result['deed_status']}")
             except Exception as exc:                      # noqa: BLE001
                 print(f"    EXCEPTION: {exc.__class__.__name__}: {exc}")
             finally:

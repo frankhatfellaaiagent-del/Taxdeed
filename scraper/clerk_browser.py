@@ -31,12 +31,13 @@ SEARCH_FIELDS = [
     ("parcel_id", ["parcel", "parcelno", "parcel #", "parcel number"]),
 ]
 
-# Marion's portal (and likely other NewVision installs) gates each
-# identifier's input behind a category tab — only the Name input is visible
-# until its tab is clicked, so _find_input never finds Tax Number/Parcel
-# Number otherwise. The tab is a plain <a> naming the category; clicking it
-# is a harmless no-op on a portal that doesn't use this pattern (nothing
-# matches, so the click is skipped).
+# Marion's portal (and likely other NewVision installs) renders one row per
+# identifier (Name/Tax Number/Parcel Number/...) inside a single form — every
+# row's Search/Clear button pair is in the DOM at once, but a row's own input
+# stays hidden until its label is clicked. _find_input never finds Tax
+# Number/Parcel Number without that click first. The label is a plain <a>
+# naming the category; clicking it is a harmless no-op on a portal that
+# doesn't use this pattern (nothing matches, so the click is skipped).
 TAB_LABELS = {"tax_number": "Tax Number", "parcel_id": "Parcel Number"}
 
 
@@ -93,7 +94,28 @@ class NewVisionResolver:
         except Exception:                              # noqa: BLE001
             pass
 
-    def _submit(self) -> None:
+    def _submit_near(self, box) -> bool:
+        """Click the Search button in the SAME row as this input.
+
+        Marion's portal isn't tabbed — one form holds a separate row per
+        identifier (Name/Tax Number/Parcel Number/...), each with its own
+        Search/Clear button pair, all present in the DOM at once. The global
+        'first Search button' belongs to the always-visible Name row, not
+        whichever row's label was just clicked, so scope to the input's own
+        row container first. Returns True if it found and clicked one."""
+        try:
+            row = box.locator("xpath=ancestor::div[contains(@class,'row-padding')][1]")
+            btn = row.locator('button:has-text("Search")').first
+            if btn.count() and btn.is_visible():
+                btn.click()
+                return True
+        except Exception:                              # noqa: BLE001
+            pass
+        return False
+
+    def _submit(self, box=None) -> None:
+        if box is not None and self._submit_near(box):
+            return
         for sel in ('input[type="submit"]', 'button[type="submit"]',
                     'input[value*="Search" i]', 'button:has-text("Search")',
                     'a:has-text("Search")'):
@@ -122,7 +144,7 @@ class NewVisionResolver:
             try:
                 box.fill("")
                 box.fill(value)
-                self._submit()
+                self._submit(box)
                 self.page.wait_for_load_state("networkidle", timeout=self.timeout)
             except Exception as exc:                   # noqa: BLE001
                 log.debug("newvision search failed (%s=%s): %s", field, value, exc)
