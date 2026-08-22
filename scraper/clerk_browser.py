@@ -152,10 +152,14 @@ class NewVisionResolver:
                 continue
 
             # A results grid appears before the document view; open the first row.
+            # It can render below the fold (Marion's grid does), so Playwright's
+            # actionability check sees it as present but not visible until
+            # scrolled into view.
             try:
                 row = self.page.locator(
                     'table tr:has(a), tr[onclick], a:has-text("View")').first
                 if row.count():
+                    row.scroll_into_view_if_needed(timeout=5000)
                     row.click(timeout=5000)
                     self.page.wait_for_load_state("networkidle", timeout=self.timeout)
             except Exception:                          # noqa: BLE001

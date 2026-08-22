@@ -14,8 +14,9 @@ and prints enough of each response to diagnose the cause: status, final URL
 after redirects, and a chunk of the actual page text. It also probes the five
 online counties whose clerk portal isn't yet classified to a resolver
 platform (Bay, Clay, Lake, Leon, Orange), and Marion's NewVision clerk portal
-step by step (the browser resolver swallows exceptions silently in normal
-operation — this narrates each stage instead).
+end to end (a real resolve() call, now that the resolver's tab-reveal
+gating, wrong-panel submit, tax_number keyword mismatch, HTTP/2 navigation
+failure and off-screen results row have all been fixed in clerk_browser.py).
 
 Read-only, prints everything to stdout for log-based review.
 
@@ -26,7 +27,6 @@ from __future__ import annotations
 
 import json
 import logging
-import re
 from pathlib import Path
 
 import requests
@@ -143,7 +143,7 @@ def diagnose_unclassified_portals(out: Path) -> None:
 
 
 def diagnose_marion_clerk() -> None:
-    _sep("PART 3 — Marion NewVision clerk resolver, step by step")
+    _sep("PART 3 — Marion NewVision clerk resolver, end to end")
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -164,96 +164,20 @@ def diagnose_marion_clerk() -> None:
 
     with sync_playwright() as p:
         browser = p.chromium.launch(args=["--disable-http2"])
-        page = browser.new_page()
         try:
-            print("  step: goto portal...")
-            page.goto(portal, wait_until="domcontentloaded", timeout=20000)
-            print(f"    landed at: {page.url}")
-            print(f"    title: {page.title()!r}")
-
-            # Dump every visible input's name/id/placeholder — this is the
-            # actual state NewVisionResolver._find_input searches over.
-            inputs = page.locator("input").all()
-            print(f"  step: found {len(inputs)} <input> elements on the page")
-            for i, inp in enumerate(inputs[:25]):
-                try:
-                    print(f"    [{i}] name={inp.get_attribute('name')!r} "
-                          f"id={inp.get_attribute('id')!r} "
-                          f"placeholder={inp.get_attribute('placeholder')!r} "
-                          f"type={inp.get_attribute('type')!r} "
-                          f"visible={inp.is_visible()}")
-                except Exception as exc:                  # noqa: BLE001
-                    print(f"    [{i}] (error reading attributes: {exc})")
-
-            body_text = page.locator("body").inner_text()[:800]
-            print(f"  page body text (first 800 chars):\n    {body_text}")
-
-            # End-to-end via the real (now-fixed) methods, narrated — resolve()
-            # itself swallows every exception by design, so a plain call gives
-            # no signal beyond "empty or not". Calling the same private
-            # methods it uses, with prints between them, shows exactly which
-            # stage stops working without duplicating any of their logic.
-            print("  step: NewVisionResolver real methods, narrated (fresh page)")
-            from .clerk_browser import NewVisionResolver, SEARCH_FIELDS
-            from .clerk import parse_case_page
-            import re as _re
-            page2 = browser.new_page()
-            try:
-                nv = NewVisionResolver(page2)
-                print(f"    portal opened: {nv._open_portal(portal)}")
-                for field, keywords in SEARCH_FIELDS:
-                    value = str(rec.get(field) or rec.get("case_number") or "").strip()
-                    if not value:
-                        continue
-                    nv._select_search_tab(field)
-                    box = nv._find_input(keywords)
-                    print(f"    field={field} value={value!r} input_found={box is not None}")
-                    if box is None:
-                        continue
-                    box.fill("")
-                    box.fill(value)
-
-                    # A whole-tab navigation to chrome-error:// means a
-                    # top-level request failed at the network layer (not a
-                    # JS/XHR error) — capture exactly which URL and why.
-                    failures = []
-                    requests_seen = []
-                    page2.on("requestfailed", lambda r: failures.append(
-                        (r.url, r.failure, r.method)))
-                    page2.on("framenavigated", lambda f: requests_seen.append(f.url))
-
-                    try:
-                        near_result = nv._submit_near(box)
-                        print(f"      _submit_near(box) returned: {near_result}")
-                    except Exception as exc:                  # noqa: BLE001
-                        print(f"      _submit_near(box) raised: {exc.__class__.__name__}: {exc}")
-                        near_result = None
-                    if not near_result:
-                        nv._submit(box)
-                    page2.wait_for_timeout(1000)
-                    print(f"      frame navigations: {requests_seen}")
-                    print(f"      failed requests: {failures}")
-                    try:
-                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
-                    except Exception as exc:                  # noqa: BLE001
-                        print(f"      wait_for_load_state failed: {exc.__class__.__name__}: {exc}")
-                    print(f"      url after submit: {page2.url}")
-                    row = page2.locator('table tr:has(a), tr[onclick], a:has-text("View")').first
-                    print(f"      result row present: {row.count() > 0}")
-                    if row.count():
-                        row.click(timeout=5000)
-                        page2.wait_for_load_state("networkidle", timeout=nv.timeout)
-                        print(f"      url after row click: {page2.url}")
-                    html = page2.content()
-                    hay = _re.sub(r"[^A-Za-z0-9]", "", html).upper()
-                    print(f"      value found on final page: {_re.sub(r'[^A-Za-z0-9]', '', value).upper() in hay}")
-                    print(f"      parsed fields: {parse_case_page(html, page2.url)}")
-            except Exception as exc:                          # noqa: BLE001
-                print(f"    EXCEPTION: {exc.__class__.__name__}: {exc}")
-            finally:
-                page2.close()
-        except Exception as exc:                          # noqa: BLE001
-            print(f"  EXCEPTION during portal load: {exc.__class__.__name__}: {exc}")
+            from .clerk_browser import NewVisionResolver
+            page = browser.new_page()
+            nv = NewVisionResolver(page)
+            result = nv.resolve(rec, cfg)
+            print(f"  result keys: {list(result.keys()) or '(empty — still unresolved)'}")
+            if result.get("clerk_case_url"):
+                print(f"  clerk_case_url: {result['clerk_case_url']}")
+            if result.get("case_docs"):
+                print(f"  case_docs: {len(result['case_docs'])} document(s)")
+            if result.get("deed_status"):
+                print(f"  deed_status: {result['deed_status']}")
+        except Exception as exc:                              # noqa: BLE001
+            print(f"  EXCEPTION: {exc.__class__.__name__}: {exc}")
         finally:
             browser.close()
 
