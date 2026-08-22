@@ -192,5 +192,22 @@ class NewVisionResolver:
                 return parsed
             print(f"[newvision] unresolved ({field}={value}): value_on_page={value_present} "
                   f"parsed_keys={list(parsed.keys())}", flush=True)
+            # parse_case_page only scans td/th/dt/label/strong/b/span for a
+            # label cell — never div. If Marion's document view lays out
+            # labels in divs (common in Angular apps), the scan would miss it
+            # entirely regardless of whether the click landed correctly.
+            # Confirm by looking for the raw label text and dumping its
+            # surrounding markup.
+            for kw in ("deed status", "case status", "appl. name", "applicant",
+                       "tax deed", "document"):
+                idx = html.lower().find(kw)
+                if idx != -1:
+                    snippet = html[max(0, idx - 80):idx + 250]
+                    print(f"[newvision] found {kw!r} in raw HTML at offset {idx}; "
+                          f"surrounding markup: {snippet!r}", flush=True)
+                    break
+            else:
+                print("[newvision] none of the expected case-detail label strings "
+                      "appear anywhere in the page HTML", flush=True)
             self._loaded = None
         return {}
