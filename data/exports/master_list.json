@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T07:00:33+00:00",
+ "generated_at": "2026-08-23T06:52:54+00:00",
  "source_run": "2026-08-19T172458Z",
  "county_runs": {
   "alachua": "2026-08-19T172458Z",
@@ -2715,7 +2715,7 @@
    "property_address": "NO SITUS, FORT MCCOY, FL- 32134",
    "property_use": "",
    "acreage": "",
-   "enriched": false,
+   "enriched": true,
    "opening_bid": 3248.06,
    "assessed_value": 5568.0,
    "bid_to_value_pct": 58,
@@ -2724,7 +2724,11 @@
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1508824&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=2420073&YR=2026&mName=False&mSitus=False",
    "lat": null,
-   "lng": null
+   "lng": null,
+   "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+   "deed_status": "SOLD",
+   "applicant": "PALLUM 401K PLAN",
+   "applicant_address": "PO BOX 885 BOCA RATON FL 33429"
   },
   {
    "county": "marion",
