@@ -230,6 +230,53 @@ TAXSMART_SLUGS = {"stjohns", "levy"}
 # Clerk sites on the "kmatailwind" template render their sale list from a
 # docaccess.com JSON feed keyed by the clerk's domain.
 DOCACCESS_DOMAINS = {"sumter": "sumterclerk.com", "columbia": "columbiaclerk.com"}
+BID4ASSETS_SLUGS = {"okaloosa"}
+
+
+def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str) -> None:
+    """Find where Bid4Assets' property list comes from. The landing page loads
+    fine with requests (headless Chromium gets 403), shows the sale date and a
+    'Download Property List' control, and carries LandingPageId +
+    SelectedSaleDateId — the auction rows are fetched from those."""
+    import re as _re
+    from urllib.parse import urljoin
+    print("  [deep] Bid4Assets property-list hunt")
+    try:
+        r = session.get(url, timeout=30)
+    except requests.RequestException as exc:
+        print(f"    fetch failed: {exc}")
+        return
+    html = r.text
+    soup = BeautifulSoup(html, "lxml")
+
+    # The Download Property List / export control and its target.
+    for el in soup.find_all(["a", "button"]):
+        t = el.get_text(" ", strip=True).lower()
+        if any(k in t for k in ("download", "property list", "export")):
+            print(f"    control: <{el.name}> text={el.get_text(' ', strip=True)!r} "
+                  f"href={el.get('href')} onclick={el.get('onclick')} "
+                  f"data-url={el.get('data-url')} data-href={el.get('data-href')}")
+
+    # Identifiers the rows are keyed by.
+    for name in ("LandingPageId", "SelectedSaleDateId", "__RequestVerificationToken"):
+        el = soup.find(attrs={"name": name}) or soup.find(id=name)
+        if el:
+            print(f"    {name} = {el.get('value')!r}")
+
+    # Any URL in the markup that looks like the data/download endpoint.
+    urls = set(_re.findall(r'https?://[^\s"\'<>]+|/[A-Za-z0-9_./\-]{4,}', html))
+    hits = sorted(u for u in urls if _re.search(
+        r'download|propertylist|property-list|csv|xls|getauction|auctionitem|/mvc/|listing|export|saleauction', u, _re.I))
+    print(f"    candidate data/download URLs ({len(hits)}):")
+    for u in hits[:35]:
+        print(f"      {urljoin(url, u)}")
+
+    # Auction data embedded in a <script> (Bid4Assets sometimes inlines it).
+    for s in soup.find_all("script"):
+        txt = s.string or ""
+        if "auction" in txt.lower() and len(txt) > 200 and ("[" in txt or "{" in txt):
+            print(f"    inline script with auction data ({len(txt)} chars): {txt[:500]}")
+            break
 
 
 def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
@@ -379,5 +426,8 @@ def capture_sale_lists(out_dir: str | Path, delay: float = 3.0,
             if slug in DOCACCESS_DOMAINS:
                 rate.wait()
                 _probe_docaccess(session, DOCACCESS_DOMAINS[slug], out, slug)
+            if slug in BID4ASSETS_SLUGS:
+                rate.wait()
+                _probe_bid4assets(session, url, out, slug)
 
     print(f"\n{'=' * 74}\nDONE\n{'=' * 74}")
