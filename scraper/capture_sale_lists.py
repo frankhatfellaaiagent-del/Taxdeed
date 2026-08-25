@@ -278,6 +278,29 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
             print(f"    inline script with auction data ({len(txt)} chars): {txt[:500]}")
             break
 
+    # The property-list DOWNLOAD is login-gated. The public path is the Kendo
+    # grid on the listings page — anonymous visitors see the auctions, so its
+    # read endpoint is public. Hunt the grid's DataSource transport in the
+    # inline scripts and dump the context around it.
+    grid_keys = ("kendoGrid", "dataSource", "transport", ".read(", "read:",
+                 "GetAuction", "gridRead", "saleAuction", "AuctionList", "/OkaloosaFLTax")
+    for s in soup.find_all("script"):
+        txt = s.string or ""
+        if not txt or "kendo" not in txt.lower() and "datasource" not in txt.lower():
+            continue
+        for key in grid_keys:
+            k = txt.find(key)
+            if k != -1:
+                lo = max(0, k - 200)
+                print(f"    [grid] {key!r} in inline script: {txt[lo:k + 400]!r}")
+                break
+    # Any URL string anywhere in the scripts that looks like a grid read.
+    read_urls = sorted({m for m in _re.findall(r'["\'](/[A-Za-z0-9_./?=&\-]{4,})["\']', html)
+                        if _re.search(r'auction|listing|grid|read|getsale|sale|search', m, _re.I)})
+    print(f"    [grid] candidate read paths ({len(read_urls)}):")
+    for u in read_urls[:25]:
+        print(f"      {u}")
+
     # The download control fires propertyListDownload(); find its definition so
     # we know the real request (URL, method, POST body) it issues.
     from urllib.parse import urljoin as _urljoin
