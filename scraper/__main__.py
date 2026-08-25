@@ -205,6 +205,12 @@ def main(argv=None) -> int:
     p.add_argument("--render", action="store_true", help="Also load each page in Chromium (JS listings / WAF pages) and log its data requests")
     p.add_argument("--deep", action="store_true", help="Run platform-specific probes: submit the TaxSmart sale-date search, fetch the docaccess JSON feed")
 
+    p = sub.add_parser("scrape-clerk", help="Scrape the non-RealAuction counties (Bid4Assets + in-person clerk lists) into a run dir")
+    p.add_argument("--out", help="Run directory to write <slug>.json into (default: latest under output/runs, else a new one)")
+    p.add_argument("--counties", help="Comma-separated slugs, or @file (default: every county with a collector)")
+    p.add_argument("--delay", type=float, default=3.0, help="Base seconds between requests (default 3.0)")
+    p.add_argument("--skip-robots", action="store_true", help="Skip robots.txt checks (fixtures/testing only)")
+
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
@@ -259,6 +265,19 @@ def main(argv=None) -> int:
         from .capture_sale_lists import capture_sale_lists
         counties = [_slugify(c) for c in _county_names_from(args.counties)] if args.counties else None
         capture_sale_lists(args.out, delay=args.delay, counties=counties, render=args.render, deep=args.deep)
+        return 0
+    if args.cmd == "scrape-clerk":
+        from .clerk_scrape import scrape_clerk_counties
+        if args.out:
+            out_dir = Path(args.out)
+        else:
+            runs = sorted(d for d in RUNS_ROOT.iterdir() if d.is_dir()) if RUNS_ROOT.exists() else []
+            out_dir = runs[-1] if runs else RUNS_ROOT / datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+        counties = [_slugify(c) for c in _county_names_from(args.counties)] if args.counties else None
+        meta = scrape_clerk_counties(out_dir, counties=counties, delay=args.delay, skip_robots=args.skip_robots)
+        ok = sum(1 for c in meta["counties"].values() if c["status"] == "ok")
+        total = sum(c.get("records", 0) for c in meta["counties"].values())
+        print(f"Clerk scrape complete: {ok} counties ok, {total} records -> {out_dir}")
         return 0
     if args.cmd == "export":
         from .exporter import export_run

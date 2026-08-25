@@ -90,6 +90,20 @@ jobs:
           # default to the full county list.
           python -m scraper -v run --counties "${{ github.event_name == 'push' && 'volusia' || github.event.inputs.counties || '@config/client_counties.txt' }}"
 
+      - name: Scrape non-RealAuction counties (Bid4Assets + clerk lists)
+        id: clerk
+        # The 45 RealAuction counties come from the step above; these are the
+        # counties on other platforms (Okaloosa on Bid4Assets, in-person clerk
+        # lists). They write <slug>.json into the same run dir, so the export's
+        # carry-forward merges them into the feed beside the RealAuction rows.
+        # Skipped on push smoke tests (single-county, no commit).
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: |
+          latest=$(ls -td output/runs/*/ 2>/dev/null | head -1 || true)
+          if [ -z "$latest" ]; then echo "no run dir; skipping clerk scrape"; exit 0; fi
+          python -m scraper -v scrape-clerk --out "$latest"
+
       - name: Capture live pages (debug diagnostics)
         if: always() && steps.scope.outputs.heavy == 'true'
         continue-on-error: true
