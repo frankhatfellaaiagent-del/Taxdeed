@@ -223,9 +223,97 @@ def _render_capture(url: str, out: Path, slug: str) -> None:
             browser.close()
 
 
+# Round-3 platform probes. The counties cluster onto a few platforms; these
+# hit each platform the way its own front-end does so we can see the real
+# sale rows before writing an adapter.
+TAXSMART_SLUGS = {"stjohns", "levy"}
+# Clerk sites on the "kmatailwind" template render their sale list from a
+# docaccess.com JSON feed keyed by the clerk's domain.
+DOCACCESS_DOMAINS = {"sumter": "sumterclerk.com", "columbia": "columbiaclerk.com"}
+
+
+def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
+    """Submit TaxSmart's Sale Date search and dump the result rows. The two
+    SearchSaleDate<From|To> <select>s list the actual scheduled sale dates, so
+    the full-range POST returns every upcoming parcel."""
+    from urllib.parse import urljoin
+    print("  [deep] TaxSmart sale-date search")
+    try:
+        r = session.get(url, timeout=30)
+    except requests.RequestException as exc:
+        print(f"    fetch failed: {exc}")
+        return
+    soup = BeautifulSoup(r.text, "lxml")
+    form = soup.find("form")
+    if not form:
+        print("    no form on page")
+        return
+    action = urljoin(r.url, form.get("action") or "")
+
+    def opts(sel_id):
+        sel = soup.find("select", id=sel_id)
+        return [o.get("value", "") for o in sel.find_all("option")] if sel else []
+    frm, to = opts("SearchSaleDateFrom"), opts("SearchSaleDateTo")
+    print(f"    sale-date options: from={len(frm)} to={len(to)}; sample={frm[:3]}")
+    if not frm:
+        print("    no sale-date options — nothing scheduled, or a different field name")
+        return
+    data = {"SearchSaleDateFrom": frm[0], "SearchSaleDateTo": (to or frm)[-1],
+            "buttonSubmitSaleDate": "Search"}
+    try:
+        pr = session.post(action, data=data, timeout=45)
+    except requests.RequestException as exc:
+        print(f"    POST failed: {exc}")
+        return
+    print(f"    POST {action} -> {pr.status_code}, {len(pr.content)} bytes")
+    (out / f"{slug}_taxsmart_result.html").write_bytes(pr.content)
+    rs = BeautifulSoup(pr.text, "lxml")
+    tables = rs.find_all("table")
+    print(f"    result tables: {len(tables)}")
+    for i, t in enumerate(tables[:4]):
+        rows = t.find_all("tr")
+        if len(rows) < 2:
+            continue
+        head = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])]
+        body = [c.get_text(" ", strip=True) for c in rows[1].find_all(["th", "td"])]
+        print(f"      table[{i}]: {len(rows)} rows header={head[:9]}")
+        print(f"                 first row={body[:9]}")
+    details = [a["href"] for a in rs.find_all("a", href=True) if "/Home/Details" in a["href"]]
+    print(f"    /Home/Details links: {len(details)} sample={details[:4]}")
+    dates = DATE_RE.findall(rs.get_text(" ", strip=True))
+    print(f"    date tokens in result: {len(dates)} sample={dates[:6]}")
+
+
+def _probe_docaccess(session: requests.Session, domain: str, out: Path, slug: str) -> None:
+    """Fetch the docaccess.com JSON the kmatailwind clerk template renders from.
+    Hosted off the clerk's own domain, so a WAF on the clerk site (Columbia)
+    doesn't necessarily block it."""
+    url = f"https://docaccess.com/domains/{domain}/domain.json"
+    print(f"  [deep] docaccess {url}")
+    try:
+        r = session.get(url, timeout=30)
+    except requests.RequestException as exc:
+        print(f"    fetch failed: {exc}")
+        return
+    print(f"    {r.status_code}  {r.headers.get('content-type')}  {len(r.content)} bytes")
+    if r.status_code >= 400:
+        return
+    (out / f"{slug}_docaccess.json").write_bytes(r.content)
+    try:
+        j = r.json()
+    except ValueError as exc:
+        print(f"    not JSON ({exc}); first 400 chars: {r.text[:400]}")
+        return
+    if isinstance(j, dict):
+        print(f"    top-level keys: {list(j)[:25]}")
+    else:
+        print(f"    top-level: {type(j).__name__} of {len(j)}")
+    print(f"    sample: {json.dumps(j)[:1400]}")
+
+
 def capture_sale_lists(out_dir: str | Path, delay: float = 3.0,
                        counties: list[str] | None = None,
-                       render: bool = False) -> None:
+                       render: bool = False, deep: bool = False) -> None:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     reg = _load_registry()
@@ -281,5 +369,15 @@ def capture_sale_lists(out_dir: str | Path, delay: float = 3.0,
         if render:
             rate.wait()
             _render_capture(resp.url if resp.status_code < 400 else url, out, slug)
+
+        # Platform-specific deep probes: hit each platform its own way to see
+        # the real sale rows before writing an adapter.
+        if deep:
+            if slug in TAXSMART_SLUGS:
+                rate.wait()
+                _probe_taxsmart(session, url, out, slug)
+            if slug in DOCACCESS_DOMAINS:
+                rate.wait()
+                _probe_docaccess(session, DOCACCESS_DOMAINS[slug], out, slug)
 
     print(f"\n{'=' * 74}\nDONE\n{'=' * 74}")
