@@ -282,18 +282,31 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
     # grid on the listings page — anonymous visitors see the auctions, so its
     # read endpoint is public. Hunt the grid's DataSource transport in the
     # inline scripts and dump the context around it.
-    grid_keys = ("kendoGrid", "dataSource", "transport", ".read(", "read:",
-                 "GetAuction", "gridRead", "saleAuction", "AuctionList", "/OkaloosaFLTax")
+    # Dump the FULL #Auctions_grid kendoGrid init. If Kendo MVC server-bound the
+    # grid (BindTo(Model)), the rows are inline as dataSource.data — i.e. the
+    # auctions are already in this served HTML and parse with plain requests.
     for s in soup.find_all("script"):
         txt = s.string or ""
-        if not txt or "kendo" not in txt.lower() and "datasource" not in txt.lower():
-            continue
-        for key in grid_keys:
-            k = txt.find(key)
-            if k != -1:
-                lo = max(0, k - 200)
-                print(f"    [grid] {key!r} in inline script: {txt[lo:k + 400]!r}")
-                break
+        if "Auctions_grid" in txt or "kendoGrid" in txt:
+            k = txt.find("kendoGrid")
+            lo = max(0, k - 80)
+            print(f"    [grid] Auctions_grid init ({len(txt)} chars), from kendoGrid:")
+            print("      " + txt[lo:lo + 8000].replace("\n", " "))
+            has_data = '"data":[' in txt or '"data" :[' in txt or '"Data":[' in txt
+            has_transport = "transport" in txt.lower()
+            print(f"    [grid] inline dataSource.data present: {has_data}; transport present: {has_transport}")
+            # If inline, show how many auction records and the first one's keys.
+            m = _re.search(r'"[Dd]ata"\s*:\s*(\[.*?\])\s*[,}]', txt, _re.S)
+            if m:
+                try:
+                    arr = json.loads(m.group(1))
+                    print(f"    [grid] inline rows: {len(arr)}")
+                    if arr:
+                        print(f"    [grid] row[0] keys: {list(arr[0])[:25]}")
+                        print(f"    [grid] row[0]: {json.dumps(arr[0])[:1200]}")
+                except (ValueError, IndexError) as exc:
+                    print(f"    [grid] data present but JSON parse failed: {exc}")
+            break
     # Any URL string anywhere in the scripts that looks like a grid read.
     read_urls = sorted({m for m in _re.findall(r'["\'](/[A-Za-z0-9_./?=&\-]{4,})["\']', html)
                         if _re.search(r'auction|listing|grid|read|getsale|sale|search', m, _re.I)})
