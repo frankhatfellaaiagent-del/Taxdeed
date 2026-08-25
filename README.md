@@ -10,7 +10,7 @@ Live site: landing page at the Pages root, the app at `/app/`.
 ## Architecture
 
 ```
-GitHub Actions (weekly cron, Mon 08:00 UTC)
+GitHub Actions (daily cron, 08:00 UTC; discovery + capture Mondays only)
   └─ scraper/            Playwright collector for the county auction sites
       ├─ data/runs/<ts>/ raw per-county output (committed)
       ├─ enrich          appraiser + clerk case-file verification (best-effort)
@@ -46,14 +46,14 @@ Key properties:
 | `scraper/` | Collector, parsers, enrichment (appraiser/clerk/paperwork), exporter |
 | `dashboard/` | The customer app (single static file + design system) |
 | `site/` | The sales landing page |
-| `config/client_counties.txt` | Counties the weekly run collects |
+| `config/client_counties.txt` | Counties the daily run collects |
 | `config/buybox.yaml` | Operator's default buy-box (drives TSV flags + enrichment priority) |
 | `config/clerk_sites.yaml` | Clerk of Court portals per county + platform resolvers |
-| `data/runs/` | Committed raw runs (retention: pruned by the weekly workflow) |
+| `data/runs/` | Committed raw runs (retention: pruned by the daily workflow) |
 | `data/exports/` | The feeds consumed by the app and the Google Sheet |
 | `docs/DATA_FEED.md` | Feed contract |
 | `docs/LOGIN_SETUP.md` | Operator runbook: Supabase login + customer onboarding |
-| `.github/workflows/` | Weekly scrape + enrichment + Pages deploy |
+| `.github/workflows/` | Daily scrape + enrichment + Pages deploy |
 
 ## Running it
 
@@ -72,14 +72,15 @@ python -m scraper export
 python -m scraper enrich --limit 200
 ```
 
-Production runs entirely on GitHub Actions — the scrape workflow has run weekly
-on schedule since 2026-08-11, committing each run and redeploying Pages. No
+Production runs entirely on GitHub Actions — the scrape workflow has run on
+schedule since 2026-08-11 (weekly at first, daily since 2026-08-25 so
+redemptions surface same-day), committing each run and redeploying Pages. No
 server, no cron on anyone's machine.
 
 ## Politeness & sourcing
 
 The collector reads public pages only (never behind a login), respects
-robots.txt, rate-limits per host with jittered delays, and runs weekly. All
+robots.txt, rate-limits per host with jittered delays, and runs once daily. All
 data is Florida public record; the product's value is collection, verification
 and workflow, not the data itself. Every surface tells users to verify with
 the county before bidding.

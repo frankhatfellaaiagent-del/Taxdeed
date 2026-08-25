@@ -150,7 +150,7 @@ MATCH/REVIEW parcels and gathers, per parcel:
 Results accumulate in `data/enrichment.json` and are merged by the exporter *before*
 buy-box flagging, so an enriched land use can move a REVIEW row to MATCH/NO. Each
 source is optional and isolated — a portal that changes shape costs coverage, never
-the feed. Entries refresh every 30 days, so weekly runs widen coverage rather than
+the feed. Entries refresh every 30 days, so daily runs widen coverage rather than
 refetching the same parcels.
 
 ## Dashboard guidance
@@ -163,14 +163,14 @@ refetching the same parcels.
 - Missing `property_address` / `assessed_value` is the county site's data, not an
   error — render as "—".
 - Show `generated_at` ("data as of …") so stale data is visible.
-- Cadence: the feed updates whenever a scraper workflow run completes (manual runs
-  today, weekly scheduled in production). Poll or re-fetch on page load; no webhook.
+- Cadence: the feed updates whenever a scraper workflow run completes (scheduled
+  daily in production, plus manual runs). Poll or re-fetch on page load; no webhook.
 
 ## Provenance
 
 Feeds are written by `python -m scraper export` (see `scraper/exporter.py`) from the
 latest committed run in `data/runs/<timestamp>/`, and refreshed automatically by the
-"Weekly data refresh" GitHub Actions workflow after each run (plus the nightly
+"Daily data refresh" GitHub Actions workflow after each run (plus the on-demand
 enrichment workflow). The Google
 Sheet ("MADD Assets — FL Tax Deed Auctions") imports the TSV via IMPORTDATA and
 refreshes itself; treat it as a human-facing mirror, not a source.

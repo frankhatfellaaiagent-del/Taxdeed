@@ -18,7 +18,7 @@ unrefined, and don't understand the land-focused business.
 
 - **All 67 Florida counties on one board** — a live auction feed for every
   county that sells tax deeds online (45 counties on the RealAuction platform,
-  refreshed automatically every Monday at 4:00 AM), and for the counties that
+  refreshed automatically every morning at 4:00 AM), and for the counties that
   sell in person at the courthouse, the county's sale schedule and clerk
   records right in the app. Per-county filtering, full-text search, redeemed
   sales separated out. Tax deeds only — foreclosure auctions are detected and
@@ -76,7 +76,7 @@ never silently invented.
 ## How the subscription works
 
 - Hosted and running now; nothing to install or maintain on your side. The
-  subscription includes hosting, the weekly automated refresh (plus on-demand
+  subscription includes hosting, the daily automated refresh (plus on-demand
   pulls), scraper fixes when county sites change, support, and every platform
   improvement — the roadmap ships as part of the plan, not as change orders.
 - Your workspace is private to your team (lists, notes, positions, buy box).
