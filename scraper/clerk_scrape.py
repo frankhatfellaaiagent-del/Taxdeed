@@ -54,6 +54,10 @@ BROWSER_HEADERS = {
 # Slug -> collector function name; the dispatcher routes by this map so a county
 # not listed here is simply reported as "no collector yet" rather than guessed.
 BID4ASSETS_SLUGS = {"okaloosa"}
+# St. Johns + Levy run the same "TaxSmart" clerk software; one collector serves
+# both. The upcoming-sale search stashes its date range in the session, then a
+# jqGrid fetches the rows from Home/GridSearchData as JSON.
+TAXSMART_SLUGS = {"stjohns", "levy"}
 
 
 def _load_registry() -> dict[str, dict]:
@@ -229,10 +233,164 @@ def collect_bid4assets(entry: dict, session: requests.Session, rate: RateLimiter
     return records
 
 
-# Platform dispatch: slug -> (collector, needs_session).
+# --- TaxSmart (St. Johns + Levy) --------------------------------------------
+# The upcoming-sale list is behind a search: pick a sale-date range, POST it
+# (the range is stashed in the session), then a jqGrid fetches the rows as JSON
+# from Home/GridSearchData. Evidence (capture-sale-lists rounds) pinned the flow
+# and the fixed cell order the server returns for a Sale-Date search:
+#   cell = [Applicant, Case#, Certificate#, ParcelId, SaleDate,
+#           Status, Amount, LandsAvailable, Surplus, Owner]
+# (The jqGrid display colModel lists columns in a different order — the JSON
+# cell order is the server's, confirmed from a real row, and is shared by both
+# counties since they run the same TaxSmart software.)
+TAXSMART_CELL = {
+    "applicant": 0, "case_number": 1, "certificate_number": 2, "parcel_id": 3,
+    "sale_date": 4, "status": 5, "amount": 6, "lands_available": 7,
+    "surplus": 8, "owner": 9,
+}
+
+
+def _money(s) -> float | None:
+    if not s:
+        return None
+    m = re.search(r"-?\d[\d,]*\.?\d*", str(s))
+    return float(m.group(0).replace(",", "")) if m else None
+
+
+def _mdy(s: str) -> str:
+    """'9/16/2026' -> '09/16/2026'. Leaves already-padded or odd values alone."""
+    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", (s or "").strip())
+    return f"{int(m.group(1)):02d}/{int(m.group(2)):02d}/{m.group(3)}" if m else (s or "").strip()
+
+
+def collect_taxsmart(entry: dict, session: requests.Session, rate: RateLimiter) -> list[AuctionRecord]:
+    """St. Johns / Levy on the TaxSmart clerk platform."""
+    from datetime import datetime
+    from urllib.parse import urljoin
+    slug = entry["slug"]
+    url = entry["sale_list_url"]
+    host = re.sub(r"^https?://", "", url).split("/")[0]
+
+    rate.wait()
+    r = session.get(url, timeout=30)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "lxml")
+
+    form = None
+    for f in soup.find_all("form"):
+        if f.find(attrs={"name": "SearchSaleDateFrom"}) or f.find(id="SearchSaleDateFrom"):
+            form = f
+            break
+    if not form:
+        raise ValueError("TaxSmart sale-date form not found")
+    action = urljoin(r.url, form.get("action") or r.url)
+
+    # Every field the form submits, with defaults.
+    fields: dict[str, str] = {}
+    for el in form.find_all(["input", "select", "textarea"]):
+        name = el.get("name")
+        if not name:
+            continue
+        if el.name == "select":
+            opts = el.find_all("option")
+            sel = next((o for o in opts if o.get("selected")), opts[0] if opts else None)
+            fields[name] = sel.get("value", "") if sel else ""
+        elif el.get("type") in ("checkbox", "radio"):
+            if el.get("checked"):
+                fields[name] = el.get("value", "on")
+        else:
+            fields[name] = el.get("value", "")
+
+    # Build a valid ascending range covering every upcoming sale date. The
+    # <option>s are human strings ("Wednesday, December 15, 2027 12:00 PM"),
+    # listed newest-first.
+    sel = soup.find("select", attrs={"name": "SearchSaleDateFrom"}) or soup.find("select", id="SearchSaleDateFrom")
+    opt_vals = [o.get("value", "") for o in sel.find_all("option") if o.get("value")] if sel else []
+
+    def _parse_dt(s):
+        for fmt in ("%A, %B %d, %Y %I:%M %p", "%A, %B %d, %Y %I:%M%p", "%A, %B %d, %Y"):
+            try:
+                return datetime.strptime(s.strip(), fmt)
+            except ValueError:
+                continue
+        return None
+    now = datetime.utcnow()
+    upcoming = sorted([(o, d) for o, d in ((o, _parse_dt(o)) for o in opt_vals) if d and d >= now],
+                      key=lambda x: x[1])
+    if upcoming:
+        fields["SearchSaleDateFrom"] = upcoming[0][0]
+        fields["SearchSaleDateTo"] = upcoming[-1][0]
+    elif opt_vals:
+        fields["SearchSaleDateFrom"], fields["SearchSaleDateTo"] = opt_vals[-1], opt_vals[0]
+    else:
+        return []  # nothing scheduled
+
+    # This one multi-tab form dispatches on which submit button is present.
+    for k in [k for k in fields if k.lower().startswith("buttonsubmit")]:
+        del fields[k]
+    fields["buttonSubmitSaleDate"] = "Search"
+
+    rate.wait()
+    session.post(action, data=fields, timeout=45)  # stashes the range in session
+
+    # The grid reads its rows from Home/GridSearchData; ask for a large page so
+    # a single request returns every matching sale.
+    grid_url = urljoin(action if action.endswith("/") else action + "/", "Home/GridSearchData")
+    rate.wait()
+    gr = session.get(grid_url, params={"SearchType": "Sale Date", "rows": 10000, "page": 1},
+                     headers={"X-Requested-With": "XMLHttpRequest"}, timeout=45)
+    gr.raise_for_status()
+    payload = gr.json()
+    rows = payload.get("rows", []) if isinstance(payload, dict) else []
+
+    records: list[AuctionRecord] = []
+    seen: set[tuple] = set()
+    C = TAXSMART_CELL
+    for row in rows:
+        cell = row.get("cell") if isinstance(row, dict) else None
+        if not cell or len(cell) <= C["owner"]:
+            continue
+        parcel = (cell[C["parcel_id"]] or "").strip()
+        sale_date = _mdy(cell[C["sale_date"]])
+        # Only upcoming sales (past ones may come back from the same grid).
+        try:
+            if datetime.strptime(sale_date, "%m/%d/%Y") < now.replace(hour=0, minute=0, second=0, microsecond=0):
+                continue
+        except ValueError:
+            pass
+        key = (parcel, sale_date)
+        if not parcel or key in seen:
+            continue
+        seen.add(key)
+        case_no = (cell[C["case_number"]] or "").strip()
+        records.append(AuctionRecord(
+            county=slug,
+            sale_date=sale_date,
+            auction_type="TAXDEED",
+            case_number=case_no,
+            certificate_number=(cell[C["certificate_number"]] or "").strip(),
+            parcel_id=parcel,
+            owner_name=(cell[C["owner"]] or "").strip(),
+            opening_bid=_money(cell[C["amount"]]),
+            auction_status=(cell[C["status"]] or "").strip(),
+            auction_url=url,
+            source_host=host,
+            scraped_at=_now_iso(),
+            raw_fields={"applicant": (cell[C["applicant"]] or "").strip(),
+                        "lands_available": cell[C["lands_available"]],
+                        "surplus": cell[C["surplus"]],
+                        "cell": cell, "taxsmart_id": row.get("id")},
+        ))
+    records.sort(key=lambda r: (r.sale_date[6:], r.sale_date[:2], r.sale_date[3:5], r.parcel_id))
+    return records
+
+
+# Platform dispatch: slug -> collector.
 def _collector_for(slug: str):
     if slug in BID4ASSETS_SLUGS:
         return collect_bid4assets
+    if slug in TAXSMART_SLUGS:
+        return collect_taxsmart
     return None
 
 
