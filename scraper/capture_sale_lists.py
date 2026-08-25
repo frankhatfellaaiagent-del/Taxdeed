@@ -98,6 +98,30 @@ def _describe_pdf(raw: bytes) -> None:
         print(f"  (could not extract PDF text: {exc.__class__.__name__}: {exc})")
 
 
+def _dump_forms(soup: BeautifulSoup) -> None:
+    """Every <form>'s action/method + fields. TaxSmart portals (St. Johns,
+    Levy) don't publish a static list — you submit a sale-date search — so we
+    need the field names to know how to query the upcoming window."""
+    forms = soup.find_all("form")
+    if not forms:
+        return
+    print(f"  forms: {len(forms)}")
+    for i, f in enumerate(forms[:4]):
+        print(f"    form[{i}] method={f.get('method', 'get')} action={f.get('action')!r}")
+        for el in f.find_all(["input", "select", "textarea", "button"]):
+            tag = el.name
+            typ = el.get("type", "")
+            nid = el.get("id", "")
+            nam = el.get("name", "")
+            val = (el.get("value", "") or el.get_text(" ", strip=True))[:40]
+            if nam or nid:
+                print(f"      <{tag} type={typ!r} id={nid!r} name={nam!r} value={val!r}>")
+    # jQuery-UI tab labels reveal the search categories (Sale Date, Parcel, …).
+    tabs = [a.get_text(" ", strip=True) for a in soup.select("a[href^='#tabs-'], .ui-tabs-anchor")]
+    if tabs:
+        print(f"  tab labels: {tabs[:12]}")
+
+
 def _describe_html(html: str) -> None:
     soup = BeautifulSoup(html, "lxml")
     for tag in soup(["script", "style", "noscript"]):
@@ -120,6 +144,8 @@ def _describe_html(html: str) -> None:
         print(f"    table[{i}]: {len(rows)} rows; header={head[:8]}")
         print(f"                first data row={body[:8]}")
 
+    _dump_forms(soup)
+
     dates = DATE_RE.findall(visible)
     print(f"  date-like tokens in visible text: {len(dates)}  sample={dates[:6]}")
 
@@ -132,24 +158,74 @@ def _describe_html(html: str) -> None:
         print("  " + html[start:m.start() + 500].replace("\n", "\n  "))
         print("  --- end ---")
     else:
-        print("  (no date tokens found in the served markup — likely JS-rendered or a link-only landing page)")
+        print("  no date tokens in the served markup. First 1600 chars of visible text:")
+        print("  " + visible[:1600].replace("\n", "\n  "))
 
-    # Links that look like they lead to a sale list / PDF, in case the real
-    # data is one hop away.
-    hop = []
-    for a in soup.find_all("a", href=True):
-        label = a.get_text(" ", strip=True).lower()
-        href = a["href"].lower()
-        if any(k in label + " " + href for k in ("sale list", "upcoming", "tax deed", ".pdf", "salelist", "auction")):
-            hop.append((a.get_text(" ", strip=True)[:50], a["href"]))
-    if hop:
-        print(f"  candidate sale-list links ({len(hop)}):")
-        for text, href in hop[:12]:
+    # All links + a PDF flag: a small clerk (Sumter/Hardee) often just links
+    # the upcoming-sales PDF or a per-sale page rather than tabulating rows.
+    pdfs = [(a.get_text(" ", strip=True)[:60], a["href"])
+            for a in soup.find_all("a", href=True) if ".pdf" in a["href"].lower()]
+    if pdfs:
+        print(f"  PDF links ({len(pdfs)}):")
+        for text, href in pdfs[:15]:
+            print(f"    {text!r} -> {href}")
+    links = [(a.get_text(' ', strip=True)[:45], a['href']) for a in soup.find_all("a", href=True)
+             if a.get_text(strip=True) and not a['href'].startswith(("#", "javascript:", "mailto:", "tel:"))]
+    if links:
+        print(f"  all text links ({len(links)}, first 25):")
+        for text, href in links[:25]:
             print(f"    {text!r} -> {href}")
 
 
+def _render_capture(url: str, out: Path, slug: str) -> None:
+    """Load a JS page in Chromium, dump the rendered row structure, and log
+    every response URL — the Bid4Assets (and Laserfiche) listings come from a
+    data endpoint we want to find and hit directly."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        print("  (Playwright not installed — cannot render)")
+        return
+    responses: list[str] = []
+    print("  [render] loading in Chromium…")
+    with sync_playwright() as p:
+        browser = p.chromium.launch(args=["--disable-http2"])
+        try:
+            page = browser.new_page(user_agent=BROWSER_HEADERS["User-Agent"])
+            page.on("response", lambda r: responses.append(f"{r.status} {r.request.method} {r.url}"))
+            page.goto(url, wait_until="networkidle", timeout=45000)
+            page.wait_for_timeout(1500)
+            html = page.content()
+            (out / f"{slug}_rendered.html").write_text(html, encoding="utf-8")
+            soup = BeautifulSoup(html, "lxml")
+            tables = soup.find_all("table")
+            print(f"  [render] rendered {len(html)} bytes; tables={len(tables)}")
+            for i, t in enumerate(tables[:4]):
+                rows = t.find_all("tr")
+                if len(rows) < 2:
+                    continue
+                head = [c.get_text(' ', strip=True) for c in rows[0].find_all(['th', 'td'])]
+                body = [c.get_text(' ', strip=True) for c in rows[1].find_all(['th', 'td'])]
+                print(f"    table[{i}]: {len(rows)} rows; header={head[:8]}")
+                print(f"                first data row={body[:8]}")
+            dates = DATE_RE.findall(soup.get_text(' ', strip=True))
+            print(f"  [render] date tokens after render: {len(dates)}  sample={dates[:6]}")
+            # Data endpoints worth hitting directly next round.
+            data_urls = [r for r in responses
+                         if any(k in r.lower() for k in ("api", "json", "listing", "search", "data", "asset"))
+                         and "google" not in r.lower() and "font" not in r.lower()]
+            print(f"  [render] candidate data requests ({len(data_urls)}):")
+            for r in data_urls[:20]:
+                print(f"    {r}")
+        except Exception as exc:                           # noqa: BLE001
+            print(f"  [render] EXCEPTION: {exc.__class__.__name__}: {exc}")
+        finally:
+            browser.close()
+
+
 def capture_sale_lists(out_dir: str | Path, delay: float = 3.0,
-                       counties: list[str] | None = None) -> None:
+                       counties: list[str] | None = None,
+                       render: bool = False) -> None:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     reg = _load_registry()
@@ -190,14 +266,20 @@ def capture_sale_lists(out_dir: str | Path, delay: float = 3.0,
         print(f"  status: {resp.status_code}   final url: {resp.url}")
         print(f"  content-type: {ctype}   bytes: {len(resp.content)}")
         if resp.status_code >= 400:
-            print(f"  --- error body (first 600 chars) ---\n  {(resp.text or '')[:600]}")
-            continue
-
-        ext = "pdf" if ("pdf" in ctype.lower() or resp.content[:5] == b"%PDF-") else "html"
-        (out / f"{slug}_salelist.{ext}").write_bytes(resp.content)
-        if ext == "pdf":
-            _describe_pdf(resp.content)
+            print(f"  requests got HTTP {resp.status_code} (likely a WAF); "
+                  f"{'trying a real browser below' if render else 'a real browser may get through — re-run with --render'}.")
         else:
-            _describe_html(resp.text or "")
+            ext = "pdf" if ("pdf" in ctype.lower() or resp.content[:5] == b"%PDF-") else "html"
+            (out / f"{slug}_salelist.{ext}").write_bytes(resp.content)
+            if ext == "pdf":
+                _describe_pdf(resp.content)
+            else:
+                _describe_html(resp.text or "")
+
+        # A real Chromium render — for JS listings (Bid4Assets, Laserfiche) and
+        # to walk past a WAF that 403s a bare request.
+        if render:
+            rate.wait()
+            _render_capture(resp.url if resp.status_code < 400 else url, out, slug)
 
     print(f"\n{'=' * 74}\nDONE\n{'=' * 74}")
