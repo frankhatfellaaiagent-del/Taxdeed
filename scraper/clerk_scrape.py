@@ -27,6 +27,12 @@ Platforms, by evidence capture (scraper/capture_sale_lists.py):
                       but a real browser gets through). Render in Chromium and
                       parse the labelled fields. One generic collector serves
                       all three.
+  Collier             BLOCKED — the sale-list URL redirects into a Laserfiche
+                      WebLink document repository that renders only 'Loading…'
+                      headless and exposes no structured list. Stays
+                      informational; see BLOCKED_SLUGS.
+
+So six of the seven ship live sale rows; Collier is documented as blocked.
 """
 
 from __future__ import annotations
@@ -71,6 +77,16 @@ TAXSMART_SLUGS = {"stjohns", "levy"}
 # <label>/<strong> field pairs — one generic Chromium-render collector reads all
 # three (Columbia's WAF 403s plain requests but a real browser gets through).
 RENDERED_SLUGS = {"hardee", "sumter", "columbia"}
+# Counties whose public "sale list" isn't a structured list we can parse, with
+# the reason. Reported explicitly (not silently skipped) so the gap is visible.
+BLOCKED_SLUGS = {
+    "collier": ("the sale-list URL redirects into a Laserfiche WebLink document "
+                "repository (app.collierclerk.com/LFOfficialRecords Browse.aspx); "
+                "it renders only 'Loading…' in a headless browser and exposes no "
+                "structured sale list — just a scanned-document folder. Collier "
+                "stays informational (schedule + clerk link) until the clerk "
+                "publishes a parseable list."),
+}
 
 
 def _load_registry() -> dict[str, dict]:
@@ -567,6 +583,12 @@ def scrape_clerk_counties(out_dir: str | Path, counties: list[str] | None = None
             centry["error"] = "not in registry"
             meta["counties"][slug] = centry
             log.warning("[%s] not in florida_counties.json", slug)
+            continue
+        if slug in BLOCKED_SLUGS:
+            centry["status"] = "blocked"
+            centry["error"] = BLOCKED_SLUGS[slug]
+            meta["counties"][slug] = centry
+            log.info("[%s] no structured public list — %s", slug, BLOCKED_SLUGS[slug])
             continue
         collector = _collector_for(slug)
         if not collector:
