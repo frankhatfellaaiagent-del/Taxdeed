@@ -52,7 +52,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   <div style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next data refresh</div>
     <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
-    <div class="text-muted" id="next-run-sub">Automatic &middot; weekly</div>
+    <div class="text-muted" id="next-run-sub">Automatic &middot; daily</div>
   </div>
   <div id="account-box" hidden style="padding:10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5"></div>
 </aside>
@@ -116,9 +116,9 @@ const SUPABASE_ANON_KEY = "sb_publishable_7oPO41UqZrDS6dlpWwHwnA_up4VPiGR";
 const SYNC_ON = /^https:\/\//.test(SUPABASE_URL);
 const SUPABASE_SDK = "https://esm.sh/@supabase/supabase-js@2";
 // The one truth about the refresh schedule — every screen derives from these.
-// Keep in sync with the cron in the scraper workflow (0 8 * * 1 UTC).
-const SCHEDULE_UTC = { day: 1, hour: 8 };            // Monday 08:00 UTC = 4:00 AM ET
-const SCHEDULE_TEXT = "Monday at 4:00 AM ET";
+// Keep in sync with the cron in the scraper workflow (0 8 * * * UTC).
+const SCHEDULE_UTC = { hour: 8 };                    // daily 08:00 UTC = 4:00 AM ET
+const SCHEDULE_TEXT = "morning at 4:00 AM ET";
 // Operators only — never rendered for customers (see isAdmin()).
 const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
@@ -131,7 +131,7 @@ const SUPPORT_EMAIL = "frankhatfellaaiagent@gmail.com";
 // describes the standard subscription rather than inventing a billing date.
 const PLAN = {
   name: "Standard", status: "active", price: "$197 / month",
-  note: "Includes every covered Florida county, the weekly refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
+  note: "Includes every covered Florida county, the daily refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
 };
 // ---------- Florida time ----------
 // Auctions are Florida events, so every date the app reasons about or prints
@@ -765,13 +765,12 @@ function renderNav() {
 }
 function nextRefreshText() {
   // Derived from SCHEDULE_UTC — the single source of truth for the cadence.
+  // Daily: the next 08:00 UTC, today if it hasn't passed yet, else tomorrow.
   const now = new Date();
   const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), SCHEDULE_UTC.hour, 0, 0));
-  const dow = d.getUTCDay();
-  let add = (SCHEDULE_UTC.day - dow + 7) % 7;
-  if (add === 0 && now.getTime() > d.getTime()) add = 7;
-  d.setUTCDate(d.getUTCDate() + add);
-  return `Mon ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
+  if (now.getTime() > d.getTime()) d.setUTCDate(d.getUTCDate() + 1);
+  const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  return `${DAYS[d.getUTCDay()]} ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
 }
 function go(screen, selId) {
   S.screen = screen;

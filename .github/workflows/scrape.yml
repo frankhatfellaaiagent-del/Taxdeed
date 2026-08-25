@@ -1,9 +1,13 @@
-name: Weekly data refresh
+name: Daily data refresh
 
 # The production data pipeline: collect every county's upcoming tax deed
 # auctions, verify against county records (enrichment), and refresh the
-# committed feeds. Scheduled weekly; manual dispatch for on-demand refreshes;
-# pushes touching the scraper run a 1-county smoke test (no commit).
+# committed feeds. Scheduled daily so status changes (a parcel getting
+# redeemed, a sale cancelled) reach the board within a day instead of
+# sitting stale for a week. The heavy, low-churn steps — live county
+# discovery and evidence capture — run only on Mondays; manual dispatch is
+# always a full run. Pushes touching the scraper run a 1-county smoke test
+# (no commit). Pure Python end to end: a run costs Actions minutes only.
 
 on:
   workflow_dispatch:
@@ -13,8 +17,9 @@ on:
         default: "@config/client_counties.txt"
         required: false
   schedule:
-    # Mondays 08:00 UTC (4:00 AM ET) — fresh data waiting before the workday.
-    - cron: "0 8 * * 1"
+    # Daily 08:00 UTC (4:00 AM ET) — yesterday's redemptions and status
+    # changes are on the board before the workday starts.
+    - cron: "0 8 * * *"
   push:
     branches: [main]
     paths:
@@ -56,8 +61,24 @@ jobs:
           python -m scraper discover --fixtures scraper/fixtures
           python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots --out output/fixture-regression
 
+      - name: Decide run scope
+        id: scope
+        # Scheduled runs are daily, but the county list changes rarely and
+        # evidence capture is the slowest, bulkiest step — scheduled runs do
+        # those only on Mondays. Manual dispatch and push smoke tests keep
+        # their full behavior.
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%u)" != "1" ]; then
+            echo "heavy=false" >> "$GITHUB_OUTPUT"
+            echo "Light daily run: skipping live discovery and capture."
+          else
+            echo "heavy=true" >> "$GITHUB_OUTPUT"
+            echo "Full run: live discovery and capture included."
+          fi
+
       - name: Live county discovery
         id: discover
+        if: steps.scope.outputs.heavy == 'true'
         continue-on-error: true
         run: python -m scraper -v discover
 
@@ -70,7 +91,7 @@ jobs:
           python -m scraper -v run --counties "${{ github.event_name == 'push' && 'volusia' || github.event.inputs.counties || '@config/client_counties.txt' }}"
 
       - name: Capture live pages (debug diagnostics)
-        if: always()
+        if: always() && steps.scope.outputs.heavy == 'true'
         continue-on-error: true
         run: python -m scraper capture --out output/debug
 
@@ -117,8 +138,10 @@ jobs:
           python -m scraper -v enrich --limit 300 --debug-dir output/debug/enrich || true
           python -m scraper export --run "data/runs/$name" || true
           # Retention: the feeds carry the merged history; keep only the last
-          # 4 raw run directories so the repo doesn't grow forever.
-          keep=4
+          # 10 raw run directories (~1.5 weeks at daily cadence) so the repo
+          # doesn't grow forever. Light daily runs skip capture, so most of
+          # these directories are small.
+          keep=10
           prune=$(ls -d data/runs/*/ 2>/dev/null | sort | head -n -$keep || true)
           [ -n "$prune" ] && git rm -rq $prune || true
           git config user.name "github-actions[bot]"
@@ -129,7 +152,7 @@ jobs:
           # (it IS part of the refresh) — and leaving it unstaged used to wedge
           # the rebase below with "cannot rebase: You have unstaged changes".
           git add -f config/counties.json 2>/dev/null || true
-          git commit -m "Data refresh: $name (${{ github.event.inputs.counties || 'weekly auto' }})" || exit 0
+          git commit -m "Data refresh: $name (${{ github.event.inputs.counties || 'daily auto' }})" || exit 0
           # Anything pushed to the branch while the scrape was running (another
           # run, or a person) rejects this push. Rebase onto the new tip and try
           # again rather than losing an hour of scraping. On a conflict in the
@@ -175,5 +198,9 @@ jobs:
           retention-days: 30
 
       - name: Fail job if live steps failed
-        if: steps.discover.outcome == 'failure' && steps.scrape.outcome == 'failure'
+        # On light daily runs discovery is skipped, so a scrape failure alone
+        # must fail the job — there's no other live signal that day.
+        if: >-
+          steps.scrape.outcome == 'failure' &&
+          (steps.discover.outcome == 'failure' || steps.discover.outcome == 'skipped')
         run: exit 1

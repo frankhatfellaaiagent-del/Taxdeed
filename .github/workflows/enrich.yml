@@ -1,9 +1,11 @@
-name: Daily enrichment
+name: On-demand enrichment
 
-# Widens verification coverage a little every night: appraiser records, clerk
-# case files and case paperwork for buy-box parcels the store hasn't seen (or
-# whose entries have gone stale). The weekly refresh rebuilds the board; this
-# just keeps making it deeper. Best-effort by design — a county portal
+# Widens verification coverage on demand: appraiser records, clerk case files
+# and case paperwork for buy-box parcels the store hasn't seen (or whose
+# entries have gone stale). The data refresh (scrape.yml) now runs DAILY and
+# includes its own enrichment pass, so this workflow no longer needs a
+# schedule of its own — it's here for manual deeper passes (e.g. a bigger
+# --limit after adding a new county). Best-effort by design — a county portal
 # misbehaving costs coverage, never the feed.
 
 on:
@@ -13,19 +15,13 @@ on:
         description: "Max parcels to enrich this run"
         default: "400"
         required: false
-  schedule:
-    # Daily 06:00 UTC (2:00 AM ET), every day but Monday — Monday belongs to
-    # the weekly refresh, which runs its own enrichment pass. GitHub cron
-    # counts days of the week 0-6 (Sun-Sat); "7" for Sunday makes the whole
-    # workflow file invalid, which silently disabled this schedule once.
-    - cron: "0 6 * * 0,2-6"
 
 permissions:
   contents: write
   actions: write
 
 concurrency:
-  group: data-pipeline   # never race the weekly refresh
+  group: data-pipeline   # never race the daily refresh
   cancel-in-progress: false
 
 jobs:
@@ -74,7 +70,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -f data/exports
           git add -f data/enrichment.json data/geocache.json 2>/dev/null || true
-          git commit -m "Nightly enrichment: deeper verification coverage" || { echo "nothing new"; exit 0; }
+          git commit -m "On-demand enrichment: deeper verification coverage" || { echo "nothing new"; exit 0; }
           pushed=0
           for attempt in 1 2 3 4 5 6 7 8; do
             if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
