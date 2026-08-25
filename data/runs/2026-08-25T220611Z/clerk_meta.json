@@ -1,0 +1,63 @@
+{
+  "started_at": "2026-08-25T22:39:09+00:00",
+  "counties": {
+    "columbia": {
+      "status": "ok",
+      "records": 17,
+      "url": "https://columbiaclerk.com/clerk-services/tax-deeds/upcoming-tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "08/31/2026"
+      ],
+      "finished_at": "2026-08-25T22:39:13+00:00"
+    },
+    "hardee": {
+      "status": "ok",
+      "records": 0,
+      "url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [],
+      "finished_at": "2026-08-25T22:39:17+00:00"
+    },
+    "levy": {
+      "status": "ok",
+      "records": 1,
+      "url": "https://online.levyclerk.com/TaxSmartWeb",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "11/09/2026"
+      ],
+      "finished_at": "2026-08-25T22:39:25+00:00"
+    },
+    "okaloosa": {
+      "status": "ok",
+      "records": 20,
+      "url": "https://www.bid4assets.com/OkaloosaFLTax/listings",
+      "robots": "robots.txt HTTP 404; treating as no restrictions",
+      "sale_dates": [
+        "09/08/2026"
+      ],
+      "finished_at": "2026-08-25T22:39:28+00:00"
+    },
+    "stjohns": {
+      "status": "error",
+      "records": 0,
+      "url": "https://apps.stjohnsclerk.com/TaxSmart",
+      "robots": "robots.txt unreachable (ConnectionError); proceeding politely",
+      "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+      "traceback": "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 788, in urlopen\n    response = self._make_request(\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 534, in _make_request\n    response = conn.getresponse()\n               ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/connection.py\", line 571, in getresponse\n    httplib_response = super().getresponse()\n                       ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py\", line 1478, in getresponse\n    response.begin()\nhttp.client.RemoteDisconnected: Remote end closed connection without response\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/requests/adapters.py\", line 696, in send\n    resp = conn.urlopen(\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 842, in urlopen\n    retries = retries.increment(\n              ^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/util/retry.py\", line 498, in increment\n    raise reraise(type(error), error, _stacktrace)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/urllib3/util/util.py\", line 38, in reraise\n    raise value.with_traceback(tb)\nurllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/Taxdeed/Taxdeed/scraper/clerk_scrape.py\", line 616, in scrape_clerk_counties\n    recs = collector(entry, session, rate)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Taxdeed/Taxdeed/scraper/clerk_scrape.py\", line 304, in collect_taxsmart\n    r = session.get(url, timeout=30)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/requests/sessions.py\", line 671, in get\n    return self.request(\"GET\", url, params=params, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/requests/sessions.py\", line 651, in request\n    resp = self.send(prep, **send_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrequests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))\n",
+      "finished_at": "2026-08-25T22:39:32+00:00"
+    },
+    "sumter": {
+      "status": "ok",
+      "records": 7,
+      "url": "https://www.sumterclerk.com/tax-deed-sales",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "09/10/2026"
+      ],
+      "finished_at": "2026-08-25T22:39:40+00:00"
+    }
+  },
+  "finished_at": "2026-08-25T22:39:40+00:00"
+}

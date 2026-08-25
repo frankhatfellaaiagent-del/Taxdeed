@@ -1,0 +1,41 @@
+[
+  {
+    "county": "levy",
+    "sale_date": "11/09/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "2026-4163TD",
+    "certificate_number": "146-24",
+    "parcel_id": "00900-000-00",
+    "owner_name": "AVERY A PETERSON JR, AVERY A PETERSON JR AKA AVERY ALLEN PETERSON JR,  AVERY ALLEN PETERSON JR",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 1954.89,
+    "assessed_value": null,
+    "auction_status": "SALE",
+    "auction_url": "https://online.levyclerk.com/TaxSmartWeb",
+    "appraiser_url": "",
+    "clerk_case_url": "",
+    "source_host": "online.levyclerk.com",
+    "scraped_at": "2026-08-25T22:39:25+00:00",
+    "raw_fields": {
+      "applicant": "DELMAE DARLING",
+      "lands_available": "$0.00",
+      "surplus": "$0.00",
+      "cell": [
+        "DELMAE DARLING",
+        "2026-4163TD",
+        "146-24",
+        "00900-000-00",
+        "11/9/2026",
+        "SALE",
+        "$1,954.89",
+        "$0.00",
+        "$0.00",
+        " AVERY A PETERSON JR, AVERY A PETERSON JR AKA AVERY ALLEN PETERSON JR,  AVERY ALLEN PETERSON JR"
+      ],
+      "taxsmart_id": 5039
+    }
+  }
+]
