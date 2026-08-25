@@ -217,6 +217,37 @@ def _render_capture(url: str, out: Path, slug: str) -> None:
             print(f"  [render] candidate data requests ({len(data_urls)}):")
             for r in data_urls[:20]:
                 print(f"    {r}")
+            # No <table>? The sale rows are in repeated divs. Find the smallest
+            # element that contains a date, tally the classes (the row class),
+            # and dump the markup around the first date + the row's fields so a
+            # parser can be written against the rendered structure.
+            if not tables and dates:
+                from collections import Counter
+                for tag in soup(["script", "style", "noscript"]):
+                    tag.decompose()
+                cls = Counter()
+                first_row = None
+                for el in soup.find_all(True):
+                    if not el.get("class"):
+                        continue
+                    # the element's OWN text (not descendants') holding a date
+                    own = el.find(string=DATE_RE)
+                    if own and el.find(string=DATE_RE):
+                        txt = el.get_text(" ", strip=True)
+                        if DATE_RE.search(txt) and len(txt) < 600:
+                            cls[" ".join(el.get("class"))] += 1
+                            if first_row is None and 20 < len(txt) < 600:
+                                first_row = el
+                print(f"  [render] repeated row classes: {cls.most_common(8)}")
+                if first_row is not None:
+                    print(f"  [render] sample row class={first_row.get('class')}: "
+                          f"{first_row.get_text(' | ', strip=True)[:400]!r}")
+                    print(f"  [render] sample row HTML: {str(first_row)[:1200]}")
+                m = DATE_RE.search(html)
+                if m:
+                    lo = max(0, m.start() - 500)
+                    print(f"  [render] markup around first date (offset {m.start()}):")
+                    print("    " + html[lo:m.start() + 700].replace("\n", " "))
         except Exception as exc:                           # noqa: BLE001
             print(f"  [render] EXCEPTION: {exc.__class__.__name__}: {exc}")
         finally:
