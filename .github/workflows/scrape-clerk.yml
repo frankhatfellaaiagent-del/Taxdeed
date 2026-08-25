@@ -33,7 +33,11 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        # Chromium is needed for the render-based collectors (Hardee, Sumter,
+        # Columbia). The daily pipeline (scrape.yml) already installs it.
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
       - name: Scrape
         run: |
           python -m scraper -v scrape-clerk --out output/runs/manual \

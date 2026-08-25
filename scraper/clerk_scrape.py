@@ -15,9 +15,18 @@ county never blocks the others or the feed.
     python -m scraper scrape-clerk --out output/runs/<ts> [--counties okaloosa,...]
 
 Platforms, by evidence capture (scraper/capture_sale_lists.py):
-  Okaloosa   Bid4Assets — the listings page server-binds the whole sale into
-             an inline Kendo grid (dataSource.data.Data = the auctions), so a
-             plain GET carries every parcel; no login, no JS.
+  Okaloosa            Bid4Assets — the listings page server-binds the whole sale
+                      into an inline Kendo grid (dataSource.data.Data), so a
+                      plain GET carries every parcel; no login, no JS.
+  St. Johns, Levy     TaxSmart — pick a sale-date range, POST it (stashed in the
+                      session), then a jqGrid fetches the rows from
+                      Home/GridSearchData as JSON.
+  Hardee, Sumter,     JS-rendered clerk sites — the sale list is drawn client
+  Columbia            side as repeated <label>/<strong> field pairs (no table,
+                      no clean JSON endpoint; Columbia's WAF 403s plain requests
+                      but a real browser gets through). Render in Chromium and
+                      parse the labelled fields. One generic collector serves
+                      all three.
 """
 
 from __future__ import annotations
@@ -58,6 +67,10 @@ BID4ASSETS_SLUGS = {"okaloosa"}
 # both. The upcoming-sale search stashes its date range in the session, then a
 # jqGrid fetches the rows from Home/GridSearchData as JSON.
 TAXSMART_SLUGS = {"stjohns", "levy"}
+# Hardee, Sumter, Columbia render their sale list client-side as repeated
+# <label>/<strong> field pairs — one generic Chromium-render collector reads all
+# three (Columbia's WAF 403s plain requests but a real browser gets through).
+RENDERED_SLUGS = {"hardee", "sumter", "columbia"}
 
 
 def _load_registry() -> dict[str, dict]:
@@ -385,12 +398,144 @@ def collect_taxsmart(entry: dict, session: requests.Session, rate: RateLimiter) 
     return records
 
 
+# --- Rendered clerk lists (Hardee + Sumter + Columbia) ----------------------
+# All three draw their sale list client-side as repeated rows of
+#   <div class="w-full md:w-auto"><label>KEY</label><strong>VALUE</strong></div>
+# so one render-and-read-labels collector serves them. Label wording varies a
+# little between counties (Parcel ID vs Parcel Number, Cert vs Cert #, File #
+# vs File Number); these normalized-key sets absorb that.
+_LABEL_MAP = {
+    "parcel_id": {"parcel id", "parcel number", "parcel"},
+    "sale_date": {"sale date", "sale date/time", "date"},
+    "opening_bid": {"opening bid", "minimum bid", "bid"},
+    "auction_status": {"status"},
+    "certificate_number": {"cert", "cert #", "certificate", "certificate #", "certificate number"},
+    "case_number": {"file", "file #", "file number", "case", "case #", "case number"},
+    "owner_name": {"owner", "owner name"},
+}
+# Extra labels worth keeping verbatim in raw_fields.
+_RAW_LABELS = {"cert holder", "applicant", "notes", "amount due", "location"}
+
+
+def _norm_label(s: str) -> str:
+    return re.sub(r"\s+", " ", (s or "").replace("#", "").strip().lower()).strip()
+
+
+def _render_html(url: str, rate: RateLimiter) -> str:
+    """Load a JS clerk page in Chromium (a real browser gets past the WAF that
+    403s plain requests) and return the rendered HTML."""
+    from playwright.sync_api import sync_playwright
+    rate.wait()
+    with sync_playwright() as p:
+        browser = p.chromium.launch(args=["--disable-http2"])
+        try:
+            page = browser.new_page(user_agent=BROWSER_HEADERS["User-Agent"])
+            page.goto(url, wait_until="networkidle", timeout=45000)
+            page.wait_for_timeout(1500)
+            return page.content()
+        finally:
+            browser.close()
+
+
+def collect_rendered_labels(entry: dict, session: requests.Session, rate: RateLimiter) -> list[AuctionRecord]:
+    """Hardee / Sumter / Columbia. Render the page and read each sale row's
+    <label>/<strong> field pairs."""
+    from datetime import datetime
+    from urllib.parse import urljoin
+    slug = entry["slug"]
+    url = entry["sale_list_url"]
+    host = re.sub(r"^https?://", "", url).split("/")[0]
+
+    html = _render_html(url, rate)
+    soup = BeautifulSoup(html, "lxml")
+
+    # Each field is a div carrying both "w-full" and "w-auto" classes with a
+    # <label>/<strong> inside; group consecutive fields by their shared parent
+    # (the row's flex wrapper), preserving document order.
+    def _cls(el):
+        return " ".join(el.get("class") or [])
+    field_divs = [d for d in soup.find_all("div")
+                  if "w-full" in _cls(d) and "w-auto" in _cls(d) and d.find("label") and d.find("strong")]
+    rows: list[tuple] = []            # (wrapper_id, {label: value}, wrapper_el)
+    by_wrapper: dict[int, dict] = {}
+    order: list[int] = []
+    wrapper_el: dict[int, object] = {}
+    for fd in field_divs:
+        label = _norm_label(fd.find("label").get_text(" ", strip=True))
+        value = fd.find("strong").get_text(" ", strip=True)
+        wid = id(fd.parent)
+        if wid not in by_wrapper:
+            by_wrapper[wid] = {}
+            order.append(wid)
+            wrapper_el[wid] = fd.parent
+        by_wrapper[wid].setdefault(label, value)
+
+    records: list[AuctionRecord] = []
+    seen: set[tuple] = set()
+    today = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    for wid in order:
+        fields = by_wrapper[wid]
+        if "sale date" not in fields:      # not a sale row
+            continue
+        picked: dict[str, str] = {}
+        for target, names in _LABEL_MAP.items():
+            for lab, val in fields.items():
+                if lab in names:
+                    picked[target] = val
+                    break
+        parcel = (picked.get("parcel_id") or "").strip()
+        sale_date = _mdy(picked.get("sale_date", ""))
+        if not parcel or not sale_date:
+            continue
+        # Upcoming only.
+        try:
+            if datetime.strptime(sale_date, "%m/%d/%Y") < today:
+                continue
+        except ValueError:
+            pass
+        key = (parcel, sale_date)
+        if key in seen:
+            continue
+        seen.add(key)
+        # An appraiser/record link sometimes sits in the row container.
+        appraiser = ""
+        container = wrapper_el[wid].parent if wrapper_el[wid] else None
+        if container:
+            a = container.find("a", href=True)
+            if a:
+                appraiser = urljoin(url, a["href"])
+        raw = {"cell_labels": fields}
+        for lab, val in fields.items():
+            if lab in _RAW_LABELS:
+                raw[lab.replace(" ", "_")] = val
+        records.append(AuctionRecord(
+            county=slug,
+            sale_date=sale_date,
+            auction_type="TAXDEED",
+            case_number=(picked.get("case_number") or "").strip(),
+            certificate_number=(picked.get("certificate_number") or "").strip(),
+            parcel_id=parcel,
+            owner_name=(picked.get("owner_name") or "").strip(),
+            opening_bid=_money(picked.get("opening_bid")),
+            auction_status=(picked.get("auction_status") or "").strip(),
+            auction_url=url,
+            appraiser_url=appraiser,
+            source_host=host,
+            scraped_at=_now_iso(),
+            raw_fields=raw,
+        ))
+    records.sort(key=lambda r: (r.sale_date[6:], r.sale_date[:2], r.sale_date[3:5], r.parcel_id))
+    return records
+
+
 # Platform dispatch: slug -> collector.
 def _collector_for(slug: str):
     if slug in BID4ASSETS_SLUGS:
         return collect_bid4assets
     if slug in TAXSMART_SLUGS:
         return collect_taxsmart
+    if slug in RENDERED_SLUGS:
+        return collect_rendered_labels
     return None
 
 
