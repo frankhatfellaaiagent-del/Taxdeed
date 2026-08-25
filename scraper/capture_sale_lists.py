@@ -311,59 +311,72 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
     if not found:
         print("    propertyListDownload definition not located in page or bundled scripts")
 
-    # Hit the most likely download endpoints directly and describe what comes
-    # back — a CSV/XLS of the sale properties is exactly the adapter's source.
-    lp = soup.find(id="LandingPageId")
-    lpid = lp.get("value") if lp else None
-    sd = soup.find(attrs={"name": "SelectedSaleDateId"})
-    sdid = sd.get("value") if sd else None
-    candidates = [
-        (f"{url.rstrip('/')}/propertylistdownload", "GET", None),
-        (f"{url.rstrip('/')}/PropertyListDownload", "GET", None),
-        (f"{url.rstrip('/')}/downloadpropertylist", "GET", None),
-    ]
-    if lpid and sdid:
-        candidates.append(
-            (f"{url.rstrip('/')}/propertylistdownload", "POST",
-             {"LandingPageId": lpid, "SelectedSaleDateId": sdid}))
-    for cand_url, method, body in candidates:
+    # Enumerate the sale-date dropdown — each option value is a salesdate id the
+    # download endpoint is keyed by, so the adapter iterates them.
+    sd_select = (soup.find("select", id="SelectedSaleDateId")
+                 or soup.find("select", attrs={"name": "SelectedSaleDateId"}))
+    sale_dates: list[tuple[str, str]] = []
+    if sd_select:
+        for o in sd_select.find_all("option"):
+            v = (o.get("value") or "").strip()
+            if v:
+                sale_dates.append((v, o.get_text(" ", strip=True)))
+        print(f"    sale-date options ({len(sale_dates)}): {sale_dates[:8]}")
+    sd = soup.find(attrs={"name": "SelectedSaleDateId"}) or soup.find(id="SelectedSaleDateId")
+    default_sd = (sd.get("value") if sd else None) or (sale_dates[0][0] if sale_dates else None)
+
+    # propertyListDownload() navigates to
+    #   /OkaloosaFLTax/listings/propertylistdownload?salesdate=<SelectedSaleDateId>
+    # Fetch it WITH the salesdate and describe the parcel structure so the parser
+    # can be written against the real export.
+    dl = f"{url.rstrip('/')}/propertylistdownload"
+    if default_sd:
         try:
-            if method == "POST":
-                cr = session.post(cand_url, data=body, timeout=45)
-            else:
-                cr = session.get(cand_url, timeout=45,
-                                 params={"LandingPageId": lpid, "SelectedSaleDateId": sdid}
-                                 if lpid and sdid else None)
+            cr = session.get(dl, params={"salesdate": default_sd}, timeout=45)
         except requests.RequestException as exc:
-            print(f"    {method} {cand_url} -> FAILED {exc.__class__.__name__}")
-            continue
+            print(f"    GET {dl}?salesdate={default_sd} -> FAILED {exc.__class__.__name__}")
+            return
         ct = cr.headers.get("content-type", "")
         disp = cr.headers.get("content-disposition", "")
-        print(f"    {method} {cand_url} -> {cr.status_code}  {ct}  {len(cr.content)} bytes  disp={disp!r}")
-        if cr.status_code == 200 and len(cr.content) > 20:
-            head = cr.content[:1500]
-            is_pdf = head[:5] == b"%PDF-"
-            is_xlsx = head[:2] == b"PK"
-            if is_pdf:
-                print("      -> PDF payload")
-                (out / f"{slug}_propertylist.pdf").write_bytes(cr.content)
-                _describe_pdf(cr.content)
-            elif is_xlsx:
-                print("      -> XLSX/zip payload")
-                (out / f"{slug}_propertylist.xlsx").write_bytes(cr.content)
-            elif "html" not in ct.lower():
-                print(f"      -> text/data payload; first 1500 chars:\n{cr.text[:1500]}")
-                (out / f"{slug}_propertylist.txt").write_bytes(cr.content)
-            else:
-                # HTML could be the rendered list itself — check for a table.
-                ts = BeautifulSoup(cr.text, "lxml").find_all("table")
-                print(f"      -> HTML payload; tables={len(ts)}")
-                if ts:
-                    for i, t in enumerate(ts[:2]):
-                        rows = t.find_all("tr")
-                        head_cells = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])] if rows else []
-                        print(f"        table[{i}]: {len(rows)} rows header={head_cells[:9]}")
-            break
+        print(f"    GET {dl}?salesdate={default_sd} -> {cr.status_code}  {ct}  {len(cr.content)} bytes  disp={disp!r}")
+        (out / f"{slug}_propertylist.html").write_bytes(cr.content)
+        head = cr.content[:5]
+        if head == b"%PDF-":
+            print("      -> PDF payload"); _describe_pdf(cr.content); return
+        if head[:2] == b"PK":
+            print("      -> XLSX/zip payload"); return
+        if "html" not in ct.lower() and "," in cr.text[:200]:
+            print(f"      -> CSV/text payload; first 1500 chars:\n{cr.text[:1500]}"); return
+        dsoup = BeautifulSoup(cr.text, "lxml")
+        for tag in dsoup(["script", "style"]):
+            tag.decompose()
+        tables = dsoup.find_all("table")
+        print(f"      -> HTML; tables={len(tables)}")
+        for i, t in enumerate(tables[:3]):
+            rows = t.find_all("tr")
+            if not rows:
+                continue
+            hdr = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])]
+            bdy = [c.get_text(" ", strip=True) for c in rows[1].find_all(["th", "td"])] if len(rows) > 1 else []
+            print(f"        table[{i}]: {len(rows)} rows header={hdr[:10]}")
+            print(f"                   first row={bdy[:10]}")
+        # No table? Find the repeated block that holds each parcel. Look for the
+        # class whose elements most often contain a parcel-like identifier.
+        if not tables:
+            from collections import Counter
+            cls_counter: Counter = Counter()
+            for el in dsoup.find_all(True, class_=True):
+                txt = el.get_text(" ", strip=True)
+                if IDENT_RE.search(txt) and 10 < len(txt) < 400:
+                    cls_counter[" ".join(el.get("class"))] += 1
+            print(f"      repeated parcel-ish classes: {cls_counter.most_common(8)}")
+            dates = DATE_RE.findall(dsoup.get_text(" ", strip=True))
+            print(f"      date tokens: {len(dates)} sample={dates[:6]}")
+            print("      --- first 4000 chars of visible text ---")
+            print("      " + dsoup.get_text(" ", strip=True)[:4000].replace("\n", " "))
+            print("      --- first 2500 chars of raw HTML body ---")
+            body = dsoup.find("body") or dsoup
+            print("      " + str(body)[:2500].replace("\n", "\n      "))
 
 
 def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
