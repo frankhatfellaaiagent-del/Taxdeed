@@ -198,6 +198,11 @@ def main(argv=None) -> int:
     p = sub.add_parser("diagnose-enrichment", help="Debug why appraiser/clerk enrichment fails for specific counties")
     p.add_argument("--out", default="output/diagnose")
 
+    p = sub.add_parser("capture-sale-lists", help="Fetch + structurally describe the non-RealAuction counties' sale-list pages (Phase C/E evidence)")
+    p.add_argument("--out", default="output/sale-lists")
+    p.add_argument("--counties", help="Comma-separated slugs (default: the 7 non-RealAuction targets)")
+    p.add_argument("--delay", type=float, default=3.0, help="Base seconds between requests (default 3.0)")
+
     p = sub.add_parser("export", help="Write data/exports feeds (tsv + json) from a run")
     p.add_argument("--run", help="Run directory (default: latest under data/runs, else output/runs)")
 
@@ -247,6 +252,11 @@ def main(argv=None) -> int:
     if args.cmd == "diagnose-enrichment":
         from .diagnose_enrichment import diagnose_enrichment
         diagnose_enrichment(args.out)
+        return 0
+    if args.cmd == "capture-sale-lists":
+        from .capture_sale_lists import capture_sale_lists
+        counties = [_slugify(c) for c in _county_names_from(args.counties)] if args.counties else None
+        capture_sale_lists(args.out, delay=args.delay, counties=counties)
         return 0
     if args.cmd == "export":
         from .exporter import export_run
