@@ -1,0 +1,48 @@
+name: Capture sale-list evidence
+
+# Phase C/E groundwork: fetch and structurally describe the sale-list pages of
+# the seven Florida counties RealAuction doesn't cover (Okaloosa on Bid4Assets;
+# St. Johns, Levy, Collier, Sumter, Hardee, Columbia in person). Read-only —
+# commits nothing, stays out of the data-pipeline concurrency group. The
+# structural read goes to the job log; the raw pages upload as an artifact.
+
+on:
+  workflow_dispatch:
+    inputs:
+      counties:
+        description: "Comma-separated slugs (default: all 7 targets)"
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: capture-sale-lists
+  cancel-in-progress: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Capture
+        run: |
+          python -m scraper -v capture-sale-lists --out output/sale-lists \
+            ${{ github.event.inputs.counties && format('--counties {0}', github.event.inputs.counties) || '' }}
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: sale-list-evidence
+          path: output/sale-lists/
+          if-no-files-found: warn
+          retention-days: 14
