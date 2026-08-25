@@ -1,0 +1,60 @@
+name: Scrape non-RealAuction counties (on demand)
+
+# Run the Bid4Assets + in-person clerk-list collectors on their own, print the
+# resulting records to the job log, and upload them. The daily pipeline already
+# runs these inline; this is for developing/verifying a single county's adapter
+# without a full 45-county refresh. Read-only — commits nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      counties:
+        description: "Comma-separated slugs (default: every county with a collector)"
+        required: false
+      delay:
+        description: "Base seconds between requests"
+        required: false
+        default: "3"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scrape-clerk-manual
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Scrape
+        run: |
+          python -m scraper -v scrape-clerk --out output/runs/manual \
+            --delay "${{ github.event.inputs.delay || '3' }}" \
+            ${{ github.event.inputs.counties && format('--counties {0}', github.event.inputs.counties) || '' }}
+      - name: Show records
+        if: always()
+        run: |
+          echo "=================== clerk_meta.json"
+          cat output/runs/manual/clerk_meta.json || true
+          for f in output/runs/manual/*.json; do
+            case "$f" in
+              *clerk_meta.json) ;;
+              *) echo "=================== $f"; python -m json.tool "$f" | head -80 ;;
+            esac
+          done
+      - name: Upload
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clerk-run
+          path: output/runs/manual/
+          if-no-files-found: warn
+          retention-days: 14

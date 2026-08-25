@@ -278,6 +278,142 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
             print(f"    inline script with auction data ({len(txt)} chars): {txt[:500]}")
             break
 
+    # The property-list DOWNLOAD is login-gated. The public path is the Kendo
+    # grid on the listings page — anonymous visitors see the auctions, so its
+    # read endpoint is public. Hunt the grid's DataSource transport in the
+    # inline scripts and dump the context around it.
+    # Dump the FULL #Auctions_grid kendoGrid init. If Kendo MVC server-bound the
+    # grid (BindTo(Model)), the rows are inline as dataSource.data — i.e. the
+    # auctions are already in this served HTML and parse with plain requests.
+    for s in soup.find_all("script"):
+        txt = s.string or ""
+        if "Auctions_grid" in txt or "kendoGrid" in txt:
+            k = txt.find("kendoGrid")
+            lo = max(0, k - 80)
+            print(f"    [grid] Auctions_grid init ({len(txt)} chars), from kendoGrid:")
+            print("      " + txt[lo:lo + 8000].replace("\n", " "))
+            has_data = '"data":[' in txt or '"data" :[' in txt or '"Data":[' in txt
+            has_transport = "transport" in txt.lower()
+            print(f"    [grid] inline dataSource.data present: {has_data}; transport present: {has_transport}")
+            # If inline, show how many auction records and the first one's keys.
+            m = _re.search(r'"[Dd]ata"\s*:\s*(\[.*?\])\s*[,}]', txt, _re.S)
+            if m:
+                try:
+                    arr = json.loads(m.group(1))
+                    print(f"    [grid] inline rows: {len(arr)}")
+                    if arr:
+                        print(f"    [grid] row[0] keys: {list(arr[0])[:25]}")
+                        print(f"    [grid] row[0]: {json.dumps(arr[0])[:1200]}")
+                except (ValueError, IndexError) as exc:
+                    print(f"    [grid] data present but JSON parse failed: {exc}")
+            break
+    # Any URL string anywhere in the scripts that looks like a grid read.
+    read_urls = sorted({m for m in _re.findall(r'["\'](/[A-Za-z0-9_./?=&\-]{4,})["\']', html)
+                        if _re.search(r'auction|listing|grid|read|getsale|sale|search', m, _re.I)})
+    print(f"    [grid] candidate read paths ({len(read_urls)}):")
+    for u in read_urls[:25]:
+        print(f"      {u}")
+
+    # The download control fires propertyListDownload(); find its definition so
+    # we know the real request (URL, method, POST body) it issues.
+    from urllib.parse import urljoin as _urljoin
+    def _dump_func(source: str, label: str) -> bool:
+        idx = source.find("propertyListDownload")
+        # Prefer the definition ("function propertyListDownload") over the call.
+        deff = source.find("function propertyListDownload")
+        if deff != -1:
+            idx = deff
+        if idx == -1:
+            return False
+        print(f"    propertyListDownload in {label}: {source[idx:idx + 700]!r}")
+        return True
+    found = False
+    for s in soup.find_all("script"):
+        if s.string and "propertyListDownload" in s.string:
+            found = _dump_func(s.string, "inline") or found
+    # Not inline? It's in one of the bundled scripts — pull each and search.
+    if not found:
+        for s in soup.find_all("script", src=True):
+            src = _urljoin(url, s["src"])
+            if not any(k in src.lower() for k in ("main.js", "county", "auction", "listing", "channel")):
+                continue
+            try:
+                js = session.get(src, timeout=30).text
+            except requests.RequestException:
+                continue
+            if "propertyListDownload" in js and _dump_func(js, src):
+                found = True
+                break
+    if not found:
+        print("    propertyListDownload definition not located in page or bundled scripts")
+
+    # Enumerate the sale-date dropdown — each option value is a salesdate id the
+    # download endpoint is keyed by, so the adapter iterates them.
+    sd_select = (soup.find("select", id="SelectedSaleDateId")
+                 or soup.find("select", attrs={"name": "SelectedSaleDateId"}))
+    sale_dates: list[tuple[str, str]] = []
+    if sd_select:
+        for o in sd_select.find_all("option"):
+            v = (o.get("value") or "").strip()
+            if v:
+                sale_dates.append((v, o.get_text(" ", strip=True)))
+        print(f"    sale-date options ({len(sale_dates)}): {sale_dates[:8]}")
+    sd = soup.find(attrs={"name": "SelectedSaleDateId"}) or soup.find(id="SelectedSaleDateId")
+    default_sd = (sd.get("value") if sd else None) or (sale_dates[0][0] if sale_dates else None)
+
+    # propertyListDownload() navigates to
+    #   /OkaloosaFLTax/listings/propertylistdownload?salesdate=<SelectedSaleDateId>
+    # Fetch it WITH the salesdate and describe the parcel structure so the parser
+    # can be written against the real export.
+    dl = f"{url.rstrip('/')}/propertylistdownload"
+    if default_sd:
+        try:
+            cr = session.get(dl, params={"salesdate": default_sd}, timeout=45)
+        except requests.RequestException as exc:
+            print(f"    GET {dl}?salesdate={default_sd} -> FAILED {exc.__class__.__name__}")
+            return
+        ct = cr.headers.get("content-type", "")
+        disp = cr.headers.get("content-disposition", "")
+        print(f"    GET {dl}?salesdate={default_sd} -> {cr.status_code}  {ct}  {len(cr.content)} bytes  disp={disp!r}")
+        (out / f"{slug}_propertylist.html").write_bytes(cr.content)
+        head = cr.content[:5]
+        if head == b"%PDF-":
+            print("      -> PDF payload"); _describe_pdf(cr.content); return
+        if head[:2] == b"PK":
+            print("      -> XLSX/zip payload"); return
+        if "html" not in ct.lower() and "," in cr.text[:200]:
+            print(f"      -> CSV/text payload; first 1500 chars:\n{cr.text[:1500]}"); return
+        dsoup = BeautifulSoup(cr.text, "lxml")
+        for tag in dsoup(["script", "style"]):
+            tag.decompose()
+        tables = dsoup.find_all("table")
+        print(f"      -> HTML; tables={len(tables)}")
+        for i, t in enumerate(tables[:3]):
+            rows = t.find_all("tr")
+            if not rows:
+                continue
+            hdr = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])]
+            bdy = [c.get_text(" ", strip=True) for c in rows[1].find_all(["th", "td"])] if len(rows) > 1 else []
+            print(f"        table[{i}]: {len(rows)} rows header={hdr[:10]}")
+            print(f"                   first row={bdy[:10]}")
+        # No table? Find the repeated block that holds each parcel. Look for the
+        # class whose elements most often contain a parcel-like identifier.
+        if not tables:
+            from collections import Counter
+            cls_counter: Counter = Counter()
+            for el in dsoup.find_all(True, class_=True):
+                txt = el.get_text(" ", strip=True)
+                if IDENT_RE.search(txt) and 10 < len(txt) < 400:
+                    cls_counter[" ".join(el.get("class"))] += 1
+            print(f"      repeated parcel-ish classes: {cls_counter.most_common(8)}")
+            dates = DATE_RE.findall(dsoup.get_text(" ", strip=True))
+            print(f"      date tokens: {len(dates)} sample={dates[:6]}")
+            print("      --- first 4000 chars of visible text ---")
+            print("      " + dsoup.get_text(" ", strip=True)[:4000].replace("\n", " "))
+            print("      --- first 2500 chars of raw HTML body ---")
+            body = dsoup.find("body") or dsoup
+            print("      " + str(body)[:2500].replace("\n", "\n      "))
+
 
 def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
     """Submit TaxSmart's Sale Date search and dump the result rows. The two
