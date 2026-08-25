@@ -415,10 +415,40 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
             print("      " + str(body)[:2500].replace("\n", "\n      "))
 
 
+def _describe_taxsmart_result(pr, out: Path, slug: str, label: str) -> int:
+    """Dump the shape of a TaxSmart search response: tables, result-detail
+    links, dates. Returns the number of result rows found so the caller can
+    tell a real result page from a re-rendered empty search form."""
+    print(f"    {label} -> {pr.status_code}, {len(pr.content)} bytes, final={pr.url}")
+    (out / f"{slug}_taxsmart_{label}.html").write_bytes(pr.content)
+    rs = BeautifulSoup(pr.text, "lxml")
+    tables = rs.find_all("table")
+    rows_seen = 0
+    print(f"    result tables: {len(tables)}")
+    for i, t in enumerate(tables[:6]):
+        rows = t.find_all("tr")
+        if len(rows) < 2:
+            continue
+        head = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])]
+        body = [c.get_text(" ", strip=True) for c in rows[1].find_all(["th", "td"])]
+        print(f"      table[{i}]: {len(rows)} rows header={head[:9]}")
+        print(f"                 first row={body[:9]}")
+        rows_seen += len(rows) - 1
+    details = [a["href"] for a in rs.find_all("a", href=True)
+               if re.search(r"/(Home/)?Details|/TaxDeed|/SaleItem|itemid|saleid", a["href"], re.I)]
+    print(f"    detail links: {len(details)} sample={details[:5]}")
+    dates = DATE_RE.findall(rs.get_text(" ", strip=True))
+    print(f"    date tokens in result: {len(dates)} sample={dates[:6]}")
+    return rows_seen or len(details)
+
+
 def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
-    """Submit TaxSmart's Sale Date search and dump the result rows. The two
-    SearchSaleDate<From|To> <select>s list the actual scheduled sale dates, so
-    the full-range POST returns every upcoming parcel."""
+    """Submit TaxSmart's Sale Date search the way its own front-end does. The
+    round-3 POST replayed the empty search form — an ASP.NET MVC form rejects a
+    submit missing its __RequestVerificationToken and other hidden fields, so
+    this time gather EVERY field in the form (hidden inputs, token, selects with
+    their defaults), set the sale-date range to the full span, and submit both
+    POST and GET, following redirects, to see which returns the real rows."""
     from urllib.parse import urljoin
     print("  [deep] TaxSmart sale-date search")
     try:
@@ -427,44 +457,175 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
         print(f"    fetch failed: {exc}")
         return
     soup = BeautifulSoup(r.text, "lxml")
-    form = soup.find("form")
+
+    # The sale-date search lives in the form that actually contains
+    # SearchSaleDateFrom — not necessarily the first <form> on the page.
+    form = None
+    for f in soup.find_all("form"):
+        if f.find(attrs={"name": "SearchSaleDateFrom"}) or f.find(id="SearchSaleDateFrom"):
+            form = f
+            break
+    form = form or soup.find("form")
     if not form:
         print("    no form on page")
         return
-    action = urljoin(r.url, form.get("action") or "")
+    method = (form.get("method") or "get").lower()
+    action = urljoin(r.url, form.get("action") or r.url)
+    print(f"    form method={method} action={action}")
 
-    def opts(sel_id):
-        sel = soup.find("select", id=sel_id)
-        return [o.get("value", "") for o in sel.find_all("option")] if sel else []
-    frm, to = opts("SearchSaleDateFrom"), opts("SearchSaleDateTo")
-    print(f"    sale-date options: from={len(frm)} to={len(to)}; sample={frm[:3]}")
-    if not frm:
-        print("    no sale-date options — nothing scheduled, or a different field name")
-        return
-    data = {"SearchSaleDateFrom": frm[0], "SearchSaleDateTo": (to or frm)[-1],
-            "buttonSubmitSaleDate": "Search"}
-    try:
-        pr = session.post(action, data=data, timeout=45)
-    except requests.RequestException as exc:
-        print(f"    POST failed: {exc}")
-        return
-    print(f"    POST {action} -> {pr.status_code}, {len(pr.content)} bytes")
-    (out / f"{slug}_taxsmart_result.html").write_bytes(pr.content)
-    rs = BeautifulSoup(pr.text, "lxml")
-    tables = rs.find_all("table")
-    print(f"    result tables: {len(tables)}")
-    for i, t in enumerate(tables[:4]):
-        rows = t.find_all("tr")
-        if len(rows) < 2:
+    # Collect EVERY field the form submits, with its default value.
+    fields: dict[str, str] = {}
+    for el in form.find_all(["input", "select", "textarea"]):
+        name = el.get("name")
+        if not name:
             continue
-        head = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])]
-        body = [c.get_text(" ", strip=True) for c in rows[1].find_all(["th", "td"])]
-        print(f"      table[{i}]: {len(rows)} rows header={head[:9]}")
-        print(f"                 first row={body[:9]}")
-    details = [a["href"] for a in rs.find_all("a", href=True) if "/Home/Details" in a["href"]]
-    print(f"    /Home/Details links: {len(details)} sample={details[:4]}")
-    dates = DATE_RE.findall(rs.get_text(" ", strip=True))
-    print(f"    date tokens in result: {len(dates)} sample={dates[:6]}")
+        if el.name == "select":
+            opts_ = el.find_all("option")
+            sel = next((o for o in opts_ if o.get("selected")), opts_[0] if opts_ else None)
+            fields[name] = (sel.get("value", "") if sel else "")
+        elif el.get("type") in ("checkbox", "radio"):
+            if el.get("checked"):
+                fields[name] = el.get("value", "on")
+        else:
+            fields[name] = el.get("value", "")
+    print(f"    form fields ({len(fields)}): {sorted(fields)[:20]}")
+    has_token = "__RequestVerificationToken" in fields
+    print(f"    __RequestVerificationToken present: {has_token}")
+
+    def opts(sel_name):
+        sel = soup.find("select", attrs={"name": sel_name}) or soup.find("select", id=sel_name)
+        return [o.get("value", "") for o in sel.find_all("option") if o.get("value")] if sel else []
+    frm, to = opts("SearchSaleDateFrom"), opts("SearchSaleDateTo")
+    print(f"    sale-date options: from={len(frm)} to={len(to)}; sample={frm[:4]}")
+
+    # The options are human date strings ("Wednesday, December 15, 2027 12:00
+    # PM"), listed newest-first. Round 3/this run's first attempt submitted an
+    # INVERTED range (From=newest, To=oldest) so the server rightly returned no
+    # sales. Parse them, keep upcoming, and submit a valid ascending range.
+    from datetime import datetime as _dt
+    def _parse(s):
+        for fmt in ("%A, %B %d, %Y %I:%M %p", "%A, %B %d, %Y %I:%M%p", "%A, %B %d, %Y"):
+            try:
+                return _dt.strptime(s.strip(), fmt)
+            except ValueError:
+                continue
+        return None
+    dated = [(o, _parse(o)) for o in frm]
+    parseable = [(o, d) for o, d in dated if d]
+    now = _dt.utcnow()
+    upcoming = sorted([(o, d) for o, d in parseable if d >= now], key=lambda x: x[1])
+    print(f"    parsed {len(parseable)}/{len(frm)} date options; {len(upcoming)} upcoming")
+    if upcoming:
+        fields["SearchSaleDateFrom"] = upcoming[0][0]   # earliest upcoming
+        fields["SearchSaleDateTo"] = upcoming[-1][0]     # latest upcoming
+    elif frm:
+        # Fallback: full ascending span (options are newest-first, so [-1]..[0]).
+        fields["SearchSaleDateFrom"] = frm[-1]
+        fields["SearchSaleDateTo"] = frm[0]
+    print(f"    range From={fields.get('SearchSaleDateFrom')!r} To={fields.get('SearchSaleDateTo')!r}")
+
+    # This is one big multi-tab form; the server dispatches on WHICH submit
+    # button is present. Send ONLY the sale-date button, not all ten.
+    for k in [k for k in fields if k.lower().startswith("buttonsubmit")]:
+        del fields[k]
+    fields["buttonSubmitSaleDate"] = "Search"
+
+    tried = []
+    order = ["post", "get"] if method == "post" else ["get", "post"]
+    for m in order:
+        try:
+            if m == "post":
+                pr = session.post(action, data=fields, timeout=45, allow_redirects=True)
+            else:
+                pr = session.get(action, params=fields, timeout=45, allow_redirects=True)
+        except requests.RequestException as exc:
+            print(f"    {m.upper()} failed: {exc}")
+            continue
+        n = _describe_taxsmart_result(pr, out, slug, m)
+        tried.append((m, n))
+        if n:
+            print(f"    -> {m.upper()} returned {n} result rows/links")
+            break
+    if tried and all(n == 0 for _, n in tried):
+        print("    both POST and GET returned 0 table rows — dumping the POST body structure")
+        # Re-POST and examine the FULL response: the results may render into a
+        # container my table detector skips, or the search may be AJAX.
+        pr = session.post(action, data=fields, timeout=45, allow_redirects=True)
+        rs = BeautifulSoup(pr.text, "lxml")
+        # Every table with its real row count + header.
+        for i, t in enumerate(rs.find_all("table")):
+            rows = t.find_all("tr")
+            hdr = [c.get_text(" ", strip=True) for c in (rows[0].find_all(["th", "td"]) if rows else [])]
+            print(f"      table[{i}] id={t.get('id')!r} class={t.get('class')} rows={len(rows)} header={hdr[:8]}")
+        # Result-ish containers (div/section/ul) by id/class keyword.
+        for el in rs.find_all(["div", "section", "ul", "tbody"], id=True):
+            if re.search(r"result|grid|list|sale|data|record|deed", el.get("id", ""), re.I):
+                print(f"      container id={el.get('id')!r} children={len(el.find_all(True))} "
+                      f"text[:120]={el.get_text(' ', strip=True)[:120]!r}")
+        # jQuery/AJAX hints: any URL the page's scripts fetch for results.
+        for s in rs.find_all("script"):
+            txt = s.string or ""
+            for mo in re.finditer(r'(?:url|action)\s*[:=]\s*["\']([^"\']+)["\']', txt):
+                u = mo.group(1)
+                if re.search(r"result|sale|deed|search|grid|list|json|ajax", u, re.I):
+                    print(f"      script fetch url: {u}")
+        vis = rs.get_text(" ", strip=True)
+        print(f"      POST visible-text length={len(vis)}")
+        for kw in ("no record", "not found", "no result", "record(s)", "results found", "matching", "Sale Date"):
+            i = vis.lower().find(kw.lower())
+            if i != -1:
+                print(f"      text near {kw!r}: …{vis[max(0,i-50):i+90]}…")
+        # The results grid (table#TaxDeed) is empty in the HTML and filled
+        # client-side. The page's script names the data endpoint:
+        #   /TaxSmart/Home/GridSearchData?SearchType=Sale Date
+        # The POST above stashed the sale-date criteria in the session, so a
+        # follow-up GET to that endpoint (with the AJAX header) returns the rows.
+        from urllib.parse import urljoin as _uj
+        grid_urls = []
+        for s in rs.find_all("script"):
+            for mo in re.finditer(r'["\']([^"\']*GridSearchData[^"\']*)["\']', s.string or ""):
+                grid_urls.append(mo.group(1))
+        grid_urls = sorted(set(grid_urls)) or ["/TaxSmart/Home/GridSearchData?SearchType=Sale Date"]
+        # The exact column order the jqGrid #TaxDeed cells map to — pull colNames
+        # / colModel from the page scripts so the collector labels cells right.
+        for s in rs.find_all("script"):
+            txt = s.string or ""
+            if "TaxDeed" in txt and ("colModel" in txt or "colNames" in txt):
+                for kk in ("colNames", "colModel"):
+                    mo = re.search(re.escape(kk) + r'\s*:\s*(\[.*?\])', txt, re.S)
+                    if mo:
+                        print(f"      [grid] {kk}: {mo.group(1)[:900]}")
+                break
+        for gu in grid_urls[:3]:
+            full = _uj(action, gu)
+            try:
+                gr = session.get(full, timeout=45, headers={"X-Requested-With": "XMLHttpRequest"})
+            except requests.RequestException as exc:
+                print(f"      [grid] {full} failed: {exc}")
+                continue
+            ct = gr.headers.get("content-type", "")
+            print(f"      [grid] GET {full} -> {gr.status_code} {ct} {len(gr.content)} bytes")
+            body = gr.text
+            try:
+                j = gr.json()
+                if isinstance(j, dict):
+                    print(f"      [grid] JSON dict keys: {list(j)[:15]}")
+                    for dk in ("data", "aaData", "Data", "rows", "results"):
+                        if isinstance(j.get(dk), list):
+                            arr = j[dk]
+                            print(f"      [grid] {dk}: {len(arr)} rows; row[0]={json.dumps(arr[0])[:800] if arr else None}")
+                            break
+                elif isinstance(j, list):
+                    print(f"      [grid] JSON list: {len(j)} rows; row[0]={json.dumps(j[0])[:800] if j else None}")
+            except ValueError:
+                # Not JSON — maybe an HTML table partial.
+                gsoup = BeautifulSoup(body, "lxml")
+                gts = gsoup.find_all("table")
+                print(f"      [grid] non-JSON; tables={len(gts)}; first 600 chars: {body[:600]!r}")
+                for t in gts[:1]:
+                    trs = t.find_all("tr")
+                    if trs:
+                        print(f"      [grid] table rows={len(trs)} header={[c.get_text(' ',strip=True) for c in trs[0].find_all(['th','td'])][:9]}")
 
 
 def _probe_docaccess(session: requests.Session, domain: str, out: Path, slug: str) -> None:
