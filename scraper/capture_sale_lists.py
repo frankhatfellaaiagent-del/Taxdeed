@@ -575,15 +575,47 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
             i = vis.lower().find(kw.lower())
             if i != -1:
                 print(f"      text near {kw!r}: …{vis[max(0,i-50):i+90]}…")
-        # Try the AJAX header — MVC often returns a partial view for XHR posts.
-        try:
-            ax = session.post(action, data=fields, timeout=45,
-                              headers={"X-Requested-With": "XMLHttpRequest"})
-            axs = BeautifulSoup(ax.text, "lxml")
-            print(f"      [ajax] {ax.status_code} {len(ax.content)} bytes; tables={len(axs.find_all('table'))} "
-                  f"text[:150]={axs.get_text(' ', strip=True)[:150]!r}")
-        except requests.RequestException as exc:
-            print(f"      [ajax] failed: {exc}")
+        # The results grid (table#TaxDeed) is empty in the HTML and filled
+        # client-side. The page's script names the data endpoint:
+        #   /TaxSmart/Home/GridSearchData?SearchType=Sale Date
+        # The POST above stashed the sale-date criteria in the session, so a
+        # follow-up GET to that endpoint (with the AJAX header) returns the rows.
+        from urllib.parse import urljoin as _uj
+        grid_urls = []
+        for s in rs.find_all("script"):
+            for mo in re.finditer(r'["\']([^"\']*GridSearchData[^"\']*)["\']', s.string or ""):
+                grid_urls.append(mo.group(1))
+        grid_urls = sorted(set(grid_urls)) or ["/TaxSmart/Home/GridSearchData?SearchType=Sale Date"]
+        for gu in grid_urls[:3]:
+            full = _uj(action, gu)
+            try:
+                gr = session.get(full, timeout=45, headers={"X-Requested-With": "XMLHttpRequest"})
+            except requests.RequestException as exc:
+                print(f"      [grid] {full} failed: {exc}")
+                continue
+            ct = gr.headers.get("content-type", "")
+            print(f"      [grid] GET {full} -> {gr.status_code} {ct} {len(gr.content)} bytes")
+            body = gr.text
+            try:
+                j = gr.json()
+                if isinstance(j, dict):
+                    print(f"      [grid] JSON dict keys: {list(j)[:15]}")
+                    for dk in ("data", "aaData", "Data", "rows", "results"):
+                        if isinstance(j.get(dk), list):
+                            arr = j[dk]
+                            print(f"      [grid] {dk}: {len(arr)} rows; row[0]={json.dumps(arr[0])[:800] if arr else None}")
+                            break
+                elif isinstance(j, list):
+                    print(f"      [grid] JSON list: {len(j)} rows; row[0]={json.dumps(j[0])[:800] if j else None}")
+            except ValueError:
+                # Not JSON — maybe an HTML table partial.
+                gsoup = BeautifulSoup(body, "lxml")
+                gts = gsoup.find_all("table")
+                print(f"      [grid] non-JSON; tables={len(gts)}; first 600 chars: {body[:600]!r}")
+                for t in gts[:1]:
+                    trs = t.find_all("tr")
+                    if trs:
+                        print(f"      [grid] table rows={len(trs)} header={[c.get_text(' ',strip=True) for c in trs[0].find_all(['th','td'])][:9]}")
 
 
 def _probe_docaccess(session: requests.Session, domain: str, out: Path, slug: str) -> None:
