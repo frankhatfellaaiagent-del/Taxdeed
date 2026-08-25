@@ -278,6 +278,93 @@ def _probe_bid4assets(session: requests.Session, url: str, out: Path, slug: str)
             print(f"    inline script with auction data ({len(txt)} chars): {txt[:500]}")
             break
 
+    # The download control fires propertyListDownload(); find its definition so
+    # we know the real request (URL, method, POST body) it issues.
+    from urllib.parse import urljoin as _urljoin
+    def _dump_func(source: str, label: str) -> bool:
+        idx = source.find("propertyListDownload")
+        # Prefer the definition ("function propertyListDownload") over the call.
+        deff = source.find("function propertyListDownload")
+        if deff != -1:
+            idx = deff
+        if idx == -1:
+            return False
+        print(f"    propertyListDownload in {label}: {source[idx:idx + 700]!r}")
+        return True
+    found = False
+    for s in soup.find_all("script"):
+        if s.string and "propertyListDownload" in s.string:
+            found = _dump_func(s.string, "inline") or found
+    # Not inline? It's in one of the bundled scripts — pull each and search.
+    if not found:
+        for s in soup.find_all("script", src=True):
+            src = _urljoin(url, s["src"])
+            if not any(k in src.lower() for k in ("main.js", "county", "auction", "listing", "channel")):
+                continue
+            try:
+                js = session.get(src, timeout=30).text
+            except requests.RequestException:
+                continue
+            if "propertyListDownload" in js and _dump_func(js, src):
+                found = True
+                break
+    if not found:
+        print("    propertyListDownload definition not located in page or bundled scripts")
+
+    # Hit the most likely download endpoints directly and describe what comes
+    # back — a CSV/XLS of the sale properties is exactly the adapter's source.
+    lp = soup.find(id="LandingPageId")
+    lpid = lp.get("value") if lp else None
+    sd = soup.find(attrs={"name": "SelectedSaleDateId"})
+    sdid = sd.get("value") if sd else None
+    candidates = [
+        (f"{url.rstrip('/')}/propertylistdownload", "GET", None),
+        (f"{url.rstrip('/')}/PropertyListDownload", "GET", None),
+        (f"{url.rstrip('/')}/downloadpropertylist", "GET", None),
+    ]
+    if lpid and sdid:
+        candidates.append(
+            (f"{url.rstrip('/')}/propertylistdownload", "POST",
+             {"LandingPageId": lpid, "SelectedSaleDateId": sdid}))
+    for cand_url, method, body in candidates:
+        try:
+            if method == "POST":
+                cr = session.post(cand_url, data=body, timeout=45)
+            else:
+                cr = session.get(cand_url, timeout=45,
+                                 params={"LandingPageId": lpid, "SelectedSaleDateId": sdid}
+                                 if lpid and sdid else None)
+        except requests.RequestException as exc:
+            print(f"    {method} {cand_url} -> FAILED {exc.__class__.__name__}")
+            continue
+        ct = cr.headers.get("content-type", "")
+        disp = cr.headers.get("content-disposition", "")
+        print(f"    {method} {cand_url} -> {cr.status_code}  {ct}  {len(cr.content)} bytes  disp={disp!r}")
+        if cr.status_code == 200 and len(cr.content) > 20:
+            head = cr.content[:1500]
+            is_pdf = head[:5] == b"%PDF-"
+            is_xlsx = head[:2] == b"PK"
+            if is_pdf:
+                print("      -> PDF payload")
+                (out / f"{slug}_propertylist.pdf").write_bytes(cr.content)
+                _describe_pdf(cr.content)
+            elif is_xlsx:
+                print("      -> XLSX/zip payload")
+                (out / f"{slug}_propertylist.xlsx").write_bytes(cr.content)
+            elif "html" not in ct.lower():
+                print(f"      -> text/data payload; first 1500 chars:\n{cr.text[:1500]}")
+                (out / f"{slug}_propertylist.txt").write_bytes(cr.content)
+            else:
+                # HTML could be the rendered list itself — check for a table.
+                ts = BeautifulSoup(cr.text, "lxml").find_all("table")
+                print(f"      -> HTML payload; tables={len(ts)}")
+                if ts:
+                    for i, t in enumerate(ts[:2]):
+                        rows = t.find_all("tr")
+                        head_cells = [c.get_text(" ", strip=True) for c in rows[0].find_all(["th", "td"])] if rows else []
+                        print(f"        table[{i}]: {len(rows)} rows header={head_cells[:9]}")
+            break
+
 
 def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -> None:
     """Submit TaxSmart's Sale Date search and dump the result rows. The two
