@@ -547,20 +547,43 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
             print(f"    -> {m.upper()} returned {n} result rows/links")
             break
     if tried and all(n == 0 for _, n in tried):
-        print("    both POST and GET still returned 0 rows — dumping result diagnostics")
-        # Dump the biggest table verbatim and any 'no records'/'result' text so
-        # we can see whether it's genuinely empty or a structure we're missing.
-        rs = BeautifulSoup((session.get(action, params=fields, timeout=45).text), "lxml")
-        big = max(rs.find_all("table"), key=lambda t: len(t.find_all("tr")), default=None)
-        if big:
-            print(f"    biggest table rows={len(big.find_all('tr'))}; first 3 rows:")
-            for tr in big.find_all("tr")[:3]:
-                print("      " + " | ".join(c.get_text(' ', strip=True) for c in tr.find_all(['th', 'td']))[:200])
-        txt = rs.get_text(" ", strip=True)
-        for kw in ("no record", "not found", "no result", "record(s)", "results found", "matching"):
-            i = txt.lower().find(kw)
+        print("    both POST and GET returned 0 table rows — dumping the POST body structure")
+        # Re-POST and examine the FULL response: the results may render into a
+        # container my table detector skips, or the search may be AJAX.
+        pr = session.post(action, data=fields, timeout=45, allow_redirects=True)
+        rs = BeautifulSoup(pr.text, "lxml")
+        # Every table with its real row count + header.
+        for i, t in enumerate(rs.find_all("table")):
+            rows = t.find_all("tr")
+            hdr = [c.get_text(" ", strip=True) for c in (rows[0].find_all(["th", "td"]) if rows else [])]
+            print(f"      table[{i}] id={t.get('id')!r} class={t.get('class')} rows={len(rows)} header={hdr[:8]}")
+        # Result-ish containers (div/section/ul) by id/class keyword.
+        for el in rs.find_all(["div", "section", "ul", "tbody"], id=True):
+            if re.search(r"result|grid|list|sale|data|record|deed", el.get("id", ""), re.I):
+                print(f"      container id={el.get('id')!r} children={len(el.find_all(True))} "
+                      f"text[:120]={el.get_text(' ', strip=True)[:120]!r}")
+        # jQuery/AJAX hints: any URL the page's scripts fetch for results.
+        for s in rs.find_all("script"):
+            txt = s.string or ""
+            for mo in re.finditer(r'(?:url|action)\s*[:=]\s*["\']([^"\']+)["\']', txt):
+                u = mo.group(1)
+                if re.search(r"result|sale|deed|search|grid|list|json|ajax", u, re.I):
+                    print(f"      script fetch url: {u}")
+        vis = rs.get_text(" ", strip=True)
+        print(f"      POST visible-text length={len(vis)}")
+        for kw in ("no record", "not found", "no result", "record(s)", "results found", "matching", "Sale Date"):
+            i = vis.lower().find(kw.lower())
             if i != -1:
-                print(f"    result message near {kw!r}: …{txt[max(0,i-60):i+80]}…")
+                print(f"      text near {kw!r}: …{vis[max(0,i-50):i+90]}…")
+        # Try the AJAX header — MVC often returns a partial view for XHR posts.
+        try:
+            ax = session.post(action, data=fields, timeout=45,
+                              headers={"X-Requested-With": "XMLHttpRequest"})
+            axs = BeautifulSoup(ax.text, "lxml")
+            print(f"      [ajax] {ax.status_code} {len(ax.content)} bytes; tables={len(axs.find_all('table'))} "
+                  f"text[:150]={axs.get_text(' ', strip=True)[:150]!r}")
+        except requests.RequestException as exc:
+            print(f"      [ajax] failed: {exc}")
 
 
 def _probe_docaccess(session: requests.Session, domain: str, out: Path, slug: str) -> None:
