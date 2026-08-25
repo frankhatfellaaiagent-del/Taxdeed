@@ -586,6 +586,16 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
             for mo in re.finditer(r'["\']([^"\']*GridSearchData[^"\']*)["\']', s.string or ""):
                 grid_urls.append(mo.group(1))
         grid_urls = sorted(set(grid_urls)) or ["/TaxSmart/Home/GridSearchData?SearchType=Sale Date"]
+        # The exact column order the jqGrid #TaxDeed cells map to — pull colNames
+        # / colModel from the page scripts so the collector labels cells right.
+        for s in rs.find_all("script"):
+            txt = s.string or ""
+            if "TaxDeed" in txt and ("colModel" in txt or "colNames" in txt):
+                for kk in ("colNames", "colModel"):
+                    mo = re.search(re.escape(kk) + r'\s*:\s*(\[.*?\])', txt, re.S)
+                    if mo:
+                        print(f"      [grid] {kk}: {mo.group(1)[:900]}")
+                break
         for gu in grid_urls[:3]:
             full = _uj(action, gu)
             try:
