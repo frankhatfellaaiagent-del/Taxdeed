@@ -497,17 +497,39 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
         return [o.get("value", "") for o in sel.find_all("option") if o.get("value")] if sel else []
     frm, to = opts("SearchSaleDateFrom"), opts("SearchSaleDateTo")
     print(f"    sale-date options: from={len(frm)} to={len(to)}; sample={frm[:4]}")
-    if frm:
-        fields["SearchSaleDateFrom"] = frm[0]
-        fields["SearchSaleDateTo"] = (to or frm)[-1]
-    # Make sure the sale-date submit button's name is included.
-    for btn in form.find_all(["button", "input"]):
-        n = btn.get("name") or ""
-        if btn.get("type") in ("submit",) or "submit" in n.lower() or "search" in n.lower():
-            fields.setdefault(n, btn.get("value", "Search"))
 
-    # Try the form's own method first, then the other, following redirects
-    # (some search forms POST-then-redirect to a results GET).
+    # The options are human date strings ("Wednesday, December 15, 2027 12:00
+    # PM"), listed newest-first. Round 3/this run's first attempt submitted an
+    # INVERTED range (From=newest, To=oldest) so the server rightly returned no
+    # sales. Parse them, keep upcoming, and submit a valid ascending range.
+    from datetime import datetime as _dt
+    def _parse(s):
+        for fmt in ("%A, %B %d, %Y %I:%M %p", "%A, %B %d, %Y %I:%M%p", "%A, %B %d, %Y"):
+            try:
+                return _dt.strptime(s.strip(), fmt)
+            except ValueError:
+                continue
+        return None
+    dated = [(o, _parse(o)) for o in frm]
+    parseable = [(o, d) for o, d in dated if d]
+    now = _dt.utcnow()
+    upcoming = sorted([(o, d) for o, d in parseable if d >= now], key=lambda x: x[1])
+    print(f"    parsed {len(parseable)}/{len(frm)} date options; {len(upcoming)} upcoming")
+    if upcoming:
+        fields["SearchSaleDateFrom"] = upcoming[0][0]   # earliest upcoming
+        fields["SearchSaleDateTo"] = upcoming[-1][0]     # latest upcoming
+    elif frm:
+        # Fallback: full ascending span (options are newest-first, so [-1]..[0]).
+        fields["SearchSaleDateFrom"] = frm[-1]
+        fields["SearchSaleDateTo"] = frm[0]
+    print(f"    range From={fields.get('SearchSaleDateFrom')!r} To={fields.get('SearchSaleDateTo')!r}")
+
+    # This is one big multi-tab form; the server dispatches on WHICH submit
+    # button is present. Send ONLY the sale-date button, not all ten.
+    for k in [k for k in fields if k.lower().startswith("buttonsubmit")]:
+        del fields[k]
+    fields["buttonSubmitSaleDate"] = "Search"
+
     tried = []
     order = ["post", "get"] if method == "post" else ["get", "post"]
     for m in order:
@@ -525,7 +547,20 @@ def _probe_taxsmart(session: requests.Session, url: str, out: Path, slug: str) -
             print(f"    -> {m.upper()} returned {n} result rows/links")
             break
     if tried and all(n == 0 for _, n in tried):
-        print("    both POST and GET returned 0 rows — result flow still not the plain search submit")
+        print("    both POST and GET still returned 0 rows — dumping result diagnostics")
+        # Dump the biggest table verbatim and any 'no records'/'result' text so
+        # we can see whether it's genuinely empty or a structure we're missing.
+        rs = BeautifulSoup((session.get(action, params=fields, timeout=45).text), "lxml")
+        big = max(rs.find_all("table"), key=lambda t: len(t.find_all("tr")), default=None)
+        if big:
+            print(f"    biggest table rows={len(big.find_all('tr'))}; first 3 rows:")
+            for tr in big.find_all("tr")[:3]:
+                print("      " + " | ".join(c.get_text(' ', strip=True) for c in tr.find_all(['th', 'td']))[:200])
+        txt = rs.get_text(" ", strip=True)
+        for kw in ("no record", "not found", "no result", "record(s)", "results found", "matching"):
+            i = txt.lower().find(kw)
+            if i != -1:
+                print(f"    result message near {kw!r}: …{txt[max(0,i-60):i+80]}…")
 
 
 def _probe_docaccess(session: requests.Session, domain: str, out: Path, slug: str) -> None:
