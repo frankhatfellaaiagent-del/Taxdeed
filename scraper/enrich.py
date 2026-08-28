@@ -283,7 +283,7 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
 
 def backfill_geometry(records: list[dict], counties: list[str] | None = None,
                       limit: int | None = None, out_path: str | Path | None = None,
-                      include_redeemed: bool = False) -> dict:
+                      include_redeemed: bool = False, include_past: bool = False) -> dict:
     """Resolve the parcel boundary (and centroid) for feed records by APN.
 
     A lookup by parcel number, standing on its own — it doesn't touch the
@@ -294,8 +294,10 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
     enrichment (one API call per parcel), and safe to repeat: a record that
     already has geometry is skipped, so re-runs only fill what's still missing.
 
-    Scheduled (upcoming) records first; pass include_redeemed to cover the rest.
-    A no-op without an API key."""
+    Only auctions still to come and not redeemed are looked up — a past sale's
+    parcel isn't worth an API call. Soonest sales first; pass include_redeemed
+    (and include_past, mainly for tests) to widen the net. A no-op without a
+    key."""
     out_p = Path(out_path) if out_path else DEFAULT_OUT
     store = load_enrichment(out_p)
     if not reportall.enabled():
@@ -303,6 +305,7 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
         return {"attempted": 0, "filled": 0, "store_total": len(store)}
     now = datetime.now(timezone.utc)
     county_set = {c.lower() for c in counties} if counties else None
+    today_key = now.strftime("%Y%m%d")
 
     def wants(r: dict) -> bool:
         if not r.get("parcel_id"):
@@ -311,10 +314,16 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
             return False
         if not include_redeemed and str(r.get("status", "")).lower() == "redeemed":
             return False
+        # Future sales only: don't spend a lookup on an auction that already
+        # happened (or on a record with no usable sale date).
+        if not include_past:
+            key = _sale_sort_key(r.get("sale_date", ""))
+            if key == "99999999" or key < today_key:
+                return False
         parcel = (store.get(_feed_key(r), {}) or {}).get("parcel") or {}
         return not parcel.get("geometry_wkt")
 
-    # Upcoming sales first (soonest first), so a capped run covers what matters.
+    # Soonest upcoming sales first, so a capped run covers what matters most.
     targets = [r for r in records if wants(r)]
     targets.sort(key=lambda r: _sale_sort_key(r.get("sale_date", "")))
     if limit:

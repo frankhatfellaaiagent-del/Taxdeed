@@ -1089,16 +1089,13 @@ function renderDetail() {
 
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
-        <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px">
-          <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>No photo in the county data.<br>The appraiser record has one.</span></div>
-          <div class="blueprint" style="padding:0;display:flex;flex-direction:column">${CORNERS}
-            <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
-            ${ll
-              ? `<div id="parcelmap" style="flex:1;min-height:154px"></div>`
-              : hasAddr
-                ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
-                : `<div class="ph" style="flex:1;min-height:154px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
-          </div>
+        <div class="blueprint" style="padding:0;display:flex;flex-direction:column;min-height:320px">${CORNERS}
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
+          ${ll
+            ? `<div id="parcelmap" style="flex:1;min-height:300px"></div>`
+            : hasAddr
+              ? `<div style="flex:1;min-height:300px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
+              : `<div class="ph" style="flex:1;min-height:300px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
         </div>
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
