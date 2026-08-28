@@ -72,10 +72,12 @@
 "alachua|06650-204-004|TD 2026-022": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004",
 "fetched_at": "2026-08-28T01:25:07+00:00",
+"geom_backfilled_at": "2026-08-28T01:52:56+00:00",
 "ok": true,
 "parcel": {
 "acreage": "0.02",
 "county": "Alachua",
+"geometry_wkt": "MULTIPOLYGON(((-82.42109517226207 29.64642628914832,-82.42122106966424 29.646428294517328,-82.42123677469976 29.646428544667984,-82.42123591383758 29.64646978447305,-82.42111004839369 29.646467779628274,-82.42109431134125 29.646467528952456,-82.42109517226207 29.64642628914832)))",
 "lat": 29.646448,
 "lng": -82.421166,
 "mailing_address": "112 SW 1ST AVE 32601",
