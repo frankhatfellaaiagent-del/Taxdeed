@@ -95,20 +95,29 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         case: dict = {}
         parcel_latlng = None
         parcel_geom = ""
+        # The county appraiser "quick look" (only present when it resolved).
         if enr.get("ok"):
-            parcel = enr.get("parcel") or {}          # ReportAll, when enabled
-            r.owner_name = r.owner_name or enr.get("owner_name", "") or parcel.get("owner", "")
-            r.property_use = (r.property_use or enr.get("property_use", "")
-                              or parcel.get("land_use", ""))
-            r.acreage = r.acreage or enr.get("acreage", "") or str(parcel.get("acreage", "") or "")
-            mailing = enr.get("mailing_address", "") or parcel.get("mailing_address", "")
+            r.owner_name = r.owner_name or enr.get("owner_name", "")
+            r.property_use = r.property_use or enr.get("property_use", "")
+            r.acreage = r.acreage or enr.get("acreage", "")
+            mailing = enr.get("mailing_address", "") or mailing
             # This parcel's own clerk case file + what the paperwork says.
             case = {k: enr[k] for k in
                     ("clerk_case_url", "deed_status", "applicant", "applicant_address",
                      "case_docs", "case_flags", "docs_read")
                     if enr.get(k)}
-            # A true parcel centroid beats a rooftop geocode (and works for
-            # the vacant lots that have no street address at all).
+        # The ReportAll parcel record (centroid, boundary, owner, mailing) stands
+        # on its own — a lookup by parcel number, independent of whether the
+        # appraiser resolved. Its centroid and boundary always win (a true parcel
+        # geometry beats a rooftop geocode); its text fields only backfill what
+        # the appraiser didn't provide. "enriched" below stays tied to the
+        # appraiser verification specifically, never to a geometry-only lookup.
+        parcel = enr.get("parcel") or {}
+        if parcel:
+            r.owner_name = r.owner_name or parcel.get("owner", "")
+            r.property_use = r.property_use or parcel.get("land_use", "")
+            r.acreage = r.acreage or str(parcel.get("acreage", "") or "")
+            mailing = mailing or parcel.get("mailing_address", "")
             if parcel.get("lat") is not None and parcel.get("lng") is not None:
                 parcel_latlng = [parcel["lat"], parcel["lng"]]
             # The true parcel boundary (WKT MULTIPOLYGON) — the dashboard
