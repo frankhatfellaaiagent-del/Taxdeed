@@ -282,34 +282,44 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
 
 
 def backfill_geometry(records: list[dict], counties: list[str] | None = None,
-                      limit: int | None = None,
-                      out_path: str | Path | None = None) -> dict:
-    """Top up parcel boundaries on already-enriched entries.
+                      limit: int | None = None, out_path: str | Path | None = None,
+                      include_redeemed: bool = False) -> dict:
+    """Resolve the parcel boundary (and centroid) for feed records by APN.
 
-    The store caches each parcel's ReportAll record permanently, so entries
-    fetched before boundaries were captured have a `parcel` but no
-    `geometry_wkt`. This pass re-calls ReportAll for exactly those entries —
-    county+APN only, no appraiser/clerk work — and merges the boundary in, so
-    the per-card maps can outline the lot without a full re-enrichment.
+    A lookup by parcel number, standing on its own — it doesn't touch the
+    appraiser/clerk pipeline and never marks a record "enriched". For every
+    record whose stored ReportAll parcel is missing (or lacks `geometry_wkt`),
+    call ReportAll by county+APN and merge the parcel record into the store, so
+    the per-card map can outline the exact lot. Cheap relative to a full
+    enrichment (one API call per parcel), and safe to repeat: a record that
+    already has geometry is skipped, so re-runs only fill what's still missing.
 
-    A no-op without an API key, and it never touches an entry that already has
-    geometry, so it's cheap to run and safe to repeat."""
+    Scheduled (upcoming) records first; pass include_redeemed to cover the rest.
+    A no-op without an API key."""
     out_p = Path(out_path) if out_path else DEFAULT_OUT
     store = load_enrichment(out_p)
     if not reportall.enabled():
         log.info("ReportAll not configured — geometry backfill skipped")
         return {"attempted": 0, "filled": 0, "store_total": len(store)}
     now = datetime.now(timezone.utc)
+    county_set = {c.lower() for c in counties} if counties else None
 
-    def needs_geom(entry: dict) -> bool:
-        parcel = entry.get("parcel") or {}
-        return bool(parcel) and not parcel.get("geometry_wkt")
+    def wants(r: dict) -> bool:
+        if not r.get("parcel_id"):
+            return False
+        if county_set and str(r.get("county", "")).lower() not in county_set:
+            return False
+        if not include_redeemed and str(r.get("status", "")).lower() == "redeemed":
+            return False
+        parcel = (store.get(_feed_key(r), {}) or {}).get("parcel") or {}
+        return not parcel.get("geometry_wkt")
 
-    targets = [r for r in select_targets(records, counties, None)
-               if needs_geom(store.get(record_key(r), {}))]
+    # Upcoming sales first (soonest first), so a capped run covers what matters.
+    targets = [r for r in records if wants(r)]
+    targets.sort(key=lambda r: _sale_sort_key(r.get("sale_date", "")))
     if limit:
         targets = targets[:limit]
-    log.info("Backfilling parcel geometry for %d entries", len(targets))
+    log.info("Resolving parcel geometry for %d feed records", len(targets))
 
     n_filled = n_try = 0
     for i, r in enumerate(targets):
@@ -323,13 +333,14 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
             log.debug("ReportAll geometry lookup failed: %s", exc)
             continue
         if parcel and parcel.get("geometry_wkt"):
-            entry = store.get(record_key(r), {})
-            merged = {**(entry.get("parcel") or {}), **parcel}
-            entry["parcel"] = merged
+            key = _feed_key(r)
+            entry = store.get(key, {})
+            entry.setdefault("fetched_at", now.isoformat(timespec="seconds"))
+            entry["parcel"] = {**(entry.get("parcel") or {}), **parcel}
             entry["geom_backfilled_at"] = now.isoformat(timespec="seconds")
-            store[record_key(r)] = entry
+            store[key] = entry
             n_filled += 1
-        time.sleep(0.4)   # be polite to the API
+        time.sleep(0.3)   # be polite to the API
         if (i + 1) % 50 == 0:
             log.info("  %d/%d done (%d filled)", i + 1, len(targets), n_filled)
             out_p.parent.mkdir(parents=True, exist_ok=True)
@@ -340,6 +351,16 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
     summary = {"attempted": n_try, "filled": n_filled, "store_total": len(store)}
     log.info("Geometry backfill done: %s", summary)
     return summary
+
+
+def _feed_key(r: dict) -> str:
+    """Store key for a FEED record (fields are flat, not the scraper's attrs)."""
+    return f"{r.get('county', '')}|{r.get('parcel_id', '')}|{r.get('case_number', '')}"
+
+
+def _sale_sort_key(d: str) -> str:
+    # MM/DD/YYYY -> YYYYMMDD so soonest sorts first; blanks sort last.
+    return (d[6:] + d[:2] + d[3:5]) if len(d) == 10 else "99999999"
 
 
 class _BrowserPortals:
