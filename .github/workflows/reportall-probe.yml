@@ -1,0 +1,75 @@
+name: ReportAll geometry probe (one-off)
+
+# Read-only: call the ReportAll parcels API with the configured key for one
+# known parcel, across a few geometry-parameter variants, and print the
+# response shape (result keys + any geometry field/format) to the job log so
+# the parcel-boundary polygon can be pulled into the feed. Commits nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      region:
+        description: "region, e.g. 'Putnam County, FL'"
+        required: false
+        default: "Putnam County, FL"
+      parcel_id:
+        description: "parcel_id"
+        required: false
+        default: "02-10-24-4075-1870-0070"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Probe
+        env:
+          REPORTALL_API_KEY: ${{ secrets.REPORTALL_API_KEY }}
+          REGION: ${{ github.event.inputs.region }}
+          PARCEL_ID: ${{ github.event.inputs.parcel_id }}
+        run: |
+          python3 - <<'EOF'
+          import os, json, requests
+          key = os.environ["REPORTALL_API_KEY"]
+          base = "https://reportallusa.com/api/parcels"
+          region = os.environ.get("REGION") or "Putnam County, FL"
+          pid = os.environ.get("PARCEL_ID") or "02-10-24-4075-1870-0070"
+          print("key present:", bool(key), "len:", len(key))
+          variants = [
+              {},
+              {"geometry": "true"},
+              {"geom": "true"},
+              {"geoms": "1"},
+              {"return_geometry": "true"},
+              {"include_geom": "1"},
+          ]
+          for extra in variants:
+              q = {"client": key, "v": "9", "region": region, "parcel_id": pid, **extra}
+              try:
+                  r = requests.get(base, params=q, timeout=30)
+                  j = r.json()
+              except Exception as e:
+                  print(f"\n=== extra={extra} -> ERROR {e.__class__.__name__}: {str(e)[:160]}")
+                  continue
+              res = (j.get("results") or j.get("features") or []) if isinstance(j, dict) else (j if isinstance(j, list) else [])
+              print(f"\n=== extra={extra}  http={r.status_code}  status={j.get('status') if isinstance(j,dict) else '?'}  count={j.get('count') if isinstance(j,dict) else '?'}  results={len(res)}")
+              if not res:
+                  print("  body head:", json.dumps(j)[:300])
+                  continue
+              row = res[0]
+              if isinstance(row.get("attributes"), dict):
+                  row = row["attributes"]
+              print("  row keys:", list(row.keys()))
+              for k, v in row.items():
+                  sv = v if isinstance(v, str) else json.dumps(v)
+                  if ("geom" in k.lower() or "shape" in k.lower()
+                          or "POLYGON" in sv.upper() or '"coordinates"' in sv):
+                      print(f"  GEOM FIELD [{k}] ({type(v).__name__}): {sv[:400]}")
+          EOF
