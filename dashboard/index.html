@@ -226,6 +226,25 @@ const normCounty = (s) => (s || "").toLowerCase().replace(/[^a-z]/g, "");
 const csvList = (s) => String(s || "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
 const kwHits = (keywords, text) => keywords.filter((k) => new RegExp("\\b" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(text));
 
+// A buy box with NO keywords at all can never produce a MATCH (MATCH needs a
+// land-use keyword to hit). A "counties only" box — which is how a fresh team
+// box can end up — then grades everything REVIEW/NO and looks broken. When
+// both keyword lists are empty, seed the feed's default land/non-land keywords
+// so grading works; the team's own counties and limits are left untouched.
+function ensureKeywords(bb) {
+  const b = { ...EMPTY_BUYBOX, ...(bb || {}) };
+  const hasLand = Array.isArray(b.land_use_keywords) && b.land_use_keywords.length;
+  const hasNon = Array.isArray(b.non_land_keywords) && b.non_land_keywords.length;
+  if (!hasLand && !hasNon) {
+    const def = (typeof META !== "undefined" && META && META.default_buybox) || {};
+    if ((def.land_use_keywords || []).length || (def.non_land_keywords || []).length) {
+      b.land_use_keywords = (def.land_use_keywords || []).slice();
+      b.non_land_keywords = (def.non_land_keywords || []).slice();
+    }
+  }
+  return b;
+}
+
 function evalBuybox(r, cfg) {
   const county = normCounty(r.county);
   const reasons = [];
@@ -258,6 +277,16 @@ function evalBuybox(r, cfg) {
 // arrives from another device.
 function recomputeBuybox() {
   if (!buybox) return;
+  // Self-heal a keyword-less box once: seed the default keywords so MATCH can
+  // fire, then persist so the team's saved box is fixed for good.
+  const wasEmpty = !((buybox.land_use_keywords || []).length) && !((buybox.non_land_keywords || []).length);
+  if (wasEmpty) {
+    const seeded = ensureKeywords(buybox);
+    if ((seeded.land_use_keywords || []).length || (seeded.non_land_keywords || []).length) {
+      buybox = seeded;
+      if (typeof CLOUD !== "undefined" && CLOUD && CLOUD.user) saveBuybox();
+    }
+  }
   const cfg = { ...EMPTY_BUYBOX, ...buybox,
     land_use_keywords: (buybox.land_use_keywords || []).map((k) => k.toLowerCase()),
     non_land_keywords: (buybox.non_land_keywords || []).map((k) => k.toLowerCase()),
@@ -1638,7 +1667,7 @@ function dataUpdatesHtml() {
 
 // ---------- settings screen ----------
 function renderBuyboxCard() {
-  const cfg = buybox || EMPTY_BUYBOX;
+  const cfg = ensureKeywords(buybox);   // show the effective keywords, seeded if the box had none
   // Every Florida county is a valid target — not just the ones with auctions
   // in the feed right now. Registry names first (all 67, or however many
   // shipped), falling back to whatever counties the feed itself carries.
