@@ -36,8 +36,11 @@ PATTERNS: list[tuple[str, re.Pattern]] = [
     ("redeemed", re.compile(r"\bredeem(?:ed|ption)\b", re.I)),
     ("homestead", re.compile(r"\bhomestead\b", re.I)),
     ("IRS lien", re.compile(r"\b(?:internal revenue|irs)\b[^.]{0,60}\blien\b", re.I)),
+    ("federal tax lien", re.compile(r"\bfederal tax lien\b", re.I)),
     ("municipal or code lien", re.compile(
         r"\b(?:code enforcement|municipal|city of|county)\b[^.]{0,60}\blien\b", re.I)),
+    ("special assessment", re.compile(r"\bspecial assessment\b", re.I)),
+    ("lis pendens", re.compile(r"\blis pendens\b", re.I)),
     ("mortgage of record", re.compile(r"\bmortgage\b", re.I)),
     ("judgment lien", re.compile(r"\bjudgment\b[^.]{0,40}\blien\b", re.I)),
     ("bankruptcy", re.compile(r"\bbankrupt(?:cy)?\b", re.I)),
@@ -47,10 +50,13 @@ PATTERNS: list[tuple[str, re.Pattern]] = [
     ("mobile home on parcel", re.compile(r"\bmobile home\b", re.I)),
 ]
 
-# Documents worth opening, most decision-relevant first. Anything not matching
-# is skipped so a case with 20 scanned exhibits doesn't blow the budget.
-DOC_PRIORITY = ["513", "notice of publication", "affidavit", "tax deed",
-                "certificate", "title", "search", "statement", "lien", "notice"]
+# Documents worth opening, most decision-relevant first. The ownership &
+# encumbrance / title report is the lien source, so it leads. Anything not
+# matching is skipped so a case with 20 scanned exhibits doesn't blow the budget.
+DOC_PRIORITY = ["ownership", "encumbrance", "o&e", "current owner",
+                "property information", "title", "search", "lien",
+                "513", "notice of publication", "affidavit", "tax deed",
+                "certificate", "statement", "notice"]
 
 
 def _doc_rank(doc: dict) -> int:
