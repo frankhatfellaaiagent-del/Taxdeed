@@ -48,6 +48,9 @@ FIELD_ALIASES = {
     "county": ["county_name", "county"],
     "lat": ["latitude", "lat", "centroid_lat"],
     "lng": ["longitude", "lng", "lon", "centroid_lon"],
+    # Parcel boundary as WKT (v9 returns geom_as_wkt by default): a
+    # MULTIPOLYGON in lng-lat order the dashboard draws on the per-card map.
+    "geometry_wkt": ["geom_as_wkt", "wkt", "geometry_wkt"],
 }
 
 
@@ -79,6 +82,12 @@ def normalize(row: dict) -> dict:
                 out[field] = round(float(val), 6)
             except (TypeError, ValueError):
                 continue
+        elif field == "geometry_wkt":
+            # Keep the full WKT polygon — it's needed intact to draw the
+            # boundary. Guard against a stray huge value all the same.
+            wkt = str(val).strip()
+            if wkt.upper().startswith(("POLYGON", "MULTIPOLYGON")) and len(wkt) <= 200000:
+                out[field] = wkt
         else:
             out[field] = str(val).strip()[:200]
     mail = " ".join(str(out.pop(k, "")) for k in

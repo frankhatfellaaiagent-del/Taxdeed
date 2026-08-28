@@ -628,7 +628,7 @@ function mapRecord(r, i) {
     applicant: r.applicant || "", applicantAddr: r.applicant_address || "",
     caseDocs: r.case_docs || [], caseFlags: r.case_flags || [],
     useType: typeFromUse(r.property_use),
-    lat: r.lat ?? null, lng: r.lng ?? null,
+    lat: r.lat ?? null, lng: r.lng ?? null, geometry: r.parcel_geometry || "",
     assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
     saleDate: d, auction: fmtDate(d), saleTime: r.sale_time || "",
     status: r.status, redeemed: r.status === "Redeemed",
@@ -964,19 +964,42 @@ function buyboxTag(p) {
   return `<span class="tag ${cls}" title="${esc(p.buyboxNotes)}">Buy-box: ${esc(p.buybox)}</span>`;
 }
 // ---------- per-parcel map (Leaflet) ----------
-// Each property card shows the parcel on an aerial map, located from its
-// coordinates — which the enrichment job resolves from the parcel number via
-// the ReportAll parcels API (region + parcel_id -> centroid). The ReportAll
-// "Overlay" product draws the actual lot lines on top: paste its tile-URL
-// template into REPORTALL.overlayUrl below (the {z}/{x}/{y} URL with the client
-// key) and the boundaries switch on. Empty = aerial + parcel pin only, no
-// boundary layer — nothing breaks without it.
+// Each property card shows the parcel on an aerial map, located from the parcel
+// number: the enrichment job resolves both the centroid and the true parcel
+// boundary from the ReportAll parcels API (region + parcel_id -> geom_as_wkt),
+// and the card outlines that boundary over the aerial imagery. When a parcel's
+// geometry isn't available it falls back to a centroid pin. The optional
+// REPORTALL.overlayUrl below adds ReportAll's raster lot-line tiles on top for
+// surrounding parcels too — paste the {z}/{x}/{y} tile URL (with the client
+// key) to switch it on; empty is fine, the outline comes from the geometry.
 const REPORTALL = {
   overlayUrl: "",                 // e.g. "https://.../{z}/{x}/{y}.png?client=YOUR_CLIENT_KEY"
   minZoom: 14,                    // parcels typically only render above this zoom
   attribution: "Parcels &copy; ReportAll USA",
 };
 let _parcelMap = null;
+// A WKT POLYGON / MULTIPOLYGON (lng-lat order, as ReportAll returns it) ->
+// Leaflet ring arrays ([lat,lng]). Returns [] on anything it can't parse, so a
+// missing or malformed geometry just falls back to the centroid pin.
+function wktToLatLngs(wkt) {
+  if (!wkt || typeof wkt !== "string") return [];
+  const m = wkt.match(/^\s*(MULTIPOLYGON|POLYGON)\s*(.+)$/i);
+  if (!m) return [];
+  const rings = [];
+  // Pull every innermost ( ... ) coordinate list; good enough to draw outlines.
+  const groups = m[2].match(/\(([^()]+)\)/g) || [];
+  for (const g of groups) {
+    const pts = [];
+    for (const pair of g.replace(/[()]/g, "").split(",")) {
+      const nums = pair.trim().split(/\s+/).map(Number);
+      if (nums.length >= 2 && Number.isFinite(nums[0]) && Number.isFinite(nums[1])) {
+        pts.push([nums[1], nums[0]]);   // WKT is lng lat; Leaflet wants lat lng
+      }
+    }
+    if (pts.length >= 3) rings.push(pts);
+  }
+  return rings;
+}
 function initParcelMap(p) {
   if (!window.L || p.lat == null || p.lng == null) return;
   const el = document.getElementById("parcelmap");
@@ -994,8 +1017,19 @@ function initParcelMap(p) {
       minZoom: REPORTALL.minZoom, maxZoom: 20, opacity: 1, attribution: REPORTALL.attribution,
     }).addTo(map);
   }
-  L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#5980a6", fillOpacity: 1 })
-    .addTo(map).bindPopup("Parcel " + p.parcel);
+  // The real lot lines: outline the parcel boundary from ReportAll's geometry
+  // and frame the map to it, so the card shows the exact parcel — not just a pin.
+  const rings = wktToLatLngs(p.geometry);
+  if (rings.length) {
+    const poly = L.polygon(rings, {
+      color: "#ffd23f", weight: 2.5, opacity: 1,
+      fillColor: "#ffd23f", fillOpacity: 0.12,
+    }).addTo(map).bindPopup("Parcel " + p.parcel);
+    try { map.fitBounds(poly.getBounds(), { padding: [12, 12], maxZoom: 19 }); } catch (e) {}
+  } else {
+    L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#5980a6", fillOpacity: 1 })
+      .addTo(map).bindPopup("Parcel " + p.parcel);
+  }
   // The container is laid out after innerHTML; let Leaflet re-measure it.
   setTimeout(() => { try { map.invalidateSize(); } catch (e) {} }, 60);
 }

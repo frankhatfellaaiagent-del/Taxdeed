@@ -281,6 +281,67 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
     return summary
 
 
+def backfill_geometry(records: list[dict], counties: list[str] | None = None,
+                      limit: int | None = None,
+                      out_path: str | Path | None = None) -> dict:
+    """Top up parcel boundaries on already-enriched entries.
+
+    The store caches each parcel's ReportAll record permanently, so entries
+    fetched before boundaries were captured have a `parcel` but no
+    `geometry_wkt`. This pass re-calls ReportAll for exactly those entries —
+    county+APN only, no appraiser/clerk work — and merges the boundary in, so
+    the per-card maps can outline the lot without a full re-enrichment.
+
+    A no-op without an API key, and it never touches an entry that already has
+    geometry, so it's cheap to run and safe to repeat."""
+    out_p = Path(out_path) if out_path else DEFAULT_OUT
+    store = load_enrichment(out_p)
+    if not reportall.enabled():
+        log.info("ReportAll not configured — geometry backfill skipped")
+        return {"attempted": 0, "filled": 0, "store_total": len(store)}
+    now = datetime.now(timezone.utc)
+
+    def needs_geom(entry: dict) -> bool:
+        parcel = entry.get("parcel") or {}
+        return bool(parcel) and not parcel.get("geometry_wkt")
+
+    targets = [r for r in select_targets(records, counties, None)
+               if needs_geom(store.get(record_key(r), {}))]
+    if limit:
+        targets = targets[:limit]
+    log.info("Backfilling parcel geometry for %d entries", len(targets))
+
+    n_filled = n_try = 0
+    for i, r in enumerate(targets):
+        n_try += 1
+        try:
+            parcel = reportall.lookup(county=r.get("county", ""),
+                                      parcel_id=r.get("parcel_id", ""),
+                                      address=r.get("property_address", ""),
+                                      lat=r.get("lat"), lng=r.get("lng"))
+        except Exception as exc:                          # noqa: BLE001
+            log.debug("ReportAll geometry lookup failed: %s", exc)
+            continue
+        if parcel and parcel.get("geometry_wkt"):
+            entry = store.get(record_key(r), {})
+            merged = {**(entry.get("parcel") or {}), **parcel}
+            entry["parcel"] = merged
+            entry["geom_backfilled_at"] = now.isoformat(timespec="seconds")
+            store[record_key(r)] = entry
+            n_filled += 1
+        time.sleep(0.4)   # be polite to the API
+        if (i + 1) % 50 == 0:
+            log.info("  %d/%d done (%d filled)", i + 1, len(targets), n_filled)
+            out_p.parent.mkdir(parents=True, exist_ok=True)
+            out_p.write_text(json.dumps(store, indent=0, sort_keys=True),
+                             encoding="utf-8")
+    out_p.parent.mkdir(parents=True, exist_ok=True)
+    out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
+    summary = {"attempted": n_try, "filled": n_filled, "store_total": len(store)}
+    log.info("Geometry backfill done: %s", summary)
+    return summary
+
+
 class _BrowserPortals:
     """Lazily-started browser for portals that can't be resolved over HTTP.
 
