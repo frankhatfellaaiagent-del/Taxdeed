@@ -1077,7 +1077,7 @@ async function runAIResearch(p, refresh) {
     const { data, error } = await CLOUD.sb.functions.invoke("analyze-property", { body: { record: p.raw, refresh: !!refresh } });
     if (error) { aiMessage(box, "Couldn’t start the analysis (function error). Try again shortly."); if (btn) btn.disabled = false; return; }
     const s = data && data.status;
-    if (s === "disabled") { aiMessage(box, "AI analysis isn’t configured yet — an Anthropic API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
+    if (s === "disabled") { aiMessage(box, "AI analysis isn’t configured yet — an OpenAI API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
     else if (s === "unauthorized") { aiMessage(box, "Please sign in to run AI research."); if (btn) btn.disabled = false; }
     else if (s === "capped") { aiMessage(box, esc(data.reason || "Daily research limit reached.")); if (btn) btn.disabled = false; }
     else if (s === "ready") { renderAIAnalysis(p, data.data, { cached: !!data.cached, at: data.generated_at }); if (btn) btn.disabled = false; }
