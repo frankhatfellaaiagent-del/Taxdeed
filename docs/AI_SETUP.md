@@ -12,29 +12,31 @@ how the ReportAll parcel lookups stay off until their key is set.
 
 ## What you need to do (about 5 minutes)
 
-### 1. Create an Anthropic API key
-1. Go to **https://console.anthropic.com** and sign in (or sign up).
-2. Open **Billing** and add a small amount of credit (even $5–$10 is plenty to
+### 1. Create an OpenAI API key
+1. Go to **https://platform.openai.com/api-keys** and sign in (or sign up).
+2. Add a little credit under **Settings → Billing** (even $5–$10 is plenty to
    start — each property researched costs a few cents, and results are cached so
    you never pay twice for the same parcel).
-3. Open **API Keys → Create Key**, give it a name like `tax-deed-radar`, and
-   **copy the key** (it starts with `sk-ant-…`). You only see it once.
+3. **Create new secret key**, name it something like `tax-deed-radar`, and
+   **copy the key** (it starts with `sk-…`). You only see it once.
 
-### 2. Add two secrets to Supabase
-The key is stored **only** on the server (the Supabase Edge Function) — it is
-never in the website, never in GitHub, and never sent to a browser.
+### 2. Add two secrets to Supabase (NOT GitHub)
+The agent runs inside a Supabase Edge Function, so the key is a **Supabase**
+secret — it is never in the website, never in GitHub, and never sent to a
+browser.
 
-1. Go to **https://supabase.com/dashboard** → the **Tax Deed Radar** project.
-2. **Project Settings → Edge Functions → Secrets** (or **Edge Functions →
-   Secrets**).
-3. Add these two secrets:
+1. Open the Edge Function secrets page for the Tax Deed Radar project:
+   **https://supabase.com/dashboard/project/refjpdposfqlihsfbrri/settings/functions**
+   (or: Supabase dashboard → **Tax Deed Radar → Project Settings → Edge
+   Functions → Secrets**).
+2. Add these two secrets:
 
    | Name | Value |
    | --- | --- |
-   | `ANTHROPIC_API_KEY` | the `sk-ant-…` key you copied |
-   | `ANALYSIS_MODEL` | the Claude model to use (ask Claude for the current recommended model id to paste here) |
+   | `OPENAI_API_KEY` | the `sk-…` key you copied |
+   | `ANALYSIS_MODEL` | the OpenAI model to use — `gpt-4.1-mini` is a good cheap default; use `gpt-4.1` (or a `gpt-5` model, if your account has it) for deeper analysis |
 
-4. Save. The function picks the secrets up automatically — no redeploy needed.
+3. Save. The function picks the secrets up automatically — no redeploy needed.
 
 That's it. Reload the dashboard, open a property, and click **Research with AI**.
 
@@ -55,5 +57,5 @@ That's it. Reload the dashboard, open a property, and click **Research with AI**
   title advice.** The agent is instructed to cite a source for every claim and to
   say "not found" rather than guess; still verify liens and title with a
   professional search before bidding.
-- Turning it back off: delete the `ANTHROPIC_API_KEY` secret and the button goes
+- Turning it back off: delete the `OPENAI_API_KEY` secret and the button goes
   dormant again.

@@ -1,12 +1,12 @@
 // analyze-property — on-demand AI due-diligence research for ONE Florida
 // tax-deed parcel. Invoked from the dashboard with the property's feed record;
-// runs a bounded Anthropic tool-use loop (native web search + reading the
+// runs a bounded OpenAI Responses tool-use loop (native web search + reading the
 // parcel's own clerk PDFs and appraiser page), then writes a structured,
 // source-cited result into public.parcel_analysis. The result is shared across
 // all teams and cached, so a parcel is researched (and paid for) at most once
 // per TTL window no matter how many people open it.
 //
-// Dormant by design: with no ANTHROPIC_API_KEY / ANALYSIS_MODEL secret set, it
+// Dormant by design: with no OPENAI_API_KEY / ANALYSIS_MODEL secret set, it
 // returns {status:"disabled"} and never calls out — same posture as the
 // ReportAll integration. The model name lives in a secret, never in code.
 //
@@ -15,21 +15,19 @@
 
 import { createClient } from "jsr:@supabase/supabase-js@2";
 
-const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY") ?? "";
+const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY") ?? "";
 const ANALYSIS_MODEL = Deno.env.get("ANALYSIS_MODEL") ?? "";
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "";
 const SERVICE_ROLE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
 
-const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
-const ANTHROPIC_VERSION = "2023-06-01";
+const OPENAI_URL = "https://api.openai.com/v1/responses";
 
 const TTL_DAYS = 30;        // a cached "ready" analysis is reused this long
 const DAILY_CAP = 25;       // new analyses per team per day (spend guard)
 const MAX_STEPS = 6;        // bounded agent loop
 const MAX_DOCS = 2;         // clerk PDFs handed to the model as documents
 const MAX_TOKENS = 4000;
-const WEB_SEARCH_MAX_USES = 5;
 const PENDING_STALE_MS = 3 * 60 * 1000;   // treat a pending row older than this as abandoned
 
 const CORS = {
@@ -46,7 +44,7 @@ Deno.serve(async (req) => {
   if (req.method !== "POST") return json({ error: "method not allowed" }, 405);
 
   // Dormant until both secrets are set.
-  if (!ANTHROPIC_API_KEY || !ANALYSIS_MODEL) {
+  if (!OPENAI_API_KEY || !ANALYSIS_MODEL) {
     return json({ status: "disabled", reason: "AI analysis not configured" });
   }
 
@@ -127,10 +125,13 @@ Use web_search for zoning/GIS, flood/wetlands, news, and comparable sales. Use f
 
 When your research is complete, call the emit_analysis tool EXACTLY ONCE with your findings. This is research assistance to speed due diligence — it is NOT legal or title advice; say so in your summary.`;
 
+// OpenAI Responses API tools are "flat" — a function tool carries name +
+// parameters directly (no nested "function" wrapper as in Chat Completions).
 const EMIT_TOOL = {
+  type: "function",
   name: "emit_analysis",
   description: "Return the final structured due-diligence analysis for this parcel. Call exactly once, at the end.",
-  input_schema: {
+  parameters: {
     type: "object",
     properties: {
       summary: { type: "string", description: "2-4 sentence plain-English read of the property and the opportunity/risk. Include the not-legal-advice caveat." },
@@ -153,12 +154,13 @@ const EMIT_TOOL = {
 };
 
 const FETCH_TOOL = {
+  type: "function",
   name: "fetch_page",
   description: "Fetch an allow-listed HTML page (the county appraiser page or a clerk case page) and return its readable text.",
-  input_schema: { type: "object", properties: { url: { type: "string" } }, required: ["url"] },
+  parameters: { type: "object", properties: { url: { type: "string" } }, required: ["url"] },
 };
 
-const WEB_SEARCH_TOOL = { type: "web_search_20250305", name: "web_search", max_uses: WEB_SEARCH_MAX_USES };
+const WEB_SEARCH_TOOL = { type: "web_search" };
 
 function docUrls(record: any): string[] {
   const docs = Array.isArray(record.case_docs) ? record.case_docs : [];
@@ -190,17 +192,16 @@ function factsText(record: any): string {
       .map((d: any) => `${d?.name || "doc"} (${d?.url || ""})`).join(" | "));
 }
 
-async function callAnthropic(payload: unknown) {
-  const r = await fetch(ANTHROPIC_URL, {
+async function callOpenAI(payload: unknown) {
+  const r = await fetch(OPENAI_URL, {
     method: "POST",
     headers: {
-      "x-api-key": ANTHROPIC_API_KEY,
-      "anthropic-version": ANTHROPIC_VERSION,
+      "Authorization": `Bearer ${OPENAI_API_KEY}`,
       "content-type": "application/json",
     },
     body: JSON.stringify(payload),
   });
-  if (!r.ok) throw new Error(`anthropic ${r.status}: ${(await r.text()).slice(0, 300)}`);
+  if (!r.ok) throw new Error(`openai ${r.status}: ${(await r.text()).slice(0, 300)}`);
   return await r.json();
 }
 
@@ -220,73 +221,96 @@ async function fetchPageText(url: string): Promise<string> {
   }
 }
 
-function buildUserContent(record: any, withDocs: boolean): any[] {
-  const content: any[] = [{ type: "text", text: factsText(record) }];
+// The opening user turn for the Responses API: parcel facts, the clerk PDFs as
+// input_file items (OpenAI fetches them), and the closing instruction.
+function buildUserInput(record: any, withDocs: boolean): any[] {
+  const content: any[] = [{ type: "input_text", text: factsText(record) }];
   if (withDocs) {
     for (const url of docUrls(record)) {
-      content.push({ type: "document", source: { type: "url", url }, title: "Clerk case document" });
+      content.push({ type: "input_file", file_url: url });
     }
   }
-  content.push({ type: "text", text: "Research this parcel, then call emit_analysis exactly once." });
-  return content;
+  content.push({ type: "input_text", text: "Research this parcel, then call emit_analysis exactly once." });
+  return [{ role: "user", content }];
+}
+
+async function writeReady(svc: any, pkey: string, data: any) {
+  await svc.from("parcel_analysis").update({
+    status: "ready",
+    data: { ...data, generated_at: new Date().toISOString() },
+    updated_at: new Date().toISOString(),
+  }).eq("pkey", pkey);
+}
+
+// Pull the plain-text answer out of a Responses payload (fallback when the
+// model ends without calling emit_analysis).
+function outputText(resp: any): string {
+  if (typeof resp.output_text === "string" && resp.output_text.trim()) return resp.output_text.trim();
+  const parts: string[] = [];
+  for (const item of (resp.output ?? [])) {
+    if (item.type === "message") {
+      for (const c of (item.content ?? [])) if (c.type === "output_text" && c.text) parts.push(c.text);
+    }
+  }
+  return parts.join("\n").trim();
 }
 
 async function runAgent(record: any, pkey: string, svc: any) {
   const allowed = allowList(record);
   const baseTools = [WEB_SEARCH_TOOL, FETCH_TOOL, EMIT_TOOL];
 
-  // Two attempts: full (with clerk PDFs as documents), then a degraded retry
-  // (facts + web only) if the documents/tooling trip the API.
+  // Two attempts: full (web search + clerk PDFs), then a degraded retry
+  // (facts + page-fetch + emit only) if web search or the documents trip the API.
   for (let attempt = 0; attempt < 2; attempt++) {
     const withDocs = attempt === 0;
-    const messages: any[] = [{ role: "user", content: buildUserContent(record, withDocs) }];
+    const tools = attempt === 0 ? baseTools : [FETCH_TOOL, EMIT_TOOL];
     try {
+      let resp = await callOpenAI({
+        model: ANALYSIS_MODEL,
+        instructions: SYSTEM,
+        max_output_tokens: MAX_TOKENS,
+        tools,
+        input: buildUserInput(record, withDocs),
+      });
       for (let step = 0; step < MAX_STEPS; step++) {
-        const resp = await callAnthropic({
-          model: ANALYSIS_MODEL,
-          max_tokens: MAX_TOKENS,
-          system: SYSTEM,
-          tools: baseTools,
-          messages,
-        });
-        const blocks: any[] = resp.content ?? [];
-        const emit = blocks.find((b) => b.type === "tool_use" && b.name === "emit_analysis");
+        const items: any[] = resp.output ?? [];
+        const calls = items.filter((it) => it.type === "function_call");
+        const emit = calls.find((c) => c.name === "emit_analysis");
         if (emit) {
-          await svc.from("parcel_analysis").update({
-            status: "ready",
-            data: { ...emit.input, generated_at: new Date().toISOString() },
-            updated_at: new Date().toISOString(),
-          }).eq("pkey", pkey);
+          let parsed: any = {};
+          try { parsed = JSON.parse(emit.arguments || "{}"); } catch { parsed = {}; }
+          await writeReady(svc, pkey, parsed);
           return;
         }
-        const fetches = blocks.filter((b) => b.type === "tool_use" && b.name === "fetch_page");
+        const fetches = calls.filter((c) => c.name === "fetch_page");
         if (fetches.length) {
-          messages.push({ role: "assistant", content: blocks });
-          const results = [];
-          for (const fb of fetches) {
-            const url = String(fb.input?.url || "");
+          // Answer each fetch_page call; continue the same response chain.
+          const outputs = [];
+          for (const fc of fetches) {
+            let url = "";
+            try { url = String((JSON.parse(fc.arguments || "{}")).url || ""); } catch { url = ""; }
             const text = allowed.has(url) ? await fetchPageText(url) : "(url not in this parcel's allow-list)";
-            results.push({ type: "tool_result", tool_use_id: fb.id, content: text });
+            outputs.push({ type: "function_call_output", call_id: fc.call_id, output: text });
           }
-          messages.push({ role: "user", content: results });
-          continue;   // let the model keep going
+          resp = await callOpenAI({
+            model: ANALYSIS_MODEL,
+            instructions: SYSTEM,
+            max_output_tokens: MAX_TOKENS,
+            tools,
+            previous_response_id: resp.id,
+            input: outputs,
+          });
+          continue;
         }
-        // Model stopped without emitting — salvage any text as a summary.
-        if (resp.stop_reason === "end_turn") {
-          const text = blocks.filter((b) => b.type === "text").map((b) => b.text).join("\n").trim();
-          await svc.from("parcel_analysis").update({
-            status: "ready",
-            data: { summary: text || "No analysis produced.", value_read: "", title_and_liens: "",
-              site_and_environment: "", red_flags: [], opportunities: [], suggested_next_steps: [],
-              sources: [], confidence: "low", generated_at: new Date().toISOString() },
-            updated_at: new Date().toISOString(),
-          }).eq("pkey", pkey);
-          return;
-        }
-        // Otherwise (e.g. pause_turn) append and loop again.
-        messages.push({ role: "assistant", content: blocks });
+        // No tool calls this turn — the model is done. Salvage its prose.
+        const text = outputText(resp);
+        await writeReady(svc, pkey, {
+          summary: text || "No analysis produced.", value_read: "", title_and_liens: "",
+          site_and_environment: "", red_flags: [], opportunities: [], suggested_next_steps: [],
+          sources: [], confidence: "low",
+        });
+        return;
       }
-      // Ran out of steps this attempt — stop trying.
       throw new Error("agent did not converge within step budget");
     } catch (e) {
       if (attempt === 1) throw e;   // both attempts failed → surface the error

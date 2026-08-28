@@ -183,5 +183,5 @@ feed's schema. It runs server-side in a Supabase Edge Function
 (`supabase/functions/analyze-property`) and is cached in the Supabase
 `parcel_analysis` table, keyed by the same `county|parcel_id|case_number`
 composite the app uses everywhere. Results are shared across teams and reused for
-30 days. The feature is dormant until an Anthropic key is configured — see
+30 days. The feature is dormant until an OpenAI key is configured — see
 `docs/AI_SETUP.md`.
