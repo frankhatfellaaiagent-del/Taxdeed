@@ -43,10 +43,15 @@ ROOT = Path(__file__).resolve().parent.parent
 CLERK_SITES_PATH = ROOT / "config" / "clerk_sites.yaml"
 
 # Document rows worth surfacing on the property card, in the order a buyer
-# reads them. Matching is substring, case-insensitive.
+# reads them. Matching is substring, case-insensitive. The ownership &
+# encumbrance report (a.k.a. O&E / current owner search / property information
+# report) is the single most valuable document — it lists every recorded
+# mortgage, judgment, IRS lien and encumbrance — so its many aliases are here.
 DOC_INTEREST = ["all forms", "tax deed", "notice of publication", "clerk",
                 "affidavit", "513", "certificate", "title", "search",
-                "sale", "receipt", "statement", "lien", "notice"]
+                "sale", "receipt", "statement", "lien", "notice",
+                "ownership", "encumbrance", "o&e", "o & e", "owner search",
+                "property information", "property info", "current owner"]
 
 
 def load_clerk_sites(path: str | Path | None = None) -> dict:
