@@ -7,6 +7,8 @@
 <meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
 <link rel="stylesheet" href="ds/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 html,body{margin:0;height:100%}
 @media (min-width:901px){html,body{overflow:hidden}}
@@ -961,6 +963,43 @@ function buyboxTag(p) {
   const cls = p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline";
   return `<span class="tag ${cls}" title="${esc(p.buyboxNotes)}">Buy-box: ${esc(p.buybox)}</span>`;
 }
+// ---------- per-parcel map (Leaflet) ----------
+// Each property card shows the parcel on an aerial map, located from its
+// coordinates — which the enrichment job resolves from the parcel number via
+// the ReportAll parcels API (region + parcel_id -> centroid). The ReportAll
+// "Overlay" product draws the actual lot lines on top: paste its tile-URL
+// template into REPORTALL.overlayUrl below (the {z}/{x}/{y} URL with the client
+// key) and the boundaries switch on. Empty = aerial + parcel pin only, no
+// boundary layer — nothing breaks without it.
+const REPORTALL = {
+  overlayUrl: "",                 // e.g. "https://.../{z}/{x}/{y}.png?client=YOUR_CLIENT_KEY"
+  minZoom: 14,                    // parcels typically only render above this zoom
+  attribution: "Parcels &copy; ReportAll USA",
+};
+let _parcelMap = null;
+function initParcelMap(p) {
+  if (!window.L || p.lat == null || p.lng == null) return;
+  const el = document.getElementById("parcelmap");
+  if (!el) return;
+  if (_parcelMap) { try { _parcelMap.remove(); } catch (e) {} _parcelMap = null; }
+  const map = L.map(el, { zoomControl: true, attributionControl: true }).setView([p.lat, p.lng], 17);
+  _parcelMap = map;
+  // Aerial basemap (free Esri World Imagery — no key needed).
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    maxZoom: 20, attribution: "Imagery &copy; Esri",
+  }).addTo(map);
+  // ReportAll parcel-boundary overlay (only when a tile URL is configured).
+  if (REPORTALL.overlayUrl) {
+    L.tileLayer(REPORTALL.overlayUrl, {
+      minZoom: REPORTALL.minZoom, maxZoom: 20, opacity: 1, attribution: REPORTALL.attribution,
+    }).addTo(map);
+  }
+  L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#5980a6", fillOpacity: 1 })
+    .addTo(map).bindPopup("Parcel " + p.parcel);
+  // The container is laid out after innerHTML; let Leaflet re-measure it.
+  setTimeout(() => { try { map.invalidateSize(); } catch (e) {} }, 60);
+}
+
 function renderDetail() {
   const p = DATA.find((x) => x.id === S.selId) || DATA[0];
   if (!p) { go("dashboard"); return; }
@@ -1020,9 +1059,11 @@ function renderDetail() {
           <div class="blueprint duotone ph" style="height:190px">${CORNERS}<span>No photo in the county data.<br>The appraiser record has one.</span></div>
           <div class="blueprint" style="padding:0;display:flex;flex-direction:column">${CORNERS}
             <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
-            ${hasAddr || ll
-              ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${ll ? p.lat + "," + p.lng : mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
-              : `<div class="ph" style="flex:1;min-height:154px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
+            ${ll
+              ? `<div id="parcelmap" style="flex:1;min-height:154px"></div>`
+              : hasAddr
+                ? `<div style="flex:1;min-height:154px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
+                : `<div class="ph" style="flex:1;min-height:154px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
           </div>
         </div>
 
@@ -1116,6 +1157,7 @@ function renderDetail() {
     </div>`;
 
   $("back").onclick = () => go("dashboard");
+  initParcelMap(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
