@@ -221,6 +221,9 @@ def main(argv=None) -> int:
     p.add_argument("--limit", type=int, default=200, help="Max parcels to fetch this run (default 200)")
     p.add_argument("--out", help="Enrichment store (default data/enrichment.json)")
     p.add_argument("--debug-dir", help="Save first fetched HTML pages here for parser tuning")
+    p.add_argument("--backfill-geometry", action="store_true",
+                   help="Only top up parcel boundaries on already-enriched entries "
+                        "missing geometry (cheap ReportAll-only pass, no appraiser/clerk)")
 
     p = sub.add_parser("run", help="scrape + report in one command")
     add_common(p)
@@ -301,8 +304,13 @@ def main(argv=None) -> int:
             sys.exit(f"Feed not found: {feed_path} — run `python -m scraper export` first")
         records = json.loads(feed_path.read_text(encoding="utf-8")).get("records", [])
         counties = [_slugify(c) for c in _county_names_from(args.counties)] if args.counties else None
-        summary = enrich_records(records, counties=counties, limit=args.limit,
-                                 out_path=args.out, debug_dir=args.debug_dir)
+        if getattr(args, "backfill_geometry", False):
+            from .enrich import backfill_geometry
+            summary = backfill_geometry(records, counties=counties,
+                                        limit=(args.limit or None), out_path=args.out)
+        else:
+            summary = enrich_records(records, counties=counties, limit=args.limit,
+                                     out_path=args.out, debug_dir=args.debug_dir)
         print(json.dumps(summary, indent=2))
         return 0
     if args.cmd == "run":

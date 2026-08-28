@@ -15,6 +15,10 @@ on:
         description: "Max parcels to enrich this run"
         default: "400"
         required: false
+      backfill_geometry:
+        description: "Only top up parcel boundaries on already-enriched entries (cheap ReportAll-only pass)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -42,7 +46,11 @@ jobs:
 
       - name: Enrich + rebuild feed
         run: |
-          python -m scraper -v enrich --limit "${{ github.event.inputs.limit || '400' }}" --debug-dir output/debug/enrich || true
+          if [ "${{ github.event.inputs.backfill_geometry }}" = "true" ]; then
+            python -m scraper -v enrich --backfill-geometry --limit "${{ github.event.inputs.limit || '400' }}" || true
+          else
+            python -m scraper -v enrich --limit "${{ github.event.inputs.limit || '400' }}" --debug-dir output/debug/enrich || true
+          fi
           latest=$(ls -d data/runs/*/ 2>/dev/null | sort | tail -1 || true)
           [ -z "$latest" ] && { echo "no run directory to export from"; exit 0; }
           python -m scraper export --run "$latest"
@@ -59,7 +67,8 @@ jobs:
           def pct(k): return f"{sum(1 for r in recs if r.get(k))}/{n}"
           print(f"enriched: {pct('enriched')}  property_use: {pct('property_use')}  "
                 f"owner: {pct('owner_name')}  case files: {pct('clerk_case_url')}  "
-                f"case docs: {pct('case_docs')}")
+                f"case docs: {pct('case_docs')}  coords: {pct('lat')}  "
+                f"parcel boundaries: {pct('parcel_geometry')}")
           e = json.load(open("data/enrichment.json"))
           print(f"store: {len(e)} entries, {sum(1 for v in e.values() if v.get('ok'))} ok")
           EOF
