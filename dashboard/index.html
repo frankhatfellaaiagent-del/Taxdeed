@@ -513,8 +513,6 @@ const SORT_OPTIONS = [
   ["soonest", "Auction date — soonest first"],
   ["latest", "Auction date — latest first"],
   ["assessed-desc", "Assessed value — high to low"],
-  ["county", "County (A–Z)"],
-  ["mytypes", "★ My preferred types first"],
 ];
 const SORT_KEYS = new Set(SORT_OPTIONS.map(([v]) => v));
 // Auction-date windows, all measured from "today" in Florida.
@@ -1741,7 +1739,7 @@ function renderBuyboxScreen() {
 
       <div class="blueprint" style="padding:18px 20px">${CORNERS}
         <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
-        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Types you&rsquo;re interested in surface first when the dashboard&rsquo;s Sort is set to &ldquo;My preferred types first&rdquo; (type comes from the appraiser record; the buy box's MATCH/REVIEW ranks the rest).</p>
+        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Mark the property types you care about (type comes from the appraiser record). Use the dashboard&rsquo;s Property-type filter and Buy box to focus the board on them.</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
           ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
         </div>
