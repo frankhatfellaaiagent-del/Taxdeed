@@ -1,26 +1,66 @@
 {
 "alachua|00310-012-000|TD 2026-027": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=00310-012-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=00310-012-000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.11",
+"county": "Alachua",
+"land_use": "100",
+"lat": 29.817882,
+"lng": -82.583813,
+"mailing_address": "17201 NW 29TH AVE 33056-4426",
+"owner": "RUSSELL JULIA",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=00310-012-000"
 },
 "alachua|01386-100-062|TD 2026-020": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.28",
+"county": "Alachua",
+"land_use": "100",
+"lat": 29.818519,
+"lng": -82.593241,
+"mailing_address": "700 RTE 130 STE 101 08077",
+"owner": "COMIAN X TAX LIEN FUND LLC",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062"
 },
 "alachua|01550-001-000|TD 2026-021": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "3.04",
+"county": "Alachua",
+"land_use": "115",
+"lat": 29.786714,
+"lng": -82.63237,
+"mailing_address": "4039 NE 18TH TRL 32693-5073",
+"owner": "HALL PATRICIA E",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000"
 },
 "alachua|02684-000-000|TD 2026-024": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "9.99",
+"county": "Alachua",
+"land_use": "9900",
+"lat": 29.5692,
+"lng": -82.561212,
+"mailing_address": "104 ESTATES CIR 32746-3023",
+"owner": "COBB & HENDERSON",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000"
 },
 "alachua|04603-005-000|TD 2026-033": {
@@ -30,9 +70,19 @@
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
 "alachua|06650-204-004|TD 2026-022": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.02",
+"county": "Alachua",
+"lat": 29.646448,
+"lng": -82.421166,
+"mailing_address": "112 SW 1ST AVE 32601",
+"owner": "CLAY LAWRENCE",
+"parcel_address": "605 SW 75TH St UNIT 204",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-204-004"
 },
 "alachua|06650-208-004|TD 2026-034": {
@@ -48,9 +98,20 @@
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
 "alachua|07214-031-000|TD 2026-028": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07214-031-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07214-031-000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.24",
+"county": "Alachua",
+"land_use": "100",
+"lat": 29.613464,
+"lng": -82.347277,
+"mailing_address": "6214 SW 82ND ST 34476",
+"owner": "SKOWRONSKI LORAINE T",
+"parcel_address": "1832 SW 42ND Ave",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07214-031-000"
 },
 "alachua|07836-014-004|TD 2026-030": {
@@ -84,21 +145,54 @@
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
 "gilchrist|090715-00770000-0240|26-0013-TD": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "1.02",
+"county": "Gilchrist",
+"land_use": "Residential",
+"lat": 29.896876,
+"lng": -82.822401,
+"mailing_address": "PO BOX 1612 33470",
+"owner": "RICKETTS DESMOND &",
+"parcel_address": "OFF NW CR 138",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240"
 },
 "gilchrist|161015-00000048-0010|26-0006-TD": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.26",
+"county": "Gilchrist",
+"land_use": "Residential",
+"lat": 29.615185,
+"lng": -82.812759,
+"mailing_address": "316 NE 5TH ST 32693",
+"owner": "HOLDER RAYMOND &",
+"parcel_address": "316 NE FIFTH St",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010"
 },
 "gilchrist|320715-00360019-0070|26-0010-TD": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "1.04",
+"county": "Gilchrist",
+"land_use": "Residential",
+"lat": 29.831793,
+"lng": -82.836934,
+"mailing_address": "10323 BRIAR DR 77042",
+"owner": "TANNICH LOUIS C TRUSTEE",
+"parcel_address": "NW 17 Ct",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070"
 },
 "marion|0051-103-015|4862016": {
@@ -4170,21 +4264,54 @@
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "osceola|0926315330000B0092|19972024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.53",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.251394,
+"lng": -81.214374,
+"mailing_address": "1850 MATHIS RD 34771",
+"owner": "GOFF FRANCES E EST",
+"parcel_address": "1850 MATHIS Rd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092"
 },
 "osceola|112528539700030280|22382024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.11",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.327657,
+"lng": -81.488757,
+"mailing_address": "3261 CASA DEL REY AVE 34746",
+"owner": "FERNANDEZ MARIA",
+"parcel_address": "2751 N POINCIANA Blvd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280"
 },
 "osceola|182529184900011105|34492024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529184900011105",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529184900011105",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.01",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.307717,
+"lng": -81.448412,
+"mailing_address": "ROOM 1601 NO 1088",
+"owner": "LIU JINGSHU",
+"parcel_address": "4117 OAK CANOPY Ct",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529184900011105"
 },
 "osceola|182733272000011140|37342024": {
@@ -4194,75 +4321,207 @@
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182733272000011140"
 },
 "osceola|202531426000010255|39172024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202531426000010255",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202531426000010255",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "1.00",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.297003,
+"lng": -81.231423,
+"mailing_address": "5170 FRYER RD 34771",
+"owner": "WIGGINS EMMA EST",
+"parcel_address": "701 WIGGINS Rd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202531426000010255"
 },
 "osceola|2125291900000D0090|40212024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.28",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.299298,
+"lng": -81.414492,
+"mailing_address": "2660 HILLIARD CT 34744",
+"owner": "ATYRELL ENTERPRISES LLC",
+"parcel_address": "0 HILL St",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090"
 },
 "osceola|242730000000150000|43972024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "2.39",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.128461,
+"lng": -81.265525,
+"mailing_address": "1718 CONNECTICUT AVE 34769",
+"owner": "GONZALEZ EDWARD M",
+"parcel_address": "5331 CANOE CREEK Rd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000"
 },
 "osceola|243033000000550000|44612024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "27.47",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 27.853016,
+"lng": -80.980501,
+"mailing_address": "103-30 126TH ST 11419",
+"owner": "NASSCOND INC",
+"parcel_address": "0 KENANSVILLE Rd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000"
 },
 "osceola|252628610005640170|45842024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.23",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.176981,
+"lng": -81.49914,
+"mailing_address": "312 11TH AVE APT 19G 10001",
+"owner": "OU RUI QING EST",
+"parcel_address": "0 CAMBRIDGE Ct",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170"
 },
 "osceola|252628610006100460|46032024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006100460",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006100460",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.30",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.181474,
+"lng": -81.494756,
+"mailing_address": "1016 DUDLEY DR 34758",
+"owner": "TORRES SHEILA",
+"parcel_address": "1016 DUDLEY Dr",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006100460"
 },
 "osceola|252628610006500040|46142024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.26",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.192393,
+"lng": -81.497532,
+"mailing_address": "1051 TAPIES CT 91320",
+"owner": "MARIAN SAMSON",
+"parcel_address": "1394 BURNLEY Ct",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040"
 },
 "osceola|252628611815430190|47332024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.18",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.157693,
+"lng": -81.478963,
+"mailing_address": "180 ANZIO DR 34758",
+"owner": "ROBINSON EARL",
+"parcel_address": "180 ANZIO Dr",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190"
 },
 "osceola|252628612818090080|47692024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628612818090080",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628612818090080",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.18",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.155413,
+"lng": -81.458056,
+"mailing_address": "8017 222ND ST 11427",
+"owner": "LIN HSIAO H",
+"parcel_address": "0 HERALDO Ct",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628612818090080"
 },
 "osceola|262630061300012490|58392019": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.05",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.192988,
+"lng": -81.292586,
+"mailing_address": "4651 SHERIDAN ST STE 480 33021",
+"owner": "PRIME HOMES AT PORTOFINO VISTA LTD",
+"parcel_address": "1927 PORTOFINO VISTA Blvd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490"
 },
 "osceola|262630061300012500|58402019": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.04",
+"county": "Osceola",
+"land_use": "0001",
+"lat": 28.193031,
+"lng": -81.292525,
+"mailing_address": "4651 SHERIDAN ST STE 480 33021",
+"owner": "PRIME HOMES AT PORTOFINO VISTA LTD",
+"parcel_address": "1925 PORTOFINO VISTA Blvd",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500"
 },
 "osceola|2725273038000N101N|51362024": {
-"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.22",
+"county": "Osceola",
+"land_use": "Residential",
+"lat": 28.27645,
+"lng": -81.592919,
+"mailing_address": "1112 SUNSET VIEW CIR #101 34747",
+"owner": "LIVINGSTON HEATHER",
+"parcel_address": "1112 SUNSET VIEW Cir",
+"source": "reportall"
+},
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N"
 },
 "osceola|292529112400010060|52122024": {
@@ -8294,15 +8553,36 @@
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=49-09-27-0220-0040-0100"
 },
 "sumter|F32Q059|5060": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=370955015&amp;KeyValue=F32Q059",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=370955015&amp;KeyValue=F32Q059",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.09",
+"county": "Sumter",
+"land_use": "Residential",
+"lat": 28.793084,
+"lng": -82.131636,
+"mailing_address": "1637 CR 435 33538",
+"owner": "WINCHELL JOHN M & LEE CINDY SM",
+"parcel_address": "1637 CR 435",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=370955015&amp;KeyValue=F32Q059"
 },
 "sumter|J16C020|5062": {
-"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=422412812&amp;KeyValue=J16C020",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=422412812&amp;KeyValue=J16C020",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.48",
+"county": "Sumter",
+"land_use": "Residential",
+"lat": 28.755177,
+"lng": -82.118785,
+"mailing_address": "514 MILLAR CT 21001",
+"owner": "JACKSON MARTIN",
+"source": "reportall"
+},
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=422412812&amp;KeyValue=J16C020"
 },
 "suwannee|10025005000|4694": {
@@ -8312,9 +8592,20 @@
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|10720001040|4675": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "10.22",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.111001,
+"lng": -83.089256,
+"mailing_address": "16561 188TH ST 32071",
+"owner": "GREEN ANDREW LEE & JOSEPH LEE",
+"parcel_address": "16535 188TH St",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|1437000001|4741": {
@@ -8325,79 +8616,134 @@
 },
 "suwannee|2220000000|4752": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2490003000|4754": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "1.31",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.262167,
+"lng": -82.915101,
+"mailing_address": "6078 153RD RD 32060",
+"owner": "RODRIGUEZ MARCOS",
+"parcel_address": "10292 89TH Rd",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2535000060|4756": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.96",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.250808,
+"lng": -82.896505,
+"mailing_address": "11016 73RD DRIVE 32060",
+"owner": "THOMAS JEROLD E ESTATE",
+"parcel_address": "11016 73RD Dr",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2710000000|4758": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2823005000|4760": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|4591000000|4704": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "9.92",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.409882,
+"lng": -83.037928,
+"mailing_address": "2230 141ST PASS 32060",
+"owner": "HUNT REBECCA PARSON & PEGGY PA",
+"parcel_address": "2230 141ST Pass",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|8016001000|4684": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "0.52",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.277741,
+"lng": -82.982659,
+"mailing_address": "318 MILLER ST SE 32064",
+"owner": "GROSS BENNIE ESTATE & ESTATE D",
+"parcel_address": "318 MILLER SE St",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9071010010|4682": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": false,
+"appraiser_error": "no recognizable fields on page",
+"fetched_at": "2026-08-28T01:25:07+00:00",
+"ok": true,
+"parcel": {
+"acreage": "4.37",
+"county": "Suwannee",
+"land_use": "Residential",
+"lat": 30.100714,
+"lng": -82.978462,
+"mailing_address": "19207 111TH DRIVE 32071",
+"owner": "DRAPER MARY",
+"parcel_address": "19207 111TH Dr",
+"source": "reportall"
+},
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|930003011|4698": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9386120010|4678": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9391120410|4680": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9415170290|4677": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9446100060|4679": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-28T01:25:07+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
