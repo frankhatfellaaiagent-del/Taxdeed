@@ -94,6 +94,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         mailing = ""
         case: dict = {}
         parcel_latlng = None
+        parcel_geom = ""
         if enr.get("ok"):
             parcel = enr.get("parcel") or {}          # ReportAll, when enabled
             r.owner_name = r.owner_name or enr.get("owner_name", "") or parcel.get("owner", "")
@@ -110,6 +111,9 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             # the vacant lots that have no street address at all).
             if parcel.get("lat") is not None and parcel.get("lng") is not None:
                 parcel_latlng = [parcel["lat"], parcel["lng"]]
+            # The true parcel boundary (WKT MULTIPOLYGON) — the dashboard
+            # outlines it on the per-card map so you see the exact lot.
+            parcel_geom = parcel.get("geometry_wkt", "") or ""
         # Some counties hyperlink the case number on the auction page straight
         # to the clerk's tax deed record — the only case-file link available
         # where no clerk-portal resolver exists. Surface it as the case link
@@ -138,6 +142,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "anomalies": judgment.find_anomalies(r), "status": status,
             "auction_url": r.auction_url, "appraiser_url": r.appraiser_url,
             "lat": latlng[0], "lng": latlng[1],
+            "parcel_geometry": parcel_geom,
             **scraped_case,   # case link published on the auction page itself
             **case,      # clerk_case_url, deed_status, applicant, case_docs, case_flags
         })
