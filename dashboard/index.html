@@ -40,6 +40,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 /* [hidden] must always win — several component classes set their own display */
 [hidden]{display:none!important}
 .tablewrap{overflow-x:auto}
+.ai-spin{display:inline-block;width:12px;height:12px;border:2px solid color-mix(in srgb,var(--color-accent-700) 40%,transparent);border-top-color:var(--color-accent-700);border-radius:50%;vertical-align:-1px;animation:aispin .8s linear infinite}
+@keyframes aispin{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
@@ -634,6 +636,7 @@ function mapRecord(r, i) {
     status: r.status, redeemed: r.status === "Redeemed",
     buybox: r.buybox, buyboxNotes: r.buybox_notes || "", anomalies: r.anomalies || [],
     auctionUrl: r.auction_url || "", appraiserUrl: r.appraiser_url || "",
+    raw: r,   // the untouched feed record — what the AI research agent receives
   };
 }
 // Manual assignment wins; otherwise fall back to the appraiser land-use bucket.
@@ -1034,6 +1037,122 @@ function initParcelMap(p) {
   setTimeout(() => { try { map.invalidateSize(); } catch (e) {} }, 60);
 }
 
+// ---------- per-parcel AI research (Supabase Edge Function) ----------
+// On demand, an AI agent researches THIS parcel — reads its clerk documents,
+// does live web research (zoning/GIS, flood/wetlands, comparable sales), and
+// reports back. The call runs server-side (the Edge Function holds the model
+// key); results are cached and shared, so a parcel is researched at most once
+// per window no matter how many people open it.
+let _aiChannel = null;
+
+function initAIResearch(p) {
+  const btn = document.getElementById("ai-research");
+  if (!btn) return;
+  // Needs a signed-in Supabase session (the agent runs under the user's JWT).
+  if (!SYNC_ON || !(CLOUD && CLOUD.sb && CLOUD.user)) {
+    btn.disabled = true;
+    btn.title = "Sign in (sidebar) to run AI research on a property";
+  }
+  btn.onclick = () => runAIResearch(p, false);
+  // Show a cached analysis immediately if one already exists (no spend).
+  if (CLOUD && CLOUD.sb && CLOUD.user) fetchCachedAnalysis(p);
+}
+
+async function fetchCachedAnalysis(p) {
+  try {
+    const { data } = await CLOUD.sb.from("parcel_analysis").select("*").eq("pkey", p.id).maybeSingle();
+    if (data && data.status === "ready") renderAIAnalysis(p, data.data, { cached: true, at: data.updated_at });
+  } catch (e) { /* no cache / not signed in — ignore */ }
+}
+
+async function runAIResearch(p, refresh) {
+  const box = document.getElementById("ai-analysis");
+  const btn = document.getElementById("ai-research");
+  if (!box) return;
+  if (!(CLOUD && CLOUD.sb && CLOUD.user)) { aiMessage(box, "Sign in (sidebar) to run AI research on a property."); return; }
+  if (btn) { btn.disabled = true; }
+  aiMessage(box, `<span class="ai-spin"></span> Researching this parcel — reading its documents and the web. This can take up to a minute…`);
+  subscribeAnalysis(p);   // listen for the async result
+  try {
+    const { data, error } = await CLOUD.sb.functions.invoke("analyze-property", { body: { record: p.raw, refresh: !!refresh } });
+    if (error) { aiMessage(box, "Couldn’t start the analysis (function error). Try again shortly."); if (btn) btn.disabled = false; return; }
+    const s = data && data.status;
+    if (s === "disabled") { aiMessage(box, "AI analysis isn’t configured yet — an Anthropic API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
+    else if (s === "unauthorized") { aiMessage(box, "Please sign in to run AI research."); if (btn) btn.disabled = false; }
+    else if (s === "capped") { aiMessage(box, esc(data.reason || "Daily research limit reached.")); if (btn) btn.disabled = false; }
+    else if (s === "ready") { renderAIAnalysis(p, data.data, { cached: !!data.cached, at: data.generated_at }); if (btn) btn.disabled = false; }
+    // s === "pending" → keep the spinner; the realtime subscription fills it in.
+  } catch (e) {
+    aiMessage(box, "Couldn’t reach the analysis service. Try again shortly.");
+    if (btn) btn.disabled = false;
+  }
+}
+
+function subscribeAnalysis(p) {
+  if (!(CLOUD && CLOUD.sb)) return;
+  try { if (_aiChannel) CLOUD.sb.removeChannel(_aiChannel); } catch (e) {}
+  _aiChannel = CLOUD.sb.channel("parcel_analysis:" + p.id)
+    .on("postgres_changes",
+        { event: "*", schema: "public", table: "parcel_analysis", filter: "pkey=eq." + p.id },
+        (msg) => {
+          const row = msg.new || {};
+          if (row.status === "ready") {
+            renderAIAnalysis(p, row.data, { cached: false, at: row.updated_at });
+            const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
+          } else if (row.status === "error") {
+            const box = document.getElementById("ai-analysis");
+            if (box) aiMessage(box, "The analysis ran into an error. Try again shortly.");
+            const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
+          }
+        })
+    .subscribe();
+}
+
+function aiMessage(box, html) {
+  box.innerHTML = `<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--color-divider);font-size:13.5px" class="text-muted">${html}</div>`;
+}
+
+function renderAIAnalysis(p, a, meta) {
+  const box = document.getElementById("ai-analysis");
+  if (!box || !a) return;
+  const para = (label, text) => text && String(text).trim()
+    ? `<div style="margin-bottom:10px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:2px">${label}</div><div>${esc(text)}</div></div>` : "";
+  const list = (label, items, cls) => Array.isArray(items) && items.length
+    ? `<div style="margin-bottom:10px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">${label}</div>
+        <div style="display:flex;flex-direction:column;gap:5px">${items.map((t) => `<div style="display:flex;gap:8px"><span class="tag ${cls}" style="flex:none">•</span><span>${esc(t)}</span></div>`).join("")}</div></div>` : "";
+  const sources = Array.isArray(a.sources) && a.sources.length
+    ? `<div style="margin-top:6px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Sources</div>
+        <div style="display:flex;flex-direction:column;gap:3px;font-size:12.5px">${a.sources.map((s) => {
+          const u = (s && s.url) || ""; const label = (s && s.supports) || u;
+          return /^https?:\/\//i.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener" style="text-decoration:none">${LINK_SVG} ${esc(label)}</a>` : `<span class="text-muted">${esc(label)}</span>`;
+        }).join("")}</div></div>` : "";
+  const conf = a.confidence ? `<span class="tag ${a.confidence === "high" ? "tag-accent" : a.confidence === "low" ? "tag-outline" : "tag-neutral"}">confidence: ${esc(a.confidence)}</span>` : "";
+  const when = (meta && meta.at) ? esc(etStamp(new Date(meta.at))) : "";
+  const isAdmin = (typeof IS_ADMIN !== "undefined" && IS_ADMIN);
+  box.innerHTML = `
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--color-divider)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+        <h6 style="color:var(--color-accent-700);margin:0">AI research</h6>
+        ${conf}
+        ${meta && meta.cached ? '<span class="tag tag-neutral">cached</span>' : ''}
+        ${isAdmin ? `<button class="btn btn-ghost" id="ai-refresh" style="margin-left:auto;font-size:12px">Refresh</button>` : ""}
+      </div>
+      <div style="font-size:14px;line-height:1.55">
+        ${para("Summary", a.summary)}
+        ${para("Value", a.value_read)}
+        ${para("Title &amp; liens", a.title_and_liens)}
+        ${para("Site &amp; environment", a.site_and_environment)}
+        ${list("Red flags", a.red_flags, "tag-outline")}
+        ${list("Opportunities", a.opportunities, "tag-accent")}
+        ${list("Suggested next steps", a.suggested_next_steps, "tag-neutral")}
+        ${sources}
+      </div>
+      <div style="margin-top:10px;font-size:11px" class="text-muted">AI research assistance — verify liens and title with a professional search before bidding. Not legal advice.${when ? " · " + when : ""}</div>
+    </div>`;
+  const rb = document.getElementById("ai-refresh");
+  if (rb) rb.onclick = () => runAIResearch(p, true);
+}
+
 function renderDetail() {
   const p = DATA.find((x) => x.id === S.selId) || DATA[0];
   if (!p) { go("dashboard"); return; }
@@ -1143,16 +1262,20 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
             <h6 style="color:var(--color-accent-700);margin:0">Property analysis</h6>
-            <span class="tag tag-accent">automated</span>
+            <span class="tag tag-neutral">quick read</span>
+            <button class="btn btn-primary" id="ai-research" style="margin-left:auto;font-size:13px" title="Have the AI research this specific parcel — clerk documents, liens, zoning, flood/wetlands, comparable sales">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 2 1 3.5 2.3 4.7.7.7 1.2 1.4 1.4 2.3h4.6c.2-.9.7-1.6 1.4-2.3C17 12.5 18 11 18 9a6 6 0 0 0-6-6Z"></path><line x1="9.5" y1="21" x2="14.5" y2="21"></line></svg>
+              Research with AI</button>
           </div>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
             ${findings.map((a) => `<div style="display:flex;gap:12px">
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
               <span>${a.text}</span></div>`).join("")}
           </div>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <div id="ai-analysis"></div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Quick read computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
@@ -1189,6 +1312,7 @@ function renderDetail() {
 
   $("back").onclick = () => go("dashboard");
   initParcelMap(p);
+  initAIResearch(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {

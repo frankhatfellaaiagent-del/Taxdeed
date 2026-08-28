@@ -174,3 +174,14 @@ latest committed run in `data/runs/<timestamp>/`, and refreshed automatically by
 enrichment workflow). The Google
 Sheet ("MADD Assets — FL Tax Deed Auctions") imports the TSV via IMPORTDATA and
 refreshes itself; treat it as a human-facing mirror, not a source.
+
+## On-demand AI property analysis (not part of this feed)
+
+The dashboard's "Research with AI" button runs a per-parcel AI research agent.
+That analysis is **not** part of `master_list.json` and does not change this
+feed's schema. It runs server-side in a Supabase Edge Function
+(`supabase/functions/analyze-property`) and is cached in the Supabase
+`parcel_analysis` table, keyed by the same `county|parcel_id|case_number`
+composite the app uses everywhere. Results are shared across teams and reused for
+30 days. The feature is dormant until an Anthropic key is configured — see
+`docs/AI_SETUP.md`.
