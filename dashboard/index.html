@@ -793,6 +793,7 @@ function nextRefreshText() {
   return `${DAYS[d.getUTCDay()]} ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
 }
 function go(screen, selId) {
+  if (typeof clearAIPoll === "function") clearAIPoll();   // stop any per-card AI polling
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
@@ -1059,25 +1060,65 @@ function initParcelMap(p) {
 // key); results are cached and shared, so a parcel is researched at most once
 // per window no matter how many people open it.
 let _aiChannel = null;
+let _aiPoll = null;
+function clearAIPoll() { if (_aiPoll) { clearInterval(_aiPoll); _aiPoll = null; } }
 
 function initAIResearch(p) {
   const btn = document.getElementById("ai-research");
+  const box = document.getElementById("ai-analysis");
+  clearAIPoll();
+  // Default: a compact prompt — the card leads with the button, not a wall of text.
+  if (box) box.innerHTML = `<div class="text-muted" style="font-size:13px;line-height:1.5">Run a full AI due-diligence analysis of this parcel — liens from the clerk&rsquo;s Ownership &amp; Encumbrance report, value, site &amp; environment, red flags and next steps.</div>`;
   if (!btn) return;
-  // Needs a signed-in Supabase session (the agent runs under the user's JWT).
   if (!SYNC_ON || !(CLOUD && CLOUD.sb && CLOUD.user)) {
     btn.disabled = true;
     btn.title = "Sign in (sidebar) to run AI research on a property";
   }
   btn.onclick = () => runAIResearch(p, false);
-  // Show a cached analysis immediately if one already exists (no spend).
-  if (CLOUD && CLOUD.sb && CLOUD.user) fetchCachedAnalysis(p);
+  // Resume: show a finished analysis, or pick up a run already in progress —
+  // so you can start it, leave (even close the tab), and come back to it done.
+  if (CLOUD && CLOUD.sb && CLOUD.user) resumeAnalysis(p);
 }
 
-async function fetchCachedAnalysis(p) {
+async function resumeAnalysis(p) {
   try {
     const { data } = await CLOUD.sb.from("parcel_analysis").select("*").eq("pkey", p.id).maybeSingle();
-    if (data && data.status === "ready") renderAIAnalysis(p, data.data, { cached: true, at: data.updated_at });
-  } catch (e) { /* no cache / not signed in — ignore */ }
+    if (!data) return;
+    if (data.status === "ready") { renderAIAnalysis(p, data.data, { cached: true, at: data.updated_at }); return; }
+    if (data.status === "pending") {
+      const ageMs = Date.now() - new Date(data.updated_at || data.created_at).getTime();
+      if (ageMs < 5 * 60 * 1000) showResearching(p);   // a run is under way — wait for it
+    }
+  } catch (e) { /* ignore */ }
+}
+
+function showResearching(p) {
+  const box = document.getElementById("ai-analysis");
+  const btn = document.getElementById("ai-research");
+  if (box) aiMessage(box, `<span class="ai-spin"></span> Researching this parcel — reading its documents and the web. You can leave this page; it keeps running and will be here when you come back.`);
+  if (btn) btn.disabled = true;
+  subscribeAnalysis(p);   // realtime push when it finishes
+  startAIPoll(p);         // + a polling backstop in case realtime misses
+}
+
+function startAIPoll(p) {
+  clearAIPoll();
+  let tries = 0;
+  _aiPoll = setInterval(async () => {
+    if (++tries > 45) { clearAIPoll(); return; }   // ~3.75 min ceiling
+    try {
+      const { data } = await CLOUD.sb.from("parcel_analysis").select("status,data,updated_at").eq("pkey", p.id).maybeSingle();
+      if (data && data.status === "ready") {
+        clearAIPoll();
+        renderAIAnalysis(p, data.data, { cached: false, at: data.updated_at });
+        const b = document.getElementById("ai-research"); if (b) b.disabled = false;
+      } else if (data && data.status === "error") {
+        clearAIPoll();
+        const box = document.getElementById("ai-analysis"); if (box) aiMessage(box, "The analysis ran into an error. Try again shortly.");
+        const b = document.getElementById("ai-research"); if (b) b.disabled = false;
+      }
+    } catch (e) { /* transient — keep polling */ }
+  }, 5000);
 }
 
 async function runAIResearch(p, refresh) {
@@ -1085,19 +1126,18 @@ async function runAIResearch(p, refresh) {
   const btn = document.getElementById("ai-research");
   if (!box) return;
   if (!(CLOUD && CLOUD.sb && CLOUD.user)) { aiMessage(box, "Sign in (sidebar) to run AI research on a property."); return; }
-  if (btn) { btn.disabled = true; }
-  aiMessage(box, `<span class="ai-spin"></span> Researching this parcel — reading its documents and the web. This can take up to a minute…`);
-  subscribeAnalysis(p);   // listen for the async result
+  showResearching(p);   // spinner + realtime + poll (survives navigation)
   try {
     const { data, error } = await CLOUD.sb.functions.invoke("analyze-property", { body: { record: p.raw, refresh: !!refresh } });
-    if (error) { aiMessage(box, "Couldn’t start the analysis (function error). Try again shortly."); if (btn) btn.disabled = false; return; }
+    if (error) { clearAIPoll(); aiMessage(box, "Couldn’t start the analysis (function error). Try again shortly."); if (btn) btn.disabled = false; return; }
     const s = data && data.status;
-    if (s === "disabled") { aiMessage(box, "AI analysis isn’t configured yet — an OpenAI API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
-    else if (s === "unauthorized") { aiMessage(box, "Please sign in to run AI research."); if (btn) btn.disabled = false; }
-    else if (s === "capped") { aiMessage(box, esc(data.reason || "Daily research limit reached.")); if (btn) btn.disabled = false; }
-    else if (s === "ready") { renderAIAnalysis(p, data.data, { cached: !!data.cached, at: data.generated_at }); if (btn) btn.disabled = false; }
-    // s === "pending" → keep the spinner; the realtime subscription fills it in.
+    if (s === "disabled") { clearAIPoll(); aiMessage(box, "AI analysis isn’t configured yet — an OpenAI API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
+    else if (s === "unauthorized") { clearAIPoll(); aiMessage(box, "Please sign in to run AI research."); if (btn) btn.disabled = false; }
+    else if (s === "capped") { clearAIPoll(); aiMessage(box, esc(data.reason || "Daily research limit reached.")); if (btn) btn.disabled = false; }
+    else if (s === "ready") { clearAIPoll(); renderAIAnalysis(p, data.data, { cached: !!data.cached, at: data.generated_at }); if (btn) btn.disabled = false; }
+    // s === "pending" → the spinner + realtime + poll handle it
   } catch (e) {
+    clearAIPoll();
     aiMessage(box, "Couldn’t reach the analysis service. Try again shortly.");
     if (btn) btn.disabled = false;
   }
@@ -1112,9 +1152,11 @@ function subscribeAnalysis(p) {
         (msg) => {
           const row = msg.new || {};
           if (row.status === "ready") {
+            clearAIPoll();
             renderAIAnalysis(p, row.data, { cached: false, at: row.updated_at });
             const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
           } else if (row.status === "error") {
+            clearAIPoll();
             const box = document.getElementById("ai-analysis");
             if (box) aiMessage(box, "The analysis ran into an error. Try again shortly.");
             const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
@@ -1128,6 +1170,7 @@ function aiMessage(box, html) {
 }
 
 function renderAIAnalysis(p, a, meta) {
+  clearAIPoll();
   const box = document.getElementById("ai-analysis");
   if (!box || !a) return;
   const para = (label, text) => text && String(text).trim()
@@ -1279,18 +1322,20 @@ function renderDetail() {
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
             <h6 style="color:var(--color-accent-700);margin:0">Property analysis</h6>
-            <span class="tag tag-neutral">quick read</span>
             <button class="btn btn-primary" id="ai-research" style="margin-left:auto;font-size:13px" title="Have the AI research this specific parcel — clerk documents, liens, zoning, flood/wetlands, comparable sales">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 2 1 3.5 2.3 4.7.7.7 1.2 1.4 1.4 2.3h4.6c.2-.9.7-1.6 1.4-2.3C17 12.5 18 11 18 9a6 6 0 0 0-6-6Z"></path><line x1="9.5" y1="21" x2="14.5" y2="21"></line></svg>
               Research with AI</button>
           </div>
-          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
-            ${findings.map((a) => `<div style="display:flex;gap:12px">
-              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
-              <span>${a.text}</span></div>`).join("")}
-          </div>
           <div id="ai-analysis"></div>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Quick read computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <details style="margin-top:12px">
+            <summary style="cursor:pointer;user-select:none;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700)">Quick read &middot; from the auction record</summary>
+            <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55;margin-top:12px">
+              ${findings.map((a) => `<div style="display:flex;gap:12px">
+                <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
+                <span>${a.text}</span></div>`).join("")}
+            </div>
+            <div style="margin-top:10px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          </details>
         </div>
       </div>
 
