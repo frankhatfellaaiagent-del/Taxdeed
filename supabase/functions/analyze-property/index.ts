@@ -114,11 +114,11 @@ Deno.serve(async (req) => {
 
 const SYSTEM = `You are a tax-deed due-diligence researcher analyzing ONE specific Florida parcel for an investor deciding whether to bid at a tax-deed auction.
 
-LIENS ARE THE MOST IMPORTANT PART. Work the lien question hard and concretely:
-1. Get the parcel's clerk tax-deed case file. If case documents were not provided, call get_case_documents.
+LIENS ARE THE MOST IMPORTANT PART. Work the lien question hard and concretely — do not give up after one tool call:
+1. Get the parcel's clerk tax-deed case file. Call get_case_documents first. If it doesn't return the documents, use fetch_page on the county clerk tax-deed FILE search portal named in the facts to navigate to this parcel's file, and web_search for the parcel's tax-deed file — each county keeps it on a different system (e.g. Volusia at app02.clerk.org/or_td/). You may read any Florida county clerk, official-records or appraiser document or page you find with read_pdf / fetch_page.
 2. Read the Ownership & Encumbrance (O&E) / title / current-owner-search report with read_pdf — that report is the county's own list of every recorded mortgage, judgment, IRS/federal tax lien, HOA claim and encumbrance on this parcel. Read the other case documents too if useful.
 3. Call official_records_search to get where the county's Official Records live, and search the web, to corroborate or fill gaps.
-Under Florida law a tax-deed sale extinguishes MOST private liens and mortgages (they are junior to the tax lien), but these SURVIVE the sale and are the real risk: IRS / federal tax liens, municipal & code-enforcement liens, other governmental liens and special assessments, certain easements, and title-marketability defects (a quiet-title action is usually needed). Call these out specifically.
+Only conclude "O&E not found" after you have actually tried get_case_documents, the county file-search portal, and a web search. Under Florida law a tax-deed sale extinguishes MOST private liens and mortgages (they are junior to the tax lien), but these SURVIVE the sale and are the real risk: IRS / federal tax liens, municipal & code-enforcement liens, other governmental liens and special assessments, certain easements, and title-marketability defects (a quiet-title action is usually needed). Call these out specifically.
 
 Ground every claim in a source you actually retrieved. When you cannot find something, say "not found" — never invent a lien, a value, an owner, or a clean bill of health. If you could not read the O&E, say so and tell the investor to pull it from the clerk.
 
@@ -160,13 +160,13 @@ const GET_CASE_DOCS_TOOL = {
 const READ_PDF_TOOL = {
   type: "function",
   name: "read_pdf",
-  description: "Read the text of one of this parcel's case documents (e.g. the O&E / title report) by its URL. Only URLs from this parcel's case documents are allowed.",
+  description: "Read the text of a document PDF by URL — the parcel's case documents, or any Florida county clerk / official-records / appraiser document (e.g. the O&E / title report, wherever the county keeps it).",
   parameters: { type: "object", properties: { url: { type: "string" } }, required: ["url"] },
 };
 const FETCH_PAGE_TOOL = {
   type: "function",
   name: "fetch_page",
-  description: "Fetch an allow-listed HTML page (the county appraiser page or the clerk case page) and return its readable text.",
+  description: "Fetch an HTML page and return its readable text — the county appraiser page, the clerk case page, or the county tax-deed file-search portal (any Florida county clerk/records/appraiser site).",
   parameters: { type: "object", properties: { url: { type: "string" } }, required: ["url"] },
 };
 const OFFICIAL_RECORDS_TOOL = {
@@ -182,6 +182,33 @@ const WEB_SEARCH_TOOL = { type: "web_search" };
 const OR_REGISTRY: Record<string, string> = {
   hillsborough: "https://publicaccess.hillsclerk.com/oripublicaccess/",
 };
+
+// Per-county tax-deed FILE search portals (from config/clerk_sites.yaml). This
+// is where each county keeps the case file + Ownership & Encumbrance report;
+// the systems differ per county (RealTDM, TaxSmart, Landmark, clerk.org, …).
+const CLERK_SEARCH: Record<string, string> = {"alachua":"https://alachuacounty.us/Depts/Clerk/TaxDeeds/pages/taxdeedsales.aspx","bay":"http://records2.baycoclerk.com/TaxDeed/","brevard":"https://www.brevardclerk.us/tax-deed-sales","broward":"https://www.broward.org/RecordsTaxesTreasury/","citrus":"https://search.citrusclerk.org/TaxSmartWeb","clay":"https://landmark.clayclerk.com/TaxDeed/","duval":"https://taxdeed.duvalclerk.com/","escambia":"https://www.escambiaclerk.com/362/Tax-Deeds","flagler":"https://flaglerclerk.gov/sales/tax-deeds-sales/","gilchrist":"https://gilchristclerk.com/tax-deeds/","gulf":"https://www.gulfclerk.com/courts/tax-deeds/","hendry":"https://www.hendryclerk.org/tax-deeds/","hernando":"https://hernandoclerk.com/additional-services/tax-deeds/tax-deed-file-search/","highlands":"https://highlands.realtdm.com/public/cases/list","hillsborough":"https://www.hillsclerk.com/taxdeeds","indianriver":"https://taxdeeds.indian-river.org/TaxDeeds","jackson":"https://www.jacksonclerk.com/clerk-services/tax-deed-sales/","lake":"https://taxdeeds.lakecountyclerk.org/","lee":"https://www.leeclerk.org/departments/courts/property-sales/tax-deed-sales","leon":"https://cvweb.leonclerk.com/public/clerk_services/finance/tax_deeds/tax_deeds.asp","marion":"https://nvweb.marioncountyclerk.org/browserviewtd/","martin":"https://www.martinclerk.com/308/Tax-Deed-Files","monroe":"https://monroe-clerk.com/","nassau":"https://www.nassauclerk.com/190/View-Tax-Deed-Sales-and-Foreclosures","orange":"https://or.occompt.com/recorder/tdsmweb/applicationSearch.jsp?guest=true","osceola":"https://osceolaclerk.com/tax-deeds/","palmbeach":"https://taxdeed.mypalmbeachclerk.com/","pasco":"https://www.pascoclerk.com/201/Tax-Deed-Sales","pinellas":"https://taxdeedsales.mypinellasclerk.gov/","polk":"https://www.polkclerkfl.gov/189/Tax-Deeds","putnam":"https://apps.putnam-fl.com/coc/taxdeeds/public/disclaimer.php","santarosa":"https://santarosaclerk.com/courts/foreclosures-tax-deeds/","sarasota":"https://www.sarasotaclerk.com/Home-and-Property/Tax-Deeds","seminole":"https://webapps.seminoleclerk.org/TaxDeedSales/","suwannee":"https://www.suwgov.org/tax-deed-sales/","volusia":"https://app02.clerk.org/or_td/","washington":"https://www.washingtonclerk.com/public-sales/tax-deeds/"};
+
+// Domain suffixes the agent may READ documents/pages from — Florida county
+// clerk / official-records / appraiser systems. Combined with a generic gov
+// pattern and per-parcel URLs, this lets the agent open the O&E wherever a
+// county keeps it (e.g. Volusia's app02.clerk.org) while staying SSRF-safe.
+const SAFE_SUFFIXES = ["alachuacounty.us","baycoclerk.com","brevardclerk.us","broward.org","citrusclerk.org","clayclerk.com","clerk.org","duvalclerk.com","escambiaclerk.com","flaglerclerk.gov","gilchristclerk.com","gulfclerk.com","hendryclerk.org","hernandoclerk.com","highlandsclerkfl.gov","hillsclerk.com","indian-river.org","indianriverclerk.com","jacksonclerk.com","lakecountyclerk.org","lakecountyclerkfl.gov","leeclerk.org","leonclerk.com","marioncountyclerk.org","martinclerk.com","monroe-clerk.com","mypalmbeachclerk.com","mypinellasclerk.gov","nassauclerk.com","occompt.com","osceolaclerk.com","pascoclerk.com","polkclerkfl.gov","putnam-fl.com","putnamclerk.com","realtaxdeed.com","realtdm.com","santarosaclerk.com","sarasotaclerk.com","seminoleclerk.org","suwgov.org","washingtonclerk.com"];
+
+// May the agent fetch/read this URL? Its own parcel documents always; otherwise
+// only public clerk/records/appraiser/government hosts — never private/internal.
+function canRead(url: string, explicit: Set<string>): boolean {
+  if (explicit.has(url)) return true;
+  let host = "";
+  try {
+    const u = new URL(url);
+    if (u.protocol !== "http:" && u.protocol !== "https:") return false;
+    host = u.hostname.toLowerCase();
+  } catch { return false; }
+  if (!host.includes(".") || host === "localhost") return false;
+  if (/^(127\.|10\.|192\.168\.|169\.254\.|172\.(1[6-9]|2\d|3[01])\.|::1|0\.)/.test(host)) return false;
+  if (SAFE_SUFFIXES.some((s) => host === s || host.endsWith("." + s))) return true;
+  return /(clerk|appraiser|officialrecord|realtdm|realtaxdeed|taxdeed|county|\.gov$|\.fl\.us$)/i.test(host);
+}
 
 const DOC_INTEREST = ["all forms", "tax deed", "notice of publication", "clerk",
   "affidavit", "513", "certificate", "title", "search", "sale", "receipt",
@@ -306,6 +333,7 @@ function factsText(record: any): string {
     f("Existing data flags", Array.isArray(record.case_flags) ? record.case_flags.join("; ") : "") +
     f("Latitude", record.lat) + f("Longitude", record.lng) +
     f("Appraiser page", record.appraiser_url) + f("Clerk case page", record.clerk_case_url) +
+    f("County clerk tax-deed FILE search (where the O&E lives)", CLERK_SEARCH[(record.county || "").toLowerCase().replace(/[^a-z]/g, "")]) +
     (docs.length
       ? "Case documents already on file (read the O&E/title one first with read_pdf):\n" +
         docs.map((d: any) => `  - ${d?.name || "doc"}: ${d?.url || ""}`).join("\n") + "\n"
@@ -338,11 +366,13 @@ function outputText(resp: any): string {
 }
 
 async function runAgent(record: any, pkey: string, svc: any) {
-  // Allow-list of URLs the agent may fetch/read: the parcel's own documents and
-  // pages, growing as get_case_documents discovers more. Keeps it SSRF-safe.
-  const allowed = new Set<string>();
-  for (const u of [record.appraiser_url, record.clerk_case_url]) if (u) allowed.add(String(u));
-  for (const d of (Array.isArray(record.case_docs) ? record.case_docs : [])) if (d?.url) allowed.add(String(d.url));
+  // Explicit per-parcel URLs the agent may always read; canRead() additionally
+  // permits public FL clerk/records/appraiser hosts (so the O&E is readable
+  // wherever the county keeps it), while blocking private/internal hosts.
+  const explicit = new Set<string>();
+  for (const u of [record.appraiser_url, record.clerk_case_url]) if (u) explicit.add(String(u));
+  for (const d of (Array.isArray(record.case_docs) ? record.case_docs : [])) if (d?.url) explicit.add(String(d.url));
+  const clerkSearch = CLERK_SEARCH[(record.county || "").toLowerCase().replace(/[^a-z]/g, "")] || "";
 
   const fullTools = [WEB_SEARCH_TOOL, GET_CASE_DOCS_TOOL, READ_PDF_TOOL, FETCH_PAGE_TOOL, OFFICIAL_RECORDS_TOOL, EMIT_TOOL];
   const noWebTools = [GET_CASE_DOCS_TOOL, READ_PDF_TOOL, FETCH_PAGE_TOOL, OFFICIAL_RECORDS_TOOL, EMIT_TOOL];
@@ -380,17 +410,18 @@ async function runAgent(record: any, pkey: string, svc: any) {
           let output = "";
           if (fc.name === "get_case_documents") {
             const res = await resolveCaseDocs(record);
-            for (const d of res.docs) allowed.add(d.url);
-            if (res.caseUrl) allowed.add(res.caseUrl);
+            for (const d of res.docs) explicit.add(d.url);
+            if (res.caseUrl) explicit.add(res.caseUrl);
             output = JSON.stringify(res.docs.length
-              ? { case_url: res.caseUrl, documents: res.docs }
-              : { documents: [], note: "Could not resolve this parcel's case documents online. Use official_records_search and web_search, and tell the investor to pull the O&E from the clerk's tax-deed file." });
+              ? { case_url: res.caseUrl, documents: res.docs, clerk_file_search: clerkSearch }
+              : { documents: [], clerk_file_search: clerkSearch,
+                  note: `Could not auto-resolve the case documents. Open the county clerk tax-deed FILE search (${clerkSearch || "search the web for it"}) with fetch_page to find this parcel's file and its Ownership & Encumbrance report, then read_pdf it. You may also web_search for the parcel's tax-deed file and read any county clerk/records PDF you find.` });
           } else if (fc.name === "read_pdf") {
             const url = String(args.url || "");
-            output = allowed.has(url) ? await readDocText(url) : "(url not in this parcel's case documents — only this parcel's own documents can be read)";
+            output = canRead(url, explicit) ? await readDocText(url) : "(that host isn't a county clerk/records/appraiser site — only this parcel's own documents and public county records can be read)";
           } else if (fc.name === "fetch_page") {
             const url = String(args.url || "");
-            output = allowed.has(url) ? stripTags(await fetchTextRaw(url)).slice(0, MAX_PAGE_CHARS) : "(url not in this parcel's allow-list)";
+            output = canRead(url, explicit) ? stripTags(await fetchTextRaw(url)).slice(0, MAX_PAGE_CHARS) : "(that host isn't a county clerk/records/appraiser site)";
           } else if (fc.name === "official_records_search") {
             output = JSON.stringify(officialRecords(String(record.county || ""), String(args.owner_name || record.owner_name || "")));
           } else {
