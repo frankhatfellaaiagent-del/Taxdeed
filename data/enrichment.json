@@ -69,7 +69,7 @@
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
@@ -93,13 +93,13 @@
 },
 "alachua|06650-208-004|TD 2026-034": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004"
 },
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
@@ -122,31 +122,31 @@
 },
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
 "alachua|10733-043-000|TD 2026-031": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
 },
 "alachua|10893-024-000|TD 2026-026": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000"
 },
 "alachua|14785-000-000|TD 2026-035": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000",
-"fetched_at": "2026-08-25T22:39:48+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
@@ -10757,6 +10757,40 @@
 "tax_number": "95242017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2958791&YR=2026&mName=False&mSitus=False"
 },
+"marion|2004-189-011|95282017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95282017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95282017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=505889&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-189-021|95292017": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": false,
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=505919&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-190-027|95322017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95322017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95322017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506125&YR=2026&mName=False&mSitus=False"
+},
 "marion|2004-191-033|98042020": {
 "applicant": "EREBUS HOLDINGS LLC",
 "applicant_address": "PO BOX 885 BOCA RATON FL 33429",
@@ -10770,6 +10804,160 @@
 "sale_date": "08/19/2026",
 "tax_number": "98042020",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=506303&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-192-016|95412017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95412017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95412017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506397&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-192-017|95422017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95422017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95422017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506401&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-193-007|95452017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95452017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95452017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2056860&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-194-003|95472017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95472017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95472017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3547411&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-194-004|95482017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95482017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95482017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506524&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-194-022|95512017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95512017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95512017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506613&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-194-026|95522017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95522017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95522017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=506648&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-199-013|95642017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95642017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95642017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2359391&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-199-014|95652017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95652017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95652017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2387823&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-200-004|95682017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95682017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95682017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=507121&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-200-006|95692017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95692017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95692017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2056878&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-200-018|92892018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -10785,6 +10973,34 @@
 "tax_number": "92892018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=507202&YR=2026&mName=False&mSitus=False"
 },
+"marion|2004-200-020|95722017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95722017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95722017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384458&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-200-021|95732017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95732017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95732017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384466&YR=2026&mName=False&mSitus=False"
+},
 "marion|2004-204-014|87672021": {
 "applicant": "BEAMIF A LLC",
 "applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
@@ -10799,6 +11015,90 @@
 "tax_number": "87672021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=507521&YR=2026&mName=False&mSitus=False"
 },
+"marion|2004-204-017|95762017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95762017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95762017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=507547&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-204-018|95772017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95772017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95772017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384474&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-204-019|95782017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95782017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95782017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384482&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-204-029|95792017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95792017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95792017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2682230&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-206-016|95882017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95882017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95882017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=507768&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-206-017|95892017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "95892017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "95892017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3461819&YR=2026&mName=False&mSitus=False"
+},
 "marion|2004-208-019|93182018": {
 "applicant": "5T WEALTH PARTNERS LP",
 "applicant_address": "PO BOX 162121 ALTAMONTE SPRINGS FL 32716",
@@ -10812,6 +11112,258 @@
 "sale_date": "08/19/2026",
 "tax_number": "93182018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3417321&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-209-025|96032017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96032017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96032017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508161&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-209-026|96042017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96042017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96042017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384491&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-209-030|96052017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96052017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96052017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508195&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-210-004|96062017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96062017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96062017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2388234&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-210-008|96092017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96092017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96092017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508241&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-210-019|96122017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96122017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96122017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2216832&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-210-021|96132017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96132017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96132017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508306&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-210-022|96142017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96142017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96142017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386363&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-211-010|96152017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96152017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96152017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508390&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-212-025|96222017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96222017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96222017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2243601&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-214-018|96272017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96272017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96272017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386843&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-215-017|96312017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96312017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96312017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=509051&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-215-020|96322017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96322017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96322017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=509078&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-216-005|96342017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96342017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96342017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=509132&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-216-006|96352017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96352017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96352017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3384504&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-216-010|96362017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96362017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96362017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=509167&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-216-011|96372017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96372017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96372017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=3489021&YR=2026&mName=False&mSitus=False"
+},
+"marion|2004-216-012|96382017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "96382017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "96382017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=509175&YR=2026&mName=False&mSitus=False"
 },
 "marion|2004-216-015|88402021": {
 "applicant": "BEAMIF A LLC",
@@ -13890,6 +14442,20 @@
 "source": "reportall"
 }
 },
+"polk|23-27-33-0000-0001-4023|00137-2026": {
+"acreage": "0.23",
+"assessed_value": 81667.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000014023"
+},
+"polk|23-29-29-1421-4000-0420|00127-2026": {
+"acreage": "0.75",
+"assessed_value": 42115.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232929142140000420"
+},
 "polk|232625000580001420|00123-2026": {
 "acreage": "4.03",
 "assessed_value": 59826.0,
@@ -14016,6 +14582,13 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242514000000021040"
+},
+"polk|24-30-08-0000-0003-3060|00152-2026": {
+"acreage": "0.26",
+"assessed_value": 59539.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=243008000000033060"
 },
 "polk|242524000000012180|00094-2026": {
 "acreage": "1.10",
@@ -14199,6 +14772,48 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283000090640"
 },
+"polk|25-28-04-3190-0101-5110|00151-2026": {
+"acreage": "0.50",
+"assessed_value": 75026.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252804319001015110"
+},
+"polk|25-28-11-0000-0002-3055|00154-2026": {
+"acreage": "0.25",
+"assessed_value": 59073.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811000000023055"
+},
+"polk|25-28-11-3378-0000-8083|00155-2026": {
+"acreage": "0.08",
+"assessed_value": 21571.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811337800008083"
+},
+"polk|25-28-12-3392-1000-0100|00156-2026": {
+"acreage": "0.17",
+"assessed_value": 44592.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252812339210000100"
+},
+"polk|25-28-24-3495-0000-0050|00147-2026": {
+"acreage": "0.15",
+"assessed_value": 29535.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252824349500000050"
+},
+"polk|25-31-32-0000-0001-1080|00157-2026": {
+"acreage": "0.22",
+"assessed_value": 3430.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=253132000000011080"
+},
 "polk|252604000000011110|00013-2026": {
 "acreage": "4.13",
 "assessed_value": 2066.0,
@@ -14242,6 +14857,55 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252824353600004074"
 },
+"polk|26-27-15-0000-0004-3110|00161-2026": {
+"acreage": "0.92",
+"assessed_value": 58616.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262715000000043110"
+},
+"polk|26-28-01-5210-1000-0520|00165-2026": {
+"acreage": "0.05",
+"assessed_value": 31547.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262801521010000520"
+},
+"polk|26-28-01-5210-3000-4260|00158-2026": {
+"acreage": "0.10",
+"assessed_value": 107559.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262801521030004260"
+},
+"polk|26-28-06-5270-2000-2010|00166-2026": {
+"acreage": "0.20",
+"assessed_value": 40000.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262806527020002010"
+},
+"polk|26-28-19-5536-7100-1050|00174-2026": {
+"acreage": "0.15",
+"assessed_value": 42793.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262819553671001050"
+},
+"polk|26-29-28-0000-0003-1020|00167-2026": {
+"acreage": "10.60",
+"assessed_value": 53435.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262928000000031020"
+},
+"polk|26-30-19-0000-0002-1080|00160-2026": {
+"acreage": "0.85",
+"assessed_value": 32741.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=263019000000021080"
+},
 "polk|262502488047014110|00080-2026": {
 "acreage": "0.15",
 "assessed_value": 157406.0,
@@ -14256,12 +14920,145 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262806527010001440"
 },
+"polk|27-26-12-0000-0004-3040|00175-2026": {
+"acreage": "0.39",
+"assessed_value": 51469.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272612000000043040"
+},
+"polk|27-27-11-0000-0002-2060|00189-2026": {
+"acreage": "0.92",
+"assessed_value": 84666.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272711000000022060"
+},
+"polk|27-27-15-7395-0004-1903|00176-2026": {
+"acreage": "0.66",
+"assessed_value": 131743.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272715739500041903"
+},
+"polk|27-27-21-7530-0000-0440|00179-2026": {
+"acreage": "0.10",
+"assessed_value": 90420.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721753000000440"
+},
+"polk|27-27-25-7578-6200-0140|00171-2026": {
+"acreage": "0.15",
+"assessed_value": 50602.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272725757862000140"
+},
+"polk|27-28-09-0000-0002-4150|00168-2026": {
+"acreage": "0.17",
+"assessed_value": 38687.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272809000000024150"
+},
+"polk|27-28-22-8345-5000-1140|00190-2026": {
+"acreage": "0.62",
+"assessed_value": 68025.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272822834550001140"
+},
+"polk|27-28-35-0000-0004-1120|00170-2026": {
+"acreage": "4.31",
+"assessed_value": 79641.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835000000041120"
+},
+"polk|27-29-34-8735-0000-1112|00195-2026": {
+"acreage": "0.04",
+"assessed_value": 29162.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272934873500001112"
+},
+"polk|27-30-35-0000-0001-2010|00191-2026": {
+"acreage": "0.12",
+"assessed_value": 65976.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273035000000012010"
+},
+"polk|27-30-35-9285-2000-0250|00169-2026": {
+"acreage": "0.14",
+"assessed_value": 81014.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273035928520000250"
+},
+"polk|27-32-02-9320-0003-0190|00173-2026": {
+"acreage": "0.29",
+"assessed_value": 23494.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273202932000030190"
+},
+"polk|27-32-02-9325-0100-0250|00180-2026": {
+"acreage": "8.97",
+"assessed_value": 46913.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273202932501000250"
+},
+"polk|27-32-02-9325-0100-0260|00181-2026": {
+"acreage": "8.89",
+"assessed_value": 64109.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273202932501000260"
+},
+"polk|27-32-09-9325-5100-0040|00182-2026": {
+"acreage": "2.85",
+"assessed_value": 27008.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273209932551000040"
+},
+"polk|27-32-11-9325-5300-0780|00183-2026": {
+"acreage": "5.05",
+"assessed_value": 29190.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273211932553000780"
+},
+"polk|27-32-12-9325-7500-0680|00184-2026": {
+"acreage": "2.67",
+"assessed_value": 31639.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273212932575000680"
+},
 "polk|272720747300002160|00024-2026": {
 "acreage": "0.19",
 "assessed_value": 159785.0,
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272720747300002160"
+},
+"polk|28-28-15-9353-6003-7140|00187-2026": {
+"acreage": "0.20",
+"assessed_value": 13979.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282815935360037140"
+},
+"polk|28-29-08-0000-0004-4099|00196-2026": {
+"acreage": "0.24",
+"assessed_value": 95201.0,
+"fetched_at": "2026-08-31T16:19:49+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282908000000044099"
 },
 "polk|282707000000031050|00093-2026": {
 "acreage": "1.99",
@@ -19204,7 +20001,7 @@
 },
 "suwannee|2220000000|4752": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -19248,13 +20045,13 @@
 },
 "suwannee|2710000000|4758": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|2823005000|4760": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -19317,31 +20114,31 @@
 },
 "suwannee|930003011|4698": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9386120010|4678": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9391120410|4680": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9415170290|4677": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|9446100060|4679": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-08-28T01:25:07+00:00",
+"fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
