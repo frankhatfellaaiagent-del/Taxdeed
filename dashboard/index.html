@@ -836,7 +836,6 @@ function nextRefreshText() {
   return `${DAYS[d.getUTCDay()]} ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
 }
 function go(screen, selId) {
-  if (typeof clearAIPoll === "function") clearAIPoll();   // stop any per-card AI polling
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
@@ -1095,164 +1094,6 @@ function initParcelMap(p) {
   setTimeout(() => { try { map.invalidateSize(); } catch (e) {} }, 60);
 }
 
-// ---------- per-parcel AI research (Supabase Edge Function) ----------
-// On demand, an AI agent researches THIS parcel — reads its clerk documents,
-// does live web research (zoning/GIS, flood/wetlands, comparable sales), and
-// reports back. The call runs server-side (the Edge Function holds the model
-// key); results are cached and shared, so a parcel is researched at most once
-// per window no matter how many people open it.
-let _aiChannel = null;
-let _aiPoll = null;
-function clearAIPoll() { if (_aiPoll) { clearInterval(_aiPoll); _aiPoll = null; } }
-
-function initAIResearch(p) {
-  const btn = document.getElementById("ai-research");
-  const box = document.getElementById("ai-analysis");
-  clearAIPoll();
-  // Default: a compact prompt — the card leads with the button, not a wall of text.
-  if (box) box.innerHTML = `<div class="text-muted" style="font-size:13px;line-height:1.5">Run a full AI due-diligence analysis of this parcel — liens from the clerk&rsquo;s Ownership &amp; Encumbrance report, value, site &amp; environment, red flags and next steps.</div>`;
-  if (!btn) return;
-  if (!SYNC_ON || !(CLOUD && CLOUD.sb && CLOUD.user)) {
-    btn.disabled = true;
-    btn.title = "Sign in (sidebar) to run AI research on a property";
-  }
-  btn.onclick = () => runAIResearch(p, false);
-  // Resume: show a finished analysis, or pick up a run already in progress —
-  // so you can start it, leave (even close the tab), and come back to it done.
-  if (CLOUD && CLOUD.sb && CLOUD.user) resumeAnalysis(p);
-}
-
-async function resumeAnalysis(p) {
-  try {
-    const { data } = await CLOUD.sb.from("parcel_analysis").select("*").eq("pkey", p.id).maybeSingle();
-    if (!data) return;
-    if (data.status === "ready") { renderAIAnalysis(p, data.data, { cached: true, at: data.updated_at }); return; }
-    if (data.status === "pending") {
-      const ageMs = Date.now() - new Date(data.updated_at || data.created_at).getTime();
-      if (ageMs < 5 * 60 * 1000) showResearching(p);   // a run is under way — wait for it
-    }
-  } catch (e) { /* ignore */ }
-}
-
-function showResearching(p) {
-  const box = document.getElementById("ai-analysis");
-  const btn = document.getElementById("ai-research");
-  if (box) aiMessage(box, `<span class="ai-spin"></span> Researching this parcel — reading its documents and the web. You can leave this page; it keeps running and will be here when you come back.`);
-  if (btn) btn.disabled = true;
-  subscribeAnalysis(p);   // realtime push when it finishes
-  startAIPoll(p);         // + a polling backstop in case realtime misses
-}
-
-function startAIPoll(p) {
-  clearAIPoll();
-  let tries = 0;
-  _aiPoll = setInterval(async () => {
-    if (++tries > 45) { clearAIPoll(); return; }   // ~3.75 min ceiling
-    try {
-      const { data } = await CLOUD.sb.from("parcel_analysis").select("status,data,updated_at").eq("pkey", p.id).maybeSingle();
-      if (data && data.status === "ready") {
-        clearAIPoll();
-        renderAIAnalysis(p, data.data, { cached: false, at: data.updated_at });
-        const b = document.getElementById("ai-research"); if (b) b.disabled = false;
-      } else if (data && data.status === "error") {
-        clearAIPoll();
-        const box = document.getElementById("ai-analysis"); if (box) aiMessage(box, "The analysis ran into an error. Try again shortly.");
-        const b = document.getElementById("ai-research"); if (b) b.disabled = false;
-      }
-    } catch (e) { /* transient — keep polling */ }
-  }, 5000);
-}
-
-async function runAIResearch(p, refresh) {
-  const box = document.getElementById("ai-analysis");
-  const btn = document.getElementById("ai-research");
-  if (!box) return;
-  if (!(CLOUD && CLOUD.sb && CLOUD.user)) { aiMessage(box, "Sign in (sidebar) to run AI research on a property."); return; }
-  showResearching(p);   // spinner + realtime + poll (survives navigation)
-  try {
-    const { data, error } = await CLOUD.sb.functions.invoke("analyze-property", { body: { record: p.raw, refresh: !!refresh } });
-    if (error) { clearAIPoll(); aiMessage(box, "Couldn’t start the analysis (function error). Try again shortly."); if (btn) btn.disabled = false; return; }
-    const s = data && data.status;
-    if (s === "disabled") { clearAIPoll(); aiMessage(box, "AI analysis isn’t configured yet — an OpenAI API key needs to be added (see docs/AI_SETUP.md)."); if (btn) btn.disabled = false; }
-    else if (s === "unauthorized") { clearAIPoll(); aiMessage(box, "Please sign in to run AI research."); if (btn) btn.disabled = false; }
-    else if (s === "capped") { clearAIPoll(); aiMessage(box, esc(data.reason || "Daily research limit reached.")); if (btn) btn.disabled = false; }
-    else if (s === "ready") { clearAIPoll(); renderAIAnalysis(p, data.data, { cached: !!data.cached, at: data.generated_at }); if (btn) btn.disabled = false; }
-    // s === "pending" → the spinner + realtime + poll handle it
-  } catch (e) {
-    clearAIPoll();
-    aiMessage(box, "Couldn’t reach the analysis service. Try again shortly.");
-    if (btn) btn.disabled = false;
-  }
-}
-
-function subscribeAnalysis(p) {
-  if (!(CLOUD && CLOUD.sb)) return;
-  try { if (_aiChannel) CLOUD.sb.removeChannel(_aiChannel); } catch (e) {}
-  _aiChannel = CLOUD.sb.channel("parcel_analysis:" + p.id)
-    .on("postgres_changes",
-        { event: "*", schema: "public", table: "parcel_analysis", filter: "pkey=eq." + p.id },
-        (msg) => {
-          const row = msg.new || {};
-          if (row.status === "ready") {
-            clearAIPoll();
-            renderAIAnalysis(p, row.data, { cached: false, at: row.updated_at });
-            const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
-          } else if (row.status === "error") {
-            clearAIPoll();
-            const box = document.getElementById("ai-analysis");
-            if (box) aiMessage(box, "The analysis ran into an error. Try again shortly.");
-            const btn = document.getElementById("ai-research"); if (btn) btn.disabled = false;
-          }
-        })
-    .subscribe();
-}
-
-function aiMessage(box, html) {
-  box.innerHTML = `<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--color-divider);font-size:13.5px" class="text-muted">${html}</div>`;
-}
-
-function renderAIAnalysis(p, a, meta) {
-  clearAIPoll();
-  const box = document.getElementById("ai-analysis");
-  if (!box || !a) return;
-  const para = (label, text) => text && String(text).trim()
-    ? `<div style="margin-bottom:10px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:2px">${label}</div><div>${esc(text)}</div></div>` : "";
-  const list = (label, items, cls) => Array.isArray(items) && items.length
-    ? `<div style="margin-bottom:10px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">${label}</div>
-        <div style="display:flex;flex-direction:column;gap:5px">${items.map((t) => `<div style="display:flex;gap:8px"><span class="tag ${cls}" style="flex:none">•</span><span>${esc(t)}</span></div>`).join("")}</div></div>` : "";
-  const sources = Array.isArray(a.sources) && a.sources.length
-    ? `<div style="margin-top:6px"><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Sources</div>
-        <div style="display:flex;flex-direction:column;gap:3px;font-size:12.5px">${a.sources.map((s) => {
-          const u = (s && s.url) || ""; const label = (s && s.supports) || u;
-          return /^https?:\/\//i.test(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener" style="text-decoration:none">${LINK_SVG} ${esc(label)}</a>` : `<span class="text-muted">${esc(label)}</span>`;
-        }).join("")}</div></div>` : "";
-  const conf = a.confidence ? `<span class="tag ${a.confidence === "high" ? "tag-accent" : a.confidence === "low" ? "tag-outline" : "tag-neutral"}">confidence: ${esc(a.confidence)}</span>` : "";
-  const when = (meta && meta.at) ? esc(etStamp(new Date(meta.at))) : "";
-  const isAdmin = (typeof IS_ADMIN !== "undefined" && IS_ADMIN);
-  box.innerHTML = `
-    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--color-divider)">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
-        <h6 style="color:var(--color-accent-700);margin:0">AI research</h6>
-        ${conf}
-        ${meta && meta.cached ? '<span class="tag tag-neutral">cached</span>' : ''}
-        ${isAdmin ? `<button class="btn btn-ghost" id="ai-refresh" style="margin-left:auto;font-size:12px">Refresh</button>` : ""}
-      </div>
-      <div style="font-size:14px;line-height:1.55">
-        ${para("Summary", a.summary)}
-        ${para("Value", a.value_read)}
-        ${para("Title &amp; liens", a.title_and_liens)}
-        ${para("Site &amp; environment", a.site_and_environment)}
-        ${list("Red flags", a.red_flags, "tag-outline")}
-        ${list("Opportunities", a.opportunities, "tag-accent")}
-        ${list("Suggested next steps", a.suggested_next_steps, "tag-neutral")}
-        ${sources}
-      </div>
-      <div style="margin-top:10px;font-size:11px" class="text-muted">AI research assistance — verify liens and title with a professional search before bidding. Not legal advice.${when ? " · " + when : ""}</div>
-    </div>`;
-  const rb = document.getElementById("ai-refresh");
-  if (rb) rb.onclick = () => runAIResearch(p, true);
-}
-
 function renderDetail() {
   const p = DATA.find((x) => x.id === S.selId) || DATA[0];
   if (!p) { go("dashboard"); return; }
@@ -1359,22 +1200,14 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap">
-            <h6 style="color:var(--color-accent-700);margin:0">Property analysis</h6>
-            <button class="btn btn-primary" id="ai-research" style="margin-left:auto;font-size:13px" title="Have the AI research this specific parcel — clerk documents, liens, zoning, flood/wetlands, comparable sales">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 2 1 3.5 2.3 4.7.7.7 1.2 1.4 1.4 2.3h4.6c.2-.9.7-1.6 1.4-2.3C17 12.5 18 11 18 9a6 6 0 0 0-6-6Z"></path><line x1="9.5" y1="21" x2="14.5" y2="21"></line></svg>
-              Research with AI</button>
+          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Quick read</h6>
+          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px">A plain read of the county&rsquo;s auction record &mdash; value, data-quality flags, and the clerk case file where we resolved it. Confirm liens and title yourself on the clerk links above.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
+            ${findings.map((a) => `<div style="display:flex;gap:12px">
+              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
+              <span>${a.text}</span></div>`).join("")}
           </div>
-          <div id="ai-analysis"></div>
-          <details style="margin-top:12px">
-            <summary style="cursor:pointer;user-select:none;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--color-accent-700)">Quick read &middot; from the auction record</summary>
-            <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55;margin-top:12px">
-              ${findings.map((a) => `<div style="display:flex;gap:12px">
-                <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
-                <span>${a.text}</span></div>`).join("")}
-            </div>
-            <div style="margin-top:10px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
-          </details>
+          <div style="margin-top:10px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
@@ -1411,7 +1244,6 @@ function renderDetail() {
 
   $("back").onclick = () => go("dashboard");
   initParcelMap(p);
-  initAIResearch(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
