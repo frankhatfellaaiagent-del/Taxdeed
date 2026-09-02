@@ -38,11 +38,31 @@ def _clean(v) -> str:
     return str(v if v is not None else "").replace("\t", " ").replace("\n", " ").strip()
 
 
+def _load_auction_sites() -> dict:
+    """config/counties.json → {slug: auction_url} for the discovered online sites.
+
+    So the app can link EVERY online county straight to its own RealAuction
+    site — even one carrying no sales this refresh — instead of leaving it a
+    dead end that reads as if we were behind.
+    """
+    p = ROOT / "config" / "counties.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        log.warning("counties.json unreadable (%s); online counties ship without an auction link", exc)
+        return {}
+    return {c["slug"]: c["url"] for c in data.get("counties", []) if c.get("slug") and c.get("url")}
+
+
 def _load_counties_registry() -> list[dict]:
     """config/florida_counties.json → all 67 counties with coverage status.
 
     The registry is what lets the app show EVERY Florida county — the ones with
     no online auction included — with each county's sale method and clerk links.
+    Online counties are given an `auction_url` (their own RealAuction site) so
+    the app can always link out, even when the county has no current sales.
     """
     p = ROOT / "config" / "florida_counties.json"
     if not p.exists():
@@ -52,7 +72,14 @@ def _load_counties_registry() -> list[dict]:
     except (json.JSONDecodeError, OSError) as exc:
         log.warning("florida_counties.json unreadable (%s); feed ships without the registry", exc)
         return []
-    return data.get("counties", [])
+    counties = data.get("counties", [])
+    auction_sites = _load_auction_sites()
+    for c in counties:
+        if c.get("coverage") == "online" and not c.get("auction_url"):
+            url = auction_sites.get(c.get("slug"))
+            if url:
+                c["auction_url"] = url
+    return counties
 
 
 def _load_clerk_sites() -> dict:

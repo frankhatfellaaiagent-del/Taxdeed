@@ -873,15 +873,23 @@ function statusTag(p) {
 function countyInfoCard(c) {
   const title = c.coverage === "in-person" ? "sells tax deeds in person"
     : c.coverage === "online-other" ? "sells online on another platform"
-    : "no records in the current feed yet";
+    : "no sales posted right now";
   const note = c.coverage === "in-person"
     ? "There is no online auction feed for this county — sales are held in person at the courthouse. The clerk links below carry the sale schedule and any published sale list."
     : c.coverage === "online-other"
       ? "This county's auctions run on a platform the live feed doesn't cover yet, so its parcels don't appear on the board."
-      : "This county sells online and is covered — its parcels appear after the next data refresh.";
+      : "We check this county every day with the rest of the board — there just aren't any tax-deed sales on its calendar right now. Open its own auction site below to see for yourself; the moment the county posts a sale, it shows up here automatically.";
+  // Clerk page: the county's own registry entry, else the clerk_sites map.
+  const cs = (typeof META !== "undefined" && META && META.clerk_sites && c.slug) ? META.clerk_sites[c.slug] : null;
+  const clerkUrl = c.clerk_url || (cs && cs.url) || "";
+  // The county's own auction site: the feed's value, else the standard
+  // RealAuction host for an online county (so the link works even before the
+  // feed re-exports with auction_url attached).
+  const auctionUrl = c.auction_url || (c.coverage === "online" && c.slug ? `https://www.${c.slug}.realtaxdeed.com/` : "");
   const links = [];
-  if (c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.clerk_url)}" target="_blank" rel="noopener">Clerk&rsquo;s tax deed page</a>`);
-  if (c.sale_list_url && c.sale_list_url !== c.clerk_url) links.push(`<a class="btn btn-secondary" href="${esc(c.sale_list_url)}" target="_blank" rel="noopener">Published sale list</a>`);
+  if (auctionUrl) links.push(`<a class="btn btn-secondary" href="${esc(auctionUrl)}" target="_blank" rel="noopener">County auction site</a>`);
+  if (clerkUrl) links.push(`<a class="btn btn-secondary" href="${esc(clerkUrl)}" target="_blank" rel="noopener">Clerk&rsquo;s tax deed page</a>`);
+  if (c.sale_list_url && c.sale_list_url !== clerkUrl) links.push(`<a class="btn btn-secondary" href="${esc(c.sale_list_url)}" target="_blank" rel="noopener">Published sale list</a>`);
   return `
     <div class="blueprint" id="county-card" style="padding:22px 24px">${CORNERS}
       <h6 style="color:var(--color-accent-700);margin-bottom:6px">${esc(c.name)} County &mdash; ${esc(title)}</h6>
@@ -945,7 +953,7 @@ function renderDashboard() {
 
     <div class="filters" style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
       <div class="field" style="width:160px"><label>County</label>
-        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — awaiting first refresh">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
+        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — no sales posted right now">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
       <div class="field" style="width:160px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:150px"><label>Auction date</label>
