@@ -1,0 +1,43 @@
+{
+  "run": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-09-02T021257Z",
+  "previous_run": null,
+  "records": 0,
+  "duplicates_merged": 0,
+  "new": 0,
+  "changed": 0,
+  "removed": 0,
+  "buybox_match": 0,
+  "buybox_review": 0,
+  "by_county": {},
+  "anomalies": {},
+  "changes": {},
+  "excluded_foreclosure": 0,
+  "county_errors": {},
+  "county_warnings": {
+    "calhoun": [
+      "combined-site fallback https://www.calhoun.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "gulf": [
+      "combined-site fallback https://www.gulf.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "hendry": [
+      "combined-site fallback https://www.hendry.realforeclose.com/: 1 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "lake": [
+      "combined-site fallback https://www.lake.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "monroe": [
+      "combined-site fallback https://www.monroe.realforeclose.com/: 1 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "pinellas": [
+      "combined-site fallback https://www.pinellas.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ]
+  },
+  "report": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-09-02T021257Z/tax_deed_scrub.xlsx"
+}
