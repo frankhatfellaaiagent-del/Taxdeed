@@ -86,7 +86,14 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
                     warnings.append(f"calendar: combined site {fallback} disallowed by robots.txt")
             if allowed:
                 fb_entries, fb_pages = _calendar_entries(source, slug, fallback, months)
-                if _has_upcoming(fb_entries):
+                n_up = sum(1 for e in fb_entries if _has_upcoming([e]))
+                # Always leave a breadcrumb: distinguishes "combined site reached
+                # but no upcoming tax-deed sales" from "combined site unreadable"
+                # (0 pages loaded — e.g. a login wall or a changed layout).
+                warnings.append(
+                    f"combined-site fallback {fallback}: {len(fb_pages)} page(s) loaded, "
+                    f"{len(fb_entries)} tax-deed date(s), {n_up} upcoming")
+                if n_up:
                     warnings.append(
                         f"calendar: no upcoming tax deed sales on {base_url}; "
                         f"using combined foreclosure+tax-deed site {fallback}")
