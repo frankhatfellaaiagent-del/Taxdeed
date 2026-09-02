@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+  Fixture: Okeechobee's COMBINED foreclosure + tax-deed RealAuction calendar
+  (the kind hosted on <county>.realforeclose.com). One calendar carries both
+  sale types, tagged "TD" (tax deed) and "FC" (foreclosure), exactly as seen on
+  the live site. The scraper must keep only the tax-deed day (10/08) and skip the
+  foreclosure day (10/14). Modeled on the real RealAuction CALBOX markup.
+-->
+<html>
+<head><title>Okeechobee County | Auction Calendar</title></head>
+<body>
+  <div class="CALTOP">October 2026</div>
+  <div class="CALGRID">
+
+    <div class="CALBOX CALW4"><div class="CALDATE">5</div></div>
+    <div class="CALBOX CALW4"><div class="CALDATE">6</div></div>
+    <div class="CALBOX CALW4"><div class="CALDATE">7</div></div>
+
+    <div class="CALBOX CALW4 CALSELF" dayid="10/08/2026"
+         onclick="mydesk('/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=10/08/2026')">
+      <div class="CALDATE">8</div>
+      <div class="CALTEXT">Tax Deed<br/>14 / 16 TD</div>
+      <div class="CALMSG">10:00 AM ET</div>
+    </div>
+
+    <div class="CALBOX CALW4"><div class="CALDATE">9</div></div>
+    <div class="CALBOX CALW4"><div class="CALDATE">10</div></div>
+
+    <div class="CALBOX CALW4 CALSELF" dayid="10/14/2026"
+         onclick="mydesk('/index.cfm?zaction=AUCTION&Zmethod=PREVIEW&AUCTIONDATE=10/14/2026')">
+      <div class="CALDATE">14</div>
+      <div class="CALTEXT">Foreclosure<br/>4 / 4 FC</div>
+      <div class="CALMSG">11:00 AM ET</div>
+    </div>
+
+    <div class="CALBOX CALW4"><div class="CALDATE">15</div></div>
+
+  </div>
+</body>
+</html>

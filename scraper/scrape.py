@@ -29,22 +29,69 @@ def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def scrape_county(source, county: dict, months: int = 2) -> dict:
-    """Scrape one county. Returns {records, excluded, dates, warnings}."""
-    slug, base_url = county["slug"], county["url"]
-    if "realforeclose.com" in base_url:
-        raise ValueError(f"Refusing to scrape foreclosure host: {base_url}")
+def _combined_host_url(base_url: str) -> str | None:
+    """The realforeclose.com twin of a realtaxdeed.com base URL, else None.
 
-    warnings: list[str] = []
-    records: list[AuctionRecord] = []
-    excluded: list[dict] = []
+    Some counties (Okeechobee, St. Lucie, Brevard, ...) moved their tax-deed
+    sales onto their COMBINED foreclosure + tax-deed RealAuction site, which
+    lives on realforeclose.com and runs both sale types on one calendar. Their
+    old realtaxdeed.com host still resolves but carries no sale calendar, so the
+    scrape comes back empty. This gives the fallback host to try. The tax-deed /
+    foreclosure separation is handled downstream: parse_calendar_dates keeps
+    only "tax deed" day cells (skipping foreclosure ones), and
+    looks_like_foreclosure drops any stray foreclosure item.
+    """
+    if "realtaxdeed.com" in base_url:
+        return base_url.replace("realtaxdeed.com", "realforeclose.com")
+    return None
 
+
+def _calendar_entries(source, slug: str, base_url: str, months: int) -> tuple[list, list]:
+    """Load a county's calendar from base_url; return (unique entries, pages)."""
     cal_pages = source.calendar_pages(slug, base_url, months=months)
     entries: list[dict] = []
     for page in cal_pages:
         for d in parse_calendar_dates(page):
             if d["date"] not in [e["date"] for e in entries]:
                 entries.append(d)
+    return entries, cal_pages
+
+
+def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = False) -> dict:
+    """Scrape one county. Returns {records, excluded, dates, warnings}."""
+    slug, base_url = county["slug"], county["url"]
+
+    warnings: list[str] = []
+    records: list[AuctionRecord] = []
+    excluded: list[dict] = []
+
+    today = datetime.now().strftime("%Y%m%d")
+
+    def _has_upcoming(es: list) -> bool:
+        return any((e["date"][6:] + e["date"][:2] + e["date"][3:5]) >= today for e in es)
+
+    entries, cal_pages = _calendar_entries(source, slug, base_url, months)
+    # Combined-site fallback: if the configured tax-deed host shows no UPCOMING
+    # sales (none at all, or only a stale past date), the county has likely
+    # moved onto its combined foreclosure + tax-deed site on realforeclose.com.
+    # Try that host and keep only its tax-deed days.
+    if not _has_upcoming(entries):
+        fallback = _combined_host_url(base_url)
+        if fallback:
+            allowed = True
+            if getattr(source, "is_live", False) and not skip_robots:
+                robots = check_robots(fallback)
+                allowed = robots["allowed"]
+                if not allowed:
+                    warnings.append(f"calendar: combined site {fallback} disallowed by robots.txt")
+            if allowed:
+                fb_entries, fb_pages = _calendar_entries(source, slug, fallback, months)
+                if _has_upcoming(fb_entries):
+                    warnings.append(
+                        f"calendar: no upcoming tax deed sales on {base_url}; "
+                        f"using combined foreclosure+tax-deed site {fallback}")
+                    base_url, entries, cal_pages = fallback, fb_entries, fb_pages
+
     dates = [e["date"] for e in entries]
     if not cal_pages:
         warnings.append("calendar: no pages loaded")
@@ -52,7 +99,6 @@ def scrape_county(source, county: dict, months: int = 2) -> dict:
         warnings.append("calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)")
 
     expected_counts: dict[str, int | None] = {}
-    today = datetime.now().strftime("%Y%m%d")
     for entry in entries:
         date, expected = entry["date"], entry.get("expected")
         expected_counts[date] = expected
@@ -151,7 +197,7 @@ def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 
                     source.rate.base_delay = max(source.rate.base_delay, float(robots["crawl_delay"]))
 
             log.info("[%s] scraping %s", slug, county["url"])
-            result = scrape_county(source, county, months=months)
+            result = scrape_county(source, county, months=months, skip_robots=skip_robots)
             write_county_outputs(out_dir, slug, result)
             centry["auctions"] = len(result["records"])
             centry["sale_dates"] = result["dates"]
