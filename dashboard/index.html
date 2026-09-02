@@ -1831,13 +1831,14 @@ function exportRowsPdf(rows, title, subtitle) {
   const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
   const body = rows.map((p) => `<tr>
       <td class="mono">${esc(p.parcel)}</td>
+      <td class="mono">${esc(p.cert || "—")}</td>
       <td>${esc(p.addr || "(no street address published)")}${p.city ? `<br><span class="muted">${esc(p.city)}</span>` : ""}</td>
       <td>${esc(p.county)}</td>
       <td>${esc(effType(p) || "—")}</td>
       <td class="num">${p.assessed == null ? "—" : money(p.assessed)}</td>
       <td class="num">${p.bid == null ? "—" : money(p.bid)}</td>
       <td>${esc(p.auction)}</td>
-      <td>${esc(p.buybox)}</td>
+      <td class="notes"></td>
     </tr>`).join("");
   const doc = `<!doctype html><html><head><meta charset="utf-8">
     <title>${esc(title)} — ${esc(BRAND)}</title>
@@ -1854,6 +1855,7 @@ function exportRowsPdf(rows, title, subtitle) {
       .num { text-align:right; font-variant-numeric: tabular-nums; white-space:nowrap; }
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:10px; }
       .muted { color:#666; }
+      .notes { width: 22%; border-left:1px solid #eee; }
       .foot { margin-top:12px; color:#666; font-size:10px; }
     </style></head><body>
     <h1>${esc(BRAND)} &mdash; ${esc(title)}</h1>
@@ -1862,8 +1864,8 @@ function exportRowsPdf(rows, title, subtitle) {
       ${subtitle ? `<br>${esc(subtitle)}` : ""}
       <br>Generated ${esc(when)}${META ? ` &middot; auction data as of ${esc(etStamp(new Date(META.generated_at)))}` : ""}</div>
     <table><thead><tr>
-      <th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th>
-      <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Buy box</th>
+      <th>Parcel ID</th><th>Cert #</th><th>Address</th><th>County</th><th>Type</th>
+      <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Notes</th>
     </tr></thead><tbody>${body}</tbody></table>
     <div class="foot">Values are the county's published figures. Confirm land use, liens and case status before bidding.</div>
     </body></html>`;
@@ -1961,13 +1963,13 @@ function renderSettings() {
 // list's own page (that list, as the client built it).
 const slugify = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "export";
 function exportRowsCsv(rows, name) {
-  const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Buy-box","Buy-box Notes","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
+  const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
   const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const lines = [cols.join(",")];
   for (const p of rows) {
     const it = getInt(p.id);
     lines.push([p.county, p.auction, p.saleTime, p.parcel, p.case_number, p.cert, p.rawAddr,
-      p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.buybox, p.buyboxNotes, p.status,
+      p.bid ?? "", p.assessed ?? "", p.pct ?? "", p.status,
       it.status, it.bid, effList(p.id), effType(p), it.notes, p.auctionUrl, p.appraiserUrl].map(q).join(","));
   }
   const blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
