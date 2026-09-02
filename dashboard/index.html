@@ -57,6 +57,22 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .ai-spin{display:inline-block;width:12px;height:12px;border:2px solid color-mix(in srgb,var(--color-accent-700) 40%,transparent);border-top-color:var(--color-accent-700);border-radius:50%;vertical-align:-1px;animation:aispin .8s linear infinite}
 @keyframes aispin{to{transform:rotate(360deg)}}
+/* ---- sale calendar ---- */
+.cal-month{margin-bottom:26px}
+.cal-mhead{font-family:var(--font-heading);font-size:16px;color:var(--color-accent-700);margin:0 0 8px}
+.cal-grid{width:100%;border-collapse:collapse;table-layout:fixed}
+.cal-grid th{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);text-align:left;padding:4px 6px;border-bottom:1px solid var(--color-divider)}
+.cal-grid td{border:1px solid var(--color-divider);height:92px;vertical-align:top;padding:4px 5px;width:14.28%}
+.cal-grid td.cal-empty{background:var(--color-neutral-100)}
+.cal-grid td.past{opacity:.5}
+.cal-grid td.has{background:var(--color-accent-100)}
+.cal-grid td.today{outline:2px solid var(--color-accent);outline-offset:-2px}
+.cal-date{font-size:11px;font-weight:600;color:var(--color-neutral-600)}
+.cal-sale{margin-top:4px;font-size:11px;line-height:1.3;cursor:pointer;border-left:2px solid var(--color-accent);padding-left:5px}
+.cal-sale:hover{color:var(--color-accent-700)}
+.cal-sale .cal-n{display:inline-block;background:var(--color-accent);color:var(--color-bg);border-radius:3px;padding:0 5px;font-size:10px;margin-left:3px;font-variant-numeric:tabular-nums}
+.cal-sale .cal-time{display:block;color:var(--color-neutral-600);font-size:10px}
+@media (max-width:900px){.cal-grid td{height:auto;min-height:56px;font-size:10px}.cal-grid .cal-sale{font-size:10px}}
 </style>
 </head>
 <body>
@@ -90,7 +106,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <section id="scr-detail" hidden></section>
     <section id="scr-lists" hidden></section>
     <section id="scr-listdetail" hidden></section>
-    <section id="scr-buybox" hidden></section>
+    <section id="scr-calendar" hidden></section>
     <section id="scr-settings" hidden></section>
   </div>
 </main>
@@ -312,7 +328,7 @@ const cloudTimers = {};
 
 function rerender() {
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[S.screen]();
+     listdetail: renderListDetail, calendar: renderCalendar, settings: renderSettings })[S.screen]();
 }
 
 // sync-name -> where it's stored. Personal keys go to user_state; the two team
@@ -800,7 +816,7 @@ async function loadFeed() {
 }
 
 // ---------- shared header/sidebar ----------
-const NAV = [["dashboard","Dashboard"],["lists","My lists"],["buybox","Buy box"],["settings","Settings"]];
+const NAV = [["dashboard","Dashboard"],["lists","My lists"],["calendar","Calendar"],["settings","Settings"]];
 function renderNav() {
   $("nav").innerHTML = NAV.map(([k, label]) => {
     const active = S.screen === k
@@ -824,9 +840,9 @@ function go(screen, selId) {
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
-  for (const k of ["dashboard","detail","lists","listdetail","buybox","settings"]) $("scr-" + k).hidden = k !== screen;
+  for (const k of ["dashboard","detail","lists","listdetail","calendar","settings"]) $("scr-" + k).hidden = k !== screen;
   ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
-     listdetail: renderListDetail, buybox: renderBuyboxScreen, settings: renderSettings })[screen]();
+     listdetail: renderListDetail, calendar: renderCalendar, settings: renderSettings })[screen]();
   $("scroller").scrollTop = 0;
 }
 
@@ -839,7 +855,6 @@ function filteredRows() {
     const it = getInt(p.id);
     if (S.county !== "All" && p.county !== S.county) return false;
     if (S.status !== "All" && p.status !== S.status) return false;
-    if (S.buybox !== "All" && p.buybox !== S.buybox) return false;
     if (S.type !== "All") {
       const t = effType(p);
       if (S.type === "Unassigned" ? t : t !== S.type) return false;
@@ -960,8 +975,6 @@ function renderDashboard() {
         <select class="input" id="f-when">${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
       <div class="field" style="width:130px"><label>Status</label>
         <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:120px"><label>Buy box <button id="bb-help" title="Every property is graded against YOUR buy box — the counties, property types and price limits you set. MATCH fits it, REVIEW needs a look, NO doesn't fit. Click to set yours." style="border:1px solid var(--color-divider);background:none;cursor:pointer;font-size:10px;padding:0 5px;color:var(--color-accent-700)">?</button></label>
-        <select class="input" id="f-buybox">${opt("All", S.buybox, "All")}${opt("MATCH", S.buybox)}${opt("REVIEW", S.buybox)}${opt("NO", S.buybox)}</select></div>
       <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
         <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
       <div class="field" style="width:230px"><label>Sort by</label>
@@ -1004,8 +1017,6 @@ function renderDashboard() {
   $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-buybox").onchange = (e) => { S.buybox = e.target.value; S.shown = 150; renderDashboard(); };
-  $("bb-help").onclick = () => go("buybox");
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
@@ -1013,10 +1024,6 @@ function renderDashboard() {
 }
 
 // ---------- detail screen ----------
-function buyboxTag(p) {
-  const cls = p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline";
-  return `<span class="tag ${cls}" title="${esc(p.buyboxNotes)}">Buy-box: ${esc(p.buybox)}</span>`;
-}
 // ---------- per-parcel map (Leaflet) ----------
 // Each property card shows the parcel on an aerial map, located from the parcel
 // number: the enrichment job resolves both the centroid and the true parcel
@@ -1268,8 +1275,6 @@ function renderDetail() {
     ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
     : "Assessed value not published on the auction record — confirm value on the appraiser site.";
   const findings = [
-    { topic: "Buy-box", cls: p.buybox === "MATCH" ? "tag-accent" : p.buybox === "REVIEW" ? "tag-neutral" : "tag-outline",
-      text: `${p.buybox} — ${esc(p.buyboxNotes || "no notes")}` },
     { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
     { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
       text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
@@ -1293,7 +1298,6 @@ function renderDetail() {
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
       <h2 style="margin:0">${esc(p.addr)}</h2>
       ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
-      ${buyboxTag(p)}
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
       <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
     </div>
@@ -1509,7 +1513,6 @@ function renderListDetail() {
   let rows = all.filter((p) => {
     if (ld.county !== "All" && p.county !== ld.county) return false;
     if (ld.status !== "All" && p.status !== ld.status) return false;
-    if (ld.buybox !== "All" && p.buybox !== ld.buybox) return false;
     if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county).toLowerCase().includes(q)) return false;
     return true;
   });
@@ -1540,8 +1543,6 @@ function renderListDetail() {
         <select class="input" id="ld-county">${opt("All", ld.county, "All counties")}${counties.map((c) => opt(c, ld.county)).join("")}</select></div>
       <div class="field" style="width:130px"><label>Status</label>
         <select class="input" id="ld-status">${opt("All", ld.status, "All")}${opt("Scheduled", ld.status)}${opt("Redeemed", ld.status)}</select></div>
-      <div class="field" style="width:120px"><label>Buy box</label>
-        <select class="input" id="ld-buybox">${opt("All", ld.buybox, "All")}${opt("MATCH", ld.buybox)}${opt("REVIEW", ld.buybox)}${opt("NO", ld.buybox)}</select></div>
       <div class="field" style="width:210px"><label>Sort by</label>
         <select class="input" id="ld-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, ld.sort, l)).join("")}</select></div>
       <div class="field" style="flex:1;min-width:150px"><label>Search</label>
@@ -1587,7 +1588,6 @@ function renderListDetail() {
   if (csvBtn) csvBtn.onclick = () => exportRowsCsv(rows, name);
   $("ld-county").onchange = (e) => { ld.county = e.target.value; renderListDetail(); };
   $("ld-status").onchange = (e) => { ld.status = e.target.value; renderListDetail(); };
-  $("ld-buybox").onchange = (e) => { ld.buybox = e.target.value; renderListDetail(); };
   $("ld-sort").onchange = (e) => { ld.sort = e.target.value; renderListDetail(); };
   $("ld-q").oninput = (e) => { ld.q = e.target.value; };
   $("ld-q").onchange = () => renderListDetail();
@@ -1673,198 +1673,153 @@ function dataUpdatesHtml() {
     </div>`;
 }
 
-// ---------- settings screen ----------
-function renderBuyboxCard() {
-  const cfg = ensureKeywords(buybox);   // show the effective keywords, seeded if the box had none
-  // Every Florida county is a valid target — not just the ones with auctions
-  // in the feed right now. Registry names first (all 67, or however many
-  // shipped), falling back to whatever counties the feed itself carries.
-  const regNames = REG().map((c) => c.name);
-  const counties = [...new Set([...regNames, ...DATA.map((p) => p.county)])].sort();
-  const targetSet = new Set((cfg.target_counties || []).map(normCounty));
-  const targeted = counties.filter((c) => targetSet.has(normCounty(c)));
-  recomputeBuybox();
-  const match = DATA.filter((p) => p.buybox === "MATCH").length;
-  const review = DATA.filter((p) => p.buybox === "REVIEW").length;
-  return `
-    <div class="blueprint" style="padding:18px 20px">${CORNERS}
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap">
-        <h6 style="color:var(--color-accent-700);margin:0">Buy box</h6>
-        <span class="tag tag-accent">${match} MATCH</span><span class="tag tag-neutral">${review} REVIEW</span>
-        ${CLOUD && CLOUD.user ? '<span class="text-muted" style="font-size:12px;margin-left:auto">Shared with your team &mdash; live for everyone signed in</span>' : ""}
-      </div>
-      <p class="text-muted" style="font-size:13px;margin-bottom:14px">This is what turns the raw auction list into MATCH / REVIEW / NO &mdash; computed here in the dashboard, so it&rsquo;s entirely yours: pick your counties, your land types, your limits. Nobody else's buy box affects what you see.</p>
+// ---------- sale calendar: upcoming sales across the counties you pick ----------
+// Replaces the buy box. One combined month view of every upcoming tax-deed
+// sale in the counties you choose — county, date, start time, parcel count —
+// plus a printable monthly layout for the wall.
+const CAL_MONTHS = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+const CAL_DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px" class="text-muted">Target counties</div>
-      <div id="bb-counties" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:4px 10px;max-height:180px;overflow-y:auto;padding:10px;border:1px solid var(--color-divider);margin-bottom:16px">
-        ${counties.map((c) => `<label style="display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
-          <input type="checkbox" data-county="${esc(normCounty(c))}" ${targetSet.has(normCounty(c)) ? "checked" : ""}> ${esc(c)}</label>`).join("")}
-      </div>
-
-      <div class="detail-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-        <div class="field"><label>Land / rural keywords (MATCH)</label>
-          <input class="input" id="bb-land" value="${esc((cfg.land_use_keywords || []).join(", "))}" placeholder="vacant, land, acreage, ranch&hellip;"></div>
-        <div class="field"><label>Non-land keywords (always NO)</label>
-          <input class="input" id="bb-nonland" value="${esc((cfg.non_land_keywords || []).join(", "))}" placeholder="condo, commercial, warehouse&hellip;"></div>
-      </div>
-      <div class="field" style="max-width:220px;margin-bottom:${targeted.length ? "16px" : "0"}"><label>Max opening bid, any county</label>
-        <input class="input" id="bb-maxbid" value="${cfg.max_opening_bid != null ? esc(cfg.max_opening_bid) : ""}" placeholder="$ no cap" style="font-variant-numeric:tabular-nums"></div>
-
-      ${targeted.length ? `
-        <details ${Object.keys(cfg.county_caps || {}).length ? "open" : ""}>
-          <summary style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;cursor:pointer;color:var(--color-accent-700)">Per-county limits (optional &mdash; overrides the max above)${Object.keys(cfg.county_caps || {}).length ? ` &middot; ${Object.keys(cfg.county_caps).length} set` : ""}</summary>
-        <div class="tablewrap"><table class="table" style="max-width:520px">
-          <thead><tr><th>County</th><th>Max bid</th><th>Deposit on hand</th></tr></thead>
-          <tbody>${targeted.map((c) => { const k = normCounty(c); const cap = (cfg.county_caps || {})[k] || {};
-            return `<tr><td>${esc(c)}</td>
-              <td><input class="input" data-cap-max="${esc(k)}" value="${cap.max_bid != null ? esc(cap.max_bid) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td>
-              <td><input class="input" data-cap-dep="${esc(k)}" value="${cap.deposit != null ? esc(cap.deposit) : ""}" style="width:110px;font-variant-numeric:tabular-nums" placeholder="&mdash;"></td></tr>`; }).join("")}
-          </tbody>
-        </table></div></details>` : ""}
-    </div>`;
+// Counties that actually have an upcoming (future, not-redeemed) sale.
+function calCounties() {
+  const t = etToday();
+  return [...new Set(DATA.filter((p) => !p.redeemed && saleDay(p) != null && saleDay(p) >= t)
+    .map((p) => p.county))].sort();
 }
+// The counties currently shown. Never chosen -> all of them; otherwise exactly
+// what the person picked (an explicit empty selection shows nothing).
+function calSelected() {
+  const all = calCounties();
+  const saved = prefs.calCounties;
+  if (!Array.isArray(saved)) return new Set(all);
+  return new Set(saved.filter((c) => all.includes(c)));
+}
+// Group upcoming sales by day, then by county-within-day, for the selected set.
+function calGroups() {
+  const sel = calSelected(), t = etToday();
+  const groups = {};
+  for (const p of DATA) {
+    if (p.redeemed) continue;
+    const dn = saleDay(p);
+    if (dn == null || dn < t || !sel.has(p.county)) continue;
+    const y = p.saleDate.getFullYear(), m = p.saleDate.getMonth(), d = p.saleDate.getDate();
+    const dayKey = y + "-" + m + "-" + d, key = p.county + "|" + dayKey;
+    const g = groups[key] || (groups[key] = { county: p.county, y, m, d, dayKey, time: p.saleTime || "", count: 0 });
+    g.count++;
+    if (!g.time && p.saleTime) g.time = p.saleTime;
+  }
+  const byDay = {}, monthSet = new Set();
+  let total = 0;
+  for (const g of Object.values(groups)) {
+    (byDay[g.dayKey] = byDay[g.dayKey] || []).push(g);
+    monthSet.add(g.y + "-" + g.m);
+    total += g.count;
+  }
+  for (const k in byDay) byDay[k].sort((a, b) => a.county.localeCompare(b.county));
+  const months = [...monthSet].map((s) => s.split("-").map(Number)).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  return { byDay, months, total, days: Object.keys(byDay).length };
+}
+// One month as a 7-column grid. opts.link marks sale entries clickable.
+function calMonthGrid(y, m, byDay, opts) {
+  opts = opts || {};
+  const first = new Date(Date.UTC(y, m, 1)).getUTCDay();
+  const daysInMonth = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+  const t = etToday(), cells = [];
+  for (let i = 0; i < first; i++) cells.push('<td class="cal-empty"></td>');
+  for (let d = 1; d <= daysInMonth; d++) {
+    const sales = byDay[y + "-" + m + "-" + d] || [];
+    const dnum = dayNum(y, m + 1, d);
+    const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "") + (dnum < t ? " past" : "");
+    const entries = sales.map((g) => {
+      const time = g.time ? g.time.replace(/\s*ET$/i, "") : "";
+      return `<div class="cal-sale"${opts.link ? ` data-cty="${esc(g.county)}"` : ""} title="${esc(g.county)} — ${g.count} ${g.count === 1 ? "parcel" : "parcels"}${time ? " · " + esc(time) : ""}"><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span>${time ? `<span class="cal-time">${esc(time)}</span>` : ""}</div>`;
+    }).join("");
+    cells.push(`<td class="${cls}"><span class="cal-date">${d}</span>${entries}</td>`);
+  }
+  while (cells.length % 7) cells.push('<td class="cal-empty"></td>');
+  let rows = "";
+  for (let i = 0; i < cells.length; i += 7) rows += "<tr>" + cells.slice(i, i + 7).join("") + "</tr>";
+  return `<table class="cal-grid"><thead><tr>${CAL_DOW.map((w) => `<th>${w}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
+}
+function renderCalendar() {
+  const all = calCounties();
+  const sel = calSelected();
+  const { byDay, months, total, days } = calGroups();
+  const chips = all.length
+    ? all.map((c) => `<button class="pillbtn ${sel.has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`).join("")
+    : '<span class="text-muted" style="font-size:13px">No counties have upcoming sales right now.</span>';
+  const grids = months.length
+    ? months.map(([y, m]) => `<div class="cal-month"><h6 class="cal-mhead">${CAL_MONTHS[m]} ${y}</h6>${calMonthGrid(y, m, byDay, { link: true })}</div>`).join("")
+    : `<div class="text-muted" style="font-size:14px;padding:24px 0">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</div>`;
 
-function wireBuyboxCard() {
-  const num = (v) => { const n = parseFloat(String(v).replace(/[^0-9.]/g, "")); return isNaN(n) ? null : n; };
-  const update = (patch) => { buybox = { ...EMPTY_BUYBOX, ...buybox, ...patch }; saveBuybox(); recomputeBuybox(); };
-  $("bb-counties").querySelectorAll("[data-county]").forEach((cb) => cb.onchange = () => {
-    const set = new Set(buybox.target_counties || []);
-    cb.checked ? set.add(cb.dataset.county) : set.delete(cb.dataset.county);
-    update({ target_counties: [...set] });
-    renderBuyboxScreen();
+  $("scr-calendar").innerHTML = `
+    <h2 style="margin-bottom:6px">Sale calendar</h2>
+    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Pick your counties and see every upcoming tax-deed sale on one calendar &mdash; the county, date, start time and how many parcels.${total ? ` <b>${total.toLocaleString()}</b> ${total === 1 ? "parcel" : "parcels"} across <b>${days}</b> sale ${days === 1 ? "day" : "days"}.` : ""}</p>
+
+    <div class="blueprint" style="padding:16px 18px;margin-bottom:22px">${CORNERS}
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+        <h6 style="color:var(--color-accent-700);margin:0">Counties on the calendar</h6>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
+          <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
+          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print calendar</button>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+    </div>
+
+    <div id="cal-months">${grids}</div>`;
+
+  $("cal-chips").querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
+    const cur = new Set(calSelected()), c = b.dataset.cty;
+    if (cur.has(c)) cur.delete(c); else cur.add(c);
+    prefs.calCounties = [...cur]; savePrefs(); renderCalendar();
   });
-  const reRender = () => renderBuyboxScreen();
-  $("bb-land").onchange = (e) => { update({ land_use_keywords: csvList(e.target.value) }); reRender(); };
-  $("bb-nonland").onchange = (e) => { update({ non_land_keywords: csvList(e.target.value) }); reRender(); };
-  $("bb-maxbid").onchange = (e) => { update({ max_opening_bid: num(e.target.value) }); reRender(); };
-  $("scr-buybox").querySelectorAll("[data-cap-max],[data-cap-dep]").forEach((inp) => inp.onchange = () => {
-    const k = inp.dataset.capMax || inp.dataset.capDep;
-    const caps = { ...(buybox.county_caps || {}) };
-    const maxEl = $("scr-buybox").querySelector(`[data-cap-max="${k}"]`);
-    const depEl = $("scr-buybox").querySelector(`[data-cap-dep="${k}"]`);
-    const next = { max_bid: num(maxEl.value), deposit: num(depEl.value) };
-    if (next.max_bid == null && next.deposit == null) delete caps[k]; else caps[k] = next;
-    update({ county_caps: caps });
-    reRender();
+  const allBtn = $("cal-all"); if (allBtn) allBtn.onclick = () => { prefs.calCounties = calCounties(); savePrefs(); renderCalendar(); };
+  const noneBtn = $("cal-none"); if (noneBtn) noneBtn.onclick = () => { prefs.calCounties = []; savePrefs(); renderCalendar(); };
+  const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
+  $("cal-months").querySelectorAll("[data-cty]").forEach((el) => el.onclick = () => {
+    S.county = el.dataset.cty; S.when = "all"; S.status = "Scheduled"; S.shown = 150; go("dashboard");
   });
 }
-
-// ---------- buy box screen: criteria + saved-search runner ----------
-// Every property the buy box currently accepts, so a search can be turned into
-// a list or a PDF in one step.
-function buyboxMatches() {
-  const want = S.bb.includeReview ? ["MATCH", "REVIEW"] : ["MATCH"];
-  let rows = DATA.filter((p) => want.includes(p.buybox));
-  if (S.bb.scheduledOnly) rows = rows.filter((p) => !p.redeemed);
-  return [...rows].sort(sortComparator(S.bb.sort));
-}
-function renderBuyboxScreen() {
-  recomputeBuybox();
-  const rows = buyboxMatches();
-  const matchTotal = DATA.filter((p) => p.buybox === "MATCH").length;
-  const reviewTotal = DATA.filter((p) => p.buybox === "REVIEW").length;
-  const counties = [...new Set(rows.map((p) => p.county))].sort();
-  const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
-  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
-  const shown = rows.slice(0, S.bb.shown);
-
-  $("scr-buybox").innerHTML = `
-    <h2 style="margin-bottom:6px">Buy box</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:22px">Set what you&rsquo;re looking for, then run it against every upcoming auction. Turn the results into a list or a PDF.</p>
-    <div style="display:flex;flex-direction:column;gap:26px;max-width:1000px">
-      ${renderBuyboxCard()}
-
-      <div class="blueprint" style="padding:18px 20px">${CORNERS}
-        <h6 style="color:var(--color-accent-700);margin-bottom:4px">Property preferences</h6>
-        <p class="text-muted" style="font-size:13px;margin-bottom:12px">Mark the property types you care about (type comes from the appraiser record). Use the dashboard&rsquo;s Property-type filter and Buy box to focus the board on them.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px" id="type-prefs">
-          ${TYPES.map((t) => `<button class="pillbtn ${prefs.myTypes[t] ? "on" : ""}" data-type="${esc(t)}">${esc(t)}</button>`).join("")}
-        </div>
-        <div class="field"><label>Default budget ceiling (pre-fills &ldquo;max I&rsquo;m willing to pay&rdquo;)</label>
-          <input class="input" id="budget" value="${esc(prefs.budget)}" placeholder="$ 25,000" style="max-width:180px;font-variant-numeric:tabular-nums"></div>
-      </div>
-
-      <div class="blueprint" style="padding:18px 20px">${CORNERS}
-        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px">
-          <h6 style="color:var(--color-accent-700);margin:0">Matches</h6>
-          <span class="tag tag-accent">${matchTotal} MATCH</span><span class="tag tag-neutral">${reviewTotal} REVIEW</span>
-        </div>
-        <p class="text-muted" style="font-size:13px;margin-bottom:14px">Every property that fits the buy box above, across all ${META ? META.counts.counties : ""} counties. Re-runs itself whenever you change the criteria or the data refreshes.</p>
-
-        <div style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:14px">
-          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
-            <input type="checkbox" id="bbm-review" ${S.bb.includeReview ? "checked" : ""}> Include REVIEW (needs a look)</label>
-          <label style="display:inline-flex;align-items:center;gap:7px;font-size:13px;cursor:pointer">
-            <input type="checkbox" id="bbm-sched" ${S.bb.scheduledOnly ? "checked" : ""}> Upcoming auctions only</label>
-          <div class="field" style="width:230px;margin-left:auto"><label>Sort by</label>
-            <select class="input" id="bbm-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.bb.sort, l)).join("")}</select></div>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);margin-bottom:14px">
-          <div style="font-size:14px"><b style="font-family:var(--font-heading);font-size:22px">${rows.length.toLocaleString()}</b>
-            <span class="text-muted">${rows.length === 1 ? "property" : "properties"} matched${counties.length ? ` &middot; ${counties.length} ${counties.length === 1 ? "county" : "counties"}` : ""}${bidSum ? ` &middot; ${money(bidSum)} in opening bids` : ""}</span></div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-left:auto">
-            <input class="input" id="bbm-listname" placeholder="New list name&hellip;" style="width:190px" ${rows.length ? "" : "disabled"}>
-            <button class="btn btn-primary" id="bbm-makelist" ${rows.length ? "" : "disabled"}>+ Create list from these</button>
-            <button class="btn btn-secondary" id="bbm-pdf" ${rows.length ? "" : "disabled"}>Export PDF</button>
-          </div>
-        </div>
-
-        ${rows.length ? `
-          <div class="tablewrap"><table class="table">
-            <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Buy box</th></tr></thead>
-            <tbody>
-              ${shown.map((p) => `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
-                <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
-                <td><div style="font-weight:500">${esc(p.addr || "—")}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
-                <td>${esc(p.county)}</td>
-                <td>${effType(p) ? `<span class="tag tag-neutral">${esc(effType(p))}</span>` : '<span class="text-muted">—</span>'}</td>
-                <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
-                <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
-                <td style="font-size:13px">${esc(p.auction)}</td>
-                <td><span class="tag ${p.buybox === "MATCH" ? "tag-accent" : "tag-neutral"}">${esc(p.buybox)}</span></td>
-              </tr>`).join("")}
-            </tbody>
-          </table></div>
-          ${rows.length > S.bb.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
-            <button class="btn btn-secondary" id="bbm-more">Show ${Math.min(200, rows.length - S.bb.shown)} more (${(rows.length - S.bb.shown).toLocaleString()} hidden)</button></div>` : ""}`
-        : `<div class="text-muted" style="font-size:13.5px;padding:6px 0">Nothing matches yet &mdash; pick your target counties above, or switch on REVIEW to include properties whose land use the county hasn&rsquo;t published.</div>`}
-      </div>
-    </div>`;
-
-  $("type-prefs").querySelectorAll("[data-type]").forEach((b) =>
-    b.onclick = () => { prefs.myTypes[b.dataset.type] = !prefs.myTypes[b.dataset.type]; savePrefs(); renderBuyboxScreen(); });
-  $("budget").oninput = (e) => { prefs.budget = e.target.value; savePrefs(); };
-  $("bbm-review").onchange = (e) => { S.bb.includeReview = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
-  $("bbm-sched").onchange = (e) => { S.bb.scheduledOnly = e.target.checked; S.bb.shown = 100; renderBuyboxScreen(); };
-  $("bbm-sort").onchange = (e) => { S.bb.sort = e.target.value; renderBuyboxScreen(); };
-  const more = $("bbm-more"); if (more) more.onclick = () => { S.bb.shown += 200; renderBuyboxScreen(); };
-  $("scr-buybox").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
-
-  const mk = $("bbm-makelist");
-  if (mk) mk.onclick = () => {
-    const el = $("bbm-listname");
-    const name = (el.value || "").trim() ||
-      `Buy-box matches — ${new Date(etToday() * 864e5).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}`;
-    if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
-      alert("You already have a list with that name — pick another."); return;
-    }
-    const matched = buyboxMatches();
-    lists.push({ name, desc: `${matched.length} ${matched.length === 1 ? "property" : "properties"} matching your buy box.` });
-    saveLists();
-    for (const p of matched) setInt(p.id, { list: name });
-    el.value = "";
-    openList(name, false);
+// The same calendar as a printable monthly sheet (one month per page).
+function printCalendar() {
+  const { byDay, months } = calGroups();
+  if (!months.length) return;
+  const sel = [...calSelected()].sort();
+  const pages = months.map(([y, m]) =>
+    `<section class="pm"><h1>${CAL_MONTHS[m]} ${y}</h1>${calMonthGrid(y, m, byDay)}</section>`).join("");
+  const doc = `<!doctype html><html><head><meta charset="utf-8"><title>Sale calendar — ${esc(BRAND)}</title>
+    <style>
+      @page{size:letter landscape;margin:12mm}
+      body{font:12px/1.4 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#111}
+      .sub{color:#555;font-size:11px;margin-bottom:10px}
+      .pm{page-break-after:always}.pm:last-child{page-break-after:auto}
+      h1{font-size:20px;margin:0 0 8px}
+      table.cal-grid{width:100%;border-collapse:collapse;table-layout:fixed}
+      .cal-grid th{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:#555;border-bottom:1.5px solid #888;padding:4px;text-align:left}
+      .cal-grid td{border:1px solid #ccc;height:104px;vertical-align:top;padding:3px 5px;width:14.28%}
+      .cal-grid td.cal-empty{background:#f7f7f7}
+      .cal-grid td.past{color:#aaa}
+      .cal-date{font-size:11px;font-weight:600;color:#666}
+      .cal-sale{margin-top:3px;font-size:10px;line-height:1.3;break-inside:avoid;border-left:2px solid #5980a6;padding-left:4px}
+      .cal-sale b{font-weight:600}
+      .cal-n{display:inline-block;background:#e7eef6;border-radius:3px;padding:0 4px;margin-left:3px}
+      .cal-time{display:block;color:#555}
+    </style></head><body>
+    <div class="sub">${esc(BRAND)} &mdash; upcoming tax-deed sales &middot; Counties: ${esc(sel.join(", ") || "all")} &middot; Generated ${esc(etStamp(new Date()))}</div>
+    ${pages}
+    </body></html>`;
+  const frame = document.createElement("iframe");
+  frame.setAttribute("aria-hidden", "true");
+  frame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0";
+  document.body.appendChild(frame);
+  frame.srcdoc = doc;
+  frame.onload = () => {
+    try { frame.contentWindow.focus(); frame.contentWindow.print(); } catch (e) { console.warn("print failed:", e); }
+    setTimeout(() => frame.remove(), 60000);
   };
-  const pdf = $("bbm-pdf");
-  if (pdf) pdf.onclick = () => {
-    const cfg = buybox || EMPTY_BUYBOX;
-    const counties = (cfg.target_counties || []).map(cap).join(", ") || "all counties";
-    exportRowsPdf(buyboxMatches(), "buy-box matches",
-      `${S.bb.includeReview ? "MATCH + REVIEW" : "MATCH only"}`
-      + `${S.bb.scheduledOnly ? " · upcoming auctions only" : ""} · Counties: ${counties}`);
-  };
-  wireBuyboxCard();   // counties, keywords, caps — the criteria inputs above
 }
 
 // Printable report of any set of properties — the buy-box matches, or a list
