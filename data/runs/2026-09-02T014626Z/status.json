@@ -1,0 +1,228 @@
+{
+  "run_dir": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-09-02T014626Z",
+  "started_at": "2026-09-02T01:46:26+00:00",
+  "finished_at": "2026-09-02T02:01:11+00:00",
+  "live": true,
+  "total_counties": 12,
+  "current_county": null,
+  "counties": {
+    "brevard": {
+      "url": "https://www.brevard.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 127,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.brevard.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.brevard.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/17/2026",
+        "10/22/2026"
+      ],
+      "expected_counts": {
+        "09/17/2026": 64,
+        "10/22/2026": 63
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:48:02+00:00"
+    },
+    "calhoun": {
+      "url": "https://www.calhoun.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:49:07+00:00"
+    },
+    "charlotte": {
+      "url": "https://www.charlotte.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 144,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.charlotte.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.charlotte.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/01/2026",
+        "09/15/2026",
+        "09/29/2026",
+        "10/06/2026",
+        "10/20/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "09/01/2026": 50,
+        "09/15/2026": 48,
+        "09/29/2026": 52,
+        "10/06/2026": 42,
+        "10/20/2026": 1,
+        "11/17/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:50:47+00:00"
+    },
+    "gulf": {
+      "url": "https://www.gulf.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:51:34+00:00"
+    },
+    "hendry": {
+      "url": "https://www.hendry.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:52:36+00:00"
+    },
+    "lake": {
+      "url": "https://www.lake.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:53:43+00:00"
+    },
+    "manatee": {
+      "url": "https://www.manatee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 127,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.manatee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.manatee.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/14/2026",
+        "09/28/2026",
+        "10/12/2026",
+        "10/26/2026",
+        "11/09/2026",
+        "11/23/2026"
+      ],
+      "expected_counts": {
+        "09/14/2026": 25,
+        "09/28/2026": 25,
+        "10/12/2026": 2,
+        "10/26/2026": 25,
+        "11/09/2026": 25,
+        "11/23/2026": 25
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:55:23+00:00"
+    },
+    "monroe": {
+      "url": "https://www.monroe.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:56:29+00:00"
+    },
+    "okeechobee": {
+      "url": "https://www.okeechobee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 45,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.okeechobee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.okeechobee.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/17/2026",
+        "09/24/2026",
+        "10/08/2026"
+      ],
+      "expected_counts": {
+        "09/17/2026": 26,
+        "09/24/2026": 3,
+        "10/08/2026": 16
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:58:05+00:00"
+    },
+    "pinellas": {
+      "url": "https://www.pinellas.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:58:34+00:00"
+    },
+    "stlucie": {
+      "url": "https://www.stlucie.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 56,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.stlucie.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.stlucie.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/14/2026",
+        "10/05/2026",
+        "10/12/2026"
+      ],
+      "expected_counts": {
+        "09/14/2026": 23,
+        "10/05/2026": 18,
+        "10/12/2026": 15
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T01:59:51+00:00"
+    },
+    "walton": {
+      "url": "https://www.walton.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 22,
+      "warnings": [
+        "calendar: no upcoming tax deed sales on https://www.walton.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.walton.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "09/03/2026",
+        "09/22/2026",
+        "09/29/2026",
+        "10/06/2026",
+        "10/13/2026"
+      ],
+      "expected_counts": {
+        "09/03/2026": 4,
+        "09/22/2026": 6,
+        "09/29/2026": 6,
+        "10/06/2026": 3,
+        "10/13/2026": 3
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-09-02T02:01:11+00:00"
+    }
+  }
+}

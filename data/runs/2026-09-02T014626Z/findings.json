@@ -1,0 +1,1076 @@
+{
+  "run": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-09-02T014626Z",
+  "previous_run": null,
+  "records": 521,
+  "duplicates_merged": 0,
+  "new": 521,
+  "changed": 0,
+  "removed": 0,
+  "buybox_match": 0,
+  "buybox_review": 45,
+  "by_county": {
+    "brevard": {
+      "auctions": 127,
+      "match": 0,
+      "review": 0,
+      "new": 127,
+      "changed": 0
+    },
+    "charlotte": {
+      "auctions": 144,
+      "match": 0,
+      "review": 0,
+      "new": 144,
+      "changed": 0
+    },
+    "manatee": {
+      "auctions": 127,
+      "match": 0,
+      "review": 0,
+      "new": 127,
+      "changed": 0
+    },
+    "okeechobee": {
+      "auctions": 45,
+      "match": 0,
+      "review": 45,
+      "new": 45,
+      "changed": 0
+    },
+    "stlucie": {
+      "auctions": 56,
+      "match": 0,
+      "review": 0,
+      "new": 56,
+      "changed": 0
+    },
+    "walton": {
+      "auctions": 22,
+      "match": 0,
+      "review": 0,
+      "new": 22,
+      "changed": 0
+    }
+  },
+  "anomalies": {
+    "brevard|2000808|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2001122|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2100366|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2103250|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2103635|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2105718|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2109983|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2206094|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2212794|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2218048|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2222566|09/17/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "brevard|2310939|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2311278|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2311829|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2316985|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2317112|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2317126|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2318079|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2318216|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2402389|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2422085|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2426611|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2500053|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2800299|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2813583|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2817093|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2826172|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2925795|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2933501|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2942433|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|3006392|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|3017173|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "brevard|2102746|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2212011|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2300905|10/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "brevard|2316356|10/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "brevard|2318217|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2318233|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2421304|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2535540|10/22/2026": [
+      "missing property address"
+    ],
+    "brevard|2729279|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|2747536|10/22/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "brevard|2836607|10/22/2026": [
+      "status: Redeemed"
+    ],
+    "brevard|3027558|10/22/2026": [
+      "opening bid exceeds assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|422104226001|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422104226003|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422104453002|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109126004|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109127003|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109127004|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109127009|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109128008|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109129002|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109130001|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109131001|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422302311007|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|422302428018|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422303406003|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422310252030|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|422310276029|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|422319330011|09/15/2026": [
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422328326001|09/15/2026": [
+      "missing property address"
+    ],
+    "charlotte|422331403001|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|422428102008|09/15/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422430202006|09/15/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|402103376005|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402128326014|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|402214258016|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402214352004|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402216379009|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402218131005|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|402218229021|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402301330017|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|402301330018|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|402334236001|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|412001376013|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|422104206002|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109201001|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109205001|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422109254001|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422302453004|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422302459003|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422524300003|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|402101302020|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402307126004|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402310157012|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|402310183003|10/06/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "charlotte|402310183012|10/06/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "charlotte|402314279005|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|402419107001|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|402421100001|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|411901702019|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|412001485008|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|412121251001|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "charlotte|412122178031|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "charlotte|422104252002|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "charlotte|422302202008|10/06/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "manatee|1199300003|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1286400005|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1290800000|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1741005357|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|183900000|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1845410057|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1847300751|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1918561709|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1942708209|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1982910000|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2045908403|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2045909609|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2132500006|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2243629157|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2273100004|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2322700002|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2439900008|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2454200003|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2493510059|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2875500056|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3122100401|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|380600007|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2256204955|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3531300006|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3782817302|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3980000008|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4028300004|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4034600009|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4285900009|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4520900004|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4855300002|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|4964200002|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5187916654|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5460300006|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5589504793|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|581714459|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5970310057|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6600010059|09/28/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3906610209|10/12/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1100009859|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2256203601|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5234500006|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5253200009|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5265602200|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5274321107|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5311900004|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5344114706|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5403400004|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5589503217|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5952516853|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6109170305|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6136710347|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6257400009|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6616400005|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|7693307907|10/26/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1361100009|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1401623358|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1619600354|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1619600439|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2565310055|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5188521404|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5775500001|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|5864200000|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6819800109|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|7163900009|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|7419311654|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|8008416656|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|950100008|11/09/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1734311051|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|1735611459|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2582500704|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2799601600|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|2799607458|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|3189500006|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6145551450|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "manatee|6147348434|11/23/2026": [
+      "status: Redeemed"
+    ],
+    "okeechobee|1-04-37-35-0010-00000-025A|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "okeechobee|1-04-38-36-0030-00030-0210|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-04-38-36-0040-00050-0210|09/17/2026": [
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-05-38-36-0040-00040-0280|09/17/2026": [
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-05-38-36-0040-00050-0120|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-05-38-36-0070-00270-0240|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-10-36-35-0040-00000-0150|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-12-37-34-0A00-00007-A000|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-15-37-35-0060-00030-0110|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-15-37-36-0A00-00002-1090|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-17-37-36-0A00-00003-0292|09/17/2026": [
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-18-37-36-0A00-00010-0290|09/17/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "okeechobee|1-20-37-36-0A00-00001-A000|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-22-37-34-0A00-00004-0000|09/17/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-22-37-35-0040-0000D-0130|09/17/2026": [
+      "status: Redeemed"
+    ],
+    "okeechobee|1-02-36-35-0010-00020-0020|09/24/2026": [
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-05-37-35-0020-00130-0060|09/24/2026": [
+      "status: Redeemed"
+    ],
+    "okeechobee|1-29-37-35-0050-00090-E000|09/24/2026": [
+      "status: Redeemed"
+    ],
+    "okeechobee|1-03-38-35-0A00-00001-A000|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-04-38-36-0030-00030-0160|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-05-37-35-0020-00300-0030|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-06-36-34-0010-00060-0010|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-06-36-34-0010-00360-0140|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-06-38-36-0A00-00007-0000|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-09-38-36-0050-00010-0040|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-17-34-33-0A00-00006-J000|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-17-37-35-0020-00040-0020|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-18-34-36-0A00-00004-0000|10/08/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-18-34-36-0A00-00005-0000|10/08/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "okeechobee|1-18-37-35-0020-00290-0110|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-22-33-35-0010-00920-0060|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-23-38-36-0A00-00027-0000|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "okeechobee|1-25-37-35-0070-00060-0160|10/08/2026": [
+      "missing property address"
+    ],
+    "okeechobee|1-30-37-35-0010-00020-010A|10/08/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|1431-701-0266-000-1|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "stlucie|2404-514-0007-000-3|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2404-702-0139-000-4|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "stlucie|2404-711-0022-000-9|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2404-818-0026-000-5|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2405-720-0004-000-8|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3420-560-2336-000-8|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3420-565-0148-000-4|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3420-620-0042-000-9|09/14/2026": [
+      "status: Redeemed"
+    ],
+    "stlucie|4314-505-0175-000-3|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4314-505-0176-000-0|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4314-505-0177-000-7|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4314-505-0178-000-4|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4314-505-0179-000-1|09/14/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|1431-801-0194-100-3|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|1433-701-0086-000-1|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2405-501-0076-000-0|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2405-601-0499-000-8|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2408-502-0052-000-8|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2409-602-0110-000-3|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2409-605-0076-000-1|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2409-823-0020-000-4|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2410-709-0108-000-8|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2415-601-0207-000-6|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2415-601-0368-000-2|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2420-601-0036-000-2|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2421-515-0040-000-2|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2430-601-0021-000-5|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3323-655-0008-000-9|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|3420-510-0322-000-8|10/05/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|3420-535-1107-000-9|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4408-500-0002-000-3|10/05/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2311-800-0031-000-3|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|2405-601-0325-000-8|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2408-801-0126-000-6|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2409-602-0001-000-6|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|2427-604-0267-000-0|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3323-823-0030-000-7|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|3323-881-0030-000-7|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3323-940-0074-000-7|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|3325-544-0052-000-7|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3420-501-0027-000-2|10/12/2026": [
+      "missing assessed value",
+      "missing property address"
+    ],
+    "stlucie|3420-505-0589-000-1|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|3420-585-1234-000-3|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4412-511-0004-000-4|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4416-601-0020-000-0|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "stlucie|4423-701-0014-000-4|10/12/2026": [
+      "missing assessed value",
+      "status: Redeemed",
+      "missing property address"
+    ],
+    "walton|20-4N-20-29000-048-0000|09/03/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "walton|20-4N-20-29000-053-0030|09/03/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "walton|28-4N-20-29000-038-0010|09/03/2026": [
+      "opening bid exceeds assessed value"
+    ],
+    "walton|25-3N-19-19070-001-8123|09/22/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "walton|10-2S-20-33010-00A-0070|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "walton|16-3N-20-28060-014-0180|09/29/2026": [
+      "missing assessed value",
+      "status: Redeemed"
+    ],
+    "walton|22-1S-19-23020-00B-0030|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "walton|25-2S-20-33190-000-0410|09/29/2026": [
+      "status: Redeemed"
+    ],
+    "walton|15-3N-17-06000-004-0010|10/06/2026": [
+      "status: Redeemed"
+    ],
+    "walton|25-3N-19-19070-000-8140|10/06/2026": [
+      "status: Redeemed"
+    ]
+  },
+  "changes": {},
+  "excluded_foreclosure": 0,
+  "county_errors": {},
+  "county_warnings": {
+    "brevard": [
+      "calendar: no upcoming tax deed sales on https://www.brevard.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.brevard.realforeclose.com/"
+    ],
+    "calhoun": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "charlotte": [
+      "calendar: no upcoming tax deed sales on https://www.charlotte.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.charlotte.realforeclose.com/"
+    ],
+    "gulf": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "hendry": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "lake": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "manatee": [
+      "calendar: no upcoming tax deed sales on https://www.manatee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.manatee.realforeclose.com/"
+    ],
+    "monroe": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "okeechobee": [
+      "calendar: no upcoming tax deed sales on https://www.okeechobee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.okeechobee.realforeclose.com/"
+    ],
+    "pinellas": [
+      "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+    ],
+    "stlucie": [
+      "calendar: no upcoming tax deed sales on https://www.stlucie.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.stlucie.realforeclose.com/"
+    ],
+    "walton": [
+      "calendar: no upcoming tax deed sales on https://www.walton.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.walton.realforeclose.com/"
+    ]
+  },
+  "report": "/home/runner/work/Taxdeed/Taxdeed/output/runs/2026-09-02T014626Z/tax_deed_scrub.xlsx"
+}
