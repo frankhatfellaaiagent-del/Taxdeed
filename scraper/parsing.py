@@ -365,11 +365,19 @@ def parse_auction_items(html: str, page_url: str, county: str, sale_date: str) -
 
 
 def looks_like_foreclosure(rec: AuctionRecord) -> bool:
-    """Sanity check: True if a record smells like a foreclosure listing."""
+    """Sanity check: True if a record smells like a foreclosure listing.
+
+    The record's HOST is deliberately NOT used. Many counties (Okeechobee,
+    St. Lucie, Brevard, ...) run their tax-deed sales on a COMBINED
+    foreclosure + tax-deed RealAuction site hosted on realforeclose.com, so a
+    perfectly good tax-deed record can carry a realforeclose.com host. We only
+    ever fetch auction pages for calendar days the calendar itself labeled
+    "tax deed" (see parse_calendar_dates, which skips foreclosure day cells),
+    so trust the item's own auction-type and the foreclosure-only fields
+    instead of the domain it came from.
+    """
     at = (rec.auction_type or "").upper().replace(" ", "").replace("-", "")
     if at and "TAXDEED" not in at:
-        return True
-    if rec.source_host and "realforeclose.com" in rec.source_host:
         return True
     raw = " ".join(rec.raw_fields.keys())
     # Foreclosure listings carry judgment/plaintiff fields taxdeed pages never have.
