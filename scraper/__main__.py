@@ -224,6 +224,9 @@ def main(argv=None) -> int:
     p.add_argument("--backfill-geometry", action="store_true",
                    help="Only top up parcel boundaries on already-enriched entries "
                         "missing geometry (cheap ReportAll-only pass, no appraiser/clerk)")
+    p.add_argument("--landcheck", action="store_true",
+                   help="Only run the GIS land check (wetlands/flood/access) per parcel "
+                        "from free public GIS; writes land_check into the store (no key)")
 
     p = sub.add_parser("run", help="scrape + report in one command")
     add_common(p)
@@ -307,6 +310,10 @@ def main(argv=None) -> int:
         if getattr(args, "backfill_geometry", False):
             from .enrich import backfill_geometry
             summary = backfill_geometry(records, counties=counties,
+                                        limit=(args.limit or None), out_path=args.out)
+        elif getattr(args, "landcheck", False):
+            from .enrich import landcheck_records
+            summary = landcheck_records(records, counties=counties,
                                         limit=(args.limit or None), out_path=args.out)
         else:
             summary = enrich_records(records, counties=counties, limit=args.limit,

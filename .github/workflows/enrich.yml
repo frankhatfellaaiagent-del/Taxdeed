@@ -19,6 +19,10 @@ on:
         description: "Only top up parcel boundaries on already-enriched entries (cheap ReportAll-only pass)"
         type: boolean
         default: false
+      landcheck:
+        description: "Only run the GIS land check (wetlands/flood/access) per parcel — free public GIS, no key"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,6 +52,8 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.backfill_geometry }}" = "true" ]; then
             python -m scraper -v enrich --backfill-geometry --limit "${{ github.event.inputs.limit || '400' }}" || true
+          elif [ "${{ github.event.inputs.landcheck }}" = "true" ]; then
+            python -m scraper -v enrich --landcheck --limit "${{ github.event.inputs.limit || '400' }}" || true
           else
             python -m scraper -v enrich --limit "${{ github.event.inputs.limit || '400' }}" --debug-dir output/debug/enrich || true
           fi

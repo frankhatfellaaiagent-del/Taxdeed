@@ -181,6 +181,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
             "parcel_geometry": parcel_geom,
             **scraped_case,   # case link published on the auction page itself
             **case,      # clerk_case_url, deed_status, applicant, case_docs, case_flags
+            **({"land_check": enr["land_check"]} if enr.get("land_check") else {}),
         })
 
     # A run only covers the counties it scraped. Carry the previous feed's

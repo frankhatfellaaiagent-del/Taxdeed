@@ -28,7 +28,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-from . import paperwork, reportall
+from . import landcheck, paperwork, reportall
 from .clerk import ClerkResolver
 
 log = logging.getLogger(__name__)
@@ -359,6 +359,85 @@ def backfill_geometry(records: list[dict], counties: list[str] | None = None,
     out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
     summary = {"attempted": n_try, "filled": n_filled, "store_total": len(store)}
     log.info("Geometry backfill done: %s", summary)
+    return summary
+
+
+def landcheck_records(records: list[dict], counties: list[str] | None = None,
+                      limit: int | None = None, out_path: str | Path | None = None,
+                      include_redeemed: bool = False, include_past: bool = False,
+                      refresh_days: int = 30) -> dict:
+    """Run the GIS land check (wetlands / flood / access) per parcel.
+
+    The automated "dirt" research: for each upcoming, not-redeemed parcel we
+    have a boundary for (from the geometry backfill) — or a centroid, as a
+    coarser fallback — query the public wetlands, flood and road layers and
+    store a `land_check` block the dashboard renders. Free public GIS, no key.
+    Safe to repeat: a record with a land_check newer than refresh_days is
+    skipped, so re-runs only fill gaps. Soonest sales first."""
+    out_p = Path(out_path) if out_path else DEFAULT_OUT
+    store = load_enrichment(out_p)
+    now = datetime.now(timezone.utc)
+    county_set = {c.lower() for c in counties} if counties else None
+    today_key = now.strftime("%Y%m%d")
+
+    def is_fresh(entry: dict) -> bool:
+        ts = (entry.get("land_check") or {}).get("checked_at")
+        try:
+            return bool(ts) and (now - datetime.fromisoformat(ts)).days < refresh_days
+        except ValueError:
+            return False
+
+    def geom_for(r: dict, entry: dict):
+        return ((entry.get("parcel") or {}).get("geometry_wkt")) or r.get("parcel_geometry")
+
+    def wants(r: dict) -> bool:
+        if county_set and str(r.get("county", "")).lower() not in county_set:
+            return False
+        if not include_redeemed and str(r.get("status", "")).lower() == "redeemed":
+            return False
+        if not include_past:
+            key = _sale_sort_key(r.get("sale_date", ""))
+            if key == "99999999" or key < today_key:
+                return False
+        entry = store.get(_feed_key(r), {}) or {}
+        has_loc = geom_for(r, entry) or (r.get("lat") is not None and r.get("lng") is not None)
+        return bool(has_loc) and not is_fresh(entry)
+
+    targets = [r for r in records if wants(r)]
+    targets.sort(key=lambda r: _sale_sort_key(r.get("sale_date", "")))
+    if limit:
+        targets = targets[:limit]
+    log.info("Land check for %d feed records", len(targets))
+
+    sess = requests.Session()
+    sess.headers["User-Agent"] = UA
+    n_done = n_flag = n_try = 0
+    for i, r in enumerate(targets):
+        n_try += 1
+        key = _feed_key(r)
+        entry = store.get(key, {})
+        try:
+            res = landcheck.assess(geom_for(r, entry), lat=r.get("lat"),
+                                   lng=r.get("lng"), session=sess)
+        except Exception as exc:                          # noqa: BLE001
+            log.debug("land check failed: %s", exc)
+            continue
+        res["checked_at"] = now.isoformat(timespec="seconds")
+        entry.setdefault("fetched_at", now.isoformat(timespec="seconds"))
+        entry["land_check"] = res
+        store[key] = entry
+        n_done += 1
+        if res.get("verdict") in ("avoid", "review"):
+            n_flag += 1
+        time.sleep(0.5)   # polite to the free GIS + Overpass
+        if (i + 1) % 25 == 0:
+            log.info("  %d/%d land-checked (%d flagged)", i + 1, len(targets), n_flag)
+            out_p.parent.mkdir(parents=True, exist_ok=True)
+            out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
+    out_p.parent.mkdir(parents=True, exist_ok=True)
+    out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
+    summary = {"attempted": n_try, "checked": n_done, "flagged": n_flag, "store_total": len(store)}
+    log.info("Land check done: %s", summary)
     return summary
 
 
