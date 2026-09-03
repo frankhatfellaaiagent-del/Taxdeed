@@ -1078,7 +1078,10 @@ function landCheckCached(p) {
 const LC_SFHA = new Set(["A", "AE", "AH", "AO", "AR", "A99", "V", "VE"]);
 const LC_ROADS = new Set(["motorway", "trunk", "primary", "secondary", "tertiary",
                           "unclassified", "residential", "living_street", "service"]);
-const NWI_Q = "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query";
+const NWI_Q = [
+  "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer/0/query",
+  "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query",
+];
 const FEMA_Q = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query";
 const OVERPASS_MIRRORS = ["https://overpass-api.de/api/interpreter",
                           "https://overpass.kumi.systems/api/interpreter"];
@@ -1125,10 +1128,13 @@ async function lcRun(p) {
   if (!g) return { verdict: "unknown", reasons: ["No parcel location to check"],
                    wetland: { status: "unknown" }, flood: { status: "unknown" }, access: { status: "unknown" } };
   let wet = { status: "unknown" }, flood = { status: "unknown" }, access = { status: "unknown" };
-  try {
-    const f = await lcArcgis(NWI_Q, g.bbox, "WETLAND_TYPE");
-    wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (a.WETLAND_TYPE || "").trim()).filter(Boolean))] } : { status: "none" };
-  } catch (e) {}
+  for (const nwi of NWI_Q) {
+    try {
+      const f = await lcArcgis(nwi, g.bbox, "WETLAND_TYPE");
+      wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (a.WETLAND_TYPE || "").trim()).filter(Boolean))] } : { status: "none" };
+      break;   // this endpoint answered
+    } catch (e) { /* try the next NWI endpoint */ }
+  }
   try {
     const f = await lcArcgis(FEMA_Q, g.bbox, "FLD_ZONE");
     const zones = [...new Set(f.map((a) => (a.FLD_ZONE || "").trim()).filter(Boolean))];

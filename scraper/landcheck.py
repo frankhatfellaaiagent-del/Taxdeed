@@ -35,8 +35,14 @@ TIMEOUT = 25
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
-# USFWS National Wetlands Inventory — layer 0 is the wetlands polygons.
-NWI_URL = "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query"
+# USFWS National Wetlands Inventory — layer 0 is the wetlands polygons. USFWS
+# has moved this service's host more than once, so try the documented endpoints
+# in order and use whichever answers (logged, so we can pin the winner).
+NWI_URLS = [
+    "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer/0/query",
+    "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query",
+    "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query",
+]
 # FEMA National Flood Hazard Layer — layer 28 is the flood hazard zones.
 FEMA_URL = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query"
 # OpenStreetMap roads, via Overpass.
@@ -114,16 +120,22 @@ def _arcgis_intersect(url: str, rings: list, out_fields: str, session) -> list[d
         resp.raise_for_status()
         data = resp.json()
         if "error" in data:
-            log.debug("ArcGIS error from %s: %s", url, data["error"])
+            log.warning("ArcGIS error from %s: %s", url, data["error"])
             return None
         return [f.get("attributes", {}) for f in data.get("features", [])]
     except (requests.RequestException, ValueError) as exc:
-        log.debug("ArcGIS query failed %s: %s", url, exc)
+        log.warning("ArcGIS query failed %s: %s", url, exc)
         return None
 
 
 def check_wetlands(rings: list, session) -> dict:
-    feats = _arcgis_intersect(NWI_URL, rings, "WETLAND_TYPE,ACRES", session)
+    feats = None
+    for url in NWI_URLS:
+        feats = _arcgis_intersect(url, rings, "WETLAND_TYPE,ACRES", session)
+        if feats is not None:
+            if url != NWI_URLS[0]:
+                log.info("NWI answered from fallback endpoint %s", url)
+            break
     if feats is None:
         return {"status": "unknown"}
     if not feats:
