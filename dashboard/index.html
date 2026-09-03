@@ -1110,6 +1110,7 @@ function renderDetail() {
     // params — link it plain; the copyable coordinates below paste straight
     // into its search box.
     ["https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/", "Wetlands map (NWI)"],
+    ["https://msc.fema.gov/portal/search", "FEMA flood map"],
     [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
   ].filter(([href]) => href);
   const pctText = p.pct != null
@@ -1123,15 +1124,12 @@ function renderDetail() {
       text: p.enriched
         ? "Verified against the county appraiser — the owner, land use, acreage and mailing address above come straight from the official record."
         : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
-    { topic: "Case file", cls: p.caseFlags.length ? "tag-outline" : p.caseUrl ? "tag-accent" : "tag-neutral",
-      text: !p.caseUrl
-        ? "Clerk case file not resolved for this parcel yet — the county link above opens the clerk's tax deed search."
-        : p.caseFlags.length
-          ? `The case paperwork mentions: ${esc(p.caseFlags.join("; "))}. Confirm each in the documents before bidding.`
-          : (p.deedStatus ? `Clerk shows deed status ${esc(p.deedStatus)}. ` : "") +
-            "The case documents were reviewed and none of the watch-items (liens, homestead, bankruptcy, reschedules) came up." },
+    { topic: "Site & wetlands", cls: "tag-accent",
+      text: (ll || hasAddr)
+        ? "See the parcel on the map above; the National Wetlands (NWI) map, the FEMA flood map and the satellite view are linked below. On land, the ground is what kills a deal — wet, in a flood zone, or landlocked — so walk the maps before you drive out."
+        : "The county didn't publish an address — use the appraiser link to locate the parcel, then check it on the wetlands and FEMA flood maps before bidding." },
     { topic: "Next step", cls: "tag-neutral",
-      text: "Confirm land use, owner and liens on the appraiser + clerk links above" + (hasAddr || ll ? ", and check the wetlands map." : ". County didn't publish an address — the appraiser record is the way in.") },
+      text: "Check the parcel on the wetlands, flood and satellite maps" + (ll || hasAddr ? " (linked below)" : " once you've located it on the appraiser") + ", confirm the land use and owner on the appraiser, and open the clerk links for the case file." },
   ];
 
   $("scr-detail").innerHTML = `
@@ -1169,8 +1167,8 @@ function renderDetail() {
             ${links.map(([href, label]) => `<a href="${esc(href)}" target="_blank" rel="noopener">${LINK_SVG} ${label}</a>`).join("")}
           </div>
           ${ll ? `<div style="margin-top:10px;font-size:12px" class="text-muted">Coordinates
-            <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands mapper's search box">${p.lat}, ${p.lng}</button>
-            &middot; paste into the wetlands mapper&rsquo;s search box</div>` : ""}
+            <button id="copy-ll" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — paste into the wetlands or flood map search box">${p.lat}, ${p.lng}</button>
+            &middot; paste into the wetlands or flood map search box</div>` : ""}
           ${duvalRE(p) ? `<div style="margin-top:8px;font-size:12px" class="text-muted">Duval RE&nbsp;#
             <button id="copy-re" class="mono" style="background:none;border:1px solid var(--color-divider);cursor:pointer;font-size:11.5px;padding:2px 8px;color:var(--color-accent-700)" title="Copy — for the classic paopropertysearch.coj.net record">${esc(duvalRE(p))}</button>
             &middot; the appraiser link opens this parcel on the county map; copy the RE for the classic record if you want it</div>` : ""}
@@ -1187,9 +1185,6 @@ function renderDetail() {
             <div style="font-weight:500">${esc(p.applicant)}</div>
             ${p.applicantAddr ? `<div class="text-muted" style="font-size:13px">${esc(p.applicantAddr)}</div>` : ""}
           </div>` : ""}
-          ${p.caseFlags.length ? `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
-            ${p.caseFlags.map((f) => `<span class="tag tag-outline">${esc(f)}</span>`).join("")}
-          </div>` : ""}
           ${p.caseDocs.length ? `
             <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px" class="text-muted">Paperwork in the file</div>
             <div style="display:flex;flex-direction:column">
@@ -1201,7 +1196,7 @@ function renderDetail() {
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin:0 0 4px">Quick read</h6>
-          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px">A plain read of the county&rsquo;s auction record &mdash; value, data-quality flags, and the clerk case file where we resolved it. Confirm liens and title yourself on the clerk links above.</p>
+          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px">A plain read of the county&rsquo;s auction record &mdash; value, data-quality flags, and the land itself. Check the maps for the parcel, and confirm the case file and title yourself on the clerk links above.</p>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
             ${findings.map((a) => `<div style="display:flex;gap:12px">
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
@@ -1699,7 +1694,7 @@ function exportRowsPdf(rows, title, subtitle) {
       <th>Parcel ID</th><th>Cert #</th><th>Address</th><th>County</th><th>Type</th>
       <th class="num">Assessed</th><th class="num">Opening bid</th><th>Auction</th><th>Notes</th>
     </tr></thead><tbody>${body}</tbody></table>
-    <div class="foot">Values are the county's published figures. Confirm land use, liens and case status before bidding.</div>
+    <div class="foot">Values are the county's published figures. Confirm land use, access and case status before bidding.</div>
     </body></html>`;
 
   const frame = document.createElement("iframe");
