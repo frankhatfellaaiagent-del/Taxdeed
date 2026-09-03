@@ -35,11 +35,12 @@ TIMEOUT = 25
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
-# USFWS National Wetlands Inventory — layer 0 is the wetlands polygons. USFWS
-# has moved this service's host more than once, so try the documented endpoints
-# in order and use whichever answers (logged, so we can pin the winner).
+# USFWS National Wetlands Inventory — layer 0 is the wetlands polygons. The
+# official public REST host is fwspublicservices.wim.usgs.gov; fwsprimary is a
+# mirror. (www.fws.gov/wetlands/... is the public website behind a WAF, not an
+# API — it 403s scripted queries — so it's deliberately not in this list.) Try
+# each in order and use whichever answers (logged, so we can pin the winner).
 NWI_URLS = [
-    "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer/0/query",
     "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query",
     "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query",
 ]
@@ -105,12 +106,21 @@ def _haversine_m(a: tuple, b: tuple) -> float:
 
 
 # --------------------------------------------------------------- ArcGIS -------
-def _arcgis_intersect(url: str, rings: list, out_fields: str, session) -> list[dict] | None:
-    """Features from an ArcGIS layer intersecting the polygon. None on failure."""
+def _point_param(lng: float, lat: float) -> str:
+    return json.dumps({"x": lng, "y": lat, "spatialReference": {"wkid": 4326}})
+
+
+def _arcgis_query(url: str, geometry: str, geom_type: str, out_fields: str,
+                  session) -> list[dict] | None:
+    """Features from an ArcGIS layer intersecting `geometry`. None on failure.
+
+    `geom_type` is an Esri geometry type (esriGeometryPolygon / esriGeometryPoint);
+    `geometry` is the matching JSON string.
+    """
     try:
         resp = session.post(url, timeout=TIMEOUT, data={
-            "geometry": _geom_param(rings),
-            "geometryType": "esriGeometryPolygon",
+            "geometry": geometry,
+            "geometryType": geom_type,
             "inSR": "4326",
             "spatialRel": "esriSpatialRelIntersects",
             "outFields": out_fields,
@@ -120,18 +130,35 @@ def _arcgis_intersect(url: str, rings: list, out_fields: str, session) -> list[d
         resp.raise_for_status()
         data = resp.json()
         if "error" in data:
-            log.warning("ArcGIS error from %s: %s", url, data["error"])
+            log.warning("ArcGIS error from %s (%s): %s", url, geom_type, data["error"])
             return None
         return [f.get("attributes", {}) for f in data.get("features", [])]
     except (requests.RequestException, ValueError) as exc:
-        log.warning("ArcGIS query failed %s: %s", url, exc)
+        log.warning("ArcGIS query failed %s (%s): %s", url, geom_type, exc)
         return None
 
 
+def _arcgis_intersect(url: str, rings: list, out_fields: str, session) -> list[dict] | None:
+    """Features from an ArcGIS layer intersecting the polygon. None on failure."""
+    return _arcgis_query(url, _geom_param(rings), "esriGeometryPolygon", out_fields, session)
+
+
 def check_wetlands(rings: list, session) -> dict:
+    # Try the full parcel polygon first (best signal), then fall back to a
+    # centroid point on the SAME host. The NWI ArcGIS instances are stricter
+    # than FEMA's about polygon geometry — a heavy/awkward ring can draw a 400
+    # "Failed to execute query" or time out where a simple point never does — so
+    # a point-in-wetland check keeps the dimension answerable instead of unknown.
+    cen = _centroid(rings)
+    pt = _point_param(cen[0], cen[1]) if cen else None
+    poly = _geom_param(rings)
     feats = None
     for url in NWI_URLS:
-        feats = _arcgis_intersect(url, rings, "WETLAND_TYPE,ACRES", session)
+        feats = _arcgis_query(url, poly, "esriGeometryPolygon", "WETLAND_TYPE,ACRES", session)
+        if feats is None and pt is not None:
+            feats = _arcgis_query(url, pt, "esriGeometryPoint", "WETLAND_TYPE,ACRES", session)
+            if feats is not None:
+                log.info("NWI answered via centroid point at %s", url)
         if feats is not None:
             if url != NWI_URLS[0]:
                 log.info("NWI answered from fallback endpoint %s", url)
