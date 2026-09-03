@@ -7508,6 +7508,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.17",
@@ -7877,6 +7898,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -7945,6 +7987,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -7971,6 +8034,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -7997,6 +8081,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.25",
@@ -8023,6 +8128,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -8357,6 +8483,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -8383,6 +8530,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -13807,6 +13975,27 @@
 "okaloosa|142S25000000270000|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.19",
 "county": "Okaloosa",
@@ -13823,6 +14012,27 @@
 "okaloosa|161S22251000000050|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.13",
 "county": "Okaloosa",
@@ -13839,6 +14049,27 @@
 "okaloosa|172S24236000060030|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.32",
 "county": "Okaloosa",
@@ -13855,6 +14086,27 @@
 "okaloosa|173N23249001570090|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.48",
 "county": "Okaloosa",
@@ -13871,6 +14123,30 @@
 "okaloosa|182S23080K00120370|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE",
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.47",
 "county": "Okaloosa",
@@ -13887,6 +14163,27 @@
 "okaloosa|203N24000000060090|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.90",
 "county": "Okaloosa",
@@ -13903,6 +14200,27 @@
 "okaloosa|224N23000000370000|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.75",
 "county": "Okaloosa",
@@ -13919,6 +14237,27 @@
 "okaloosa|231S22501200000320|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.22",
 "county": "Okaloosa",
@@ -13935,6 +14274,27 @@
 "okaloosa|261S22100000000190|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.23",
 "county": "Okaloosa",
@@ -13951,6 +14311,27 @@
 "okaloosa|273N25000000030150|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "2.82",
 "county": "Okaloosa",
@@ -13967,6 +14348,27 @@
 "okaloosa|331S24000000420240|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.42",
 "county": "Okaloosa",
@@ -13983,6 +14385,27 @@
 "okaloosa|351S24274800000040|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:36:31+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.06",
 "county": "Okaloosa",
