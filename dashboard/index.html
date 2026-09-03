@@ -1078,9 +1078,11 @@ function landCheckCached(p) {
 const LC_SFHA = new Set(["A", "AE", "AH", "AO", "AR", "A99", "V", "VE"]);
 const LC_ROADS = new Set(["motorway", "trunk", "primary", "secondary", "tertiary",
                           "unclassified", "residential", "living_street", "service"]);
+// Official public NWI REST host first, mirror second. (www.fws.gov/wetlands/...
+// is the website behind a WAF, not an API — it 403s — so it's not listed.)
 const NWI_Q = [
-  "https://www.fws.gov/wetlands/arcgis/rest/services/Wetlands/MapServer/0/query",
   "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query",
+  "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query",
 ];
 const FEMA_Q = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query";
 const OVERPASS_MIRRORS = ["https://overpass-api.de/api/interpreter",
@@ -1123,17 +1125,32 @@ async function lcArcgis(url, bbox, outFields) {
   if (j.error) throw new Error("gis error");
   return (j.features || []).map((f) => f.attributes || {});
 }
+async function lcArcgisPoint(url, cen, outFields) {   // cen = [lng,lat]
+  const geom = encodeURIComponent(JSON.stringify({ x: cen[0], y: cen[1], spatialReference: { wkid: 4326 } }));
+  const q = `${url}?f=json&geometry=${geom}&geometryType=esriGeometryPoint`
+    + `&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=${encodeURIComponent(outFields)}&returnGeometry=false`;
+  const r = await fetch(q);
+  if (!r.ok) throw new Error("gis " + r.status);
+  const j = await r.json();
+  if (j.error) throw new Error("gis error");
+  return (j.features || []).map((f) => f.attributes || {});
+}
 async function lcRun(p) {
   const g = lcGeom(p);
   if (!g) return { verdict: "unknown", reasons: ["No parcel location to check"],
                    wetland: { status: "unknown" }, flood: { status: "unknown" }, access: { status: "unknown" } };
   let wet = { status: "unknown" }, flood = { status: "unknown" }, access = { status: "unknown" };
   for (const nwi of NWI_Q) {
-    try {
-      const f = await lcArcgis(nwi, g.bbox, "WETLAND_TYPE");
+    let f = null;
+    // Envelope first (full parcel extent); centroid point as a fallback on the
+    // same host — the NWI ArcGIS instances sometimes reject the envelope with a
+    // 400 where a simple point query still answers.
+    try { f = await lcArcgis(nwi, g.bbox, "WETLAND_TYPE"); }
+    catch (e) { try { f = await lcArcgisPoint(nwi, g.cen, "WETLAND_TYPE"); } catch (e2) {} }
+    if (f) {
       wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (a.WETLAND_TYPE || "").trim()).filter(Boolean))] } : { status: "none" };
       break;   // this endpoint answered
-    } catch (e) { /* try the next NWI endpoint */ }
+    }
   }
   try {
     const f = await lcArcgis(FEMA_Q, g.bbox, "FLD_ZONE");
