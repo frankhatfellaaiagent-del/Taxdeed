@@ -2762,6 +2762,27 @@
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "1.02",
@@ -2781,6 +2802,30 @@
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE",
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.26",
@@ -2800,6 +2845,27 @@
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "1.04",
@@ -5184,6 +5250,21 @@
 "hillsborough|0806000100|2026-592": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"status": "unknown"
+},
+"from": "boundary",
+"reasons": [],
+"verdict": "unknown",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "18.60",
 "county": "Hillsborough",
@@ -12991,6 +13072,29 @@
 "miamidade|01-3230-032-0220|2026A00210": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.21",
 "county": "Miami-Dade",
@@ -13007,6 +13111,27 @@
 "miamidade|03-4120-065-0860|2026A00205": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.21",
 "county": "Miami-Dade",
@@ -13023,6 +13148,27 @@
 "miamidade|16-7824-008-1050|2026A00209": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.21",
 "county": "Miami-Dade",
@@ -13039,6 +13185,29 @@
 "miamidade|30-8814-000-0940|2026A00199": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"A"
+],
+"status": "sfha",
+"zones": [
+"A"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (A)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.61",
 "county": "Miami-Dade",
@@ -13054,6 +13223,29 @@
 "miamidade|30-9905-000-0160|2026A00200": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.23",
 "county": "Miami-Dade",
@@ -13069,6 +13261,29 @@
 "miamidade|30-9905-000-0380|2026A00201": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.23",
 "county": "Miami-Dade",
@@ -13084,6 +13299,29 @@
 "miamidade|30-9905-000-0990|2026A00195": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.23",
 "county": "Miami-Dade",
@@ -13099,6 +13337,29 @@
 "miamidade|30-9905-000-1170|2026A00196": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.28",
 "county": "Miami-Dade",
@@ -13114,6 +13375,29 @@
 "miamidade|30-9905-000-4180|2026A00198": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.23",
 "county": "Miami-Dade",
@@ -13129,6 +13413,29 @@
 "miamidade|30-9905-000-4851|2026A00197": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.24",
 "county": "Miami-Dade",
@@ -13144,6 +13451,29 @@
 "miamidade|34-2108-010-5820|2026A00190": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE"
+],
+"status": "sfha",
+"zones": [
+"AE"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.19",
 "county": "Miami-Dade",
@@ -13176,6 +13506,27 @@
 "okaloosa|002S22425000000059|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.02",
 "county": "Okaloosa",
@@ -13192,6 +13543,32 @@
 "okaloosa|002S243089106D0000|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"AE",
+"VE"
+],
+"status": "sfha",
+"zones": [
+"AE",
+"VE",
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (AE, VE)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "9.02",
 "county": "Okaloosa",
@@ -13208,6 +13585,27 @@
 "okaloosa|032S24166500000610|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.09",
 "county": "Okaloosa",
@@ -13224,6 +13622,27 @@
 "okaloosa|065N25000000050000|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "1.02",
 "county": "Okaloosa",
@@ -13240,6 +13659,27 @@
 "okaloosa|081S222020000E0140|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.25",
 "county": "Okaloosa",
@@ -13256,6 +13696,27 @@
 "okaloosa|102S243030000D0310|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.36",
 "county": "Okaloosa",
@@ -13272,6 +13733,27 @@
 "okaloosa|112S24258A00020100|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.25",
 "county": "Okaloosa",
@@ -13288,6 +13770,27 @@
 "okaloosa|142S241680000B0150|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "parcel": {
 "acreage": "0.25",
 "county": "Okaloosa",
@@ -20142,6 +20645,27 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "10.22",
@@ -20173,6 +20697,27 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "1.31",
@@ -20192,6 +20737,27 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.96",
@@ -20223,6 +20789,30 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"A"
+],
+"status": "sfha",
+"zones": [
+"A",
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (A)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "9.92",
@@ -20242,6 +20832,30 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [
+"A"
+],
+"status": "sfha",
+"zones": [
+"A",
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"In a FEMA flood zone (A)"
+],
+"verdict": "review",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.52",
@@ -20261,6 +20875,27 @@
 "appraiser_error": "no recognizable fields on page",
 "fetched_at": "2026-08-28T01:25:07+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "4.37",
@@ -20279,6 +20914,27 @@
 "suwannee|930003011|4698": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-02T02:19:13+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T13:09:34+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "centroid",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
