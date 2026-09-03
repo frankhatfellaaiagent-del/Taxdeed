@@ -9742,6 +9742,21 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"status": "unknown"
+},
+"from": "boundary",
+"reasons": [],
+"verdict": "unknown",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -9768,6 +9783,21 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"status": "unknown"
+},
+"from": "boundary",
+"reasons": [],
+"verdict": "unknown",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -9794,6 +9824,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -9834,6 +9885,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.25",
@@ -9860,6 +9932,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -9886,6 +9979,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -9912,6 +10026,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -9938,6 +10073,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -9978,6 +10134,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10004,6 +10181,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -10030,6 +10228,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.24",
@@ -10084,6 +10303,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10110,6 +10350,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10164,6 +10425,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10190,6 +10472,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10230,6 +10533,21 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"status": "unknown"
+},
+"from": "boundary",
+"reasons": [],
+"verdict": "unknown",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10256,6 +10574,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10282,6 +10621,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10308,6 +10668,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.23",
@@ -10334,6 +10715,27 @@
 "deed_status": "READYSALE",
 "fetched_at": "2026-08-22T06:50:23+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"land_check": {
+"access": {
+"status": "unknown"
+},
+"checked_at": "2026-09-03T14:16:51+00:00",
+"flood": {
+"sfha_zones": [],
+"status": "mapped",
+"zones": [
+"X"
+]
+},
+"from": "boundary",
+"reasons": [
+"No wetland, flood zone or access problem found in the public maps"
+],
+"verdict": "clear",
+"wetland": {
+"status": "unknown"
+}
+},
 "ok": true,
 "parcel": {
 "acreage": "0.22",
