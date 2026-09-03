@@ -1093,6 +1093,11 @@ async function lcOverpass(q) {
   }
   throw new Error("overpass unreachable");
 }
+function lcAttr(a, name) {   // read a field by bare name, tolerating a layer-qualified key (Wetlands.WETLAND_TYPE)
+  if (a[name] != null) return a[name];
+  for (const k in a) if (k.split(".").pop() === name) return a[k];
+  return null;
+}
 function lcHaversine(a, b) {   // a,b = [lng,lat]
   const R = 6371000, r = Math.PI / 180;
   const dLat = (b[1] - a[1]) * r, dLng = (b[0] - a[0]) * r;
@@ -1142,13 +1147,14 @@ async function lcRun(p) {
   let wet = { status: "unknown" }, flood = { status: "unknown" }, access = { status: "unknown" };
   for (const nwi of NWI_Q) {
     let f = null;
-    // Envelope first (full parcel extent); centroid point as a fallback on the
-    // same host — the NWI ArcGIS instances sometimes reject the envelope with a
-    // 400 where a simple point query still answers.
-    try { f = await lcArcgis(nwi, g.bbox, "WETLAND_TYPE"); }
-    catch (e) { try { f = await lcArcgisPoint(nwi, g.cen, "WETLAND_TYPE"); } catch (e2) {} }
+    // outFields="*" on purpose: the USFWS national service qualifies its columns
+    // with the layer name (Wetlands.WETLAND_TYPE), so naming a bare field draws a
+    // 400. Envelope first (full parcel extent); centroid point as a fallback on
+    // the same host in case the envelope is rejected or times out.
+    try { f = await lcArcgis(nwi, g.bbox, "*"); }
+    catch (e) { try { f = await lcArcgisPoint(nwi, g.cen, "*"); } catch (e2) {} }
     if (f) {
-      wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (a.WETLAND_TYPE || "").trim()).filter(Boolean))] } : { status: "none" };
+      wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (lcAttr(a, "WETLAND_TYPE") || "").trim()).filter(Boolean))] } : { status: "none" };
       break;   // this endpoint answered
     }
   }
