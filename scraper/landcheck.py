@@ -106,6 +106,21 @@ def _haversine_m(a: tuple, b: tuple) -> float:
 
 
 # --------------------------------------------------------------- ArcGIS -------
+def _attr(feature: dict, name: str):
+    """Read an attribute by bare name, tolerating a layer-qualified key.
+
+    Some ArcGIS services (the USFWS national NWI service among them) return
+    fields qualified with the layer name, e.g. ``Wetlands.WETLAND_TYPE``. Match
+    the bare key first, then any key whose final dotted segment equals `name`.
+    """
+    if name in feature:
+        return feature[name]
+    for key, val in feature.items():
+        if key.rsplit(".", 1)[-1] == name:
+            return val
+    return None
+
+
 def _point_param(lng: float, lat: float) -> str:
     return json.dumps({"x": lng, "y": lat, "spatialReference": {"wkid": 4326}})
 
@@ -154,9 +169,14 @@ def check_wetlands(rings: list, session) -> dict:
     poly = _geom_param(rings)
     feats = None
     for url in NWI_URLS:
-        feats = _arcgis_query(url, poly, "esriGeometryPolygon", "WETLAND_TYPE,ACRES", session)
+        # outFields="*" on purpose: the USFWS national service qualifies its
+        # columns with the layer name (Wetlands.WETLAND_TYPE, Wetlands.ACRES),
+        # so naming bare fields draws a 400 "Failed to execute query". "*" is
+        # portable across the differently-qualified mirrors; _attr() below reads
+        # the type under whichever key form comes back.
+        feats = _arcgis_query(url, poly, "esriGeometryPolygon", "*", session)
         if feats is None and pt is not None:
-            feats = _arcgis_query(url, pt, "esriGeometryPoint", "WETLAND_TYPE,ACRES", session)
+            feats = _arcgis_query(url, pt, "esriGeometryPoint", "*", session)
             if feats is not None:
                 log.info("NWI answered via centroid point at %s", url)
         if feats is not None:
@@ -167,7 +187,7 @@ def check_wetlands(rings: list, session) -> dict:
         return {"status": "unknown"}
     if not feats:
         return {"status": "none"}
-    types = sorted({(f.get("WETLAND_TYPE") or "").strip() for f in feats if f.get("WETLAND_TYPE")})
+    types = sorted({(_attr(f, "WETLAND_TYPE") or "").strip() for f in feats if _attr(f, "WETLAND_TYPE")})
     # "Freshwater Pond"/"Riverine" etc. all count; drop nothing but blanks.
     return {"status": "wetland", "types": types or ["mapped wetland"], "features": len(feats)}
 
