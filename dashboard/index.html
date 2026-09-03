@@ -687,6 +687,7 @@ function mapRecord(r, i) {
     caseUrl: r.clerk_case_url || "", deedStatus: r.deed_status || "",
     applicant: r.applicant || "", applicantAddr: r.applicant_address || "",
     caseDocs: r.case_docs || [], caseFlags: r.case_flags || [],
+    landCheck: r.land_check || null,
     useType: typeFromUse(r.property_use),
     lat: r.lat ?? null, lng: r.lng ?? null, geometry: r.parcel_geometry || "",
     assessed: r.assessed_value, bid: r.opening_bid, pct: r.bid_to_value_pct,
@@ -1116,6 +1117,13 @@ function renderDetail() {
   const pctText = p.pct != null
     ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
     : "Assessed value not published on the auction record — confirm value on the appraiser site.";
+  // The GIS land check (wetlands / flood / access), computed in the pipeline.
+  const lc = p.landCheck;
+  const landText = (lc && lc.verdict && lc.verdict !== "unknown")
+    ? `<b>${lc.verdict === "avoid" ? "Likely a pass" : lc.verdict === "review" ? "Worth a closer look" : "No land red flags found"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (located from the parcel's point, not its full boundary — confirm)" : ""}. Check the maps linked below.`
+    : (ll || hasAddr)
+      ? "See the parcel on the map above; the National Wetlands (NWI) map, the FEMA flood map and the satellite view are linked below. On land, the ground is what kills a deal — wet, in a flood zone, or landlocked — so walk the maps before you drive out."
+      : "The county didn&rsquo;t publish an address — use the appraiser link to locate the parcel, then check it on the wetlands and FEMA flood maps before bidding.";
   const findings = [
     { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
     { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
@@ -1124,10 +1132,10 @@ function renderDetail() {
       text: p.enriched
         ? "Verified against the county appraiser — the owner, land use, acreage and mailing address above come straight from the official record."
         : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
-    { topic: "Site & wetlands", cls: "tag-accent",
-      text: (ll || hasAddr)
-        ? "See the parcel on the map above; the National Wetlands (NWI) map, the FEMA flood map and the satellite view are linked below. On land, the ground is what kills a deal — wet, in a flood zone, or landlocked — so walk the maps before you drive out."
-        : "The county didn't publish an address — use the appraiser link to locate the parcel, then check it on the wetlands and FEMA flood maps before bidding." },
+    { topic: "Site & wetlands",
+      cls: lc && lc.verdict === "avoid" ? "tag-outline"
+         : lc && lc.verdict === "review" ? "tag-neutral" : "tag-accent",
+      text: landText },
     { topic: "Next step", cls: "tag-neutral",
       text: "Check the parcel on the wetlands, flood and satellite maps" + (ll || hasAddr ? " (linked below)" : " once you've located it on the appraiser") + ", confirm the land use and owner on the appraiser, and open the clerk links for the case file." },
   ];
