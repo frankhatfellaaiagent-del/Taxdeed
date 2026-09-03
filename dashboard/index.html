@@ -1061,6 +1061,120 @@ function wktToLatLngs(wkt) {
   }
   return rings;
 }
+
+// ---------- on-demand land check (free public GIS, runs in the browser) ----------
+// The "dirt" research MADD asked for, run only when someone clicks: is the
+// parcel wet (USFWS National Wetlands Inventory), in a FEMA flood zone, or
+// landlocked (nearest OSM public road)? No key, no server, nothing pulled until
+// asked; the result is cached per parcel in this browser (and a feed-side bulk
+// pass can pre-fill it). Every call is guarded — a source that doesn't answer
+// is "unknown", never an error.
+const LC_MEM = {};
+function landCheckCached(p) {
+  if (LC_MEM[p.id]) return LC_MEM[p.id];
+  try { const s = localStorage.getItem("tdd_lc_" + p.id); if (s) return (LC_MEM[p.id] = JSON.parse(s)); } catch (e) {}
+  return p.landCheck || null;
+}
+const LC_SFHA = new Set(["A", "AE", "AH", "AO", "AR", "A99", "V", "VE"]);
+const LC_ROADS = new Set(["motorway", "trunk", "primary", "secondary", "tertiary",
+                          "unclassified", "residential", "living_street", "service"]);
+const NWI_Q = "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query";
+const FEMA_Q = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query";
+const OVERPASS_Q = "https://overpass-api.de/api/interpreter";
+function lcHaversine(a, b) {   // a,b = [lng,lat]
+  const R = 6371000, r = Math.PI / 180;
+  const dLat = (b[1] - a[1]) * r, dLng = (b[0] - a[0]) * r;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[1] * r) * Math.cos(b[1] * r) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+function lcGeom(p) {
+  const pts = [];   // [lng,lat]
+  const rings = p.geometry ? wktToLatLngs(p.geometry) : [];
+  for (const ring of rings) for (const [lat, lng] of ring) pts.push([lng, lat]);
+  const fromBoundary = pts.length > 0;
+  if (!pts.length && p.lat != null && p.lng != null) {
+    const d = 0.0009;
+    pts.push([p.lng - d, p.lat - d], [p.lng + d, p.lat - d], [p.lng + d, p.lat + d], [p.lng - d, p.lat + d]);
+  }
+  if (!pts.length) return null;
+  const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]);
+  return {
+    bbox: [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)],
+    cen: [xs.reduce((a, b) => a + b, 0) / xs.length, ys.reduce((a, b) => a + b, 0) / ys.length],
+    boundary: pts, from: fromBoundary ? "boundary" : "centroid",
+  };
+}
+async function lcArcgis(url, bbox, outFields) {
+  const q = `${url}?f=json&geometry=${bbox.join(",")}&geometryType=esriGeometryEnvelope`
+    + `&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=${encodeURIComponent(outFields)}&returnGeometry=false`;
+  const r = await fetch(q);
+  if (!r.ok) throw new Error("gis " + r.status);
+  const j = await r.json();
+  if (j.error) throw new Error("gis error");
+  return (j.features || []).map((f) => f.attributes || {});
+}
+async function lcRun(p) {
+  const g = lcGeom(p);
+  if (!g) return { verdict: "unknown", reasons: ["No parcel location to check"],
+                   wetland: { status: "unknown" }, flood: { status: "unknown" }, access: { status: "unknown" } };
+  let wet = { status: "unknown" }, flood = { status: "unknown" }, access = { status: "unknown" };
+  try {
+    const f = await lcArcgis(NWI_Q, g.bbox, "WETLAND_TYPE");
+    wet = f.length ? { status: "wetland", types: [...new Set(f.map((a) => (a.WETLAND_TYPE || "").trim()).filter(Boolean))] } : { status: "none" };
+  } catch (e) {}
+  try {
+    const f = await lcArcgis(FEMA_Q, g.bbox, "FLD_ZONE");
+    const zones = [...new Set(f.map((a) => (a.FLD_ZONE || "").trim()).filter(Boolean))];
+    const sfha = zones.filter((z) => LC_SFHA.has(z));
+    flood = !zones.length ? { status: "none" } : { status: sfha.length ? "sfha" : "mapped", zones, sfha_zones: sfha };
+  } catch (e) {}
+  try {
+    const [lng, lat] = g.cen;
+    const oq = `[out:json][timeout:20];way(around:350,${lat},${lng})[highway];out geom;`;
+    const r = await fetch(OVERPASS_Q + "?data=" + encodeURIComponent(oq));
+    const els = (await r.json()).elements || [];
+    let nearest = null;
+    for (const el of els) {
+      if (!LC_ROADS.has((el.tags || {}).highway)) continue;
+      for (const nd of el.geometry || []) for (const bp of g.boundary) {
+        const d = lcHaversine([nd.lon, nd.lat], bp);
+        if (nearest == null || d < nearest) nearest = d;
+      }
+    }
+    access = nearest == null ? { status: "landlocked", nearest_road_m: null }
+      : nearest <= 35 ? { status: "frontage", nearest_road_m: Math.round(nearest) }
+      : nearest >= 150 ? { status: "landlocked", nearest_road_m: Math.round(nearest) }
+      : { status: "verify", nearest_road_m: Math.round(nearest) };
+  } catch (e) {}
+  const reasons = []; let avoid = false, review = false;
+  if (wet.status === "wetland") { review = true; reasons.push("Wetland mapped on/at the parcel (" + (wet.types || []).join(", ") + ")"); }
+  if (flood.status === "sfha") { review = true; reasons.push("In a FEMA flood zone (" + (flood.sfha_zones || []).join(", ") + ")"); }
+  if (access.status === "landlocked") { avoid = true; reasons.push("No public road on the parcel" + (access.nearest_road_m ? ` — nearest ~${access.nearest_road_m} m away` : "") + " — likely landlocked"); }
+  else if (access.status === "verify") { review = true; reasons.push(`Nearest public road ~${access.nearest_road_m} m away — confirm legal access`); }
+  let verdict = avoid ? "avoid" : review ? "review" : "clear";
+  if (verdict === "clear" && [wet, flood, access].every((d) => d.status === "unknown")) verdict = "unknown";
+  if (verdict === "clear" && !reasons.length) reasons.push("No wetland, flood zone or access problem found in the public maps");
+  return { verdict, reasons, wetland: wet, flood, access, from: g.from, checked_at: new Date().toISOString() };
+}
+function runLandCheck(p) {
+  const btn = document.getElementById("run-landcheck");
+  const msg = document.getElementById("lc-msg");
+  if (btn) { btn.disabled = true; btn.textContent = "Checking…"; }
+  if (msg) msg.innerHTML = '<span class="ai-spin"></span> Checking wetlands, flood and road access…';
+  lcRun(p).then((res) => {
+    LC_MEM[p.id] = res;
+    try { localStorage.setItem("tdd_lc_" + p.id, JSON.stringify(res)); } catch (e) {}
+    if (res.verdict === "unknown") {
+      if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
+      if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+      return;
+    }
+    if (S.screen === "detail" && S.selId === p.id) renderDetail();
+  }).catch(() => {
+    if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
+    if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+  });
+}
 function initParcelMap(p) {
   if (!window.L || p.lat == null || p.lng == null) return;
   const el = document.getElementById("parcelmap");
@@ -1117,13 +1231,15 @@ function renderDetail() {
   const pctText = p.pct != null
     ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
     : "Assessed value not published on the auction record — confirm value on the appraiser site.";
-  // The GIS land check (wetlands / flood / access), computed in the pipeline.
-  const lc = p.landCheck;
+  // Land check (wetlands / flood / access) — on-demand: run from the button on
+  // the card, cached per parcel (this browser), or served from the feed if a
+  // bulk pass filled it. Free public GIS, nothing pulled until someone asks.
+  const lc = landCheckCached(p);
+  const LC_LABEL = { avoid: "Likely a pass", review: "Worth a closer look", clear: "No land red flags found" };
   const landText = (lc && lc.verdict && lc.verdict !== "unknown")
-    ? `<b>${lc.verdict === "avoid" ? "Likely a pass" : lc.verdict === "review" ? "Worth a closer look" : "No land red flags found"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (located from the parcel's point, not its full boundary — confirm)" : ""}. Check the maps linked below.`
-    : (ll || hasAddr)
-      ? "See the parcel on the map above; the National Wetlands (NWI) map, the FEMA flood map and the satellite view are linked below. On land, the ground is what kills a deal — wet, in a flood zone, or landlocked — so walk the maps before you drive out."
-      : "The county didn&rsquo;t publish an address — use the appraiser link to locate the parcel, then check it on the wetlands and FEMA flood maps before bidding.";
+    ? `<b>${LC_LABEL[lc.verdict] || "Checked"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (from the parcel's point, not its full boundary — confirm)" : ""}. Check the maps linked below.`
+    : `<span id="lc-msg">Run a quick land check &mdash; is it wet, in a flood zone, or landlocked? Free, on demand.</span>
+       <button id="run-landcheck" class="btn btn-secondary" style="margin-left:8px;font-size:12.5px;padding:3px 10px"${(ll || hasAddr || p.geometry) ? "" : " disabled"}>Run land check</button>`;
   const findings = [
     { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
     { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
@@ -1134,7 +1250,8 @@ function renderDetail() {
         : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
     { topic: "Site & wetlands",
       cls: lc && lc.verdict === "avoid" ? "tag-outline"
-         : lc && lc.verdict === "review" ? "tag-neutral" : "tag-accent",
+         : lc && lc.verdict === "review" ? "tag-neutral"
+         : lc && lc.verdict === "clear" ? "tag-accent" : "tag-neutral",
       text: landText },
     { topic: "Next step", cls: "tag-neutral",
       text: "Check the parcel on the wetlands, flood and satellite maps" + (ll || hasAddr ? " (linked below)" : " once you've located it on the appraiser") + ", confirm the land use and owner on the appraiser, and open the clerk links for the case file." },
@@ -1247,6 +1364,7 @@ function renderDetail() {
 
   $("back").onclick = () => go("dashboard");
   initParcelMap(p);
+  const rlc = $("run-landcheck"); if (rlc) rlc.onclick = () => runLandCheck(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
