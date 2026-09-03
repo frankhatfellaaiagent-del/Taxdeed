@@ -36,7 +36,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 
 # USFWS National Wetlands Inventory — layer 0 is the wetlands polygons.
-NWI_URL = "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query"
+NWI_URL = "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query"
 # FEMA National Flood Hazard Layer — layer 28 is the flood hazard zones.
 FEMA_URL = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query"
 # OpenStreetMap roads, via Overpass.

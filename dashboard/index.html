@@ -1078,9 +1078,16 @@ function landCheckCached(p) {
 const LC_SFHA = new Set(["A", "AE", "AH", "AO", "AR", "A99", "V", "VE"]);
 const LC_ROADS = new Set(["motorway", "trunk", "primary", "secondary", "tertiary",
                           "unclassified", "residential", "living_street", "service"]);
-const NWI_Q = "https://fwsprimary.wim.usgs.gov/server/rest/services/Wetlands/MapServer/0/query";
+const NWI_Q = "https://fwspublicservices.wim.usgs.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0/query";
 const FEMA_Q = "https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query";
-const OVERPASS_Q = "https://overpass-api.de/api/interpreter";
+const OVERPASS_MIRRORS = ["https://overpass-api.de/api/interpreter",
+                          "https://overpass.kumi.systems/api/interpreter"];
+async function lcOverpass(q) {
+  for (const url of OVERPASS_MIRRORS) {
+    try { const r = await fetch(url + "?data=" + encodeURIComponent(q)); if (r.ok) return await r.json(); } catch (e) {}
+  }
+  throw new Error("overpass unreachable");
+}
 function lcHaversine(a, b) {   // a,b = [lng,lat]
   const R = 6371000, r = Math.PI / 180;
   const dLat = (b[1] - a[1]) * r, dLng = (b[0] - a[0]) * r;
@@ -1131,8 +1138,7 @@ async function lcRun(p) {
   try {
     const [lng, lat] = g.cen;
     const oq = `[out:json][timeout:20];way(around:350,${lat},${lng})[highway];out geom;`;
-    const r = await fetch(OVERPASS_Q + "?data=" + encodeURIComponent(oq));
-    const els = (await r.json()).elements || [];
+    const els = (await lcOverpass(oq)).elements || [];
     let nearest = null;
     for (const el of els) {
       if (!LC_ROADS.has((el.tags || {}).highway)) continue;
@@ -1224,7 +1230,7 @@ function renderDetail() {
     // The FWS Wetlands Mapper is a custom app with no documented deep-link
     // params — link it plain; the copyable coordinates below paste straight
     // into its search box.
-    ["https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/", "Wetlands map (NWI)"],
+    ["https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper", "Wetlands map (NWI)"],
     ["https://msc.fema.gov/portal/search", "FEMA flood map"],
     [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
   ].filter(([href]) => href);
