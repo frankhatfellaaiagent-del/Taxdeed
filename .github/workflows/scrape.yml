@@ -150,11 +150,10 @@ jobs:
           # paperwork inside it, and (only when REPORTALL_API_KEY is configured)
           # the ReportAll parcel record.
           python -m scraper -v enrich --limit 300 --debug-dir output/debug/enrich || true
-          # Land check: the automated wetlands / flood / access ("dirt") read per
-          # parcel, from free public GIS (USFWS wetlands, FEMA flood, OSM roads —
-          # no key). Capped per run; soonest sales first, parcels checked within
-          # 30 days are skipped, so it spreads across daily runs. Best-effort.
-          python -m scraper -v enrich --landcheck --limit 120 || true
+          # Note: the land check (wetlands / flood / access) is NOT run daily —
+          # it's on-demand from the property card (a per-parcel button, computed
+          # client-side from free public GIS), so nothing extra is pulled every
+          # day. `enrich --landcheck` stays available for an optional bulk pass.
           python -m scraper export --run "data/runs/$name" || true
           # Retention: the feeds carry the merged history; keep only the last
           # 10 raw run directories (~1.5 weeks at daily cadence) so the repo
