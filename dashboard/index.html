@@ -9,6 +9,17 @@
 <link rel="stylesheet" href="ds/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/* Set the theme before first paint so the page never flashes light: a saved
+   choice wins, otherwise fall back to the viewer's OS setting. */
+(function () {
+  try {
+    var t = localStorage.getItem("tdd_theme");
+    if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+})();
+</script>
 <style>
 html,body{margin:0;height:100%}
 @media (min-width:901px){html,body{overflow:hidden}}
@@ -96,6 +107,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
     <input class="input" id="q" placeholder="Search parcel, address, case&hellip;" style="max-width:320px">
     <span style="margin-left:auto;font-size:12px" class="text-muted" id="last-scrape">loading&hellip;</span>
+    <button class="btn btn-secondary btn-icon" id="btn-theme" title="Toggle dark mode" aria-label="Toggle dark mode"></button>
     <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export CSV</button>
     <button class="btn btn-primary" id="btn-refresh-admin" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Trigger refresh</button>
   </header>
@@ -1986,9 +1998,30 @@ function exportRowsCsv(rows, name) {
 const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
 
 // ---------- boot ----------
+// ---------- theme (light / dark) ----------
+const THEME_SUN = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
+const THEME_MOON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+function themeIsDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
+function paintThemeBtn() {
+  const b = $("btn-theme"); if (!b) return;
+  const dark = themeIsDark();
+  b.innerHTML = dark ? THEME_SUN : THEME_MOON;   // show where the click takes you
+  b.title = dark ? "Switch to light mode" : "Switch to dark mode";
+}
+function initTheme() {
+  paintThemeBtn();
+  $("btn-theme").onclick = () => {
+    const next = themeIsDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("tdd_theme", next); } catch (e) {}
+    paintThemeBtn();
+  };
+}
+
 (async function boot() {
   renderNav();
   wireLogin();
+  initTheme();
   initCloud();                      // no await — sync comes up alongside the feed
   $("next-run").textContent = nextRefreshText();
   $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };

@@ -63,6 +63,59 @@
   --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2b2d 22%, transparent);
 }
 
+/* ── Dark theme ─────────────────────────────────────────────────────────────
+   Opt-in via <html data-theme="dark">. A tiny head script sets it before first
+   paint (saved choice, else the OS setting) and the header toggle flips it.
+   Only the tokens change — every component reads them, so the whole app
+   follows, and the many color-mix(... var(--color-text) ...) derivations
+   (muted text, dividers, hovers) invert on their own once the ink is light. */
+:root[data-theme="dark"] {
+  --color-bg: #15171a;
+  --color-surface: #1e2226;
+  --color-text: #e6e8eb;
+  --color-accent: #6f97bd;
+  --color-accent-2: #7e9cb8;
+  --color-divider: color-mix(in srgb, #e6e8eb 18%, transparent);
+  --color-danger: #f2726a;
+
+  /* Neutral ramp inverted: low steps = dark surfaces, high steps = light ink.
+     900 stays dark on purpose — its only use is the modal/login scrim. */
+  --color-neutral-100: #202429;
+  --color-neutral-200: #2a2f35;
+  --color-neutral-300: #3a4047;
+  --color-neutral-400: #565c64;
+  --color-neutral-500: #7b818a;
+  --color-neutral-600: #9aa0a8;
+  --color-neutral-700: #b9bec5;
+  --color-neutral-800: #d7dade;
+  --color-neutral-900: #0a0c0e;
+
+  /* Accent ramp inverted: low steps = deep-blue fills, high steps = pale ink. */
+  --color-accent-100: #1b2c3f;
+  --color-accent-200: #223a50;
+  --color-accent-300: #2e4a63;
+  --color-accent-400: #3f6081;
+  --color-accent-500: #5a7ea3;
+  --color-accent-600: #7ea4c8;
+  --color-accent-700: #a6c6e6;
+  --color-accent-800: #cadef4;
+  --color-accent-900: #e8f1fb;
+
+  --color-accent-2-100: #1c2a37;
+  --color-accent-2-200: #243645;
+  --color-accent-2-300: #30475a;
+  --color-accent-2-400: #425e74;
+  --color-accent-2-500: #5c7890;
+  --color-accent-2-600: #7e9cb8;
+  --color-accent-2-700: #a3bdd4;
+  --color-accent-2-800: #c9dbec;
+  --color-accent-2-900: #e6eff8;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #000 45%, transparent);
+  --shadow-md: 0 3px 12px color-mix(in srgb, #000 50%, transparent);
+  --shadow-lg: 0 14px 36px color-mix(in srgb, #000 62%, transparent);
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
