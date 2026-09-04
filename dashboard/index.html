@@ -1281,10 +1281,10 @@ function renderDetail() {
     [appraiserLink(p), `${esc(p.county)} Property Appraiser`],
     [p.auctionUrl, "Live auction listing (RealAuction)"],
     [clerkLink(p), p.caseUrl ? "This parcel&rsquo;s clerk case file" : "Tax deed case records (county)"],
-    // The FWS Wetlands Mapper is a custom app with no documented deep-link
-    // params — link it plain; the copyable coordinates below paste straight
-    // into its search box.
-    ["https://www.fws.gov/program/national-wetlands-inventory/wetlands-mapper", "Wetlands map (NWI)"],
+    // Open the interactive Wetlands Mapper app directly (not the FWS landing
+    // page). It has no documented deep-link params, so the copyable coordinates
+    // below paste straight into its search box to jump to the parcel.
+    ["https://fwsprimary.wim.usgs.gov/wetlands/apps/wetlands-mapper/", "Wetlands map (NWI)"],
     ["https://msc.fema.gov/portal/search", "FEMA flood map"],
     [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
   ].filter(([href]) => href);
