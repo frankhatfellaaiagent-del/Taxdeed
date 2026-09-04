@@ -384,6 +384,24 @@ function applySnap(current, next) {
   return JSON.stringify(current) === JSON.stringify(next) ? null : next;
 }
 
+// Union two devices' personal lists by name for the first-contact merge. A
+// delete is a tombstone (l.deleted timestamp) that MUST survive: when the same
+// name is on both sides, a tombstoned copy wins over a live one (so a device
+// that still has a list it deleted elsewhere can't resurrect it); between two
+// tombstones the newer one wins. Tombstones older than 60 days are dropped.
+function mergeLists(a, b) {
+  const PURGE_MS = 60 * 24 * 3600 * 1000, now = Date.now();
+  const byName = new Map();
+  for (const l of [...(a || []), ...(b || [])]) {
+    if (!l || !l.name) continue;
+    const prev = byName.get(l.name);
+    if (!prev) { byName.set(l.name, l); continue; }
+    if (l.deleted && !prev.deleted) byName.set(l.name, l);
+    else if (l.deleted && prev.deleted && String(l.deleted) > String(prev.deleted)) byName.set(l.name, l);
+  }
+  return [...byName.values()].filter((l) => !(l.deleted && now - Date.parse(l.deleted) > PURGE_MS));
+}
+
 async function cloudSignIn(email, pass) {
   const { error } = await CLOUD.sb.auth.signInWithPassword({ email, password: pass });
   if (error) throw error;
@@ -426,9 +444,9 @@ async function onSignedIn(user) {
     const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
     interest = { ...interest, ...(U.interest || {}) };
     prefs = { ...prefs, ...(U.prefs || {}) };
-    const cloudLists = (U.lists || []).slice();
-    for (const l of lists) if (!cloudLists.some((c) => c.name === l.name)) cloudLists.push(l);
-    lists = cloudLists.length ? cloudLists : lists;
+    // Union cloud + local by name, but let deletions (tombstones) win so a
+    // list deleted on another device stays deleted instead of being resurrected.
+    lists = mergeLists(U.lists || [], lists);
     team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
     // The team shares one buy box — a personal edit made before signing in is a
     // starting point, not something that overrides what the team already set.
@@ -732,13 +750,13 @@ function listItems(name, shared) {
     ? DATA.filter((p) => team.membership[p.id] === name)
     : DATA.filter((p) => !team.membership[p.id] && getInt(p.id).list === name);
 }
-// Find a list object by name across both collections.
-const findList = (name, shared) => (shared ? team.lists : lists).find((l) => l.name === name);
+// Find a LIVE list object by name (a deleted/tombstoned list reads as gone).
+const findList = (name, shared) => (shared ? team.lists : lists).find((l) => l.name === name && !l.deleted);
 // Rename a list and re-point every parcel assigned to it.
 function renameList(oldName, newName, shared) {
   newName = newName.trim();
   if (!newName || newName === oldName) return false;
-  if (lists.some((l) => l.name === newName) || team.lists.some((l) => l.name === newName)) return false;
+  if (lists.some((l) => l.name === newName && !l.deleted) || team.lists.some((l) => l.name === newName && !l.deleted)) return false;
   const l = findList(oldName, shared); if (!l) return false;
   l.name = newName;
   if (shared) {
@@ -763,15 +781,21 @@ function setListArchived(name, shared, val) {
   l.archived = val;
   shared ? saveTeam() : saveLists();
 }
-// Delete removes the list and unassigns its parcels (the parcels themselves and
-// any notes/positions on them are untouched).
+// Delete unassigns the list's parcels and marks the list itself deleted with a
+// TOMBSTONE (l.deleted = timestamp) rather than dropping it from the array. The
+// tombstone syncs like any other list field, so the delete reaches every device
+// and — crucially — survives the sign-in merge. A hard delete used to be undone
+// by that merge: a device that still had the list locally would re-add it and
+// push it back to the cloud, resurrecting it everywhere. Tombstones are hidden
+// everywhere in the UI (see the !l.deleted filters) and purged after 60 days.
 function deleteList(name, shared) {
+  const stamp = new Date().toISOString();
   if (shared) {
-    team.lists = team.lists.filter((l) => l.name !== name);
+    const l = team.lists.find((x) => x.name === name && !x.deleted); if (l) l.deleted = stamp;
     for (const [id, ln] of Object.entries(team.membership)) if (ln === name) delete team.membership[id];
     saveTeam();
   } else {
-    lists = lists.filter((l) => l.name !== name);
+    const l = lists.find((x) => x.name === name && !x.deleted); if (l) l.deleted = stamp;
     for (const [id, it] of Object.entries(interest)) if (it.list === name) interest[id] = { ...it, list: "" };
     saveInterest(); saveLists();
   }
@@ -1395,8 +1419,8 @@ function renderDetail() {
             <input class="input" id="pos-bid" placeholder="${esc(prefs.budget || "$ 0")}" value="${esc(it.bid)}" style="font-variant-numeric:tabular-nums;font-weight:500"></div>
           <div class="field" style="margin-bottom:12px"><label>Add to list</label>
             <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>
-              ${lists.length ? `<optgroup label="My lists">${lists.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
-              ${team.lists.length ? `<optgroup label="Team lists (shared)">${team.lists.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""}
+              ${(() => { const ll = lists.filter((l) => !l.deleted); return ll.length ? `<optgroup label="My lists">${ll.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
+              ${(() => { const tl = team.lists.filter((l) => !l.deleted); return tl.length ? `<optgroup label="Team lists (shared)">${tl.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
             </select></div>
           <div class="field"><label>Notes</label>
             <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
@@ -1444,8 +1468,8 @@ function renderDetail() {
 function renderLists() {
   const signedIn = !!(CLOUD && CLOUD.user);
   const all = [
-    ...lists.map((l) => ({ ...l, shared: false })),
-    ...team.lists.map((l) => ({ ...l, shared: true })),
+    ...lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: true })),
   ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
   const active = all.filter((l) => !l.archived);
   const archived = all.filter((l) => l.archived);
@@ -1494,13 +1518,18 @@ function renderLists() {
     const inp = $("new-list");
     const name = (inp.value || "").trim();
     if (!name) { listHint("Type a name for the list first."); inp.focus(); return; }
-    if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
+    if (lists.some((l) => l.name === name && !l.deleted) || team.lists.some((l) => l.name === name && !l.deleted)) {
       listHint(`You already have a list called “${name}.” Pick a different name.`); return;
     }
     const sharedBox = $("new-list-shared");
     const shared = !!(sharedBox && sharedBox.checked);
-    if (shared) { team.lists.push({ name, desc: "" }); saveTeam(); }
-    else { lists.push({ name, desc: "" }); saveLists(); }
+    const arr = shared ? team.lists : lists;
+    // Reusing a deleted list's name revives it (clears the tombstone) rather
+    // than leaving two entries with the same name.
+    const tomb = arr.find((l) => l.name === name && l.deleted);
+    if (tomb) { delete tomb.deleted; tomb.archived = false; }
+    else arr.push({ name, desc: "" });
+    shared ? saveTeam() : saveLists();
     renderLists();   // stay on the grid so the new card shows as confirmation
   };
   $("add-list").onclick = createList;
