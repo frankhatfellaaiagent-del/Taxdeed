@@ -1181,14 +1181,27 @@ async function lcRun(p) {
       : nearest >= 150 ? { status: "landlocked", nearest_road_m: Math.round(nearest) }
       : { status: "verify", nearest_road_m: Math.round(nearest) };
   } catch (e) {}
-  const reasons = []; let avoid = false, review = false;
-  if (wet.status === "wetland") { review = true; reasons.push("Wetland mapped on/at the parcel (" + (wet.types || []).join(", ") + ")"); }
-  if (flood.status === "sfha") { review = true; reasons.push("In a FEMA flood zone (" + (flood.sfha_zones || []).join(", ") + ")"); }
-  if (access.status === "landlocked") { avoid = true; reasons.push("No public road on the parcel" + (access.nearest_road_m ? ` — nearest ~${access.nearest_road_m} m away` : "") + " — likely landlocked"); }
-  else if (access.status === "verify") { review = true; reasons.push(`Nearest public road ~${access.nearest_road_m} m away — confirm legal access`); }
+  // Always give a plain read of ALL THREE, whether they flag or not — so the
+  // card says "no wetland here" out loud instead of going silent when a parcel
+  // is clean. avoid/review only trip on real problems; the verdict is unchanged.
+  let avoid = false, review = false;
+  let wetLine;
+  if (wet.status === "wetland") { review = true; wetLine = "Wetland: mapped on the parcel (" + (wet.types || []).join(", ") + ") — confirm"; }
+  else if (wet.status === "none") wetLine = "Wetland: none mapped on the parcel";
+  else wetLine = "Wetland: couldn’t read the map — check it yourself";
+  let floodLine;
+  if (flood.status === "sfha") { review = true; floodLine = "Flood: in a FEMA high-risk zone (" + (flood.sfha_zones || []).join(", ") + ")"; }
+  else if (flood.status === "mapped") floodLine = "Flood: outside the FEMA high-risk zone" + ((flood.zones || []).length ? " (zone " + flood.zones.join(", ") + ")" : "");
+  else if (flood.status === "none") floodLine = "Flood: not in a mapped FEMA flood zone";
+  else floodLine = "Flood: couldn’t read the map — check it yourself";
+  let accessLine;
+  if (access.status === "landlocked") { avoid = true; accessLine = "Access: no public road on the parcel" + (access.nearest_road_m ? ` — nearest ~${access.nearest_road_m} m away` : "") + " — likely landlocked"; }
+  else if (access.status === "verify") { review = true; accessLine = `Access: nearest public road ~${access.nearest_road_m} m away — confirm legal access`; }
+  else if (access.status === "frontage") accessLine = `Access: a public road runs along the parcel (~${access.nearest_road_m} m)`;
+  else accessLine = "Access: couldn’t read the road map — check it yourself";
+  const reasons = [wetLine, floodLine, accessLine];
   let verdict = avoid ? "avoid" : review ? "review" : "clear";
   if (verdict === "clear" && [wet, flood, access].every((d) => d.status === "unknown")) verdict = "unknown";
-  if (verdict === "clear" && !reasons.length) reasons.push("No wetland, flood zone or access problem found in the public maps");
   return { verdict, reasons, wetland: wet, flood, access, from: g.from, checked_at: new Date().toISOString() };
 }
 function runLandCheck(p) {

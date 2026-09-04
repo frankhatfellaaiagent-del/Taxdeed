@@ -245,25 +245,49 @@ def check_access(rings: list, session) -> dict:
 
 # ---------------------------------------------------------------- verdict -----
 def derive(wet: dict, flood: dict, access: dict) -> dict:
-    reasons, avoid, review = [], False, False
-    if wet.get("status") == "wetland":
+    # A plain read of ALL THREE dimensions, whether they flag or not — the card
+    # should say "no wetland here" out loud, not go silent on a clean parcel.
+    # avoid/review only trip on real problems; the verdict is unchanged.
+    avoid = review = False
+
+    ws = wet.get("status")
+    if ws == "wetland":
         review = True
-        reasons.append("Wetland mapped on the parcel (" + ", ".join(wet.get("types", [])) + ")")
-    if flood.get("status") == "sfha":
+        wet_line = "Wetland: mapped on the parcel (" + ", ".join(wet.get("types", [])) + ") — confirm"
+    elif ws == "none":
+        wet_line = "Wetland: none mapped on the parcel"
+    else:
+        wet_line = "Wetland: couldn't read the map — check it yourself"
+
+    fs = flood.get("status")
+    if fs == "sfha":
         review = True
-        reasons.append("In a FEMA flood zone (" + ", ".join(flood.get("sfha_zones", [])) + ")")
-    if access.get("status") == "landlocked":
+        flood_line = "Flood: in a FEMA high-risk zone (" + ", ".join(flood.get("sfha_zones", [])) + ")"
+    elif fs == "mapped":
+        zones = flood.get("zones", [])
+        flood_line = "Flood: outside the FEMA high-risk zone" + (f" (zone {', '.join(zones)})" if zones else "")
+    elif fs == "none":
+        flood_line = "Flood: not in a mapped FEMA flood zone"
+    else:
+        flood_line = "Flood: couldn't read the map — check it yourself"
+
+    a_s = access.get("status")
+    m = access.get("nearest_road_m")
+    if a_s == "landlocked":
         avoid = True
-        m = access.get("nearest_road_m")
-        reasons.append("No public road on the parcel" + (f" — nearest is ~{m} m away" if m else "") + " — likely landlocked")
-    elif access.get("status") == "verify":
+        access_line = "Access: no public road on the parcel" + (f" — nearest ~{m} m away" if m else "") + " — likely landlocked"
+    elif a_s == "verify":
         review = True
-        reasons.append(f"Nearest public road ~{access.get('nearest_road_m')} m from the parcel — confirm legal access")
+        access_line = f"Access: nearest public road ~{m} m away — confirm legal access"
+    elif a_s == "frontage":
+        access_line = f"Access: a public road runs along the parcel (~{m} m)"
+    else:
+        access_line = "Access: couldn't read the road map — check it yourself"
+
+    reasons = [wet_line, flood_line, access_line]
     verdict = "avoid" if avoid else "review" if review else "clear"
     if verdict == "clear" and all(d.get("status") == "unknown" for d in (wet, flood, access)):
         verdict = "unknown"
-    if not reasons and verdict == "clear":
-        reasons.append("No wetland, flood zone or access problem found in the public maps")
     return {"verdict": verdict, "reasons": reasons}
 
 
