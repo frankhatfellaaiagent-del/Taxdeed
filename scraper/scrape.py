@@ -18,8 +18,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
 
-from .models import CSV_COLUMNS, AuctionRecord
-from .parsing import looks_like_foreclosure, parse_auction_items, parse_calendar_dates
+from .foreclosure import classify as classify_foreclosure
+from .models import CSV_COLUMNS, FORECLOSURE_CSV_COLUMNS, AuctionRecord
+from .parsing import (looks_like_foreclosure, looks_like_taxdeed,
+                      parse_auction_items, parse_calendar_dates)
 from .robots import check_robots
 
 log = logging.getLogger(__name__)
@@ -46,19 +48,27 @@ def _combined_host_url(base_url: str) -> str | None:
     return None
 
 
-def _calendar_entries(source, slug: str, base_url: str, months: int) -> tuple[list, list]:
+def _calendar_entries(source, slug: str, base_url: str, months: int,
+                      kind: str = "taxdeed") -> tuple[list, list]:
     """Load a county's calendar from base_url; return (unique entries, pages)."""
     cal_pages = source.calendar_pages(slug, base_url, months=months)
     entries: list[dict] = []
     for page in cal_pages:
-        for d in parse_calendar_dates(page):
+        for d in parse_calendar_dates(page, kind=kind):
             if d["date"] not in [e["date"] for e in entries]:
                 entries.append(d)
     return entries, cal_pages
 
 
-def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = False) -> dict:
-    """Scrape one county. Returns {records, excluded, dates, warnings}."""
+def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = False,
+                  kind: str = "taxdeed") -> dict:
+    """Scrape one county. Returns {records, excluded, dates, warnings}.
+
+    kind="taxdeed" is the original pipeline. kind="foreclosure" keeps
+    foreclosure calendar days instead, applies the inverse sanity check
+    (tax-deed-smelling records are excluded), and computes foreclosure risk
+    flags on every record.
+    """
     slug, base_url = county["slug"], county["url"]
 
     warnings: list[str] = []
@@ -70,12 +80,12 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
     def _has_upcoming(es: list) -> bool:
         return any((e["date"][6:] + e["date"][:2] + e["date"][3:5]) >= today for e in es)
 
-    entries, cal_pages = _calendar_entries(source, slug, base_url, months)
+    entries, cal_pages = _calendar_entries(source, slug, base_url, months, kind=kind)
     # Combined-site fallback: if the configured tax-deed host shows no UPCOMING
     # sales (none at all, or only a stale past date), the county has likely
     # moved onto its combined foreclosure + tax-deed site on realforeclose.com.
     # Try that host and keep only its tax-deed days.
-    if not _has_upcoming(entries):
+    if not _has_upcoming(entries) and kind == "taxdeed":
         fallback = _combined_host_url(base_url)
         if fallback:
             allowed = True
@@ -85,7 +95,7 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
                 if not allowed:
                     warnings.append(f"calendar: combined site {fallback} disallowed by robots.txt")
             if allowed:
-                fb_entries, fb_pages = _calendar_entries(source, slug, fallback, months)
+                fb_entries, fb_pages = _calendar_entries(source, slug, fallback, months, kind=kind)
                 n_up = sum(1 for e in fb_entries if _has_upcoming([e]))
                 # Always leave a breadcrumb: distinguishes "combined site reached
                 # but no upcoming tax-deed sales" from "combined site unreadable"
@@ -103,7 +113,7 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
     if not cal_pages:
         warnings.append("calendar: no pages loaded")
     elif not dates:
-        warnings.append("calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)")
+        warnings.append(f"calendar: no {kind} sale dates found (may be none scheduled, or page structure changed)")
 
     expected_counts: dict[str, int | None] = {}
     for entry in entries:
@@ -124,7 +134,13 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
             for rec in items:
                 found += 1
                 rec.scraped_at = _now_iso()
-                if looks_like_foreclosure(rec):
+                if kind == "foreclosure":
+                    if looks_like_taxdeed(rec):
+                        excluded.append({"reason": "failed foreclosure sanity check (looks like tax deed)", **rec.to_dict()})
+                    else:
+                        classify_foreclosure(rec)
+                        records.append(rec)
+                elif looks_like_foreclosure(rec):
                     excluded.append({"reason": "failed taxdeed sanity check (looks like foreclosure)", **rec.to_dict()})
                 else:
                     records.append(rec)
@@ -144,12 +160,13 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
             "expected_counts": expected_counts, "warnings": warnings}
 
 
-def write_county_outputs(out_dir: Path, slug: str, result: dict):
+def write_county_outputs(out_dir: Path, slug: str, result: dict, kind: str = "taxdeed"):
     out_dir.mkdir(parents=True, exist_ok=True)
+    columns = FORECLOSURE_CSV_COLUMNS if kind == "foreclosure" else CSV_COLUMNS
     rows = [r.to_dict() for r in result["records"]]
     (out_dir / f"{slug}.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     with (out_dir / f"{slug}.csv").open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=CSV_COLUMNS, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=columns, extrasaction="ignore")
         w.writeheader()
         for row in rows:
             w.writerow(row)
@@ -175,13 +192,14 @@ def _write_status(out_dir: Path, meta: dict, current: str | None, total: int):
 
 
 def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 2,
-               skip_robots: bool = False) -> dict:
+               skip_robots: bool = False, kind: str = "taxdeed") -> dict:
     """Scrape a list of counties sequentially. Never raises for a single county."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     meta = {
         "started_at": _now_iso(),
         "months": months,
+        "kind": kind,
         "live": getattr(source, "is_live", False),
         "counties": {},
     }
@@ -204,13 +222,14 @@ def run_scrape(source, counties: list[dict], out_dir: str | Path, months: int = 
                     source.rate.base_delay = max(source.rate.base_delay, float(robots["crawl_delay"]))
 
             log.info("[%s] scraping %s", slug, county["url"])
-            result = scrape_county(source, county, months=months, skip_robots=skip_robots)
-            write_county_outputs(out_dir, slug, result)
+            result = scrape_county(source, county, months=months, skip_robots=skip_robots, kind=kind)
+            write_county_outputs(out_dir, slug, result, kind=kind)
             centry["auctions"] = len(result["records"])
             centry["sale_dates"] = result["dates"]
             centry["expected_counts"] = result["expected_counts"]
             centry["warnings"] = result["warnings"]
-            centry["excluded_foreclosure"] = len(result["excluded"])
+            centry["excluded_other_kind"] = len(result["excluded"])
+            centry["excluded_foreclosure"] = len(result["excluded"])  # legacy key, kept for report.py
             all_excluded.extend(result["excluded"])
             log.info("[%s] %d records, %d excluded, %d warnings", slug,
                      len(result["records"]), len(result["excluded"]), len(result["warnings"]))

@@ -73,9 +73,14 @@ LABEL_MAP = {
     "property use": "property_use",
     "land use": "property_use",
     "use code": "property_use",
+    # Foreclosure-card labels (never appear on tax deed cards).
+    "final judgment": "final_judgment_amount",
+    "final judgment amount": "final_judgment_amount",
+    "plaintiff max bid": "plaintiff_max_bid",
+    "plaintiff max": "plaintiff_max_bid",
 }
 
-MONEY_FIELDS = {"opening_bid", "assessed_value"}
+MONEY_FIELDS = {"opening_bid", "assessed_value", "final_judgment_amount"}
 
 
 def _norm_label(text: str) -> str:
@@ -224,11 +229,15 @@ def filter_fl_taxdeed(entries: list[dict]) -> tuple[list[dict], list[dict]]:
     return counties, rejected
 
 
-def parse_calendar_dates(html: str) -> list[dict]:
-    """Find tax-deed sale dates on a calendar page.
+def parse_calendar_dates(html: str, kind: str = "taxdeed") -> list[dict]:
+    """Find sale dates of one kind on a calendar page.
 
-    Returns [{date: 'MM/DD/YYYY', text: <cell text>}] for day cells whose text
-    mentions a tax deed sale. Foreclosure-looking cells are skipped.
+    kind="taxdeed" (default): day cells mentioning a tax deed sale; cells that
+    look like foreclosure sales are skipped — the original behavior.
+    kind="foreclosure": the inverse — foreclosure day cells only, tax deed
+    cells skipped (combined sites run both kinds on one calendar).
+
+    Returns [{date: 'MM/DD/YYYY', text: <cell text>}].
     """
     soup = BeautifulSoup(html, "lxml")
     out, seen = [], set()
@@ -237,9 +246,15 @@ def parse_calendar_dates(html: str) -> list[dict]:
         text_l = re.sub(r"\s+", " ", text).strip()
         if date in seen:
             return
-        if re.search(r"foreclos", text_l, re.I):
-            return
-        if re.search(r"tax\s*deed|taxdeed", text_l, re.I):
+        if kind == "foreclosure":
+            if re.search(r"tax\s*deed|taxdeed", text_l, re.I):
+                return
+            want = re.search(r"foreclos", text_l, re.I)
+        else:
+            if re.search(r"foreclos", text_l, re.I):
+                return
+            want = re.search(r"tax\s*deed|taxdeed", text_l, re.I)
+        if want:
             seen.add(date)
             # Day cells advertise item counts like "14 / 28 TD" — the second
             # number is the total items for that sale; used to cross-check
@@ -354,6 +369,14 @@ def parse_auction_items(html: str, page_url: str, county: str, sale_date: str) -
         stat = item.select_one(".ASTAT_MSGB, .ASTAT_MSG, .Astat_DATA")
         if stat:
             rec.auction_status = stat.get_text(" ", strip=True)
+        # Closed foreclosure cards carry the outcome in the stats box:
+        # "Amount" (.ASTAT_MSGD) and "Sold To" (.ASTAT_MSG_SOLDTO_MSG).
+        sold_amt = item.select_one(".ASTAT_MSGD")
+        if sold_amt:
+            rec.sold_amount = parse_money(sold_amt.get_text(" ", strip=True))
+        sold_to = item.select_one(".ASTAT_MSG_SOLDTO_MSG")
+        if sold_to:
+            rec.sold_to = sold_to.get_text(" ", strip=True)
         blob = item.get_text(" ", strip=True)
         tm = TIME_RE.search(rec.auction_status or blob)
         if tm:
@@ -382,6 +405,18 @@ def looks_like_foreclosure(rec: AuctionRecord) -> bool:
     raw = " ".join(rec.raw_fields.keys())
     # Foreclosure listings carry judgment/plaintiff fields taxdeed pages never have.
     if re.search(r"final judgment|plaintiff", raw, re.I):
+        return True
+    return False
+
+
+def looks_like_taxdeed(rec: AuctionRecord) -> bool:
+    """Inverse sanity check for foreclosure mode: True if a record smells like
+    a tax deed listing (certificate fields / TAXDEED type) and must not enter
+    the foreclosure feed."""
+    at = (rec.auction_type or "").upper().replace(" ", "").replace("-", "")
+    if at and "TAXDEED" in at:
+        return True
+    if not at and rec.certificate_number:
         return True
     return False
 

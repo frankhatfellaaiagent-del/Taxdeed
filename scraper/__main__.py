@@ -24,6 +24,7 @@ from .sources import FixtureSource, LiveSource, RateLimiter
 
 ROOT = Path(__file__).resolve().parent.parent
 COUNTIES_PATH = ROOT / "config" / "counties.json"
+FORECLOSURE_COUNTIES_PATH = ROOT / "config" / "foreclosure_counties.json"
 RUNS_ROOT = ROOT / "output" / "runs"
 
 log = logging.getLogger("scraper")
@@ -64,9 +65,14 @@ def _county_names_from(arg: str) -> list[str]:
 
 
 def _select_counties(args) -> list[dict]:
-    if not COUNTIES_PATH.exists():
-        sys.exit("config/counties.json missing — run `python -m scraper discover` first")
-    counties = load_counties(COUNTIES_PATH)
+    if getattr(args, "kind", "taxdeed") == "foreclosure":
+        if not FORECLOSURE_COUNTIES_PATH.exists():
+            sys.exit("config/foreclosure_counties.json missing")
+        counties = json.loads(FORECLOSURE_COUNTIES_PATH.read_text(encoding="utf-8"))["counties"]
+    else:
+        if not COUNTIES_PATH.exists():
+            sys.exit("config/counties.json missing — run `python -m scraper discover` first")
+        counties = load_counties(COUNTIES_PATH)
     if args.counties:
         wanted = [_slugify(w) for w in _county_names_from(args.counties)]
         by_slug = {c["slug"]: c for c in counties}
@@ -78,11 +84,15 @@ def _select_counties(args) -> list[dict]:
 
 
 def cmd_scrape(args) -> Path:
+    kind = getattr(args, "kind", "taxdeed")
     counties = _select_counties(args)
-    out_dir = Path(args.out) if args.out else RUNS_ROOT / datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%SZ")
+    suffix = "-foreclosure" if kind == "foreclosure" else ""
+    out_dir = Path(args.out) if args.out else RUNS_ROOT / (
+        datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%SZ") + suffix)
     source = make_source(args)
     try:
-        meta = run_scrape(source, counties, out_dir, months=args.months, skip_robots=args.skip_robots)
+        meta = run_scrape(source, counties, out_dir, months=args.months,
+                          skip_robots=args.skip_robots, kind=kind)
     finally:
         source.close()
     ok = sum(1 for c in meta["counties"].values() if c["status"] == "ok")
@@ -172,6 +182,9 @@ def main(argv=None) -> int:
 
     p = sub.add_parser("scrape", help="Scrape upcoming tax deed auctions")
     add_common(p)
+    p.add_argument("--kind", choices=["taxdeed", "foreclosure"], default="taxdeed",
+                   help="taxdeed (default) or foreclosure (uses config/foreclosure_counties.json, "
+                        "keeps foreclosure calendar days, adds judgment/flag fields)")
     p.add_argument("--counties", help="Comma-separated county slugs (default: all discovered)")
     p.add_argument("--months", type=int, default=2, help="Extra months of calendar to scan (default 2)")
     p.add_argument("--out", help="Output run directory (default output/runs/<utc timestamp>)")

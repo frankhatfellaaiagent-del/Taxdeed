@@ -27,6 +27,13 @@ class AuctionRecord:
     clerk_case_url: str = ""       # clerk case/deed link when the auction page publishes one
     source_host: str = ""          # e.g. www.volusia.realtaxdeed.com
     scraped_at: str = ""           # ISO timestamp (UTC)
+    # Foreclosure-only fields (empty/None on tax deed records).
+    final_judgment_amount: float | None = None
+    plaintiff_max_bid: str = ""    # usually the literal "Hidden" until sale
+    sold_amount: float | None = None
+    sold_to: str = ""              # "3rd Party Bidder" | "Plaintiff"
+    plaintiff: str = ""            # from clerk docket enrichment; not on the card
+    foreclosure_flags: str = ""    # comma-joined risk flags (see foreclosure.py)
     raw_fields: dict = field(default_factory=dict)  # every label/value pair seen
 
     def key(self) -> tuple:
@@ -64,4 +71,14 @@ CSV_COLUMNS = [
     "clerk_case_url",
     "source_host",
     "scraped_at",
+]
+
+# Column order for foreclosure run outputs (superset; taxdeed CSVs unchanged).
+FORECLOSURE_CSV_COLUMNS = CSV_COLUMNS + [
+    "final_judgment_amount",
+    "plaintiff_max_bid",
+    "sold_amount",
+    "sold_to",
+    "plaintiff",
+    "foreclosure_flags",
 ]
