@@ -1,0 +1,112 @@
+name: Foreclosure scrape test
+
+# Manual-only live test for the new foreclosure mode. Runs the offline
+# fixture regression for both kinds, then live-scrapes a few counties'
+# FORECLOSURE calendars and uploads the run directory as an artifact.
+# Commits nothing — promotion into the daily pipeline happens only after
+# these results are reviewed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      counties:
+        description: "Comma-separated foreclosure county slugs"
+        default: "volusia,escambia,charlotte"
+        required: false
+      months:
+        description: "Extra months of calendar to scan"
+        default: "1"
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: foreclosure-test
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Offline regression (tax deed fixtures, unchanged behavior)
+        run: |
+          python -m scraper scrape --counties volusia,polk --fixtures scraper/fixtures \
+            --skip-robots --out output/regression-taxdeed
+          python - <<'EOF'
+          import json, sys
+          meta = json.load(open("output/regression-taxdeed/run_meta.json"))
+          total = sum(c.get("auctions", 0) for c in meta["counties"].values())
+          assert total > 0, "tax deed regression parsed 0 records"
+          print(f"taxdeed regression OK: {total} records")
+          EOF
+
+      - name: Offline regression (foreclosure fixtures)
+        run: |
+          python -m scraper scrape --kind foreclosure --counties volusia \
+            --fixtures scraper/fixtures_foreclosure --skip-robots --out output/regression-foreclosure
+          python - <<'EOF'
+          import json
+          rows = json.load(open("output/regression-foreclosure/volusia.json"))
+          assert len(rows) == 3, f"expected 3 foreclosure records, got {len(rows)}"
+          by_case = {r["case_number"]: r for r in rows}
+          assert by_case["2025-CA-004321"]["final_judgment_amount"] == 245118.44
+          assert by_case["2025-CA-004321"]["sold_to"] == "3rd Party Bidder"
+          assert "PROBABLE_HOA" in by_case["2026-CC-000777"]["foreclosure_flags"]
+          exc = json.load(open("output/regression-foreclosure/excluded_foreclosure.json"))
+          assert len(exc) == 1, "tax deed card was not excluded"
+          print("foreclosure regression OK")
+          EOF
+
+      - name: Live foreclosure scrape
+        run: |
+          python -m scraper scrape --kind foreclosure \
+            --counties "${{ github.event.inputs.counties || 'volusia,escambia,charlotte' }}" \
+            --months "${{ github.event.inputs.months || '1' }}" \
+            --out output/live-foreclosure
+
+      - name: Summarize live results
+        if: always()
+        run: |
+          python - <<'EOF'
+          import json, pathlib
+          p = pathlib.Path("output/live-foreclosure/run_meta.json")
+          if not p.exists():
+              print("no run_meta.json — live scrape did not produce output")
+              raise SystemExit(0)
+          meta = json.load(open(p))
+          print(f"{'county':<14} {'status':<14} {'records':>7}  sale dates / warnings")
+          for slug, c in meta["counties"].items():
+              print(f"{slug:<14} {c['status']:<14} {c.get('auctions', 0):>7}  "
+                    f"{c.get('sale_dates', [])} {c.get('warnings', [])}"[:200])
+              if c.get("error"):
+                  print(f"   ERROR: {c['error']}")
+          for f in sorted(pathlib.Path("output/live-foreclosure").glob("*.json")):
+              if f.name in ("run_meta.json", "status.json"):
+                  continue
+              rows = json.load(open(f))
+              for r in rows[:3]:
+                  print(f"  sample {f.stem}: {r['case_number']} judgment={r['final_judgment_amount']} "
+                        f"status={r['auction_status'][:30]!r} flags={r['foreclosure_flags']!r} "
+                        f"addr={r['property_address'][:40]!r}")
+          EOF
+
+      - name: Upload run artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: foreclosure-test-output
+          path: output/
+          retention-days: 14
