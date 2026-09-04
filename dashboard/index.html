@@ -1263,33 +1263,27 @@ function renderDetail() {
     ["https://msc.fema.gov/portal/search", "FEMA flood map"],
     [ll ? `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}&basemap=satellite` : null, "Satellite view (opens maps app)"],
   ].filter(([href]) => href);
-  const pctText = p.pct != null
-    ? `Opening bid is <b>${p.pct}%</b> of the county's assessed value (${money(p.bid)} vs ${money(p.assessed)}).${p.pct <= 35 ? " Deep discount — worth a look." : ""}`
-    : "Assessed value not published on the auction record — confirm value on the appraiser site.";
   // Land check (wetlands / flood / access) — on-demand: run from the button on
   // the card, cached per parcel (this browser), or served from the feed if a
   // bulk pass filled it. Free public GIS, nothing pulled until someone asks.
+  // The button only shows where we actually have coordinates or a boundary to
+  // query — an address alone can't be checked, so we say so instead of offering
+  // a check that can only fail.
   const lc = landCheckCached(p);
   const LC_LABEL = { avoid: "Likely a pass", review: "Worth a closer look", clear: "No land red flags found" };
+  const canRunLc = ll || !!p.geometry;
   const landText = (lc && lc.verdict && lc.verdict !== "unknown")
-    ? `<b>${LC_LABEL[lc.verdict] || "Checked"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (from the parcel's point, not its full boundary — confirm)" : ""}. Check the maps linked below.`
-    : `<span id="lc-msg">Run a quick land check &mdash; is it wet, in a flood zone, or landlocked? Free, on demand.</span>
-       <button id="run-landcheck" class="btn btn-secondary" style="margin-left:8px;font-size:12.5px;padding:3px 10px"${(ll || hasAddr || p.geometry) ? "" : " disabled"}>Run land check</button>`;
+    ? `<b>${LC_LABEL[lc.verdict] || "Checked"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; read live from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (from the parcel's point, not its full boundary — confirm)" : ""}. Confirm it yourself on the maps linked above.`
+    : canRunLc
+      ? `<span id="lc-msg">Check the dirt &mdash; is it wet, in a flood zone, or landlocked? Runs live on the public wetlands, flood and road maps.</span>
+         <button id="run-landcheck" class="btn btn-secondary" style="margin-left:8px;font-size:12.5px;padding:3px 10px">Run land check</button>`
+      : `The county didn&rsquo;t publish coordinates for this parcel, so it can&rsquo;t be auto-checked. Use the wetlands, flood and satellite map links above to eyeball it.`;
   const findings = [
-    { topic: "Value", cls: p.pct != null && p.pct <= 35 ? "tag-accent" : "tag-neutral", text: pctText },
-    { topic: "Flags", cls: p.anomalies.length ? "tag-outline" : "tag-neutral",
-      text: p.anomalies.length ? "Data-quality flags: " + esc(p.anomalies.join("; ")) : "No data-quality flags on this record." },
-    { topic: "Quick look", cls: p.enriched ? "tag-accent" : "tag-neutral",
-      text: p.enriched
-        ? "Verified against the county appraiser — the owner, land use, acreage and mailing address above come straight from the official record."
-        : "Not yet verified against the appraiser — properties matching your buy box are checked first; use the appraiser link to confirm manually." },
-    { topic: "Site & wetlands",
+    { topic: "The land",
       cls: lc && lc.verdict === "avoid" ? "tag-outline"
          : lc && lc.verdict === "review" ? "tag-neutral"
          : lc && lc.verdict === "clear" ? "tag-accent" : "tag-neutral",
       text: landText },
-    { topic: "Next step", cls: "tag-neutral",
-      text: "Check the parcel on the wetlands, flood and satellite maps" + (ll || hasAddr ? " (linked below)" : " once you've located it on the appraiser") + ", confirm the land use and owner on the appraiser, and open the clerk links for the case file." },
   ];
 
   $("scr-detail").innerHTML = `
@@ -1355,14 +1349,14 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Quick read</h6>
-          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px">A plain read of the county&rsquo;s auction record &mdash; value, data-quality flags, and the land itself. Check the maps for the parcel, and confirm the case file and title yourself on the clerk links above.</p>
+          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Before you bid</h6>
+          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
             ${findings.map((a) => `<div style="display:flex;gap:12px">
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
               <span>${a.text}</span></div>`).join("")}
           </div>
-          <div style="margin-top:10px;font-size:11px" class="text-muted">Computed from the county&rsquo;s official auction record &middot; data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <div style="margin-top:10px;font-size:11px" class="text-muted">Auction record data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
