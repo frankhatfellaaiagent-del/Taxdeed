@@ -1288,8 +1288,8 @@ function renderDetail() {
   const landText = (lc && lc.verdict && lc.verdict !== "unknown")
     ? `<b>${LC_LABEL[lc.verdict] || "Checked"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; read live from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (from the parcel's point, not its full boundary — confirm)" : ""}. Confirm it yourself on the maps linked above.`
     : canRunLc
-      ? `<span id="lc-msg">Check the dirt &mdash; is it wet, in a flood zone, or landlocked? Runs live on the public wetlands, flood and road maps.</span>
-         <button id="run-landcheck" class="btn btn-secondary" style="margin-left:8px;font-size:12.5px;padding:3px 10px">Run land check</button>`
+      ? `<span id="lc-msg" style="display:block;margin-bottom:10px">Check the dirt &mdash; is it wet, in a flood zone, or landlocked? Runs live on the public wetlands, flood and road maps.</span>
+         <button id="run-landcheck" class="btn btn-secondary" style="font-size:15px;padding:11px 24px">Run land check</button>`
       : `The county didn&rsquo;t publish coordinates for this parcel, so it can&rsquo;t be auto-checked. Use the wetlands, flood and satellite map links above to eyeball it.`;
   const findings = [
     { topic: "The land",
@@ -1362,14 +1362,14 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Before you bid</h6>
-          <p class="text-muted" style="font-size:12.5px;margin:0 0 14px"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
+          <h6 style="color:var(--color-accent-700);margin:0 0 12px">Before you bid</h6>
           <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
             ${findings.map((a) => `<div style="display:flex;gap:12px">
               <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
               <span>${a.text}</span></div>`).join("")}
           </div>
-          <div style="margin-top:10px;font-size:11px" class="text-muted">Auction record data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <p class="text-muted" style="font-size:12.5px;margin:16px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">Auction record data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
