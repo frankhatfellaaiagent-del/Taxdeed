@@ -173,13 +173,28 @@ const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Co
 // and where account/billing requests go while billing is handled by hand.
 const BRAND = "Tax Deed Radar";
 const SUPPORT_EMAIL = "frankhatfellaaiagent@gmail.com";
-// The customer's plan as shown in Settings. Per-customer billing state will
-// come from the account record once self-serve billing exists; until then this
-// describes the standard subscription rather than inventing a billing date.
-const PLAN = {
-  name: "Standard", status: "active", price: "$197 / month",
-  note: "Includes every covered Florida county, the daily refresh, verification scrubs, up to 5 seats, and support. Month to month — cancel anytime.",
-};
+// ---------- pricing / access tier ----------
+// One product, sold monthly or yearly through Stripe payment links (public
+// hosted URLs — no API key lives in the app). Fill these in with the real
+// Stripe links; while blank, the Subscribe/Upgrade buttons fall back to the
+// landing page's pricing section. The 30-day money-back guarantee on the annual
+// plan is a Stripe refund + copy, not code.
+const STRIPE_MONTHLY_URL = "";                 // $297/month payment link (paste when ready)
+const STRIPE_YEARLY_URL  = "";                 // $997/year payment link (30-day guarantee)
+const STRIPE_PORTAL_URL  = "";                 // customer portal (manage / cancel)
+const PRICE_MONTHLY = "$297";
+const PRICE_YEARLY  = "$997";
+const FREE_DAYS = 5;                            // Free tier: auctions within this many days
+const UPGRADE_FALLBACK = "../#pricing";         // landing page pricing anchor (app is at /app/)
+const upgradeUrl = () => STRIPE_MONTHLY_URL || UPGRADE_FALLBACK;
+const openUpgrade = () => window.open(upgradeUrl(), "_blank", "noopener");
+// A small "Upgrade to unlock" link used in place of a gated control.
+const upgradeChip = (label) =>
+  `<a href="${esc(upgradeUrl())}" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:12.5px;padding:6px 14px">🔒 ${esc(label || "Upgrade to unlock")}</a>`;
+// The signed-in account's access tier, from the profiles row ("free" | "pro").
+// A signed-out visitor is "free". isPaid() is the single gate for every limit.
+let PLAN_TIER = "free";
+const isPaid = () => PLAN_TIER === "pro";
 // ---------- Florida time ----------
 // Auctions are Florida events, so every date the app reasons about or prints
 // runs on America/New_York — never the device's clock. A laptop set to UTC or
@@ -432,6 +447,12 @@ async function onSignedIn(user) {
     TEAM_ID = profile.team_id;
     IS_ADMIN = !!profile.is_admin;
     $("btn-refresh-admin").hidden = !IS_ADMIN;
+    // Access tier — fetched separately and defensively so a not-yet-migrated
+    // `plan` column can't break sign-in: any error just leaves the user on free.
+    try {
+      const { data: pr } = await sb.from("profiles").select("plan").eq("id", user.id).maybeSingle();
+      PLAN_TIER = pr && pr.plan === "pro" ? "pro" : "free";
+    } catch (e) { PLAN_TIER = "free"; }
 
     // First contact: merge this device's local state with the cloud. Cloud wins
     // per key; anything only known locally is kept (union). After this the cloud
@@ -486,6 +507,7 @@ function onSignedOut() {
   }
   TEAM_ID = null;
   IS_ADMIN = false;
+  PLAN_TIER = "free";
   WORKSPACE_ERROR = false;
   SYNC_ERROR = false;
   $("btn-refresh-admin").hidden = true;
@@ -885,7 +907,13 @@ function go(screen, selId) {
 // ---------- filtering ----------
 function filteredRows() {
   const q = S.q.trim().toLowerCase();
-  const range = whenRange(S.when);
+  let range = whenRange(S.when);
+  // Free tier only sees auctions within the next FREE_DAYS days — clamp whatever
+  // window is selected down to [today, today+FREE_DAYS]. Paid sees everything.
+  if (!isPaid()) {
+    const t = etToday(), cap = [t, t + FREE_DAYS];
+    range = range ? [Math.max(range[0], cap[0]), Math.min(range[1], cap[1])] : cap;
+  }
   let rows = DATA.filter((p) => {
     if (!inWhen(p, range)) return false;
     const it = getInt(p.id);
@@ -1008,7 +1036,7 @@ function renderDashboard() {
       <div class="field" style="width:160px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:150px"><label>Auction date</label>
-        <select class="input" id="f-when">${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
+        <select class="input" id="f-when"${isPaid() ? "" : ' disabled title="Free shows the next 5 days — upgrade to see every date"'}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
       <div class="field" style="width:130px"><label>Status</label>
         <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
       <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
@@ -1017,6 +1045,9 @@ function renderDashboard() {
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
+    ${isPaid() ? "" : `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px">${CORNERS}
+      <span>You&rsquo;re on the <b>Free</b> view &mdash; showing the next ${FREE_DAYS} days. Unlock every date, downloads, the land check and lists.</span>
+      ${upgradeChip("See everything")}</div>`}
 
     ${regSel ? countyInfoCard(regSel) : `<div class="blueprint" style="padding:0">${CORNERS}
       <div class="tablewrap"><table class="table">
@@ -1241,6 +1272,7 @@ async function lcRun(p) {
   return { verdict, reasons, wetland: wet, flood, access, from: g.from, checked_at: new Date().toISOString() };
 }
 function runLandCheck(p) {
+  if (!isPaid()) { openUpgrade(); return; }   // land check is a paid feature
   const btn = document.getElementById("run-landcheck");
   const msg = document.getElementById("lc-msg");
   if (btn) { btn.disabled = true; btn.textContent = "Checking…"; }
@@ -1321,7 +1353,9 @@ function renderDetail() {
   const lc = landCheckCached(p);
   const LC_LABEL = { avoid: "Likely a pass", review: "Worth a closer look", clear: "No land red flags found" };
   const canRunLc = ll || !!p.geometry;
-  const landText = (lc && lc.verdict && lc.verdict !== "unknown")
+  const landText = !isPaid()
+    ? `<span style="display:block;margin-bottom:10px">The land check &mdash; is it wet, in a FEMA flood zone, or landlocked, read live from the public maps &mdash; is a paid feature.</span>${upgradeChip("Unlock the land check")}`
+    : (lc && lc.verdict && lc.verdict !== "unknown")
     ? `<b>${LC_LABEL[lc.verdict] || "Checked"}.</b> ${esc((lc.reasons || []).join(" · "))} &mdash; read live from the National Wetlands, FEMA flood and road maps${lc.from === "centroid" ? " (from the parcel's point, not its full boundary — confirm)" : ""}. Confirm it yourself on the maps linked above.`
     : canRunLc
       ? `<span id="lc-msg" style="display:block;margin-bottom:10px">Check the dirt &mdash; is it wet, in a flood zone, or landlocked? Runs live on the public wetlands, flood and road maps.</span>
@@ -1479,13 +1513,16 @@ function renderLists() {
     <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
       ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
       : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
-    <div style="display:flex;gap:10px;max-width:560px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
+    ${isPaid() ? `<div style="display:flex;gap:10px;max-width:560px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
       <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
       ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
         <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
       <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
     </div>
-    <div id="new-list-hint" style="font-size:12.5px;margin-bottom:22px;color:var(--color-danger,#b3261e)" hidden></div>
+    <div id="new-list-hint" style="font-size:12.5px;margin-bottom:22px;color:var(--color-danger,#b3261e)" hidden></div>`
+    : `<div class="blueprint" style="padding:12px 16px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:560px">${CORNERS}
+      <span style="font-size:13.5px">Lists &mdash; group the parcels you&rsquo;re tracking and share them with your team &mdash; are a paid feature.</span>
+      ${upgradeChip("Unlock lists")}</div>`}
     ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
       ${active.map((lc) => `
         <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
@@ -1532,9 +1569,11 @@ function renderLists() {
     shared ? saveTeam() : saveLists();
     renderLists();   // stay on the grid so the new card shows as confirmation
   };
-  $("add-list").onclick = createList;
-  $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
-  $("new-list").oninput = () => listHint("");
+  if ($("add-list")) {   // the create controls only render for paid accounts
+    $("add-list").onclick = createList;
+    $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
+    $("new-list").oninput = () => listHint("");
+  }
   $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
     openList(c.dataset.openlist, c.dataset.shared === "1"));
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
@@ -1873,6 +1912,7 @@ function printCalendar() {
 // browser's print dialog, where "Save as PDF" is the usual target: no external
 // library, works offline.
 function exportRowsPdf(rows, title, subtitle) {
+  if (!isPaid()) { openUpgrade(); return; }   // printable list is a paid feature
   const when = etStamp(new Date());
   const bidSum = rows.reduce((s, p) => s + (p.bid || 0), 0);
   const body = rows.map((p) => `<tr>
@@ -1961,17 +2001,26 @@ function renderSettings() {
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Subscription</h6>
-          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
-            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">${esc(PLAN.name)}</div>
-            <span class="tag tag-accent">${esc(PLAN.status)}</span>
-          </div>
-          <div style="font-size:13.5px;margin-bottom:4px">${esc(PLAN.price)}</div>
-          <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">${esc(PLAN.note)}</div>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button class="btn btn-secondary" id="sub-upgrade" style="font-size:12.5px;padding:5px 11px">Change plan</button>
-            <button class="btn btn-ghost" id="sub-cancel" style="font-size:12.5px;padding:5px 9px;color:var(--color-danger,#b3261e)">Cancel subscription</button>
-          </div>
-          <div class="text-muted" style="font-size:12px;margin-top:12px">Billing is handled by your account manager today &mdash; these open an email. Self-serve billing is coming.</div>
+          ${isPaid() ? `
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+              <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Full access</div>
+              <span class="tag tag-accent">active</span>
+            </div>
+            <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">Every county, all dates, the land check, downloads and lists. Billed ${PRICE_MONTHLY}/month or ${PRICE_YEARLY}/year.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-secondary" id="sub-manage" style="font-size:12.5px;padding:5px 11px">Manage billing</button>
+            </div>`
+          : `
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+              <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Free</div>
+              <span class="tag tag-neutral">limited</span>
+            </div>
+            <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">You see the next ${FREE_DAYS} days only. Upgrade for every date, the land check, downloads and lists.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" id="sub-monthly" style="font-size:12.5px;padding:6px 13px">Go monthly &middot; ${PRICE_MONTHLY}/mo</button>
+              <button class="btn btn-secondary" id="sub-yearly" style="font-size:12.5px;padding:6px 13px">Go yearly &middot; ${PRICE_YEARLY}/yr</button>
+            </div>
+            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee.</div>`}
         </div>
       </div>
 
@@ -1997,10 +2046,12 @@ function renderSettings() {
     return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}`
          + `&body=${encodeURIComponent(`Account: ${who}\nWorkspace: ${TEAM_ID || "—"}\n\n`)}`;
   };
-  $("sub-upgrade").onclick = () => { window.location.href = mailto(`${BRAND} — change my plan`); };
-  $("sub-cancel").onclick = () => {
-    if (!confirm("Request cancellation? This opens an email to your account manager — nothing is cancelled until they confirm.")) return;
-    window.location.href = mailto(`${BRAND} — cancel my subscription`);
+  const openLink = (url) => window.open(url || UPGRADE_FALLBACK, "_blank", "noopener");
+  const sm = $("sub-monthly"); if (sm) sm.onclick = () => openLink(STRIPE_MONTHLY_URL);
+  const sy = $("sub-yearly");  if (sy) sy.onclick = () => openLink(STRIPE_YEARLY_URL);
+  const smg = $("sub-manage"); if (smg) smg.onclick = () => {
+    if (STRIPE_PORTAL_URL) window.open(STRIPE_PORTAL_URL, "_blank", "noopener");
+    else window.location.href = mailto(`${BRAND} — manage my subscription`);
   };
 }
 
@@ -2009,6 +2060,7 @@ function renderSettings() {
 // list's own page (that list, as the client built it).
 const slugify = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "export";
 function exportRowsCsv(rows, name) {
+  if (!isPaid()) { openUpgrade(); return; }   // downloads are a paid feature
   const cols = ["County","Sale Date","Sale Time","Parcel ID","Case #","Certificate #","Address","Opening Bid","Assessed Value","Bid/Assessed %","Auction Status","My Status","My Max Bid","List","Type","Notes","Auction URL","Appraiser URL"];
   const q = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const lines = [cols.join(",")];
