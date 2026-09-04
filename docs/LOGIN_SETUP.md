@@ -98,3 +98,48 @@ the list is there.
   domain) so password-reset links point back to the app.
 - The old Firebase path is retired; there is no `firestore.rules` anymore — the
   schema and policies live in the project's SQL migrations.
+
+## Plan / access tier (Free vs Paid)
+
+Access is a **Free vs Paid** switch stored per account in `profiles.plan`
+(`'free'` default, or `'pro'`), added by
+`supabase/migrations/20260904_profiles_plan.sql`. The dashboard reads it on
+sign-in; a signed-out visitor is **Free**. Free sees the next 5 days, view-only;
+**Paid** unlocks every date, the land check, downloads (CSV/PDF) and lists +
+team sharing. Paid is sold as **$297/month** or **$997/year (30-day money-back)**
+through Stripe payment links.
+
+The gating in the browser is **soft** (the data feed is a public file), so
+`plan` shapes the experience and drives conversion; it is not a hard data wall.
+
+### Give someone paid access (after they pay, or as a comp)
+
+There is no Stripe→app webhook yet, so set the tier by hand:
+
+```sql
+-- grant paid access
+update public.profiles set plan = 'pro' where id = '<auth-user-id>';
+-- back to free when a subscription lapses / a comp ends
+update public.profiles set plan = 'free' where id = '<auth-user-id>';
+```
+
+- A **paying** customer: create their login (as above), then set `plan = 'pro'`.
+- A **free / feedback (comp)** account: create the login and leave `plan` at
+  `'free'` for the limited view, or set `'pro'` to give them the full product
+  free for a while (downgrade later).
+- A **Stripe promo / trial** works the same on the app side — the coupon/trial
+  lives entirely in Stripe (turn on "Allow promotion codes" on the payment
+  links); you still flip `plan = 'pro'` for their account until a webhook
+  automates it.
+
+**Never let end users update their own `plan`** — profiles must be
+select-only for users and written by the operator (service role). See the
+security note in the migration.
+
+### Wiring the Stripe links in the app
+
+Once the Stripe payment links exist, paste them into the constants at the top of
+`dashboard/index.html` — `STRIPE_MONTHLY_URL`, `STRIPE_YEARLY_URL`,
+`STRIPE_PORTAL_URL` — and into the two `<!-- STRIPE: paste ... -->` hrefs in the
+pricing section of `site/index.html`. Until then, the buttons fall back to the
+landing page pricing / the contact email.
