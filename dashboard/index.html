@@ -1443,12 +1443,13 @@ function renderLists() {
     <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
       ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
       : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
-    <div style="display:flex;gap:10px;max-width:560px;margin-bottom:24px;align-items:center;flex-wrap:wrap">
+    <div style="display:flex;gap:10px;max-width:560px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
       <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
       ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
         <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
       <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
     </div>
+    <div id="new-list-hint" style="font-size:12.5px;margin-bottom:22px;color:var(--color-danger,#b3261e)" hidden></div>
     ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
       ${active.map((lc) => `
         <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
@@ -1476,14 +1477,23 @@ function renderLists() {
           </div>`).join("")}
       </div>` : ""}`;
 
-  $("add-list").onclick = () => {
-    const name = $("new-list").value.trim();
-    if (!name || lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) return;
+  const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
+  const createList = () => {
+    const inp = $("new-list");
+    const name = (inp.value || "").trim();
+    if (!name) { listHint("Type a name for the list first."); inp.focus(); return; }
+    if (lists.some((l) => l.name === name) || team.lists.some((l) => l.name === name)) {
+      listHint(`You already have a list called “${name}.” Pick a different name.`); return;
+    }
     const sharedBox = $("new-list-shared");
-    if (sharedBox && sharedBox.checked) { team.lists.push({ name, desc: "" }); saveTeam(); }
+    const shared = !!(sharedBox && sharedBox.checked);
+    if (shared) { team.lists.push({ name, desc: "" }); saveTeam(); }
     else { lists.push({ name, desc: "" }); saveLists(); }
-    openList(name, !!(sharedBox && sharedBox.checked));
+    renderLists();   // stay on the grid so the new card shows as confirmation
   };
+  $("add-list").onclick = createList;
+  $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
+  $("new-list").oninput = () => listHint("");
   $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
     openList(c.dataset.openlist, c.dataset.shared === "1"));
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
