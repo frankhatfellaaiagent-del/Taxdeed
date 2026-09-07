@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tax Deed Radar</title>
 <meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%23a97f2a%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f6f3ec%22 text-anchor=%22middle%22>TR</text></svg>">
 <link rel="stylesheet" href="ds/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
@@ -66,6 +66,11 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   .triad{grid-template-columns:1fr!important}
 }
 #login-overlay{display:grid}
+/* On phones the map quick card becomes a bottom sheet and the map shrinks. */
+@media (max-width:640px){
+  #quick-card{top:auto!important;bottom:0!important;left:0!important;right:0!important;width:auto!important}
+  #board-map{height:56vh!important}
+}
 /* [hidden] must always win — several component classes set their own display */
 [hidden]{display:none!important}
 .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -1810,7 +1815,7 @@ function initParcelMap(p) {
     }).addTo(map).bindPopup("Parcel " + p.parcel);
     try { map.fitBounds(poly.getBounds(), { padding: [12, 12], maxZoom: 19 }); } catch (e) {}
   } else {
-    L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#5980a6", fillOpacity: 1 })
+    L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#c6a147", fillOpacity: 1 })
       .addTo(map).bindPopup("Parcel " + p.parcel);
   }
   // The container is laid out after innerHTML; let Leaflet re-measure it.
@@ -1870,12 +1875,17 @@ function renderDetail() {
         <button class="btn btn-secondary" id="nav-next"${step.hasNext ? "" : " disabled"}>Next &rarr;</button>
       </div></div>`; })()}
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
-      <h2 style="margin:0">${esc(p.addr)}</h2>
+      <h2 style="margin:0">${esc(p.hasAddr ? p.addr : "Parcel " + p.parcel)}</h2>
       ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
       <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
     </div>
-    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:22px">Parcel ${esc(p.parcel)}</div>
+    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:10px">Parcel ${esc(p.parcel)}</div>
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;margin-bottom:22px" class="text-muted">
+      <span>${p.acreage ? esc(p.acreage) + " acres" : "Acres not available"}</span>
+      <span>${p.hasAddr ? esc(p.addr) : "No street address published"}</span>
+      <span>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
+    </div>
 
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
@@ -1892,7 +1902,6 @@ function renderDetail() {
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
           <div class="triad" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
             ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", saleTimeText(p)],
-               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
                ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "Not available"],
                ["Mailing address (owner)", p.mailing || "Not available"]]
               .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
@@ -1930,20 +1939,57 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 12px">Before you bid</h6>
-          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
-            ${findings.map((a) => `<div style="display:flex;gap:12px">
-              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
-              <span>${a.text}</span></div>`).join("")}
-          </div>
-          <p class="text-muted" style="font-size:12.5px;margin:16px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
+          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Research</h6>
+          <div class="text-muted" style="font-size:12px;margin-bottom:6px">Three separate checks. Property record and Title &amp; liens are manual &mdash; open the source and confirm for yourself. The land check is automated.</div>
+          ${(() => {
+            const R = getResearch(p.id);
+            const stTag = (c) => c.state === "reviewed" ? (c.warning && !c.resolved ? '<span class="tag tag-warn">Needs review</span>' : '<span class="tag tag-ok">Reviewed</span>')
+              : c.state === "couldntCheck" ? '<span class="tag tag-warn">Couldn&rsquo;t check</span>'
+              : c.state === "checking" ? '<span class="tag tag-neutral">Checking&hellip;</span>' : '<span class="tag tag-neutral">Not checked</span>';
+            const row = (title, tag, body) => `<div style="display:flex;flex-direction:column;gap:6px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
+              <div style="display:flex;align-items:center;gap:10px"><span style="font-weight:600;font-size:14px">${title}</span><span style="margin-left:auto">${tag}</span></div>
+              <div style="font-size:13.5px;line-height:1.5">${body}</div></div>`;
+            const landTag = (isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
+              ? stTag({ state: "reviewed", warning: lc.verdict === "avoid" || lc.verdict === "review" })
+              : stTag(R.landCheck);
+            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`)
+              + row("Land check", landTag, landText)
+              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`);
+          })()}
+          <p class="text-muted" style="font-size:12.5px;margin:14px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Confirm the value, the title and any liens, the case file, and the parcel itself before you bid.</p>
           <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:26px">
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">My position</h6>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">Price intelligence</h6>
+            <span class="tag tag-warn" style="margin-left:auto">Planned</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+            <div style="display:flex;justify-content:space-between;gap:10px"><span>Expected auction price</span><span class="text-muted">Not calculated</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px"><span>Estimated market value</span><span class="text-muted">Not calculated</span></div>
+          </div>
+          <p class="text-muted" style="font-size:12px;margin:10px 0 0">Planned: estimates using auction results and comparable land sales.</p>
+          <div class="hr"></div>
+          <div style="font-size:12.5px" class="text-muted">Nearby land sales <span class="tag tag-neutral" style="margin-left:6px">Planned</span></div>
+          <details style="margin-top:12px">
+            <summary style="cursor:pointer;font-size:13.5px;font-weight:500;color:var(--color-accent-700)">Opening bid &amp; assessment</summary>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:13.5px;margin-top:12px">
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Opening bid</div><div style="font-weight:500">${money(p.bid)}</div></div>
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Assessed value</div><div style="font-weight:500">${money(p.assessed)}</div></div>
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Bid / assessed</div><div style="font-weight:500">${p.pct != null ? p.pct + "%" : "—"}</div></div>
+              ${(() => { const c = countyCaps(p); return c.deposit ? `<div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">County deposit</div><div style="font-weight:500">${money(c.deposit)}${p.bid != null ? ` &middot; ~5% is ${money(p.bid * 0.05)}` : ""}</div></div>` : ""; })()}
+            </div>
+            <p class="text-muted" style="font-size:11.5px;margin:10px 0 0">County figures, not an estimate. The opening bid is only the starting price &mdash; tax deeds routinely sell well above it.</p>
+          </details>
+        </div>
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">My decision</h6>
+            <button class="btn btn-secondary" id="pos-bookmark" style="margin-left:auto;font-size:12px;padding:4px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
+          </div>
           <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
             ${["Interested","Watching","Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-status="${o}">${o.toUpperCase()}</button>`).join("")}
           </div>
@@ -1965,16 +2011,9 @@ function renderDetail() {
           })()}
           <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
         </div>
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
-          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
-          <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
-          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled · " + esc(saleTimeText(p))}</div>
-          ${(() => { const c = countyCaps(p); if (!c.deposit && !c.max_bid) return "";
-            const need = p.bid != null ? money(p.bid * 0.05) : null;
-            return `<div class="hr" style="margin:10px 0"></div><div style="font-size:12.5px">
-              ${c.deposit ? `County deposit on file: <b>${money(c.deposit)}</b>${need ? ` &middot; ~5% of opening bid is ${need}` : ""}` : ""}
-              ${c.max_bid ? `${c.deposit ? "<br>" : ""}Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b>` : ""}</div>`; })()}
+        <div class="blueprint" style="padding:14px 20px">${CORNERS}
+          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Auction " + esc(p.auction) + " · " + esc(saleTimeText(p))}</div>
+          ${(() => { const c = countyCaps(p); return c.max_bid ? `<div style="font-size:12.5px;margin-top:6px">Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b></div>` : ""; })()}
         </div>
       </div>
     </div>`;
@@ -2004,6 +2043,7 @@ function renderDetail() {
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value }, p);
   $("pos-list").onchange = (e) => { assignList(p.id, e.target.value); setInt(p.id, {}, p); };
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value }, p);
+  const pbm = $("pos-bookmark"); if (pbm) pbm.onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); renderDetail(); };
   const cok = $("conflict-ok"); if (cok) cok.onclick = () => { const it2 = interest[p.id]; if (it2) { delete it2._conflict; saveInterest(); } renderDetail(); };
 }
 
