@@ -8,7 +8,10 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
 <link rel="stylesheet" href="ds/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 <script>
 /* Set the theme before first paint so the page never flashes light: a saved
    choice wins, otherwise fall back to the viewer's OS setting. */
@@ -886,6 +889,11 @@ let S = {
   county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
   when: "all", sort: normSort(prefs.sort), shown: 150,
   dayFilter: null,   // exact ET sale-day (set by a Calendar day click); null = off
+  // Explore view: list vs map, the county multi-select (remembered), the map's
+  // own basemap + "Search this area" bounds filter, and the More-filters toggle.
+  view: "list", counties: Array.isArray(prefs.counties) ? prefs.counties.slice() : [],
+  mapView: "map", mapArea: null, moreOpen: false, countyOpen: false, reviewOnly: false,
+  _mapCenter: null, _mapZoom: null, quickId: null,   // map position (preserved) + open quick card
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   // Where the open property was reached from, so Back returns exactly there and
@@ -1197,7 +1205,11 @@ function filteredRows(ignoreFree) {
     // Explore count matches the calendar cell's badge.
     if (S.dayFilter != null && saleDay(p) !== S.dayFilter) return false;
     const it = getInt(p.id);
-    if (S.county !== "All" && p.county !== S.county) return false;
+    if (S.counties.length && !S.counties.includes(p.county)) return false;
+    // "Search this area" — a geographic filter set by clicking the map button;
+    // parcels without a usable location can't be matched to an area and drop out.
+    if (S.mapArea) { const c = parcelLatLng(p); if (!c || !inBounds(c, S.mapArea)) return false; }
+    if (S.reviewOnly && !needsReview(p.id)) return false;   // "need review" chip
     if (S.status !== "All" && p.status !== S.status) return false;
     if (S.type !== "All") {
       const t = effType(p);
@@ -1209,7 +1221,13 @@ function filteredRows(ignoreFree) {
       const dep = countyCaps(p).deposit;
       if (dep && p.bid != null && p.bid * 0.05 > dep) return false;
     }
-    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
+    if (q) {
+      const hay = (p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (p.city || "") + " " + (it.notes || "")).toLowerCase();
+      const nz = (s) => s.replace(/[^a-z0-9]/g, "");
+      // Match address/city/county/notes literally, and parcel/case numbers with or
+      // without dashes/punctuation (so "1234567" finds "12-345-67").
+      if (!hay.includes(q) && !(nz(q) && nz(hay).includes(nz(q)))) return false;
+    }
     return true;
   });
   // A single ordering key (the Sort dropdown) — "My preferred types first" is
@@ -1258,143 +1276,310 @@ function countyInfoCard(c) {
     </div>`;
 }
 
+// A parcel's usable map location: its published centroid, else the centroid of its
+// parcel geometry. null when neither exists — the parcel stays list-only. (Map
+// eligibility is about a usable LOCATION, not whether an address was published.)
+function parcelLatLng(p) {
+  if (p.lat != null && p.lng != null) return [Number(p.lat), Number(p.lng)];
+  const rings = wktToLatLngs(p.geometry);
+  if (rings.length && rings[0].length) {
+    const r = rings[0]; let la = 0, lo = 0;
+    for (const pt of r) { la += pt[0]; lo += pt[1]; }
+    return [la / r.length, lo / r.length];
+  }
+  return null;
+}
+const inBounds = (c, b) => c[0] <= b.n && c[0] >= b.s && c[1] <= b.e && c[1] >= b.w;
+// Saved = unique properties the user bookmarked OR put in any list (personal or
+// team), de-duplicated so one property in two lists counts once.
+function savedIds() {
+  const s = new Set();
+  for (const [id, it] of Object.entries(interest)) if (it && (it.bookmark || it.list)) s.add(id);
+  for (const id of Object.keys(team.membership || {})) s.add(id);
+  return s;
+}
+const needsReviewCount = () => Object.keys(interest).filter(needsReview).length;
+// Compact research-progress label for the Explore "Research" column (full workflow
+// in Phase 3). Distinguishes the three real states with a text label + color.
+function researchCell(p) {
+  const r = getResearch(p.id);
+  const warn = RESEARCH_KEYS.some((k) => (r[k].state === "reviewed" && r[k].warning && !r[k].resolved) || r[k].state === "couldntCheck");
+  if (warn) return '<span class="tag tag-warn" title="A research check needs attention">Needs review</span>';
+  if (RESEARCH_KEYS.some((k) => r[k].state === "reviewed")) return '<span class="tag tag-ok">Reviewed</span>';
+  return '<span class="tag tag-neutral">Not checked</span>';
+}
+// The user's decision as a compact tag for the Explore "My decision" column.
+function decisionCell(p) {
+  const st = getInt(p.id).status;
+  if (st === "Interested") return '<span class="tag tag-accent">Interested</span>';
+  if (st === "Watching") return '<span class="tag tag-neutral">Watching</span>';
+  if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
+  return isBookmarked(p.id) ? '<span class="tag tag-neutral">Saved</span>' : '<span class="text-muted">—</span>';
+}
+
 function renderDashboard() {
   const rows = filteredRows();
   // How many scheduled auctions the free 5-day clamp is hiding under the SAME
   // filters (so a short list can say so instead of looking empty), and whether any
   // filter is narrowing the view (drives the right empty-state message + action).
   const freeHidden = isPaid() ? 0 : Math.max(0, filteredRows(true).length - rows.length);
-  const filtersActive = S.county !== "All" || S.type !== "All" || S.status !== "Scheduled"
-    || S.deposit !== "All" || S.when !== "all" || S.dayFilter != null || S.q.trim() !== "";
-  // "Upcoming" excludes past-due rows too — an auction whose date already
-  // passed with no result posted yet isn't upcoming, even though the site
-  // hadn't marked it Redeemed as of the last refresh.
+  const filtersActive = S.counties.length || S.type !== "All" || S.status !== "Scheduled"
+    || S.deposit !== "All" || S.when !== "all" || S.dayFilter != null || S.mapArea || S.reviewOnly || S.q.trim() !== "";
+  // "Upcoming" excludes past-due rows too — an auction whose date already passed
+  // with no result posted isn't upcoming, even if not yet marked Redeemed.
   const upcoming = DATA.filter((p) => !p.redeemed && !isPastDue(p));
-  // Sale-day windows are measured in Florida time, so "today" is today in
-  // Florida no matter where the person's device thinks it is.
-  const todayRange = whenRange("today"), weekRange = whenRange("week");
-  const todayRows = upcoming.filter((p) => inWhen(p, todayRange));
-  const weekRows = upcoming.filter((p) => inWhen(p, weekRange));
-  const nextUp = upcoming.filter((p) => saleDay(p) != null && saleDay(p) >= etToday())
-    .reduce((a, p) => (!a || saleDay(p) < saleDay(a) ? p : a), null);
-  const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
-  const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
   const counties = [...new Set(DATA.map((p) => p.county))].sort();
-  // Every Florida county belongs in the filter — the ones without records in
-  // the feed (in-person sales, other platforms, or awaiting a first refresh)
-  // are grouped below the live ones. Registry ships inside the feed itself.
+  // Every Florida county belongs in the filter — the ones without records in the
+  // feed (in-person sales, other platforms, or awaiting a first refresh) are
+  // grouped below the live ones. Registry ships inside the feed itself.
   const extras = REG().filter((c) => !counties.includes(c.name));
   const extraOnline = extras.filter((c) => c.coverage === "online").map((c) => c.name).sort();
   const extraOther = extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort();
-  // A county with no rows gets an info card instead of an empty table.
-  const regSel = S.county !== "All" && !counties.includes(S.county) ? regByName()[S.county] : null;
-  const cty = (rs) => new Set(rs.map((p) => p.county)).size;
 
-  const stats = [
-    { label: "Today's auctions", value: todayRows.length.toLocaleString(), when: "today",
-      sub: todayRows.length ? `across ${cty(todayRows)} ${cty(todayRows) === 1 ? "county" : "counties"}`
-                            : nextUp ? `none today — next ${nextUp.auction}` : "none today" },
-    { label: "This week", value: weekRows.length.toLocaleString(), when: "week",
-      sub: weekRows.length ? `through Sunday · ${cty(weekRows)} ${cty(weekRows) === 1 ? "county" : "counties"}`
-                           : "nothing left this week" },
-    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), when: "all",
-      sub: `across ${cty(upcoming)} counties` },
-    { label: "Marked interested", value: String(marked.length),
-      sub: committed ? money(committed) + " committed max" : "none yet" },
-  ];
+  const savedN = savedIds().size, reviewN = needsReviewCount();
+  const soleCounty = S.counties.length === 1 ? S.counties[0] : null;
+  const regSel = soleCounty && !counties.includes(soleCounty) ? regByName()[soleCounty] : null;
+  const countyLabel = S.counties.length === 0 ? "All counties"
+    : S.counties.length === 1 ? S.counties[0] : `${S.counties[0]} +${S.counties.length - 1}`;
+  const located = rows.map((p) => [p, parcelLatLng(p)]).filter((x) => x[1]);
+  const noLoc = rows.length - located.length;
+  const extraCounties = [...extraOnline, ...extraOther];
 
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const ckRow = (c) => `<label style="display:flex;gap:8px;align-items:center;padding:4px 2px;font-size:13px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
   $("scr-dashboard").innerHTML = `
-    <h2 style="margin-bottom:4px">Dashboard</h2>
-    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; auction times shown in each county&rsquo;s local zone (ET / CT)</div>
-    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
-      ${stats.map((st) => `
-        <div class="blueprint" ${st.when ? `data-when="${st.when}" title="Show these on the board"` : ""} style="padding:16px 18px${st.when ? ";cursor:pointer" : ""}">${CORNERS}
-          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">${st.label}</div>
-          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">${st.value}</div>
-          <div style="font-size:12px" class="text-muted">${esc(st.sub)}</div>
-        </div>`).join("")}
+    <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:4px">
+      <h2 style="margin:0">Find your next parcel.</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="pillbtn" data-chip="upcoming" title="Show all upcoming auctions">${upcoming.length.toLocaleString()} upcoming</button>
+        <button class="pillbtn" data-chip="saved" title="Show your saved properties">${savedN.toLocaleString()} saved</button>
+        <button class="pillbtn" data-chip="review" title="Show properties whose research needs review">${reviewN.toLocaleString()} need review</button>
+      </div>
     </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Upcoming tax-deed auctions in your counties &middot; times in each county&rsquo;s local zone (ET / CT)</div>
 
-    <div class="filters" style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
-      <div class="field" style="width:160px"><label>County</label>
-        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — no sales posted right now">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
-      <div class="field" style="width:160px"><label>Property type</label>
+    <div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+      <div class="field" style="width:210px;position:relative"><label>County</label>
+        <button class="input" id="f-county-btn" style="text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(countyLabel)}</span><span style="opacity:.55">&#9662;</span></button>
+        ${S.countyOpen ? `<div id="county-pop" class="blueprint" style="position:absolute;z-index:30;top:100%;left:0;margin-top:5px;width:290px;max-height:340px;overflow:auto;background:var(--color-surface);padding:10px 12px;box-shadow:var(--shadow-md)">${CORNERS}
+          <button class="pillbtn ${S.counties.length ? "" : "on"}" id="cty-all" style="width:100%;text-align:left;margin-bottom:8px">All counties</button>
+          ${counties.map(ckRow).join("")}
+          ${extraCounties.length ? `<div class="text-muted" style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
+        </div>` : ""}
+      </div>
+      <div class="field" style="width:150px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:150px"><label>Auction date</label>
         <select class="input" id="f-when"${isPaid() ? "" : ' disabled title="Free shows the next 5 days — upgrade to see every date"'}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
-      <div class="field" style="width:130px"><label>Status</label>
-        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
-        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
-      <div class="field" style="width:230px"><label>Sort by</label>
+      <div class="field" style="width:210px"><label>Sort by</label>
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
-      <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
+      <button class="btn btn-secondary" id="more-toggle" style="height:36px;font-size:13px">${S.moreOpen ? "Fewer filters" : "More filters"}</button>
+      <div style="margin-left:auto;display:inline-flex;border:1px solid var(--color-divider);align-self:center">
+        <button class="seg3 ${S.view === "list" ? "on" : ""}" data-view="list" style="padding:8px 16px">List</button>
+        <button class="seg3 ${S.view === "map" ? "on" : ""}" data-view="map" style="padding:8px 16px">Map</button>
+      </div>
     </div>
-    ${S.dayFilter != null ? `<div style="margin-bottom:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px">
-      <span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
-      <button id="clear-day" title="Clear this day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span></div>` : ""}
+    ${S.moreOpen ? `<div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+      <div class="field" style="width:150px"><label>Status</label>
+        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
+      <div class="field" style="width:180px"><label>Deposit (5% rule)</label>
+        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
+    </div>` : ""}
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:12.5px">
+      <span class="text-muted">${rows.length.toLocaleString()} properties</span>
+      ${S.dayFilter != null ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
+        <button id="clear-day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${S.mapArea ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Map area
+        <button id="clear-area" aria-label="Clear map-area filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${S.reviewOnly ? `<span class="tag tag-warn" style="display:inline-flex;gap:8px;align-items:center">Needs review
+        <button id="clear-review" aria-label="Clear needs-review filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${filtersActive ? `<button class="btn btn-ghost" id="reset-filters" style="font-size:12.5px;padding:2px 8px">Reset filters</button>` : ""}
+    </div>
+
     ${isPaid() ? "" : `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px">${CORNERS}
       <span>You&rsquo;re on the <b>Free</b> view &mdash; showing the next ${FREE_DAYS} days. Unlock every date, downloads, the land check and lists.</span>
       ${upgradeChip("See everything")}</div>`}
 
-    ${regSel ? countyInfoCard(regSel) : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
-      <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${filtersActive ? "No properties match these filters" : (!isPaid() && freeHidden ? "Nothing in your free 5-day window" : "No upcoming sales posted right now")}</div>
-      <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${filtersActive
-          ? "Try widening your filters, or clear the sale-day pick."
-          : (!isPaid() && freeHidden
-              ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"} further out. Upgrade to see every date.`
-              : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically.")}</p>
-      ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
-    </div>` : `<div class="blueprint" style="padding:0">${CORNERS}
-      <div class="tablewrap"><table class="table">
-        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
-        <tbody>
-          ${rows.slice(0, S.shown).map((p) => {
-            const t = effType(p);
-            return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
-              <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
-              <td><div style="font-weight:500">${esc(p.addr)}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
-              <td>${esc(p.county)}</td>
-              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
-              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
-              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
-              <td style="font-size:13px">${esc(p.auction)}</td>
-              <td>${statusTag(p)}</td>
-            </tr>`;
-          }).join("")}
-        </tbody>
-      </table></div>
-      ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
-        <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
-      ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:12px;text-align:center;border-top:1px solid var(--color-divider);font-size:12.5px">
-        ${freeHidden.toLocaleString()} more scheduled ${freeHidden === 1 ? "auction is" : "auctions are"} beyond your free ${FREE_DAYS}-day window. ${upgradeChip("See every date")}</div>` : ""}
-    </div>`}`;
+    ${regSel ? countyInfoCard(regSel)
+      : S.view === "map" ? `<div class="blueprint" style="padding:0;position:relative">${CORNERS}
+          <div id="board-map" style="height:min(64vh,600px);width:100%"></div>
+          <button class="btn btn-primary" id="map-search-area" style="position:absolute;z-index:5;top:12px;left:12px;font-size:12.5px;padding:7px 13px;box-shadow:var(--shadow-md)">Search this area</button>
+          <div style="position:absolute;z-index:5;top:12px;right:12px;display:inline-flex;border:1px solid var(--color-divider);background:var(--color-surface);box-shadow:var(--shadow-md)">
+            <button class="seg3 ${S.mapView === "map" ? "on" : ""}" data-mapview="map" style="padding:6px 13px">Map</button>
+            <button class="seg3 ${S.mapView === "satellite" ? "on" : ""}" data-mapview="satellite" style="padding:6px 13px">Satellite</button>
+          </div>
+          <div id="quick-card" hidden style="position:absolute;z-index:6;top:58px;right:12px;width:min(340px,calc(100% - 24px))"></div>
+        </div>
+        <div class="text-muted" style="font-size:12.5px;margin-top:10px">Showing ${located.length.toLocaleString()} of ${rows.length.toLocaleString()} on the map.${noLoc ? ` ${noLoc.toLocaleString()} ${noLoc === 1 ? "property has" : "properties have"} no map location and ${noLoc === 1 ? "appears" : "appear"} in the list only —` : ""} ${noLoc ? `<button class="btn btn-ghost" id="to-list" style="font-size:12.5px;padding:1px 6px">view the list</button>.` : ""}</div>`
+      : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
+          <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${filtersActive ? "No properties match these filters" : (!isPaid() && freeHidden ? "Nothing in your free 5-day window" : "No upcoming sales posted right now")}</div>
+          <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${filtersActive
+              ? "Try widening your filters, or clear the sale-day / map-area pick."
+              : (!isPaid() && freeHidden
+                  ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"} further out. Upgrade to see every date.`
+                  : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically.")}</p>
+          ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters2">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
+        </div>`
+      : `<div class="blueprint" style="padding:0">${CORNERS}
+          <div class="tablewrap"><table class="table">
+            <thead><tr><th>Property</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th>My decision</th></tr></thead>
+            <tbody>
+              ${rows.slice(0, S.shown).map((p) => {
+                const t = effType(p);
+                const title = p.hasAddr ? p.addr : p.parcel;
+                return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+                  <td><div style="font-weight:500">${esc(title)}</div>
+                    <div style="font-size:12px" class="text-muted">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
+                    ${p.hasAddr ? `<div class="mono" style="font-size:11px;color:var(--color-accent-700)">${esc(p.parcel)}</div>` : ""}</td>
+                  <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
+                  <td style="font-size:13px">${esc(p.auction)}<div style="font-size:11.5px" class="text-muted">${esc(saleTimeText(p))}</div></td>
+                  <td>${researchCell(p)}</td>
+                  <td>${decisionCell(p)}</td>
+                </tr>`;
+              }).join("")}
+            </tbody>
+          </table></div>
+          ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+            <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
+          ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:12px;text-align:center;border-top:1px solid var(--color-divider);font-size:12.5px">
+            ${freeHidden.toLocaleString()} more scheduled ${freeHidden === 1 ? "auction is" : "auctions are"} beyond your free ${FREE_DAYS}-day window. ${upgradeChip("See every date")}</div>` : ""}
+        </div>`}`;
 
-  // Picking a date window means "what's coming up", so order it soonest-first.
-  // A window supersedes a single calendar-day pick, so clear that pick.
+  // ---- filters + view wiring ----
   const setWhen = (v) => {
     S.when = v; S.dayFilter = null;
     if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
     if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
     S.shown = 150; renderDashboard();
   };
-  $("f-when").onchange = (e) => setWhen(e.target.value);
-  $("scr-dashboard").querySelectorAll("[data-when]").forEach((c) => c.onclick = () => setWhen(c.dataset.when));
-  $("f-county").onchange = (e) => { S.county = e.target.value; S.dayFilter = null; S.shown = 150; renderDashboard(); };
-  $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
-  const cd = $("clear-day"); if (cd) cd.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
-  const rf = $("reset-filters"); if (rf) rf.onclick = () => {
-    S.county = "All"; S.type = "All"; S.status = "Scheduled"; S.deposit = "All";
-    S.when = "all"; S.dayFilter = null; S.q = ""; if ($("q")) $("q").value = "";
-    S.shown = 150; renderDashboard();
+  const wf = $("f-when"); if (wf) wf.onchange = (e) => setWhen(e.target.value);
+  const tf = $("f-type"); if (tf) tf.onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
+  const sf = $("f-status"); if (sf) sf.onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
+  const df = $("f-deposit"); if (df) df.onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
+  const sortf = $("f-sort"); if (sortf) sortf.onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
+  $("more-toggle").onclick = () => { S.moreOpen = !S.moreOpen; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => {
+    if (S.view !== b.dataset.view) { S.view = b.dataset.view; S.quickId = null; renderDashboard(); }
+  });
+  $("scr-dashboard").querySelectorAll("[data-chip]").forEach((b) => b.onclick = () => {
+    const k = b.dataset.chip;
+    if (k === "saved") { go("lists"); return; }                 // the Saved screen
+    S.dayFilter = null; S.mapArea = null; S.reviewOnly = (k === "review");
+    if (k === "upcoming") { S.status = "Scheduled"; S.when = "all"; }
+    S.view = "list"; S.shown = 150; renderDashboard();
+  });
+  // County multi-select popover
+  const cbtn = $("f-county-btn"); if (cbtn) cbtn.onclick = (e) => { e.stopPropagation(); S.countyOpen = !S.countyOpen; renderDashboard(); };
+  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  const allBtn = $("cty-all"); if (allBtn) allBtn.onclick = () => { S.counties = []; S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("#county-pop [data-cty]").forEach((cbx) => cbx.onchange = () => {
+    const c = cbx.dataset.cty;
+    if (cbx.checked) { if (!S.counties.includes(c)) S.counties.push(c); }
+    else S.counties = S.counties.filter((x) => x !== c);
+    S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard();
+  });
+  const clearDay = $("clear-day"); if (clearDay) clearDay.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
+  const clearArea = $("clear-area"); if (clearArea) clearArea.onclick = () => { S.mapArea = null; S.shown = 150; renderDashboard(); };
+  const clearReview = $("clear-review"); if (clearReview) clearReview.onclick = () => { S.reviewOnly = false; S.shown = 150; renderDashboard(); };
+  const resetAll = () => {
+    S.counties = []; S.type = "All"; S.status = "Scheduled"; S.deposit = "All";
+    S.when = "all"; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false; S.q = ""; if ($("q")) $("q").value = "";
+    persistCounties(); S.shown = 150; renderDashboard();
   };
+  const rf = $("reset-filters"); if (rf) rf.onclick = resetAll;
+  const rf2 = $("reset-filters2"); if (rf2) rf2.onclick = resetAll;
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
+  const toList = $("to-list"); if (toList) toList.onclick = () => { S.view = "list"; renderDashboard(); };
   const orderedIds = rows.map((p) => p.id);
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
+
+  // ---- map view ----
+  if (S.view === "map" && !regSel) {
+    $("scr-dashboard").querySelectorAll("[data-mapview]").forEach((b) => b.onclick = () => {
+      if (S.mapView !== b.dataset.mapview) { S.mapView = b.dataset.mapview; renderDashboard(); }
+    });
+    const sa = $("map-search-area"); if (sa) sa.onclick = () => {
+      if (!_boardMap) return;
+      const b = _boardMap.getBounds();
+      S.mapArea = { n: b.getNorth(), s: b.getSouth(), e: b.getEast(), w: b.getWest() };
+      S.shown = 150; renderDashboard();
+    };
+    initBoardMap(located, orderedIds);
+    if (S.quickId) { const qp = DATA.find((x) => x.id === S.quickId); if (qp) showQuickCard(qp, orderedIds); }
+  }
+}
+
+// ---------- board map (Leaflet + clustering) ----------
+// The Explore map: one pin per located parcel (clustered), a theme-aware street
+// basemap or Esri satellite, and a "Search this area" bounds filter. Map eligibility
+// is a usable LOCATION (published centroid or parcel-geometry centroid), never an
+// address. Vector circle markers avoid Leaflet's default-icon image path issues.
+let _boardMap = null, _boardCluster = null, _boardBase = null;
+function boardTiles() {
+  if (S.mapView === "satellite")
+    return L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 19, attribution: "Imagery &copy; Esri" });
+  const url = effectiveDark()
+    ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+  return L.tileLayer(url, { maxZoom: 20, subdomains: "abcd", attribution: "&copy; OpenStreetMap &copy; CARTO" });
+}
+function initBoardMap(located, orderedIds) {
+  const el = $("board-map");
+  if (!el) return;
+  if (typeof L === "undefined") { el.innerHTML = '<div class="ph" style="height:100%"><span>Map couldn&rsquo;t load — check your connection.</span></div>'; return; }
+  if (_boardMap) { try { _boardMap.remove(); } catch (e) {} _boardMap = null; }
+  _boardMap = L.map(el, { zoomControl: false, scrollWheelZoom: true });
+  _boardBase = boardTiles().addTo(_boardMap);
+  L.control.zoom({ position: "bottomright" }).addTo(_boardMap);
+  _boardCluster = L.markerClusterGroup ? L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 48 }) : L.layerGroup();
+  for (const [p, c] of located) {
+    const m = L.circleMarker(c, { radius: 7, weight: 2, color: "#8a6520", fillColor: "#d9bd6e", fillOpacity: 0.9 });
+    m.on("click", () => showQuickCard(p, orderedIds));
+    _boardCluster.addLayer(m);
+  }
+  _boardMap.addLayer(_boardCluster);
+  // Preserve the prior map position across re-renders and detail visits; else fit
+  // to the located markers (Florida fallback when there are none).
+  if (S._mapCenter) _boardMap.setView(S._mapCenter, S._mapZoom || 9);
+  else if (located.length) { try { _boardMap.fitBounds(_boardCluster.getBounds().pad(0.15)); } catch (e) { _boardMap.setView([27.8, -81.7], 6); } }
+  else _boardMap.setView([27.8, -81.7], 6);
+  _boardMap.on("moveend", () => { const cc = _boardMap.getCenter(); S._mapCenter = [cc.lat, cc.lng]; S._mapZoom = _boardMap.getZoom(); });
+  setTimeout(() => { try { _boardMap.invalidateSize(); } catch (e) {} }, 60);   // size recalc once in the DOM
+}
+// Compact quick card from a map marker. Reuses the detail's decision/save state, so
+// a change here writes the same interest[id] and syncs like anywhere else.
+function showQuickCard(p, orderedIds) {
+  S.quickId = p.id;
+  const el = $("quick-card"); if (!el) return;
+  const it = getInt(p.id);
+  const title = p.hasAddr ? p.addr : "Parcel " + p.parcel;
+  el.innerHTML = `<div class="blueprint" style="background:var(--color-surface);padding:14px 16px;box-shadow:var(--shadow-lg)">${CORNERS}
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;line-height:1.15">${esc(title)}</div>
+      <button id="qc-close" aria-label="Close" style="background:none;border:none;cursor:pointer;font-size:18px;line-height:1;color:var(--color-text-secondary)">&times;</button>
+    </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:8px">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div>
+    <div style="font-size:13px;margin-bottom:8px">${p.acreage ? esc(p.acreage) + " ac" : "Acres not available"}${effType(p) ? " · " + esc(effType(p)) : ""}</div>
+    <div style="font-size:13px;margin-bottom:6px"><b>${esc(p.auction)}</b> · ${esc(saleTimeText(p))} · ${p.redeemed ? "Redeemed" : "Scheduled"}</div>
+    <div style="margin-bottom:10px">${researchCell(p)}</div>
+    <div style="display:flex;margin-bottom:10px;border:1px solid var(--color-divider)">
+      ${["Interested", "Watching", "Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-qstatus="${o}" style="flex:1;padding:6px 2px;font-size:12px">${o}</button>`).join("")}
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary" id="qc-bookmark" style="font-size:12.5px;padding:6px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
+      <button class="btn btn-primary" id="qc-open" style="font-size:12.5px;padding:6px 13px;flex:1">Open full details</button>
+    </div></div>`;
+  el.hidden = false;
+  $("qc-close").onclick = () => { S.quickId = null; el.hidden = true; };
+  $("qc-open").onclick = () => openParcel(p.id, orderedIds, "dashboard");
+  $("qc-bookmark").onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); showQuickCard(p, orderedIds); };
+  el.querySelectorAll("[data-qstatus]").forEach((b) => b.onclick = () => {
+    setInt(p.id, { status: b.dataset.qstatus === it.status ? "" : b.dataset.qstatus }, p);
+    showQuickCard(p, orderedIds);
+  });
 }
 
 // ---------- detail screen ----------
@@ -2193,8 +2378,8 @@ function renderCalendar() {
   $("cal-months").querySelectorAll("[data-cty]").forEach((el) => el.onclick = () => {
     // Filter Explore to this county AND this exact sale day, so the resulting count
     // matches the calendar cell's badge.
-    S.county = el.dataset.cty; S.dayFilter = el.dataset.day != null ? Number(el.dataset.day) : null;
-    S.when = "all"; S.status = "Scheduled"; S.shown = 150; go("dashboard");
+    S.counties = [el.dataset.cty]; S.dayFilter = el.dataset.day != null ? Number(el.dataset.day) : null;
+    S.when = "all"; S.status = "Scheduled"; S.view = "list"; S.mapArea = null; S.shown = 150; go("dashboard");
   });
 }
 // The same calendar as a printable monthly sheet (one month per page).
@@ -2456,6 +2641,12 @@ function initTheme() {
   renderNav();
   wireLogin();
   initTheme();
+  // Close the county multi-select popover on an outside click.
+  document.addEventListener("click", (e) => {
+    if (!S.countyOpen || S.screen !== "dashboard") return;
+    const pop = $("county-pop"), btn = $("f-county-btn");
+    if (pop && !pop.contains(e.target) && btn && !btn.contains(e.target)) { S.countyOpen = false; renderDashboard(); }
+  });
   initCloud();                      // no await — sync comes up alongside the feed
   $("next-run").textContent = nextRefreshText();
   $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };

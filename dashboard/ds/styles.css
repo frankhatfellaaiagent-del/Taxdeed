@@ -298,6 +298,10 @@ textarea.input { min-height: 90px; resize: vertical; }
 .tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
 .tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
 .tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+/* Semantic status tags (distinct from the gold accent). Mixed against the current
+   theme's surface/ink so they adapt to light and dark automatically. */
+.tag-ok { background: color-mix(in srgb, #3f9d4e 20%, var(--color-surface)); color: color-mix(in srgb, #2f8b3f 62%, var(--color-text)); }
+.tag-warn { background: color-mix(in srgb, #d69a1e 24%, var(--color-surface)); color: color-mix(in srgb, #a6791a 62%, var(--color-text)); }
 
 /* — navigation — */
 .nav {
