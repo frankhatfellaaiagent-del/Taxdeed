@@ -2,44 +2,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600&display=swap');
 
 :root {
-  --color-bg: #f2f2f3;
-  --color-surface: #e9e9ea;
-  --color-text: #1d1f20;
-  --color-accent: #5980a6;
-  --color-accent-2: #728fab;
-  --color-divider: color-mix(in srgb, #1d1f20 16%, transparent);
+  /* ── Pearl (light) ── warm ivory ground, white panels, near-black action,
+     soft-gold accent. --color-action drives primary buttons + active nav so gold
+     can stay an accent (chips, links, highlights) rather than the button color. */
+  --color-bg: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-text: #23201a;
+  --color-text-secondary: #6c6559;
+  --color-action: #201d18;
+  --color-action-text: #f6f3ec;
+  --color-accent: #a97f2a;
+  --color-accent-2: #8c7a5c;
+  --color-divider: color-mix(in srgb, #23201a 15%, transparent);
+  --color-danger: #b3261e;
 
-  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
-     same step of any role matches the others in visual value. */
-  --color-neutral-100: #f5f5f8;
-  --color-neutral-200: #e7e7ea;
-  --color-neutral-300: #d4d4d7;
-  --color-neutral-400: #b7b7ba;
-  --color-neutral-500: #98989b;
-  --color-neutral-600: #7a7a7d;
-  --color-neutral-700: #5d5d60;
-  --color-neutral-800: #424244;
-  --color-neutral-900: #2b2b2d;
+  /* Tonal ramps — warm neutrals + a gold accent ramp (low steps = pale washes,
+     high steps = deep ink), so chip backgrounds (-100), secondary headings (-700)
+     and tag text (-800) all read as the same family. */
+  --color-neutral-100: #f4f1ea;
+  --color-neutral-200: #e9e5db;
+  --color-neutral-300: #d7d2c6;
+  --color-neutral-400: #bab5a9;
+  --color-neutral-500: #9a958a;
+  --color-neutral-600: #7a766c;
+  --color-neutral-700: #5c584f;
+  --color-neutral-800: #423f38;
+  --color-neutral-900: #2a2823;
 
-  --color-accent-100: #eef6ff;
-  --color-accent-200: #d6ebff;
-  --color-accent-300: #b5d9fd;
-  --color-accent-400: #94bce3;
-  --color-accent-500: #749dc4;
-  --color-accent-600: #597ea3;
-  --color-accent-700: #416180;
-  --color-accent-800: #2c455d;
-  --color-accent-900: #1d2d3d;
+  --color-accent-100: #faf4e4;
+  --color-accent-200: #f3e7c4;
+  --color-accent-300: #e8d39a;
+  --color-accent-400: #d9bd6e;
+  --color-accent-500: #c6a147;
+  --color-accent-600: #a9862f;
+  --color-accent-700: #856526;
+  --color-accent-800: #664d1f;
+  --color-accent-900: #443310;
 
-  --color-accent-2-100: #eef6ff;
-  --color-accent-2-200: #d6ebff;
-  --color-accent-2-300: #bdd8f2;
-  --color-accent-2-400: #9ebbd8;
-  --color-accent-2-500: #7e9cb8;
-  --color-accent-2-600: #627d98;
-  --color-accent-2-700: #486077;
-  --color-accent-2-800: #314457;
-  --color-accent-2-900: #1f2d3a;
+  --color-accent-2-100: #f2eee3;
+  --color-accent-2-200: #e6dfcd;
+  --color-accent-2-300: #d3c8ac;
+  --color-accent-2-400: #b8a983;
+  --color-accent-2-500: #9c8a66;
+  --color-accent-2-600: #7f6f4e;
+  --color-accent-2-700: #62553b;
+  --color-accent-2-800: #473d2b;
+  --color-accent-2-900: #2d271b;
 
   --font-heading: "Barlow Condensed", system-ui, sans-serif;
   --font-heading-weight: 600;
@@ -70,46 +78,52 @@
    follows, and the many color-mix(... var(--color-text) ...) derivations
    (muted text, dividers, hovers) invert on their own once the ink is light. */
 :root[data-theme="dark"] {
-  --color-bg: #15171a;
-  --color-surface: #1e2226;
-  --color-text: #e6e8eb;
-  --color-accent: #6f97bd;
-  --color-accent-2: #7e9cb8;
-  --color-divider: color-mix(in srgb, #e6e8eb 18%, transparent);
+  /* ── Charcoal (dark) ── neutral charcoal ground (no blue/green cast), soft-white
+     ink, champagne-gold action + accent. */
+  --color-bg: #1a1a1c;
+  --color-surface: #232427;
+  --color-text: #e9e8e4;
+  --color-text-secondary: #a5a29a;
+  --color-action: #cdb071;
+  --color-action-text: #1a1a1c;
+  --color-accent: #cdb071;
+  --color-accent-2: #b0a488;
+  --color-divider: color-mix(in srgb, #e9e8e4 16%, transparent);
   --color-danger: #f2726a;
 
-  /* Neutral ramp inverted: low steps = dark surfaces, high steps = light ink.
-     900 stays dark on purpose — its only use is the modal/login scrim. */
-  --color-neutral-100: #202429;
-  --color-neutral-200: #2a2f35;
-  --color-neutral-300: #3a4047;
-  --color-neutral-400: #565c64;
-  --color-neutral-500: #7b818a;
-  --color-neutral-600: #9aa0a8;
-  --color-neutral-700: #b9bec5;
-  --color-neutral-800: #d7dade;
-  --color-neutral-900: #0a0c0e;
+  /* Neutral ramp inverted and de-tinted: low steps = dark surfaces, high steps =
+     light ink; 900 stays dark (modal/login scrim only). */
+  --color-neutral-100: #232325;
+  --color-neutral-200: #2c2c2f;
+  --color-neutral-300: #3b3b3e;
+  --color-neutral-400: #565659;
+  --color-neutral-500: #7b7b7e;
+  --color-neutral-600: #9a9a9d;
+  --color-neutral-700: #b9b9bc;
+  --color-neutral-800: #d7d7d9;
+  --color-neutral-900: #0b0b0c;
 
-  /* Accent ramp inverted: low steps = deep-blue fills, high steps = pale ink. */
-  --color-accent-100: #1b2c3f;
-  --color-accent-200: #223a50;
-  --color-accent-300: #2e4a63;
-  --color-accent-400: #3f6081;
-  --color-accent-500: #5a7ea3;
-  --color-accent-600: #7ea4c8;
-  --color-accent-700: #a6c6e6;
-  --color-accent-800: #cadef4;
-  --color-accent-900: #e8f1fb;
+  /* Gold accent ramp inverted: low steps = deep gold-brown fills, high steps =
+     pale champagne ink. */
+  --color-accent-100: #2a2617;
+  --color-accent-200: #38311c;
+  --color-accent-300: #4b4126;
+  --color-accent-400: #675834;
+  --color-accent-500: #8b7743;
+  --color-accent-600: #b0995a;
+  --color-accent-700: #d8c07f;
+  --color-accent-800: #e8d9ad;
+  --color-accent-900: #f4edd8;
 
-  --color-accent-2-100: #1c2a37;
-  --color-accent-2-200: #243645;
-  --color-accent-2-300: #30475a;
-  --color-accent-2-400: #425e74;
-  --color-accent-2-500: #5c7890;
-  --color-accent-2-600: #7e9cb8;
-  --color-accent-2-700: #a3bdd4;
-  --color-accent-2-800: #c9dbec;
-  --color-accent-2-900: #e6eff8;
+  --color-accent-2-100: #26241d;
+  --color-accent-2-200: #322f24;
+  --color-accent-2-300: #443f30;
+  --color-accent-2-400: #5f5842;
+  --color-accent-2-500: #82795d;
+  --color-accent-2-600: #a89c79;
+  --color-accent-2-700: #c7bd9d;
+  --color-accent-2-800: #ded6bf;
+  --color-accent-2-900: #efeadb;
 
   --shadow-sm: 0 1px 2px color-mix(in srgb, #000 45%, transparent);
   --shadow-md: 0 3px 12px color-mix(in srgb, #000 50%, transparent);
@@ -178,7 +192,7 @@ figcaption {
   font-size: 11px; margin-top: var(--space-1);
   color: color-mix(in srgb, var(--color-text) 55%, transparent);
 }
-.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+.text-muted { color: var(--color-text-secondary); }
 :focus { outline: none; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
@@ -202,9 +216,9 @@ figcaption {
 }
 .btn svg { display: block; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.btn-primary { background: var(--color-accent); color: var(--color-bg); }
-.btn-primary:hover { background: var(--color-accent-600); }
-.btn-primary:active { background: var(--color-accent-700); }
+.btn-primary { background: var(--color-action); color: var(--color-action-text); border-color: var(--color-action); }
+.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary:active { filter: brightness(0.92); }
 .btn-secondary { border-color: var(--color-divider); }
 .btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
@@ -334,6 +348,6 @@ textarea.input { min-height: 90px; resize: vertical; }
 .card, .btn, .input, .tag, .seg, .dialog { border-radius: 0; }
 .card, .dialog { background: transparent; border: 1px solid var(--color-divider); }
 .btn { border: 1px solid var(--color-divider); }
-.btn-primary { border-color: var(--color-accent); }
+.btn-primary { border-color: var(--color-action); }
 .btn-ghost { border-color: transparent; }
 

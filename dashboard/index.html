@@ -28,9 +28,9 @@ a{color:var(--color-accent)}a:hover{color:var(--color-accent-700)}
 .ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
 .nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
 .nav-btn:hover{background:var(--color-accent-100)}
-.nav-btn.active{background:var(--color-accent);color:var(--color-bg);border-color:var(--color-accent)}
+.nav-btn.active{background:var(--color-action);color:var(--color-action-text);border-color:var(--color-action)}
 .nav-btn .dot{width:6px;height:6px;flex:none;background:transparent;border:1px solid currentColor}
-.nav-btn.active .dot{background:var(--color-bg)}
+.nav-btn.active .dot{background:var(--color-action-text)}
 .seg3{flex:1;padding:8px 4px;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.03em;border:none;cursor:pointer;background:transparent;color:var(--color-text)}
 .seg3.on{background:var(--color-accent);color:var(--color-bg)}
 .pillbtn{font-family:var(--font-body);font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--color-divider);background:transparent;color:var(--color-text)}
@@ -2353,9 +2353,18 @@ function renderSettings() {
         </div>
       </div>
 
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <h6 style="color:var(--color-accent-700);margin-bottom:12px">Appearance</h6>
+        <div class="text-muted" style="font-size:12.5px;margin-bottom:12px">Choose a theme. &ldquo;System&rdquo; follows your device&rsquo;s light/dark setting automatically.</div>
+        <div style="display:inline-flex;border:1px solid var(--color-divider)">
+          ${[["light", "Light"], ["dark", "Dark"], ["system", "System"]].map(([v, l]) => `<button class="seg3 ${themeMode() === v ? "on" : ""}" data-theme-mode="${v}" style="min-width:96px;padding:8px 16px">${l}</button>`).join("")}
+        </div>
+      </div>
+
       ${dataUpdatesHtml()}
     </div>`;
 
+  $("scr-settings").querySelectorAll("[data-theme-mode]").forEach((b) => b.onclick = () => setThemeMode(b.dataset.themeMode));
   const so = $("acct-signout");
   if (so) so.onclick = () => CLOUD.sb.auth.signOut();
   const si = $("acct-signin");
@@ -2411,21 +2420,35 @@ const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
 // ---------- theme (light / dark) ----------
 const THEME_SUN = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
 const THEME_MOON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-function themeIsDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
+// Theme is tri-state: light / dark / system. "system" (the default) follows the OS
+// live; light/dark are explicit and ignore the OS. The head pre-paint script sets
+// data-theme before first paint (system/unset -> matchMedia), and this keeps it in
+// sync afterward.
+function themeMode() {
+  try { const t = localStorage.getItem("tdd_theme"); return (t === "light" || t === "dark" || t === "system") ? t : "system"; }
+  catch (e) { return "system"; }
+}
+function systemPrefersDark() { try { return matchMedia("(prefers-color-scheme:dark)").matches; } catch (e) { return false; } }
+function effectiveDark() { const m = themeMode(); return m === "dark" || (m === "system" && systemPrefersDark()); }
+function themeIsDark() { return effectiveDark(); }
+function applyTheme() { document.documentElement.setAttribute("data-theme", effectiveDark() ? "dark" : "light"); paintThemeBtn(); }
+function setThemeMode(mode) {
+  try { localStorage.setItem("tdd_theme", mode); } catch (e) {}
+  applyTheme();
+  if (S.screen === "settings") renderSettings();   // reflect the choice in the Settings control
+}
 function paintThemeBtn() {
   const b = $("btn-theme"); if (!b) return;
-  const dark = themeIsDark();
+  const dark = effectiveDark();
   b.innerHTML = dark ? THEME_SUN : THEME_MOON;   // show where the click takes you
   b.title = dark ? "Switch to light mode" : "Switch to dark mode";
 }
 function initTheme() {
-  paintThemeBtn();
-  $("btn-theme").onclick = () => {
-    const next = themeIsDark() ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    try { localStorage.setItem("tdd_theme", next); } catch (e) {}
-    paintThemeBtn();
-  };
+  applyTheme();
+  // Header button = quick light<->dark toggle (sets an explicit choice).
+  $("btn-theme").onclick = () => setThemeMode(effectiveDark() ? "light" : "dark");
+  // Follow the OS live while in system mode.
+  try { matchMedia("(prefers-color-scheme:dark)").addEventListener("change", () => { if (themeMode() === "system") applyTheme(); }); } catch (e) {}
 }
 
 (async function boot() {
