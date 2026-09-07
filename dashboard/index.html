@@ -221,6 +221,77 @@ function etDaysLeftInWeek() {
 }
 const etStamp = (d) => ET_STAMP.format(d) + " ET";
 
+// ---------- county time zones ----------
+// Not every Florida county runs on Eastern time — the western Panhandle counties
+// are Central. Auction start times are scraped in the county's own local zone, so
+// a blanket "ET" label would misstate a Central-county sale by an hour. Label each
+// time with its county's real zone (ET / CT); a county that straddles the line
+// (Gulf) or whose zone we can't establish is flagged, never guessed.
+const FL_CENTRAL_COUNTIES = new Set(
+  ["escambia", "santarosa", "okaloosa", "walton", "holmes", "washington", "bay", "jackson", "calhoun"]);
+const FL_SPLIT_TZ_COUNTIES = new Set(["gulf"]);   // straddles the ET/CT line — don't assume
+function countyTZLabel(county) {
+  const c = normCounty(county);
+  if (FL_SPLIT_TZ_COUNTIES.has(c)) return null;   // ambiguous — the caller flags it
+  return FL_CENTRAL_COUNTIES.has(c) ? "CT" : "ET";
+}
+// A parcel's sale time as a correctly-zoned display string:
+//   empty            -> "Time not published"
+//   explicit zone     -> honor a zone already in the scraped string
+//   otherwise         -> label by the county's zone; split/unknown is flagged.
+function saleTimeText(p) {
+  const raw = ((p && p.saleTime) || "").trim();
+  if (!raw) return "Time not published";
+  const bare = raw.replace(/\s*\b(E[DS]?T|C[DS]?T)\b\.?$/i, "").trim() || raw;
+  const explicit = /\bC[DS]?T\b/i.test(raw) ? "CT" : /\bE[DS]?T\b/i.test(raw) ? "ET" : null;
+  const zone = explicit || countyTZLabel(p && p.county);
+  return zone ? `${bare} ${zone}` : `${bare} · time zone unverified`;
+}
+
+// ---------- stable parcel id ----------
+// A parcel's synthetic id is county|parcel|case. Counties reformat the case number
+// between refreshes ("2026 TD04.43" vs "2026TD0443"), so a raw id can change under
+// saved work and orphan it. normId canonicalises each segment (lowercase, strip
+// spaces/punctuation) so the same sale keeps ONE id across refreshes; it is
+// idempotent, so it can run on already-normalised ids harmlessly. case_number
+// stays IN the id, so a parcel returning in a later auction (a new case) is a
+// genuinely separate sale and never merges with the old one.
+const normIdSeg = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+function normId(id) {
+  const parts = String(id ?? "").split("|");
+  const county = parts.shift() || "";
+  const parcel = parts.shift() || "";
+  const rest = parts.join("|");                    // any extra pipes fold into the case segment
+  return `${normIdSeg(county)}|${normIdSeg(parcel)}|${normIdSeg(rest)}`;
+}
+// Re-key an id-keyed object (interest, team.membership) from raw ids to canonical
+// normIds. Idempotent. Collisions — two different raw ids that canonicalise to the
+// same id, each carrying real, differing data — are NOT merged: the first wins the
+// canonical key, the other is preserved under its original key and logged, so no
+// saved work is silently lost or wrongly combined.
+function remapIdKeys(obj) {
+  if (!obj || typeof obj !== "object") return { out: obj || {}, changed: false, collisions: [] };
+  const out = {}, from = {}, collisions = [];
+  let changed = false;
+  for (const [k, v] of Object.entries(obj)) {
+    const nk = normId(k);
+    if (nk !== k) changed = true;
+    if (!(nk in out)) { out[nk] = v; from[nk] = k; }
+    else if (JSON.stringify(out[nk]) === JSON.stringify(v)) { /* identical dup — drop */ }
+    else {
+      // Genuine collision: two different raw ids canonicalise to the same id but
+      // carry different data. Keep the second under a distinct key (never clobber
+      // the first) and log it, so no saved work is silently lost or wrongly merged.
+      let dk = (k in out) ? null : k;
+      if (dk === null) { let n = 1; do { dk = nk + "|__dup" + (n++); } while (dk in out); }
+      out[dk] = v;
+      changed = true;
+      collisions.push([from[nk], k, nk]);
+    }
+  }
+  return { out, changed, collisions };
+}
+
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
@@ -342,8 +413,144 @@ function recomputeBuybox() {
     p.useType = typeFromUse(p.use);   // Type buckets follow the buy-box keywords
   }
 }
-const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
-const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
+// A saved parcel entry: the user's own fields plus, from Phase 1 on, per-field
+// change timestamps (_ts) that drive field-level sync merging, an optional display
+// snapshot (snap) so a parcel stays viewable after it leaves the feed, and a
+// research map (filled in Phase 3). Reads default every field so old entries and
+// signed-out use keep working.
+const nowIso = () => new Date().toISOString();
+const FIELD_KEYS = ["status", "bid", "notes", "list", "type", "bookmark"];
+const EMPTY_INT = () => ({ status: "", bid: "", list: "", notes: "", type: "", bookmark: false });
+const getInt = (id) => interest[id] ? { ...EMPTY_INT(), ...interest[id] } : EMPTY_INT();
+// A small display snapshot, written whenever the user acts on a parcel, so Saved /
+// history can still show it after the feed drops it (never assume it "sold").
+const snapOf = (p) => ({
+  parcel: p.parcel, addr: p.addr, city: p.city, county: p.county,
+  saleDate: p.saleDate ? p.saleDate.getTime() : null, auction: p.auction,
+  bid: p.bid, assessed: p.assessed, status: p.status, auctionUrl: p.auctionUrl, at: nowIso(),
+});
+// setInt(id, patch[, rec]) — merge fields, stamp each changed field's _ts (for
+// conflict-safe sync), and, when the record is passed, refresh the display snapshot.
+function setInt(id, patch, rec) {
+  const cur = interest[id] || EMPTY_INT();
+  const ts = { ...(cur._ts || {}) }, now = nowIso();
+  for (const k of Object.keys(patch)) ts[k] = now;
+  const next = { ...cur, ...patch, _ts: ts };
+  if (rec) next.snap = snapOf(rec);
+  interest[id] = next;
+  saveInterest();
+}
+// Bookmark = saved without a named list (a list is optional, added later).
+const isBookmarked = (id) => !!getInt(id).bookmark;
+// Research state model (rendered in Phase 3). Three independent checks, each with
+// its own progress, findings and resolution. Property record + Title & liens are
+// MANUAL (the user marks them reviewed); Land check is the automated GIS check.
+const RESEARCH_KEYS = ["propertyRecord", "landCheck", "titleLiens"];
+const EMPTY_CHECK = () => ({ state: "notChecked", finding: "", warning: false, resolved: false, checkedAt: "", source: "" });
+const getResearch = (id) => {
+  const r = (interest[id] && interest[id].research) || {};
+  return Object.fromEntries(RESEARCH_KEYS.map((k) => [k, { ...EMPTY_CHECK(), ...(r[k] || {}) }]));
+};
+// "Needs review" is ONE precise state, kept distinct from never-checked and passed:
+// a check that was reviewed but carries an unresolved warning, OR an automated
+// check that couldn't complete. Never counts notChecked or reviewed-and-resolved.
+function needsReview(id) {
+  const r = getResearch(id);
+  return RESEARCH_KEYS.some((k) => {
+    const c = r[k];
+    return (c.state === "reviewed" && c.warning && !c.resolved) || c.state === "couldntCheck";
+  });
+}
+// Field-level merge of two devices' interest maps. Per parcel and per field, the
+// value with the newer _ts wins, so concurrent edits to DIFFERENT fields both
+// survive and an OLDER remote write can never clobber newer local work. When the
+// same field was changed on both sides, a conflict marker (_conflict[field]) is
+// recorded (surfaced in the UI) rather than silently dropping an edit.
+function mergeInterest(localObj, remoteObj) {
+  const L = localObj || {}, R = remoteObj || {}, out = {};
+  for (const id of new Set([...Object.keys(L), ...Object.keys(R)])) {
+    const a = L[id], b = R[id];
+    if (!a) { out[id] = b; continue; }
+    if (!b) { out[id] = a; continue; }
+    const at = a._ts || {}, bt = b._ts || {};
+    const merged = { ...a }, mt = { ...at }, conflicts = { ...(a._conflict || {}) };
+    // Only the user's scalar fields carry per-field _ts and are merged this way;
+    // snap/research (objects, no _ts) are reconciled separately below so they never
+    // register a spurious conflict.
+    for (const f of FIELD_KEYS) {
+      const av = a[f], bv = b[f], ata = at[f], btb = bt[f];
+      if (JSON.stringify(av) === JSON.stringify(bv)) { if (btb && (!ata || btb > ata)) mt[f] = btb; continue; }
+      if (btb && ata && btb > ata) { merged[f] = bv; mt[f] = btb; }             // remote newer
+      else if (ata && btb && ata > btb) { merged[f] = av; mt[f] = ata; conflicts[f] = nowIso(); } // local newer, both changed
+      else if (btb && !ata) { merged[f] = bv; mt[f] = btb; }                     // only remote stamped
+      else if (ata && !btb) { merged[f] = av; mt[f] = ata; }                     // only local stamped
+      else if (btb || ata) { merged[f] = bv; mt[f] = btb || ata; conflicts[f] = nowIso(); } // stamps tie/one side
+      else { merged[f] = bv; }                                                   // neither stamped (legacy) — take remote quietly
+    }
+    merged._ts = mt;
+    if (Object.keys(conflicts).length) merged._conflict = conflicts;
+    // Snapshot: keep whichever is newer (by its own `at`); research: keep the side
+    // that has one (full per-check merge lands in Phase 3).
+    if (b.snap && (!a.snap || String(b.snap.at || "") > String(a.snap.at || ""))) merged.snap = b.snap;
+    if (b.research && !a.research) merged.research = b.research;
+    out[id] = merged;
+  }
+  return out;
+}
+// Clear a resolved field conflict once the user has dealt with it.
+function clearConflict(id, field) {
+  const it = interest[id]; if (!it || !it._conflict) return;
+  delete it._conflict[field];
+  if (!Object.keys(it._conflict).length) delete it._conflict;
+  saveInterest();
+}
+// One-time, at boot: back up pre-migration state (for recovery), then canonicalise
+// every id-keyed local store so saved work survives the switch to normalised ids.
+// Idempotent — normId is stable, so a second run is a no-op. team.membership is
+// re-keyed on sign-in (remapIdKeys in onSignedIn), where the shared row loads.
+function migrateSavedIds() {
+  try {
+    if (!localStorage.getItem("tdd_idmig_v1")) {
+      const bak = { at: nowIso(), interest: store.get("tdd_interest", {}), lc: {} };
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith("tdd_lc_")) bak.lc[key] = localStorage.getItem(key);
+      }
+      store.set("tdd_idmig_bak_v1", bak);
+      localStorage.setItem("tdd_idmig_v1", bak.at);
+    }
+  } catch (e) {}
+  const ri = remapIdKeys(interest);
+  if (ri.changed) { interest = ri.out; store.set("tdd_interest", interest); }
+  if (ri.collisions.length) console.warn("id migration kept colliding interest entries distinct:", ri.collisions);
+  // Re-key the per-parcel land-check cache (tdd_lc_<id>).
+  try {
+    const moves = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith("tdd_lc_")) {
+        const oldId = key.slice(7), nid = normId(oldId);
+        if (nid !== oldId) moves.push([key, "tdd_lc_" + nid, localStorage.getItem(key)]);
+      }
+    }
+    for (const [oldK, newK, val] of moves) { if (!localStorage.getItem(newK)) localStorage.setItem(newK, val); localStorage.removeItem(oldK); }
+  } catch (e) {}
+}
+// After the feed loads: give any already-saved parcel (acted on before snapshots
+// existed) a display snapshot from the current feed, so it stays viewable in
+// Saved/history once it later drops out of the feed.
+function backfillSnapshots() {
+  const byId = {};
+  for (const p of DATA) byId[p.id] = p;
+  let changed = false;
+  for (const [id, it] of Object.entries(interest)) {
+    if (!it || it.snap) continue;
+    if (!(it.status || it.bid || it.notes || it.list || it.bookmark)) continue;   // only real saves
+    const p = byId[id];
+    if (p) { it.snap = snapOf(p); changed = true; }
+  }
+  if (changed) store.set("tdd_interest", interest);
+}
 
 // ---------- cloud sync (Supabase Auth + Postgres + Realtime) ----------
 // Dormant when SUPABASE_URL is a placeholder. State lives in two tables:
@@ -424,7 +631,13 @@ async function cloudSignIn(email, pass) {
 
 // A realtime row -> update the matching global + rerender.
 function applyUserRow(key, data) {
-  if (key === "interest") { const n = applySnap(interest, data || {}); if (n) { interest = n; store.set("tdd_interest", interest); rerender(); } }
+  if (key === "interest") {
+    // Field-level merge (not whole-row replace) so an incoming row can't drop a
+    // field this device just edited; only rerender on a real change, which keeps
+    // the echo of our own write from disturbing the notes caret.
+    const merged = mergeInterest(interest, remapIdKeys(data || {}).out);
+    if (JSON.stringify(merged) !== JSON.stringify(interest)) { interest = merged; store.set("tdd_interest", interest); rerender(); }
+  }
   else if (key === "prefs") { const n = applySnap(prefs, { ...DEFAULT_PREFS, ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
   else if (key === "lists") { const n = applySnap(lists, data || []); if (n) { lists = n; store.set("tdd_lists", lists); rerender(); } }
 }
@@ -463,12 +676,15 @@ async function onSignedIn(user) {
     ]);
     const U = Object.fromEntries((us.data || []).map((r) => [r.key, r.data]));
     const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
-    interest = { ...interest, ...(U.interest || {}) };
+    // Field-level merge with the cloud (ids canonicalised first), so nothing this
+    // device changed offline is lost and no stale cloud field overwrites it.
+    interest = mergeInterest(interest, remapIdKeys(U.interest || {}).out);
     prefs = { ...prefs, ...(U.prefs || {}) };
     // Union cloud + local by name, but let deletions (tombstones) win so a
     // list deleted on another device stays deleted instead of being resurrected.
     lists = mergeLists(U.lists || [], lists);
     team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
+    team.membership = remapIdKeys(team.membership).out;   // canonicalise shared list membership ids
     // The team shares one buy box — a personal edit made before signing in is a
     // starting point, not something that overrides what the team already set.
     const cloudBuybox = T.buybox;
@@ -669,8 +885,12 @@ let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
   when: "all", sort: normSort(prefs.sort), shown: 150,
+  dayFilter: null,   // exact ET sale-day (set by a Calendar day click); null = off
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
+  // Where the open property was reached from, so Back returns exactly there and
+  // Previous/Next walk that origin's ordered results (Explore OR a saved list).
+  origin: null,   // { screen, listName, listShared, ids:[id...], scrollTop }
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
   // Buy-box screen: the saved-search runner.
   bb: { ran: false, includeReview: false, scheduledOnly: true, sort: "soonest", shown: 100 },
@@ -685,7 +905,13 @@ function splitAddr(a) {
   // "NO SITUS" = county-speak for "no street address assigned" (common on
   // vacant land) — treat as unpublished rather than showing it as an address.
   const first = parts[0].trim();
-  const addr = /^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first) ? "" : titleCase(first);
+  if (/^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first)) return { addr: "", city };
+  // Title-case the street, but PRESERVE unit/apt designators and their codes
+  // (plain title-casing would lower-case "UNIT 4B" to "Unit 4b" and hide the unit).
+  let addr = titleCase(first);
+  addr = addr.replace(/\b(Unit|Apt|Ste|Suite|Lot|Bldg|Rm|Fl)\b\.?\s*([a-z0-9-]+)/gi,
+    (m, kw, code) => `${kw.charAt(0).toUpperCase()}${kw.slice(1).toLowerCase()} ${code.toUpperCase()}`);
+  addr = addr.replace(/#\s*([a-z0-9-]+)/gi, (m, code) => `#${code.toUpperCase()}`);
   return { addr, city };
 }
 function parseDate(mdy) {
@@ -694,6 +920,23 @@ function parseDate(mdy) {
 }
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
+// A day number (dayNum) back to a readable date, for the active sale-day chip.
+const dayNumLabel = (dn) => { const d = new Date(dn * 864e5); return `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`; };
+// The feed's per-county run stamps are compact ISO ("2026-09-07T135317Z"); parse
+// one to a Date. NOTE: county_runs records the last run's time only — it does NOT
+// flag whether that run succeeded, so this is honestly "last checked", not "last
+// verified". Distinguishing success is a scraper/feed dependency (flagged).
+function parseRunStamp(s) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(s || "");
+  return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6])) : (s ? new Date(s) : null);
+}
+// A parcel's county "last checked" stamp from the feed, or null.
+function countyChecked(p) {
+  const slug = p && p.raw && p.raw.county;
+  const runs = (META && META.county_runs) || {};
+  const d = slug && runs[slug] ? parseRunStamp(runs[slug]) : null;
+  return d && !isNaN(d.getTime()) ? d : null;
+}
 
 // Bucket the appraiser's land-use text into the dashboard's type filter.
 // The "Vacant land" bucket uses the ACTIVE buy-box's land keywords, so a team
@@ -730,7 +973,7 @@ function mapRecord(r, i) {
   const { addr, city } = splitAddr(r.property_address);
   const d = parseDate(r.sale_date);
   return {
-    id: `${r.county}|${r.parcel_id}|${r.case_number}`,
+    id: normId(`${r.county}|${r.parcel_id}|${r.case_number}`),
     idx: i, county: countyDisplayName(r.county),
     parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
@@ -875,7 +1118,7 @@ async function loadFeed() {
 }
 
 // ---------- shared header/sidebar ----------
-const NAV = [["dashboard","Dashboard"],["lists","My lists"],["calendar","Calendar"],["settings","Settings"]];
+const NAV = [["dashboard","Explore"],["lists","Saved"],["calendar","Calendar"],["settings","Settings"]];
 function renderNav() {
   $("nav").innerHTML = NAV.map(([k, label]) => {
     const active = S.screen === k
@@ -904,18 +1147,55 @@ function go(screen, selId) {
   $("scroller").scrollTop = 0;
 }
 
+// Open a property, remembering where we came from and the ordered result set it
+// belongs to, so Back returns there (filters, sort, scroll intact) and Prev/Next
+// step through that same set — whether the origin is Explore or a saved list.
+function openParcel(id, orderedIds, originScreen) {
+  S.origin = {
+    screen: originScreen || S.screen,
+    listName: S.listName, listShared: S.listShared,
+    ids: Array.isArray(orderedIds) ? orderedIds : [],
+    scrollTop: (($("scroller") || {}).scrollTop) || 0,
+  };
+  go("detail", id);
+}
+function goBack() {
+  const o = S.origin || { screen: "dashboard" };
+  if (o.screen === "listdetail" && o.listName) { S.listName = o.listName; S.listShared = o.listShared; go("listdetail"); }
+  else go(o.screen === "settings" || o.screen === "calendar" ? o.screen : "dashboard");
+  if (o.scrollTop) $("scroller").scrollTop = o.scrollTop;   // restore where they were
+}
+// Walk Previous/Next through the origin's ordered ids (fallback: current filtered
+// dashboard order). Keeps the same origin so scroll/return stays anchored.
+function stepParcel(delta) {
+  const ids = (S.origin && S.origin.ids && S.origin.ids.length) ? S.origin.ids : filteredRows().map((p) => p.id);
+  const i = ids.indexOf(S.selId), j = i + delta;
+  if (i < 0 || j < 0 || j >= ids.length) return;
+  S.selId = ids[j];
+  renderDetail();
+}
+const stepInfo = () => {
+  const ids = (S.origin && S.origin.ids) || [];
+  const i = ids.indexOf(S.selId);
+  return { i, n: ids.length, hasPrev: i > 0, hasNext: i >= 0 && i < ids.length - 1 };
+};
+
 // ---------- filtering ----------
-function filteredRows() {
+function filteredRows(ignoreFree) {
   const q = S.q.trim().toLowerCase();
   let range = whenRange(S.when);
   // Free tier only sees auctions within the next FREE_DAYS days — clamp whatever
   // window is selected down to [today, today+FREE_DAYS]. Paid sees everything.
-  if (!isPaid()) {
+  // ignoreFree lets the caller measure how many rows the clamp is hiding.
+  if (!isPaid() && !ignoreFree) {
     const t = etToday(), cap = [t, t + FREE_DAYS];
     range = range ? [Math.max(range[0], cap[0]), Math.min(range[1], cap[1])] : cap;
   }
   let rows = DATA.filter((p) => {
     if (!inWhen(p, range)) return false;
+    // Exact sale-day filter (from a Calendar day click) — one specific day, so the
+    // Explore count matches the calendar cell's badge.
+    if (S.dayFilter != null && saleDay(p) !== S.dayFilter) return false;
     const it = getInt(p.id);
     if (S.county !== "All" && p.county !== S.county) return false;
     if (S.status !== "All" && p.status !== S.status) return false;
@@ -980,6 +1260,12 @@ function countyInfoCard(c) {
 
 function renderDashboard() {
   const rows = filteredRows();
+  // How many scheduled auctions the free 5-day clamp is hiding under the SAME
+  // filters (so a short list can say so instead of looking empty), and whether any
+  // filter is narrowing the view (drives the right empty-state message + action).
+  const freeHidden = isPaid() ? 0 : Math.max(0, filteredRows(true).length - rows.length);
+  const filtersActive = S.county !== "All" || S.type !== "All" || S.status !== "Scheduled"
+    || S.deposit !== "All" || S.when !== "all" || S.dayFilter != null || S.q.trim() !== "";
   // "Upcoming" excludes past-due rows too — an auction whose date already
   // passed with no result posted yet isn't upcoming, even though the site
   // hadn't marked it Redeemed as of the last refresh.
@@ -1020,7 +1306,7 @@ function renderDashboard() {
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
   $("scr-dashboard").innerHTML = `
     <h2 style="margin-bottom:4px">Dashboard</h2>
-    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; all auction times are Florida (ET)</div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; auction times shown in each county&rsquo;s local zone (ET / CT)</div>
     <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
       ${stats.map((st) => `
         <div class="blueprint" ${st.when ? `data-when="${st.when}" title="Show these on the board"` : ""} style="padding:16px 18px${st.when ? ";cursor:pointer" : ""}">${CORNERS}
@@ -1045,11 +1331,22 @@ function renderDashboard() {
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
       <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
     </div>
+    ${S.dayFilter != null ? `<div style="margin-bottom:14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px">
+      <span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
+      <button id="clear-day" title="Clear this day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span></div>` : ""}
     ${isPaid() ? "" : `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px">${CORNERS}
       <span>You&rsquo;re on the <b>Free</b> view &mdash; showing the next ${FREE_DAYS} days. Unlock every date, downloads, the land check and lists.</span>
       ${upgradeChip("See everything")}</div>`}
 
-    ${regSel ? countyInfoCard(regSel) : `<div class="blueprint" style="padding:0">${CORNERS}
+    ${regSel ? countyInfoCard(regSel) : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
+      <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${filtersActive ? "No properties match these filters" : (!isPaid() && freeHidden ? "Nothing in your free 5-day window" : "No upcoming sales posted right now")}</div>
+      <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${filtersActive
+          ? "Try widening your filters, or clear the sale-day pick."
+          : (!isPaid() && freeHidden
+              ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"} further out. Upgrade to see every date.`
+              : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically.")}</p>
+      ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
+    </div>` : `<div class="blueprint" style="padding:0">${CORNERS}
       <div class="tablewrap"><table class="table">
         <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
         <tbody>
@@ -1070,24 +1367,34 @@ function renderDashboard() {
       </table></div>
       ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
         <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
+      ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:12px;text-align:center;border-top:1px solid var(--color-divider);font-size:12.5px">
+        ${freeHidden.toLocaleString()} more scheduled ${freeHidden === 1 ? "auction is" : "auctions are"} beyond your free ${FREE_DAYS}-day window. ${upgradeChip("See every date")}</div>` : ""}
     </div>`}`;
 
   // Picking a date window means "what's coming up", so order it soonest-first.
+  // A window supersedes a single calendar-day pick, so clear that pick.
   const setWhen = (v) => {
-    S.when = v;
+    S.when = v; S.dayFilter = null;
     if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
     if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
     S.shown = 150; renderDashboard();
   };
   $("f-when").onchange = (e) => setWhen(e.target.value);
   $("scr-dashboard").querySelectorAll("[data-when]").forEach((c) => c.onclick = () => setWhen(c.dataset.when));
-  $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
+  $("f-county").onchange = (e) => { S.county = e.target.value; S.dayFilter = null; S.shown = 150; renderDashboard(); };
   $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
   $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
+  const cd = $("clear-day"); if (cd) cd.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
+  const rf = $("reset-filters"); if (rf) rf.onclick = () => {
+    S.county = "All"; S.type = "All"; S.status = "Scheduled"; S.deposit = "All";
+    S.when = "all"; S.dayFilter = null; S.q = ""; if ($("q")) $("q").value = "";
+    S.shown = 150; renderDashboard();
+  };
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
-  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+  const orderedIds = rows.map((p) => p.id);
+  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
 }
 
 // ---------- detail screen ----------
@@ -1370,7 +1677,13 @@ function renderDetail() {
   ];
 
   $("scr-detail").innerHTML = `
-    <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
+    ${(() => { const step = stepInfo(); return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+      <button class="btn btn-ghost" id="back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to results</button>
+      ${step.n ? `<span class="text-muted" style="font-size:12px">${step.i + 1} of ${step.n}</span>` : ""}
+      <div style="margin-left:auto;display:flex;gap:8px">
+        <button class="btn btn-secondary" id="nav-prev"${step.hasPrev ? "" : " disabled"}>&larr; Previous</button>
+        <button class="btn btn-secondary" id="nav-next"${step.hasNext ? "" : " disabled"}>Next &rarr;</button>
+      </div></div>`; })()}
     <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
       <h2 style="margin:0">${esc(p.addr)}</h2>
       ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
@@ -1393,10 +1706,10 @@ function renderDetail() {
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
           <div class="triad" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
-            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
+            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", saleTimeText(p)],
                ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
-               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"],
-               ["Mailing address", p.mailing || "—"]]
+               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "Not available"],
+               ["Mailing address (owner)", p.mailing || "Not available"]]
               .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
           </div>
           <div class="hr"></div>
@@ -1439,7 +1752,7 @@ function renderDetail() {
               <span>${a.text}</span></div>`).join("")}
           </div>
           <p class="text-muted" style="font-size:12.5px;margin:16px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Auction record data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
@@ -1458,13 +1771,20 @@ function renderDetail() {
             </select></div>
           <div class="field"><label>Notes</label>
             <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
+          ${(() => {
+            const cf = (interest[p.id] && interest[p.id]._conflict) || null;
+            if (!cf) return "";
+            const nice = { status: "decision", bid: "max bid", notes: "notes", list: "list", bookmark: "save" };
+            const fields = Object.keys(cf).map((f) => nice[f] || f).join(", ");
+            return `<div style="margin-top:10px;font-size:12px;background:var(--color-accent-100);color:var(--color-accent-800);padding:7px 9px">Another device also changed <b>${esc(fields)}</b> around the same time — this device&rsquo;s value was kept. <button id="conflict-ok" class="btn btn-ghost" style="font-size:12px;padding:1px 6px">Dismiss</button></div>`;
+          })()}
           <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
         </div>
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
           <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
           <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
-          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled" + (p.saleTime ? " · " + esc(p.saleTime) : "")}</div>
+          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled · " + esc(saleTimeText(p))}</div>
           ${(() => { const c = countyCaps(p); if (!c.deposit && !c.max_bid) return "";
             const need = p.bid != null ? money(p.bid * 0.05) : null;
             return `<div class="hr" style="margin:10px 0"></div><div style="font-size:12.5px">
@@ -1474,7 +1794,10 @@ function renderDetail() {
       </div>
     </div>`;
 
-  $("back").onclick = () => go("dashboard");
+  $("back").onclick = goBack;
+  { const pv = $("nav-prev"), nx = $("nav-next");
+    if (pv) pv.onclick = () => stepParcel(-1);
+    if (nx) nx.onclick = () => stepParcel(1); }
   initParcelMap(p);
   const rlc = $("run-landcheck"); if (rlc) rlc.onclick = () => runLandCheck(p);
   const cll = $("copy-ll");
@@ -1492,10 +1815,11 @@ function renderDetail() {
     });
   }; }
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
-    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
-  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
-  $("pos-list").onchange = (e) => assignList(p.id, e.target.value);
-  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
+    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }, p); renderDetail(); });
+  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value }, p);
+  $("pos-list").onchange = (e) => { assignList(p.id, e.target.value); setInt(p.id, {}, p); };
+  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value }, p);
+  const cok = $("conflict-ok"); if (cok) cok.onclick = () => { const it2 = interest[p.id]; if (it2) { delete it2._conflict; saveInterest(); } renderDetail(); };
 }
 
 // ---------- lists screen (grid of every list) ----------
@@ -1709,7 +2033,8 @@ function renderListDetail() {
     }
     S.listShared = !shared; renderListDetail();
   };
-  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => go("detail", el.dataset.open));
+  const ldOrderedIds = rows.map((p) => p.id);
+  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => openParcel(el.dataset.open, ldOrderedIds, "listdetail"));
   $("scr-listdetail").querySelectorAll("[data-remove]").forEach((b) => b.onclick = (e) => {
     e.stopPropagation();
     removeFromList(b.dataset.remove, name, shared); renderListDetail();
@@ -1817,8 +2142,9 @@ function calMonthGrid(y, m, byDay, opts) {
     const dnum = dayNum(y, m + 1, d);
     const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "") + (dnum < t ? " past" : "");
     const entries = sales.map((g) => {
-      const time = g.time ? g.time.replace(/\s*ET$/i, "") : "";
-      return `<div class="cal-sale"${opts.link ? ` data-cty="${esc(g.county)}"` : ""} title="${esc(g.county)} — ${g.count} ${g.count === 1 ? "parcel" : "parcels"}${time ? " · " + esc(time) : ""}"><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span>${time ? `<span class="cal-time">${esc(time)}</span>` : ""}</div>`;
+      const time = g.time ? saleTimeText({ saleTime: g.time, county: g.county }) : "";
+      const dayAttr = opts.link ? ` data-cty="${esc(g.county)}" data-day="${dayNum(g.y, g.m + 1, g.d)}"` : "";
+      return `<div class="cal-sale"${dayAttr} title="${esc(g.county)} — ${g.count} ${g.count === 1 ? "parcel" : "parcels"}${time ? " · " + esc(time) : ""}"><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span>${time ? `<span class="cal-time">${esc(time)}</span>` : ""}</div>`;
     }).join("");
     cells.push(`<td class="${cls}"><span class="cal-date">${d}</span>${entries}</td>`);
   }
@@ -1865,7 +2191,10 @@ function renderCalendar() {
   const noneBtn = $("cal-none"); if (noneBtn) noneBtn.onclick = () => { prefs.calCounties = []; savePrefs(); renderCalendar(); };
   const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
   $("cal-months").querySelectorAll("[data-cty]").forEach((el) => el.onclick = () => {
-    S.county = el.dataset.cty; S.when = "all"; S.status = "Scheduled"; S.shown = 150; go("dashboard");
+    // Filter Explore to this county AND this exact sale day, so the resulting count
+    // matches the calendar cell's badge.
+    S.county = el.dataset.cty; S.dayFilter = el.dataset.day != null ? Number(el.dataset.day) : null;
+    S.when = "all"; S.status = "Scheduled"; S.shown = 150; go("dashboard");
   });
 }
 // The same calendar as a printable monthly sheet (one month per page).
@@ -2100,6 +2429,7 @@ function initTheme() {
 }
 
 (async function boot() {
+  migrateSavedIds();                // canonicalise saved ids before anything reads them
   renderNav();
   wireLogin();
   initTheme();
@@ -2114,6 +2444,7 @@ function initTheme() {
     return;
   }
   $("load-note").remove();
+  backfillSnapshots();              // give already-saved parcels a display snapshot
   $("last-scrape").textContent = "Data as of " + etStamp(new Date(META.generated_at));
   $("brand-sub").textContent = `Florida · ${META.counts.counties_total || META.counts.counties} counties`;
   go("dashboard");
