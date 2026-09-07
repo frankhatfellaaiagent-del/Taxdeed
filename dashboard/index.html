@@ -151,6 +151,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   </form>
 </div>
 
+<div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
+
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
    platform's committed feed (docs/DATA_FEED.md). Positions/lists/settings persist in this
@@ -305,6 +307,17 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":
 const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
 const CORNERS = '<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>';
 const LINK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+// A short-lived "… — Undo" toast, so an accidental decision change or list removal
+// is one click to reverse.
+let _undoTimer = null;
+function pushUndo(label, undoFn) {
+  const el = $("undo-toast"); if (!el) return;
+  el.innerHTML = `<span>${esc(label)}</span><button class="btn" id="undo-btn" style="color:inherit;border:1px solid currentColor;font-size:12.5px;padding:2px 12px">Undo</button>`;
+  el.hidden = false;
+  $("undo-btn").onclick = () => { el.hidden = true; clearTimeout(_undoTimer); undoFn(); };
+  clearTimeout(_undoTimer);
+  _undoTimer = setTimeout(() => { el.hidden = true; }, 6000);
+}
 
 // ---------- persisted team state (browser-local) ----------
 const store = {
@@ -447,6 +460,7 @@ function setInt(id, patch, rec) {
   if (rec) next.snap = snapOf(rec);
   interest[id] = next;
   saveInterest();
+  if (CLOUD && CLOUD.user) setSaveState("saving");   // reflect the in-flight save
 }
 // Bookmark = saved without a named list (a list is optional, added later).
 const isBookmarked = (id) => !!getInt(id).bookmark;
@@ -468,6 +482,14 @@ function needsReview(id) {
     const c = r[k];
     return (c.state === "reviewed" && c.warning && !c.resolved) || c.state === "couldntCheck";
   });
+}
+// Update one research check (merges into the existing check, stamps _ts.research so
+// the newer device's research view wins on sync). rec keeps the display snapshot.
+function setResearch(id, key, patch, rec) {
+  const cur = interest[id] || EMPTY_INT();
+  const research = { ...(cur.research || {}) };
+  research[key] = { ...EMPTY_CHECK(), ...(research[key] || {}), ...patch };
+  setInt(id, { research }, rec);
 }
 // Field-level merge of two devices' interest maps. Per parcel and per field, the
 // value with the newer _ts wins, so concurrent edits to DIFFERENT fields both
@@ -500,7 +522,10 @@ function mergeInterest(localObj, remoteObj) {
     // Snapshot: keep whichever is newer (by its own `at`); research: keep the side
     // that has one (full per-check merge lands in Phase 3).
     if (b.snap && (!a.snap || String(b.snap.at || "") > String(a.snap.at || ""))) merged.snap = b.snap;
-    if (b.research && !a.research) merged.research = b.research;
+    // research is an object without per-check _ts — keep the side with the newer
+    // research timestamp (newest device's research view wins; never lose to older).
+    const ar = at.research, br = bt.research;
+    if (b.research && (!a.research || (br && (!ar || br > ar)))) { merged.research = b.research; if (br) mt.research = br; }
     out[id] = merged;
   }
   return out;
@@ -589,6 +614,27 @@ let TEAM_ID = null;
 let IS_ADMIN = false;        // operator flag from the profile row — gates dev-only controls
 let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
 let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
+// Per-edit save indicator for the decision/notes/research controls: idle while
+// nothing is pending, "Saving…" while an interest push is in flight, "Saved ✓" once
+// the row is acknowledged, or "Couldn't save — Retry" on failure. Driven ONLY by
+// the interest push (not prefs/lists), so ordinary filter changes stay quiet.
+let SAVE_STATE = "idle";
+let _saveIdleTimer = null;
+function paintSaveStatus() {
+  (document.querySelectorAll ? document.querySelectorAll("[data-save-status]") : []).forEach((el) => {
+    if (SAVE_STATE === "error") {
+      el.innerHTML = '<span style="color:var(--color-danger)">Couldn&rsquo;t save</span> <button class="btn btn-ghost" data-save-retry style="font-size:11.5px;padding:1px 6px">Retry</button>';
+      const rb = el.querySelector("[data-save-retry]"); if (rb) rb.onclick = retrySave;
+    } else {
+      el.textContent = SAVE_STATE === "saving" ? "Saving…" : SAVE_STATE === "saved" ? "Saved ✓" : "";
+    }
+  });
+}
+function setSaveState(s) {
+  SAVE_STATE = s; paintSaveStatus();
+  if (s === "saved") { clearTimeout(_saveIdleTimer); _saveIdleTimer = setTimeout(() => { SAVE_STATE = "idle"; paintSaveStatus(); }, 1800); }
+}
+function retrySave() { setSaveState("saving"); saveInterest(); }
 
 function cloudPush(name, payload) {
   if (!CLOUD || !CLOUD.user || !TEAM_ID) return;
@@ -603,8 +649,14 @@ function cloudPush(name, payload) {
     const table = m.scope === "team" ? "team_state" : "user_state";
     const onConflict = m.scope === "team" ? "team_id,key" : "user_id,key";
     const { error } = await CLOUD.sb.from(table).upsert(row, { onConflict });
-    if (error) { console.warn("sync push failed:", error.message); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } }
-    else if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+    if (error) {
+      console.warn("sync push failed:", error.message);
+      if (name === "interest") setSaveState("error");
+      if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); }
+    } else {
+      if (name === "interest") setSaveState("saved");   // the whole interest row (this field's value + _ts) is acknowledged
+      if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+    }
   }, 800);
 }
 
@@ -1175,7 +1227,7 @@ function openParcel(id, orderedIds, originScreen) {
 function goBack() {
   const o = S.origin || { screen: "dashboard" };
   if (o.screen === "listdetail" && o.listName) { S.listName = o.listName; S.listShared = o.listShared; go("listdetail"); }
-  else go(o.screen === "settings" || o.screen === "calendar" ? o.screen : "dashboard");
+  else go(["lists", "settings", "calendar"].includes(o.screen) ? o.screen : "dashboard");
   if (o.scrollTop) $("scroller").scrollTop = o.scrollTop;   // restore where they were
 }
 // Walk Previous/Next through the origin's ordered ids (fallback: current filtered
@@ -1576,13 +1628,17 @@ function showQuickCard(p, orderedIds) {
     <div style="display:flex;gap:8px">
       <button class="btn btn-secondary" id="qc-bookmark" style="font-size:12.5px;padding:6px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
       <button class="btn btn-primary" id="qc-open" style="font-size:12.5px;padding:6px 13px;flex:1">Open full details</button>
-    </div></div>`;
+    </div>
+    <div data-save-status style="font-size:11px;font-weight:500;color:var(--color-text-secondary);margin-top:8px;min-height:14px"></div></div>`;
   el.hidden = false;
+  paintSaveStatus();
   $("qc-close").onclick = () => { S.quickId = null; el.hidden = true; };
   $("qc-open").onclick = () => openParcel(p.id, orderedIds, "dashboard");
   $("qc-bookmark").onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); showQuickCard(p, orderedIds); };
   el.querySelectorAll("[data-qstatus]").forEach((b) => b.onclick = () => {
-    setInt(p.id, { status: b.dataset.qstatus === it.status ? "" : b.dataset.qstatus }, p);
+    const prev = it.status, next = b.dataset.qstatus === prev ? "" : b.dataset.qstatus;
+    setInt(p.id, { status: next }, p);
+    pushUndo(next ? `Marked ${next}` : "Decision cleared", () => { setInt(p.id, { status: prev }, p); showQuickCard(p, orderedIds); });
     showQuickCard(p, orderedIds);
   });
 }
@@ -1778,14 +1834,20 @@ function runLandCheck(p) {
     LC_MEM[p.id] = res;
     try { localStorage.setItem("tdd_lc_" + p.id, JSON.stringify(res)); } catch (e) {}
     if (res.verdict === "unknown") {
-      if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
-      if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+      // Automated check couldn't complete -> "Couldn't check" state feeds Needs-review.
+      setResearch(p.id, "landCheck", { state: "couldntCheck", checkedAt: nowIso(), source: "land check" }, p);
+      if (S.screen === "detail" && S.selId === p.id) renderDetail();
       return;
     }
+    // Record the automated result: a warning (avoid/review) makes it Needs-review.
+    setResearch(p.id, "landCheck", {
+      state: "reviewed", warning: res.verdict === "avoid" || res.verdict === "review",
+      resolved: false, checkedAt: nowIso(), finding: (res.reasons || []).join(" · "), source: "land check",
+    }, p);
     if (S.screen === "detail" && S.selId === p.id) renderDetail();
   }).catch(() => {
-    if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
-    if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+    setResearch(p.id, "landCheck", { state: "couldntCheck", checkedAt: nowIso(), source: "land check" }, p);
+    if (S.screen === "detail" && S.selId === p.id) renderDetail();
   });
 }
 function initParcelMap(p) {
@@ -1886,6 +1948,16 @@ function renderDetail() {
       <span>${p.hasAddr ? esc(p.addr) : "No street address published"}</span>
       <span>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
     </div>
+    ${(() => {
+      const s = it.snap, notes = [];
+      if (p.anomalies && p.anomalies.length) notes.push(...p.anomalies.map(String));
+      if (s) {
+        if (s.status && s.status !== p.status) notes.push(`Status changed — was ${s.status}, now ${p.status}`);
+        const sd = s.saleDate ? fmtDate(new Date(s.saleDate)) : null;
+        if (sd && sd !== p.auction) notes.push(`Auction date changed — was ${sd}, now ${p.auction}`);
+      }
+      return notes.length ? `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;background:color-mix(in srgb,#d69a1e 12%,var(--color-surface));font-size:13px">${CORNERS}<b>Heads up.</b> ${notes.map(esc).join(" · ")} &mdash; your notes, decision and research are kept.</div>` : "";
+    })()}
 
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
@@ -1946,15 +2018,25 @@ function renderDetail() {
             const stTag = (c) => c.state === "reviewed" ? (c.warning && !c.resolved ? '<span class="tag tag-warn">Needs review</span>' : '<span class="tag tag-ok">Reviewed</span>')
               : c.state === "couldntCheck" ? '<span class="tag tag-warn">Couldn&rsquo;t check</span>'
               : c.state === "checking" ? '<span class="tag tag-neutral">Checking&hellip;</span>' : '<span class="tag tag-neutral">Not checked</span>';
-            const row = (title, tag, body) => `<div style="display:flex;flex-direction:column;gap:6px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
+            const row = (title, tag, body, actions) => `<div style="display:flex;flex-direction:column;gap:8px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
               <div style="display:flex;align-items:center;gap:10px"><span style="font-weight:600;font-size:14px">${title}</span><span style="margin-left:auto">${tag}</span></div>
-              <div style="font-size:13.5px;line-height:1.5">${body}</div></div>`;
+              <div style="font-size:13.5px;line-height:1.5">${body}</div>
+              ${actions ? `<div style="display:flex;gap:8px;flex-wrap:wrap">${actions}</div>` : ""}</div>`;
+            // Manual checks: Mark reviewed / Flag an issue; once reviewed, Undo (and
+            // Resolve when flagged). Opening the source link does NOT auto-complete.
+            const manual = (key, c) => {
+              if (c.state === "reviewed" && c.warning && !c.resolved)
+                return `<button class="btn btn-secondary" data-research-resolve="${key}" style="font-size:12px;padding:3px 10px">Mark resolved</button><button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo</button>`;
+              if (c.state === "reviewed")
+                return `<button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo review</button>`;
+              return `<button class="btn btn-secondary" data-research-review="${key}" style="font-size:12px;padding:3px 10px">Mark reviewed</button><button class="btn btn-ghost" data-research-flag="${key}" style="font-size:12px;padding:3px 8px">Flag an issue</button>`;
+            };
             const landTag = (isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
               ? stTag({ state: "reviewed", warning: lc.verdict === "avoid" || lc.verdict === "review" })
               : stTag(R.landCheck);
-            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`)
+            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`, manual("propertyRecord", R.propertyRecord))
               + row("Land check", landTag, landText)
-              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`);
+              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`, manual("titleLiens", R.titleLiens));
           })()}
           <p class="text-muted" style="font-size:12.5px;margin:14px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Confirm the value, the title and any liens, the case file, and the parcel itself before you bid.</p>
           <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
@@ -2009,7 +2091,10 @@ function renderDetail() {
             const fields = Object.keys(cf).map((f) => nice[f] || f).join(", ");
             return `<div style="margin-top:10px;font-size:12px;background:var(--color-accent-100);color:var(--color-accent-800);padding:7px 9px">Another device also changed <b>${esc(fields)}</b> around the same time — this device&rsquo;s value was kept. <button id="conflict-ok" class="btn btn-ghost" style="font-size:12px;padding:1px 6px">Dismiss</button></div>`;
           })()}
-          <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
+          <div style="margin-top:10px;font-size:11.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span data-save-status style="font-weight:500;color:var(--color-text-secondary)"></span>
+            <span class="text-muted" style="font-size:11px">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</span>
+          </div>
         </div>
         <div class="blueprint" style="padding:14px 20px">${CORNERS}
           <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Auction " + esc(p.auction) + " · " + esc(saleTimeText(p))}</div>
@@ -2024,6 +2109,11 @@ function renderDetail() {
     if (nx) nx.onclick = () => stepParcel(1); }
   initParcelMap(p);
   const rlc = $("run-landcheck"); if (rlc) rlc.onclick = () => runLandCheck(p);
+  // Manual research actions (Property record / Title & liens).
+  $("scr-detail").querySelectorAll("[data-research-review]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchReview, { state: "reviewed", warning: false, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-flag]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchFlag, { state: "reviewed", warning: true, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-resolve]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchResolve, { resolved: true }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-undo]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchUndo, { state: "notChecked", warning: false, resolved: false, checkedAt: "" }, p); renderDetail(); });
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
@@ -2039,12 +2129,18 @@ function renderDetail() {
     });
   }; }
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
-    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }, p); renderDetail(); });
+    b.onclick = () => {
+      const prev = it.status, next = b.dataset.status === prev ? "" : b.dataset.status;
+      setInt(p.id, { status: next }, p);
+      pushUndo(next ? `Marked ${next}` : "Decision cleared", () => { setInt(p.id, { status: prev }, p); renderDetail(); });
+      renderDetail();
+    });
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value }, p);
   $("pos-list").onchange = (e) => { assignList(p.id, e.target.value); setInt(p.id, {}, p); };
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value }, p);
   const pbm = $("pos-bookmark"); if (pbm) pbm.onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); renderDetail(); };
   const cok = $("conflict-ok"); if (cok) cok.onclick = () => { const it2 = interest[p.id]; if (it2) { delete it2._conflict; saveInterest(); } renderDetail(); };
+  paintSaveStatus();
 }
 
 // ---------- lists screen (grid of every list) ----------
@@ -2056,9 +2152,40 @@ function renderLists() {
   ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
   const active = all.filter((l) => !l.archived);
   const archived = all.filter((l) => l.archived);
+  // Bookmarked properties (saved without needing a named list), and any saved
+  // property that has since dropped out of the feed (shown from its snapshot,
+  // never assumed sold).
+  const byId = {}; for (const p of DATA) byId[p.id] = p;
+  const bmLive = Object.keys(interest).filter((id) => interest[id] && interest[id].bookmark && byId[id]).map((id) => byId[id]);
+  const goneSnaps = [...savedIds()].filter((id) => !byId[id]).map((id) => ({ id, snap: interest[id] && interest[id].snap })).filter((x) => x.snap);
+  const savedSection = bmLive.length ? `
+    <div class="blueprint" style="padding:0;margin-bottom:24px">${CORNERS}
+      <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:baseline;gap:10px">
+        <h6 style="color:var(--color-accent-700);margin:0">Saved properties</h6>
+        <span class="text-muted" style="font-size:12px">${bmLive.length} bookmarked</span>
+      </div>
+      <div class="tablewrap"><table class="table"><tbody>
+        ${bmLive.map((p) => `<tr class="rowlink" data-saved="${esc(p.id)}">
+          <td><div style="font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div><div style="font-size:12px" class="text-muted">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></td>
+          <td style="font-size:13px">${esc(p.auction)}</td>
+          <td>${decisionCell(p)}</td>
+          <td>${researchCell(p)}</td>
+        </tr>`).join("")}
+      </tbody></table></div>
+    </div>` : "";
+  const goneSection = goneSnaps.length ? `
+    <h3 style="margin:30px 0 10px;font-size:16px">No longer in the feed</h3>
+    <p class="text-muted" style="font-size:12.5px;margin-bottom:10px">These saved properties dropped out of the county feed. They&rsquo;re kept here from your last snapshot &mdash; unavailable pending verification, <b>not</b> assumed sold.</p>
+    <div class="blueprint" style="padding:6px 18px">${CORNERS}
+      ${goneSnaps.map(({ snap }) => `<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
+        <div style="flex:1;min-width:160px"><span style="font-weight:500">${esc(snap.addr || snap.parcel || "—")}</span>
+          <div class="text-muted" style="font-size:12.5px">${esc([snap.city, snap.county + " County"].filter(Boolean).join(" · "))}${snap.saleDate ? " · was " + esc(fmtDate(new Date(snap.saleDate))) : ""}</div></div>
+        <span class="tag tag-warn">Unavailable — pending verification</span>
+      </div>`).join("")}
+    </div>` : "";
 
   $("scr-lists").innerHTML = `
-    <h2 style="margin-bottom:6px">My lists</h2>
+    <h2 style="margin-bottom:6px">Saved</h2>
     <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
       ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
       : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
@@ -2072,6 +2199,8 @@ function renderLists() {
     : `<div class="blueprint" style="padding:12px 16px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:560px">${CORNERS}
       <span style="font-size:13.5px">Lists &mdash; group the parcels you&rsquo;re tracking and share them with your team &mdash; are a paid feature.</span>
       ${upgradeChip("Unlock lists")}</div>`}
+    ${savedSection}
+    ${active.length || bmLive.length ? `<h3 style="margin:8px 0 12px;font-size:16px">Lists</h3>` : ""}
     ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
       ${active.map((lc) => `
         <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
@@ -2097,7 +2226,11 @@ function renderLists() {
             <button class="btn btn-secondary" data-restore="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 10px">Restore</button>
             <button class="btn btn-ghost" data-delete="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 8px;color:var(--color-danger,#b3261e)">Delete</button>
           </div>`).join("")}
-      </div>` : ""}`;
+      </div>` : ""}
+    ${goneSection}`;
+
+  const bmIds = bmLive.map((p) => p.id);
+  $("scr-lists").querySelectorAll("[data-saved]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.saved, bmIds, "lists"));
 
   const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
   const createList = () => {
@@ -2262,7 +2395,13 @@ function renderListDetail() {
   $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => openParcel(el.dataset.open, ldOrderedIds, "listdetail"));
   $("scr-listdetail").querySelectorAll("[data-remove]").forEach((b) => b.onclick = (e) => {
     e.stopPropagation();
-    removeFromList(b.dataset.remove, name, shared); renderListDetail();
+    const id = b.dataset.remove;
+    removeFromList(id, name, shared);
+    pushUndo(`Removed from ${name}`, () => {
+      if (shared) { team.membership[id] = name; saveTeam(); } else setInt(id, { list: name });
+      renderListDetail();
+    });
+    renderListDetail();
   });
 }
 
