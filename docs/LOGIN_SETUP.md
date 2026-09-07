@@ -143,3 +143,27 @@ Once the Stripe payment links exist, paste them into the constants at the top of
 `STRIPE_PORTAL_URL` — and into the two `<!-- STRIPE: paste ... -->` hrefs in the
 pricing section of `site/index.html`. Until then, the buttons fall back to the
 landing page pricing / the contact email.
+
+### Automatic access on payment (Stripe webhook)
+
+A Supabase edge function `supabase/functions/stripe-webhook` (deployed,
+`verify_jwt=false`, signature-verified) flips access automatically:
+
+- On `checkout.session.completed`, it matches the **email the person paid with**
+  to their auth user and sets `plan = 'pro'` (and stamps `profiles.stripe_customer`).
+- On `customer.subscription.deleted` / a non-active `...updated`, it sets that
+  customer's profile back to `plan = 'free'`.
+
+Mapping runs through two SECURITY DEFINER RPCs (`set_plan_by_email`,
+`set_plan_by_customer`, migration `20260907_stripe_plan_webhook.sql`), callable
+only by the service role — a customer can't self-upgrade.
+
+**The one rule for customers:** pay with the **same email as their app login**.
+They (or you) create the login first (invite-only, as above); paying then
+upgrades it within a second or two — they refresh the board and they're Paid.
+
+**Required secret:** set `STRIPE_WEBHOOK_SECRET` (the `whsec_…` from the Stripe
+webhook endpoint, Developers → Webhooks) in Supabase → Project Settings → Edge
+Functions → Secrets. Until it's set, the function returns 400 and Stripe shows
+failed deliveries. The manual `update ... set plan` SQL above still works as a
+fallback for comps or edge cases.
