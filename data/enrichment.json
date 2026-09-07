@@ -69,7 +69,7 @@
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
@@ -93,13 +93,13 @@
 },
 "alachua|06650-208-004|TD 2026-034": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004"
 },
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
@@ -122,31 +122,31 @@
 },
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
 "alachua|10733-043-000|TD 2026-031": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
 },
 "alachua|10893-024-000|TD 2026-026": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000"
 },
 "alachua|14785-000-000|TD 2026-035": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
@@ -2880,6 +2880,24 @@
 "source": "reportall"
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070"
+},
+"hardee|05-33-25-0090-0000A-0018|252026TD002AXMX": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018"
+},
+"hardee|10-34-25-0843-00001-0019|252026TD003AXMX": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019"
+},
+"hardee|15-34-25-0830-00018-0013|252026TD001AXMX": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013"
 },
 "hernando|00032208|2026-114TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -15583,157 +15601,229 @@
 },
 "okeechobee|1-03-38-35-0A00-00001-A000|2026TD091": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-03-38-35-0A00-00001-A000"
 },
 "okeechobee|1-04-38-36-0020-00000-0760|2026TD069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0020-00000-0760"
 },
 "okeechobee|1-04-38-36-0030-00030-0160|2026TD092": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0030-00030-0160"
 },
 "okeechobee|1-05-37-35-0020-00300-0030|2026TD083": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-05-37-35-0020-00300-0030"
 },
 "okeechobee|1-06-36-34-0010-00060-0010|2026TD086": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00060-0010"
 },
 "okeechobee|1-06-36-34-0010-00360-0140|2026TD087": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00360-0140"
 },
 "okeechobee|1-06-38-36-0A00-00002-0000|2026TD077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00002-0000"
 },
 "okeechobee|1-06-38-36-0A00-00007-0000|2026TD093": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00007-0000"
 },
 "okeechobee|1-09-38-36-0050-00010-0040|2026TD094": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-09-38-36-0050-00010-0040"
 },
+"okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
+},
 "okeechobee|1-10-36-35-0A00-00004-A000|2026TD053": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-36-35-0A00-00004-A000"
 },
+"okeechobee|1-11-34-33-0A00-00008-F000|2026TD104": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000"
+},
+"okeechobee|1-14-34-33-0A00-00004-F000|2026TD105": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000"
+},
+"okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
+},
+"okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
+},
+"okeechobee|1-16-34-33-0A00-00012-G000|2026TD108": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00012-G000"
+},
+"okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
+},
 "okeechobee|1-17-34-33-0A00-00006-J000|2026TD082": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-34-33-0A00-00006-J000"
 },
 "okeechobee|1-17-37-35-0020-00040-0020|2026TD097": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-35-0020-00040-0020"
 },
 "okeechobee|1-17-37-36-0A00-00003-041E|2026TD064": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-36-0A00-00003-041E"
 },
 "okeechobee|1-17-37-36-0A00-00003-150D|2026TD065": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-36-0A00-00003-150D"
 },
 "okeechobee|1-18-37-35-0020-00020-0170|2026TD056": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00020-0170"
 },
 "okeechobee|1-18-37-35-0020-00290-0110|2026TD085": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00290-0110"
 },
 "okeechobee|1-18-37-36-0A00-00010-0290|2026TD066": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-36-0A00-00010-0290"
 },
+"okeechobee|1-20-34-33-0A00-00021-B000|2026TD099": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000"
+},
+"okeechobee|1-21-34-33-0A00-00007-B000|2026TD100": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00007-B000"
+},
+"okeechobee|1-21-34-33-0A00-00012-J000|2026TD101": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00012-J000"
+},
+"okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
+},
+"okeechobee|1-21-34-33-0A00-00021-F000|2026TD103": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-F000"
+},
 "okeechobee|1-22-33-35-0010-00920-0060|2026TD084": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-22-33-35-0010-00920-0060"
 },
 "okeechobee|1-23-38-36-0A00-00027-0000|2026TD095": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-23-38-36-0A00-00027-0000"
 },
 "okeechobee|1-24-37-35-0A00-00004-A000|2026TD058": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-24-37-35-0A00-00004-A000"
 },
 "okeechobee|1-25-37-35-0070-00060-0160|2026TD096": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0070-00060-0160"
 },
 "okeechobee|1-25-37-35-0120-00110-0780|2026TD059": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0120-00110-0780"
 },
 "okeechobee|1-30-37-35-0010-00020-010A|2026TD089": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-30-37-35-0010-00020-010A"
 },
 "okeechobee|1-31-37-36-0010-00010-0190|2026TD068": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-31-37-36-0010-00010-0190"
 },
 "okeechobee|1-33-37-35-0010-00000-0073|2026TD060": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-33-37-35-0010-00000-0073"
 },
 "okeechobee|1-35-37-35-0020-00000-0670|2026TD061": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-02T02:19:13+00:00",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-35-37-35-0020-00000-0670"
 },
@@ -16009,6 +16099,42 @@
 "source": "reportall"
 }
 },
+"osceola|01263000010429006|2112024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=01263000010429006",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=01263000010429006"
+},
+"osceola|032528340700012113|5152024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113"
+},
+"osceola|052527316100010460|8352024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052527316100010460",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052527316100010460"
+},
+"osceola|062527252100010520|10202024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520"
+},
+"osceola|072530270201760050|15882024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050"
+},
+"osceola|082529224200016030|17482024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=082529224200016030",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=082529224200016030"
+},
 "osceola|0926315330000B0092|19972024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -16046,6 +16172,30 @@
 "source": "reportall"
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280"
+},
+"osceola|152529124000010060|29052024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060"
+},
+"osceola|162527560800013070|30142024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070"
+},
+"osceola|162527561600010050|30182024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050"
+},
+"osceola|182529000000600000|34332024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529000000600000",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529000000600000"
 },
 "osceola|182529184900011105|34492024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=182529184900011105",
@@ -16110,6 +16260,18 @@
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090"
 },
+"osceola|222630007700010450|41862024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450"
+},
+"osceola|232527492900011280|42012024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=232527492900011280",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=232527492900011280"
+},
 "osceola|242730000000150000|43972024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -16147,6 +16309,12 @@
 "source": "reportall"
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=243033000000550000"
+},
+"osceola|252628610005500060|45802024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060"
 },
 "osceola|252628610005640170|45842024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005640170",
@@ -16311,6 +16479,18 @@
 "fetched_at": "2026-08-23T06:51:01+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=332529215400014310"
+},
+"osceola|352527484900013120|58652024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120"
+},
+"osceola|352527488100010990|59012024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990"
 },
 "osceola|352630495000010480|59612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352630495000010480",
@@ -16694,6 +16874,13 @@
 "source": "reportall"
 }
 },
+"polk|23-26-25-0005-8000-1420|00123-2026": {
+"acreage": "4.03",
+"assessed_value": 59826.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232625000580001420"
+},
 "polk|23-27-33-0000-0001-4023|00137-2026": {
 "acreage": "0.23",
 "assessed_value": 81667.0,
@@ -16701,12 +16888,90 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000014023"
 },
+"polk|23-28-12-0555-0000-1050|00135-2026": {
+"acreage": "0.12",
+"assessed_value": 36410.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812055500001050"
+},
+"polk|23-28-15-0855-0000-0818|00111-2026": {
+"acreage": "0.17",
+"assessed_value": 17680.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000818"
+},
+"polk|23-28-15-0855-0000-1107|00112-2026": {
+"acreage": "0.21",
+"assessed_value": 28432.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500001107"
+},
+"polk|23-28-22-0910-0000-0404|00136-2026": {
+"acreage": "1.45",
+"assessed_value": 106774.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232822091000000404"
+},
+"polk|23-28-25-1270-0000-6120|00139-2026": {
+"acreage": "0.14",
+"assessed_value": 136214.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232825127000006120"
+},
+"polk|23-28-26-0000-0003-2040|00128-2026": {
+"acreage": "0.21",
+"assessed_value": 32156.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232826000000032040"
+},
+"polk|23-29-20-0000-0003-3090|00129-2026": {
+"acreage": "2.18",
+"assessed_value": 99406.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232920000000033090"
+},
+"polk|23-29-23-0000-0004-4070|00140-2026": {
+"acreage": "0.65",
+"assessed_value": 321083.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232923000000044070"
+},
 "polk|23-29-29-1421-4000-0420|00127-2026": {
 "acreage": "0.75",
 "assessed_value": 42115.0,
 "fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232929142140000420"
+},
+"polk|23-29-31-1422-1700-0070|00107-2026": {
+"acreage": "0.37",
+"assessed_value": 73874.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232931142217000070"
+},
+"polk|23-29-33-1423-8300-0820|00108-2026": {
+"acreage": "0.28",
+"assessed_value": 31000.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232933142383000820"
+},
+"polk|23-30-01-1441-2001-5050|00109-2026": {
+"acreage": "0.40",
+"assessed_value": 279843.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233001144120015050"
 },
 "polk|232625000580001420|00123-2026": {
 "acreage": "4.03",
@@ -16834,6 +17099,167 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242514000000021040"
+},
+"polk|24-25-24-0000-0001-2180|00094-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000012180"
+},
+"polk|24-25-24-0000-0001-3320|00095-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000013320"
+},
+"polk|24-25-24-0000-0001-4200|00096-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000014200"
+},
+"polk|24-25-24-0000-0001-4250|00097-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000014250"
+},
+"polk|24-25-24-0000-0002-1090|00098-2026": {
+"acreage": "1.18",
+"assessed_value": 588.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000021090"
+},
+"polk|24-25-24-0000-0002-2320|00099-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000022320"
+},
+"polk|24-25-24-0000-0002-2390|00100-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000022390"
+},
+"polk|24-25-24-0000-0002-4100|00101-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000024100"
+},
+"polk|24-25-24-0000-0003-2230|00103-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000032230"
+},
+"polk|24-25-24-0000-0003-4170|00104-2026": {
+"acreage": "1.23",
+"assessed_value": 613.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000034170"
+},
+"polk|24-25-24-0000-0004-2030|00105-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000042030"
+},
+"polk|24-25-24-0000-0004-4030|00106-2026": {
+"acreage": "0.95",
+"assessed_value": 475.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242524000000044030"
+},
+"polk|24-25-25-0000-0001-1240|00133-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000011240"
+},
+"polk|24-25-25-0000-0001-2010|00120-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000012010"
+},
+"polk|24-25-25-0000-0001-2300|00121-2026": {
+"acreage": "1.10",
+"assessed_value": 551.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000012300"
+},
+"polk|24-25-25-0000-0001-3110|00122-2026": {
+"acreage": "2.20",
+"assessed_value": 1102.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242525000000013110"
+},
+"polk|24-25-36-0000-0003-3050|00138-2026": {
+"acreage": "4.27",
+"assessed_value": 200679.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242536000000033050"
+},
+"polk|24-26-33-1609-4500-0100|00114-2026": {
+"acreage": "0.69",
+"assessed_value": 174290.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242633160945000100"
+},
+"polk|24-28-09-1755-0001-0107|00130-2026": {
+"acreage": "0.08",
+"assessed_value": 44392.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242809175500010107"
+},
+"polk|24-28-23-2422-2000-0730|00143-2026": {
+"acreage": "0.14",
+"assessed_value": 73874.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242823242220000730"
+},
+"polk|24-28-27-0000-0001-4002|00144-2026": {
+"acreage": "0.17",
+"assessed_value": 54541.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000014002"
+},
+"polk|24-28-27-0000-0003-2020|00145-2026": {
+"acreage": "0.15",
+"assessed_value": 42930.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000032020"
+},
+"polk|24-29-14-2830-0009-0640|00149-2026": {
+"acreage": "0.19",
+"assessed_value": 29684.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283000090640"
 },
 "polk|24-30-08-0000-0003-3060|00152-2026": {
 "acreage": "0.26",
@@ -17023,6 +17449,13 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283000090640"
+},
+"polk|25-27-06-2983-4000-3180|00148-2026": {
+"acreage": "0.22",
+"assessed_value": 86491.0,
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252706298340003180"
 },
 "polk|25-28-04-3190-0101-5110|00151-2026": {
 "acreage": "0.50",
@@ -22220,9 +22653,195 @@
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1207&amp;LayerID=36374&amp;PageTypeID=4&amp;PageID=13872&amp;Q=422412812&amp;KeyValue=J16C020"
 },
+"suwannee|00478000000|4729": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|00813020060|4732": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|00924040130|4734": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|01014012000|4735": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|01105031300|4781": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|01133031770|4736": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|01142031990|4739": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|01783000000|4747": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|02202000000|4751": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|02865010000|4765": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03232010190|4774": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03406080200|4726": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03406080210|4727": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03497090120|4788": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03497090160|4789": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|03683005000|4775": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04264840001|4778": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04394009000|4779": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04555001000|4776": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04555001002|4777": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04573000000|4703": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|04675003000|4794": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|07104060020|4720": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|08856003010|4688": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|08900000000|4723": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|09108010470|4796": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|09150020030|4797": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|09531090010|4714": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|09774001004|4692": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
 "suwannee|10025005000|4694": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-08-23T06:51:01+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|10515009004|4717": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|10648000000|4800": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -22264,6 +22883,30 @@
 "parcel_address": "16535 188TH St",
 "source": "reportall"
 },
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|11189000000|4802": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|11389070030|4786": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|11390070050|4787": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
+"suwannee|11666000116|4718": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-07T14:35:09+00:00",
+"ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|1437000001|4741": {

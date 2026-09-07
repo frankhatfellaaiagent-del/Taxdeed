@@ -1,0 +1,98 @@
+[
+  {
+    "county": "hardee",
+    "sale_date": "10/14/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "252026TD002AXMX",
+    "certificate_number": "156",
+    "parcel_id": "05-33-25-0090-0000A-0018",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 3686.07,
+    "assessed_value": null,
+    "auction_status": "",
+    "auction_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
+    "clerk_case_url": "",
+    "source_host": "www.hardeeclerk.com",
+    "scraped_at": "2026-09-07T14:34:25+00:00",
+    "raw_fields": {
+      "cell_labels": {
+        "cert": "156",
+        "parcel number": "05-33-25-0090-0000A-0018",
+        "file number": "252026TD002AXMX",
+        "sale date": "10/14/2026",
+        "opening bid": "$3,686.07",
+        "cert holder": "Mark H. Fink"
+      },
+      "cert_holder": "Mark H. Fink"
+    }
+  },
+  {
+    "county": "hardee",
+    "sale_date": "10/14/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "252026TD003AXMX",
+    "certificate_number": "552",
+    "parcel_id": "10-34-25-0843-00001-0019",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 2782.35,
+    "assessed_value": null,
+    "auction_status": "",
+    "auction_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
+    "clerk_case_url": "",
+    "source_host": "www.hardeeclerk.com",
+    "scraped_at": "2026-09-07T14:34:25+00:00",
+    "raw_fields": {
+      "cell_labels": {
+        "cert": "552",
+        "parcel number": "10-34-25-0843-00001-0019",
+        "file number": "252026TD003AXMX",
+        "sale date": "10/14/2026",
+        "opening bid": "$2,782.35",
+        "cert holder": "Mark H. Fink"
+      },
+      "cert_holder": "Mark H. Fink"
+    }
+  },
+  {
+    "county": "hardee",
+    "sale_date": "10/14/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "252026TD001AXMX",
+    "certificate_number": "629",
+    "parcel_id": "15-34-25-0830-00018-0013",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 2650.43,
+    "assessed_value": null,
+    "auction_status": "",
+    "auction_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
+    "clerk_case_url": "",
+    "source_host": "www.hardeeclerk.com",
+    "scraped_at": "2026-09-07T14:34:25+00:00",
+    "raw_fields": {
+      "cell_labels": {
+        "cert": "629",
+        "parcel number": "15-34-25-0830-00018-0013",
+        "file number": "252026TD001AXMX",
+        "sale date": "10/14/2026",
+        "opening bid": "$2,650.43",
+        "cert holder": "Mark H. Fink"
+      },
+      "cert_holder": "Mark H. Fink"
+    }
+  }
+]
