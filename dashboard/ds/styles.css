@@ -1,133 +1,74 @@
 /* Industry — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* ── Pearl (light) — design-handoff tokens. Also the bare-:root default so the
+   app still themes if the pre-paint script hasn't run. ── */
+:root, :root[data-theme="pearl"] {
+  --bg:#faf9f5;
+  --glow:radial-gradient(900px 500px at 100% 0%,rgba(250,225,150,.28),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(250,225,150,.22),transparent 60%);
+  --ink:#1b1d21; --ink2:#5e646d; --ink3:#8c9199;
+  --card:#ffffff; --card2:#ffffff; --line:rgba(20,22,26,.075); --line2:rgba(20,22,26,.11);
+  --tab-bg:#1c1e22; --tab-ink:#ffffff; --tab-border:transparent;
+  --gold:#f0c23a; --gold-soft:#fdf6de; --gold-ink:#5a4600; --gold-ring:#f2c94c;
+  --row-hi:#fcf6e3; --chip:#eef0f3; --chip-ink:#2f353d; --ok:#dff3e5; --ok-ink:#1e6b3b;
+  --btn:#1c1e22; --btn-ink:#ffffff; --btn-border:transparent;
+  --seg-active:#fbf1cf; --seg-active-border:#f2d77d;
+  --map-glow:none; --shadow:0 1px 2px rgba(20,22,26,.04),0 8px 24px rgba(20,22,26,.05);
+  --icon-warn:#f2b400; --icon-ok:#2ea658; --icon-none:#c4c8ce;
+  --toggle:#e7e9ec; --toggle-knob:#ffffff; --danger:#b3261e;
+}
+/* Shared type / spacing / radii, and a bridge that maps the app's legacy
+   --color-* names onto the design tokens so every existing component adopts the
+   new palette; screens move to the design tokens directly as they're rebuilt. */
 :root {
-  /* ── Pearl (light) ── warm ivory ground, white panels, near-black action,
-     soft-gold accent. --color-action drives primary buttons + active nav so gold
-     can stay an accent (chips, links, highlights) rather than the button color. */
-  --color-bg: #f6f3ec;
-  --color-surface: #ffffff;
-  --color-text: #23201a;
-  --color-text-secondary: #6c6559;
-  --color-action: #201d18;
-  --color-action-text: #f6f3ec;
-  --color-accent: #a97f2a;
-  --color-accent-2: #8c7a5c;
-  --color-divider: color-mix(in srgb, #23201a 15%, transparent);
-  --color-danger: #b3261e;
-
-  /* Tonal ramps — warm neutrals + a gold accent ramp (low steps = pale washes,
-     high steps = deep ink), so chip backgrounds (-100), secondary headings (-700)
-     and tag text (-800) all read as the same family. */
-  --color-neutral-100: #f4f1ea;
-  --color-neutral-200: #e9e5db;
-  --color-neutral-300: #d7d2c6;
-  --color-neutral-400: #bab5a9;
-  --color-neutral-500: #9a958a;
-  --color-neutral-600: #7a766c;
-  --color-neutral-700: #5c584f;
-  --color-neutral-800: #423f38;
-  --color-neutral-900: #2a2823;
-
-  --color-accent-100: #faf4e4;
-  --color-accent-200: #f3e7c4;
-  --color-accent-300: #e8d39a;
-  --color-accent-400: #d9bd6e;
-  --color-accent-500: #c6a147;
-  --color-accent-600: #a9862f;
-  --color-accent-700: #856526;
-  --color-accent-800: #664d1f;
-  --color-accent-900: #443310;
-
-  --color-accent-2-100: #f2eee3;
-  --color-accent-2-200: #e6dfcd;
-  --color-accent-2-300: #d3c8ac;
-  --color-accent-2-400: #b8a983;
-  --color-accent-2-500: #9c8a66;
-  --color-accent-2-600: #7f6f4e;
-  --color-accent-2-700: #62553b;
-  --color-accent-2-800: #473d2b;
-  --color-accent-2-900: #2d271b;
-
-  --font-heading: "Barlow Condensed", system-ui, sans-serif;
-  --font-heading-weight: 600;
-  --font-body: "Barlow", system-ui, sans-serif;
-
-  --space-1: 3.4px;
-  --space-2: 6.8px;
-  --space-3: 10.2px;
-  --space-4: 13.6px;
-  --space-6: 20.4px;
-  --space-8: 27.2px;
-
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 7px;
-
-  /* Elevation — derived from the ground: soft ink-tinted shadows on a
-     light theme, a hairline edge + ambient darkness on a dark one. */
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #2b2b2d 14%, transparent);
-  --shadow-md: 0 3px 10px color-mix(in srgb, #2b2b2d 16%, transparent);
-  --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2b2d 22%, transparent);
+  --font-heading:"Inter",system-ui,sans-serif; --font-heading-weight:600;
+  --font-body:"Inter",system-ui,sans-serif;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:22px; --space-8:28px;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-pill:999px;
+  --shadow-sm:var(--shadow); --shadow-md:var(--shadow); --shadow-lg:var(--shadow);
+  --color-bg:var(--bg); --color-surface:var(--card); --color-text:var(--ink);
+  --color-text-secondary:var(--ink2); --color-accent:var(--gold); --color-accent-2:var(--gold);
+  --color-action:var(--btn); --color-action-text:var(--btn-ink); --color-divider:var(--line);
+  --color-danger:var(--danger);
+  --color-neutral-100:var(--chip); --color-neutral-200:var(--line2); --color-neutral-300:var(--line2);
+  --color-neutral-400:var(--ink3); --color-neutral-500:var(--ink3); --color-neutral-600:var(--ink3);
+  --color-neutral-700:var(--ink2); --color-neutral-800:var(--ink2); --color-neutral-900:var(--ink);
+  --color-accent-100:var(--gold-soft); --color-accent-200:var(--gold-soft); --color-accent-300:var(--gold);
+  --color-accent-400:var(--gold); --color-accent-500:var(--gold); --color-accent-600:var(--gold);
+  --color-accent-700:var(--gold-ink); --color-accent-800:var(--gold-ink); --color-accent-900:var(--gold-ink);
+  --color-accent-2-100:var(--chip); --color-accent-2-700:var(--ink2); --color-accent-2-800:var(--ink2);
 }
 
-/* ── Dark theme ─────────────────────────────────────────────────────────────
-   Opt-in via <html data-theme="dark">. A tiny head script sets it before first
-   paint (saved choice, else the OS setting) and the header toggle flips it.
-   Only the tokens change — every component reads them, so the whole app
-   follows, and the many color-mix(... var(--color-text) ...) derivations
-   (muted text, dividers, hovers) invert on their own once the ink is light. */
-:root[data-theme="dark"] {
-  /* ── Charcoal (dark) ── neutral charcoal ground (no blue/green cast), soft-white
-     ink, champagne-gold action + accent. */
-  --color-bg: #1a1a1c;
-  --color-surface: #232427;
-  --color-text: #e9e8e4;
-  --color-text-secondary: #a5a29a;
-  --color-action: #cdb071;
-  --color-action-text: #1a1a1c;
-  --color-accent: #cdb071;
-  --color-accent-2: #b0a488;
-  --color-divider: color-mix(in srgb, #e9e8e4 16%, transparent);
-  --color-danger: #f2726a;
-
-  /* Neutral ramp inverted and de-tinted: low steps = dark surfaces, high steps =
-     light ink; 900 stays dark (modal/login scrim only). */
-  --color-neutral-100: #232325;
-  --color-neutral-200: #2c2c2f;
-  --color-neutral-300: #3b3b3e;
-  --color-neutral-400: #565659;
-  --color-neutral-500: #7b7b7e;
-  --color-neutral-600: #9a9a9d;
-  --color-neutral-700: #b9b9bc;
-  --color-neutral-800: #d7d7d9;
-  --color-neutral-900: #0b0b0c;
-
-  /* Gold accent ramp inverted: low steps = deep gold-brown fills, high steps =
-     pale champagne ink. */
-  --color-accent-100: #2a2617;
-  --color-accent-200: #38311c;
-  --color-accent-300: #4b4126;
-  --color-accent-400: #675834;
-  --color-accent-500: #8b7743;
-  --color-accent-600: #b0995a;
-  --color-accent-700: #d8c07f;
-  --color-accent-800: #e8d9ad;
-  --color-accent-900: #f4edd8;
-
-  --color-accent-2-100: #26241d;
-  --color-accent-2-200: #322f24;
-  --color-accent-2-300: #443f30;
-  --color-accent-2-400: #5f5842;
-  --color-accent-2-500: #82795d;
-  --color-accent-2-600: #a89c79;
-  --color-accent-2-700: #c7bd9d;
-  --color-accent-2-800: #ded6bf;
-  --color-accent-2-900: #efeadb;
-
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #000 45%, transparent);
-  --shadow-md: 0 3px 12px color-mix(in srgb, #000 50%, transparent);
-  --shadow-lg: 0 14px 36px color-mix(in srgb, #000 62%, transparent);
+/* ── Obsidian (dark) — teal-tinted deep ground. Design tokens override the pearl
+   defaults; the --color-* bridge in :root resolves against whichever is active. ── */
+:root[data-theme="obsidian"] {
+  --bg:#0a161c;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(20,70,80,.45),transparent 60%),radial-gradient(900px 600px at 0% 100%,rgba(20,60,70,.35),transparent 60%);
+  --ink:#eef2f3; --ink2:#a8b3b9; --ink3:#7f8a91;
+  --card:rgba(255,255,255,.035); --card2:rgba(12,26,32,.96); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dde3e6; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.35) hue-rotate(150deg) saturate(1.7) brightness(.85);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
+}
+/* ── Charcoal (dark) — neutral deep grey ── */
+:root[data-theme="charcoal"] {
+  --bg:#17181a;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(255,255,255,.04),transparent 60%);
+  --ink:#eeeeec; --ink2:#a9aaa8; --ink3:#7f807e;
+  --card:rgba(255,255,255,.035); --card2:rgba(24,25,27,.97); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dddddb; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.15) brightness(.9);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
 }
 
 body {
@@ -137,29 +78,18 @@ body {
 }
 h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
 
+/* Design-handoff card: rounded, soft-shadow, on the surface color. The old
+   wireframe corner ticks are hidden so every existing ${CORNERS} card becomes a
+   clean rounded card with no markup changes. */
 .blueprint {
   position: relative;
-  border: 1px solid var(--color-divider);
-  border-radius: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
-/* The overlay image treatments (halftone, duotone) clip their overlay
-   (overflow:hidden); a blueprint wrapper draws its registration marks
-   outside the box, so when both classes share a wrapper the frame must
-   win. */
 .blueprint.halftone, .blueprint.plate, .blueprint.duotone { overflow: visible; }
-.blueprint > .corner {
-  position: absolute; width: 11px; height: 11px;
-  color: color-mix(in srgb, var(--color-text) 55%, transparent);
-}
-.blueprint > .corner::before, .blueprint > .corner::after {
-  content: ""; position: absolute; background: currentColor;
-}
-.blueprint > .corner::before { left: 5px; top: 0; width: 1px; height: 100%; }
-.blueprint > .corner::after  { top: 5px; left: 0; width: 100%; height: 1px; }
-.blueprint > .corner.tl { top: -6px; left: -6px; }
-.blueprint > .corner.tr { top: -6px; right: -6px; }
-.blueprint > .corner.bl { bottom: -6px; left: -6px; }
-.blueprint > .corner.br { bottom: -6px; right: -6px; }
+.blueprint > .corner { display: none; }
 
 .duotone{position:relative;overflow:hidden}
 .duotone::after{content:"";position:absolute;inset:0;pointer-events:none;
@@ -347,11 +277,12 @@ textarea.input { min-height: 90px; resize: vertical; }
 .dialog-body { font-size: 14px; opacity: 0.85; }
 .dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
 
-/* — blueprint frame: components are wireframe objects (see .blueprint
-     and .corner above) — square, transparent, hairline-bordered — */
-.card, .btn, .input, .tag, .seg, .dialog { border-radius: 0; }
-.card, .dialog { background: transparent; border: 1px solid var(--color-divider); }
-.btn { border: 1px solid var(--color-divider); }
-.btn-primary { border-color: var(--color-action); }
+/* — design-handoff rounding: pills for controls, rounded cards, rounded badges — */
+.btn, .input, .seg { border-radius: var(--radius-pill); }
+.tag { border-radius: var(--radius-sm); }
+.card, .dialog { border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.btn { border: 1px solid var(--line); }
+.btn-primary { border-color: var(--btn-border); }
 .btn-ghost { border-color: transparent; }
+.input { background: var(--card); }
 
