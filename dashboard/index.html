@@ -27,6 +27,7 @@
 </script>
 <style>
 html,body{margin:0}
+@media (max-width:820px){html,body{overflow-x:hidden}}
 body{background:var(--bg)}
 a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 /* Left icon rail: 48px pills that expand to a labelled 150px on hover. */
@@ -96,27 +97,48 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 tr.rowlink{cursor:pointer}
 tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 #load-note{padding:60px 0;text-align:center}
-@media (max-width:900px){
-  #frame{flex-direction:column!important;height:auto!important}
-  /* Sidebar becomes a compact top bar: brand + horizontal nav. */
-  aside{width:auto!important;border-right:none!important;border-bottom:1px solid var(--color-divider);
-        flex-direction:row!important;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 14px!important}
-  aside>div:first-child{margin-bottom:0!important}
-  #nav{flex-direction:row!important;flex-wrap:wrap;gap:6px}
-  .nav-btn{width:auto!important;padding:8px 12px}
-  #side-refresh{display:none!important}
-  header{flex-wrap:wrap;padding:12px 14px!important;gap:8px}
-  header #q{max-width:none!important;flex:1 1 100%;order:-1}
-  #scroller{overflow:visible!important;padding:18px 14px 44px!important}
-  #scroller h2{font-size:24px}
-  .detail-grid{grid-template-columns:1fr!important}
-  .stats-grid{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}
-  .filters .field{flex:1 1 44%;width:auto!important}
+/* ===== Mobile: the desktop is 1586px; below ~820px re-flow for phones/tablets.
+   The fixed left rail becomes a bottom tab bar and the content column drops its
+   rail gutter, so nothing overflows sideways. ===== */
+@media (max-width:820px){
+  /* Content column: small side padding, room at the bottom for the tab bar. */
+  #page{width:100%!important;padding:12px 16px calc(84px + env(safe-area-inset-bottom)) 16px!important}
+  /* Header stacks: brand on top, the controls wrap to their own right-aligned row. */
+  header{display:flex!important;flex-wrap:wrap;align-items:center;gap:8px 12px}
+  header>a#brand{flex:0 1 auto}
+  header>div:last-child{flex:1 1 100%;justify-content:flex-end;gap:12px!important;flex-wrap:wrap;row-gap:8px}
+  #last-scrape{display:none}
+  /* Left rail -> bottom tab bar. */
+  #rail{top:auto!important;left:0!important;right:0!important;bottom:0!important;width:auto!important;
+        flex-direction:row!important;justify-content:space-around!important;align-items:center!important;
+        gap:4px!important;padding:8px 10px calc(8px + env(safe-area-inset-bottom))!important;
+        background:var(--card);border-top:1px solid var(--line);box-shadow:0 -2px 14px rgba(20,22,26,.08);
+        pointer-events:auto!important;z-index:50}
+  .rail-btn{flex:1;width:auto!important;height:46px;justify-content:center;gap:8px!important;
+            background:transparent!important;border-color:transparent!important;box-shadow:none!important;transition:none!important}
+  .rail-btn:hover{width:auto!important;gap:8px!important}
+  .rail-btn .rail-lbl{display:none}
+  .rail-btn.active{background:var(--tab-bg)!important;color:var(--tab-ink)!important;border-color:var(--tab-border)!important}
+  /* Headings scale down. */
+  #scr-home h1,.h2-greet{font-size:clamp(30px,9vw,44px)!important}
+  h1{font-size:clamp(28px,8vw,40px)}
+  h2{font-size:24px}
+  /* Every multi-column grid collapses to one column. */
+  .h2-hero-grid,.h2-row2,.h2-row3,.detail-grid,.cal-cols,.saved-grid,.home-cols,.home-stats,.stats-grid{grid-template-columns:1fr!important}
+  /* Home hero/saved: tighter padding on phones. */
+  .h2-herocard,.h2-savedcard{padding:24px 22px!important;min-height:0!important}
+  .h2-savedcard img{width:150px!important;height:150px!important;top:20px!important}
+  /* Explore/list filters go full-width; card headers wrap. */
+  .filters{gap:10px!important}
+  .filters .field{width:100%!important;flex:1 1 100%!important}
+  .card-head{flex-wrap:wrap;gap:10px}
   .triad{grid-template-columns:1fr 1fr!important}
-  .table th,.table td{padding:9px 10px!important;font-size:12.5px}
+  .table th,.table td{padding:10px 10px!important}
+  /* Multi-column tables keep readable widths and scroll sideways inside their
+     own container (the page itself never scrolls sideways). */
+  .tablewrap>table.table{min-width:580px}
 }
 @media (max-width:480px){
-  .stats-grid .blueprint div:nth-child(2){font-size:26px!important}
   .triad{grid-template-columns:1fr!important}
 }
 #login-overlay{display:grid}
@@ -1554,11 +1576,11 @@ function renderHome() {
       </div>
 
       <div class="h2-hero-grid">
-        <div style="position:relative;overflow:hidden;border-radius:22px;background:#2f7b96 url('./assets/hero-beach.png') right 65% / cover no-repeat;color:#fff;padding:34px 44px 28px;min-height:296px;display:flex;flex-direction:column;justify-content:space-between">
+        <div class="h2-herocard" style="position:relative;overflow:hidden;border-radius:22px;background:#2f7b96 url('./assets/hero-beach.png') right 65% / cover no-repeat;color:#fff;padding:34px 44px 28px;min-height:296px;display:flex;flex-direction:column;justify-content:space-between">
           <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(38,104,128,.86) 0%,rgba(38,104,128,.62) 35%,rgba(38,104,128,.15) 60%,rgba(38,104,128,0) 100%)"></div>
           <div style="position:relative">
             <div style="font-size:21px;font-weight:500">Upcoming auctions</div>
-            <div style="font-size:104px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${upcoming.length.toLocaleString()}</div>
+            <div style="font-size:clamp(60px,15vw,104px);font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${upcoming.length.toLocaleString()}</div>
             <div style="font-size:23px;margin-top:6px">Not redeemed</div>
           </div>
           <div style="position:relative;display:flex;align-items:center;gap:22px;margin-top:22px;flex-wrap:wrap">
@@ -1575,11 +1597,11 @@ function renderHome() {
           </div>
         </div>
 
-        <div style="position:relative;overflow:hidden;border-radius:22px;background:#fdcdbc;color:#111;padding:34px 30px 28px;display:flex;flex-direction:column;justify-content:space-between;min-height:296px">
+        <div class="h2-savedcard" style="position:relative;overflow:hidden;border-radius:22px;background:#fdcdbc;color:#111;padding:34px 30px 28px;display:flex;flex-direction:column;justify-content:space-between;min-height:296px">
           <img src="./assets/saved-folder.png" alt="" style="position:absolute;right:-6px;top:40px;width:230px;height:230px;object-fit:cover;pointer-events:none">
           <div style="position:relative">
             <div style="font-size:21px;font-weight:500">Saved properties</div>
-            <div style="font-size:104px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${savedSet.size.toLocaleString()}</div>
+            <div style="font-size:clamp(60px,15vw,104px);font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${savedSet.size.toLocaleString()}</div>
             <div style="font-size:21px;margin-top:6px;color:#333">Parcels you&rsquo;re tracking</div>
           </div>
           <button class="h2-stat-link" data-stat="saved" style="position:relative;margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#111;font-size:19px;font-weight:500;padding:15px 24px;border-radius:12px;border:none;cursor:pointer">View saved properties ${arrow}</button>
