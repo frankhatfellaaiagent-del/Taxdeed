@@ -122,20 +122,30 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 @keyframes aispin{to{transform:rotate(360deg)}}
 /* ---- sale calendar ---- */
 .cal-month{margin-bottom:26px}
-.cal-mhead{font-family:var(--font-heading);font-size:16px;color:var(--color-accent-700);margin:0 0 8px}
-.cal-grid{width:100%;border-collapse:collapse;table-layout:fixed}
-.cal-grid th{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);text-align:left;padding:4px 6px;border-bottom:1px solid var(--color-divider)}
-.cal-grid td{border:1px solid var(--color-divider);height:92px;vertical-align:top;padding:4px 5px;width:14.28%}
-.cal-grid td.cal-empty{background:var(--color-neutral-100)}
-.cal-grid td.past{opacity:.5}
-.cal-grid td.has{background:var(--color-accent-100)}
-.cal-grid td.today{outline:2px solid var(--color-accent);outline-offset:-2px}
-.cal-date{font-size:11px;font-weight:600;color:var(--color-neutral-600)}
-.cal-sale{margin-top:4px;font-size:11px;line-height:1.3;cursor:pointer;border-left:2px solid var(--color-accent);padding-left:5px}
-.cal-sale:hover{color:var(--color-accent-700)}
-.cal-sale .cal-n{display:inline-block;background:var(--color-accent);color:var(--color-bg);border-radius:3px;padding:0 5px;font-size:10px;margin-left:3px;font-variant-numeric:tabular-nums}
-.cal-sale .cal-time{display:block;color:var(--color-neutral-600);font-size:10px}
-@media (max-width:900px){.cal-grid td{height:auto;min-height:56px;font-size:10px}.cal-grid .cal-sale{font-size:10px}}
+.cal-mhead{font-family:var(--font-heading);font-size:16px;color:var(--gold-ink);margin:0 0 8px}
+.cal-grid{width:100%;border-collapse:separate;border-spacing:8px;table-layout:fixed}
+.cal-grid th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:2px 6px}
+.cal-grid td{border:1px solid var(--line);border-radius:14px;height:104px;vertical-align:top;padding:8px;width:14.28%}
+.cal-grid td.cal-empty{background:transparent;border-color:transparent}
+.cal-grid td.past{opacity:.45}
+.cal-grid td.has{background:var(--card)}
+.cal-grid td.pick{cursor:pointer}
+.cal-grid td.pick:hover{border-color:var(--gold-ring);background:var(--row-hi)}
+.cal-grid td.sel{background:var(--seg-active);box-shadow:inset 0 0 0 1px var(--seg-active-border)}
+.cal-daytop{display:flex;align-items:center;justify-content:space-between;gap:4px;margin-bottom:4px}
+.cal-date{font-size:14px;font-weight:500;color:var(--ink);width:30px;height:30px;display:grid;place-items:center;border-radius:50%}
+.cal-grid td.today .cal-date{background:var(--tab-bg);color:var(--tab-ink)}
+.cal-count{font-size:11px;font-weight:600;color:var(--gold-ink)}
+.cal-sale{margin-top:3px;font-size:12px;line-height:1.3;color:var(--ink2);display:flex;align-items:center;gap:5px}
+.cal-sale b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal-sale .cal-n{display:inline-block;background:var(--chip);color:var(--chip-ink);border-radius:999px;padding:0 6px;font-size:10px;font-variant-numeric:tabular-nums;flex:none}
+.cal-more{font-size:11px;color:var(--ink3);margin-top:2px}
+.cal-legend-dot{width:16px;height:16px;border-radius:50%;flex:none;border:1px solid var(--line2)}
+.cal-legend-dot.today{background:var(--tab-bg);border-color:var(--tab-bg)}
+.cal-legend-dot.has{background:var(--card)}
+.cal-legend-dot.sel{background:var(--seg-active);border-color:var(--seg-active-border)}
+@media (max-width:980px){.cal-cols{grid-template-columns:1fr!important}}
+@media (max-width:900px){.cal-grid td{height:auto;min-height:64px}.cal-grid{border-spacing:5px}}
 </style>
 </head>
 <body>
@@ -995,6 +1005,7 @@ let S = {
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
   savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
+  calMonthIdx: 0, calDayKey: null,   // Calendar: which month (index into available months) + selected day
 
   // Where the open property was reached from, so Back returns exactly there and
   // Previous/Next walk that origin's ordered results (Explore OR a saved list).
@@ -2782,7 +2793,10 @@ function calGroups() {
   const months = [...monthSet].map((s) => s.split("-").map(Number)).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
   return { byDay, months, total, days: Object.keys(byDay).length };
 }
-// One month as a 7-column grid. opts.link marks sale entries clickable.
+// One month as a 7-column grid.
+//   opts.link       — entries carry data-cty/data-day (printable / legacy jump)
+//   opts.selectable — day cells with sales carry data-selday and highlight selection
+//   opts.selDayKey  — the currently selected "y-m-d" key
 function calMonthGrid(y, m, byDay, opts) {
   opts = opts || {};
   const first = new Date(Date.UTC(y, m, 1)).getUTCDay();
@@ -2790,64 +2804,136 @@ function calMonthGrid(y, m, byDay, opts) {
   const t = etToday(), cells = [];
   for (let i = 0; i < first; i++) cells.push('<td class="cal-empty"></td>');
   for (let d = 1; d <= daysInMonth; d++) {
-    const sales = byDay[y + "-" + m + "-" + d] || [];
+    const dayKey = y + "-" + m + "-" + d;
+    const sales = byDay[dayKey] || [];
     const dnum = dayNum(y, m + 1, d);
-    const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "") + (dnum < t ? " past" : "");
-    const entries = sales.map((g) => {
-      const time = g.time ? saleTimeText({ saleTime: g.time, county: g.county }) : "";
+    const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "")
+      + (dnum < t ? " past" : "") + (opts.selectable && sales.length ? " pick" : "")
+      + (opts.selDayKey === dayKey ? " sel" : "");
+    const totalN = sales.reduce((s, g) => s + g.count, 0);
+    // Up to two county chips, then "+N more"; the selectable grid selects the day
+    // rather than navigating, so the right panel shows the detail.
+    const shown = sales.slice(0, 2).map((g) => {
       const dayAttr = opts.link ? ` data-cty="${esc(g.county)}" data-day="${dayNum(g.y, g.m + 1, g.d)}"` : "";
-      return `<div class="cal-sale"${dayAttr} title="${esc(g.county)} — ${g.count} ${g.count === 1 ? "parcel" : "parcels"}${time ? " · " + esc(time) : ""}"><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span>${time ? `<span class="cal-time">${esc(time)}</span>` : ""}</div>`;
+      return `<div class="cal-sale"${dayAttr}><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span></div>`;
     }).join("");
-    cells.push(`<td class="${cls}"><span class="cal-date">${d}</span>${entries}</td>`);
+    const more = sales.length > 2 ? `<div class="cal-more">+${sales.length - 2} more</div>` : "";
+    const selAttr = opts.selectable && sales.length ? ` data-selday="${dayKey}"` : "";
+    const badge = sales.length ? `<span class="cal-count">${totalN} &#9873;</span>` : "";
+    cells.push(`<td class="${cls}"${selAttr}><div class="cal-daytop"><span class="cal-date">${d}</span>${badge}</div>${shown}${more}</td>`);
   }
   while (cells.length % 7) cells.push('<td class="cal-empty"></td>');
   let rows = "";
   for (let i = 0; i < cells.length; i += 7) rows += "<tr>" + cells.slice(i, i + 7).join("") + "</tr>";
   return `<table class="cal-grid"><thead><tr>${CAL_DOW.map((w) => `<th>${w}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
 }
+// Parcels selling on one "y-m-d" day key, for the calendar's day panel.
+function calDayParcels(dayKey, sel) {
+  if (!dayKey) return [];
+  return DATA.filter((p) => {
+    if (p.redeemed || !p.saleDate || !sel.has(p.county)) return false;
+    return (p.saleDate.getFullYear() + "-" + p.saleDate.getMonth() + "-" + p.saleDate.getDate()) === dayKey;
+  }).sort((a, b) => a.county.localeCompare(b.county) || (a.saleTime || "").localeCompare(b.saleTime || ""));
+}
 function renderCalendar() {
   const all = calCounties();
   const sel = calSelected();
   const { byDay, months, total, days } = calGroups();
+
+  // Which month is shown — clamp the index to what's available.
+  let idx = Math.max(0, Math.min(S.calMonthIdx || 0, Math.max(0, months.length - 1)));
+  S.calMonthIdx = idx;
+  const cur = months[idx] || null;   // [y, m]
+  // Selected day: keep the pick if it's in the current month & has sales; else the
+  // first sale day of the month (today if it's a sale day).
+  const monthDayKeys = cur ? Object.keys(byDay).filter((k) => { const [ky, km] = k.split("-").map(Number); return ky === cur[0] && km === cur[1]; }) : [];
+  monthDayKeys.sort((a, b) => Number(a.split("-")[2]) - Number(b.split("-")[2]));
+  let selDayKey = S.calDayKey && monthDayKeys.includes(S.calDayKey) ? S.calDayKey : (monthDayKeys[0] || null);
+  S.calDayKey = selDayKey;
+  const dayParcels = calDayParcels(selDayKey, sel);
+  const dayIds = dayParcels.map((p) => p.id);
+
   const chips = all.length
     ? all.map((c) => `<button class="pillbtn ${sel.has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`).join("")
     : '<span class="text-muted" style="font-size:13px">No counties have upcoming sales right now.</span>';
-  const grids = months.length
-    ? months.map(([y, m]) => `<div class="cal-month"><h6 class="cal-mhead">${CAL_MONTHS[m]} ${y}</h6>${calMonthGrid(y, m, byDay, { link: true })}</div>`).join("")
-    : `<div class="text-muted" style="font-size:14px;padding:24px 0">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</div>`;
+
+  // Readable date for the day panel.
+  const dayLabel = (() => {
+    if (!selDayKey) return "";
+    const [y, m, d] = selDayKey.split("-").map(Number);
+    const dow = new Date(Date.UTC(y, m, d)).getUTCDay();
+    return `${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dow]}, ${CAL_MONTHS[m]} ${d}`;
+  })();
+  const isToday = selDayKey && (() => { const [y, m, d] = selDayKey.split("-").map(Number); return dayNum(y, m + 1, d) === etToday(); })();
+
+  const monthName = cur ? `${CAL_MONTHS[cur[1]]} ${cur[0]}` : "—";
+  const dayPanel = `
+    <div class="home-card" style="padding:0">
+      <div style="padding:18px 20px;border-bottom:1px solid var(--line)">
+        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">${isToday ? "TODAY" : "SELECTED DAY"}</div>
+        <div style="font-size:30px;font-weight:500;letter-spacing:-.01em;margin-top:4px">${esc(dayLabel || "No day selected")}</div>
+        ${dayParcels.length ? `<div style="font-size:15px;color:var(--ink2);margin-top:2px">${dayParcels.length} ${dayParcels.length === 1 ? "auction" : "auctions"}${(() => { const t0 = dayParcels[0].saleTime ? saleTimeText(dayParcels[0]) : ""; return t0 ? " · " + esc(t0) : ""; })()}</div>` : ""}
+      </div>
+      ${dayParcels.length ? `<div class="home-list-rows" style="padding:6px 10px">
+        ${dayParcels.map((p) => `<button class="home-recent" data-open="${esc(p.id)}">
+          <span style="flex:1;text-align:left;overflow:hidden">
+            <span style="display:block;font-size:15px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(p.hasAddr ? p.addr : p.parcel)}</span>
+            <span style="display:block;font-size:13px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</span>
+          </span>
+          <span class="home-bm ${isBookmarked(p.id) ? "on" : ""}" aria-hidden="true">${BOOKMARK_ICON}</span>
+        </button>`).join("")}
+      </div>`
+      : `<p class="home-empty" style="padding:20px">${months.length ? "Pick a highlighted day on the calendar to see its auctions." : "No upcoming sales in your counties yet."}</p>`}
+    </div>`;
 
   $("scr-calendar").innerHTML = `
-    <h2 style="margin-bottom:6px">Sale calendar</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Pick your counties and see every upcoming tax-deed sale on one calendar &mdash; the county, date, start time and how many parcels.${total ? ` <b>${total.toLocaleString()}</b> ${total === 1 ? "parcel" : "parcels"} across <b>${days}</b> sale ${days === 1 ? "day" : "days"}.` : ""}</p>
+    <h1 style="margin:0 0 6px;font-size:44px;font-weight:500;letter-spacing:-.02em">Auction calendar.</h1>
+    <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
-    <div class="blueprint" style="padding:16px 18px;margin-bottom:22px">${CORNERS}
-      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-        <h6 style="color:var(--color-accent-700);margin:0">Counties on the calendar</h6>
+    <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
           <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
           <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
-          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print calendar</button>
+          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print</button>
         </div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
     </div>
 
-    <div id="cal-months">${grids}</div>`;
+    ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+        <button class="btn btn-secondary" id="cal-prev" ${idx > 0 ? "" : "disabled"} style="height:40px;width:40px;padding:0;font-size:18px">&larr;</button>
+        <div style="font-size:26px;font-weight:500;min-width:210px;text-align:center">${esc(monthName)}</div>
+        <button class="btn btn-secondary" id="cal-next" ${idx < months.length - 1 ? "" : "disabled"} style="height:40px;width:40px;padding:0;font-size:18px">&rarr;</button>
+      </div>
+      <div class="cal-cols" style="display:grid;grid-template-columns:1fr 380px;gap:22px;align-items:start">
+        <div class="home-card" style="padding:16px 18px">${cur ? calMonthGrid(cur[0], cur[1], byDay, { selectable: true, selDayKey }) : ""}</div>
+        <div>${dayPanel}
+          <div class="home-card" style="padding:14px 18px;margin-top:16px;font-size:13px;color:var(--ink2)">
+            <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin-bottom:8px">LEGEND</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="cal-legend-dot today"></span> Today</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="cal-legend-dot has"></span> Day with an auction</div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="cal-legend-dot sel"></span> Selected day</div>
+          </div>
+        </div>
+      </div>`
+      : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
   $("cal-chips").querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
-    const cur = new Set(calSelected()), c = b.dataset.cty;
-    if (cur.has(c)) cur.delete(c); else cur.add(c);
-    prefs.calCounties = [...cur]; savePrefs(); renderCalendar();
+    const cs = new Set(calSelected()), c = b.dataset.cty;
+    if (cs.has(c)) cs.delete(c); else cs.add(c);
+    prefs.calCounties = [...cs]; savePrefs(); S.calMonthIdx = 0; S.calDayKey = null; renderCalendar();
   });
   const allBtn = $("cal-all"); if (allBtn) allBtn.onclick = () => { prefs.calCounties = calCounties(); savePrefs(); renderCalendar(); };
   const noneBtn = $("cal-none"); if (noneBtn) noneBtn.onclick = () => { prefs.calCounties = []; savePrefs(); renderCalendar(); };
   const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
-  $("cal-months").querySelectorAll("[data-cty]").forEach((el) => el.onclick = () => {
-    // Filter Explore to this county AND this exact sale day, so the resulting count
-    // matches the calendar cell's badge.
-    S.counties = [el.dataset.cty]; S.dayFilter = el.dataset.day != null ? Number(el.dataset.day) : null;
-    S.when = "all"; S.status = "Scheduled"; S.view = "list"; S.mapArea = null; S.shown = 150; go("dashboard");
-  });
+  const prevBtn = $("cal-prev"); if (prevBtn) prevBtn.onclick = () => { S.calMonthIdx = idx - 1; S.calDayKey = null; renderCalendar(); };
+  const nextBtn = $("cal-next"); if (nextBtn) nextBtn.onclick = () => { S.calMonthIdx = idx + 1; S.calDayKey = null; renderCalendar(); };
+  // Select a day (fills the right panel) — no navigation.
+  $("scr-calendar").querySelectorAll("[data-selday]").forEach((td) => td.onclick = () => { S.calDayKey = td.dataset.selday; renderCalendar(); });
+  // Open a parcel from the day panel, walking that day's ordered set.
+  $("scr-calendar").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => openParcel(b.dataset.open, dayIds, "calendar"));
 }
 // The same calendar as a printable monthly sheet (one month per page).
 function printCalendar() {
