@@ -5,36 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tax Deed Radar</title>
 <meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%235980a6%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f2f2f3%22 text-anchor=%22middle%22>TR</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%23a97f2a%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f6f3ec%22 text-anchor=%22middle%22>TR</text></svg>">
 <link rel="stylesheet" href="ds/styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 <script>
 /* Set the theme before first paint so the page never flashes light: a saved
    choice wins, otherwise fall back to the viewer's OS setting. */
 (function () {
   try {
     var t = localStorage.getItem("tdd_theme");
-    if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", t);
-  } catch (e) {}
+    if (t === "light") t = "pearl"; else if (t === "dark") t = "charcoal";   // migrate old values
+    var valid = (t === "pearl" || t === "obsidian" || t === "charcoal");
+    var eff = valid ? t : (matchMedia("(prefers-color-scheme:dark)").matches ? "charcoal" : "pearl");
+    document.documentElement.setAttribute("data-theme", eff);
+  } catch (e) { document.documentElement.setAttribute("data-theme", "pearl"); }
 })();
 </script>
 <style>
-html,body{margin:0;height:100%}
-@media (min-width:901px){html,body{overflow:hidden}}
-a{color:var(--color-accent)}a:hover{color:var(--color-accent-700)}
+html,body{margin:0}
+body{background:var(--bg)}
+a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
+/* Left icon rail: 48px pills that expand to a labelled 150px on hover. */
+.rail-btn{pointer-events:auto;display:flex;align-items:center;gap:0;height:48px;width:48px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:15px;font-weight:500;cursor:pointer;overflow:hidden;white-space:nowrap;box-shadow:var(--shadow);transition:width .22s ease,gap .22s ease}
+.rail-btn:hover{width:150px;gap:12px}
+.rail-btn .rail-ico{width:24px;height:24px;flex:none;display:grid;place-items:center}
+.rail-btn .rail-lbl{opacity:0;transition:opacity .2s .08s}
+.rail-btn:hover .rail-lbl{opacity:1}
+.rail-btn.active{background:var(--tab-bg);color:var(--tab-ink);border-color:var(--tab-border)}
+/* ---- Home screen ---- */
+.home-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px}
+.home-stat{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:20px 22px;cursor:pointer;color:var(--ink);transition:border-color .15s ease}
+.home-stat:hover{border-color:var(--gold-ring)}
+.home-cols{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:start}
+.home-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:20px 22px}
+.home-card-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px}
+.home-h3{margin:0;font-size:22px;font-weight:500;letter-spacing:-.01em}
+.home-count{font-size:13px;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:3px 11px}
+.home-link{background:none;border:none;cursor:pointer;color:var(--ink2);font-size:14px;font-weight:500}
+.home-link:hover{color:var(--ink)}
+.home-empty{color:var(--ink3);font-size:14px;margin:6px 0 2px}
+.home-table{width:100%;border-collapse:collapse}
+.home-table td{border-top:1px solid var(--line)}
+.home-table tr:first-child td{border-top:none}
+.home-row td{padding:13px 10px}
+.home-row td:first-child{padding-left:0}
+.home-row td:last-child{padding-right:0}
+.home-row:hover td{background:var(--row-hi)}
+.home-num{font-size:14px;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.home-list-rows{display:flex;flex-direction:column}
+.home-list-row,.home-recent{display:flex;align-items:center;gap:10px;width:100%;padding:12px 8px;border:none;border-top:1px solid var(--line);background:none;cursor:pointer;color:var(--ink);text-align:left}
+.home-list-row:first-child,.home-recent:first-child{border-top:none}
+.home-list-row:hover,.home-recent:hover{background:var(--row-hi)}
+.home-chip{font-size:13px;font-weight:600;color:var(--chip-ink);background:var(--chip);border-radius:999px;padding:2px 11px;flex:none}
+.home-chip-team{background:var(--gold-soft);color:var(--gold-ink)}
+.home-bm{color:var(--ink3);flex:none;display:grid;place-items:center}
+.home-bm.on{color:var(--gold)}
+.home-bm.on svg{fill:var(--gold)}
+/* Saved screen list-picker rows. */
+.saved-pick{display:flex;align-items:center;gap:8px;width:100%;padding:11px 12px;border:none;background:none;cursor:pointer;color:var(--ink);border-radius:12px;font-size:15px}
+.saved-pick:hover{background:var(--row-hi)}
+.saved-pick.on{background:var(--seg-active);box-shadow:inset 0 0 0 1px var(--seg-active-border)}
+@media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}.saved-grid{grid-template-columns:1fr!important}}
+/* Dark-theme map tint: applied on the street tile pane only (not satellite). */
+.map-glow .leaflet-tile-pane{filter:var(--map-glow)}
+
+/* ===== Home dashboard (matches the design prototype) ===== */
+.h2-hero-grid{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(0,1fr);gap:20px}
+.h2-row2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.h2-row3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.h2-trow:hover{background:var(--row-hi)}
+.h2-lrow:hover{background:var(--row-hi)}
+.h2-recent:hover{filter:brightness(.97)}
+@media (max-width:1040px){.h2-hero-grid,.h2-row2,.h2-row3{grid-template-columns:1fr}}
 .ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
 .ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
 .nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
 .nav-btn:hover{background:var(--color-accent-100)}
-.nav-btn.active{background:var(--color-accent);color:var(--color-bg);border-color:var(--color-accent)}
+.nav-btn.active{background:var(--color-action);color:var(--color-action-text);border-color:var(--color-action)}
 .nav-btn .dot{width:6px;height:6px;flex:none;background:transparent;border:1px solid currentColor}
-.nav-btn.active .dot{background:var(--color-bg)}
-.seg3{flex:1;padding:8px 4px;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:.03em;border:none;cursor:pointer;background:transparent;color:var(--color-text)}
-.seg3.on{background:var(--color-accent);color:var(--color-bg)}
-.pillbtn{font-family:var(--font-body);font-size:13px;padding:6px 12px;cursor:pointer;border:1px solid var(--color-divider);background:transparent;color:var(--color-text)}
-.pillbtn.on{border-color:var(--color-accent);background:var(--color-accent);color:var(--color-bg)}
+.nav-btn.active .dot{background:var(--color-action-text)}
+.seg3{flex:1;padding:8px 4px;font-family:var(--font-body);font-weight:600;font-size:13px;border:none;cursor:pointer;background:transparent;color:var(--ink)}
+.seg3.on{background:var(--seg-active);color:var(--ink);box-shadow:inset 0 0 0 1px var(--seg-active-border)}
+.pillbtn{font-family:var(--font-body);font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.pillbtn.on{border-color:var(--seg-active-border);background:var(--seg-active);color:var(--ink)}
 .mono{font-family:ui-monospace,Menlo,monospace}
 tr.rowlink{cursor:pointer}
 tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
@@ -63,6 +120,11 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   .triad{grid-template-columns:1fr!important}
 }
 #login-overlay{display:grid}
+/* On phones the map quick card becomes a bottom sheet and the map shrinks. */
+@media (max-width:640px){
+  #quick-card{top:auto!important;bottom:0!important;left:0!important;right:0!important;width:auto!important}
+  #board-map{height:56vh!important}
+}
 /* [hidden] must always win — several component classes set their own display */
 [hidden]{display:none!important}
 .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -70,50 +132,56 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 @keyframes aispin{to{transform:rotate(360deg)}}
 /* ---- sale calendar ---- */
 .cal-month{margin-bottom:26px}
-.cal-mhead{font-family:var(--font-heading);font-size:16px;color:var(--color-accent-700);margin:0 0 8px}
-.cal-grid{width:100%;border-collapse:collapse;table-layout:fixed}
-.cal-grid th{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--color-accent-700);text-align:left;padding:4px 6px;border-bottom:1px solid var(--color-divider)}
-.cal-grid td{border:1px solid var(--color-divider);height:92px;vertical-align:top;padding:4px 5px;width:14.28%}
-.cal-grid td.cal-empty{background:var(--color-neutral-100)}
-.cal-grid td.past{opacity:.5}
-.cal-grid td.has{background:var(--color-accent-100)}
-.cal-grid td.today{outline:2px solid var(--color-accent);outline-offset:-2px}
-.cal-date{font-size:11px;font-weight:600;color:var(--color-neutral-600)}
-.cal-sale{margin-top:4px;font-size:11px;line-height:1.3;cursor:pointer;border-left:2px solid var(--color-accent);padding-left:5px}
-.cal-sale:hover{color:var(--color-accent-700)}
-.cal-sale .cal-n{display:inline-block;background:var(--color-accent);color:var(--color-bg);border-radius:3px;padding:0 5px;font-size:10px;margin-left:3px;font-variant-numeric:tabular-nums}
-.cal-sale .cal-time{display:block;color:var(--color-neutral-600);font-size:10px}
-@media (max-width:900px){.cal-grid td{height:auto;min-height:56px;font-size:10px}.cal-grid .cal-sale{font-size:10px}}
+.cal-mhead{font-family:var(--font-heading);font-size:16px;color:var(--gold-ink);margin:0 0 8px}
+.cal-grid{width:100%;border-collapse:separate;border-spacing:8px;table-layout:fixed}
+.cal-grid th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:2px 6px}
+.cal-grid td{border:1px solid var(--line);border-radius:14px;height:104px;vertical-align:top;padding:8px;width:14.28%}
+.cal-grid td.cal-empty{background:transparent;border-color:transparent}
+.cal-grid td.past{opacity:.45}
+.cal-grid td.has{background:var(--card)}
+.cal-grid td.pick{cursor:pointer}
+.cal-grid td.pick:hover{border-color:var(--gold-ring);background:var(--row-hi)}
+.cal-grid td.sel{background:var(--seg-active);box-shadow:inset 0 0 0 1px var(--seg-active-border)}
+.cal-daytop{display:flex;align-items:center;justify-content:space-between;gap:4px;margin-bottom:4px}
+.cal-date{font-size:14px;font-weight:500;color:var(--ink);width:30px;height:30px;display:grid;place-items:center;border-radius:50%}
+.cal-grid td.today .cal-date{background:var(--tab-bg);color:var(--tab-ink)}
+.cal-count{font-size:11px;font-weight:600;color:var(--gold-ink)}
+.cal-sale{margin-top:3px;font-size:12px;line-height:1.3;color:var(--ink2);display:flex;align-items:center;gap:5px}
+.cal-sale b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal-sale .cal-n{display:inline-block;background:var(--chip);color:var(--chip-ink);border-radius:999px;padding:0 6px;font-size:10px;font-variant-numeric:tabular-nums;flex:none}
+.cal-more{font-size:11px;color:var(--ink3);margin-top:2px}
+.cal-legend-dot{width:16px;height:16px;border-radius:50%;flex:none;border:1px solid var(--line2)}
+.cal-legend-dot.today{background:var(--tab-bg);border-color:var(--tab-bg)}
+.cal-legend-dot.has{background:var(--card)}
+.cal-legend-dot.sel{background:var(--seg-active);border-color:var(--seg-active-border)}
+@media (max-width:980px){.cal-cols{grid-template-columns:1fr!important}}
+@media (max-width:900px){.cal-grid td{height:auto;min-height:64px}.cal-grid{border-spacing:5px}}
 </style>
 </head>
 <body>
-<div id="frame" style="display:flex;height:100vh;font-family:var(--font-body);color:var(--color-text);background:var(--color-bg)">
+<div id="frame" style="min-height:100vh;position:relative;font-family:var(--font-body);color:var(--ink);background:var(--bg)">
+<div id="glow" style="position:fixed;inset:0;background:var(--glow);pointer-events:none;z-index:0"></div>
 
-<aside style="width:216px;flex:none;display:flex;flex-direction:column;border-right:1px solid var(--color-divider);padding:20px 14px;gap:4px">
-  <div style="margin-bottom:22px;padding:0 8px">
-    <div style="font-family:var(--font-heading);font-weight:600;font-size:21px;letter-spacing:.02em;line-height:1.1">TAX DEED RADAR</div>
-    <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent-700)" id="brand-sub">Florida</div>
-  </div>
-  <nav id="nav" style="display:flex;flex-direction:column;gap:4px"></nav>
-  <div id="side-refresh" style="margin-top:auto;padding:12px 10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5" class="blueprint"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Next data refresh</div>
-    <div style="font-family:var(--font-heading);font-weight:600;font-size:16px" id="next-run">—</div>
-    <div class="text-muted" id="next-run-sub">Automatic &middot; daily</div>
-  </div>
-  <div id="account-box" hidden style="padding:10px;border:1px solid var(--color-divider);font-size:11.5px;line-height:1.5"></div>
-</aside>
+<nav id="rail" aria-label="Primary navigation" style="position:fixed;left:0;top:0;bottom:0;width:68px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;padding-left:14px;z-index:40;pointer-events:none"></nav>
 
-<main style="flex:1;min-width:0;display:flex;flex-direction:column">
-  <header style="display:flex;align-items:center;gap:12px;padding:14px 28px;border-bottom:1px solid var(--color-divider)">
-    <input class="input" id="q" placeholder="Search parcel, address, case&hellip;" style="max-width:320px">
-    <span style="margin-left:auto;font-size:12px" class="text-muted" id="last-scrape">loading&hellip;</span>
-    <button class="btn btn-secondary btn-icon" id="btn-theme" title="Toggle dark mode" aria-label="Toggle dark mode"></button>
-    <button class="btn btn-secondary" id="btn-export"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export CSV</button>
-    <button class="btn btn-primary" id="btn-refresh-admin" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><polyline points="21 3 21 9 15 9"></polyline></svg>Trigger refresh</button>
+<div id="page" style="position:relative;z-index:1;width:min(1586px,100%);box-sizing:border-box;margin:0 auto;padding:20px 40px 44px 92px">
+  <header style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;min-height:56px">
+    <a href="#" id="brand" style="display:flex;align-items:center;gap:12px;cursor:pointer;color:var(--ink)">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="12" stroke="#e8b91e" stroke-width="3"></circle><circle cx="20" cy="17" r="4.5" fill="#e8b91e"></circle><path d="M15 27l-3 11 8-4 8 4-3-11" stroke="#e8b91e" stroke-width="3" stroke-linejoin="round" fill="none"></path></svg>
+      <span style="font-size:24px;font-weight:600;letter-spacing:-.01em;white-space:nowrap">Tax Deed Radar</span>
+    </a>
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap">
+      <span id="last-scrape" class="text-muted" style="font-size:12px"></span>
+      <button id="btn-theme" title="Toggle theme" aria-label="Toggle theme" style="display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;box-shadow:var(--shadow)"></button>
+      <button id="btn-settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>Settings</button>
+      <button class="btn btn-secondary" id="btn-export" style="font-size:13px;height:38px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export</button>
+      <div id="account-box"></div>
+    </div>
   </header>
 
-  <div id="scroller" style="flex:1;overflow-y:auto;padding:26px 28px 48px">
+  <div id="scroller" style="padding-top:8px">
     <div id="load-note"><span class="text-muted">Loading live auction data&hellip;</span></div>
+    <section id="scr-home" hidden></section>
     <section id="scr-dashboard" hidden></section>
     <section id="scr-detail" hidden></section>
     <section id="scr-lists" hidden></section>
@@ -121,7 +189,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <section id="scr-calendar" hidden></section>
     <section id="scr-settings" hidden></section>
   </div>
-</main>
+</div>
 </div>
 
 <div id="login-overlay" hidden style="position:fixed;inset:0;z-index:60;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)">
@@ -142,6 +210,10 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up &mdash; accounts are set up by your workspace admin.</div>
   </form>
 </div>
+
+<div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
+
+<div id="day-modal" hidden style="position:fixed;inset:0;z-index:65;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
 
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
@@ -221,11 +293,93 @@ function etDaysLeftInWeek() {
 }
 const etStamp = (d) => ET_STAMP.format(d) + " ET";
 
+// ---------- county time zones ----------
+// Not every Florida county runs on Eastern time — the western Panhandle counties
+// are Central. Auction start times are scraped in the county's own local zone, so
+// a blanket "ET" label would misstate a Central-county sale by an hour. Label each
+// time with its county's real zone (ET / CT); a county that straddles the line
+// (Gulf) or whose zone we can't establish is flagged, never guessed.
+const FL_CENTRAL_COUNTIES = new Set(
+  ["escambia", "santarosa", "okaloosa", "walton", "holmes", "washington", "bay", "jackson", "calhoun"]);
+const FL_SPLIT_TZ_COUNTIES = new Set(["gulf"]);   // straddles the ET/CT line — don't assume
+function countyTZLabel(county) {
+  const c = normCounty(county);
+  if (FL_SPLIT_TZ_COUNTIES.has(c)) return null;   // ambiguous — the caller flags it
+  return FL_CENTRAL_COUNTIES.has(c) ? "CT" : "ET";
+}
+// A parcel's sale time as a correctly-zoned display string:
+//   empty            -> "Time not published"
+//   explicit zone     -> honor a zone already in the scraped string
+//   otherwise         -> label by the county's zone; split/unknown is flagged.
+function saleTimeText(p) {
+  const raw = ((p && p.saleTime) || "").trim();
+  if (!raw) return "Time not published";
+  const bare = raw.replace(/\s*\b(E[DS]?T|C[DS]?T)\b\.?$/i, "").trim() || raw;
+  const explicit = /\bC[DS]?T\b/i.test(raw) ? "CT" : /\bE[DS]?T\b/i.test(raw) ? "ET" : null;
+  const zone = explicit || countyTZLabel(p && p.county);
+  return zone ? `${bare} ${zone}` : `${bare} · time zone unverified`;
+}
+
+// ---------- stable parcel id ----------
+// A parcel's synthetic id is county|parcel|case. Counties reformat the case number
+// between refreshes ("2026 TD04.43" vs "2026TD0443"), so a raw id can change under
+// saved work and orphan it. normId canonicalises each segment (lowercase, strip
+// spaces/punctuation) so the same sale keeps ONE id across refreshes; it is
+// idempotent, so it can run on already-normalised ids harmlessly. case_number
+// stays IN the id, so a parcel returning in a later auction (a new case) is a
+// genuinely separate sale and never merges with the old one.
+const normIdSeg = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+function normId(id) {
+  const parts = String(id ?? "").split("|");
+  const county = parts.shift() || "";
+  const parcel = parts.shift() || "";
+  const rest = parts.join("|");                    // any extra pipes fold into the case segment
+  return `${normIdSeg(county)}|${normIdSeg(parcel)}|${normIdSeg(rest)}`;
+}
+// Re-key an id-keyed object (interest, team.membership) from raw ids to canonical
+// normIds. Idempotent. Collisions — two different raw ids that canonicalise to the
+// same id, each carrying real, differing data — are NOT merged: the first wins the
+// canonical key, the other is preserved under its original key and logged, so no
+// saved work is silently lost or wrongly combined.
+function remapIdKeys(obj) {
+  if (!obj || typeof obj !== "object") return { out: obj || {}, changed: false, collisions: [] };
+  const out = {}, from = {}, collisions = [];
+  let changed = false;
+  for (const [k, v] of Object.entries(obj)) {
+    const nk = normId(k);
+    if (nk !== k) changed = true;
+    if (!(nk in out)) { out[nk] = v; from[nk] = k; }
+    else if (JSON.stringify(out[nk]) === JSON.stringify(v)) { /* identical dup — drop */ }
+    else {
+      // Genuine collision: two different raw ids canonicalise to the same id but
+      // carry different data. Keep the second under a distinct key (never clobber
+      // the first) and log it, so no saved work is silently lost or wrongly merged.
+      let dk = (k in out) ? null : k;
+      if (dk === null) { let n = 1; do { dk = nk + "|__dup" + (n++); } while (dk in out); }
+      out[dk] = v;
+      changed = true;
+      collisions.push([from[nk], k, nk]);
+    }
+  }
+  return { out, changed, collisions };
+}
+
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money = (n) => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
 const CORNERS = '<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>';
 const LINK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+// A short-lived "… — Undo" toast, so an accidental decision change or list removal
+// is one click to reverse.
+let _undoTimer = null;
+function pushUndo(label, undoFn) {
+  const el = $("undo-toast"); if (!el) return;
+  el.innerHTML = `<span>${esc(label)}</span><button class="btn" id="undo-btn" style="color:inherit;border:1px solid currentColor;font-size:12.5px;padding:2px 12px">Undo</button>`;
+  el.hidden = false;
+  $("undo-btn").onclick = () => { el.hidden = true; clearTimeout(_undoTimer); undoFn(); };
+  clearTimeout(_undoTimer);
+  _undoTimer = setTimeout(() => { el.hidden = true; }, 6000);
+}
 
 // ---------- persisted team state (browser-local) ----------
 const store = {
@@ -242,6 +396,7 @@ const DEFAULT_PREFS = {
   sort: "soonest", budget: "",
 };
 let interest = store.get("tdd_interest", {});        // id -> {status,bid,list,notes,type}
+let recent = store.get("tdd_recent", []);            // recently-opened parcel ids, newest first (max 7)
 let lists = store.get("tdd_lists", DEFAULT_LISTS);   // personal lists
 let team = { lists: [], membership: {} };            // shared lists; live only when signed in
 let prefs = store.get("tdd_prefs", DEFAULT_PREFS);
@@ -342,8 +497,156 @@ function recomputeBuybox() {
     p.useType = typeFromUse(p.use);   // Type buckets follow the buy-box keywords
   }
 }
-const getInt = (id) => interest[id] || { status: "", bid: "", list: "", notes: "", type: "" };
-const setInt = (id, patch) => { interest[id] = { ...getInt(id), ...patch }; saveInterest(); };
+// A saved parcel entry: the user's own fields plus, from Phase 1 on, per-field
+// change timestamps (_ts) that drive field-level sync merging, an optional display
+// snapshot (snap) so a parcel stays viewable after it leaves the feed, and a
+// research map (filled in Phase 3). Reads default every field so old entries and
+// signed-out use keep working.
+const nowIso = () => new Date().toISOString();
+const FIELD_KEYS = ["status", "bid", "notes", "list", "type", "bookmark"];
+const EMPTY_INT = () => ({ status: "", bid: "", list: "", notes: "", type: "", bookmark: false });
+const getInt = (id) => interest[id] ? { ...EMPTY_INT(), ...interest[id] } : EMPTY_INT();
+// A small display snapshot, written whenever the user acts on a parcel, so Saved /
+// history can still show it after the feed drops it (never assume it "sold").
+const snapOf = (p) => ({
+  parcel: p.parcel, addr: p.addr, city: p.city, county: p.county,
+  saleDate: p.saleDate ? p.saleDate.getTime() : null, auction: p.auction,
+  bid: p.bid, assessed: p.assessed, status: p.status, auctionUrl: p.auctionUrl, at: nowIso(),
+});
+// setInt(id, patch[, rec]) — merge fields, stamp each changed field's _ts (for
+// conflict-safe sync), and, when the record is passed, refresh the display snapshot.
+function setInt(id, patch, rec) {
+  const cur = interest[id] || EMPTY_INT();
+  const ts = { ...(cur._ts || {}) }, now = nowIso();
+  for (const k of Object.keys(patch)) ts[k] = now;
+  const next = { ...cur, ...patch, _ts: ts };
+  if (rec) next.snap = snapOf(rec);
+  interest[id] = next;
+  saveInterest();
+  if (CLOUD && CLOUD.user) setSaveState("saving");   // reflect the in-flight save
+}
+// Bookmark = saved without a named list (a list is optional, added later).
+const isBookmarked = (id) => !!getInt(id).bookmark;
+// Research state model (rendered in Phase 3). Three independent checks, each with
+// its own progress, findings and resolution. Property record + Title & liens are
+// MANUAL (the user marks them reviewed); Land check is the automated GIS check.
+const RESEARCH_KEYS = ["propertyRecord", "landCheck", "titleLiens"];
+const EMPTY_CHECK = () => ({ state: "notChecked", finding: "", warning: false, resolved: false, checkedAt: "", source: "" });
+const getResearch = (id) => {
+  const r = (interest[id] && interest[id].research) || {};
+  return Object.fromEntries(RESEARCH_KEYS.map((k) => [k, { ...EMPTY_CHECK(), ...(r[k] || {}) }]));
+};
+// "Needs review" is ONE precise state, kept distinct from never-checked and passed:
+// a check that was reviewed but carries an unresolved warning, OR an automated
+// check that couldn't complete. Never counts notChecked or reviewed-and-resolved.
+function needsReview(id) {
+  const r = getResearch(id);
+  return RESEARCH_KEYS.some((k) => {
+    const c = r[k];
+    return (c.state === "reviewed" && c.warning && !c.resolved) || c.state === "couldntCheck";
+  });
+}
+// Update one research check (merges into the existing check, stamps _ts.research so
+// the newer device's research view wins on sync). rec keeps the display snapshot.
+function setResearch(id, key, patch, rec) {
+  const cur = interest[id] || EMPTY_INT();
+  const research = { ...(cur.research || {}) };
+  research[key] = { ...EMPTY_CHECK(), ...(research[key] || {}), ...patch };
+  setInt(id, { research }, rec);
+}
+// Field-level merge of two devices' interest maps. Per parcel and per field, the
+// value with the newer _ts wins, so concurrent edits to DIFFERENT fields both
+// survive and an OLDER remote write can never clobber newer local work. When the
+// same field was changed on both sides, a conflict marker (_conflict[field]) is
+// recorded (surfaced in the UI) rather than silently dropping an edit.
+function mergeInterest(localObj, remoteObj) {
+  const L = localObj || {}, R = remoteObj || {}, out = {};
+  for (const id of new Set([...Object.keys(L), ...Object.keys(R)])) {
+    const a = L[id], b = R[id];
+    if (!a) { out[id] = b; continue; }
+    if (!b) { out[id] = a; continue; }
+    const at = a._ts || {}, bt = b._ts || {};
+    const merged = { ...a }, mt = { ...at }, conflicts = { ...(a._conflict || {}) };
+    // Only the user's scalar fields carry per-field _ts and are merged this way;
+    // snap/research (objects, no _ts) are reconciled separately below so they never
+    // register a spurious conflict.
+    for (const f of FIELD_KEYS) {
+      const av = a[f], bv = b[f], ata = at[f], btb = bt[f];
+      if (JSON.stringify(av) === JSON.stringify(bv)) { if (btb && (!ata || btb > ata)) mt[f] = btb; continue; }
+      if (btb && ata && btb > ata) { merged[f] = bv; mt[f] = btb; }             // remote newer
+      else if (ata && btb && ata > btb) { merged[f] = av; mt[f] = ata; conflicts[f] = nowIso(); } // local newer, both changed
+      else if (btb && !ata) { merged[f] = bv; mt[f] = btb; }                     // only remote stamped
+      else if (ata && !btb) { merged[f] = av; mt[f] = ata; }                     // only local stamped
+      else if (btb || ata) { merged[f] = bv; mt[f] = btb || ata; conflicts[f] = nowIso(); } // stamps tie/one side
+      else { merged[f] = bv; }                                                   // neither stamped (legacy) — take remote quietly
+    }
+    merged._ts = mt;
+    if (Object.keys(conflicts).length) merged._conflict = conflicts;
+    // Snapshot: keep whichever is newer (by its own `at`); research: keep the side
+    // that has one (full per-check merge lands in Phase 3).
+    if (b.snap && (!a.snap || String(b.snap.at || "") > String(a.snap.at || ""))) merged.snap = b.snap;
+    // research is an object without per-check _ts — keep the side with the newer
+    // research timestamp (newest device's research view wins; never lose to older).
+    const ar = at.research, br = bt.research;
+    if (b.research && (!a.research || (br && (!ar || br > ar)))) { merged.research = b.research; if (br) mt.research = br; }
+    out[id] = merged;
+  }
+  return out;
+}
+// Clear a resolved field conflict once the user has dealt with it.
+function clearConflict(id, field) {
+  const it = interest[id]; if (!it || !it._conflict) return;
+  delete it._conflict[field];
+  if (!Object.keys(it._conflict).length) delete it._conflict;
+  saveInterest();
+}
+// One-time, at boot: back up pre-migration state (for recovery), then canonicalise
+// every id-keyed local store so saved work survives the switch to normalised ids.
+// Idempotent — normId is stable, so a second run is a no-op. team.membership is
+// re-keyed on sign-in (remapIdKeys in onSignedIn), where the shared row loads.
+function migrateSavedIds() {
+  try {
+    if (!localStorage.getItem("tdd_idmig_v1")) {
+      const bak = { at: nowIso(), interest: store.get("tdd_interest", {}), lc: {} };
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith("tdd_lc_")) bak.lc[key] = localStorage.getItem(key);
+      }
+      store.set("tdd_idmig_bak_v1", bak);
+      localStorage.setItem("tdd_idmig_v1", bak.at);
+    }
+  } catch (e) {}
+  const ri = remapIdKeys(interest);
+  if (ri.changed) { interest = ri.out; store.set("tdd_interest", interest); }
+  if (ri.collisions.length) console.warn("id migration kept colliding interest entries distinct:", ri.collisions);
+  // Re-key the per-parcel land-check cache (tdd_lc_<id>).
+  try {
+    const moves = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith("tdd_lc_")) {
+        const oldId = key.slice(7), nid = normId(oldId);
+        if (nid !== oldId) moves.push([key, "tdd_lc_" + nid, localStorage.getItem(key)]);
+      }
+    }
+    for (const [oldK, newK, val] of moves) { if (!localStorage.getItem(newK)) localStorage.setItem(newK, val); localStorage.removeItem(oldK); }
+  } catch (e) {}
+}
+// After the feed loads: give any already-saved parcel (acted on before snapshots
+// existed) a display snapshot from the current feed, so it stays viewable in
+// Saved/history once it later drops out of the feed.
+function backfillSnapshots() {
+  const byId = {};
+  for (const p of DATA) byId[p.id] = p;
+  let changed = false;
+  for (const [id, it] of Object.entries(interest)) {
+    if (!it || it.snap) continue;
+    if (!(it.status || it.bid || it.notes || it.list || it.bookmark)) continue;   // only real saves
+    const p = byId[id];
+    if (p) { it.snap = snapOf(p); changed = true; }
+  }
+  if (changed) store.set("tdd_interest", interest);
+}
 
 // ---------- cloud sync (Supabase Auth + Postgres + Realtime) ----------
 // Dormant when SUPABASE_URL is a placeholder. State lives in two tables:
@@ -354,7 +657,7 @@ let CLOUD = null;                 // { sb, user, channels: [] }
 const cloudTimers = {};
 
 function rerender() {
-  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+  ({ home: renderHome, dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
      listdetail: renderListDetail, calendar: renderCalendar, settings: renderSettings })[S.screen]();
 }
 
@@ -374,6 +677,27 @@ let TEAM_ID = null;
 let IS_ADMIN = false;        // operator flag from the profile row — gates dev-only controls
 let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
 let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
+// Per-edit save indicator for the decision/notes/research controls: idle while
+// nothing is pending, "Saving…" while an interest push is in flight, "Saved ✓" once
+// the row is acknowledged, or "Couldn't save — Retry" on failure. Driven ONLY by
+// the interest push (not prefs/lists), so ordinary filter changes stay quiet.
+let SAVE_STATE = "idle";
+let _saveIdleTimer = null;
+function paintSaveStatus() {
+  (document.querySelectorAll ? document.querySelectorAll("[data-save-status]") : []).forEach((el) => {
+    if (SAVE_STATE === "error") {
+      el.innerHTML = '<span style="color:var(--color-danger)">Couldn&rsquo;t save</span> <button class="btn btn-ghost" data-save-retry style="font-size:11.5px;padding:1px 6px">Retry</button>';
+      const rb = el.querySelector("[data-save-retry]"); if (rb) rb.onclick = retrySave;
+    } else {
+      el.textContent = SAVE_STATE === "saving" ? "Saving…" : SAVE_STATE === "saved" ? "Saved ✓" : "";
+    }
+  });
+}
+function setSaveState(s) {
+  SAVE_STATE = s; paintSaveStatus();
+  if (s === "saved") { clearTimeout(_saveIdleTimer); _saveIdleTimer = setTimeout(() => { SAVE_STATE = "idle"; paintSaveStatus(); }, 1800); }
+}
+function retrySave() { setSaveState("saving"); saveInterest(); }
 
 function cloudPush(name, payload) {
   if (!CLOUD || !CLOUD.user || !TEAM_ID) return;
@@ -388,8 +712,14 @@ function cloudPush(name, payload) {
     const table = m.scope === "team" ? "team_state" : "user_state";
     const onConflict = m.scope === "team" ? "team_id,key" : "user_id,key";
     const { error } = await CLOUD.sb.from(table).upsert(row, { onConflict });
-    if (error) { console.warn("sync push failed:", error.message); if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); } }
-    else if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+    if (error) {
+      console.warn("sync push failed:", error.message);
+      if (name === "interest") setSaveState("error");
+      if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); }
+    } else {
+      if (name === "interest") setSaveState("saved");   // the whole interest row (this field's value + _ts) is acknowledged
+      if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+    }
   }, 800);
 }
 
@@ -424,7 +754,13 @@ async function cloudSignIn(email, pass) {
 
 // A realtime row -> update the matching global + rerender.
 function applyUserRow(key, data) {
-  if (key === "interest") { const n = applySnap(interest, data || {}); if (n) { interest = n; store.set("tdd_interest", interest); rerender(); } }
+  if (key === "interest") {
+    // Field-level merge (not whole-row replace) so an incoming row can't drop a
+    // field this device just edited; only rerender on a real change, which keeps
+    // the echo of our own write from disturbing the notes caret.
+    const merged = mergeInterest(interest, remapIdKeys(data || {}).out);
+    if (JSON.stringify(merged) !== JSON.stringify(interest)) { interest = merged; store.set("tdd_interest", interest); rerender(); }
+  }
   else if (key === "prefs") { const n = applySnap(prefs, { ...DEFAULT_PREFS, ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
   else if (key === "lists") { const n = applySnap(lists, data || []); if (n) { lists = n; store.set("tdd_lists", lists); rerender(); } }
 }
@@ -446,7 +782,7 @@ async function onSignedIn(user) {
     WORKSPACE_ERROR = false;
     TEAM_ID = profile.team_id;
     IS_ADMIN = !!profile.is_admin;
-    $("btn-refresh-admin").hidden = !IS_ADMIN;
+    renderAccount();   // reflect admin (Refresh appears in the account menu)
     // Access tier — fetched separately and defensively so a not-yet-migrated
     // `plan` column can't break sign-in: any error just leaves the user on free.
     try {
@@ -463,12 +799,15 @@ async function onSignedIn(user) {
     ]);
     const U = Object.fromEntries((us.data || []).map((r) => [r.key, r.data]));
     const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
-    interest = { ...interest, ...(U.interest || {}) };
+    // Field-level merge with the cloud (ids canonicalised first), so nothing this
+    // device changed offline is lost and no stale cloud field overwrites it.
+    interest = mergeInterest(interest, remapIdKeys(U.interest || {}).out);
     prefs = { ...prefs, ...(U.prefs || {}) };
     // Union cloud + local by name, but let deletions (tombstones) win so a
     // list deleted on another device stays deleted instead of being resurrected.
     lists = mergeLists(U.lists || [], lists);
     team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
+    team.membership = remapIdKeys(team.membership).out;   // canonicalise shared list membership ids
     // The team shares one buy box — a personal edit made before signing in is a
     // starting point, not something that overrides what the team already set.
     const cloudBuybox = T.buybox;
@@ -510,7 +849,6 @@ function onSignedOut() {
   PLAN_TIER = "free";
   WORKSPACE_ERROR = false;
   SYNC_ERROR = false;
-  $("btn-refresh-admin").hidden = true;
   team = { lists: [], membership: {} };
   interest = store.get("tdd_interest", {});
   lists = store.get("tdd_lists", DEFAULT_LISTS);
@@ -541,25 +879,43 @@ async function initCloud() {
   renderAccount();
 }
 
+// Top-bar account chip: avatar initial + email + sign out (signed in), or a
+// Account control: signed in → an avatar that opens ONE dropdown holding the
+// email, the admin Refresh action and Sign out; signed out → a Sign-in button.
+// A small warning glyph flags a workspace/sync problem.
+let _acctMenuOpen = false;
 function renderAccount() {
-  const box = $("account-box");
-  if (!SYNC_ON) { box.hidden = true; return; }
-  box.hidden = false;
+  const box = $("account-box"); if (!box) return;
+  if (!SYNC_ON) { box.innerHTML = ""; return; }
   if (CLOUD && CLOUD.user) {
-    const status = WORKSPACE_ERROR
-      ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Your workspace isn&rsquo;t set up yet &mdash; changes won&rsquo;t sync. Contact your workspace admin.</div>'
-      : SYNC_ERROR
-        ? '<div style="font-size:12px;color:var(--color-accent-800);background:var(--color-accent-100);padding:6px 8px;margin-bottom:6px">Sync issue &mdash; recent changes are saved on this device and will retry.</div>'
-        : "";
-    box.innerHTML = `${status}
-      <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px">Signed in${WORKSPACE_ERROR ? "" : " &middot; syncing"}</div>
-      <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div>
-      <button class="btn btn-ghost" id="btn-signout" style="font-size:12px;padding:2px 4px;margin-top:4px">Sign out</button>`;
-    $("btn-signout").onclick = () => CLOUD.sb.auth.signOut();
+    const email = CLOUD.user.email || "";
+    const initial = (email[0] || "?").toUpperCase();
+    const warn = WORKSPACE_ERROR
+      ? '<span title="Workspace not set up — changes won’t sync" style="color:var(--danger);font-size:14px">&#9888;</span>'
+      : SYNC_ERROR ? '<span title="Sync issue — retrying" style="color:var(--icon-warn);font-size:14px">&#8635;</span>' : "";
+    box.innerHTML = `<div style="position:relative">
+      <button id="acct-btn" aria-haspopup="menu" aria-expanded="${_acctMenuOpen ? "true" : "false"}" title="Account"
+        style="display:flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0">
+        <span style="width:38px;height:38px;border-radius:50%;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center;font-weight:600;color:var(--ink)">${esc(initial)}</span>
+        ${warn}<span style="color:var(--ink3);font-size:12px">&#9662;</span>
+      </button>
+      <div id="acct-menu" ${_acctMenuOpen ? "" : "hidden"} role="menu"
+        style="position:absolute;top:46px;right:0;z-index:50;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden">
+        <div style="padding:12px 16px;border-bottom:1px solid var(--line)">
+          <div style="font-size:11px;letter-spacing:.13em;color:var(--ink3);font-weight:500">SIGNED IN</div>
+          <div style="font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(email)}</div>
+        </div>
+        ${IS_ADMIN ? `<button class="acct-item" id="acct-refresh" role="menuitem">Refresh data</button>` : ""}
+        <button class="acct-item" id="acct-signout" role="menuitem">Sign out</button>
+      </div>
+    </div>`;
+    const btn = $("acct-btn"), menu = $("acct-menu");
+    btn.onclick = (e) => { e.stopPropagation(); _acctMenuOpen = !_acctMenuOpen; menu.hidden = !_acctMenuOpen; btn.setAttribute("aria-expanded", _acctMenuOpen ? "true" : "false"); };
+    const rf = $("acct-refresh"); if (rf) rf.onclick = () => { _acctMenuOpen = false; window.open(ADMIN_ACTIONS_URL, "_blank", "noopener"); renderAccount(); };
+    $("acct-signout").onclick = () => { _acctMenuOpen = false; CLOUD.sb.auth.signOut(); };
   } else {
-    box.innerHTML = `
-      <button class="btn btn-secondary" id="btn-signin" style="width:100%">Sign in</button>
-      <div class="text-muted" style="margin-top:6px">Sync your lists &amp; notes across devices.</div>`;
+    _acctMenuOpen = false;
+    box.innerHTML = `<button class="btn btn-primary" id="btn-signin" style="font-size:13px;height:38px">Sign in</button>`;
     $("btn-signin").onclick = () => {
       $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
       $("login-overlay").hidden = false;
@@ -669,8 +1025,21 @@ let S = {
   screen: "dashboard", selId: null, q: "",
   county: "All", type: "All", status: "Scheduled", buybox: "All", deposit: "All",
   when: "all", sort: normSort(prefs.sort), shown: 150,
+  dayFilter: null,   // exact ET sale-day (set by a Calendar day click); null = off
+  // Explore view: list vs map, the county multi-select (remembered), the map's
+  // own basemap + "Search this area" bounds filter, and the More-filters toggle.
+  view: "list", counties: Array.isArray(prefs.counties) ? prefs.counties.slice() : [],
+  mapView: "map", mapArea: null, moreOpen: false, countyOpen: false, reviewOnly: false,
+  _mapCenter: null, _mapZoom: null, quickId: null,   // map position (preserved) + open quick card
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
+  savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
+  calMonthIdx: 0, calDayKey: null,   // Calendar: which month (index into available months) + selected day
+  calCountyOpen: false,   // Calendar: counties dropdown open/closed
+
+  // Where the open property was reached from, so Back returns exactly there and
+  // Previous/Next walk that origin's ordered results (Explore OR a saved list).
+  origin: null,   // { screen, listName, listShared, ids:[id...], scrollTop }
   ld: { county: "All", status: "All", buybox: "All", sort: "soonest", q: "" },
   // Buy-box screen: the saved-search runner.
   bb: { ran: false, includeReview: false, scheduledOnly: true, sort: "soonest", shown: 100 },
@@ -685,7 +1054,13 @@ function splitAddr(a) {
   // "NO SITUS" = county-speak for "no street address assigned" (common on
   // vacant land) — treat as unpublished rather than showing it as an address.
   const first = parts[0].trim();
-  const addr = /^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first) ? "" : titleCase(first);
+  if (/^(NO\s+SITUS|0*\s*UNASSIGNED\s+LOC)/i.test(first)) return { addr: "", city };
+  // Title-case the street, but PRESERVE unit/apt designators and their codes
+  // (plain title-casing would lower-case "UNIT 4B" to "Unit 4b" and hide the unit).
+  let addr = titleCase(first);
+  addr = addr.replace(/\b(Unit|Apt|Ste|Suite|Lot|Bldg|Rm|Fl)\b\.?\s*([a-z0-9-]+)/gi,
+    (m, kw, code) => `${kw.charAt(0).toUpperCase()}${kw.slice(1).toLowerCase()} ${code.toUpperCase()}`);
+  addr = addr.replace(/#\s*([a-z0-9-]+)/gi, (m, code) => `#${code.toUpperCase()}`);
   return { addr, city };
 }
 function parseDate(mdy) {
@@ -694,6 +1069,23 @@ function parseDate(mdy) {
 }
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function fmtDate(d) { return d ? `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}` : "—"; }
+// A day number (dayNum) back to a readable date, for the active sale-day chip.
+const dayNumLabel = (dn) => { const d = new Date(dn * 864e5); return `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`; };
+// The feed's per-county run stamps are compact ISO ("2026-09-07T135317Z"); parse
+// one to a Date. NOTE: county_runs records the last run's time only — it does NOT
+// flag whether that run succeeded, so this is honestly "last checked", not "last
+// verified". Distinguishing success is a scraper/feed dependency (flagged).
+function parseRunStamp(s) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})(\d{2})Z$/.exec(s || "");
+  return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6])) : (s ? new Date(s) : null);
+}
+// A parcel's county "last checked" stamp from the feed, or null.
+function countyChecked(p) {
+  const slug = p && p.raw && p.raw.county;
+  const runs = (META && META.county_runs) || {};
+  const d = slug && runs[slug] ? parseRunStamp(runs[slug]) : null;
+  return d && !isNaN(d.getTime()) ? d : null;
+}
 
 // Bucket the appraiser's land-use text into the dashboard's type filter.
 // The "Vacant land" bucket uses the ACTIVE buy-box's land keywords, so a team
@@ -730,7 +1122,7 @@ function mapRecord(r, i) {
   const { addr, city } = splitAddr(r.property_address);
   const d = parseDate(r.sale_date);
   return {
-    id: `${r.county}|${r.parcel_id}|${r.case_number}`,
+    id: normId(`${r.county}|${r.parcel_id}|${r.case_number}`),
     idx: i, county: countyDisplayName(r.county),
     parcel: r.parcel_id, case_number: r.case_number, cert: r.certificate_number,
     rawAddr: r.property_address || "", addr: addr || "(no street address published)", city, hasAddr: !!addr,
@@ -875,15 +1267,31 @@ async function loadFeed() {
 }
 
 // ---------- shared header/sidebar ----------
-const NAV = [["dashboard","Dashboard"],["lists","My lists"],["calendar","Calendar"],["settings","Settings"]];
+const NAV = [["home","Home"],["dashboard","Explore"],["lists","Saved"],["calendar","Calendar"]];
+const NAV_ICONS = {
+  home: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h14V10"></path></svg>',
+  dashboard: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>',
+  lists: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>',
+  calendar: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>',
+};
+// Bookmark glyph — filled when saved (the `.on` class swaps fill/stroke in CSS).
+const BOOKMARK_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>';
+// Small calendar glyph for the auction column.
+const CAL_GLYPH = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="1.8" style="flex:none"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>';
+// The List/Map segmented control — one definition, used in every Explore branch.
+const viewSeg = () => `<div style="display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden">
+  <button class="seg3 ${S.view === "list" ? "on" : ""}" data-view="list" style="padding:8px 18px">List</button>
+  <button class="seg3 ${S.view === "map" ? "on" : ""}" data-view="map" style="padding:8px 18px">Map</button>
+</div>`;
 function renderNav() {
-  $("nav").innerHTML = NAV.map(([k, label]) => {
+  const rail = $("rail"); if (!rail) return;
+  rail.innerHTML = NAV.map(([k, label]) => {
     const active = S.screen === k
       || (k === "dashboard" && S.screen === "detail")
       || (k === "lists" && S.screen === "listdetail");
-    return `<button class="nav-btn ${active ? "active" : ""}" data-go="${k}"><span class="dot"></span>${label}</button>`;
+    return `<button class="rail-btn ${active ? "active" : ""}" data-go="${k}" title="${label}" aria-label="${label}"><span class="rail-ico">${NAV_ICONS[k] || ""}</span><span class="rail-lbl">${label}</span></button>`;
   }).join("");
-  $("nav").querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
+  rail.querySelectorAll("[data-go]").forEach((b) => b.onclick = () => go(b.dataset.go));
 }
 function nextRefreshText() {
   // Derived from SCHEDULE_UTC — the single source of truth for the cadence.
@@ -898,26 +1306,73 @@ function go(screen, selId) {
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
-  for (const k of ["dashboard","detail","lists","listdetail","calendar","settings"]) $("scr-" + k).hidden = k !== screen;
-  ({ dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
+  for (const k of ["home","dashboard","detail","lists","listdetail","calendar","settings"]) $("scr-" + k).hidden = k !== screen;
+  ({ home: renderHome, dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
      listdetail: renderListDetail, calendar: renderCalendar, settings: renderSettings })[screen]();
-  $("scroller").scrollTop = 0;
+  window.scrollTo(0, 0);
 }
 
+// Open a property, remembering where we came from and the ordered result set it
+// belongs to, so Back returns there (filters, sort, scroll intact) and Prev/Next
+// step through that same set — whether the origin is Explore or a saved list.
+function pushRecent(id) {
+  if (!id) return;
+  recent = [id, ...recent.filter((x) => x !== id)].slice(0, 7);
+  store.set("tdd_recent", recent);
+}
+function openParcel(id, orderedIds, originScreen) {
+  pushRecent(id);
+  S.origin = {
+    screen: originScreen || S.screen,
+    listName: S.listName, listShared: S.listShared,
+    ids: Array.isArray(orderedIds) ? orderedIds : [],
+    scrollTop: window.scrollY || 0,
+  };
+  go("detail", id);
+}
+function goBack() {
+  const o = S.origin || { screen: "dashboard" };
+  if (o.screen === "listdetail" && o.listName) { S.listName = o.listName; S.listShared = o.listShared; go("listdetail"); }
+  else go(["home", "lists", "settings", "calendar"].includes(o.screen) ? o.screen : "dashboard");
+  if (o.scrollTop) window.scrollTo(0, o.scrollTop);   // restore where they were
+}
+// Walk Previous/Next through the origin's ordered ids (fallback: current filtered
+// dashboard order). Keeps the same origin so scroll/return stays anchored.
+function stepParcel(delta) {
+  const ids = (S.origin && S.origin.ids && S.origin.ids.length) ? S.origin.ids : filteredRows().map((p) => p.id);
+  const i = ids.indexOf(S.selId), j = i + delta;
+  if (i < 0 || j < 0 || j >= ids.length) return;
+  S.selId = ids[j];
+  renderDetail();
+}
+const stepInfo = () => {
+  const ids = (S.origin && S.origin.ids) || [];
+  const i = ids.indexOf(S.selId);
+  return { i, n: ids.length, hasPrev: i > 0, hasNext: i >= 0 && i < ids.length - 1 };
+};
+
 // ---------- filtering ----------
-function filteredRows() {
+function filteredRows(ignoreFree) {
   const q = S.q.trim().toLowerCase();
   let range = whenRange(S.when);
   // Free tier only sees auctions within the next FREE_DAYS days — clamp whatever
   // window is selected down to [today, today+FREE_DAYS]. Paid sees everything.
-  if (!isPaid()) {
+  // ignoreFree lets the caller measure how many rows the clamp is hiding.
+  if (!isPaid() && !ignoreFree) {
     const t = etToday(), cap = [t, t + FREE_DAYS];
     range = range ? [Math.max(range[0], cap[0]), Math.min(range[1], cap[1])] : cap;
   }
   let rows = DATA.filter((p) => {
     if (!inWhen(p, range)) return false;
+    // Exact sale-day filter (from a Calendar day click) — one specific day, so the
+    // Explore count matches the calendar cell's badge.
+    if (S.dayFilter != null && saleDay(p) !== S.dayFilter) return false;
     const it = getInt(p.id);
-    if (S.county !== "All" && p.county !== S.county) return false;
+    if (S.counties.length && !S.counties.includes(p.county)) return false;
+    // "Search this area" — a geographic filter set by clicking the map button;
+    // parcels without a usable location can't be matched to an area and drop out.
+    if (S.mapArea) { const c = parcelLatLng(p); if (!c || !inBounds(c, S.mapArea)) return false; }
+    if (S.reviewOnly && !needsReview(p.id)) return false;   // "need review" chip
     if (S.status !== "All" && p.status !== S.status) return false;
     if (S.type !== "All") {
       const t = effType(p);
@@ -929,7 +1384,13 @@ function filteredRows() {
       const dep = countyCaps(p).deposit;
       if (dep && p.bid != null && p.bid * 0.05 > dep) return false;
     }
-    if (q && !(p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (it.notes || "")).toLowerCase().includes(q)) return false;
+    if (q) {
+      const hay = (p.parcel + " " + p.rawAddr + " " + p.case_number + " " + p.county + " " + (p.city || "") + " " + (it.notes || "")).toLowerCase();
+      const nz = (s) => s.replace(/[^a-z0-9]/g, "");
+      // Match address/city/county/notes literally, and parcel/case numbers with or
+      // without dashes/punctuation (so "1234567" finds "12-345-67").
+      if (!hay.includes(q) && !(nz(q) && nz(hay).includes(nz(q)))) return false;
+    }
     return true;
   });
   // A single ordering key (the Sort dropdown) — "My preferred types first" is
@@ -978,116 +1439,503 @@ function countyInfoCard(c) {
     </div>`;
 }
 
+// A parcel's usable map location: its published centroid, else the centroid of its
+// parcel geometry. null when neither exists — the parcel stays list-only. (Map
+// eligibility is about a usable LOCATION, not whether an address was published.)
+function parcelLatLng(p) {
+  if (p.lat != null && p.lng != null) return [Number(p.lat), Number(p.lng)];
+  const rings = wktToLatLngs(p.geometry);
+  if (rings.length && rings[0].length) {
+    const r = rings[0]; let la = 0, lo = 0;
+    for (const pt of r) { la += pt[0]; lo += pt[1]; }
+    return [la / r.length, lo / r.length];
+  }
+  return null;
+}
+const inBounds = (c, b) => c[0] <= b.n && c[0] >= b.s && c[1] <= b.e && c[1] >= b.w;
+// Saved = unique properties the user bookmarked OR put in any list (personal or
+// team), de-duplicated so one property in two lists counts once.
+function savedIds() {
+  const s = new Set();
+  for (const [id, it] of Object.entries(interest)) if (it && (it.bookmark || it.list)) s.add(id);
+  for (const id of Object.keys(team.membership || {})) s.add(id);
+  return s;
+}
+const needsReviewCount = () => Object.keys(interest).filter(needsReview).length;
+// Compact research-progress label for the Explore "Research" column (full workflow
+// in Phase 3). Distinguishes the three real states with a text label + color.
+function researchCell(p) {
+  const r = getResearch(p.id);
+  const warn = RESEARCH_KEYS.some((k) => (r[k].state === "reviewed" && r[k].warning && !r[k].resolved) || r[k].state === "couldntCheck");
+  if (warn) return '<span class="tag tag-warn" title="A research check needs attention">Needs review</span>';
+  if (RESEARCH_KEYS.some((k) => r[k].state === "reviewed")) return '<span class="tag tag-ok">Reviewed</span>';
+  return '<span class="tag tag-neutral">Not checked</span>';
+}
+
+// ---------- home screen ----------
+// A short first name for the greeting: from the signed-in email's local part,
+// else nothing (the greeting still reads naturally without a name).
+function greetName() {
+  const email = (CLOUD && CLOUD.user && CLOUD.user.email) || "";
+  const local = email.split("@")[0] || "";
+  const first = local.split(/[._-]+/)[0] || "";
+  return first ? first.charAt(0).toUpperCase() + first.slice(1).toLowerCase() : "";
+}
+// The counties this account actually follows, for the greeting subline. Falls
+// back to every county present in the feed when no explicit selection is set.
+function homeCounties() {
+  const sel = S.counties.length ? S.counties.slice()
+    : [...new Set(DATA.map((p) => p.county))];
+  return sel.sort();
+}
+function countyPhrase(list) {
+  if (!list.length) return "your counties";
+  if (list.length === 1) return list[0];
+  if (list.length === 2) return `${list[0]} + ${list[1]}`;
+  return `${list[0]}, ${list[1]} + ${list.length - 2} more`;
+}
+// A compact acres label ("2.5 ac" / "—") for the Home tables.
+function acresLabel(p) { return p.acreage ? `${esc(p.acreage)} ac` : "&mdash;"; }
+// One Home table row for a parcel; opens detail walking the given ordered set.
+function homeRow(p, orderedIds, extraCols) {
+  const title = p.hasAddr ? p.addr : p.parcel;
+  const sub = [p.city, p.county + " County"].filter(Boolean).join(" · ");
+  return `<tr class="home-row" data-open="${esc(p.id)}" style="cursor:pointer">
+    <td style="padding:13px 14px">
+      <div style="font-size:15px;font-weight:500">${esc(title)}</div>
+      <div style="font-size:13px;color:var(--ink2)">${esc(sub)}</div>
+    </td>${extraCols(p)}</tr>`;
+}
+function renderHome() {
+  const hour = new Date().getHours();
+  const greet = hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+  const name = greetName();
+  const counties = homeCounties();
+
+  // Time buckets — all off the same ET day arithmetic the rest of the app uses.
+  const today = etToday(), weekEnd = today + etDaysLeftInWeek();
+  const live = DATA.filter((p) => !p.redeemed);
+  const upcoming = live.filter((p) => !isPastDue(p)).sort((a, b) => (saleDay(a) || 1e9) - (saleDay(b) || 1e9));
+  const todays = live.filter((p) => saleDay(p) === today)
+    .sort((a, b) => (a.saleTime || "").localeCompare(b.saleTime || ""));
+  const thisWeek = upcoming.filter((p) => { const d = saleDay(p); return d != null && d >= today && d <= weekEnd; });
+  const savedSet = savedIds();
+
+  // The next sale day, spelled out, for the empty "Today's auctions" state.
+  const nextP = upcoming.find((p) => { const d = saleDay(p); return d != null && d > today; }) || upcoming[0];
+  const nextLabel = nextP && nextP.saleDate ? `${CAL_MONTHS[nextP.saleDate.getMonth()]} ${nextP.saleDate.getDate()}` : null;
+
+  const todayIds = todays.map((p) => p.id);
+  const upIds = upcoming.map((p) => p.id);
+  const byId = {}; for (const p of DATA) byId[p.id] = p;
+  const recentP = recent.map((id) => byId[id]).filter(Boolean).slice(0, 6);
+  const recentIds = recentP.map((p) => p.id);
+  const allLists = [
+    ...lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: true })),
+  ].map((l) => ({ ...l, n: listItems(l.name, l.shared).length }));
+
+  const arrow = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>';
+  const LINK = "#1f6fa8";
+
+  // A "Today's auctions" row (parcel / city·county / acres / time / status badge).
+  const trow = (p) => `<div class="h2-trow" data-open="${esc(p.id)}" style="display:grid;grid-template-columns:1.6fr .8fr 1fr 1fr;align-items:center;padding:14px 12px;border-top:1px solid var(--line);border-radius:12px;cursor:pointer">
+    <div><div style="font-size:18px;font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div>
+      <div style="font-size:15px;color:var(--ink2)">${esc(p.city || "—")} <span style="color:var(--ink3)">·</span> ${esc(p.county)}</div></div>
+    <div style="font-size:17px">${p.acreage ? esc(p.acreage) + " ac" : "—"}</div>
+    <div style="font-size:17px">${esc(saleTimeText(p))}</div>
+    <div>${researchCell(p)}</div></div>`;
+
+  $("scr-home").innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:20px;padding-top:22px">
+      <div>
+        <h1 style="margin:0;font-size:52px;font-weight:500;letter-spacing:-.03em;line-height:1.05">${greet}${name ? ", " + esc(name) : ""}.</h1>
+        <p style="margin:4px 0 0;font-size:19px;color:var(--ink2)">${esc(ET_FULL.format(new Date()))}</p>
+      </div>
+
+      <div class="h2-hero-grid">
+        <div style="position:relative;overflow:hidden;border-radius:22px;background:#2f7b96 url('./assets/hero-beach.png') right 65% / cover no-repeat;color:#fff;padding:34px 44px 28px;min-height:296px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(38,104,128,.86) 0%,rgba(38,104,128,.62) 35%,rgba(38,104,128,.15) 60%,rgba(38,104,128,0) 100%)"></div>
+          <div style="position:relative">
+            <div style="font-size:21px;font-weight:500">Upcoming auctions</div>
+            <div style="font-size:104px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${upcoming.length.toLocaleString()}</div>
+            <div style="font-size:23px;margin-top:6px">Not redeemed</div>
+          </div>
+          <div style="position:relative;display:flex;align-items:center;gap:22px;margin-top:22px;flex-wrap:wrap">
+            <div class="h2-stat-link" data-stat="calendar" style="display:flex;align-items:center;gap:14px;cursor:pointer">
+              <span style="width:52px;height:52px;border-radius:12px;background:rgba(255,255,255,.22);display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+              <div style="white-space:nowrap"><div style="font-size:15px;opacity:.9">Today</div><div style="font-size:26px;font-weight:600;line-height:1">${todays.length}</div></div>
+            </div>
+            <div style="width:1px;height:48px;background:rgba(255,255,255,.35)"></div>
+            <div class="h2-stat-link" data-stat="calendar" style="display:flex;align-items:center;gap:14px;cursor:pointer">
+              <span style="width:52px;height:52px;border-radius:12px;background:rgba(255,255,255,.22);display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20v-7M12 20V6M18 20v-11"></path></svg></span>
+              <div style="white-space:nowrap"><div style="font-size:15px;opacity:.9">This week</div><div style="font-size:26px;font-weight:600;line-height:1">${thisWeek.length}</div></div>
+            </div>
+            <button class="h2-stat-link" data-stat="upcoming" style="margin-left:14px;display:flex;align-items:center;gap:12px;background:#1f5f74;color:#fff;font-size:19px;font-weight:500;padding:15px 24px;border-radius:12px;border:none;cursor:pointer;white-space:nowrap">View all auctions ${arrow}</button>
+          </div>
+        </div>
+
+        <div style="position:relative;overflow:hidden;border-radius:22px;background:#fdcdbc;color:#111;padding:34px 30px 28px;display:flex;flex-direction:column;justify-content:space-between;min-height:296px">
+          <img src="./assets/saved-folder.png" alt="" style="position:absolute;right:-6px;top:40px;width:230px;height:230px;object-fit:cover;pointer-events:none">
+          <div style="position:relative">
+            <div style="font-size:21px;font-weight:500">Saved properties</div>
+            <div style="font-size:104px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:6px">${savedSet.size.toLocaleString()}</div>
+            <div style="font-size:21px;margin-top:6px;color:#333">Parcels you&rsquo;re tracking</div>
+          </div>
+          <button class="h2-stat-link" data-stat="saved" style="position:relative;margin-top:22px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#111;font-size:19px;font-weight:500;padding:15px 24px;border-radius:12px;border:none;cursor:pointer">View saved properties ${arrow}</button>
+        </div>
+      </div>
+
+      <div class="h2-row2">
+        <div style="background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 26px 12px;box-shadow:var(--shadow);display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+            <h2 style="margin:0;font-size:22px;font-weight:500">Today&rsquo;s auctions</h2>
+            <button class="h2-stat-link" data-stat="calendar" style="display:flex;align-items:center;gap:8px;font-size:16px;color:${LINK};background:none;border:none;cursor:pointer;padding:0">View calendar ${arrow}</button>
+          </div>
+          ${todays.length ? `${todays.slice(0, 6).map(trow).join("")}
+            ${todays.length > 6 ? `<button class="h2-stat-link" data-stat="upcoming" style="align-self:flex-start;margin:12px 0 4px;display:flex;align-items:center;gap:8px;font-size:16px;color:${LINK};background:none;border:none;cursor:pointer">View all ${todays.length} ${arrow}</button>` : ""}`
+          : `<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 12px 48px;gap:6px">
+              <span style="color:#2a6f86;margin-bottom:10px"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+              <div style="font-size:26px;font-weight:500">No auctions scheduled for today.</div>
+              ${nextLabel ? `<div style="font-size:19px;color:var(--ink2)">Your next auctions are on ${esc(nextLabel)}.</div>` : ""}
+              <button class="h2-stat-link" data-stat="upcoming" style="display:flex;align-items:center;gap:10px;font-size:19px;font-weight:500;color:${LINK};margin-top:22px;background:none;border:none;cursor:pointer">View upcoming auctions ${arrow}</button>
+            </div>`}
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 26px 10px;box-shadow:var(--shadow)">
+          <h2 style="margin:0 0 6px;font-size:22px;font-weight:500">My lists</h2>
+          ${allLists.length ? allLists.map((l) => `<div class="h2-lrow" data-list="${esc(l.name)}" data-shared="${l.shared ? 1 : 0}" style="display:flex;align-items:center;gap:16px;padding:9px 4px;border-bottom:1px solid var(--line);cursor:pointer;font-size:17px">
+            <span style="flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(l.name)}</span>
+            ${l.shared ? '<span style="font-size:12px;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:2px 9px">team</span>' : ""}
+            <span style="min-width:34px;text-align:center;padding:2px 10px;border-radius:999px;background:var(--chip);color:var(--chip-ink);font-size:14px;font-weight:500">${l.n}</span>
+          </div>`).join("")
+          : `<p style="font-size:15px;color:var(--ink2);padding:6px 2px">No lists yet. Save a parcel to start one.</p>`}
+        </div>
+      </div>
+
+      <div class="h2-row3">
+        <div style="background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 26px;box-shadow:var(--shadow);display:flex;align-items:center;gap:22px">
+          <span style="width:56px;height:56px;border-radius:14px;background:var(--chip);display:grid;place-items:center;color:var(--ink);flex:none"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:20px;font-weight:500">Recently viewed</div>
+            ${recentP.length ? `<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+              ${recentP.map((p) => `<span class="h2-recent" data-open="${esc(p.id)}" title="${esc(p.hasAddr ? p.addr : p.parcel)}" style="padding:5px 12px;border-radius:999px;background:var(--chip);color:var(--chip-ink);font-size:14px;font-weight:500;cursor:pointer">${esc(p.parcel)}</span>`).join("")}
+            </div>`
+            : `<div style="font-size:16px;color:var(--ink2)">Parcels you open will show up here.</div>`}
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 26px;box-shadow:var(--shadow);display:flex;align-items:center;gap:22px">
+          <span style="width:56px;height:56px;border-radius:14px;background:var(--chip);display:grid;place-items:center;color:var(--ink);flex:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+          <div>
+            <div style="font-size:20px;font-weight:500">Upcoming auctions</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:16px;color:var(--ink2)">${upcoming.length.toLocaleString()} properties <span style="color:var(--ink3)">·</span> <button class="h2-stat-link" data-stat="upcoming" style="display:flex;align-items:center;gap:8px;color:${LINK};font-weight:500;background:none;border:none;cursor:pointer;padding:0;font-size:16px">View all ${arrow}</button></div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+
+  // Wiring.
+  $("scr-home").querySelectorAll("[data-open]").forEach((el) => {
+    const id = el.dataset.open;
+    const set = el.classList.contains("h2-recent") ? recentIds : (todayIds.includes(id) ? todayIds : upIds);
+    el.onclick = (e) => { e.stopPropagation(); openParcel(id, set, "home"); };
+  });
+  $("scr-home").querySelectorAll("[data-stat]").forEach((el) => el.onclick = (e) => {
+    e.stopPropagation();
+    const k = el.dataset.stat;
+    if (k === "calendar") { go("calendar"); return; }
+    if (k === "saved") { go("lists"); return; }
+    S.counties = []; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false;
+    S.status = "Scheduled"; S.when = "all"; S.q = ""; S.view = "list"; S.shown = 150;
+    go("dashboard");
+  });
+  $("scr-home").querySelectorAll("[data-list]").forEach((el) => el.onclick = () => {
+    S.listName = el.dataset.list; S.listShared = el.dataset.shared === "1"; go("listdetail");
+  });
+}
+
 function renderDashboard() {
   const rows = filteredRows();
-  // "Upcoming" excludes past-due rows too — an auction whose date already
-  // passed with no result posted yet isn't upcoming, even though the site
-  // hadn't marked it Redeemed as of the last refresh.
+  // filters (so a short list can say so instead of looking empty), and whether any
+  // filter is narrowing the view (drives the right empty-state message + action).
+  const freeHidden = isPaid() ? 0 : Math.max(0, filteredRows(true).length - rows.length);
+  const filtersActive = S.counties.length || S.type !== "All" || S.status !== "Scheduled"
+    || S.deposit !== "All" || S.when !== "all" || S.dayFilter != null || S.mapArea || S.reviewOnly || S.q.trim() !== "";
+  // "Upcoming" excludes past-due rows too — an auction whose date already passed
+  // with no result posted isn't upcoming, even if not yet marked Redeemed.
   const upcoming = DATA.filter((p) => !p.redeemed && !isPastDue(p));
-  // Sale-day windows are measured in Florida time, so "today" is today in
-  // Florida no matter where the person's device thinks it is.
-  const todayRange = whenRange("today"), weekRange = whenRange("week");
-  const todayRows = upcoming.filter((p) => inWhen(p, todayRange));
-  const weekRows = upcoming.filter((p) => inWhen(p, weekRange));
-  const nextUp = upcoming.filter((p) => saleDay(p) != null && saleDay(p) >= etToday())
-    .reduce((a, p) => (!a || saleDay(p) < saleDay(a) ? p : a), null);
-  const marked = DATA.filter((p) => getInt(p.id).status === "Interested");
-  const committed = marked.reduce((s, p) => s + (parseInt(String(getInt(p.id).bid).replace(/[^0-9]/g, ""), 10) || 0), 0);
   const counties = [...new Set(DATA.map((p) => p.county))].sort();
-  // Every Florida county belongs in the filter — the ones without records in
-  // the feed (in-person sales, other platforms, or awaiting a first refresh)
-  // are grouped below the live ones. Registry ships inside the feed itself.
+  // Every Florida county belongs in the filter — the ones without records in the
+  // feed (in-person sales, other platforms, or awaiting a first refresh) are
+  // grouped below the live ones. Registry ships inside the feed itself.
   const extras = REG().filter((c) => !counties.includes(c.name));
   const extraOnline = extras.filter((c) => c.coverage === "online").map((c) => c.name).sort();
   const extraOther = extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort();
-  // A county with no rows gets an info card instead of an empty table.
-  const regSel = S.county !== "All" && !counties.includes(S.county) ? regByName()[S.county] : null;
-  const cty = (rs) => new Set(rs.map((p) => p.county)).size;
 
-  const stats = [
-    { label: "Today's auctions", value: todayRows.length.toLocaleString(), when: "today",
-      sub: todayRows.length ? `across ${cty(todayRows)} ${cty(todayRows) === 1 ? "county" : "counties"}`
-                            : nextUp ? `none today — next ${nextUp.auction}` : "none today" },
-    { label: "This week", value: weekRows.length.toLocaleString(), when: "week",
-      sub: weekRows.length ? `through Sunday · ${cty(weekRows)} ${cty(weekRows) === 1 ? "county" : "counties"}`
-                           : "nothing left this week" },
-    { label: "Upcoming auctions", value: upcoming.length.toLocaleString(), when: "all",
-      sub: `across ${cty(upcoming)} counties` },
-    { label: "Marked interested", value: String(marked.length),
-      sub: committed ? money(committed) + " committed max" : "none yet" },
-  ];
+  const savedN = savedIds().size, reviewN = needsReviewCount();
+  const soleCounty = S.counties.length === 1 ? S.counties[0] : null;
+  const regSel = soleCounty && !counties.includes(soleCounty) ? regByName()[soleCounty] : null;
+  const countyLabel = S.counties.length === 0 ? "All counties"
+    : S.counties.length === 1 ? S.counties[0] : `${S.counties[0]} +${S.counties.length - 1}`;
+  const located = rows.map((p) => [p, parcelLatLng(p)]).filter((x) => x[1]);
+  const noLoc = rows.length - located.length;
+  const extraCounties = [...extraOnline, ...extraOther];
 
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const ckRow = (c) => `<label style="display:flex;gap:8px;align-items:center;padding:4px 2px;font-size:13px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
   $("scr-dashboard").innerHTML = `
-    <h2 style="margin-bottom:4px">Dashboard</h2>
-    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">${esc(ET_FULL.format(new Date()))} &middot; all auction times are Florida (ET)</div>
-    <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:30px">
-      ${stats.map((st) => `
-        <div class="blueprint" ${st.when ? `data-when="${st.when}" title="Show these on the board"` : ""} style="padding:16px 18px${st.when ? ";cursor:pointer" : ""}">${CORNERS}
-          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent-700)">${st.label}</div>
-          <div style="font-family:var(--font-heading);font-weight:600;font-size:34px;line-height:1.15;margin-top:4px">${st.value}</div>
-          <div style="font-size:12px" class="text-muted">${esc(st.sub)}</div>
-        </div>`).join("")}
+    <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:4px">
+      <h2 style="margin:0">Find your next parcel.</h2>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="pillbtn" data-chip="upcoming" title="Show all upcoming auctions">${upcoming.length.toLocaleString()} upcoming</button>
+        <button class="pillbtn" data-chip="saved" title="Show your saved properties">${savedN.toLocaleString()} saved</button>
+        <button class="pillbtn" data-chip="review" title="Show properties whose research needs review">${reviewN.toLocaleString()} need review</button>
+      </div>
     </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Upcoming tax-deed auctions in your counties &middot; times in each county&rsquo;s local zone (ET / CT)</div>
 
-    <div class="filters" style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:16px">
-      <div class="field" style="width:160px"><label>County</label>
-        <select class="input" id="f-county">${opt("All", S.county, "All counties")}${counties.map((c) => opt(c, S.county)).join("")}${extraOnline.length ? `<optgroup label="Online — no sales posted right now">${extraOnline.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}${extraOther.length ? `<optgroup label="In-person / other platforms">${extraOther.map((c) => opt(c, S.county)).join("")}</optgroup>` : ""}</select></div>
-      <div class="field" style="width:160px"><label>Property type</label>
+    <div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+      <div class="field" style="width:210px;position:relative"><label>County</label>
+        <button class="input" id="f-county-btn" style="text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(countyLabel)}</span><span style="opacity:.55">&#9662;</span></button>
+        ${S.countyOpen ? `<div id="county-pop" class="blueprint" style="position:absolute;z-index:30;top:100%;left:0;margin-top:5px;width:290px;max-height:340px;overflow:auto;background:var(--color-surface);padding:10px 12px;box-shadow:var(--shadow-md)">${CORNERS}
+          <button class="pillbtn ${S.counties.length ? "" : "on"}" id="cty-all" style="width:100%;text-align:left;margin-bottom:8px">All counties</button>
+          ${counties.map(ckRow).join("")}
+          ${extraCounties.length ? `<div class="text-muted" style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
+        </div>` : ""}
+      </div>
+      <div class="field" style="width:150px"><label>Property type</label>
         <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
       <div class="field" style="width:150px"><label>Auction date</label>
         <select class="input" id="f-when"${isPaid() ? "" : ' disabled title="Free shows the next 5 days — upgrade to see every date"'}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
-      <div class="field" style="width:130px"><label>Status</label>
-        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:150px"><label>Deposit (5% rule)</label>
-        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
-      <div class="field" style="width:230px"><label>Sort by</label>
+      <div class="field" style="width:210px"><label>Sort by</label>
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
-      <span style="font-size:12px;margin-left:auto" class="text-muted">${rows.length.toLocaleString()} properties</span>
+      <button class="btn btn-secondary" id="more-toggle" style="height:36px;font-size:13px">${S.moreOpen ? "Fewer filters" : "More filters"}</button>
     </div>
+    ${S.moreOpen ? `<div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+      <div class="field" style="width:150px"><label>Status</label>
+        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
+      <div class="field" style="width:180px"><label>Deposit (5% rule)</label>
+        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
+    </div>` : ""}
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:12.5px">
+      <span class="text-muted">${rows.length.toLocaleString()} properties</span>
+      ${S.dayFilter != null ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
+        <button id="clear-day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${S.mapArea ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Map area
+        <button id="clear-area" aria-label="Clear map-area filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${S.reviewOnly ? `<span class="tag tag-warn" style="display:inline-flex;gap:8px;align-items:center">Needs review
+        <button id="clear-review" aria-label="Clear needs-review filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
+      ${filtersActive ? `<button class="btn btn-ghost" id="reset-filters" style="font-size:12.5px;padding:2px 8px">Reset filters</button>` : ""}
+    </div>
+
     ${isPaid() ? "" : `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px">${CORNERS}
       <span>You&rsquo;re on the <b>Free</b> view &mdash; showing the next ${FREE_DAYS} days. Unlock every date, downloads, the land check and lists.</span>
       ${upgradeChip("See everything")}</div>`}
 
-    ${regSel ? countyInfoCard(regSel) : `<div class="blueprint" style="padding:0">${CORNERS}
-      <div class="tablewrap"><table class="table">
-        <thead><tr><th>Parcel ID</th><th>Address</th><th>County</th><th>Type</th><th style="text-align:right">Assessed</th><th style="text-align:right">Opening bid</th><th>Auction</th><th>Status</th></tr></thead>
-        <tbody>
-          ${rows.slice(0, S.shown).map((p) => {
-            const t = effType(p);
-            return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
-              <td class="mono" style="font-size:12.5px;color:var(--color-accent-700)">${esc(p.parcel)}</td>
-              <td><div style="font-weight:500">${esc(p.addr)}</div><div style="font-size:12px" class="text-muted">${esc(p.city)}</div></td>
-              <td>${esc(p.county)}</td>
-              <td>${t ? `<span class="tag tag-neutral" title="${esc(p.use)}">${esc(t)}</span>` : '<span class="text-muted">—</span>'}</td>
-              <td style="text-align:right;font-variant-numeric:tabular-nums">${money(p.assessed)}</td>
-              <td style="text-align:right;font-variant-numeric:tabular-nums;font-weight:500">${money(p.bid)}</td>
-              <td style="font-size:13px">${esc(p.auction)}</td>
-              <td>${statusTag(p)}</td>
-            </tr>`;
-          }).join("")}
-        </tbody>
-      </table></div>
-      ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
-        <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
-    </div>`}`;
+    ${regSel ? countyInfoCard(regSel)
+      : S.view === "map" ? `<div class="blueprint" style="padding:0">${CORNERS}
+          <div class="card-head"><h3 class="card-title">Land, in focus</h3>${viewSeg()}</div>
+          <div style="position:relative">
+          <div id="board-map" style="height:min(64vh,600px);width:100%;border-radius:0 0 var(--radius-lg) var(--radius-lg)"></div>
+          <button class="btn btn-primary" id="map-search-area" style="position:absolute;z-index:5;top:12px;left:12px;font-size:12.5px;padding:7px 13px;box-shadow:var(--shadow-md)">Search this area</button>
+          <div style="position:absolute;z-index:5;top:12px;right:12px;display:inline-flex;border:1px solid var(--color-divider);background:var(--color-surface);box-shadow:var(--shadow-md)">
+            <button class="seg3 ${S.mapView === "map" ? "on" : ""}" data-mapview="map" style="padding:6px 13px">Map</button>
+            <button class="seg3 ${S.mapView === "satellite" ? "on" : ""}" data-mapview="satellite" style="padding:6px 13px">Satellite</button>
+          </div>
+          <div id="quick-card" hidden style="position:absolute;z-index:6;top:58px;right:12px;width:min(340px,calc(100% - 24px))"></div>
+          </div>
+        </div>
+        <div class="text-muted" style="font-size:12.5px;margin-top:10px">Showing ${located.length.toLocaleString()} of ${rows.length.toLocaleString()} on the map.${noLoc ? ` ${noLoc.toLocaleString()} ${noLoc === 1 ? "property has" : "properties have"} no map location and ${noLoc === 1 ? "appears" : "appear"} in the list only —` : ""} ${noLoc ? `<button class="btn btn-ghost" id="to-list" style="font-size:12.5px;padding:1px 6px">view the list</button>.` : ""}</div>`
+      : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
+          <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${filtersActive ? "No properties match these filters" : (!isPaid() && freeHidden ? "Nothing in your free 5-day window" : "No upcoming sales posted right now")}</div>
+          <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${filtersActive
+              ? "Try widening your filters, or clear the sale-day / map-area pick."
+              : (!isPaid() && freeHidden
+                  ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"} further out. Upgrade to see every date.`
+                  : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically.")}</p>
+          ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters2">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
+        </div>`
+      : `<div class="blueprint" style="padding:0">${CORNERS}
+          <div class="card-head">
+            <h3 class="card-title">Upcoming parcels</h3>
+            ${viewSeg()}
+          </div>
+          <div class="tablewrap"><table class="table">
+            <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="width:56px"></th></tr></thead>
+            <tbody>
+              ${rows.slice(0, S.shown).map((p) => {
+                const t = effType(p);
+                const title = p.hasAddr ? p.addr : p.parcel;
+                return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
+                  <td><div style="font-size:16px;font-weight:500">${esc(title)}</div>
+                    <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
+                    ${p.hasAddr ? `<div class="mono" style="font-size:12px;color:var(--ink3);margin-top:2px">${esc(p.parcel)}</div>` : ""}</td>
+                  <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
+                  <td style="font-size:14px;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:7px">${CAL_GLYPH}${esc(p.auction)}</span><div style="font-size:12.5px;color:var(--ink3)">${esc(saleTimeText(p))}</div></td>
+                  <td>${researchCell(p)}</td>
+                  <td style="text-align:center"><button class="bm-toggle ${isBookmarked(p.id) ? "on" : ""}" data-bm="${esc(p.id)}" aria-label="${isBookmarked(p.id) ? "Remove bookmark" : "Bookmark"}" title="${isBookmarked(p.id) ? "Saved — click to remove" : "Save parcel"}">${BOOKMARK_ICON}</button></td>
+                </tr>`;
+              }).join("")}
+            </tbody>
+          </table></div>
+          ${rows.length > S.shown ? `<div style="padding:14px;text-align:center;border-top:1px solid var(--line)">
+            <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
+          ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:14px;text-align:center;border-top:1px solid var(--line);font-size:12.5px">
+            ${freeHidden.toLocaleString()} more scheduled ${freeHidden === 1 ? "auction is" : "auctions are"} beyond your free ${FREE_DAYS}-day window. ${upgradeChip("See every date")}</div>` : ""}
+        </div>
+        <div class="plan-banner" style="margin-top:22px">
+          <span class="plan-badge">Planned</span>
+          <span><b style="color:var(--ink)">Price intelligence</b> &mdash; AI-estimated market value, land-use flags and comparable sales, arriving on every parcel. Not yet calculated.</span>
+        </div>`}`;
 
-  // Picking a date window means "what's coming up", so order it soonest-first.
+  // ---- filters + view wiring ----
   const setWhen = (v) => {
-    S.when = v;
+    S.when = v; S.dayFilter = null;
     if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
     if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
     S.shown = 150; renderDashboard();
   };
-  $("f-when").onchange = (e) => setWhen(e.target.value);
-  $("scr-dashboard").querySelectorAll("[data-when]").forEach((c) => c.onclick = () => setWhen(c.dataset.when));
-  $("f-county").onchange = (e) => { S.county = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-type").onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-status").onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-deposit").onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
-  $("f-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
+  const wf = $("f-when"); if (wf) wf.onchange = (e) => setWhen(e.target.value);
+  const tf = $("f-type"); if (tf) tf.onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
+  const sf = $("f-status"); if (sf) sf.onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
+  const df = $("f-deposit"); if (df) df.onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
+  const sortf = $("f-sort"); if (sortf) sortf.onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
+  $("more-toggle").onclick = () => { S.moreOpen = !S.moreOpen; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => {
+    if (S.view !== b.dataset.view) { S.view = b.dataset.view; S.quickId = null; renderDashboard(); }
+  });
+  $("scr-dashboard").querySelectorAll("[data-chip]").forEach((b) => b.onclick = () => {
+    const k = b.dataset.chip;
+    if (k === "saved") { go("lists"); return; }                 // the Saved screen
+    S.dayFilter = null; S.mapArea = null; S.reviewOnly = (k === "review");
+    if (k === "upcoming") { S.status = "Scheduled"; S.when = "all"; }
+    S.view = "list"; S.shown = 150; renderDashboard();
+  });
+  // County multi-select popover
+  const cbtn = $("f-county-btn"); if (cbtn) cbtn.onclick = (e) => { e.stopPropagation(); S.countyOpen = !S.countyOpen; renderDashboard(); };
+  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  const allBtn = $("cty-all"); if (allBtn) allBtn.onclick = () => { S.counties = []; S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard(); };
+  $("scr-dashboard").querySelectorAll("#county-pop [data-cty]").forEach((cbx) => cbx.onchange = () => {
+    const c = cbx.dataset.cty;
+    if (cbx.checked) { if (!S.counties.includes(c)) S.counties.push(c); }
+    else S.counties = S.counties.filter((x) => x !== c);
+    S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard();
+  });
+  const clearDay = $("clear-day"); if (clearDay) clearDay.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
+  const clearArea = $("clear-area"); if (clearArea) clearArea.onclick = () => { S.mapArea = null; S.shown = 150; renderDashboard(); };
+  const clearReview = $("clear-review"); if (clearReview) clearReview.onclick = () => { S.reviewOnly = false; S.shown = 150; renderDashboard(); };
+  const resetAll = () => {
+    S.counties = []; S.type = "All"; S.status = "Scheduled"; S.deposit = "All";
+    S.when = "all"; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false; S.q = ""; if ($("q")) $("q").value = "";
+    persistCounties(); S.shown = 150; renderDashboard();
+  };
+  const rf = $("reset-filters"); if (rf) rf.onclick = resetAll;
+  const rf2 = $("reset-filters2"); if (rf2) rf2.onclick = resetAll;
   const more = $("show-more"); if (more) more.onclick = () => { S.shown += 300; renderDashboard(); };
-  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => go("detail", tr.dataset.open));
+  const toList = $("to-list"); if (toList) toList.onclick = () => { S.view = "list"; renderDashboard(); };
+  const orderedIds = rows.map((p) => p.id);
+  $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
+  // Bookmark toggle in the parcel table — save without opening the row.
+  $("scr-dashboard").querySelectorAll("[data-bm]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.bm, rec = DATA.find((x) => x.id === id);
+    setInt(id, { bookmark: !isBookmarked(id) }, rec);
+    renderDashboard();
+  });
+
+  // ---- map view ----
+  if (S.view === "map" && !regSel) {
+    $("scr-dashboard").querySelectorAll("[data-mapview]").forEach((b) => b.onclick = () => {
+      if (S.mapView !== b.dataset.mapview) { S.mapView = b.dataset.mapview; renderDashboard(); }
+    });
+    const sa = $("map-search-area"); if (sa) sa.onclick = () => {
+      if (!_boardMap) return;
+      const b = _boardMap.getBounds();
+      S.mapArea = { n: b.getNorth(), s: b.getSouth(), e: b.getEast(), w: b.getWest() };
+      S.shown = 150; renderDashboard();
+    };
+    initBoardMap(located, orderedIds);
+    if (S.quickId) { const qp = DATA.find((x) => x.id === S.quickId); if (qp) showQuickCard(qp, orderedIds); }
+  }
+}
+
+// ---------- board map (Leaflet + clustering) ----------
+// The Explore map: one pin per located parcel (clustered), a theme-aware street
+// basemap or Esri satellite, and a "Search this area" bounds filter. Map eligibility
+// is a usable LOCATION (published centroid or parcel-geometry centroid), never an
+// address. Vector circle markers avoid Leaflet's default-icon image path issues.
+let _boardMap = null, _boardCluster = null, _boardBase = null;
+function boardTiles() {
+  if (S.mapView === "satellite")
+    return L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 19, attribution: "Imagery &copy; Esri" });
+  const url = effectiveDark()
+    ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+  return L.tileLayer(url, { maxZoom: 20, subdomains: "abcd", attribution: "&copy; OpenStreetMap &copy; CARTO" });
+}
+function initBoardMap(located, orderedIds) {
+  const el = $("board-map");
+  if (!el) return;
+  if (typeof L === "undefined") { el.innerHTML = '<div class="ph" style="height:100%"><span>Map couldn&rsquo;t load — check your connection.</span></div>'; return; }
+  if (_boardMap) { try { _boardMap.remove(); } catch (e) {} _boardMap = null; }
+  // Glow tint only over street tiles in dark themes; never over satellite imagery.
+  el.classList.toggle("map-glow", S.mapView !== "satellite");
+  _boardMap = L.map(el, { zoomControl: false, scrollWheelZoom: true });
+  _boardBase = boardTiles().addTo(_boardMap);
+  L.control.zoom({ position: "bottomright" }).addTo(_boardMap);
+  _boardCluster = L.markerClusterGroup ? L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 48 }) : L.layerGroup();
+  for (const [p, c] of located) {
+    const m = L.circleMarker(c, { radius: 7, weight: 2, color: "#8a6520", fillColor: "#d9bd6e", fillOpacity: 0.9 });
+    m.on("click", () => showQuickCard(p, orderedIds));
+    _boardCluster.addLayer(m);
+  }
+  _boardMap.addLayer(_boardCluster);
+  // Preserve the prior map position across re-renders and detail visits; else fit
+  // to the located markers (Florida fallback when there are none).
+  if (S._mapCenter) _boardMap.setView(S._mapCenter, S._mapZoom || 9);
+  else if (located.length) { try { _boardMap.fitBounds(_boardCluster.getBounds().pad(0.15)); } catch (e) { _boardMap.setView([27.8, -81.7], 6); } }
+  else _boardMap.setView([27.8, -81.7], 6);
+  _boardMap.on("moveend", () => { const cc = _boardMap.getCenter(); S._mapCenter = [cc.lat, cc.lng]; S._mapZoom = _boardMap.getZoom(); });
+  setTimeout(() => { try { _boardMap.invalidateSize(); } catch (e) {} }, 60);   // size recalc once in the DOM
+}
+// Compact quick card from a map marker. Reuses the detail's decision/save state, so
+// a change here writes the same interest[id] and syncs like anywhere else.
+function showQuickCard(p, orderedIds) {
+  S.quickId = p.id;
+  const el = $("quick-card"); if (!el) return;
+  const it = getInt(p.id);
+  const title = p.hasAddr ? p.addr : "Parcel " + p.parcel;
+  el.innerHTML = `<div class="blueprint" style="background:var(--color-surface);padding:14px 16px;box-shadow:var(--shadow-lg)">${CORNERS}
+    <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:17px;line-height:1.15">${esc(title)}</div>
+      <button id="qc-close" aria-label="Close" style="background:none;border:none;cursor:pointer;font-size:18px;line-height:1;color:var(--color-text-secondary)">&times;</button>
+    </div>
+    <div class="text-muted" style="font-size:12.5px;margin-bottom:8px">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div>
+    <div style="font-size:13px;margin-bottom:8px">${p.acreage ? esc(p.acreage) + " ac" : "Acres not available"}${effType(p) ? " · " + esc(effType(p)) : ""}</div>
+    <div style="font-size:13px;margin-bottom:6px"><b>${esc(p.auction)}</b> · ${esc(saleTimeText(p))} · ${p.redeemed ? "Redeemed" : "Scheduled"}</div>
+    <div style="margin-bottom:10px">${researchCell(p)}</div>
+    <div style="display:flex;margin-bottom:10px;border:1px solid var(--color-divider)">
+      ${["Interested", "Watching", "Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-qstatus="${o}" style="flex:1;padding:6px 2px;font-size:12px">${o}</button>`).join("")}
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary" id="qc-bookmark" style="font-size:12.5px;padding:6px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
+      <button class="btn btn-primary" id="qc-open" style="font-size:12.5px;padding:6px 13px;flex:1">Open full details</button>
+    </div>
+    <div data-save-status style="font-size:11px;font-weight:500;color:var(--color-text-secondary);margin-top:8px;min-height:14px"></div></div>`;
+  el.hidden = false;
+  paintSaveStatus();
+  $("qc-close").onclick = () => { S.quickId = null; el.hidden = true; };
+  $("qc-open").onclick = () => openParcel(p.id, orderedIds, "dashboard");
+  $("qc-bookmark").onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); showQuickCard(p, orderedIds); };
+  el.querySelectorAll("[data-qstatus]").forEach((b) => b.onclick = () => {
+    const prev = it.status, next = b.dataset.qstatus === prev ? "" : b.dataset.qstatus;
+    setInt(p.id, { status: next }, p);
+    pushUndo(next ? `Marked ${next}` : "Decision cleared", () => { setInt(p.id, { status: prev }, p); showQuickCard(p, orderedIds); });
+    showQuickCard(p, orderedIds);
+  });
 }
 
 // ---------- detail screen ----------
@@ -1281,14 +2129,20 @@ function runLandCheck(p) {
     LC_MEM[p.id] = res;
     try { localStorage.setItem("tdd_lc_" + p.id, JSON.stringify(res)); } catch (e) {}
     if (res.verdict === "unknown") {
-      if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
-      if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+      // Automated check couldn't complete -> "Couldn't check" state feeds Needs-review.
+      setResearch(p.id, "landCheck", { state: "couldntCheck", checkedAt: nowIso(), source: "land check" }, p);
+      if (S.screen === "detail" && S.selId === p.id) renderDetail();
       return;
     }
+    // Record the automated result: a warning (avoid/review) makes it Needs-review.
+    setResearch(p.id, "landCheck", {
+      state: "reviewed", warning: res.verdict === "avoid" || res.verdict === "review",
+      resolved: false, checkedAt: nowIso(), finding: (res.reasons || []).join(" · "), source: "land check",
+    }, p);
     if (S.screen === "detail" && S.selId === p.id) renderDetail();
   }).catch(() => {
-    if (msg) msg.textContent = "Couldn’t reach the map services just now — try again.";
-    if (btn) { btn.disabled = false; btn.textContent = "Run land check"; }
+    setResearch(p.id, "landCheck", { state: "couldntCheck", checkedAt: nowIso(), source: "land check" }, p);
+    if (S.screen === "detail" && S.selId === p.id) renderDetail();
   });
 }
 function initParcelMap(p) {
@@ -1318,7 +2172,7 @@ function initParcelMap(p) {
     }).addTo(map).bindPopup("Parcel " + p.parcel);
     try { map.fitBounds(poly.getBounds(), { padding: [12, 12], maxZoom: 19 }); } catch (e) {}
   } else {
-    L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#5980a6", fillOpacity: 1 })
+    L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#c6a147", fillOpacity: 1 })
       .addTo(map).bindPopup("Parcel " + p.parcel);
   }
   // The container is laid out after innerHTML; let Leaflet re-measure it.
@@ -1370,14 +2224,34 @@ function renderDetail() {
   ];
 
   $("scr-detail").innerHTML = `
-    <button class="btn btn-ghost" id="back" style="margin-bottom:14px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to properties</button>
-    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
-      <h2 style="margin:0">${esc(p.addr)}</h2>
+    ${(() => { const step = stepInfo(); return `<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+      <button class="btn btn-ghost" id="back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to results</button>
+      ${step.n ? `<span class="text-muted" style="font-size:12px">${step.i + 1} of ${step.n}</span>` : ""}
+      <div style="margin-left:auto;display:flex;gap:8px">
+        <button class="btn btn-secondary" id="nav-prev"${step.hasPrev ? "" : " disabled"}>&larr; Previous</button>
+        <button class="btn btn-secondary" id="nav-next"${step.hasNext ? "" : " disabled"}>Next &rarr;</button>
+      </div></div>`; })()}
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px">
+      <h1 style="margin:0;font-size:46px;font-weight:500;letter-spacing:-.02em;line-height:1.05">${p.hasAddr ? esc(p.addr) : `<span style="font-weight:400">Parcel</span> ${esc(p.parcel)}`}</h1>
       ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
-      <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
     </div>
-    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:22px">Parcel ${esc(p.parcel)}</div>
+    ${p.hasAddr ? `<div class="mono" style="font-size:13px;color:var(--ink3);margin-bottom:10px">Parcel ${esc(p.parcel)}</div>` : ""}
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:15px;margin-bottom:24px;color:var(--ink2)">
+      <span>${p.acreage ? esc(p.acreage) + " acres" : "Acres not available"}</span>
+      <span>${p.hasAddr ? esc([p.city, p.county + " County"].filter(Boolean).join(" · ")) : "No street address published"}</span>
+      <span>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
+    </div>
+    ${(() => {
+      const s = it.snap, notes = [];
+      if (p.anomalies && p.anomalies.length) notes.push(...p.anomalies.map(String));
+      if (s) {
+        if (s.status && s.status !== p.status) notes.push(`Status changed — was ${s.status}, now ${p.status}`);
+        const sd = s.saleDate ? fmtDate(new Date(s.saleDate)) : null;
+        if (sd && sd !== p.auction) notes.push(`Auction date changed — was ${sd}, now ${p.auction}`);
+      }
+      return notes.length ? `<div class="blueprint" style="padding:9px 14px;margin-bottom:16px;background:color-mix(in srgb,#d69a1e 12%,var(--color-surface));font-size:13px">${CORNERS}<b>Heads up.</b> ${notes.map(esc).join(" · ")} &mdash; your notes, decision and research are kept.</div>` : "";
+    })()}
 
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
@@ -1393,10 +2267,9 @@ function renderDetail() {
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Parcel record</h6>
           <div class="triad" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px 20px;font-size:14px">
-            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", p.saleTime || "—"],
-               ["Assessed value", money(p.assessed)], ["Opening bid", money(p.bid)], ["Bid / assessed", p.pct != null ? p.pct + "%" : "—"],
-               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "—"],
-               ["Mailing address", p.mailing || "—"]]
+            ${[["Case #", p.case_number], ["Certificate #", p.cert || "—"], ["Sale time", saleTimeText(p)],
+               ["Owner of record", p.owner || "—"], ["Land use", p.use || "—"], ["Acres", p.acreage || "Not available"],
+               ["Mailing address (owner)", p.mailing || "Not available"]]
               .map(([k, v]) => `<div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">${k}</div><div style="font-weight:500">${esc(v)}</div></div>`).join("")}
           </div>
           <div class="hr"></div>
@@ -1432,20 +2305,67 @@ function renderDetail() {
         </div>` : ""}
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 12px">Before you bid</h6>
-          <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55">
-            ${findings.map((a) => `<div style="display:flex;gap:12px">
-              <span class="tag ${a.cls}" style="flex:none;height:fit-content;min-width:86px;justify-content:center">${a.topic}</span>
-              <span>${a.text}</span></div>`).join("")}
-          </div>
-          <p class="text-muted" style="font-size:12.5px;margin:16px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Before you bid, confirm the value, the title and any liens, the case file, and the parcel itself. And the opening bid is only the starting price &mdash; tax deeds routinely sell for well above it.</p>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">Auction record data as of ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
+          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Research</h6>
+          <div class="text-muted" style="font-size:12px;margin-bottom:6px">Three separate checks. Property record and Title &amp; liens are manual &mdash; open the source and confirm for yourself. The land check is automated.</div>
+          ${(() => {
+            const R = getResearch(p.id);
+            const stTag = (c) => c.state === "reviewed" ? (c.warning && !c.resolved ? '<span class="tag tag-warn">Needs review</span>' : '<span class="tag tag-ok">Reviewed</span>')
+              : c.state === "couldntCheck" ? '<span class="tag tag-warn">Couldn&rsquo;t check</span>'
+              : c.state === "checking" ? '<span class="tag tag-neutral">Checking&hellip;</span>' : '<span class="tag tag-neutral">Not checked</span>';
+            const row = (title, tag, body, actions) => `<div style="display:flex;flex-direction:column;gap:8px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
+              <div style="display:flex;align-items:center;gap:10px"><span style="font-weight:600;font-size:14px">${title}</span><span style="margin-left:auto">${tag}</span></div>
+              <div style="font-size:13.5px;line-height:1.5">${body}</div>
+              ${actions ? `<div style="display:flex;gap:8px;flex-wrap:wrap">${actions}</div>` : ""}</div>`;
+            // Manual checks: Mark reviewed / Flag an issue; once reviewed, Undo (and
+            // Resolve when flagged). Opening the source link does NOT auto-complete.
+            const manual = (key, c) => {
+              if (c.state === "reviewed" && c.warning && !c.resolved)
+                return `<button class="btn btn-secondary" data-research-resolve="${key}" style="font-size:12px;padding:3px 10px">Mark resolved</button><button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo</button>`;
+              if (c.state === "reviewed")
+                return `<button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo review</button>`;
+              return `<button class="btn btn-secondary" data-research-review="${key}" style="font-size:12px;padding:3px 10px">Mark reviewed</button><button class="btn btn-ghost" data-research-flag="${key}" style="font-size:12px;padding:3px 8px">Flag an issue</button>`;
+            };
+            const landTag = (isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
+              ? stTag({ state: "reviewed", warning: lc.verdict === "avoid" || lc.verdict === "review" })
+              : stTag(R.landCheck);
+            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`, manual("propertyRecord", R.propertyRecord))
+              + row("Land check", landTag, landText)
+              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`, manual("titleLiens", R.titleLiens));
+          })()}
+          <p class="text-muted" style="font-size:12.5px;margin:14px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Confirm the value, the title and any liens, the case file, and the parcel itself before you bid.</p>
+          <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
         </div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:26px">
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">My position</h6>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">Price intelligence</h6>
+            <span class="tag tag-warn" style="margin-left:auto">Planned</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+            <div style="display:flex;justify-content:space-between;gap:10px"><span>Expected auction price</span><span class="text-muted">Not calculated</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px"><span>Estimated market value</span><span class="text-muted">Not calculated</span></div>
+          </div>
+          <p class="text-muted" style="font-size:12px;margin:10px 0 0">Planned: estimates using auction results and comparable land sales.</p>
+          <div class="hr"></div>
+          <div style="font-size:12.5px" class="text-muted">Nearby land sales <span class="tag tag-neutral" style="margin-left:6px">Planned</span></div>
+          <details style="margin-top:12px">
+            <summary style="cursor:pointer;font-size:13.5px;font-weight:500;color:var(--color-accent-700)">Opening bid &amp; assessment</summary>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:13.5px;margin-top:12px">
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Opening bid</div><div style="font-weight:500">${money(p.bid)}</div></div>
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Assessed value</div><div style="font-weight:500">${money(p.assessed)}</div></div>
+              <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Bid / assessed</div><div style="font-weight:500">${p.pct != null ? p.pct + "%" : "—"}</div></div>
+              ${(() => { const c = countyCaps(p); return c.deposit ? `<div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">County deposit</div><div style="font-weight:500">${money(c.deposit)}${p.bid != null ? ` &middot; ~5% is ${money(p.bid * 0.05)}` : ""}</div></div>` : ""; })()}
+            </div>
+            <p class="text-muted" style="font-size:11.5px;margin:10px 0 0">County figures, not an estimate. The opening bid is only the starting price &mdash; tax deeds routinely sell well above it.</p>
+          </details>
+        </div>
+        <div class="blueprint" style="padding:18px 20px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <h6 style="color:var(--color-accent-700);margin:0">My decision</h6>
+            <button class="btn btn-secondary" id="pos-bookmark" style="margin-left:auto;font-size:12px;padding:4px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
+          </div>
           <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
             ${["Interested","Watching","Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-status="${o}">${o.toUpperCase()}</button>`).join("")}
           </div>
@@ -1458,25 +2378,36 @@ function renderDetail() {
             </select></div>
           <div class="field"><label>Notes</label>
             <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
-          <div style="margin-top:10px;font-size:11px" class="text-muted">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</div>
+          ${(() => {
+            const cf = (interest[p.id] && interest[p.id]._conflict) || null;
+            if (!cf) return "";
+            const nice = { status: "decision", bid: "max bid", notes: "notes", list: "list", bookmark: "save" };
+            const fields = Object.keys(cf).map((f) => nice[f] || f).join(", ");
+            return `<div style="margin-top:10px;font-size:12px;background:var(--color-accent-100);color:var(--color-accent-800);padding:7px 9px">Another device also changed <b>${esc(fields)}</b> around the same time — this device&rsquo;s value was kept. <button id="conflict-ok" class="btn btn-ghost" style="font-size:12px;padding:1px 6px">Dismiss</button></div>`;
+          })()}
+          <div style="margin-top:10px;font-size:11.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span data-save-status style="font-weight:500;color:var(--color-text-secondary)"></span>
+            <span class="text-muted" style="font-size:11px">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</span>
+          </div>
         </div>
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin-bottom:12px">Auction</h6>
-          <div style="font-family:var(--font-heading);font-weight:600;font-size:26px">${esc(p.auction)}</div>
-          <div style="font-size:13px;margin-bottom:10px" class="text-muted">Opening bid <b style="color:var(--color-text)">${money(p.bid)}</b> &middot; Assessed ${money(p.assessed)}</div>
-          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Status: Scheduled" + (p.saleTime ? " · " + esc(p.saleTime) : "")}</div>
-          ${(() => { const c = countyCaps(p); if (!c.deposit && !c.max_bid) return "";
-            const need = p.bid != null ? money(p.bid * 0.05) : null;
-            return `<div class="hr" style="margin:10px 0"></div><div style="font-size:12.5px">
-              ${c.deposit ? `County deposit on file: <b>${money(c.deposit)}</b>${need ? ` &middot; ~5% of opening bid is ${need}` : ""}` : ""}
-              ${c.max_bid ? `${c.deposit ? "<br>" : ""}Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b>` : ""}</div>`; })()}
+        <div class="blueprint" style="padding:14px 20px">${CORNERS}
+          <div style="font-size:12.5px" class="text-muted">${p.redeemed ? "Redeemed — owner paid; this auction will not happen." : "Auction " + esc(p.auction) + " · " + esc(saleTimeText(p))}</div>
+          ${(() => { const c = countyCaps(p); return c.max_bid ? `<div style="font-size:12.5px;margin-top:6px">Team max bid for ${esc(p.county)}: <b>${money(c.max_bid)}</b></div>` : ""; })()}
         </div>
       </div>
     </div>`;
 
-  $("back").onclick = () => go("dashboard");
+  $("back").onclick = goBack;
+  { const pv = $("nav-prev"), nx = $("nav-next");
+    if (pv) pv.onclick = () => stepParcel(-1);
+    if (nx) nx.onclick = () => stepParcel(1); }
   initParcelMap(p);
   const rlc = $("run-landcheck"); if (rlc) rlc.onclick = () => runLandCheck(p);
+  // Manual research actions (Property record / Title & liens).
+  $("scr-detail").querySelectorAll("[data-research-review]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchReview, { state: "reviewed", warning: false, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-flag]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchFlag, { state: "reviewed", warning: true, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-resolve]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchResolve, { resolved: true }, p); renderDetail(); });
+  $("scr-detail").querySelectorAll("[data-research-undo]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchUndo, { state: "notChecked", warning: false, resolved: false, checkedAt: "" }, p); renderDetail(); });
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
@@ -1492,64 +2423,161 @@ function renderDetail() {
     });
   }; }
   $("scr-detail").querySelectorAll("[data-status]").forEach((b) =>
-    b.onclick = () => { setInt(p.id, { status: b.dataset.status === it.status ? "" : b.dataset.status }); renderDetail(); });
-  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value });
-  $("pos-list").onchange = (e) => assignList(p.id, e.target.value);
-  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value });
+    b.onclick = () => {
+      const prev = it.status, next = b.dataset.status === prev ? "" : b.dataset.status;
+      setInt(p.id, { status: next }, p);
+      pushUndo(next ? `Marked ${next}` : "Decision cleared", () => { setInt(p.id, { status: prev }, p); renderDetail(); });
+      renderDetail();
+    });
+  $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value }, p);
+  $("pos-list").onchange = (e) => { assignList(p.id, e.target.value); setInt(p.id, {}, p); };
+  $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value }, p);
+  const pbm = $("pos-bookmark"); if (pbm) pbm.onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); renderDetail(); };
+  const cok = $("conflict-ok"); if (cok) cok.onclick = () => { const it2 = interest[p.id]; if (it2) { delete it2._conflict; saveInterest(); } renderDetail(); };
+  paintSaveStatus();
 }
 
 // ---------- lists screen (grid of every list) ----------
 function renderLists() {
   const signedIn = !!(CLOUD && CLOUD.user);
-  const all = [
-    ...lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: false })),
-    ...team.lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: true })),
+  const active = [
+    ...lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: true })),
   ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
-  const active = all.filter((l) => !l.archived);
-  const archived = all.filter((l) => l.archived);
+  const archived = [
+    ...lists.filter((l) => !l.deleted && l.archived).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted && l.archived).map((l) => ({ ...l, shared: true })),
+  ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
+  const byId = {}; for (const p of DATA) byId[p.id] = p;
+  const savedSet = savedIds();
+  const allSaved = [...savedSet].filter((id) => byId[id]).map((id) => byId[id]);
+  const goneSnaps = [...savedSet].filter((id) => !byId[id]).map((id) => ({ id, snap: interest[id] && interest[id].snap })).filter((x) => x.snap);
+
+  // The collection shown on the right: "all" or a specific list key. A picked
+  // list that no longer exists falls back to All saved.
+  let view = S.savedView || "all";
+  if (view !== "all") {
+    const [pfx, nm] = [view.slice(0, 2), view.slice(2)];
+    if (!findList(nm, pfx === "t:")) { view = S.savedView = "all"; }
+  }
+  const viewName = view === "all" ? "All saved"
+    : (() => { const nm = view.slice(2); return nm; })();
+  const rows = view === "all" ? allSaved
+    : listItems(view.slice(2), view.startsWith("t:"));
+  const rowIds = rows.map((p) => p.id);
+
+  // Left picker — All saved + every active list, active row highlighted.
+  const pickRow = (key, label, count, shared) => `<button class="saved-pick ${view === key ? "on" : ""}" data-view="${esc(key)}">
+    <span style="flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(label)}</span>
+    ${shared ? '<span class="home-chip home-chip-team">team</span>' : ""}
+    <span class="home-chip">${count}</span></button>`;
+  const picker = `
+    <div class="home-card" style="padding:14px">
+      ${pickRow("all", "All saved", allSaved.length, false)}
+      ${active.length ? `<div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin:14px 8px 6px">MY LISTS</div>
+        ${active.map((l) => pickRow((l.shared ? "t:" : "p:") + l.name, l.name, l.items.length, l.shared)).join("")}`
+        : `<p class="home-empty" style="margin:12px 8px">No lists yet.</p>`}
+    </div>
+    ${archived.length ? `<div class="home-card" style="padding:14px;margin-top:16px">
+      <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin:2px 8px 8px">ARCHIVED</div>
+      ${archived.map((l) => `<div style="display:flex;align-items:center;gap:8px;padding:8px">
+        <span style="flex:1;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(l.name)}${l.shared ? ' <span class="tag tag-outline">team</span>' : ""}</span>
+        <button class="btn btn-ghost" data-restore="${esc(l.name)}" data-shared="${l.shared ? 1 : 0}" style="font-size:12px;padding:3px 9px">Restore</button>
+      </div>`).join("")}
+    </div>` : ""}`;
+
+  // Right panel — the selected collection as a table.
+  const isList = view !== "all";
+  const listObj = isList ? findList(view.slice(2), view.startsWith("t:")) : null;
+  const tableCard = `
+    <div class="home-card" style="padding:0">
+      <div class="card-head">
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+          <h3 class="card-title">${esc(viewName)}</h3>
+          ${listObj && listObj.shared ? '<span class="tag tag-outline">team</span>' : ""}
+          <span style="font-size:14px;color:var(--ink2)">${rows.length} ${rows.length === 1 ? "parcel" : "parcels"}</span>
+        </div>
+        <div style="display:flex;gap:8px">
+          ${isList ? `<button class="btn btn-secondary" id="saved-manage" style="font-size:13px">Manage list</button>` : ""}
+          ${rows.length ? `<button class="btn btn-secondary" id="saved-map" style="font-size:13px">Show on map</button>` : ""}
+        </div>
+      </div>
+      ${rows.length ? `<div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="text-align:right">My max</th><th style="width:44px"></th></tr></thead>
+        <tbody>
+          ${rows.map((p) => { const it = getInt(p.id); return `<tr class="rowlink" data-open="${esc(p.id)}">
+            <td><div style="font-size:16px;font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div>
+              <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
+            <td style="font-size:14px;white-space:nowrap">${esc(p.auction)}</td>
+            <td>${researchCell(p)}</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums">${it.bid ? esc(String(it.bid)) : '<span class="text-muted">—</span>'}</td>
+            <td style="text-align:center"><button class="bm-toggle on" data-unsave="${esc(p.id)}" aria-label="Remove from ${esc(viewName)}" title="Remove from ${esc(viewName)}" style="font-size:18px;line-height:1">&times;</button></td>
+          </tr>`; }).join("")}
+        </tbody></table></div>`
+      : `<p class="home-empty" style="padding:22px">${isList ? "Nothing in this list yet. Bookmark a parcel from Explore, or add it to this list from a property page." : "Nothing saved yet. Bookmark a parcel from Explore, or save one from its property page."}</p>`}
+    </div>`;
+
+  const goneSection = goneSnaps.length ? `
+    <div class="home-card" style="margin-top:22px;padding:18px 22px">
+      <h3 class="home-h3" style="margin-bottom:4px">No longer in the feed</h3>
+      <p class="home-empty" style="margin-bottom:12px">These saved properties dropped out of the county feed. They&rsquo;re kept from your last snapshot &mdash; unavailable pending verification, <b>not</b> assumed sold.</p>
+      ${goneSnaps.map(({ snap }) => `<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);flex-wrap:wrap">
+        <div style="flex:1;min-width:160px"><span style="font-weight:500">${esc(snap.addr || snap.parcel || "—")}</span>
+          <div style="font-size:13px;color:var(--ink2)">${esc([snap.city, snap.county + " County"].filter(Boolean).join(" · "))}${snap.saleDate ? " · was " + esc(fmtDate(new Date(snap.saleDate))) : ""}</div></div>
+        <span class="tag tag-warn">Unavailable — pending verification</span>
+      </div>`).join("")}
+    </div>` : "";
 
   $("scr-lists").innerHTML = `
-    <h2 style="margin-bottom:6px">My lists</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
-      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
-      : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
-    ${isPaid() ? `<div style="display:flex;gap:10px;max-width:560px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
-      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
-      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
-        <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
-      <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:6px;margin-bottom:6px">
+      <h1 style="margin:0;font-size:44px;font-weight:500;letter-spacing:-.02em">Saved parcels.</h1>
+      ${isPaid() ? `<button class="btn btn-primary" id="new-list-btn" style="height:44px;padding:0 18px;font-size:15px">+ New list</button>` : ""}
     </div>
-    <div id="new-list-hint" style="font-size:12.5px;margin-bottom:22px;color:var(--color-danger,#b3261e)" hidden></div>`
-    : `<div class="blueprint" style="padding:12px 16px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:560px">${CORNERS}
-      <span style="font-size:13.5px">Lists &mdash; group the parcels you&rsquo;re tracking and share them with your team &mdash; are a paid feature.</span>
-      ${upgradeChip("Unlock lists")}</div>`}
-    ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-      ${active.map((lc) => `
-        <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
-          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
-            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
-            ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
-            <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
-          </div>
-          <div style="font-size:13px;margin:6px 0 14px" class="text-muted">${esc(lc.desc || "") || (lc.items.length ? "" : "Empty — add parcels from a property page.")}</div>
-          <div style="font-size:13px;font-weight:500;color:var(--color-accent-700)">Open list &rarr;</div>
-        </div>`).join("")}
-    </div>` : `<div class="text-muted" style="font-size:13.5px">${archived.length ? "All your lists are archived — restore one below." : "No lists yet — create one above, then add parcels to it from any property page."}</div>`}
-    ${archived.length ? `
-      <h3 style="margin:34px 0 10px;font-size:16px">Archived</h3>
-      <div class="blueprint" style="padding:6px 18px">${CORNERS}
-        ${archived.map((lc) => `
-          <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
-            <div style="flex:1;min-width:140px">
-              <span style="font-weight:500">${esc(lc.name)}</span>
-              ${lc.shared ? ' <span class="tag tag-outline">team</span>' : ""}
-              <span class="text-muted" style="font-size:12.5px"> &middot; ${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
-            </div>
-            <button class="btn btn-secondary" data-restore="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 10px">Restore</button>
-            <button class="btn btn-ghost" data-delete="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 8px;color:var(--color-danger,#b3261e)">Delete</button>
-          </div>`).join("")}
-      </div>` : ""}`;
+    <p style="font-size:17px;color:var(--ink2);margin:0 0 22px">${allSaved.length} ${allSaved.length === 1 ? "parcel" : "parcels"} across ${active.length} ${active.length === 1 ? "list" : "lists"}.${signedIn ? " Team lists are shared live with everyone signed in." : SYNC_ON ? " Sign in to sync across devices." : ""}</p>
+    ${isPaid() ? "" : `<div class="plan-banner" style="margin-bottom:20px"><span class="plan-badge">Paid</span><span>Named lists &mdash; group parcels and share them with your team &mdash; are a paid feature. ${upgradeChip("Unlock lists")}</span></div>`}
+    <div id="new-list-row" hidden style="display:flex;gap:10px;max-width:560px;margin-bottom:18px;align-items:center;flex-wrap:wrap">
+      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
+      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
+      <button class="btn btn-primary" id="add-list" style="flex:none">Create</button>
+      <div id="new-list-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);flex-basis:100%" hidden></div>
+    </div>
+    <div class="saved-grid" style="display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start">
+      <div>${picker}</div>
+      <div>${tableCard}</div>
+    </div>
+    ${goneSection}`;
 
+  // Left picker selection.
+  $("scr-lists").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => { S.savedView = b.dataset.view; renderLists(); });
+  // Row open (walks the current collection for Prev/Next).
+  $("scr-lists").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, rowIds, "lists"));
+  // Unsave (×): from a specific list removes only that membership; from All saved
+  // fully unsaves (clears bookmark and any list membership).
+  $("scr-lists").querySelectorAll("[data-unsave]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.unsave, rec = byId[id];
+    if (isList) {
+      if (view.startsWith("t:")) { delete team.membership[id]; saveTeam(); }
+      else setInt(id, { list: "" }, rec);
+    } else {
+      if (team.membership[id]) { delete team.membership[id]; saveTeam(); }
+      setInt(id, { bookmark: false, list: "" }, rec);
+    }
+    renderLists();
+  });
+  const mapBtn = $("saved-map"); if (mapBtn) mapBtn.onclick = () => {
+    // Show the collection on the Explore map by county (best available filter).
+    const cs = [...new Set(rows.map((p) => p.county))];
+    S.counties = cs; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false;
+    S.when = "all"; S.status = "All"; S.view = "map"; S.shown = 150; persistCountiesGlobal(); go("dashboard");
+  };
+  const manageBtn = $("saved-manage"); if (manageBtn) manageBtn.onclick = () => openList(view.slice(2), view.startsWith("t:"));
+
+  // Create-list controls.
+  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = () => {
+    const row = $("new-list-row"); row.hidden = !row.hidden; if (!row.hidden) $("new-list").focus();
+  };
   const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
   const createList = () => {
     const inp = $("new-list");
@@ -1561,29 +2589,24 @@ function renderLists() {
     const sharedBox = $("new-list-shared");
     const shared = !!(sharedBox && sharedBox.checked);
     const arr = shared ? team.lists : lists;
-    // Reusing a deleted list's name revives it (clears the tombstone) rather
-    // than leaving two entries with the same name.
     const tomb = arr.find((l) => l.name === name && l.deleted);
     if (tomb) { delete tomb.deleted; tomb.archived = false; }
     else arr.push({ name, desc: "" });
     shared ? saveTeam() : saveLists();
-    renderLists();   // stay on the grid so the new card shows as confirmation
+    S.savedView = (shared ? "t:" : "p:") + name;   // select the new list
+    renderLists();
   };
-  if ($("add-list")) {   // the create controls only render for paid accounts
+  if ($("add-list")) {
     $("add-list").onclick = createList;
     $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
     $("new-list").oninput = () => listHint("");
   }
-  $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
-    openList(c.dataset.openlist, c.dataset.shared === "1"));
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
     setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
   });
-  $("scr-lists").querySelectorAll("[data-delete]").forEach((b) => b.onclick = () => {
-    if (!confirm(`Delete the list “${b.dataset.delete}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
-    deleteList(b.dataset.delete, b.dataset.shared === "1"); renderLists();
-  });
 }
+// Persist the global county selection (used by the Saved "Show on map" jump).
+function persistCountiesGlobal() { prefs.counties = S.counties.slice(); savePrefs(); }
 
 // ---------- single-list page: filter, sort, manage ----------
 function renderListDetail() {
@@ -1709,10 +2732,17 @@ function renderListDetail() {
     }
     S.listShared = !shared; renderListDetail();
   };
-  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => go("detail", el.dataset.open));
+  const ldOrderedIds = rows.map((p) => p.id);
+  $("scr-listdetail").querySelectorAll("[data-open]").forEach((el) => el.onclick = () => openParcel(el.dataset.open, ldOrderedIds, "listdetail"));
   $("scr-listdetail").querySelectorAll("[data-remove]").forEach((b) => b.onclick = (e) => {
     e.stopPropagation();
-    removeFromList(b.dataset.remove, name, shared); renderListDetail();
+    const id = b.dataset.remove;
+    removeFromList(id, name, shared);
+    pushUndo(`Removed from ${name}`, () => {
+      if (shared) { team.membership[id] = name; saveTeam(); } else setInt(id, { list: name });
+      renderListDetail();
+    });
+    renderListDetail();
   });
 }
 
@@ -1805,7 +2835,10 @@ function calGroups() {
   const months = [...monthSet].map((s) => s.split("-").map(Number)).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
   return { byDay, months, total, days: Object.keys(byDay).length };
 }
-// One month as a 7-column grid. opts.link marks sale entries clickable.
+// One month as a 7-column grid.
+//   opts.link       — entries carry data-cty/data-day (printable / legacy jump)
+//   opts.selectable — day cells with sales carry data-selday and highlight selection
+//   opts.selDayKey  — the currently selected "y-m-d" key
 function calMonthGrid(y, m, byDay, opts) {
   opts = opts || {};
   const first = new Date(Date.UTC(y, m, 1)).getUTCDay();
@@ -1813,60 +2846,238 @@ function calMonthGrid(y, m, byDay, opts) {
   const t = etToday(), cells = [];
   for (let i = 0; i < first; i++) cells.push('<td class="cal-empty"></td>');
   for (let d = 1; d <= daysInMonth; d++) {
-    const sales = byDay[y + "-" + m + "-" + d] || [];
+    const dayKey = y + "-" + m + "-" + d;
+    const sales = byDay[dayKey] || [];
     const dnum = dayNum(y, m + 1, d);
-    const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "") + (dnum < t ? " past" : "");
-    const entries = sales.map((g) => {
-      const time = g.time ? g.time.replace(/\s*ET$/i, "") : "";
-      return `<div class="cal-sale"${opts.link ? ` data-cty="${esc(g.county)}"` : ""} title="${esc(g.county)} — ${g.count} ${g.count === 1 ? "parcel" : "parcels"}${time ? " · " + esc(time) : ""}"><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span>${time ? `<span class="cal-time">${esc(time)}</span>` : ""}</div>`;
+    const cls = "cal-day" + (sales.length ? " has" : "") + (dnum === t ? " today" : "")
+      + (dnum < t ? " past" : "") + (opts.selectable && sales.length ? " pick" : "")
+      + (opts.selDayKey === dayKey ? " sel" : "");
+    const totalN = sales.reduce((s, g) => s + g.count, 0);
+    // Up to two county chips, then "+N more"; the selectable grid selects the day
+    // rather than navigating, so the right panel shows the detail.
+    const shown = sales.slice(0, 2).map((g) => {
+      const dayAttr = opts.link ? ` data-cty="${esc(g.county)}" data-day="${dayNum(g.y, g.m + 1, g.d)}"` : "";
+      return `<div class="cal-sale"${dayAttr}><b>${esc(g.county)}</b><span class="cal-n">${g.count}</span></div>`;
     }).join("");
-    cells.push(`<td class="${cls}"><span class="cal-date">${d}</span>${entries}</td>`);
+    const more = sales.length > 2 ? `<div class="cal-more">+${sales.length - 2} more</div>` : "";
+    const selAttr = opts.selectable && sales.length ? ` data-selday="${dayKey}"` : "";
+    const badge = sales.length ? `<span class="cal-count">${totalN} &#9873;</span>` : "";
+    cells.push(`<td class="${cls}"${selAttr}><div class="cal-daytop"><span class="cal-date">${d}</span>${badge}</div>${shown}${more}</td>`);
   }
   while (cells.length % 7) cells.push('<td class="cal-empty"></td>');
   let rows = "";
   for (let i = 0; i < cells.length; i += 7) rows += "<tr>" + cells.slice(i, i + 7).join("") + "</tr>";
   return `<table class="cal-grid"><thead><tr>${CAL_DOW.map((w) => `<th>${w}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
 }
+// Parcels selling on one "y-m-d" day key, for the calendar's day panel.
+function calDayParcels(dayKey, sel) {
+  if (!dayKey) return [];
+  return DATA.filter((p) => {
+    if (p.redeemed || !p.saleDate || !sel.has(p.county)) return false;
+    return (p.saleDate.getFullYear() + "-" + p.saleDate.getMonth() + "-" + p.saleDate.getDate()) === dayKey;
+  }).sort((a, b) => a.county.localeCompare(b.county) || (a.saleTime || "").localeCompare(b.saleTime || ""));
+}
 function renderCalendar() {
   const all = calCounties();
   const sel = calSelected();
   const { byDay, months, total, days } = calGroups();
+
+  // Which month is shown — clamp the index to what's available.
+  let idx = Math.max(0, Math.min(S.calMonthIdx || 0, Math.max(0, months.length - 1)));
+  S.calMonthIdx = idx;
+  const cur = months[idx] || null;   // [y, m]
+  // Selected day: keep the pick if it's in the current month & has sales; else the
+  // first sale day of the month (today if it's a sale day).
+  const monthDayKeys = cur ? Object.keys(byDay).filter((k) => { const [ky, km] = k.split("-").map(Number); return ky === cur[0] && km === cur[1]; }) : [];
+  monthDayKeys.sort((a, b) => Number(a.split("-")[2]) - Number(b.split("-")[2]));
+  // The day previewed in the side panel: today if it's a sale day this month,
+  // else the first sale day of the month. (Clicking a day opens the popup instead.)
+  const todayKey = cur ? (() => { const [y, mo, d] = ET_YMD.format(new Date()).split("-").map(Number); const k = y + "-" + (mo - 1) + "-" + d; return monthDayKeys.includes(k) ? k : null; })() : null;
+  let selDayKey = S.calDayKey && monthDayKeys.includes(S.calDayKey) ? S.calDayKey : (todayKey || monthDayKeys[0] || null);
+  S.calDayKey = selDayKey;
+  const dayAll = calDayParcels(selDayKey, sel);
+  const dayParcels = dayAll.slice(0, 7);   // panel shows at most 7; the popup shows them all
+  const dayIds = dayAll.map((p) => p.id);   // Prev/Next still walks the whole day
+
   const chips = all.length
     ? all.map((c) => `<button class="pillbtn ${sel.has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`).join("")
     : '<span class="text-muted" style="font-size:13px">No counties have upcoming sales right now.</span>';
-  const grids = months.length
-    ? months.map(([y, m]) => `<div class="cal-month"><h6 class="cal-mhead">${CAL_MONTHS[m]} ${y}</h6>${calMonthGrid(y, m, byDay, { link: true })}</div>`).join("")
-    : `<div class="text-muted" style="font-size:14px;padding:24px 0">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</div>`;
+
+  // Readable date for the day panel.
+  const dayLabel = (() => {
+    if (!selDayKey) return "";
+    const [y, m, d] = selDayKey.split("-").map(Number);
+    const dow = new Date(Date.UTC(y, m, d)).getUTCDay();
+    return `${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dow]}, ${CAL_MONTHS[m]} ${d}`;
+  })();
+  const isToday = selDayKey && (() => { const [y, m, d] = selDayKey.split("-").map(Number); return dayNum(y, m + 1, d) === etToday(); })();
+
+  const monthName = cur ? `${CAL_MONTHS[cur[1]]} ${cur[0]}` : "—";
+  const dayPanel = `
+    <div class="home-card" style="padding:0">
+      <div style="padding:18px 20px;border-bottom:1px solid var(--line)">
+        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">${isToday ? "TODAY" : "NEXT SALE DAY"}</div>
+        <div style="font-size:30px;font-weight:500;letter-spacing:-.01em;margin-top:4px">${esc(dayLabel || "No day selected")}</div>
+        ${dayAll.length ? `<div style="font-size:15px;color:var(--ink2);margin-top:2px">${dayAll.length} ${dayAll.length === 1 ? "auction" : "auctions"}${(() => { const t0 = dayAll[0].saleTime ? saleTimeText(dayAll[0]) : ""; return t0 ? " · " + esc(t0) : ""; })()}</div>` : ""}
+      </div>
+      ${dayParcels.length ? `<div class="home-list-rows" style="padding:6px 10px">
+        ${dayParcels.map((p) => `<button class="home-recent" data-open="${esc(p.id)}">
+          <span style="flex:1;text-align:left;overflow:hidden">
+            <span style="display:block;font-size:15px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(p.hasAddr ? p.addr : p.parcel)}</span>
+            <span style="display:block;font-size:13px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</span>
+          </span>
+          <span class="home-bm ${isBookmarked(p.id) ? "on" : ""}" aria-hidden="true">${BOOKMARK_ICON}</span>
+        </button>`).join("")}
+      </div>
+      <div style="padding:12px 16px 16px;border-top:1px solid var(--line)">
+        <button class="btn btn-primary" data-openday="${esc(selDayKey)}" style="width:100%;height:44px">${dayAll.length > 7 ? `View all ${dayAll.length} &amp; pick` : "Open this day &amp; pick"}</button>
+      </div>`
+      : `<p class="home-empty" style="padding:20px">${months.length ? "Tap a highlighted day on the calendar to see its auctions." : "No upcoming sales in your counties yet."}</p>`}
+    </div>`;
 
   $("scr-calendar").innerHTML = `
-    <h2 style="margin-bottom:6px">Sale calendar</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:20px">Pick your counties and see every upcoming tax-deed sale on one calendar &mdash; the county, date, start time and how many parcels.${total ? ` <b>${total.toLocaleString()}</b> ${total === 1 ? "parcel" : "parcels"} across <b>${days}</b> sale ${days === 1 ? "day" : "days"}.` : ""}</p>
+    <h1 style="margin:0 0 6px;font-size:44px;font-weight:500;letter-spacing:-.02em">Auction calendar.</h1>
+    <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
-    <div class="blueprint" style="padding:16px 18px;margin-bottom:22px">${CORNERS}
-      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-        <h6 style="color:var(--color-accent-700);margin:0">Counties on the calendar</h6>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button id="cal-cty-toggle" aria-expanded="${S.calCountyOpen ? "true" : "false"}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:220px;height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;text-align:left">
+          <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</span>
+          <span style="flex:1;font-weight:500">${sel.size === all.length && all.length ? "All counties" : sel.size ? `${sel.size} selected` : "None selected"}</span>
+          <span style="transition:transform .15s ease;transform:rotate(${S.calCountyOpen ? "180deg" : "0"})">&#9662;</span>
+        </button>
+        <button class="btn btn-secondary" id="cal-print" style="font-size:13px;height:44px" ${months.length ? "" : "disabled"}>Print</button>
+      </div>
+      ${S.calCountyOpen ? `<div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">
+        <div style="display:flex;gap:8px;margin-bottom:10px">
           <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
           <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
-          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print calendar</button>
         </div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+      </div>` : ""}
     </div>
 
-    <div id="cal-months">${grids}</div>`;
+    ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+        <button class="btn btn-secondary" id="cal-prev" ${idx > 0 ? "" : "disabled"} style="height:40px;width:40px;padding:0;font-size:18px">&larr;</button>
+        <div style="font-size:26px;font-weight:500;min-width:210px;text-align:center">${esc(monthName)}</div>
+        <button class="btn btn-secondary" id="cal-next" ${idx < months.length - 1 ? "" : "disabled"} style="height:40px;width:40px;padding:0;font-size:18px">&rarr;</button>
+      </div>
+      <div class="cal-cols" style="display:grid;grid-template-columns:1fr 380px;gap:22px;align-items:start">
+        <div class="home-card" style="padding:16px 18px">${cur ? calMonthGrid(cur[0], cur[1], byDay, { selectable: true, selDayKey }) : ""}</div>
+        <div>${dayPanel}
+          <div class="home-card" style="padding:14px 18px;margin-top:16px;font-size:13px;color:var(--ink2)">
+            <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin-bottom:8px">LEGEND</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="cal-legend-dot today"></span> Today</div>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span class="cal-legend-dot has"></span> Day with an auction</div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="cal-legend-dot sel"></span> Selected day</div>
+          </div>
+        </div>
+      </div>`
+      : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
-  $("cal-chips").querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
-    const cur = new Set(calSelected()), c = b.dataset.cty;
-    if (cur.has(c)) cur.delete(c); else cur.add(c);
-    prefs.calCounties = [...cur]; savePrefs(); renderCalendar();
+  const ctyToggle = $("cal-cty-toggle"); if (ctyToggle) ctyToggle.onclick = () => { S.calCountyOpen = !S.calCountyOpen; renderCalendar(); };
+  const chipWrap = $("cal-chips"); if (chipWrap) chipWrap.querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
+    const cs = new Set(calSelected()), c = b.dataset.cty;
+    if (cs.has(c)) cs.delete(c); else cs.add(c);
+    prefs.calCounties = [...cs]; savePrefs(); S.calMonthIdx = 0; S.calDayKey = null; renderCalendar();
   });
   const allBtn = $("cal-all"); if (allBtn) allBtn.onclick = () => { prefs.calCounties = calCounties(); savePrefs(); renderCalendar(); };
   const noneBtn = $("cal-none"); if (noneBtn) noneBtn.onclick = () => { prefs.calCounties = []; savePrefs(); renderCalendar(); };
   const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
-  $("cal-months").querySelectorAll("[data-cty]").forEach((el) => el.onclick = () => {
-    S.county = el.dataset.cty; S.when = "all"; S.status = "Scheduled"; S.shown = 150; go("dashboard");
+  const prevBtn = $("cal-prev"); if (prevBtn) prevBtn.onclick = () => { S.calMonthIdx = idx - 1; S.calDayKey = null; renderCalendar(); };
+  const nextBtn = $("cal-next"); if (nextBtn) nextBtn.onclick = () => { S.calMonthIdx = idx + 1; S.calDayKey = null; renderCalendar(); };
+  // Clicking a day opens the popup listing that whole day's auctions to pick from.
+  $("scr-calendar").querySelectorAll("[data-selday]").forEach((td) => td.onclick = () => openDayModal(td.dataset.selday));
+  // The panel's "View all / Open this day" button opens the same popup.
+  $("scr-calendar").querySelectorAll("[data-openday]").forEach((b) => b.onclick = () => openDayModal(b.dataset.openday));
+  // Open a parcel from the (≤7) day-panel preview, walking that day's ordered set.
+  $("scr-calendar").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => openParcel(b.dataset.open, dayIds, "calendar"));
+}
+// ---------- calendar day popup ----------
+// Lists every auction on one sale day. Pick parcels with the checkboxes and Save
+// to bookmark them; a row title opens the parcel; "Open in Explore" filters the
+// board to just this day. Selection is local to the popup until Save.
+let _dayModalSel = new Set();
+function closeDayModal() { const m = $("day-modal"); if (m) { m.hidden = true; m.innerHTML = ""; } _dayModalSel = new Set(); }
+function openDayModal(dayKey) {
+  if (!dayKey) return;
+  const sel = calSelected();
+  const parcels = calDayParcels(dayKey, sel);
+  const [y, m, d] = dayKey.split("-").map(Number);
+  const dow = new Date(Date.UTC(y, m, d)).getUTCDay();
+  const label = `${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dow]}, ${CAL_MONTHS[m]} ${d}`;
+  const ids = parcels.map((p) => p.id);
+  _dayModalSel = new Set();
+  const el = $("day-modal"); if (!el) return;
+  const paint = () => {
+    const n = _dayModalSel.size;
+    const saveBtn = el.querySelector("#dm-save");
+    if (saveBtn) { saveBtn.disabled = !n; saveBtn.textContent = n ? `Save ${n} to bookmarks` : "Save selected"; }
+    el.querySelectorAll("[data-pick]").forEach((c) => { c.setAttribute("aria-pressed", _dayModalSel.has(c.dataset.pick) ? "true" : "false"); });
+  };
+  el.innerHTML = `
+    <div class="home-card" style="width:min(720px,100%);max-height:86vh;display:flex;flex-direction:column;padding:0">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px">
+        <div style="flex:1">
+          <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">SALE DAY</div>
+          <div style="font-size:26px;font-weight:500;letter-spacing:-.01em;margin-top:2px">${esc(label)}</div>
+          <div style="font-size:14px;color:var(--ink2);margin-top:2px">${parcels.length} ${parcels.length === 1 ? "auction" : "auctions"} · tick the ones you want, then save</div>
+        </div>
+        <button id="dm-close" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:2px 6px">&times;</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 22px;border-bottom:1px solid var(--line)">
+        <button class="btn btn-ghost" id="dm-all" style="font-size:13px">Select all</button>
+        <button class="btn btn-ghost" id="dm-none" style="font-size:13px">Clear</button>
+      </div>
+      <div class="tablewrap" style="overflow-y:auto;flex:1">
+        <table class="table"><tbody>
+          ${parcels.map((p) => `<tr>
+            <td style="width:44px;text-align:center"><button class="bm-toggle" data-pick="${esc(p.id)}" aria-pressed="false" aria-label="Pick" style="width:24px;height:24px;border:1.5px solid var(--line2);border-radius:6px">${BOOKMARK_ICON}</button></td>
+            <td><button class="dm-open" data-open="${esc(p.id)}" style="background:none;border:none;text-align:left;cursor:pointer;color:var(--ink);padding:0">
+              <div style="font-size:15px;font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div>
+              <div style="font-size:13px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></button></td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:var(--ink2)">${p.acreage ? esc(p.acreage) + " ac" : "—"}</td>
+            <td style="font-size:13px;color:var(--ink2);white-space:nowrap">${esc(saleTimeText(p))}</td>
+            <td>${researchCell(p)}</td>
+          </tr>`).join("")}
+        </tbody></table>
+      </div>
+      <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-primary" id="dm-save" disabled style="height:44px">Save selected</button>
+        <button class="btn btn-secondary" id="dm-explore" style="height:44px">Open all in Explore &rarr;</button>
+        <button class="btn btn-ghost" id="dm-cancel" style="margin-left:auto">Close</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  el.querySelectorAll("[data-pick]").forEach((b) => b.onclick = () => {
+    const id = b.dataset.pick; if (_dayModalSel.has(id)) _dayModalSel.delete(id); else _dayModalSel.add(id); paint();
   });
+  el.querySelectorAll(".dm-open").forEach((b) => b.onclick = () => { closeDayModal(); openParcel(b.dataset.open, ids, "calendar"); });
+  el.querySelector("#dm-all").onclick = () => { _dayModalSel = new Set(ids); paint(); };
+  el.querySelector("#dm-none").onclick = () => { _dayModalSel = new Set(); paint(); };
+  el.querySelector("#dm-save").onclick = () => {
+    const byId = {}; for (const p of DATA) byId[p.id] = p;
+    // Only the ones not already bookmarked are "new" — those are what Undo reverts.
+    const added = [..._dayModalSel].filter((id) => !isBookmarked(id));
+    for (const id of _dayModalSel) setInt(id, { bookmark: true }, byId[id]);
+    const n = _dayModalSel.size; closeDayModal();
+    pushUndo(`Saved ${n} ${n === 1 ? "parcel" : "parcels"}`, () => {
+      for (const id of added) setInt(id, { bookmark: false }, byId[id]);
+      renderCalendar();
+    });
+    renderCalendar();
+  };
+  el.querySelector("#dm-explore").onclick = () => {
+    const selSet = calSelected(), allC = calCounties();
+    S.counties = selSet.size === allC.length ? [] : [...selSet];
+    S.dayFilter = dayNum(y, m + 1, d);
+    S.when = "all"; S.status = "Scheduled"; S.view = "list"; S.mapArea = null; S.reviewOnly = false; S.shown = 150;
+    closeDayModal(); go("dashboard");
+  };
+  el.querySelector("#dm-close").onclick = closeDayModal;
+  el.querySelector("#dm-cancel").onclick = closeDayModal;
+  el.onclick = (e) => { if (e.target === el) closeDayModal(); };   // backdrop click
+  paint();
 }
 // The same calendar as a printable monthly sheet (one month per page).
 function printCalendar() {
@@ -2024,9 +3235,18 @@ function renderSettings() {
         </div>
       </div>
 
+      <div class="blueprint" style="padding:18px 20px">${CORNERS}
+        <h6 style="color:var(--color-accent-700);margin-bottom:12px">Appearance</h6>
+        <div class="text-muted" style="font-size:12.5px;margin-bottom:12px">Choose a theme. &ldquo;System&rdquo; follows your device&rsquo;s light/dark setting automatically.</div>
+        <div style="display:inline-flex;border:1px solid var(--color-divider)">
+          ${[["pearl", "Pearl"], ["charcoal", "Charcoal"], ["obsidian", "Obsidian"], ["system", "System"]].map(([v, l]) => `<button class="seg3 ${themeMode() === v ? "on" : ""}" data-theme-mode="${v}" style="min-width:104px;padding:8px 16px">${l}</button>`).join("")}
+        </div>
+      </div>
+
       ${dataUpdatesHtml()}
     </div>`;
 
+  $("scr-settings").querySelectorAll("[data-theme-mode]").forEach((b) => b.onclick = () => setThemeMode(b.dataset.themeMode));
   const so = $("acct-signout");
   if (so) so.onclick = () => CLOUD.sb.auth.signOut();
   const si = $("acct-signin");
@@ -2082,41 +3302,71 @@ const exportCsv = () => exportRowsCsv(filteredRows(), "tax deed export");
 // ---------- theme (light / dark) ----------
 const THEME_SUN = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>';
 const THEME_MOON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-function themeIsDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
+// Theme is tri-state: light / dark / system. "system" (the default) follows the OS
+// live; light/dark are explicit and ignore the OS. The head pre-paint script sets
+// data-theme before first paint (system/unset -> matchMedia), and this keeps it in
+// sync afterward.
+// Theme is one of pearl (light) / obsidian / charcoal (two darks) / system. Old
+// light/dark values migrate to pearl/charcoal. "system" follows the OS (charcoal
+// when dark). The header pill flips pearl <-> charcoal; Settings picks any of them.
+function themeMode() {
+  try { let t = localStorage.getItem("tdd_theme"); if (t === "light") t = "pearl"; if (t === "dark") t = "charcoal";
+    return (t === "pearl" || t === "obsidian" || t === "charcoal" || t === "system") ? t : "system"; }
+  catch (e) { return "system"; }
+}
+function systemPrefersDark() { try { return matchMedia("(prefers-color-scheme:dark)").matches; } catch (e) { return false; } }
+function effectiveTheme() { const m = themeMode(); return m === "system" ? (systemPrefersDark() ? "charcoal" : "pearl") : m; }
+function effectiveDark() { return effectiveTheme() !== "pearl"; }
+function themeIsDark() { return effectiveDark(); }
+function applyTheme() { document.documentElement.setAttribute("data-theme", effectiveTheme()); paintThemeBtn(); }
+function setThemeMode(mode) {
+  try { localStorage.setItem("tdd_theme", mode); } catch (e) {}
+  applyTheme();
+  if (S.screen === "settings") renderSettings();   // reflect the choice in the Settings control
+}
 function paintThemeBtn() {
   const b = $("btn-theme"); if (!b) return;
-  const dark = themeIsDark();
-  b.innerHTML = dark ? THEME_SUN : THEME_MOON;   // show where the click takes you
-  b.title = dark ? "Switch to light mode" : "Switch to dark mode";
+  const dark = effectiveDark(), knob = dark ? "18px" : "2px";
+  b.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span style="width:38px;height:22px;border-radius:999px;background:var(--toggle);position:relative;display:inline-block"><span style="position:absolute;top:2px;left:${knob};width:18px;height:18px;border-radius:50%;background:var(--toggle-knob);transition:left .2s;box-shadow:0 1px 2px rgba(0,0,0,.25)"></span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>`;
+  b.title = dark ? "Switch to light" : "Switch to dark";
 }
 function initTheme() {
-  paintThemeBtn();
-  $("btn-theme").onclick = () => {
-    const next = themeIsDark() ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    try { localStorage.setItem("tdd_theme", next); } catch (e) {}
-    paintThemeBtn();
-  };
+  applyTheme();
+  $("btn-theme").onclick = () => setThemeMode(effectiveDark() ? "pearl" : "charcoal");
+  try { matchMedia("(prefers-color-scheme:dark)").addEventListener("change", () => { if (themeMode() === "system") applyTheme(); }); } catch (e) {}
 }
 
 (async function boot() {
+  migrateSavedIds();                // canonicalise saved ids before anything reads them
   renderNav();
   wireLogin();
   initTheme();
+  // Close the county multi-select popover on an outside click.
+  document.addEventListener("click", (e) => {
+    if (!S.countyOpen || S.screen !== "dashboard") return;
+    const pop = $("county-pop"), btn = $("f-county-btn");
+    if (pop && !pop.contains(e.target) && btn && !btn.contains(e.target)) { S.countyOpen = false; renderDashboard(); }
+  });
   initCloud();                      // no await — sync comes up alongside the feed
-  $("next-run").textContent = nextRefreshText();
-  $("q").oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); };
-  $("btn-export").onclick = exportCsv;
-  $("btn-refresh-admin").onclick = () => window.open(ADMIN_ACTIONS_URL, "_blank", "noopener");
+  { const b = $("brand"); if (b) b.onclick = (e) => { e.preventDefault(); go("home"); }; }
+  { const s = $("btn-settings"); if (s) s.onclick = () => go("settings"); }
+  { const q = $("q"); if (q) q.oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); }; }
+  { const ex = $("btn-export"); if (ex) ex.onclick = exportCsv; }
+  // Close the account dropdown on any outside click.
+  document.addEventListener("click", (e) => {
+    if (!_acctMenuOpen) return;
+    const box = $("account-box");
+    if (box && !box.contains(e.target)) { _acctMenuOpen = false; renderAccount(); }
+  });
   const ok = await loadFeed();
   if (!ok) {
     $("load-note").innerHTML = '<span class="text-muted">Couldn&rsquo;t load the data feed. Check your connection and reload.</span>';
     return;
   }
   $("load-note").remove();
-  $("last-scrape").textContent = "Data as of " + etStamp(new Date(META.generated_at));
-  $("brand-sub").textContent = `Florida · ${META.counts.counties_total || META.counts.counties} counties`;
-  go("dashboard");
+  backfillSnapshots();              // give already-saved parcels a display snapshot
+  { const ls = $("last-scrape"); if (ls) ls.textContent = "Data as of " + etStamp(new Date(META.generated_at)); }
+  go("home");
 })();
 </script>
 </body>

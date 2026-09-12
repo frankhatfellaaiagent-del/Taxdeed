@@ -1,119 +1,74 @@
 /* Industry — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* ── Pearl (light) — design-handoff tokens. Also the bare-:root default so the
+   app still themes if the pre-paint script hasn't run. ── */
+:root, :root[data-theme="pearl"] {
+  --bg:#faf9f5;
+  --glow:radial-gradient(900px 500px at 100% 0%,rgba(250,225,150,.28),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(250,225,150,.22),transparent 60%);
+  --ink:#1b1d21; --ink2:#5e646d; --ink3:#8c9199;
+  --card:#ffffff; --card2:#ffffff; --line:rgba(20,22,26,.075); --line2:rgba(20,22,26,.11);
+  --tab-bg:#1c1e22; --tab-ink:#ffffff; --tab-border:transparent;
+  --gold:#f0c23a; --gold-soft:#fdf6de; --gold-ink:#5a4600; --gold-ring:#f2c94c;
+  --row-hi:#fcf6e3; --chip:#eef0f3; --chip-ink:#2f353d; --ok:#dff3e5; --ok-ink:#1e6b3b;
+  --btn:#1c1e22; --btn-ink:#ffffff; --btn-border:transparent;
+  --seg-active:#fbf1cf; --seg-active-border:#f2d77d;
+  --map-glow:none; --shadow:0 1px 2px rgba(20,22,26,.04),0 8px 24px rgba(20,22,26,.05);
+  --icon-warn:#f2b400; --icon-ok:#2ea658; --icon-none:#c4c8ce;
+  --toggle:#e7e9ec; --toggle-knob:#ffffff; --danger:#b3261e;
+}
+/* Shared type / spacing / radii, and a bridge that maps the app's legacy
+   --color-* names onto the design tokens so every existing component adopts the
+   new palette; screens move to the design tokens directly as they're rebuilt. */
 :root {
-  --color-bg: #f2f2f3;
-  --color-surface: #e9e9ea;
-  --color-text: #1d1f20;
-  --color-accent: #5980a6;
-  --color-accent-2: #728fab;
-  --color-divider: color-mix(in srgb, #1d1f20 16%, transparent);
-
-  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
-     same step of any role matches the others in visual value. */
-  --color-neutral-100: #f5f5f8;
-  --color-neutral-200: #e7e7ea;
-  --color-neutral-300: #d4d4d7;
-  --color-neutral-400: #b7b7ba;
-  --color-neutral-500: #98989b;
-  --color-neutral-600: #7a7a7d;
-  --color-neutral-700: #5d5d60;
-  --color-neutral-800: #424244;
-  --color-neutral-900: #2b2b2d;
-
-  --color-accent-100: #eef6ff;
-  --color-accent-200: #d6ebff;
-  --color-accent-300: #b5d9fd;
-  --color-accent-400: #94bce3;
-  --color-accent-500: #749dc4;
-  --color-accent-600: #597ea3;
-  --color-accent-700: #416180;
-  --color-accent-800: #2c455d;
-  --color-accent-900: #1d2d3d;
-
-  --color-accent-2-100: #eef6ff;
-  --color-accent-2-200: #d6ebff;
-  --color-accent-2-300: #bdd8f2;
-  --color-accent-2-400: #9ebbd8;
-  --color-accent-2-500: #7e9cb8;
-  --color-accent-2-600: #627d98;
-  --color-accent-2-700: #486077;
-  --color-accent-2-800: #314457;
-  --color-accent-2-900: #1f2d3a;
-
-  --font-heading: "Barlow Condensed", system-ui, sans-serif;
-  --font-heading-weight: 600;
-  --font-body: "Barlow", system-ui, sans-serif;
-
-  --space-1: 3.4px;
-  --space-2: 6.8px;
-  --space-3: 10.2px;
-  --space-4: 13.6px;
-  --space-6: 20.4px;
-  --space-8: 27.2px;
-
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 7px;
-
-  /* Elevation — derived from the ground: soft ink-tinted shadows on a
-     light theme, a hairline edge + ambient darkness on a dark one. */
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #2b2b2d 14%, transparent);
-  --shadow-md: 0 3px 10px color-mix(in srgb, #2b2b2d 16%, transparent);
-  --shadow-lg: 0 12px 32px color-mix(in srgb, #2b2b2d 22%, transparent);
+  --font-heading:"Inter",system-ui,sans-serif; --font-heading-weight:600;
+  --font-body:"Inter",system-ui,sans-serif;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:22px; --space-8:28px;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-pill:999px;
+  --shadow-sm:var(--shadow); --shadow-md:var(--shadow); --shadow-lg:var(--shadow);
+  --color-bg:var(--bg); --color-surface:var(--card); --color-text:var(--ink);
+  --color-text-secondary:var(--ink2); --color-accent:var(--gold); --color-accent-2:var(--gold);
+  --color-action:var(--btn); --color-action-text:var(--btn-ink); --color-divider:var(--line);
+  --color-danger:var(--danger);
+  --color-neutral-100:var(--chip); --color-neutral-200:var(--line2); --color-neutral-300:var(--line2);
+  --color-neutral-400:var(--ink3); --color-neutral-500:var(--ink3); --color-neutral-600:var(--ink3);
+  --color-neutral-700:var(--ink2); --color-neutral-800:var(--ink2); --color-neutral-900:var(--ink);
+  --color-accent-100:var(--gold-soft); --color-accent-200:var(--gold-soft); --color-accent-300:var(--gold);
+  --color-accent-400:var(--gold); --color-accent-500:var(--gold); --color-accent-600:var(--gold);
+  --color-accent-700:var(--gold-ink); --color-accent-800:var(--gold-ink); --color-accent-900:var(--gold-ink);
+  --color-accent-2-100:var(--chip); --color-accent-2-700:var(--ink2); --color-accent-2-800:var(--ink2);
 }
 
-/* ── Dark theme ─────────────────────────────────────────────────────────────
-   Opt-in via <html data-theme="dark">. A tiny head script sets it before first
-   paint (saved choice, else the OS setting) and the header toggle flips it.
-   Only the tokens change — every component reads them, so the whole app
-   follows, and the many color-mix(... var(--color-text) ...) derivations
-   (muted text, dividers, hovers) invert on their own once the ink is light. */
-:root[data-theme="dark"] {
-  --color-bg: #15171a;
-  --color-surface: #1e2226;
-  --color-text: #e6e8eb;
-  --color-accent: #6f97bd;
-  --color-accent-2: #7e9cb8;
-  --color-divider: color-mix(in srgb, #e6e8eb 18%, transparent);
-  --color-danger: #f2726a;
-
-  /* Neutral ramp inverted: low steps = dark surfaces, high steps = light ink.
-     900 stays dark on purpose — its only use is the modal/login scrim. */
-  --color-neutral-100: #202429;
-  --color-neutral-200: #2a2f35;
-  --color-neutral-300: #3a4047;
-  --color-neutral-400: #565c64;
-  --color-neutral-500: #7b818a;
-  --color-neutral-600: #9aa0a8;
-  --color-neutral-700: #b9bec5;
-  --color-neutral-800: #d7dade;
-  --color-neutral-900: #0a0c0e;
-
-  /* Accent ramp inverted: low steps = deep-blue fills, high steps = pale ink. */
-  --color-accent-100: #1b2c3f;
-  --color-accent-200: #223a50;
-  --color-accent-300: #2e4a63;
-  --color-accent-400: #3f6081;
-  --color-accent-500: #5a7ea3;
-  --color-accent-600: #7ea4c8;
-  --color-accent-700: #a6c6e6;
-  --color-accent-800: #cadef4;
-  --color-accent-900: #e8f1fb;
-
-  --color-accent-2-100: #1c2a37;
-  --color-accent-2-200: #243645;
-  --color-accent-2-300: #30475a;
-  --color-accent-2-400: #425e74;
-  --color-accent-2-500: #5c7890;
-  --color-accent-2-600: #7e9cb8;
-  --color-accent-2-700: #a3bdd4;
-  --color-accent-2-800: #c9dbec;
-  --color-accent-2-900: #e6eff8;
-
-  --shadow-sm: 0 1px 2px color-mix(in srgb, #000 45%, transparent);
-  --shadow-md: 0 3px 12px color-mix(in srgb, #000 50%, transparent);
-  --shadow-lg: 0 14px 36px color-mix(in srgb, #000 62%, transparent);
+/* ── Obsidian (dark) — teal-tinted deep ground. Design tokens override the pearl
+   defaults; the --color-* bridge in :root resolves against whichever is active. ── */
+:root[data-theme="obsidian"] {
+  --bg:#0a161c;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(20,70,80,.45),transparent 60%),radial-gradient(900px 600px at 0% 100%,rgba(20,60,70,.35),transparent 60%);
+  --ink:#eef2f3; --ink2:#a8b3b9; --ink3:#7f8a91;
+  --card:rgba(255,255,255,.035); --card2:rgba(12,26,32,.96); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dde3e6; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.35) hue-rotate(150deg) saturate(1.7) brightness(.85);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
+}
+/* ── Charcoal (dark) — neutral deep grey ── */
+:root[data-theme="charcoal"] {
+  --bg:#17181a;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(255,255,255,.04),transparent 60%);
+  --ink:#eeeeec; --ink2:#a9aaa8; --ink3:#7f807e;
+  --card:rgba(255,255,255,.035); --card2:rgba(24,25,27,.97); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dddddb; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.15) brightness(.9);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
 }
 
 body {
@@ -123,29 +78,18 @@ body {
 }
 h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
 
+/* Design-handoff card: rounded, soft-shadow, on the surface color. The old
+   wireframe corner ticks are hidden so every existing ${CORNERS} card becomes a
+   clean rounded card with no markup changes. */
 .blueprint {
   position: relative;
-  border: 1px solid var(--color-divider);
-  border-radius: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
-/* The overlay image treatments (halftone, duotone) clip their overlay
-   (overflow:hidden); a blueprint wrapper draws its registration marks
-   outside the box, so when both classes share a wrapper the frame must
-   win. */
 .blueprint.halftone, .blueprint.plate, .blueprint.duotone { overflow: visible; }
-.blueprint > .corner {
-  position: absolute; width: 11px; height: 11px;
-  color: color-mix(in srgb, var(--color-text) 55%, transparent);
-}
-.blueprint > .corner::before, .blueprint > .corner::after {
-  content: ""; position: absolute; background: currentColor;
-}
-.blueprint > .corner::before { left: 5px; top: 0; width: 1px; height: 100%; }
-.blueprint > .corner::after  { top: 5px; left: 0; width: 100%; height: 1px; }
-.blueprint > .corner.tl { top: -6px; left: -6px; }
-.blueprint > .corner.tr { top: -6px; right: -6px; }
-.blueprint > .corner.bl { bottom: -6px; left: -6px; }
-.blueprint > .corner.br { bottom: -6px; right: -6px; }
+.blueprint > .corner { display: none; }
 
 .duotone{position:relative;overflow:hidden}
 .duotone::after{content:"";position:absolute;inset:0;pointer-events:none;
@@ -178,7 +122,7 @@ figcaption {
   font-size: 11px; margin-top: var(--space-1);
   color: color-mix(in srgb, var(--color-text) 55%, transparent);
 }
-.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+.text-muted { color: var(--color-text-secondary); }
 :focus { outline: none; }
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
@@ -202,9 +146,9 @@ figcaption {
 }
 .btn svg { display: block; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.btn-primary { background: var(--color-accent); color: var(--color-bg); }
-.btn-primary:hover { background: var(--color-accent-600); }
-.btn-primary:active { background: var(--color-accent-700); }
+.btn-primary { background: var(--color-action); color: var(--color-action-text); border-color: var(--color-action); }
+.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary:active { filter: brightness(0.92); }
 .btn-secondary { border-color: var(--color-divider); }
 .btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
@@ -284,6 +228,10 @@ textarea.input { min-height: 90px; resize: vertical; }
 .tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
 .tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
 .tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+/* Semantic status tags (distinct from the gold accent). Mixed against the current
+   theme's surface/ink so they adapt to light and dark automatically. */
+.tag-ok { background: color-mix(in srgb, #3f9d4e 20%, var(--color-surface)); color: color-mix(in srgb, #2f8b3f 62%, var(--color-text)); }
+.tag-warn { background: color-mix(in srgb, #d69a1e 24%, var(--color-surface)); color: color-mix(in srgb, #a6791a 62%, var(--color-text)); }
 
 /* — navigation — */
 .nav {
@@ -329,11 +277,49 @@ textarea.input { min-height: 90px; resize: vertical; }
 .dialog-body { font-size: 14px; opacity: 0.85; }
 .dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
 
-/* — blueprint frame: components are wireframe objects (see .blueprint
-     and .corner above) — square, transparent, hairline-bordered — */
-.card, .btn, .input, .tag, .seg, .dialog { border-radius: 0; }
-.card, .dialog { background: transparent; border: 1px solid var(--color-divider); }
-.btn { border: 1px solid var(--color-divider); }
-.btn-primary { border-color: var(--color-accent); }
+/* — design-handoff rounding: pills for controls, rounded cards, rounded badges — */
+.btn, .input, .seg { border-radius: var(--radius-pill); }
+.tag { border-radius: var(--radius-sm); }
+.card, .dialog { border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.btn { border: 1px solid var(--line); }
+.btn-primary { border-color: var(--btn-border); }
 .btn-ghost { border-color: transparent; }
+.input { background: var(--card); }
+
+/* — design-handoff: tables, badges, Explore chrome — */
+.table th {
+  font-size: 12px; letter-spacing: 0.14em; color: var(--ink3);
+  border-bottom: 1px solid var(--line); padding: 12px 14px;
+}
+.table td { padding: 14px; border-bottom: 1px solid var(--line); }
+.table tbody tr:hover { background: var(--row-hi); }
+/* Status badges: 13px/500, 6×14, radius 8 — handoff palette. */
+.tag { font-size: 13px; font-weight: 500; padding: 5px 13px; letter-spacing: 0; }
+.tag-ok { background: var(--ok, #dff3e5); color: var(--ok-ink, #1e6b3b); }
+.tag-warn { background: var(--gold-soft, #fdf6de); color: var(--gold-ink, #5a4600); }
+.tag-neutral { background: var(--chip); color: var(--chip-ink); }
+.tag-accent { background: var(--gold-soft); color: var(--gold-ink); }
+.tag-outline { border: 1px solid var(--line2); color: var(--ink2); }
+/* Card section header holding a title + a control (e.g. List/Map segment). */
+.card-head { display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.card-title { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+/* Bookmark toggle in a table cell. */
+.bm-toggle { background: none; border: none; cursor: pointer; color: var(--ink3);
+  display: grid; place-items: center; padding: 4px; border-radius: 8px; }
+.bm-toggle:hover { color: var(--gold); background: var(--row-hi); }
+.bm-toggle.on { color: var(--gold); }
+.bm-toggle.on svg { fill: var(--gold); }
+.bm-toggle[aria-pressed="true"] { color: var(--gold-ink); background: var(--gold-soft); border-color: var(--gold-ring) !important; }
+.bm-toggle[aria-pressed="true"] svg { fill: var(--gold); }
+/* Account dropdown menu items. */
+.acct-item { display: block; width: 100%; text-align: left; background: none; border: none;
+  padding: 12px 16px; font-size: 14px; color: var(--ink); cursor: pointer; }
+.acct-item:hover { background: var(--row-hi); }
+/* "Planned" banner (Price intelligence). */
+.plan-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 16px 20px; border: 1px dashed var(--line2); border-radius: var(--radius-lg);
+  background: var(--card); color: var(--ink2); font-size: 14px; }
+.plan-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-ink); background: var(--gold-soft); border-radius: 999px; padding: 4px 12px; }
 
