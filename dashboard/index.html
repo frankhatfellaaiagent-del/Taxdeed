@@ -64,7 +64,11 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 .home-bm{color:var(--ink3);flex:none;display:grid;place-items:center}
 .home-bm.on{color:var(--gold)}
 .home-bm.on svg{fill:var(--gold)}
-@media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}}
+/* Saved screen list-picker rows. */
+.saved-pick{display:flex;align-items:center;gap:8px;width:100%;padding:11px 12px;border:none;background:none;cursor:pointer;color:var(--ink);border-radius:12px;font-size:15px}
+.saved-pick:hover{background:var(--row-hi)}
+.saved-pick.on{background:var(--seg-active);box-shadow:inset 0 0 0 1px var(--seg-active-border)}
+@media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}.saved-grid{grid-template-columns:1fr!important}}
 /* Dark-theme map tint: applied on the street tile pane only (not satellite). */
 .map-glow .leaflet-tile-pane{filter:var(--map-glow)}
 .ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
@@ -990,6 +994,8 @@ let S = {
   _mapCenter: null, _mapZoom: null, quickId: null,   // map position (preserved) + open quick card
   // Which list is open on its own page, and that page's own filter/sort state.
   listName: null, listShared: false,
+  savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
+
   // Where the open property was reached from, so Back returns exactly there and
   // Previous/Next walk that origin's ordered results (Explore OR a saved list).
   origin: null,   // { screen, listName, listShared, ids:[id...], scrollTop }
@@ -2172,16 +2178,15 @@ function renderDetail() {
         <button class="btn btn-secondary" id="nav-prev"${step.hasPrev ? "" : " disabled"}>&larr; Previous</button>
         <button class="btn btn-secondary" id="nav-next"${step.hasNext ? "" : " disabled"}>Next &rarr;</button>
       </div></div>`; })()}
-    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px">
-      <h2 style="margin:0">${esc(p.hasAddr ? p.addr : "Parcel " + p.parcel)}</h2>
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px">
+      <h1 style="margin:0;font-size:46px;font-weight:500;letter-spacing:-.02em;line-height:1.05">${p.hasAddr ? esc(p.addr) : `<span style="font-weight:400">Parcel</span> ${esc(p.parcel)}`}</h1>
       ${effType(p) ? `<span class="tag tag-accent">${esc(effType(p))}</span>` : ""}
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
-      <span style="font-size:13px" class="text-muted">${esc(p.city)}${p.city ? " &middot; " : ""}${esc(p.county)} County</span>
     </div>
-    <div class="mono" style="font-size:12.5px;color:var(--color-accent-700);margin-bottom:10px">Parcel ${esc(p.parcel)}</div>
-    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;margin-bottom:22px" class="text-muted">
+    ${p.hasAddr ? `<div class="mono" style="font-size:13px;color:var(--ink3);margin-bottom:10px">Parcel ${esc(p.parcel)}</div>` : ""}
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:15px;margin-bottom:24px;color:var(--ink2)">
       <span>${p.acreage ? esc(p.acreage) + " acres" : "Acres not available"}</span>
-      <span>${p.hasAddr ? esc(p.addr) : "No street address published"}</span>
+      <span>${p.hasAddr ? esc([p.city, p.county + " County"].filter(Boolean).join(" · ")) : "No street address published"}</span>
       <span>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
     </div>
     ${(() => {
@@ -2382,92 +2387,144 @@ function renderDetail() {
 // ---------- lists screen (grid of every list) ----------
 function renderLists() {
   const signedIn = !!(CLOUD && CLOUD.user);
-  const all = [
-    ...lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: false })),
-    ...team.lists.filter((l) => !l.deleted).map((l) => ({ ...l, shared: true })),
+  const active = [
+    ...lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: true })),
   ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
-  const active = all.filter((l) => !l.archived);
-  const archived = all.filter((l) => l.archived);
-  // Bookmarked properties (saved without needing a named list), and any saved
-  // property that has since dropped out of the feed (shown from its snapshot,
-  // never assumed sold).
+  const archived = [
+    ...lists.filter((l) => !l.deleted && l.archived).map((l) => ({ ...l, shared: false })),
+    ...team.lists.filter((l) => !l.deleted && l.archived).map((l) => ({ ...l, shared: true })),
+  ].map((l) => ({ ...l, items: listItems(l.name, l.shared) }));
   const byId = {}; for (const p of DATA) byId[p.id] = p;
-  const bmLive = Object.keys(interest).filter((id) => interest[id] && interest[id].bookmark && byId[id]).map((id) => byId[id]);
-  const goneSnaps = [...savedIds()].filter((id) => !byId[id]).map((id) => ({ id, snap: interest[id] && interest[id].snap })).filter((x) => x.snap);
-  const savedSection = bmLive.length ? `
-    <div class="blueprint" style="padding:0;margin-bottom:24px">${CORNERS}
-      <div style="padding:12px 16px;border-bottom:1px solid var(--color-divider);display:flex;align-items:baseline;gap:10px">
-        <h6 style="color:var(--color-accent-700);margin:0">Saved properties</h6>
-        <span class="text-muted" style="font-size:12px">${bmLive.length} bookmarked</span>
+  const savedSet = savedIds();
+  const allSaved = [...savedSet].filter((id) => byId[id]).map((id) => byId[id]);
+  const goneSnaps = [...savedSet].filter((id) => !byId[id]).map((id) => ({ id, snap: interest[id] && interest[id].snap })).filter((x) => x.snap);
+
+  // The collection shown on the right: "all" or a specific list key. A picked
+  // list that no longer exists falls back to All saved.
+  let view = S.savedView || "all";
+  if (view !== "all") {
+    const [pfx, nm] = [view.slice(0, 2), view.slice(2)];
+    if (!findList(nm, pfx === "t:")) { view = S.savedView = "all"; }
+  }
+  const viewName = view === "all" ? "All saved"
+    : (() => { const nm = view.slice(2); return nm; })();
+  const rows = view === "all" ? allSaved
+    : listItems(view.slice(2), view.startsWith("t:"));
+  const rowIds = rows.map((p) => p.id);
+
+  // Left picker — All saved + every active list, active row highlighted.
+  const pickRow = (key, label, count, shared) => `<button class="saved-pick ${view === key ? "on" : ""}" data-view="${esc(key)}">
+    <span style="flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(label)}</span>
+    ${shared ? '<span class="home-chip home-chip-team">team</span>' : ""}
+    <span class="home-chip">${count}</span></button>`;
+  const picker = `
+    <div class="home-card" style="padding:14px">
+      ${pickRow("all", "All saved", allSaved.length, false)}
+      ${active.length ? `<div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin:14px 8px 6px">MY LISTS</div>
+        ${active.map((l) => pickRow((l.shared ? "t:" : "p:") + l.name, l.name, l.items.length, l.shared)).join("")}`
+        : `<p class="home-empty" style="margin:12px 8px">No lists yet.</p>`}
+    </div>
+    ${archived.length ? `<div class="home-card" style="padding:14px;margin-top:16px">
+      <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500;margin:2px 8px 8px">ARCHIVED</div>
+      ${archived.map((l) => `<div style="display:flex;align-items:center;gap:8px;padding:8px">
+        <span style="flex:1;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(l.name)}${l.shared ? ' <span class="tag tag-outline">team</span>' : ""}</span>
+        <button class="btn btn-ghost" data-restore="${esc(l.name)}" data-shared="${l.shared ? 1 : 0}" style="font-size:12px;padding:3px 9px">Restore</button>
+      </div>`).join("")}
+    </div>` : ""}`;
+
+  // Right panel — the selected collection as a table.
+  const isList = view !== "all";
+  const listObj = isList ? findList(view.slice(2), view.startsWith("t:")) : null;
+  const tableCard = `
+    <div class="home-card" style="padding:0">
+      <div class="card-head">
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+          <h3 class="card-title">${esc(viewName)}</h3>
+          ${listObj && listObj.shared ? '<span class="tag tag-outline">team</span>' : ""}
+          <span style="font-size:14px;color:var(--ink2)">${rows.length} ${rows.length === 1 ? "parcel" : "parcels"}</span>
+        </div>
+        <div style="display:flex;gap:8px">
+          ${isList ? `<button class="btn btn-secondary" id="saved-manage" style="font-size:13px">Manage list</button>` : ""}
+          ${rows.length ? `<button class="btn btn-secondary" id="saved-map" style="font-size:13px">Show on map</button>` : ""}
+        </div>
       </div>
-      <div class="tablewrap"><table class="table"><tbody>
-        ${bmLive.map((p) => `<tr class="rowlink" data-saved="${esc(p.id)}">
-          <td><div style="font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div><div style="font-size:12px" class="text-muted">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></td>
-          <td style="font-size:13px">${esc(p.auction)}</td>
-          <td>${decisionCell(p)}</td>
-          <td>${researchCell(p)}</td>
-        </tr>`).join("")}
-      </tbody></table></div>
-    </div>` : "";
+      ${rows.length ? `<div class="tablewrap"><table class="table">
+        <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="text-align:right">My max</th><th style="width:44px"></th></tr></thead>
+        <tbody>
+          ${rows.map((p) => { const it = getInt(p.id); return `<tr class="rowlink" data-open="${esc(p.id)}">
+            <td><div style="font-size:16px;font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div>
+              <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
+            <td style="font-size:14px;white-space:nowrap">${esc(p.auction)}</td>
+            <td>${researchCell(p)}</td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums">${it.bid ? esc(String(it.bid)) : '<span class="text-muted">—</span>'}</td>
+            <td style="text-align:center"><button class="bm-toggle on" data-unsave="${esc(p.id)}" aria-label="Remove from ${esc(viewName)}" title="Remove from ${esc(viewName)}" style="font-size:18px;line-height:1">&times;</button></td>
+          </tr>`; }).join("")}
+        </tbody></table></div>`
+      : `<p class="home-empty" style="padding:22px">${isList ? "Nothing in this list yet. Bookmark a parcel from Explore, or add it to this list from a property page." : "Nothing saved yet. Bookmark a parcel from Explore, or save one from its property page."}</p>`}
+    </div>`;
+
   const goneSection = goneSnaps.length ? `
-    <h3 style="margin:30px 0 10px;font-size:16px">No longer in the feed</h3>
-    <p class="text-muted" style="font-size:12.5px;margin-bottom:10px">These saved properties dropped out of the county feed. They&rsquo;re kept here from your last snapshot &mdash; unavailable pending verification, <b>not</b> assumed sold.</p>
-    <div class="blueprint" style="padding:6px 18px">${CORNERS}
-      ${goneSnaps.map(({ snap }) => `<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
+    <div class="home-card" style="margin-top:22px;padding:18px 22px">
+      <h3 class="home-h3" style="margin-bottom:4px">No longer in the feed</h3>
+      <p class="home-empty" style="margin-bottom:12px">These saved properties dropped out of the county feed. They&rsquo;re kept from your last snapshot &mdash; unavailable pending verification, <b>not</b> assumed sold.</p>
+      ${goneSnaps.map(({ snap }) => `<div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);flex-wrap:wrap">
         <div style="flex:1;min-width:160px"><span style="font-weight:500">${esc(snap.addr || snap.parcel || "—")}</span>
-          <div class="text-muted" style="font-size:12.5px">${esc([snap.city, snap.county + " County"].filter(Boolean).join(" · "))}${snap.saleDate ? " · was " + esc(fmtDate(new Date(snap.saleDate))) : ""}</div></div>
+          <div style="font-size:13px;color:var(--ink2)">${esc([snap.city, snap.county + " County"].filter(Boolean).join(" · "))}${snap.saleDate ? " · was " + esc(fmtDate(new Date(snap.saleDate))) : ""}</div></div>
         <span class="tag tag-warn">Unavailable — pending verification</span>
       </div>`).join("")}
     </div>` : "";
 
   $("scr-lists").innerHTML = `
-    <h2 style="margin-bottom:6px">Saved</h2>
-    <p class="text-muted" style="font-size:14px;margin-bottom:20px">${signedIn
-      ? "Personal lists are yours; <b>team</b> lists are shared — everyone signed in sees them live. Open a list to filter it and manage it."
-      : "Group the properties you&rsquo;re tracking. Open a list to filter and sort it. Lists save in this browser" + (SYNC_ON ? " — sign in to sync them across devices." : ".")}</p>
-    ${isPaid() ? `<div style="display:flex;gap:10px;max-width:560px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
-      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
-      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer">
-        <input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
-      <button class="btn btn-primary" id="add-list" style="flex:none">+ Create</button>
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:6px;margin-bottom:6px">
+      <h1 style="margin:0;font-size:44px;font-weight:500;letter-spacing:-.02em">Saved parcels.</h1>
+      ${isPaid() ? `<button class="btn btn-primary" id="new-list-btn" style="height:44px;padding:0 18px;font-size:15px">+ New list</button>` : ""}
     </div>
-    <div id="new-list-hint" style="font-size:12.5px;margin-bottom:22px;color:var(--color-danger,#b3261e)" hidden></div>`
-    : `<div class="blueprint" style="padding:12px 16px;margin-bottom:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:560px">${CORNERS}
-      <span style="font-size:13.5px">Lists &mdash; group the parcels you&rsquo;re tracking and share them with your team &mdash; are a paid feature.</span>
-      ${upgradeChip("Unlock lists")}</div>`}
-    ${savedSection}
-    ${active.length || bmLive.length ? `<h3 style="margin:8px 0 12px;font-size:16px">Lists</h3>` : ""}
-    ${active.length ? `<div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
-      ${active.map((lc) => `
-        <div class="blueprint list-card" data-openlist="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="padding:18px 20px;cursor:pointer">${CORNERS}
-          <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
-            <div style="font-family:var(--font-heading);font-weight:600;font-size:20px;flex:1">${esc(lc.name)}</div>
-            ${lc.shared ? '<span class="tag tag-outline">team</span>' : ""}
-            <span class="tag tag-accent">${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
-          </div>
-          <div style="font-size:13px;margin:6px 0 14px" class="text-muted">${esc(lc.desc || "") || (lc.items.length ? "" : "Empty — add parcels from a property page.")}</div>
-          <div style="font-size:13px;font-weight:500;color:var(--color-accent-700)">Open list &rarr;</div>
-        </div>`).join("")}
-    </div>` : `<div class="text-muted" style="font-size:13.5px">${archived.length ? "All your lists are archived — restore one below." : "No lists yet — create one above, then add parcels to it from any property page."}</div>`}
-    ${archived.length ? `
-      <h3 style="margin:34px 0 10px;font-size:16px">Archived</h3>
-      <div class="blueprint" style="padding:6px 18px">${CORNERS}
-        ${archived.map((lc) => `
-          <div style="display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider);flex-wrap:wrap">
-            <div style="flex:1;min-width:140px">
-              <span style="font-weight:500">${esc(lc.name)}</span>
-              ${lc.shared ? ' <span class="tag tag-outline">team</span>' : ""}
-              <span class="text-muted" style="font-size:12.5px"> &middot; ${lc.items.length} ${lc.items.length === 1 ? "parcel" : "parcels"}</span>
-            </div>
-            <button class="btn btn-secondary" data-restore="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 10px">Restore</button>
-            <button class="btn btn-ghost" data-delete="${esc(lc.name)}" data-shared="${lc.shared ? 1 : 0}" style="font-size:12.5px;padding:4px 8px;color:var(--color-danger,#b3261e)">Delete</button>
-          </div>`).join("")}
-      </div>` : ""}
+    <p style="font-size:17px;color:var(--ink2);margin:0 0 22px">${allSaved.length} ${allSaved.length === 1 ? "parcel" : "parcels"} across ${active.length} ${active.length === 1 ? "list" : "lists"}.${signedIn ? " Team lists are shared live with everyone signed in." : SYNC_ON ? " Sign in to sync across devices." : ""}</p>
+    ${isPaid() ? "" : `<div class="plan-banner" style="margin-bottom:20px"><span class="plan-badge">Paid</span><span>Named lists &mdash; group parcels and share them with your team &mdash; are a paid feature. ${upgradeChip("Unlock lists")}</span></div>`}
+    <div id="new-list-row" hidden style="display:flex;gap:10px;max-width:560px;margin-bottom:18px;align-items:center;flex-wrap:wrap">
+      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
+      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
+      <button class="btn btn-primary" id="add-list" style="flex:none">Create</button>
+      <div id="new-list-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);flex-basis:100%" hidden></div>
+    </div>
+    <div class="saved-grid" style="display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start">
+      <div>${picker}</div>
+      <div>${tableCard}</div>
+    </div>
     ${goneSection}`;
 
-  const bmIds = bmLive.map((p) => p.id);
-  $("scr-lists").querySelectorAll("[data-saved]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.saved, bmIds, "lists"));
+  // Left picker selection.
+  $("scr-lists").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => { S.savedView = b.dataset.view; renderLists(); });
+  // Row open (walks the current collection for Prev/Next).
+  $("scr-lists").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, rowIds, "lists"));
+  // Unsave (×): from a specific list removes only that membership; from All saved
+  // fully unsaves (clears bookmark and any list membership).
+  $("scr-lists").querySelectorAll("[data-unsave]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.unsave, rec = byId[id];
+    if (isList) {
+      if (view.startsWith("t:")) { delete team.membership[id]; saveTeam(); }
+      else setInt(id, { list: "" }, rec);
+    } else {
+      if (team.membership[id]) { delete team.membership[id]; saveTeam(); }
+      setInt(id, { bookmark: false, list: "" }, rec);
+    }
+    renderLists();
+  });
+  const mapBtn = $("saved-map"); if (mapBtn) mapBtn.onclick = () => {
+    // Show the collection on the Explore map by county (best available filter).
+    const cs = [...new Set(rows.map((p) => p.county))];
+    S.counties = cs; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false;
+    S.when = "all"; S.status = "All"; S.view = "map"; S.shown = 150; persistCountiesGlobal(); go("dashboard");
+  };
+  const manageBtn = $("saved-manage"); if (manageBtn) manageBtn.onclick = () => openList(view.slice(2), view.startsWith("t:"));
 
+  // Create-list controls.
+  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = () => {
+    const row = $("new-list-row"); row.hidden = !row.hidden; if (!row.hidden) $("new-list").focus();
+  };
   const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
   const createList = () => {
     const inp = $("new-list");
@@ -2479,29 +2536,24 @@ function renderLists() {
     const sharedBox = $("new-list-shared");
     const shared = !!(sharedBox && sharedBox.checked);
     const arr = shared ? team.lists : lists;
-    // Reusing a deleted list's name revives it (clears the tombstone) rather
-    // than leaving two entries with the same name.
     const tomb = arr.find((l) => l.name === name && l.deleted);
     if (tomb) { delete tomb.deleted; tomb.archived = false; }
     else arr.push({ name, desc: "" });
     shared ? saveTeam() : saveLists();
-    renderLists();   // stay on the grid so the new card shows as confirmation
+    S.savedView = (shared ? "t:" : "p:") + name;   // select the new list
+    renderLists();
   };
-  if ($("add-list")) {   // the create controls only render for paid accounts
+  if ($("add-list")) {
     $("add-list").onclick = createList;
     $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
     $("new-list").oninput = () => listHint("");
   }
-  $("scr-lists").querySelectorAll("[data-openlist]").forEach((c) => c.onclick = () =>
-    openList(c.dataset.openlist, c.dataset.shared === "1"));
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
     setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
   });
-  $("scr-lists").querySelectorAll("[data-delete]").forEach((b) => b.onclick = () => {
-    if (!confirm(`Delete the list “${b.dataset.delete}”? Parcels stay in the data — they’re just unassigned from this list.`)) return;
-    deleteList(b.dataset.delete, b.dataset.shared === "1"); renderLists();
-  });
 }
+// Persist the global county selection (used by the Saved "Show on map" jump).
+function persistCountiesGlobal() { prefs.counties = S.counties.slice(); savePrefs(); }
 
 // ---------- single-list page: filter, sort, manage ----------
 function renderListDetail() {
