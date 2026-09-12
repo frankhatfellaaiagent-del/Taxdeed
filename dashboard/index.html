@@ -72,6 +72,72 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 @media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}.saved-grid{grid-template-columns:1fr!important}}
 /* Dark-theme map tint: applied on the street tile pane only (not satellite). */
 .map-glow .leaflet-tile-pane{filter:var(--map-glow)}
+
+/* ===== Home: teal dashboard shell (scoped to body.on-home) ===== */
+body.on-home #frame{background:#33566a!important}
+body.on-home #glow{display:none}
+body.on-home header #brand{color:#ffffff}
+body.on-home header #btn-settings{color:#e7eef1}
+body.on-home header #last-scrape{color:rgba(255,255,255,.72)}
+body.on-home header #btn-export{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
+body.on-home .rail-btn{background:#12303f;color:#fff;border-color:transparent;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+body.on-home .rail-btn.active{background:#0d2531;color:#fff;border-color:transparent}
+body.on-home #scr-home{background:#fff;border-radius:26px;padding:30px 34px 34px;box-shadow:0 18px 44px rgba(10,25,35,.20);color:#12303f}
+/* Home content */
+.h2-greet{margin:0;font-size:44px;font-weight:700;letter-spacing:-.02em;line-height:1.06;color:#12303f}
+.h2-date{margin:6px 0 22px;font-size:16px;color:#5f7885}
+.h2-hero{display:grid;grid-template-columns:1.75fr 1fr;gap:20px;margin-bottom:20px}
+.h2-upcoming{position:relative;overflow:hidden;border-radius:22px;padding:26px 28px;min-height:250px;color:#fff;background:linear-gradient(120deg,#1e4d67 0%,#356f83 62%,#4d8a97 100%)}
+.h2-up-body{position:relative;z-index:2;max-width:60%}
+.h2-up-label{font-size:16px;color:rgba(255,255,255,.9);font-weight:500}
+.h2-up-big{font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1;margin:6px 0 2px}
+.h2-up-sub{font-size:16px;color:rgba(255,255,255,.8)}
+.h2-minirow{display:flex;gap:26px;margin:20px 0 22px}
+.h2-mini{display:flex;align-items:center;gap:10px}
+.h2-mini-ico{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.14);display:grid;place-items:center;color:#fff;flex:none}
+.h2-mini-lbl{display:block;font-size:13px;color:rgba(255,255,255,.78)}
+.h2-mini-val{display:block;font-size:22px;font-weight:600}
+.h2-cta-dark{display:inline-flex;align-items:center;gap:10px;background:#0f2c3b;color:#fff;border:none;border-radius:12px;padding:13px 22px;font-size:15px;font-weight:500;cursor:pointer}
+.h2-cta-dark:hover{background:#0a2230}
+.h2-scene{position:absolute;right:0;bottom:0;top:0;width:56%;z-index:1;opacity:.96;pointer-events:none}
+.h2-saved{position:relative;overflow:hidden;border-radius:22px;padding:26px 28px;min-height:250px;background:linear-gradient(150deg,#fbe2d0,#f6cdb4);color:#123243;display:flex;flex-direction:column}
+.h2-saved-ico{position:absolute;top:22px;right:22px;opacity:.95}
+.h2-sv-label{font-size:16px;font-weight:500;color:#1f4a5c}
+.h2-sv-big{font-size:64px;font-weight:700;letter-spacing:-.03em;line-height:1;margin:6px 0 2px;color:#12303f}
+.h2-sv-sub{font-size:16px;color:#3f5a66}
+.h2-cta-light{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#12303f;border:none;border-radius:12px;padding:13px 22px;font-size:15px;font-weight:500;cursor:pointer;box-shadow:0 2px 8px rgba(20,30,40,.12)}
+.h2-cta-light:hover{background:#f6f8f9}
+.h2-row2{display:grid;grid-template-columns:1.75fr 1fr;gap:20px;margin-bottom:20px}
+.h2-row3{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.h2-card{border:1px solid #e7edf0;border-radius:18px;padding:20px 22px;background:#fff}
+.h2-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.h2-h3{margin:0;font-size:19px;font-weight:600;color:#12303f}
+.h2-link{background:none;border:none;cursor:pointer;color:#2f6f8f;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:5px;padding:0}
+.h2-link:hover{color:#1d5673}
+.h2-link-inline{font-size:13px}
+.h2-empty{text-align:center;padding:26px 10px 22px;color:#5f7885}
+.h2-empty-ico{color:#c3ced3;margin-bottom:10px;display:flex;justify-content:center}
+.h2-empty-title{font-size:17px;font-weight:600;color:#26414d}
+.h2-empty-sub{font-size:14px;color:#6c828d;margin-top:2px}
+.h2-plist{display:flex;flex-direction:column}
+.h2-prow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:none;border:none;border-top:1px solid #eef2f4;padding:11px 6px;cursor:pointer}
+.h2-prow:first-child{border-top:none}
+.h2-prow:hover{background:#f6f9fa}
+.h2-prow-main{flex:1;min-width:0}
+.h2-prow-title{display:block;font-size:15px;font-weight:500;color:#12303f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h2-prow-sub{display:block;font-size:13px;color:#6c828d;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h2-prow-meta{font-size:13px;color:#6c828d;white-space:nowrap;flex:none}
+.h2-listrows{display:flex;flex-direction:column}
+.h2-lrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:none;border-top:1px solid #eef2f4;padding:11px 6px;cursor:pointer}
+.h2-lrow:first-child{border-top:none}
+.h2-lrow:hover{background:#f6f9fa}
+.h2-lname{flex:1;font-size:15px;color:#12303f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.h2-team{font-size:12px;font-weight:600;color:#1f4a5c;background:#e4eef1;border-radius:999px;padding:2px 9px}
+.h2-pill{font-size:13px;font-weight:600;color:#4a6472;background:#eef2f4;border-radius:999px;padding:2px 11px;min-width:26px;text-align:center}
+.h2-mc-head{display:flex;align-items:flex-start;gap:12px}
+.h2-mc-ico{width:40px;height:40px;border-radius:12px;background:#eef4f6;color:#2f6f8f;display:grid;place-items:center;flex:none}
+.h2-mc-sub{font-size:14px;color:#6c828d;margin-top:2px}
+@media (max-width:1000px){.h2-hero,.h2-row2,.h2-row3{grid-template-columns:1fr}.h2-up-body{max-width:100%}.h2-scene{opacity:.28}}
 .ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
 .ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
 .nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
@@ -151,7 +217,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 </head>
 <body>
 <div id="frame" style="min-height:100vh;position:relative;font-family:var(--font-body);color:var(--ink);background:var(--bg)">
-<div style="position:fixed;inset:0;background:var(--glow);pointer-events:none;z-index:0"></div>
+<div id="glow" style="position:fixed;inset:0;background:var(--glow);pointer-events:none;z-index:0"></div>
 
 <nav id="rail" aria-label="Primary navigation" style="position:fixed;left:0;top:0;bottom:0;width:68px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;padding-left:14px;z-index:40;pointer-events:none"></nav>
 
@@ -1297,6 +1363,9 @@ function go(screen, selId) {
   S.screen = screen;
   if (selId !== undefined) S.selId = selId;
   renderNav();
+  // Home wears a distinct teal dashboard shell (white content panel); every other
+  // screen keeps the theme system. This class drives that scoped restyle.
+  try { document.body.classList.toggle("on-home", screen === "home"); } catch (e) {}
   for (const k of ["home","dashboard","detail","lists","listdetail","calendar","settings"]) $("scr-" + k).hidden = k !== screen;
   ({ home: renderHome, dashboard: renderDashboard, detail: renderDetail, lists: renderLists,
      listdetail: renderListDetail, calendar: renderCalendar, settings: renderSettings })[screen]();
@@ -1464,6 +1533,43 @@ function researchCell(p) {
 }
 
 // ---------- home screen ----------
+// Decorative Florida scene for the hero card (sunset, water, palms, a house).
+// Tonal silhouettes so it reads on the teal gradient without stealing focus.
+const HOME_SCENE = `
+<svg viewBox="0 0 360 240" width="100%" height="100%" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+  <defs>
+    <radialGradient id="hsun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd9a0"/><stop offset="60%" stop-color="#f6b26b"/><stop offset="100%" stop-color="#e88f52"/>
+    </radialGradient>
+    <linearGradient id="hwater" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe0e0" stop-opacity=".55"/><stop offset="100%" stop-color="#7fbcc4" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="120" r="46" fill="url(#hsun)"/>
+  <path d="M0 176 Q90 168 180 176 T360 176 L360 240 L0 240 Z" fill="url(#hwater)"/>
+  <path d="M8 176 h344" stroke="#ffffff" stroke-opacity=".25" stroke-width="1.5"/>
+  <!-- house -->
+  <g fill="#f4efe6" opacity=".96">
+    <rect x="232" y="120" width="96" height="70" rx="3"/>
+    <path d="M228 122 L280 92 L332 122 Z"/>
+  </g>
+  <g fill="#cdd9d6"><rect x="246" y="138" width="18" height="18" rx="2"/><rect x="296" y="138" width="18" height="18" rx="2"/><rect x="270" y="158" width="24" height="32" rx="2"/></g>
+  <!-- palms -->
+  <g stroke="#173f4c" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M70 190 Q66 150 74 116"/>
+    <path d="M118 190 Q122 156 112 124"/>
+  </g>
+  <g fill="none" stroke="#1d4a58" stroke-width="4.5" stroke-linecap="round">
+    <path d="M74 116 Q52 104 34 112"/><path d="M74 116 Q60 98 46 92"/><path d="M74 116 Q90 100 108 100"/><path d="M74 116 Q92 106 106 118"/><path d="M74 116 Q74 98 78 86"/>
+    <path d="M112 124 Q94 110 78 116"/><path d="M112 124 Q100 108 92 98"/><path d="M112 124 Q132 110 148 112"/><path d="M112 124 Q128 112 140 122"/>
+  </g>
+  <!-- birds -->
+  <g stroke="#173f4c" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".8">
+    <path d="M40 60 q8 -7 16 0 q8 -7 16 0"/><path d="M84 44 q6 -5 12 0 q6 -5 12 0"/>
+  </g>
+</svg>`;
+// Folder-with-house glyph for the Saved card.
+const HOME_FOLDER = `<svg width="76" height="76" viewBox="0 0 48 48" fill="none" stroke="#1f4a5c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M5 13a3 3 0 0 1 3-3h10l4 5h13a3 3 0 0 1 3 3v17a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M17 33V25l7-5 7 5v8" fill="#ffffff"/><path d="M21 33v-5h6v5"/></svg>`;
 // A short first name for the greeting: from the signed-in email's local part,
 // else nothing (the greeting still reads naturally without a name).
 function greetName() {
@@ -1512,110 +1618,110 @@ function renderHome() {
   const thisWeek = upcoming.filter((p) => { const d = saleDay(p); return d != null && d >= today && d <= weekEnd; });
   const savedSet = savedIds();
 
-  // Stat cards — label / value / sub / where a click leads.
-  const stats = [
-    { label: "TODAY", value: todays.length, sub: todays.length ? "auctions today" : "no sales today", go: "today" },
-    { label: "THIS WEEK", value: thisWeek.length, sub: "through Sunday", go: "week" },
-    { label: "UPCOMING", value: upcoming.length, sub: "not redeemed", go: "upcoming" },
-    { label: "SAVED", value: savedSet.size, sub: "parcels you're tracking", go: "saved" },
-  ];
-  const statCards = stats.map((s) => `
-    <button class="home-stat" data-stat="${s.go}">
-      <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">${s.label}</div>
-      <div style="font-size:44px;font-weight:500;letter-spacing:-.02em;line-height:1.05;margin:8px 0 2px">${s.value.toLocaleString()}</div>
-      <div style="font-size:15px;color:var(--ink2)">${esc(s.sub)}</div>
-    </button>`).join("");
+  // The next sale day, spelled out, for the empty "Today's auctions" state.
+  const nextP = upcoming.find((p) => { const d = saleDay(p); return d != null && d > today; }) || upcoming[0];
+  const nextLabel = nextP && nextP.saleDate ? `${CAL_MONTHS[nextP.saleDate.getMonth()]} ${nextP.saleDate.getDate()}` : null;
 
-  // Left column — Today's auctions + Upcoming (first 5).
   const todayIds = todays.map((p) => p.id);
-  const todaysBlock = `
-    <div class="home-card">
-      <div class="home-card-head"><h3 class="home-h3">Today&rsquo;s auctions</h3>
-        ${todays.length ? `<span class="home-count">${todays.length}</span>` : ""}</div>
-      ${todays.length ? `<table class="home-table"><tbody>
-        ${todays.map((p) => homeRow(p, todayIds, (x) => `
-          <td class="home-num">${acresLabel(x)}</td>
-          <td style="font-size:13px;color:var(--ink2);white-space:nowrap">${esc(saleTimeText(x))}</td>
-          <td style="text-align:right">${statusTag(x)}</td>`)).join("")}
-      </tbody></table>`
-      : `<p class="home-empty">No auctions scheduled for today in ${esc(countyPhrase(counties))}.</p>`}
-    </div>`;
-
-  const upFirst = upcoming.slice(0, 5), upIds = upcoming.map((p) => p.id);
-  const upcomingBlock = `
-    <div class="home-card">
-      <div class="home-card-head"><h3 class="home-h3">Upcoming &middot; not redeemed</h3>
-        ${upcoming.length > 5 ? `<button class="home-link" data-stat="upcoming">View all ${upcoming.length.toLocaleString()} &rarr;</button>` : ""}</div>
-      ${upFirst.length ? `<table class="home-table"><tbody>
-        ${upFirst.map((p) => homeRow(p, upIds, (x) => `
-          <td class="home-num">${acresLabel(x)}</td>
-          <td style="font-size:13px;color:var(--ink2);white-space:nowrap">${esc(x.auction)}</td>
-          <td style="text-align:right">${researchCell(x)}</td>`)).join("")}
-      </tbody></table>`
-      : `<p class="home-empty">No upcoming auctions right now &mdash; new sales appear here as counties post them.</p>`}
-    </div>`;
-
-  // Right column — My lists + Recently viewed.
+  const upIds = upcoming.map((p) => p.id);
+  const byId = {}; for (const p of DATA) byId[p.id] = p;
+  const recentP = recent.map((id) => byId[id]).filter(Boolean).slice(0, 6);
+  const recentIds = recentP.map((p) => p.id);
   const allLists = [
     ...lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: false })),
     ...team.lists.filter((l) => !l.deleted && !l.archived).map((l) => ({ ...l, shared: true })),
   ].map((l) => ({ ...l, n: listItems(l.name, l.shared).length }));
-  const listsBlock = `
-    <div class="home-card">
-      <div class="home-card-head"><h3 class="home-h3">My lists</h3>
-        <button class="home-link" data-stat="saved">Saved &rarr;</button></div>
-      ${allLists.length ? `<div class="home-list-rows">
-        ${allLists.map((l) => `<button class="home-list-row" data-list="${esc(l.name)}" data-shared="${l.shared ? 1 : 0}">
-          <span style="font-size:15px;font-weight:500;flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(l.name)}</span>
-          ${l.shared ? '<span class="home-chip home-chip-team">team</span>' : ""}
-          <span class="home-chip">${l.n}</span></button>`).join("")}
-      </div>`
-      : `<p class="home-empty">No lists yet. Create one from Saved, then add parcels from any property.</p>`}
-    </div>`;
 
-  const byId = {}; for (const p of DATA) byId[p.id] = p;
-  const recentP = recent.map((id) => byId[id]).filter(Boolean).slice(0, 7);
-  const recentIds = recentP.map((p) => p.id);
-  const recentBlock = `
-    <div class="home-card">
-      <div class="home-card-head"><h3 class="home-h3">Recently viewed</h3></div>
-      ${recentP.length ? `<div class="home-list-rows">
-        ${recentP.map((p) => `<button class="home-recent" data-open="${esc(p.id)}">
-          <span style="flex:1;text-align:left;overflow:hidden">
-            <span style="display:block;font-size:15px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(p.hasAddr ? p.addr : p.parcel)}</span>
-            <span style="display:block;font-size:13px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</span>
-          </span>
-          <span class="home-bm ${isBookmarked(p.id) ? "on" : ""}" aria-hidden="true">${BOOKMARK_ICON}</span>
-        </button>`).join("")}
-      </div>`
-      : `<p class="home-empty">Parcels you open will show up here.</p>`}
-    </div>`;
+  // A parcel row for the panel lists (explicit colors — sits on the white panel).
+  const prow = (p) => `<button class="h2-prow" data-open="${esc(p.id)}">
+    <span class="h2-prow-main"><span class="h2-prow-title">${esc(p.hasAddr ? p.addr : p.parcel)}</span>
+      <span class="h2-prow-sub">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</span></span>
+    <span class="h2-prow-meta">${esc(p.auction)}</span></button>`;
 
   $("scr-home").innerHTML = `
-    <div style="padding-top:22px">
-      <h1 style="margin:0;font-size:52px;font-weight:500;letter-spacing:-.03em;line-height:1.05">${greet}${name ? ", " + esc(name) : ""}.</h1>
-      <p style="margin:8px 0 26px;font-size:19px;color:var(--ink2)">${esc(ET_FULL.format(new Date()))} &middot; ${esc(countyPhrase(counties))}</p>
-      <div class="home-stats">${statCards}</div>
-      <div class="home-cols">
-        <div style="display:flex;flex-direction:column;gap:22px">${todaysBlock}${upcomingBlock}</div>
-        <div style="display:flex;flex-direction:column;gap:22px">${listsBlock}${recentBlock}</div>
+    <h1 class="h2-greet">${greet}${name ? ", " + esc(name) : ""}.</h1>
+    <p class="h2-date">${esc(ET_FULL.format(new Date()))}</p>
+
+    <div class="h2-hero">
+      <div class="h2-upcoming">
+        <div class="h2-up-body">
+          <div class="h2-up-label">Upcoming auctions</div>
+          <div class="h2-up-big">${upcoming.length.toLocaleString()}</div>
+          <div class="h2-up-sub">Not redeemed</div>
+          <div class="h2-minirow">
+            <div class="h2-mini"><span class="h2-mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+              <span><span class="h2-mini-lbl">Today</span><span class="h2-mini-val">${todays.length}</span></span></div>
+            <div class="h2-mini"><span class="h2-mini-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>
+              <span><span class="h2-mini-lbl">This week</span><span class="h2-mini-val">${thisWeek.length}</span></span></div>
+          </div>
+          <button class="h2-cta-dark" data-stat="upcoming">View all auctions <span aria-hidden="true">&rarr;</span></button>
+        </div>
+        <div class="h2-scene">${HOME_SCENE}</div>
+      </div>
+
+      <div class="h2-saved">
+        <div class="h2-saved-ico">${HOME_FOLDER}</div>
+        <div class="h2-sv-label">Saved properties</div>
+        <div class="h2-sv-big">${savedSet.size.toLocaleString()}</div>
+        <div class="h2-sv-sub">Parcels you&rsquo;re tracking</div>
+        <button class="h2-cta-light" data-stat="saved">View saved properties <span aria-hidden="true">&rarr;</span></button>
+      </div>
+    </div>
+
+    <div class="h2-row2">
+      <div class="h2-card">
+        <div class="h2-card-head"><h3 class="h2-h3">Today&rsquo;s auctions</h3><button class="h2-link" data-stat="calendar">View calendar <span aria-hidden="true">&rarr;</span></button></div>
+        ${todays.length ? `<div class="h2-plist">${todays.slice(0, 6).map(prow).join("")}</div>
+          ${todays.length > 6 ? `<button class="h2-link" data-stat="upcoming" style="margin-top:12px">View all ${todays.length} &rarr;</button>` : ""}`
+        : `<div class="h2-empty">
+            <div class="h2-empty-ico"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></div>
+            <div class="h2-empty-title">No auctions scheduled for today.</div>
+            ${nextLabel ? `<div class="h2-empty-sub">Your next auctions are on ${esc(nextLabel)}.</div>` : ""}
+            <button class="h2-link" data-stat="upcoming" style="margin-top:10px">View upcoming auctions <span aria-hidden="true">&rarr;</span></button>
+          </div>`}
+      </div>
+
+      <div class="h2-card">
+        <div class="h2-card-head"><h3 class="h2-h3">My lists</h3></div>
+        ${allLists.length ? `<div class="h2-listrows">
+          ${allLists.map((l) => `<button class="h2-lrow" data-list="${esc(l.name)}" data-shared="${l.shared ? 1 : 0}">
+            <span class="h2-lname">${esc(l.name)}</span>
+            ${l.shared ? '<span class="h2-team">team</span>' : ""}
+            <span class="h2-pill">${l.n}</span></button>`).join("")}
+        </div>`
+        : `<p class="h2-empty-sub" style="padding:6px 2px">No lists yet. Save a parcel to start one.</p>`}
+      </div>
+    </div>
+
+    <div class="h2-row3">
+      <div class="h2-card">
+        <div class="h2-mc-head">
+          <span class="h2-mc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+          <div><div class="h2-h3">Recently viewed</div>
+            ${recentP.length ? "" : `<div class="h2-mc-sub">Parcels you open will show up here.</div>`}</div>
+        </div>
+        ${recentP.length ? `<div class="h2-plist" style="margin-top:12px">${recentP.map(prow).join("")}</div>` : ""}
+      </div>
+      <div class="h2-card">
+        <div class="h2-mc-head">
+          <span class="h2-mc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg></span>
+          <div><div class="h2-h3">Upcoming auctions</div>
+            <div class="h2-mc-sub">${upcoming.length.toLocaleString()} properties · <button class="h2-link h2-link-inline" data-stat="upcoming">View all <span aria-hidden="true">&rarr;</span></button></div></div>
+        </div>
       </div>
     </div>`;
 
-  // Wiring. Each opener walks the ordered set of the section it lives in, so
-  // Prev/Next in the detail view steps through that same list.
+  // Wiring.
   $("scr-home").querySelectorAll("[data-open]").forEach((el) => {
     const id = el.dataset.open;
-    const set = el.classList.contains("home-recent") ? recentIds
-      : todayIds.includes(id) ? todayIds
-      : upIds.includes(id) ? upIds : recentIds;
+    const set = recentIds.includes(id) && !todayIds.includes(id) ? recentIds : (todayIds.includes(id) ? todayIds : upIds);
     el.onclick = () => openParcel(id, set, "home");
   });
-  $("scr-home").querySelectorAll("[data-stat]").forEach((el) => el.onclick = () => {
+  $("scr-home").querySelectorAll("[data-stat]").forEach((el) => el.onclick = (e) => {
+    e.stopPropagation();
     const k = el.dataset.stat;
-    if (k === "today" || k === "week") { go("calendar"); return; }
+    if (k === "calendar") { go("calendar"); return; }
     if (k === "saved") { go("lists"); return; }
-    // Upcoming → Explore, showing the full upcoming set.
     S.counties = []; S.dayFilter = null; S.mapArea = null; S.reviewOnly = false;
     S.status = "Scheduled"; S.when = "all"; S.q = ""; S.view = "list"; S.shown = 150;
     go("dashboard");
