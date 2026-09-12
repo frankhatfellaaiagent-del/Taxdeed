@@ -166,7 +166,6 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
       <button id="btn-theme" title="Toggle theme" aria-label="Toggle theme" style="display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;box-shadow:var(--shadow)"></button>
       <button id="btn-settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>Settings</button>
       <button class="btn btn-secondary" id="btn-export" style="font-size:13px;height:38px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export</button>
-      <button class="btn btn-primary" id="btn-refresh-admin" hidden style="font-size:13px;height:38px">Refresh</button>
       <div id="account-box"></div>
     </div>
   </header>
@@ -204,6 +203,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 </div>
 
 <div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
+
+<div id="day-modal" hidden style="position:fixed;inset:0;z-index:65;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
 
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
@@ -772,7 +773,7 @@ async function onSignedIn(user) {
     WORKSPACE_ERROR = false;
     TEAM_ID = profile.team_id;
     IS_ADMIN = !!profile.is_admin;
-    $("btn-refresh-admin").hidden = !IS_ADMIN;
+    renderAccount();   // reflect admin (Refresh appears in the account menu)
     // Access tier — fetched separately and defensively so a not-yet-migrated
     // `plan` column can't break sign-in: any error just leaves the user on free.
     try {
@@ -839,7 +840,6 @@ function onSignedOut() {
   PLAN_TIER = "free";
   WORKSPACE_ERROR = false;
   SYNC_ERROR = false;
-  $("btn-refresh-admin").hidden = true;
   team = { lists: [], membership: {} };
   interest = store.get("tdd_interest", {});
   lists = store.get("tdd_lists", DEFAULT_LISTS);
@@ -871,7 +871,10 @@ async function initCloud() {
 }
 
 // Top-bar account chip: avatar initial + email + sign out (signed in), or a
-// Sign-in button. A small warning glyph flags a workspace/sync problem.
+// Account control: signed in → an avatar that opens ONE dropdown holding the
+// email, the admin Refresh action and Sign out; signed out → a Sign-in button.
+// A small warning glyph flags a workspace/sync problem.
+let _acctMenuOpen = false;
 function renderAccount() {
   const box = $("account-box"); if (!box) return;
   if (!SYNC_ON) { box.innerHTML = ""; return; }
@@ -879,14 +882,30 @@ function renderAccount() {
     const email = CLOUD.user.email || "";
     const initial = (email[0] || "?").toUpperCase();
     const warn = WORKSPACE_ERROR
-      ? '<span title="Workspace not set up — changes won’t sync" style="color:var(--danger);font-size:15px">&#9888;</span>'
-      : SYNC_ERROR ? '<span title="Sync issue — retrying" style="color:var(--icon-warn);font-size:15px">&#8635;</span>' : "";
-    box.innerHTML = `<div style="display:flex;align-items:center;gap:10px;font-size:14px">
-      <span style="width:36px;height:36px;border-radius:50%;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center;font-weight:600">${esc(initial)}</span>
-      <span style="max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(email)}</span>${warn}
-      <button class="btn btn-secondary" id="btn-signout" style="font-size:12px;height:32px;padding:0 12px">Sign out</button></div>`;
-    $("btn-signout").onclick = () => CLOUD.sb.auth.signOut();
+      ? '<span title="Workspace not set up — changes won’t sync" style="color:var(--danger);font-size:14px">&#9888;</span>'
+      : SYNC_ERROR ? '<span title="Sync issue — retrying" style="color:var(--icon-warn);font-size:14px">&#8635;</span>' : "";
+    box.innerHTML = `<div style="position:relative">
+      <button id="acct-btn" aria-haspopup="menu" aria-expanded="${_acctMenuOpen ? "true" : "false"}" title="Account"
+        style="display:flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0">
+        <span style="width:38px;height:38px;border-radius:50%;background:var(--chip);border:1px solid var(--line);display:grid;place-items:center;font-weight:600;color:var(--ink)">${esc(initial)}</span>
+        ${warn}<span style="color:var(--ink3);font-size:12px">&#9662;</span>
+      </button>
+      <div id="acct-menu" ${_acctMenuOpen ? "" : "hidden"} role="menu"
+        style="position:absolute;top:46px;right:0;z-index:50;min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden">
+        <div style="padding:12px 16px;border-bottom:1px solid var(--line)">
+          <div style="font-size:11px;letter-spacing:.13em;color:var(--ink3);font-weight:500">SIGNED IN</div>
+          <div style="font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(email)}</div>
+        </div>
+        ${IS_ADMIN ? `<button class="acct-item" id="acct-refresh" role="menuitem">Refresh data</button>` : ""}
+        <button class="acct-item" id="acct-signout" role="menuitem">Sign out</button>
+      </div>
+    </div>`;
+    const btn = $("acct-btn"), menu = $("acct-menu");
+    btn.onclick = (e) => { e.stopPropagation(); _acctMenuOpen = !_acctMenuOpen; menu.hidden = !_acctMenuOpen; btn.setAttribute("aria-expanded", _acctMenuOpen ? "true" : "false"); };
+    const rf = $("acct-refresh"); if (rf) rf.onclick = () => { _acctMenuOpen = false; window.open(ADMIN_ACTIONS_URL, "_blank", "noopener"); renderAccount(); };
+    $("acct-signout").onclick = () => { _acctMenuOpen = false; CLOUD.sb.auth.signOut(); };
   } else {
+    _acctMenuOpen = false;
     box.innerHTML = `<button class="btn btn-primary" id="btn-signin" style="font-size:13px;height:38px">Sign in</button>`;
     $("btn-signin").onclick = () => {
       $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
@@ -1007,6 +1026,7 @@ let S = {
   listName: null, listShared: false,
   savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
   calMonthIdx: 0, calDayKey: null,   // Calendar: which month (index into available months) + selected day
+  calCountyOpen: false,   // Calendar: counties dropdown open/closed
 
   // Where the open property was reached from, so Back returns exactly there and
   // Previous/Next walk that origin's ordered results (Explore OR a saved list).
@@ -2841,10 +2861,14 @@ function renderCalendar() {
   // first sale day of the month (today if it's a sale day).
   const monthDayKeys = cur ? Object.keys(byDay).filter((k) => { const [ky, km] = k.split("-").map(Number); return ky === cur[0] && km === cur[1]; }) : [];
   monthDayKeys.sort((a, b) => Number(a.split("-")[2]) - Number(b.split("-")[2]));
-  let selDayKey = S.calDayKey && monthDayKeys.includes(S.calDayKey) ? S.calDayKey : (monthDayKeys[0] || null);
+  // The day previewed in the side panel: today if it's a sale day this month,
+  // else the first sale day of the month. (Clicking a day opens the popup instead.)
+  const todayKey = cur ? (() => { const [y, mo, d] = ET_YMD.format(new Date()).split("-").map(Number); const k = y + "-" + (mo - 1) + "-" + d; return monthDayKeys.includes(k) ? k : null; })() : null;
+  let selDayKey = S.calDayKey && monthDayKeys.includes(S.calDayKey) ? S.calDayKey : (todayKey || monthDayKeys[0] || null);
   S.calDayKey = selDayKey;
-  const dayParcels = calDayParcels(selDayKey, sel);
-  const dayIds = dayParcels.map((p) => p.id);
+  const dayAll = calDayParcels(selDayKey, sel);
+  const dayParcels = dayAll.slice(0, 7);   // panel shows at most 7; the popup shows them all
+  const dayIds = dayAll.map((p) => p.id);   // Prev/Next still walks the whole day
 
   const chips = all.length
     ? all.map((c) => `<button class="pillbtn ${sel.has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`).join("")
@@ -2863,9 +2887,9 @@ function renderCalendar() {
   const dayPanel = `
     <div class="home-card" style="padding:0">
       <div style="padding:18px 20px;border-bottom:1px solid var(--line)">
-        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">${isToday ? "TODAY" : "SELECTED DAY"}</div>
+        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">${isToday ? "TODAY" : "NEXT SALE DAY"}</div>
         <div style="font-size:30px;font-weight:500;letter-spacing:-.01em;margin-top:4px">${esc(dayLabel || "No day selected")}</div>
-        ${dayParcels.length ? `<div style="font-size:15px;color:var(--ink2);margin-top:2px">${dayParcels.length} ${dayParcels.length === 1 ? "auction" : "auctions"}${(() => { const t0 = dayParcels[0].saleTime ? saleTimeText(dayParcels[0]) : ""; return t0 ? " · " + esc(t0) : ""; })()}</div>` : ""}
+        ${dayAll.length ? `<div style="font-size:15px;color:var(--ink2);margin-top:2px">${dayAll.length} ${dayAll.length === 1 ? "auction" : "auctions"}${(() => { const t0 = dayAll[0].saleTime ? saleTimeText(dayAll[0]) : ""; return t0 ? " · " + esc(t0) : ""; })()}</div>` : ""}
       </div>
       ${dayParcels.length ? `<div class="home-list-rows" style="padding:6px 10px">
         ${dayParcels.map((p) => `<button class="home-recent" data-open="${esc(p.id)}">
@@ -2875,8 +2899,11 @@ function renderCalendar() {
           </span>
           <span class="home-bm ${isBookmarked(p.id) ? "on" : ""}" aria-hidden="true">${BOOKMARK_ICON}</span>
         </button>`).join("")}
+      </div>
+      <div style="padding:12px 16px 16px;border-top:1px solid var(--line)">
+        <button class="btn btn-primary" data-openday="${esc(selDayKey)}" style="width:100%;height:44px">${dayAll.length > 7 ? `View all ${dayAll.length} &amp; pick` : "Open this day &amp; pick"}</button>
       </div>`
-      : `<p class="home-empty" style="padding:20px">${months.length ? "Pick a highlighted day on the calendar to see its auctions." : "No upcoming sales in your counties yet."}</p>`}
+      : `<p class="home-empty" style="padding:20px">${months.length ? "Tap a highlighted day on the calendar to see its auctions." : "No upcoming sales in your counties yet."}</p>`}
     </div>`;
 
   $("scr-calendar").innerHTML = `
@@ -2884,15 +2911,21 @@ function renderCalendar() {
     <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
     <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px">
-        <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <button id="cal-cty-toggle" aria-expanded="${S.calCountyOpen ? "true" : "false"}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:220px;height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;text-align:left">
+          <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</span>
+          <span style="flex:1;font-weight:500">${sel.size === all.length && all.length ? "All counties" : sel.size ? `${sel.size} selected` : "None selected"}</span>
+          <span style="transition:transform .15s ease;transform:rotate(${S.calCountyOpen ? "180deg" : "0"})">&#9662;</span>
+        </button>
+        <button class="btn btn-secondary" id="cal-print" style="font-size:13px;height:44px" ${months.length ? "" : "disabled"}>Print</button>
+      </div>
+      ${S.calCountyOpen ? `<div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">
+        <div style="display:flex;gap:8px;margin-bottom:10px">
           <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
           <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
-          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print</button>
         </div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+      </div>` : ""}
     </div>
 
     ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
@@ -2913,7 +2946,8 @@ function renderCalendar() {
       </div>`
       : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
-  $("cal-chips").querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
+  const ctyToggle = $("cal-cty-toggle"); if (ctyToggle) ctyToggle.onclick = () => { S.calCountyOpen = !S.calCountyOpen; renderCalendar(); };
+  const chipWrap = $("cal-chips"); if (chipWrap) chipWrap.querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
     const cs = new Set(calSelected()), c = b.dataset.cty;
     if (cs.has(c)) cs.delete(c); else cs.add(c);
     prefs.calCounties = [...cs]; savePrefs(); S.calMonthIdx = 0; S.calDayKey = null; renderCalendar();
@@ -2923,10 +2957,98 @@ function renderCalendar() {
   const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
   const prevBtn = $("cal-prev"); if (prevBtn) prevBtn.onclick = () => { S.calMonthIdx = idx - 1; S.calDayKey = null; renderCalendar(); };
   const nextBtn = $("cal-next"); if (nextBtn) nextBtn.onclick = () => { S.calMonthIdx = idx + 1; S.calDayKey = null; renderCalendar(); };
-  // Select a day (fills the right panel) — no navigation.
-  $("scr-calendar").querySelectorAll("[data-selday]").forEach((td) => td.onclick = () => { S.calDayKey = td.dataset.selday; renderCalendar(); });
-  // Open a parcel from the day panel, walking that day's ordered set.
+  // Clicking a day opens the popup listing that whole day's auctions to pick from.
+  $("scr-calendar").querySelectorAll("[data-selday]").forEach((td) => td.onclick = () => openDayModal(td.dataset.selday));
+  // The panel's "View all / Open this day" button opens the same popup.
+  $("scr-calendar").querySelectorAll("[data-openday]").forEach((b) => b.onclick = () => openDayModal(b.dataset.openday));
+  // Open a parcel from the (≤7) day-panel preview, walking that day's ordered set.
   $("scr-calendar").querySelectorAll("[data-open]").forEach((b) => b.onclick = () => openParcel(b.dataset.open, dayIds, "calendar"));
+}
+// ---------- calendar day popup ----------
+// Lists every auction on one sale day. Pick parcels with the checkboxes and Save
+// to bookmark them; a row title opens the parcel; "Open in Explore" filters the
+// board to just this day. Selection is local to the popup until Save.
+let _dayModalSel = new Set();
+function closeDayModal() { const m = $("day-modal"); if (m) { m.hidden = true; m.innerHTML = ""; } _dayModalSel = new Set(); }
+function openDayModal(dayKey) {
+  if (!dayKey) return;
+  const sel = calSelected();
+  const parcels = calDayParcels(dayKey, sel);
+  const [y, m, d] = dayKey.split("-").map(Number);
+  const dow = new Date(Date.UTC(y, m, d)).getUTCDay();
+  const label = `${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][dow]}, ${CAL_MONTHS[m]} ${d}`;
+  const ids = parcels.map((p) => p.id);
+  _dayModalSel = new Set();
+  const el = $("day-modal"); if (!el) return;
+  const paint = () => {
+    const n = _dayModalSel.size;
+    const saveBtn = el.querySelector("#dm-save");
+    if (saveBtn) { saveBtn.disabled = !n; saveBtn.textContent = n ? `Save ${n} to bookmarks` : "Save selected"; }
+    el.querySelectorAll("[data-pick]").forEach((c) => { c.setAttribute("aria-pressed", _dayModalSel.has(c.dataset.pick) ? "true" : "false"); });
+  };
+  el.innerHTML = `
+    <div class="home-card" style="width:min(720px,100%);max-height:86vh;display:flex;flex-direction:column;padding:0">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px">
+        <div style="flex:1">
+          <div style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">SALE DAY</div>
+          <div style="font-size:26px;font-weight:500;letter-spacing:-.01em;margin-top:2px">${esc(label)}</div>
+          <div style="font-size:14px;color:var(--ink2);margin-top:2px">${parcels.length} ${parcels.length === 1 ? "auction" : "auctions"} · tick the ones you want, then save</div>
+        </div>
+        <button id="dm-close" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:2px 6px">&times;</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 22px;border-bottom:1px solid var(--line)">
+        <button class="btn btn-ghost" id="dm-all" style="font-size:13px">Select all</button>
+        <button class="btn btn-ghost" id="dm-none" style="font-size:13px">Clear</button>
+      </div>
+      <div class="tablewrap" style="overflow-y:auto;flex:1">
+        <table class="table"><tbody>
+          ${parcels.map((p) => `<tr>
+            <td style="width:44px;text-align:center"><button class="bm-toggle" data-pick="${esc(p.id)}" aria-pressed="false" aria-label="Pick" style="width:24px;height:24px;border:1.5px solid var(--line2);border-radius:6px">${BOOKMARK_ICON}</button></td>
+            <td><button class="dm-open" data-open="${esc(p.id)}" style="background:none;border:none;text-align:left;cursor:pointer;color:var(--ink);padding:0">
+              <div style="font-size:15px;font-weight:500">${esc(p.hasAddr ? p.addr : p.parcel)}</div>
+              <div style="font-size:13px;color:var(--ink2)">${esc([p.city, p.county + " County"].filter(Boolean).join(" · "))}</div></button></td>
+            <td style="text-align:right;font-variant-numeric:tabular-nums;font-size:13px;color:var(--ink2)">${p.acreage ? esc(p.acreage) + " ac" : "—"}</td>
+            <td style="font-size:13px;color:var(--ink2);white-space:nowrap">${esc(saleTimeText(p))}</td>
+            <td>${researchCell(p)}</td>
+          </tr>`).join("")}
+        </tbody></table>
+      </div>
+      <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-primary" id="dm-save" disabled style="height:44px">Save selected</button>
+        <button class="btn btn-secondary" id="dm-explore" style="height:44px">Open all in Explore &rarr;</button>
+        <button class="btn btn-ghost" id="dm-cancel" style="margin-left:auto">Close</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  el.querySelectorAll("[data-pick]").forEach((b) => b.onclick = () => {
+    const id = b.dataset.pick; if (_dayModalSel.has(id)) _dayModalSel.delete(id); else _dayModalSel.add(id); paint();
+  });
+  el.querySelectorAll(".dm-open").forEach((b) => b.onclick = () => { closeDayModal(); openParcel(b.dataset.open, ids, "calendar"); });
+  el.querySelector("#dm-all").onclick = () => { _dayModalSel = new Set(ids); paint(); };
+  el.querySelector("#dm-none").onclick = () => { _dayModalSel = new Set(); paint(); };
+  el.querySelector("#dm-save").onclick = () => {
+    const byId = {}; for (const p of DATA) byId[p.id] = p;
+    // Only the ones not already bookmarked are "new" — those are what Undo reverts.
+    const added = [..._dayModalSel].filter((id) => !isBookmarked(id));
+    for (const id of _dayModalSel) setInt(id, { bookmark: true }, byId[id]);
+    const n = _dayModalSel.size; closeDayModal();
+    pushUndo(`Saved ${n} ${n === 1 ? "parcel" : "parcels"}`, () => {
+      for (const id of added) setInt(id, { bookmark: false }, byId[id]);
+      renderCalendar();
+    });
+    renderCalendar();
+  };
+  el.querySelector("#dm-explore").onclick = () => {
+    const selSet = calSelected(), allC = calCounties();
+    S.counties = selSet.size === allC.length ? [] : [...selSet];
+    S.dayFilter = dayNum(y, m + 1, d);
+    S.when = "all"; S.status = "Scheduled"; S.view = "list"; S.mapArea = null; S.reviewOnly = false; S.shown = 150;
+    closeDayModal(); go("dashboard");
+  };
+  el.querySelector("#dm-close").onclick = closeDayModal;
+  el.querySelector("#dm-cancel").onclick = closeDayModal;
+  el.onclick = (e) => { if (e.target === el) closeDayModal(); };   // backdrop click
+  paint();
 }
 // The same calendar as a printable monthly sheet (one month per page).
 function printCalendar() {
@@ -3201,7 +3323,12 @@ function initTheme() {
   { const s = $("btn-settings"); if (s) s.onclick = () => go("settings"); }
   { const q = $("q"); if (q) q.oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); }; }
   { const ex = $("btn-export"); if (ex) ex.onclick = exportCsv; }
-  { const ra = $("btn-refresh-admin"); if (ra) ra.onclick = () => window.open(ADMIN_ACTIONS_URL, "_blank", "noopener"); }
+  // Close the account dropdown on any outside click.
+  document.addEventListener("click", (e) => {
+    if (!_acctMenuOpen) return;
+    const box = $("account-box");
+    if (box && !box.contains(e.target)) { _acctMenuOpen = false; renderAccount(); }
+  });
   const ok = await loadFeed();
   if (!ok) {
     $("load-note").innerHTML = '<span class="text-muted">Couldn&rsquo;t load the data feed. Check your connection and reload.</span>';
