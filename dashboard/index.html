@@ -65,6 +65,8 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 .home-bm.on{color:var(--gold)}
 .home-bm.on svg{fill:var(--gold)}
 @media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}}
+/* Dark-theme map tint: applied on the street tile pane only (not satellite). */
+.map-glow .leaflet-tile-pane{filter:var(--map-glow)}
 .ph{background:repeating-linear-gradient(45deg,var(--color-neutral-200) 0 10px,var(--color-neutral-100) 10px 20px);display:flex;align-items:center;justify-content:center}
 .ph span{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--color-neutral-600);background:var(--color-bg);padding:3px 8px;border:1px solid var(--color-divider);text-align:center}
 .nav-btn{display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:14.5px;letter-spacing:.02em;padding:9px 10px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--color-text)}
@@ -1227,6 +1229,13 @@ const NAV_ICONS = {
 };
 // Bookmark glyph — filled when saved (the `.on` class swaps fill/stroke in CSS).
 const BOOKMARK_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12v18l-6-4-6 4z"></path></svg>';
+// Small calendar glyph for the auction column.
+const CAL_GLYPH = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="1.8" style="flex:none"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>';
+// The List/Map segmented control — one definition, used in every Explore branch.
+const viewSeg = () => `<div style="display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden">
+  <button class="seg3 ${S.view === "list" ? "on" : ""}" data-view="list" style="padding:8px 18px">List</button>
+  <button class="seg3 ${S.view === "map" ? "on" : ""}" data-view="map" style="padding:8px 18px">Map</button>
+</div>`;
 function renderNav() {
   const rail = $("rail"); if (!rail) return;
   rail.innerHTML = NAV.map(([k, label]) => {
@@ -1643,10 +1652,6 @@ function renderDashboard() {
       <div class="field" style="width:210px"><label>Sort by</label>
         <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
       <button class="btn btn-secondary" id="more-toggle" style="height:36px;font-size:13px">${S.moreOpen ? "Fewer filters" : "More filters"}</button>
-      <div style="margin-left:auto;display:inline-flex;border:1px solid var(--color-divider);align-self:center">
-        <button class="seg3 ${S.view === "list" ? "on" : ""}" data-view="list" style="padding:8px 16px">List</button>
-        <button class="seg3 ${S.view === "map" ? "on" : ""}" data-view="map" style="padding:8px 16px">Map</button>
-      </div>
     </div>
     ${S.moreOpen ? `<div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
       <div class="field" style="width:150px"><label>Status</label>
@@ -1671,14 +1676,17 @@ function renderDashboard() {
       ${upgradeChip("See everything")}</div>`}
 
     ${regSel ? countyInfoCard(regSel)
-      : S.view === "map" ? `<div class="blueprint" style="padding:0;position:relative">${CORNERS}
-          <div id="board-map" style="height:min(64vh,600px);width:100%"></div>
+      : S.view === "map" ? `<div class="blueprint" style="padding:0">${CORNERS}
+          <div class="card-head"><h3 class="card-title">Land, in focus</h3>${viewSeg()}</div>
+          <div style="position:relative">
+          <div id="board-map" style="height:min(64vh,600px);width:100%;border-radius:0 0 var(--radius-lg) var(--radius-lg)"></div>
           <button class="btn btn-primary" id="map-search-area" style="position:absolute;z-index:5;top:12px;left:12px;font-size:12.5px;padding:7px 13px;box-shadow:var(--shadow-md)">Search this area</button>
           <div style="position:absolute;z-index:5;top:12px;right:12px;display:inline-flex;border:1px solid var(--color-divider);background:var(--color-surface);box-shadow:var(--shadow-md)">
             <button class="seg3 ${S.mapView === "map" ? "on" : ""}" data-mapview="map" style="padding:6px 13px">Map</button>
             <button class="seg3 ${S.mapView === "satellite" ? "on" : ""}" data-mapview="satellite" style="padding:6px 13px">Satellite</button>
           </div>
           <div id="quick-card" hidden style="position:absolute;z-index:6;top:58px;right:12px;width:min(340px,calc(100% - 24px))"></div>
+          </div>
         </div>
         <div class="text-muted" style="font-size:12.5px;margin-top:10px">Showing ${located.length.toLocaleString()} of ${rows.length.toLocaleString()} on the map.${noLoc ? ` ${noLoc.toLocaleString()} ${noLoc === 1 ? "property has" : "properties have"} no map location and ${noLoc === 1 ? "appears" : "appear"} in the list only —` : ""} ${noLoc ? `<button class="btn btn-ghost" id="to-list" style="font-size:12.5px;padding:1px 6px">view the list</button>.` : ""}</div>`
       : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
@@ -1691,28 +1699,36 @@ function renderDashboard() {
           ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters2">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
         </div>`
       : `<div class="blueprint" style="padding:0">${CORNERS}
+          <div class="card-head">
+            <h3 class="card-title">Upcoming parcels</h3>
+            ${viewSeg()}
+          </div>
           <div class="tablewrap"><table class="table">
-            <thead><tr><th>Property</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th>My decision</th></tr></thead>
+            <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="width:56px"></th></tr></thead>
             <tbody>
               ${rows.slice(0, S.shown).map((p) => {
                 const t = effType(p);
                 const title = p.hasAddr ? p.addr : p.parcel;
                 return `<tr class="rowlink ${p.redeemed ? "redeem" : ""}" data-open="${esc(p.id)}">
-                  <td><div style="font-weight:500">${esc(title)}</div>
-                    <div style="font-size:12px" class="text-muted">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
-                    ${p.hasAddr ? `<div class="mono" style="font-size:11px;color:var(--color-accent-700)">${esc(p.parcel)}</div>` : ""}</td>
+                  <td><div style="font-size:16px;font-weight:500">${esc(title)}</div>
+                    <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
+                    ${p.hasAddr ? `<div class="mono" style="font-size:12px;color:var(--ink3);margin-top:2px">${esc(p.parcel)}</div>` : ""}</td>
                   <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
-                  <td style="font-size:13px">${esc(p.auction)}<div style="font-size:11.5px" class="text-muted">${esc(saleTimeText(p))}</div></td>
+                  <td style="font-size:14px;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:7px">${CAL_GLYPH}${esc(p.auction)}</span><div style="font-size:12.5px;color:var(--ink3)">${esc(saleTimeText(p))}</div></td>
                   <td>${researchCell(p)}</td>
-                  <td>${decisionCell(p)}</td>
+                  <td style="text-align:center"><button class="bm-toggle ${isBookmarked(p.id) ? "on" : ""}" data-bm="${esc(p.id)}" aria-label="${isBookmarked(p.id) ? "Remove bookmark" : "Bookmark"}" title="${isBookmarked(p.id) ? "Saved — click to remove" : "Save parcel"}">${BOOKMARK_ICON}</button></td>
                 </tr>`;
               }).join("")}
             </tbody>
           </table></div>
-          ${rows.length > S.shown ? `<div style="padding:12px;text-align:center;border-top:1px solid var(--color-divider)">
+          ${rows.length > S.shown ? `<div style="padding:14px;text-align:center;border-top:1px solid var(--line)">
             <button class="btn btn-secondary" id="show-more">Show ${Math.min(300, rows.length - S.shown)} more (${(rows.length - S.shown).toLocaleString()} hidden)</button></div>` : ""}
-          ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:12px;text-align:center;border-top:1px solid var(--color-divider);font-size:12.5px">
+          ${!isPaid() && freeHidden && rows.length <= S.shown ? `<div class="text-muted" style="padding:14px;text-align:center;border-top:1px solid var(--line);font-size:12.5px">
             ${freeHidden.toLocaleString()} more scheduled ${freeHidden === 1 ? "auction is" : "auctions are"} beyond your free ${FREE_DAYS}-day window. ${upgradeChip("See every date")}</div>` : ""}
+        </div>
+        <div class="plan-banner" style="margin-top:22px">
+          <span class="plan-badge">Planned</span>
+          <span><b style="color:var(--ink)">Price intelligence</b> &mdash; AI-estimated market value, land-use flags and comparable sales, arriving on every parcel. Not yet calculated.</span>
         </div>`}`;
 
   // ---- filters + view wiring ----
@@ -1762,6 +1778,13 @@ function renderDashboard() {
   const toList = $("to-list"); if (toList) toList.onclick = () => { S.view = "list"; renderDashboard(); };
   const orderedIds = rows.map((p) => p.id);
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
+  // Bookmark toggle in the parcel table — save without opening the row.
+  $("scr-dashboard").querySelectorAll("[data-bm]").forEach((b) => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.bm, rec = DATA.find((x) => x.id === id);
+    setInt(id, { bookmark: !isBookmarked(id) }, rec);
+    renderDashboard();
+  });
 
   // ---- map view ----
   if (S.view === "map" && !regSel) {
@@ -1799,6 +1822,8 @@ function initBoardMap(located, orderedIds) {
   if (!el) return;
   if (typeof L === "undefined") { el.innerHTML = '<div class="ph" style="height:100%"><span>Map couldn&rsquo;t load — check your connection.</span></div>'; return; }
   if (_boardMap) { try { _boardMap.remove(); } catch (e) {} _boardMap = null; }
+  // Glow tint only over street tiles in dark themes; never over satellite imagery.
+  el.classList.toggle("map-glow", S.mapView !== "satellite");
   _boardMap = L.map(el, { zoomControl: false, scrollWheelZoom: true });
   _boardBase = boardTiles().addTo(_boardMap);
   L.control.zoom({ position: "bottomright" }).addTo(_boardMap);

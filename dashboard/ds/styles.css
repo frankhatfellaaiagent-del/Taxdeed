@@ -286,3 +286,34 @@ textarea.input { min-height: 90px; resize: vertical; }
 .btn-ghost { border-color: transparent; }
 .input { background: var(--card); }
 
+/* — design-handoff: tables, badges, Explore chrome — */
+.table th {
+  font-size: 12px; letter-spacing: 0.14em; color: var(--ink3);
+  border-bottom: 1px solid var(--line); padding: 12px 14px;
+}
+.table td { padding: 14px; border-bottom: 1px solid var(--line); }
+.table tbody tr:hover { background: var(--row-hi); }
+/* Status badges: 13px/500, 6×14, radius 8 — handoff palette. */
+.tag { font-size: 13px; font-weight: 500; padding: 5px 13px; letter-spacing: 0; }
+.tag-ok { background: var(--ok, #dff3e5); color: var(--ok-ink, #1e6b3b); }
+.tag-warn { background: var(--gold-soft, #fdf6de); color: var(--gold-ink, #5a4600); }
+.tag-neutral { background: var(--chip); color: var(--chip-ink); }
+.tag-accent { background: var(--gold-soft); color: var(--gold-ink); }
+.tag-outline { border: 1px solid var(--line2); color: var(--ink2); }
+/* Card section header holding a title + a control (e.g. List/Map segment). */
+.card-head { display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.card-title { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+/* Bookmark toggle in a table cell. */
+.bm-toggle { background: none; border: none; cursor: pointer; color: var(--ink3);
+  display: grid; place-items: center; padding: 4px; border-radius: 8px; }
+.bm-toggle:hover { color: var(--gold); background: var(--row-hi); }
+.bm-toggle.on { color: var(--gold); }
+.bm-toggle.on svg { fill: var(--gold); }
+/* "Planned" banner (Price intelligence). */
+.plan-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 16px 20px; border: 1px dashed var(--line2); border-radius: var(--radius-lg);
+  background: var(--card); color: var(--ink2); font-size: 14px; }
+.plan-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-ink); background: var(--gold-soft); border-radius: 999px; padding: 4px 12px; }
+
