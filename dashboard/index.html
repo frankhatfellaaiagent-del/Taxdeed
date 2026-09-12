@@ -51,10 +51,11 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 .home-table{width:100%;border-collapse:collapse}
 .home-table td{border-top:1px solid var(--line)}
 .home-table tr:first-child td{border-top:none}
-.home-row td{padding:13px 0}
+.home-row td{padding:13px 10px}
 .home-row td:first-child{padding-left:0}
+.home-row td:last-child{padding-right:0}
 .home-row:hover td{background:var(--row-hi)}
-.home-num{font-size:14px;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;padding-right:16px}
+.home-num{font-size:14px;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
 .home-list-rows{display:flex;flex-direction:column}
 .home-list-row,.home-recent{display:flex;align-items:center;gap:10px;width:100%;padding:12px 8px;border:none;border-top:1px solid var(--line);background:none;cursor:pointer;color:var(--ink);text-align:left}
 .home-list-row:first-child,.home-recent:first-child{border-top:none}
@@ -1440,14 +1441,6 @@ function researchCell(p) {
   if (warn) return '<span class="tag tag-warn" title="A research check needs attention">Needs review</span>';
   if (RESEARCH_KEYS.some((k) => r[k].state === "reviewed")) return '<span class="tag tag-ok">Reviewed</span>';
   return '<span class="tag tag-neutral">Not checked</span>';
-}
-// The user's decision as a compact tag for the Explore "My decision" column.
-function decisionCell(p) {
-  const st = getInt(p.id).status;
-  if (st === "Interested") return '<span class="tag tag-accent">Interested</span>';
-  if (st === "Watching") return '<span class="tag tag-neutral">Watching</span>';
-  if (st === "Pass") return '<span class="tag tag-outline">Pass</span>';
-  return isBookmarked(p.id) ? '<span class="tag tag-neutral">Saved</span>' : '<span class="text-muted">—</span>';
 }
 
 // ---------- home screen ----------
