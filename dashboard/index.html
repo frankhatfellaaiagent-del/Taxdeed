@@ -408,10 +408,11 @@ const store = {
   get(k, fallback) { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } },
   set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
 };
+// Two generic starter lists every new account (and the signed-out demo) begins
+// with. Existing users keep whatever lists are already in their browser/cloud.
 const DEFAULT_LISTS = [
-  { name: "A-grade flips", desc: "Houses worth rehabbing and reselling." },
-  { name: "Land bank", desc: "Cheap lots to hold long-term." },
-  { name: "Rental candidates", desc: "Cashflow if picked up under assessed value." },
+  { name: "Favorites", desc: "Parcels you want to keep an eye on." },
+  { name: "Land", desc: "Vacant land you're tracking." },
 ];
 const DEFAULT_PREFS = {
   myTypes: { "Single family": true, "Vacant land": true },
