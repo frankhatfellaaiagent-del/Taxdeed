@@ -103,6 +103,11 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 .cty-chip{font-size:13px;font-weight:500;color:var(--ink2);background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap;transition:background .12s,border-color .12s,color .12s}
 .cty-chip:hover{border-color:var(--gold-ring)}
 .cty-chip.on{background:var(--seg-active);color:var(--gold-ink);border-color:var(--seg-active-border);font-weight:600}
+/* Floating overlays (drawers, modals, popovers) must be opaque. In the dark
+   themes --card is a translucent white for in-page cards, so panels that sit
+   over other content need the solid --card2 surface instead. */
+#filters-modal > div, #newlist-modal > .home-card, #day-modal > .home-card,
+#quick-card > .blueprint, #acct-menu{background:var(--card2)!important}
 #load-note{padding:60px 0;text-align:center}
 /* ===== Mobile: the desktop is 1586px; below ~820px re-flow for phones/tablets.
    The fixed left rail becomes a bottom tab bar and the content column drops its
