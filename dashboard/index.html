@@ -2428,6 +2428,13 @@ function renderDetail() {
               + row("landCheck", ICO_SEARCH, "Land check", null, "View check", false)
               + row("titleLiens", ICO_SHIELD, "Title &amp; liens", clerkLink(p), "Case records", false);
           })()}
+          <div style="margin-top:6px;border-top:1px solid var(--line);padding-top:16px">
+            <div style="font-size:15px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--gold-ink)" stroke-width="1.9"><path d="M12 2s7 4 7 11a7 7 0 0 1-14 0c0-7 7-11 7-11z"></path></svg>
+              What&rsquo;s on the land
+            </div>
+            <div style="font-size:14px;line-height:1.6;color:var(--ink2)">${landText}</div>
+          </div>
         </div>
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
@@ -2577,6 +2584,7 @@ function renderDetail() {
     b.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); cycle(b.dataset.researchCycle); } };
   });
   const rrun = $("scr-detail").querySelector("[data-research-run]"); if (rrun) rrun.onclick = () => runLandCheck(p);
+  const lcRunBtn = $("run-landcheck"); if (lcRunBtn) lcRunBtn.onclick = () => runLandCheck(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
