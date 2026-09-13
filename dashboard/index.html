@@ -2356,37 +2356,6 @@ function renderDetail() {
             </div>` : `<div class="text-muted" style="font-size:13px">Case found; the clerk lists no downloadable documents on it.</div>`}
         </div>` : ""}
 
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Research</h6>
-          <div class="text-muted" style="font-size:12px;margin-bottom:6px">Three separate checks. Property record and Title &amp; liens are manual &mdash; open the source and confirm for yourself. The land check is automated.</div>
-          ${(() => {
-            const R = getResearch(p.id);
-            const stTag = (c) => c.state === "reviewed" ? (c.warning && !c.resolved ? '<span class="tag tag-warn">Needs review</span>' : '<span class="tag tag-ok">Reviewed</span>')
-              : c.state === "couldntCheck" ? '<span class="tag tag-warn">Couldn&rsquo;t check</span>'
-              : c.state === "checking" ? '<span class="tag tag-neutral">Checking&hellip;</span>' : '<span class="tag tag-neutral">Not checked</span>';
-            const row = (title, tag, body, actions) => `<div style="display:flex;flex-direction:column;gap:8px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
-              <div style="display:flex;align-items:center;gap:10px"><span style="font-weight:600;font-size:14px">${title}</span><span style="margin-left:auto">${tag}</span></div>
-              <div style="font-size:13.5px;line-height:1.5">${body}</div>
-              ${actions ? `<div style="display:flex;gap:8px;flex-wrap:wrap">${actions}</div>` : ""}</div>`;
-            // Manual checks: Mark reviewed / Flag an issue; once reviewed, Undo (and
-            // Resolve when flagged). Opening the source link does NOT auto-complete.
-            const manual = (key, c) => {
-              if (c.state === "reviewed" && c.warning && !c.resolved)
-                return `<button class="btn btn-secondary" data-research-resolve="${key}" style="font-size:12px;padding:3px 10px">Mark resolved</button><button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo</button>`;
-              if (c.state === "reviewed")
-                return `<button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo review</button>`;
-              return `<button class="btn btn-secondary" data-research-review="${key}" style="font-size:12px;padding:3px 10px">Mark reviewed</button><button class="btn btn-ghost" data-research-flag="${key}" style="font-size:12px;padding:3px 8px">Flag an issue</button>`;
-            };
-            const landTag = (isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
-              ? stTag({ state: "reviewed", warning: lc.verdict === "avoid" || lc.verdict === "review" })
-              : stTag(R.landCheck);
-            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`, manual("propertyRecord", R.propertyRecord))
-              + row("Land check", landTag, landText)
-              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`, manual("titleLiens", R.titleLiens));
-          })()}
-          <p class="text-muted" style="font-size:12.5px;margin:14px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Confirm the value, the title and any liens, the case file, and the parcel itself before you bid.</p>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
-        </div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:26px">
