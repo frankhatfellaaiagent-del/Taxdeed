@@ -73,6 +73,9 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 @media (max-width:980px){.home-stats{grid-template-columns:repeat(2,1fr)}.home-cols{grid-template-columns:1fr}.saved-grid{grid-template-columns:1fr!important}}
 /* Dark-theme map tint: applied on the street tile pane only (not satellite). */
 .map-glow .leaflet-tile-pane{filter:var(--map-glow)}
+/* Parcel acreage label on the detail map. */
+.leaflet-tooltip.ac{background:#1c1e22;color:#fff;border:0;border-radius:8px;padding:4px 10px;font:600 13px "Inter",sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.leaflet-tooltip.ac::before{display:none}
 
 /* ===== Home dashboard (matches the design prototype) ===== */
 .h2-hero-grid{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(0,1fr);gap:20px}
@@ -236,6 +239,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 <div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
 
 <div id="day-modal" hidden style="position:fixed;inset:0;z-index:65;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
+<div id="newlist-modal" hidden style="position:fixed;inset:0;z-index:66;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
+<div id="filters-modal" hidden style="position:fixed;inset:0;z-index:67;display:flex;background:color-mix(in srgb, var(--color-neutral-900) 40%, transparent)"></div>
 
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
@@ -1058,7 +1063,6 @@ let S = {
   listName: null, listShared: false,
   savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
   calMonthIdx: 0, calDayKey: null,   // Calendar: which month (index into available months) + selected day
-  calCountyOpen: false,   // Calendar: counties dropdown open/closed
 
   // Where the open property was reached from, so Back returns exactly there and
   // Previous/Next walk that origin's ordered results (Explore OR a saved list).
@@ -1494,6 +1498,16 @@ function researchCell(p) {
   if (RESEARCH_KEYS.some((k) => r[k].state === "reviewed")) return '<span class="tag tag-ok">Reviewed</span>';
   return '<span class="tag tag-neutral">Not checked</span>';
 }
+// Inline per-row decision control for the Explore list. "Open" = undecided;
+// Interested / Watching / Pass set the decision; Saved bookmarks the parcel.
+const DECISION_OPTIONS = [["", "Open"], ["Interested", "Interested"], ["Watching", "Watching"], ["Saved", "Saved"], ["Pass", "Pass"]];
+function decisionSelect(p) {
+  const it = getInt(p.id);
+  const cur = (it.status === "Interested" || it.status === "Watching" || it.status === "Pass") ? it.status
+    : (it.bookmark ? "Saved" : "");
+  return `<select class="row-dec dec-${cur || "open"}" data-decid="${esc(p.id)}" aria-label="Set decision for this parcel">${
+    DECISION_OPTIONS.map(([v, l]) => `<option value="${v}" ${v === cur ? "selected" : ""}>${l}</option>`).join("")}</select>`;
+}
 
 // ---------- home screen ----------
 // A short first name for the greeting: from the signed-in email's local part,
@@ -1708,44 +1722,18 @@ function renderDashboard() {
 
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
   const ckRow = (c) => `<label style="display:flex;gap:8px;align-items:center;padding:4px 2px;font-size:13px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
+  const activeCount = (S.counties.length ? 1 : 0) + (S.type !== "All" ? 1 : 0) + (S.when !== "all" ? 1 : 0)
+    + (S.status !== "Scheduled" ? 1 : 0) + (S.deposit !== "All" ? 1 : 0) + (S.reviewOnly ? 1 : 0) + (S.q.trim() ? 1 : 0);
   $("scr-dashboard").innerHTML = `
-    <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:4px">
-      <h2 style="margin:0">Find your next parcel.</h2>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="pillbtn" data-chip="upcoming" title="Show all upcoming auctions">${upcoming.length.toLocaleString()} upcoming</button>
-        <button class="pillbtn" data-chip="saved" title="Show your saved properties">${savedN.toLocaleString()} saved</button>
-        <button class="pillbtn" data-chip="review" title="Show properties whose research needs review">${reviewN.toLocaleString()} need review</button>
-      </div>
-    </div>
+    <h2 style="margin:0 0 4px">Find your next parcel.</h2>
     <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Upcoming tax-deed auctions in your counties &middot; times in each county&rsquo;s local zone (ET / CT)</div>
 
-    <div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-      <div class="field" style="width:210px;position:relative"><label>County</label>
-        <button class="input" id="f-county-btn" style="text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(countyLabel)}</span><span style="opacity:.55">&#9662;</span></button>
-        ${S.countyOpen ? `<div id="county-pop" class="blueprint" style="position:absolute;z-index:30;top:100%;left:0;margin-top:5px;width:290px;max-height:340px;overflow:auto;background:var(--color-surface);padding:10px 12px;box-shadow:var(--shadow-md)">${CORNERS}
-          <button class="pillbtn ${S.counties.length ? "" : "on"}" id="cty-all" style="width:100%;text-align:left;margin-bottom:8px">All counties</button>
-          ${counties.map(ckRow).join("")}
-          ${extraCounties.length ? `<div class="text-muted" style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
-        </div>` : ""}
-      </div>
-      <div class="field" style="width:150px"><label>Property type</label>
-        <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
-      <div class="field" style="width:150px"><label>Auction date</label>
-        <select class="input" id="f-when"${isPaid() ? "" : ' disabled title="Free shows the next 5 days — upgrade to see every date"'}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
-      <div class="field" style="width:210px"><label>Sort by</label>
-        <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
-      <button class="btn btn-secondary" id="more-toggle" style="height:36px;font-size:13px">${S.moreOpen ? "Fewer filters" : "More filters"}</button>
-    </div>
-    ${S.moreOpen ? `<div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-      <div class="field" style="width:150px"><label>Status</label>
-        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:180px"><label>Deposit (5% rule)</label>
-        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
-    </div>` : ""}
-
-    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:12.5px">
-      <span class="text-muted">${rows.length.toLocaleString()} properties</span>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+      <button class="btn btn-primary" id="open-filters" style="height:46px;padding:0 22px;font-size:16px;display:inline-flex;align-items:center;gap:10px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"></path></svg>
+        Filters${activeCount ? `<span style="background:var(--gold);color:var(--gold-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 8px">${activeCount}</span>` : ""}
+      </button>
+      <span class="text-muted" style="font-size:13px">${rows.length.toLocaleString()} properties</span>
       ${S.dayFilter != null ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
         <button id="clear-day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
       ${S.mapArea ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Map area
@@ -1788,7 +1776,7 @@ function renderDashboard() {
             ${viewSeg()}
           </div>
           <div class="tablewrap"><table class="table">
-            <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="width:56px"></th></tr></thead>
+            <thead><tr><th>Parcel</th><th>Auction</th><th style="width:150px">My decision</th></tr></thead>
             <tbody>
               ${rows.slice(0, S.shown).map((p) => {
                 const t = effType(p);
@@ -1797,10 +1785,8 @@ function renderDashboard() {
                   <td><div style="font-size:16px;font-weight:500">${esc(title)}</div>
                     <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
                     ${p.hasAddr ? `<div class="mono" style="font-size:12px;color:var(--ink3);margin-top:2px">${esc(p.parcel)}</div>` : ""}</td>
-                  <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
                   <td style="font-size:14px;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:7px">${CAL_GLYPH}${esc(p.auction)}</span><div style="font-size:12.5px;color:var(--ink3)">${esc(saleTimeText(p))}</div></td>
-                  <td>${researchCell(p)}</td>
-                  <td style="text-align:center"><button class="bm-toggle ${isBookmarked(p.id) ? "on" : ""}" data-bm="${esc(p.id)}" aria-label="${isBookmarked(p.id) ? "Remove bookmark" : "Bookmark"}" title="${isBookmarked(p.id) ? "Saved — click to remove" : "Save parcel"}">${BOOKMARK_ICON}</button></td>
+                  <td>${decisionSelect(p)}</td>
                 </tr>`;
               }).join("")}
             </tbody>
@@ -1816,37 +1802,22 @@ function renderDashboard() {
         </div>`}`;
 
   // ---- filters + view wiring ----
-  const setWhen = (v) => {
-    S.when = v; S.dayFilter = null;
-    if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
-    if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
-    S.shown = 150; renderDashboard();
-  };
-  const wf = $("f-when"); if (wf) wf.onchange = (e) => setWhen(e.target.value);
-  const tf = $("f-type"); if (tf) tf.onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
-  const sf = $("f-status"); if (sf) sf.onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
-  const df = $("f-deposit"); if (df) df.onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
-  const sortf = $("f-sort"); if (sortf) sortf.onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
-  $("more-toggle").onclick = () => { S.moreOpen = !S.moreOpen; renderDashboard(); };
+  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  const openF = $("open-filters"); if (openF) openF.onclick = openFiltersModal;
   $("scr-dashboard").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => {
     if (S.view !== b.dataset.view) { S.view = b.dataset.view; S.quickId = null; renderDashboard(); }
   });
-  $("scr-dashboard").querySelectorAll("[data-chip]").forEach((b) => b.onclick = () => {
-    const k = b.dataset.chip;
-    if (k === "saved") { go("lists"); return; }                 // the Saved screen
-    S.dayFilter = null; S.mapArea = null; S.reviewOnly = (k === "review");
-    if (k === "upcoming") { S.status = "Scheduled"; S.when = "all"; }
-    S.view = "list"; S.shown = 150; renderDashboard();
-  });
-  // County multi-select popover
-  const cbtn = $("f-county-btn"); if (cbtn) cbtn.onclick = (e) => { e.stopPropagation(); S.countyOpen = !S.countyOpen; renderDashboard(); };
-  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
-  const allBtn = $("cty-all"); if (allBtn) allBtn.onclick = () => { S.counties = []; S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard(); };
-  $("scr-dashboard").querySelectorAll("#county-pop [data-cty]").forEach((cbx) => cbx.onchange = () => {
-    const c = cbx.dataset.cty;
-    if (cbx.checked) { if (!S.counties.includes(c)) S.counties.push(c); }
-    else S.counties = S.counties.filter((x) => x !== c);
-    S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard();
+  // Inline decision control per row (Open / Interested / Watching / Saved / Pass).
+  $("scr-dashboard").querySelectorAll(".row-dec").forEach((sel) => {
+    sel.onclick = (e) => e.stopPropagation();   // don't open the row
+    sel.onchange = (e) => {
+      e.stopPropagation();
+      const id = sel.dataset.decid, rec = DATA.find((x) => x.id === id), v = sel.value;
+      if (v === "Saved") setInt(id, { bookmark: true, status: "" }, rec);
+      else if (v === "") setInt(id, { status: "", bookmark: false }, rec);
+      else setInt(id, { status: v }, rec);
+      renderDashboard();
+    };
   });
   const clearDay = $("clear-day"); if (clearDay) clearDay.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
   const clearArea = $("clear-area"); if (clearArea) clearArea.onclick = () => { S.mapArea = null; S.shown = 150; renderDashboard(); };
@@ -1862,13 +1833,6 @@ function renderDashboard() {
   const toList = $("to-list"); if (toList) toList.onclick = () => { S.view = "list"; renderDashboard(); };
   const orderedIds = rows.map((p) => p.id);
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
-  // Bookmark toggle in the parcel table — save without opening the row.
-  $("scr-dashboard").querySelectorAll("[data-bm]").forEach((b) => b.onclick = (e) => {
-    e.stopPropagation();
-    const id = b.dataset.bm, rec = DATA.find((x) => x.id === id);
-    setInt(id, { bookmark: !isBookmarked(id) }, rec);
-    renderDashboard();
-  });
 
   // ---- map view ----
   if (S.view === "map" && !regSel) {
@@ -1884,6 +1848,72 @@ function renderDashboard() {
     initBoardMap(located, orderedIds);
     if (S.quickId) { const qp = DATA.find((x) => x.id === S.quickId); if (qp) showQuickCard(qp, orderedIds); }
   }
+}
+
+// ---------- Explore filters drawer ----------
+// One popup that holds every filter (search, county, type, date, status,
+// deposit, sort, needs-review). Changes apply live to the list behind it; the
+// drawer stays open. Opened by the "Filters" button.
+function openFiltersModal() {
+  const el = $("filters-modal"); if (!el) return;
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  const extras = REG().filter((c) => !counties.includes(c.name));
+  const extraCounties = [...extras.filter((c) => c.coverage === "online").map((c) => c.name).sort(),
+                         ...extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort()];
+  const ckRow = (c) => `<label style="display:flex;gap:9px;align-items:center;padding:7px 2px;font-size:14px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
+  const field = (label, inner) => `<div style="margin-bottom:16px"><label style="display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:6px">${label}</label>${inner}</div>`;
+  el.innerHTML = `
+    <div style="width:min(400px,100%);height:100%;margin-left:auto;background:var(--card);box-shadow:-10px 0 44px rgba(20,22,26,.20);display:flex;flex-direction:column">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px">
+        <div style="flex:1;font-size:22px;font-weight:600;letter-spacing:-.01em">Filters</div>
+        <button class="btn btn-ghost" id="fm-reset" style="font-size:13px;padding:4px 10px">Reset all</button>
+        <button id="fm-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:0 4px">&times;</button>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:18px 22px">
+        ${field("Search", `<input class="input" id="fm-q" placeholder="Address, parcel or case #" value="${esc(S.q)}" style="width:100%;height:44px;box-sizing:border-box">`)}
+        ${field("Property type", `<select class="input" id="fm-type" style="width:100%">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select>`)}
+        ${field("Auction date", `<select class="input" id="fm-when" style="width:100%"${isPaid() ? "" : " disabled"}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select>${isPaid() ? "" : `<div style="font-size:12px;color:var(--ink3);margin-top:5px">Free shows the next ${FREE_DAYS} days — ${upgradeChip("upgrade")} to see every date.</div>`}`)}
+        ${field("Status", `<select class="input" id="fm-status" style="width:100%">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select>`)}
+        ${field("Deposit (5% rule)", `<select class="input" id="fm-deposit" style="width:100%">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select>`)}
+        ${field("Sort by", `<select class="input" id="fm-sort" style="width:100%">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select>`)}
+        <label style="display:flex;gap:9px;align-items:center;font-size:14px;cursor:pointer;margin-bottom:18px"><input type="checkbox" id="fm-review" ${S.reviewOnly ? "checked" : ""}> Only parcels whose research needs review</label>
+        ${field(`Counties`, `<button class="btn btn-ghost" id="fm-cty-clear" style="font-size:12px;padding:3px 10px;margin-bottom:8px">${S.counties.length ? "Clear — show all counties" : "All counties"}</button>
+          <div style="max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:6px 14px">
+            ${counties.map(ckRow).join("")}
+            ${extraCounties.length ? `<div style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
+          </div>`)}
+      </div>
+      <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end">
+        <button class="btn btn-primary" id="fm-done" style="min-width:150px;height:46px">Show <span id="fm-count">${filteredRows().length.toLocaleString()}</span> results</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  const nameInp = $("fm-q"); if (nameInp) nameInp.focus();
+  const refresh = () => { const c = $("fm-count"); if (c) c.textContent = filteredRows().length.toLocaleString(); };
+  const apply = () => { S.shown = 150; renderDashboard(); refresh(); };   // update list behind; keep drawer open
+  const persist = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  $("fm-q").oninput = (e) => { S.q = e.target.value; apply(); };
+  $("fm-type").onchange = (e) => { S.type = e.target.value; apply(); };
+  $("fm-when").onchange = (e) => { S.when = e.target.value; S.dayFilter = null; if (S.when !== "all" && S.status === "Redeemed") S.status = "Scheduled"; apply(); };
+  $("fm-status").onchange = (e) => { S.status = e.target.value; apply(); };
+  $("fm-deposit").onchange = (e) => { S.deposit = e.target.value; apply(); };
+  $("fm-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); apply(); };
+  $("fm-review").onchange = (e) => { S.reviewOnly = e.target.checked; apply(); };
+  el.querySelectorAll("[data-cty]").forEach((cb) => cb.onchange = () => {
+    const c = cb.dataset.cty;
+    if (cb.checked) { if (!S.counties.includes(c)) S.counties.push(c); } else S.counties = S.counties.filter((x) => x !== c);
+    S.dayFilter = null; persist(); apply();
+  });
+  $("fm-cty-clear").onclick = () => { S.counties = []; S.dayFilter = null; persist(); el.querySelectorAll("[data-cty]").forEach((cb) => { cb.checked = false; }); apply(); };
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  $("fm-x").onclick = close; $("fm-done").onclick = close;
+  $("fm-reset").onclick = () => {
+    S.counties = []; S.type = "All"; S.status = "Scheduled"; S.deposit = "All"; S.when = "all";
+    S.dayFilter = null; S.mapArea = null; S.reviewOnly = false; S.q = "";
+    persist(); S.shown = 150; renderDashboard(); openFiltersModal();   // repaint drawer with cleared controls
+  };
+  el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
 }
 
 // ---------- board map (Leaflet + clustering) ----------
@@ -1978,7 +2008,7 @@ const REPORTALL = {
   minZoom: 14,                    // parcels typically only render above this zoom
   attribution: "Parcels &copy; ReportAll USA",
 };
-let _parcelMap = null;
+let _parcelMap = null, _detailSat = true;   // parcel map basemap: satellite by default
 // A WKT POLYGON / MULTIPOLYGON (lng-lat order, as ReportAll returns it) ->
 // Leaflet ring arrays ([lat,lng]). Returns [] on anything it can't parse, so a
 // missing or malformed geometry just falls back to the centroid pin.
@@ -2170,32 +2200,40 @@ function runLandCheck(p) {
     if (S.screen === "detail" && S.selId === p.id) renderDetail();
   });
 }
+function parcelTiles() {
+  if (_detailSat)
+    return L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      { maxZoom: 20, attribution: "Imagery &copy; Esri" });
+  const url = effectiveDark()
+    ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    : "https://{s}.basemaps.cartocdn.com/voyager_labels_under/{z}/{x}/{y}{r}.png";
+  return L.tileLayer(url, { maxZoom: 20, subdomains: "abcd", attribution: "&copy; OpenStreetMap &copy; CARTO" });
+}
 function initParcelMap(p) {
   if (!window.L || p.lat == null || p.lng == null) return;
   const el = document.getElementById("parcelmap");
   if (!el) return;
   if (_parcelMap) { try { _parcelMap.remove(); } catch (e) {} _parcelMap = null; }
-  const map = L.map(el, { zoomControl: true, attributionControl: true }).setView([p.lat, p.lng], 17);
+  el.classList.toggle("map-glow", !_detailSat);   // dark-theme tint on street tiles only
+  const map = L.map(el, { zoomControl: false, attributionControl: true }).setView([p.lat, p.lng], 17);
   _parcelMap = map;
-  // Aerial basemap (free Esri World Imagery — no key needed).
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-    maxZoom: 20, attribution: "Imagery &copy; Esri",
-  }).addTo(map);
+  parcelTiles().addTo(map);
+  L.control.zoom({ position: "bottomright" }).addTo(map);
   // ReportAll parcel-boundary overlay (only when a tile URL is configured).
   if (REPORTALL.overlayUrl) {
     L.tileLayer(REPORTALL.overlayUrl, {
       minZoom: REPORTALL.minZoom, maxZoom: 20, opacity: 1, attribution: REPORTALL.attribution,
     }).addTo(map);
   }
-  // The real lot lines: outline the parcel boundary from ReportAll's geometry
-  // and frame the map to it, so the card shows the exact parcel — not just a pin.
+  // The real lot lines: outline the parcel boundary in gold and frame the map to
+  // it, with a centered acreage label — so the card shows the exact parcel.
   const rings = wktToLatLngs(p.geometry);
   if (rings.length) {
     const poly = L.polygon(rings, {
-      color: "#ffd23f", weight: 2.5, opacity: 1,
-      fillColor: "#ffd23f", fillOpacity: 0.12,
-    }).addTo(map).bindPopup("Parcel " + p.parcel);
-    try { map.fitBounds(poly.getBounds(), { padding: [12, 12], maxZoom: 19 }); } catch (e) {}
+      color: "#d9a92a", weight: 2.5, opacity: 1, fillColor: "#e6c25a", fillOpacity: 0.3,
+    }).addTo(map);
+    if (p.acreage) poly.bindTooltip(esc(p.acreage) + " ac", { permanent: true, direction: "center", className: "ac" });
+    try { map.fitBounds(poly.getBounds(), { padding: [26, 26], maxZoom: 18 }); } catch (e) {}
   } else {
     L.circleMarker([p.lat, p.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#c6a147", fillOpacity: 1 })
       .addTo(map).bindPopup("Parcel " + p.parcel);
@@ -2262,10 +2300,10 @@ function renderDetail() {
       ${p.redeemed ? '<span class="tag tag-outline">Redeemed</span>' : ""}
     </div>
     ${p.hasAddr ? `<div class="mono" style="font-size:13px;color:var(--ink3);margin-bottom:10px">Parcel ${esc(p.parcel)}</div>` : ""}
-    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:15px;margin-bottom:24px;color:var(--ink2)">
-      <span>${p.acreage ? esc(p.acreage) + " acres" : "Acres not available"}</span>
-      <span>${p.hasAddr ? esc([p.city, p.county + " County"].filter(Boolean).join(" · ")) : "No street address published"}</span>
-      <span>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;font-size:15px;margin-bottom:22px;color:var(--ink2)">
+      <span style="display:inline-flex;align-items:center;gap:7px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>${p.acreage ? esc(p.acreage) + " acres" : "Acres not available"}</span>
+      <span style="display:inline-flex;align-items:center;gap:7px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>${p.hasAddr ? esc([p.city, p.county + " County"].filter(Boolean).join(" · ")) : "No street address"}</span>
+      <span style="display:inline-flex;align-items:center;gap:7px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Auction ${esc(p.auction)} &middot; ${esc(saleTimeText(p))}</span>
     </div>
     ${(() => {
       const s = it.snap, notes = [];
@@ -2280,13 +2318,56 @@ function renderDetail() {
 
     <div class="detail-grid" style="display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:start">
       <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
-        <div class="blueprint" style="padding:0;display:flex;flex-direction:column;min-height:320px">${CORNERS}
-          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent-700);padding:7px 10px;border-bottom:1px solid var(--color-divider)">Location</div>
+        <div style="position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)">
           ${ll
-            ? `<div id="parcelmap" style="flex:1;min-height:300px"></div>`
+            ? `<div id="parcelmap" style="height:400px"></div>
+               <div style="position:absolute;top:12px;right:12px;z-index:5;display:inline-flex;border-radius:999px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)">
+                 <button class="seg3 ${!_detailSat ? "on" : ""}" data-detmap="map" style="padding:7px 16px">Map</button>
+                 <button class="seg3 ${_detailSat ? "on" : ""}" data-detmap="sat" style="padding:7px 16px">Satellite</button>
+               </div>
+               <button class="btn btn-secondary" id="open-full-map" style="position:absolute;left:12px;bottom:12px;z-index:5;font-size:13px;box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:7px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg> Open full map</button>`
             : hasAddr
-              ? `<div style="flex:1;min-height:300px;position:relative"><iframe src="https://maps.google.com/maps?q=${mapQ}&t=k&z=16&output=embed" style="position:absolute;inset:0;width:100%;height:100%;border:0" loading="lazy"></iframe></div>`
-              : `<div class="ph" style="flex:1;min-height:300px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
+              ? `<iframe src="https://maps.google.com/maps?q=${mapQ}&t=k&z=16&output=embed" style="width:100%;height:400px;border:0;display:block" loading="lazy"></iframe>`
+              : `<div class="ph" style="height:400px"><span>The county didn&rsquo;t publish an address.<br>Use the appraiser link to locate it.</span></div>`}
+        </div>
+
+        <div class="blueprint" style="padding:22px 24px">${CORNERS}
+          <h3 style="margin:0 0 6px;font-size:22px;font-weight:500;letter-spacing:-.01em">Research</h3>
+          ${(() => {
+            const R = getResearch(p.id);
+            const state = (key) => {
+              if (key === "landCheck" && isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
+                return (lc.verdict === "avoid" || lc.verdict === "review") ? "needs" : "reviewed";
+              const c = R[key];
+              if (c.state === "reviewed") return (c.warning && !c.resolved) ? "needs" : "reviewed";
+              if (c.state === "couldntCheck") return "needs";
+              return "none";
+            };
+            const STAT = {
+              reviewed: { sym: "&#10003;", label: "Reviewed", bg: "#2ea658", ink: "#1e7a3e" },
+              needs: { sym: "!", label: "Needs review", bg: "#f2b400", ink: "#8a6a00" },
+              none: { sym: "&ndash;", label: "Not checked", bg: "#c4c8ce", ink: "var(--ink3)" },
+            };
+            const row = (key, icon, label, href, linkLabel, first) => {
+              const st = STAT[state(key)];
+              const link = href
+                ? `<a href="${esc(href)}" target="_blank" rel="noopener" style="font-size:14px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px">${esc(linkLabel)} ${LINK_SVG}</a>`
+                : `<button class="lnk" data-research-run="${key}" style="background:none;border:none;cursor:pointer;color:var(--gold-ink);font-size:14px;font-weight:500;white-space:nowrap;padding:0;display:inline-flex;align-items:center;gap:5px">${esc(linkLabel)} ${LINK_SVG}</button>`;
+              const clickable = key !== "landCheck";
+              return `<div style="display:flex;align-items:center;gap:14px;padding:14px 0;${first ? "" : "border-top:1px solid var(--line)"}">
+                <span style="width:40px;height:40px;border-radius:12px;background:var(--chip);display:grid;place-items:center;color:var(--ink2);flex:none">${icon}</span>
+                <span style="flex:1;font-size:16px;font-weight:500">${label}</span>
+                <span ${clickable ? `data-research-cycle="${key}" role="button" tabindex="0" title="Click to change" style="cursor:pointer;` : "style=\""}display:inline-flex;align-items:center;gap:8px;font-size:14px;color:${st.ink}">
+                  <span style="width:20px;height:20px;border-radius:50%;background:${st.bg};color:#fff;display:inline-grid;place-items:center;font-size:12px;font-weight:700">${st.sym}</span>${st.label}</span>
+                <span style="margin-left:18px">${link}</span></div>`;
+            };
+            const ICO_DOC = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>';
+            const ICO_SEARCH = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>';
+            const ICO_SHIELD = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path></svg>';
+            return row("propertyRecord", ICO_DOC, "Property record", appraiserLink(p), "County record", true)
+              + row("landCheck", ICO_SEARCH, "Land check", null, "View check", false)
+              + row("titleLiens", ICO_SHIELD, "Title &amp; liens", clerkLink(p), "Case records", false);
+          })()}
         </div>
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
@@ -2329,87 +2410,71 @@ function renderDetail() {
             </div>` : `<div class="text-muted" style="font-size:13px">Case found; the clerk lists no downloadable documents on it.</div>`}
         </div>` : ""}
 
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <h6 style="color:var(--color-accent-700);margin:0 0 4px">Research</h6>
-          <div class="text-muted" style="font-size:12px;margin-bottom:6px">Three separate checks. Property record and Title &amp; liens are manual &mdash; open the source and confirm for yourself. The land check is automated.</div>
-          ${(() => {
-            const R = getResearch(p.id);
-            const stTag = (c) => c.state === "reviewed" ? (c.warning && !c.resolved ? '<span class="tag tag-warn">Needs review</span>' : '<span class="tag tag-ok">Reviewed</span>')
-              : c.state === "couldntCheck" ? '<span class="tag tag-warn">Couldn&rsquo;t check</span>'
-              : c.state === "checking" ? '<span class="tag tag-neutral">Checking&hellip;</span>' : '<span class="tag tag-neutral">Not checked</span>';
-            const row = (title, tag, body, actions) => `<div style="display:flex;flex-direction:column;gap:8px;padding:11px 0;border-top:1px solid color-mix(in srgb,var(--color-text) 8%,transparent)">
-              <div style="display:flex;align-items:center;gap:10px"><span style="font-weight:600;font-size:14px">${title}</span><span style="margin-left:auto">${tag}</span></div>
-              <div style="font-size:13.5px;line-height:1.5">${body}</div>
-              ${actions ? `<div style="display:flex;gap:8px;flex-wrap:wrap">${actions}</div>` : ""}</div>`;
-            // Manual checks: Mark reviewed / Flag an issue; once reviewed, Undo (and
-            // Resolve when flagged). Opening the source link does NOT auto-complete.
-            const manual = (key, c) => {
-              if (c.state === "reviewed" && c.warning && !c.resolved)
-                return `<button class="btn btn-secondary" data-research-resolve="${key}" style="font-size:12px;padding:3px 10px">Mark resolved</button><button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo</button>`;
-              if (c.state === "reviewed")
-                return `<button class="btn btn-ghost" data-research-undo="${key}" style="font-size:12px;padding:3px 8px">Undo review</button>`;
-              return `<button class="btn btn-secondary" data-research-review="${key}" style="font-size:12px;padding:3px 10px">Mark reviewed</button><button class="btn btn-ghost" data-research-flag="${key}" style="font-size:12px;padding:3px 8px">Flag an issue</button>`;
-            };
-            const landTag = (isPaid() && lc && lc.verdict && lc.verdict !== "unknown")
-              ? stTag({ state: "reviewed", warning: lc.verdict === "avoid" || lc.verdict === "review" })
-              : stTag(R.landCheck);
-            return row("Property record", stTag(R.propertyRecord), `Open the county property record and confirm the details. <a href="${esc(appraiserLink(p))}" target="_blank" rel="noopener">${LINK_SVG} County record</a>`, manual("propertyRecord", R.propertyRecord))
-              + row("Land check", landTag, landText)
-              + row("Title &amp; liens", stTag(R.titleLiens), `Title and liens aren&rsquo;t automated &mdash; open the clerk&rsquo;s case file and read it. <a href="${esc(clerkLink(p))}" target="_blank" rel="noopener">${LINK_SVG} Case records</a>`, manual("titleLiens", R.titleLiens));
-          })()}
-          <p class="text-muted" style="font-size:12.5px;margin:14px 0 0"><b>Nothing here is verified &mdash; do your own research.</b> Everything on this page is pulled straight from the county&rsquo;s posting and can be wrong or out of date. Confirm the value, the title and any liens, the case file, and the parcel itself before you bid.</p>
-          <div style="margin-top:12px;font-size:11px" class="text-muted">${esc(p.county)} County last checked ${(() => { const c = countyChecked(p); return c ? esc(etStamp(c)) : "—"; })()} &middot; feed generated ${META ? esc(etStamp(new Date(META.generated_at))) : "—"}</div>
-        </div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:26px">
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-            <h6 style="color:var(--color-accent-700);margin:0">Price intelligence</h6>
+        <div class="blueprint" style="padding:20px 22px">${CORNERS}
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-.01em">Price intelligence</h3>
             <span class="tag tag-warn" style="margin-left:auto">Planned</span>
           </div>
-          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
-            <div style="display:flex;justify-content:space-between;gap:10px"><span>Expected auction price</span><span class="text-muted">Not calculated</span></div>
-            <div style="display:flex;justify-content:space-between;gap:10px"><span>Estimated market value</span><span class="text-muted">Not calculated</span></div>
+          <div style="background:var(--gold-soft);border-radius:14px;padding:16px 18px">
+            <div style="display:flex;justify-content:space-between;gap:10px;font-size:15px;margin-bottom:8px"><span>Expected auction price</span><span style="color:var(--ink3)">Not calculated</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;font-size:15px"><span>Estimated market value</span><span style="color:var(--ink3)">Not calculated</span></div>
+            <div style="font-size:12.5px;color:var(--ink2);margin-top:12px">Based on auction results and comparable land sales.</div>
           </div>
-          <p class="text-muted" style="font-size:12px;margin:10px 0 0">Planned: estimates using auction results and comparable land sales.</p>
-          <div class="hr"></div>
-          <div style="font-size:12.5px" class="text-muted">Nearby land sales <span class="tag tag-neutral" style="margin-left:6px">Planned</span></div>
-          <details style="margin-top:12px">
-            <summary style="cursor:pointer;font-size:13.5px;font-weight:500;color:var(--color-accent-700)">Opening bid &amp; assessment</summary>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;font-size:13.5px;margin-top:12px">
+          <details style="margin-top:4px">
+            <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 2px;border-top:1px solid var(--line)">
+              <span style="color:var(--ink2);flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span>
+              <span style="flex:1;font-size:15px;font-weight:500">Nearby land sales</span>
+              <span class="tag tag-neutral">Planned</span>
+              <svg class="pi-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+            </summary>
+            <p class="text-muted" style="font-size:12.5px;padding:0 2px 12px;margin:0">Comparable nearby land sales will appear here once pricing is live.</p>
+          </details>
+          <details>
+            <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 2px;border-top:1px solid var(--line)">
+              <span style="color:var(--ink2);flex:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg></span>
+              <span style="flex:1;font-size:15px;font-weight:500">Opening bid &amp; assessment</span>
+              <svg class="pi-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg>
+            </summary>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;font-size:14px;padding:4px 2px 12px">
               <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Opening bid</div><div style="font-weight:500">${money(p.bid)}</div></div>
               <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Assessed value</div><div style="font-weight:500">${money(p.assessed)}</div></div>
               <div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">Bid / assessed</div><div style="font-weight:500">${p.pct != null ? p.pct + "%" : "—"}</div></div>
               ${(() => { const c = countyCaps(p); return c.deposit ? `<div><div class="text-muted" style="font-size:11px;letter-spacing:.06em;text-transform:uppercase">County deposit</div><div style="font-weight:500">${money(c.deposit)}${p.bid != null ? ` &middot; ~5% is ${money(p.bid * 0.05)}` : ""}</div></div>` : ""; })()}
+              <p class="text-muted" style="font-size:11.5px;margin:2px 0 0;grid-column:1/-1">County figures, not an estimate. The opening bid is only the starting price &mdash; tax deeds routinely sell well above it.</p>
             </div>
-            <p class="text-muted" style="font-size:11.5px;margin:10px 0 0">County figures, not an estimate. The opening bid is only the starting price &mdash; tax deeds routinely sell well above it.</p>
           </details>
         </div>
-        <div class="blueprint" style="padding:18px 20px">${CORNERS}
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-            <h6 style="color:var(--color-accent-700);margin:0">My decision</h6>
-            <button class="btn btn-secondary" id="pos-bookmark" style="margin-left:auto;font-size:12px;padding:4px 11px">${isBookmarked(p.id) ? "Saved &#10003;" : "Save"}</button>
+        <div class="blueprint" style="padding:20px 22px">${CORNERS}
+          <h3 style="margin:0 0 14px;font-size:22px;font-weight:500;letter-spacing:-.01em">My decision</h3>
+          <div style="display:flex;gap:8px;margin-bottom:16px">
+            ${[["Interested", '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path></svg>'],
+                ["Watching", '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>'],
+                ["Pass", '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg>']]
+              .map(([o, ic]) => `<button class="dec-seg ${it.status === o ? "on" : ""}" data-status="${o}"><span style="display:grid;place-items:center">${ic}</span>${o}</button>`).join("")}
           </div>
-          <div style="display:flex;margin-bottom:14px;border:1px solid var(--color-divider)">
-            ${["Interested","Watching","Pass"].map((o) => `<button class="seg3 ${it.status === o ? "on" : ""}" data-status="${o}">${o.toUpperCase()}</button>`).join("")}
-          </div>
-          <div class="field" style="margin-bottom:12px"><label>Max I&rsquo;m willing to pay</label>
-            <input class="input" id="pos-bid" placeholder="${esc(prefs.budget || "$ 0")}" value="${esc(it.bid)}" style="font-variant-numeric:tabular-nums;font-weight:500"></div>
-          <div class="field" style="margin-bottom:12px"><label>Add to list</label>
-            <select class="input" id="pos-list"><option value="">&mdash; none &mdash;</option>
+          <div style="display:grid;grid-template-columns:auto 1fr;gap:14px 14px;align-items:center">
+            <label for="pos-bid" style="font-size:14px;color:var(--ink2)">Max I&rsquo;m willing to pay</label>
+            <div style="position:relative"><span style="position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink3)">$</span>
+              <input class="input" id="pos-bid" placeholder="Enter amount" value="${esc(it.bid)}" style="width:100%;box-sizing:border-box;padding-left:26px;font-variant-numeric:tabular-nums"></div>
+            <label for="pos-list" style="font-size:14px;color:var(--ink2)">Save to list</label>
+            <select class="input" id="pos-list" style="width:100%"><option value="">&mdash; none &mdash;</option>
               ${(() => { const ll = lists.filter((l) => !l.deleted); return ll.length ? `<optgroup label="My lists">${ll.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
               ${(() => { const tl = team.lists.filter((l) => !l.deleted); return tl.length ? `<optgroup label="Team lists (shared)">${tl.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
-            </select></div>
-          <div class="field"><label>Notes</label>
-            <textarea class="input" id="pos-notes" placeholder="Anything the team should know&hellip;">${esc(it.notes)}</textarea></div>
+            </select>
+            <label for="pos-notes" style="font-size:14px;color:var(--ink2);align-self:start;padding-top:10px">Notes</label>
+            <textarea class="input" id="pos-notes" placeholder="Add a note&hellip;" style="width:100%;box-sizing:border-box">${esc(it.notes)}</textarea>
+          </div>
           ${(() => {
             const cf = (interest[p.id] && interest[p.id]._conflict) || null;
             if (!cf) return "";
             const nice = { status: "decision", bid: "max bid", notes: "notes", list: "list", bookmark: "save" };
             const fields = Object.keys(cf).map((f) => nice[f] || f).join(", ");
-            return `<div style="margin-top:10px;font-size:12px;background:var(--color-accent-100);color:var(--color-accent-800);padding:7px 9px">Another device also changed <b>${esc(fields)}</b> around the same time — this device&rsquo;s value was kept. <button id="conflict-ok" class="btn btn-ghost" style="font-size:12px;padding:1px 6px">Dismiss</button></div>`;
+            return `<div style="margin-top:12px;font-size:12px;background:var(--gold-soft);color:var(--gold-ink);padding:7px 9px;border-radius:8px">Another device also changed <b>${esc(fields)}</b> around the same time — this device&rsquo;s value was kept. <button id="conflict-ok" class="btn btn-ghost" style="font-size:12px;padding:1px 6px">Dismiss</button></div>`;
           })()}
+          <button class="btn btn-primary" id="pos-save" style="width:100%;height:52px;margin-top:16px;font-size:16px;display:inline-flex;align-items:center;justify-content:center;gap:10px">${BOOKMARK_ICON} ${isBookmarked(p.id) ? "Saved" : "Save parcel"}</button>
           <div style="margin-top:10px;font-size:11.5px;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
             <span data-save-status style="font-weight:500;color:var(--color-text-secondary)"></span>
             <span class="text-muted" style="font-size:11px">${CLOUD && CLOUD.user ? "Syncing to your account — live on every device you sign in on." : "Saved in this browser." + (SYNC_ON ? " Sign in (sidebar) to sync across devices." : "")}</span>
@@ -2427,12 +2492,29 @@ function renderDetail() {
     if (pv) pv.onclick = () => stepParcel(-1);
     if (nx) nx.onclick = () => stepParcel(1); }
   initParcelMap(p);
-  const rlc = $("run-landcheck"); if (rlc) rlc.onclick = () => runLandCheck(p);
-  // Manual research actions (Property record / Title & liens).
-  $("scr-detail").querySelectorAll("[data-research-review]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchReview, { state: "reviewed", warning: false, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
-  $("scr-detail").querySelectorAll("[data-research-flag]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchFlag, { state: "reviewed", warning: true, resolved: false, checkedAt: nowIso() }, p); renderDetail(); });
-  $("scr-detail").querySelectorAll("[data-research-resolve]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchResolve, { resolved: true }, p); renderDetail(); });
-  $("scr-detail").querySelectorAll("[data-research-undo]").forEach((b) => b.onclick = () => { setResearch(p.id, b.dataset.researchUndo, { state: "notChecked", warning: false, resolved: false, checkedAt: "" }, p); renderDetail(); });
+  // Map / Satellite toggle on the parcel map.
+  $("scr-detail").querySelectorAll("[data-detmap]").forEach((b) => b.onclick = () => {
+    const sat = b.dataset.detmap === "sat";
+    if (sat !== _detailSat) { _detailSat = sat; renderDetail(); }
+  });
+  // "Open full map" → the Explore map centered on this parcel.
+  const ofm = $("open-full-map"); if (ofm) ofm.onclick = () => {
+    if (p.lat != null && p.lng != null) { S._mapCenter = [Number(p.lat), Number(p.lng)]; S._mapZoom = 16; }
+    S.view = "map"; S.quickId = p.id; go("dashboard");
+  };
+  // Research: the two manual checks cycle their status; Land check runs the automated check.
+  const cycle = (key) => {
+    const cur = getResearch(p.id)[key];
+    const next = cur.state !== "reviewed" ? { state: "reviewed", warning: false, resolved: false, checkedAt: nowIso() }
+      : (!cur.warning ? { state: "reviewed", warning: true, resolved: false, checkedAt: nowIso() }
+        : { state: "notChecked", warning: false, resolved: false, checkedAt: "" });
+    setResearch(p.id, key, next, p); renderDetail();
+  };
+  $("scr-detail").querySelectorAll("[data-research-cycle]").forEach((b) => {
+    b.onclick = () => cycle(b.dataset.researchCycle);
+    b.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); cycle(b.dataset.researchCycle); } };
+  });
+  const rrun = $("scr-detail").querySelector("[data-research-run]"); if (rrun) rrun.onclick = () => runLandCheck(p);
   const cll = $("copy-ll");
   if (cll) cll.onclick = () => {
     navigator.clipboard?.writeText(`${p.lat}, ${p.lng}`).then(() => {
@@ -2457,7 +2539,7 @@ function renderDetail() {
   $("pos-bid").oninput = (e) => setInt(p.id, { bid: e.target.value }, p);
   $("pos-list").onchange = (e) => { assignList(p.id, e.target.value); setInt(p.id, {}, p); };
   $("pos-notes").oninput = (e) => setInt(p.id, { notes: e.target.value }, p);
-  const pbm = $("pos-bookmark"); if (pbm) pbm.onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); renderDetail(); };
+  const pbm = $("pos-save"); if (pbm) pbm.onclick = () => { setInt(p.id, { bookmark: !isBookmarked(p.id) }, p); renderDetail(); };
   const cok = $("conflict-ok"); if (cok) cok.onclick = () => { const it2 = interest[p.id]; if (it2) { delete it2._conflict; saveInterest(); } renderDetail(); };
   paintSaveStatus();
 }
@@ -2561,12 +2643,6 @@ function renderLists() {
     </div>
     <p style="font-size:17px;color:var(--ink2);margin:0 0 22px">${allSaved.length} ${allSaved.length === 1 ? "parcel" : "parcels"} across ${active.length} ${active.length === 1 ? "list" : "lists"}.${signedIn ? " Team lists are shared live with everyone signed in." : SYNC_ON ? " Sign in to sync across devices." : ""}</p>
     ${isPaid() ? "" : `<div class="plan-banner" style="margin-bottom:20px"><span class="plan-badge">Paid</span><span>Named lists &mdash; group parcels and share them with your team &mdash; are a paid feature. ${upgradeChip("Unlock lists")}</span></div>`}
-    <div id="new-list-row" hidden style="display:flex;gap:10px;max-width:560px;margin-bottom:18px;align-items:center;flex-wrap:wrap">
-      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
-      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
-      <button class="btn btn-primary" id="add-list" style="flex:none">Create</button>
-      <div id="new-list-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);flex-basis:100%" hidden></div>
-    </div>
     <div class="saved-grid" style="display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start">
       <div>${picker}</div>
       <div>${tableCard}</div>
@@ -2599,39 +2675,63 @@ function renderLists() {
   };
   const manageBtn = $("saved-manage"); if (manageBtn) manageBtn.onclick = () => openList(view.slice(2), view.startsWith("t:"));
 
-  // Create-list controls.
-  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = () => {
-    const row = $("new-list-row"); row.hidden = !row.hidden; if (!row.hidden) $("new-list").focus();
-  };
-  const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
-  const createList = () => {
-    const inp = $("new-list");
-    const name = (inp.value || "").trim();
-    if (!name) { listHint("Type a name for the list first."); inp.focus(); return; }
-    if (lists.some((l) => l.name === name && !l.deleted) || team.lists.some((l) => l.name === name && !l.deleted)) {
-      listHint(`You already have a list called “${name}.” Pick a different name.`); return;
-    }
-    const sharedBox = $("new-list-shared");
-    const shared = !!(sharedBox && sharedBox.checked);
-    const arr = shared ? team.lists : lists;
-    const tomb = arr.find((l) => l.name === name && l.deleted);
-    if (tomb) { delete tomb.deleted; tomb.archived = false; }
-    else arr.push({ name, desc: "" });
-    shared ? saveTeam() : saveLists();
-    S.savedView = (shared ? "t:" : "p:") + name;   // select the new list
-    renderLists();
-  };
-  if ($("add-list")) {
-    $("add-list").onclick = createList;
-    $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
-    $("new-list").oninput = () => listHint("");
-  }
+  // New list -> popup.
+  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = openNewListModal;
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
     setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
   });
 }
 // Persist the global county selection (used by the Saved "Show on map" jump).
 function persistCountiesGlobal() { prefs.counties = S.counties.slice(); savePrefs(); }
+// New-list popup: name + (signed in) share-with-team, Create/Cancel. Replaces the
+// old inline row. On create it selects the new list and re-renders Saved.
+function openNewListModal() {
+  const el = $("newlist-modal"); if (!el) return;
+  const signedIn = !!(CLOUD && CLOUD.user);
+  el.innerHTML = `
+    <div class="home-card" style="width:min(440px,100%);padding:0">
+      <div style="padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px">
+        <div style="flex:1"><div style="font-size:22px;font-weight:600;letter-spacing:-.01em">New list</div>
+          <div style="font-size:13px;color:var(--ink2);margin-top:2px">Group the parcels you want to track together.</div></div>
+        <button id="nl-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:2px 6px">&times;</button>
+      </div>
+      <div style="padding:20px 24px">
+        <label for="nl-name" style="display:block;font-size:13px;font-weight:500;color:var(--ink2);margin-bottom:6px">List name</label>
+        <input class="input" id="nl-name" placeholder="e.g. September shortlist" autocomplete="off" style="width:100%;height:46px;box-sizing:border-box">
+        ${signedIn ? `<label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;margin-top:16px"><input type="checkbox" id="nl-shared"> Share with my team</label>
+          <div style="font-size:12.5px;color:var(--ink3);margin-top:4px">Team lists are visible live to everyone signed in to your workspace.</div>` : ""}
+        <div id="nl-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);margin-top:12px" hidden></div>
+      </div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end">
+        <button class="btn btn-secondary" id="nl-cancel">Cancel</button>
+        <button class="btn btn-primary" id="nl-create">Create list</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  const nameInp = $("nl-name"); nameInp.focus();
+  const hint = (m) => { const h = $("nl-hint"); if (h) { h.textContent = m || ""; h.hidden = !m; } };
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  const submit = () => {
+    const name = (nameInp.value || "").trim();
+    if (!name) { hint("Type a name for the list first."); nameInp.focus(); return; }
+    if (lists.some((l) => l.name === name && !l.deleted) || team.lists.some((l) => l.name === name && !l.deleted)) {
+      hint(`You already have a list called “${name}.” Pick a different name.`); return;
+    }
+    const sb = $("nl-shared"), shared = !!(sb && sb.checked);
+    const arr = shared ? team.lists : lists;
+    const tomb = arr.find((l) => l.name === name && l.deleted);
+    if (tomb) { delete tomb.deleted; tomb.archived = false; }
+    else arr.push({ name, desc: "" });
+    shared ? saveTeam() : saveLists();
+    S.savedView = (shared ? "t:" : "p:") + name;   // open the new list
+    close(); renderLists();
+  };
+  $("nl-create").onclick = submit;
+  nameInp.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); submit(); } };
+  nameInp.oninput = () => hint("");
+  $("nl-cancel").onclick = close; $("nl-x").onclick = close;
+  el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
+}
 
 // ---------- single-list page: filter, sort, manage ----------
 function renderListDetail() {
@@ -2965,21 +3065,16 @@ function renderCalendar() {
     <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
     <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <button id="cal-cty-toggle" aria-expanded="${S.calCountyOpen ? "true" : "false"}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:220px;height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;text-align:left">
-          <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</span>
-          <span style="flex:1;font-weight:500">${sel.size === all.length && all.length ? "All counties" : sel.size ? `${sel.size} selected` : "None selected"}</span>
-          <span style="transition:transform .15s ease;transform:rotate(${S.calCountyOpen ? "180deg" : "0"})">&#9662;</span>
-        </button>
-        <button class="btn btn-secondary" id="cal-print" style="font-size:13px;height:44px" ${months.length ? "" : "disabled"}>Print</button>
-      </div>
-      ${S.calCountyOpen ? `<div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">
-        <div style="display:flex;gap:8px;margin-bottom:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES &middot; ${all.length ? (sel.size === all.length ? "all " + all.length : sel.size + " of " + all.length) : "none"} on the calendar</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
           <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
           <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
+          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print</button>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
-      </div>` : ""}
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+      <div style="font-size:12.5px;color:var(--ink3);margin-top:8px">Tap a county to add or remove it from the calendar.</div>
     </div>
 
     ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
@@ -3000,7 +3095,6 @@ function renderCalendar() {
       </div>`
       : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
-  const ctyToggle = $("cal-cty-toggle"); if (ctyToggle) ctyToggle.onclick = () => { S.calCountyOpen = !S.calCountyOpen; renderCalendar(); };
   const chipWrap = $("cal-chips"); if (chipWrap) chipWrap.querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
     const cs = new Set(calSelected()), c = b.dataset.cty;
     if (cs.has(c)) cs.delete(c); else cs.add(c);
