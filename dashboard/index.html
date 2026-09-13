@@ -100,6 +100,9 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 tr.rowlink{cursor:pointer}
 tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 .dec-badge{display:inline-block;font-size:13px;font-weight:600;border-radius:999px;padding:5px 13px;white-space:nowrap;letter-spacing:.01em}
+.cty-chip{font-size:13px;font-weight:500;color:var(--ink2);background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap;transition:background .12s,border-color .12s,color .12s}
+.cty-chip:hover{border-color:var(--gold-ring)}
+.cty-chip.on{background:var(--seg-active);color:var(--gold-ink);border-color:var(--seg-active-border);font-weight:600}
 #load-note{padding:60px 0;text-align:center}
 /* ===== Mobile: the desktop is 1586px; below ~820px re-flow for phones/tablets.
    The fixed left rail becomes a bottom tab bar and the content column drops its
@@ -1738,7 +1741,7 @@ function renderDashboard() {
   // filter is narrowing the view (drives the right empty-state message + action).
   const freeHidden = isPaid() ? 0 : Math.max(0, filteredRows(true).length - rows.length);
   const filtersActive = S.counties.length || S.type !== "All" || S.status !== "Scheduled"
-    || S.deposit !== "All" || S.when !== "all" || S.dayFilter != null || S.mapArea || S.reviewOnly || S.q.trim() !== "";
+    || S.when !== "all" || S.dayFilter != null || S.mapArea || S.reviewOnly || S.q.trim() !== "";
   // "Upcoming" excludes past-due rows too — an auction whose date already passed
   // with no result posted isn't upcoming, even if not yet marked Redeemed.
   const upcoming = DATA.filter((p) => !p.redeemed && !isPastDue(p));
@@ -1762,7 +1765,7 @@ function renderDashboard() {
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
   const ckRow = (c) => `<label style="display:flex;gap:8px;align-items:center;padding:4px 2px;font-size:13px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
   const activeCount = (S.counties.length ? 1 : 0) + (S.type !== "All" ? 1 : 0) + (S.when !== "all" ? 1 : 0)
-    + (S.status !== "Scheduled" ? 1 : 0) + (S.deposit !== "All" ? 1 : 0) + (S.reviewOnly ? 1 : 0) + (S.q.trim() ? 1 : 0);
+    + (S.status !== "Scheduled" ? 1 : 0) + (S.reviewOnly ? 1 : 0) + (S.q.trim() ? 1 : 0);
   $("scr-dashboard").innerHTML = `
     <h2 style="margin:0 0 4px">Find your next parcel.</h2>
     <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Upcoming tax-deed auctions in your counties &middot; times in each county&rsquo;s local zone (ET / CT)</div>
@@ -1772,6 +1775,10 @@ function renderDashboard() {
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"></path></svg>
         Filters${activeCount ? `<span style="background:var(--gold);color:var(--gold-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 8px">${activeCount}</span>` : ""}
       </button>
+      <div style="position:relative;flex:1;min-width:200px;max-width:440px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink3)" stroke-width="2" style="position:absolute;left:14px;top:50%;transform:translateY(-50%)"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3" stroke-linecap="round"></path></svg>
+        <input class="input" id="q" type="search" placeholder="Search address, parcel or case #" value="${esc(S.q)}" aria-label="Search parcels" style="width:100%;height:46px;box-sizing:border-box;padding-left:42px">
+      </div>
       <span class="text-muted" style="font-size:13px">${rows.length.toLocaleString()} properties</span>
       ${S.dayFilter != null ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
         <button id="clear-day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
@@ -1843,6 +1850,14 @@ function renderDashboard() {
   // ---- filters + view wiring ----
   const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
   const openF = $("open-filters"); if (openF) openF.onclick = openFiltersModal;
+  // Top-level search box. Re-rendering rebuilds this input, so restore focus and
+  // caret afterward so typing stays smooth.
+  const qBox = $("q");
+  if (qBox) qBox.oninput = () => {
+    const pos = qBox.selectionStart;
+    S.q = qBox.value; S.shown = 150; renderDashboard();
+    const nq = $("q"); if (nq) { nq.focus(); try { nq.setSelectionRange(pos, pos); } catch (e) {} }
+  };
   $("scr-dashboard").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => {
     if (S.view !== b.dataset.view) { S.view = b.dataset.view; S.quickId = null; renderDashboard(); }
   });
@@ -1890,7 +1905,8 @@ function openFiltersModal() {
   const extras = REG().filter((c) => !counties.includes(c.name));
   const extraCounties = [...extras.filter((c) => c.coverage === "online").map((c) => c.name).sort(),
                          ...extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort()];
-  const ckRow = (c) => `<label style="display:flex;gap:9px;align-items:center;padding:7px 2px;font-size:14px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
+  const ctyChip = (c) => `<button type="button" class="cty-chip ${S.counties.includes(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`;
+  const ctyCountLabel = () => S.counties.length ? `${S.counties.length} selected` : "All counties";
   const field = (label, inner) => `<div style="margin-bottom:16px"><label style="display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:6px">${label}</label>${inner}</div>`;
   el.innerHTML = `
     <div style="width:min(400px,100%);height:100%;margin-left:auto;background:var(--card);box-shadow:-10px 0 44px rgba(20,22,26,.20);display:flex;flex-direction:column">
@@ -1900,17 +1916,21 @@ function openFiltersModal() {
         <button id="fm-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:0 4px">&times;</button>
       </div>
       <div style="flex:1;overflow-y:auto;padding:18px 22px">
-        ${field("Search", `<input class="input" id="fm-q" placeholder="Address, parcel or case #" value="${esc(S.q)}" style="width:100%;height:44px;box-sizing:border-box">`)}
         ${field("Property type", `<select class="input" id="fm-type" style="width:100%">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select>`)}
         ${field("Auction date", `<select class="input" id="fm-when" style="width:100%"${isPaid() ? "" : " disabled"}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select>${isPaid() ? "" : `<div style="font-size:12px;color:var(--ink3);margin-top:5px">Free shows the next ${FREE_DAYS} days — ${upgradeChip("upgrade")} to see every date.</div>`}`)}
         ${field("Status", `<select class="input" id="fm-status" style="width:100%">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select>`)}
-        ${field("Deposit (5% rule)", `<select class="input" id="fm-deposit" style="width:100%">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select>`)}
         ${field("Sort by", `<select class="input" id="fm-sort" style="width:100%">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select>`)}
         <label style="display:flex;gap:9px;align-items:center;font-size:14px;cursor:pointer;margin-bottom:18px"><input type="checkbox" id="fm-review" ${S.reviewOnly ? "checked" : ""}> Only parcels whose research needs review</label>
-        ${field(`Counties`, `<button class="btn btn-ghost" id="fm-cty-clear" style="font-size:12px;padding:3px 10px;margin-bottom:8px">${S.counties.length ? "Clear — show all counties" : "All counties"}</button>
-          <div style="max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:6px 14px">
-            ${counties.map(ckRow).join("")}
-            ${extraCounties.length ? `<div style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
+        ${field(`Counties`, `
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <button type="button" class="btn btn-secondary" id="fm-cty-all" style="font-size:12.5px;padding:5px 12px">Select all</button>
+            <button type="button" class="btn btn-ghost" id="fm-cty-clear" style="font-size:12.5px;padding:5px 12px">Clear</button>
+            <span id="fm-cty-count" style="margin-left:auto;font-size:12px;color:var(--ink3);font-weight:500">${ctyCountLabel()}</span>
+          </div>
+          <input class="input" id="fm-cty-search" placeholder="Find a county&hellip;" autocomplete="off" style="width:100%;height:40px;box-sizing:border-box;margin-bottom:10px">
+          <div id="fm-cty-list" style="max-height:250px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-wrap:wrap;gap:8px">
+            ${counties.map(ctyChip).join("")}
+            ${extraCounties.length ? `<div data-cty-sep style="flex-basis:100%;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);margin:6px 0 0">No sales posted / in-person</div>${extraCounties.map(ctyChip).join("")}` : ""}
           </div>`)}
       </div>
       <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end">
@@ -1918,23 +1938,34 @@ function openFiltersModal() {
       </div>
     </div>`;
   el.hidden = false;
-  const nameInp = $("fm-q"); if (nameInp) nameInp.focus();
   const refresh = () => { const c = $("fm-count"); if (c) c.textContent = filteredRows().length.toLocaleString(); };
   const apply = () => { S.shown = 150; renderDashboard(); refresh(); };   // update list behind; keep drawer open
   const persist = () => { prefs.counties = S.counties.slice(); savePrefs(); };
-  $("fm-q").oninput = (e) => { S.q = e.target.value; apply(); };
+  const syncCty = () => {   // reflect S.counties on the chips + the count label
+    el.querySelectorAll("#fm-cty-list .cty-chip").forEach((b) => b.classList.toggle("on", S.counties.includes(b.dataset.cty)));
+    const cc = $("fm-cty-count"); if (cc) cc.textContent = S.counties.length ? `${S.counties.length} selected` : "All counties";
+  };
   $("fm-type").onchange = (e) => { S.type = e.target.value; apply(); };
   $("fm-when").onchange = (e) => { S.when = e.target.value; S.dayFilter = null; if (S.when !== "all" && S.status === "Redeemed") S.status = "Scheduled"; apply(); };
   $("fm-status").onchange = (e) => { S.status = e.target.value; apply(); };
-  $("fm-deposit").onchange = (e) => { S.deposit = e.target.value; apply(); };
   $("fm-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); apply(); };
   $("fm-review").onchange = (e) => { S.reviewOnly = e.target.checked; apply(); };
-  el.querySelectorAll("[data-cty]").forEach((cb) => cb.onchange = () => {
-    const c = cb.dataset.cty;
-    if (cb.checked) { if (!S.counties.includes(c)) S.counties.push(c); } else S.counties = S.counties.filter((x) => x !== c);
-    S.dayFilter = null; persist(); apply();
+  // County chips: tap to toggle (bigger target than a checkbox), no full repaint
+  // so the search box and scroll position are kept.
+  el.querySelectorAll("#fm-cty-list .cty-chip").forEach((b) => b.onclick = () => {
+    const c = b.dataset.cty;
+    if (S.counties.includes(c)) S.counties = S.counties.filter((x) => x !== c);
+    else S.counties.push(c);
+    S.dayFilter = null; persist(); syncCty(); apply();
   });
-  $("fm-cty-clear").onclick = () => { S.counties = []; S.dayFilter = null; persist(); el.querySelectorAll("[data-cty]").forEach((cb) => { cb.checked = false; }); apply(); };
+  $("fm-cty-all").onclick = () => { S.counties = counties.slice(); S.dayFilter = null; persist(); syncCty(); apply(); };
+  $("fm-cty-clear").onclick = () => { S.counties = []; S.dayFilter = null; persist(); syncCty(); apply(); };
+  const ctySearch = $("fm-cty-search");
+  if (ctySearch) ctySearch.oninput = () => {
+    const q = ctySearch.value.trim().toLowerCase();
+    el.querySelectorAll("#fm-cty-list .cty-chip").forEach((b) => { b.hidden = q && !b.dataset.cty.toLowerCase().includes(q); });
+    const sep = el.querySelector("#fm-cty-list [data-cty-sep]"); if (sep) sep.hidden = !!q;
+  };
   const close = () => { el.hidden = true; el.innerHTML = ""; };
   $("fm-x").onclick = close; $("fm-done").onclick = close;
   $("fm-reset").onclick = () => {
