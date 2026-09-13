@@ -38,13 +38,51 @@
   .price-amt{font-size:44px;font-weight:600;line-height:1;letter-spacing:-.02em;margin:8px 0 2px}
   .price ul{font-size:14.5px;line-height:1.85;padding-left:20px;margin:0 0 20px;color:var(--ink)}
   .btn-lg{font-size:16px;padding:13px 22px}
+  /* ---- Minimal centered hero ---- */
+  html{scroll-behavior:smooth}
+  .hero-min{max-width:840px;margin:0 auto;text-align:center;padding-top:52px;padding-bottom:12px}
+  .eyebrow-pill{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink2);background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:7px 16px 7px 13px;box-shadow:0 1px 2px rgba(20,22,26,.04)}
+  .hero-h1{font-size:clamp(40px,6.6vw,70px);font-weight:600;letter-spacing:-.035em;line-height:1.03;margin:28px 0 0;text-wrap:balance}
+  .hero-h1 .l1{display:block;color:var(--ink)}
+  .hero-h1 .l2{display:block;color:var(--ink3)}
+  .hero-sub{font-size:19px;line-height:1.6;color:var(--ink2);max-width:56ch;margin:24px auto 0}
+  .cta-pill{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;font-size:16px;font-weight:500;border-radius:999px;padding:15px 15px 15px 26px;margin-top:32px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(20,22,26,.16);transition:transform .12s ease,box-shadow .12s ease}
+  .cta-pill:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(20,22,26,.22)}
+  .cta-pill .arr{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;background:rgba(255,255,255,.16)}
+  .no-signup{font-size:14px;color:var(--ink3);margin-top:16px}
+  .proof-line{font-size:13.5px;color:var(--ink3);margin-top:34px}
+  .proof-line b{color:var(--ink2);font-weight:600;font-variant-numeric:tabular-nums}
+  /* ---- Interactive mini-app ---- */
+  #try{scroll-margin-top:20px}
+  .try-panel{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 40px rgba(20,22,26,.08);padding:clamp(18px,3vw,30px)}
+  .try-search{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line2);border-radius:14px;padding:12px 16px}
+  .try-search input{flex:1;border:0;background:transparent;font-size:16px;color:var(--ink);outline:none;font-family:inherit}
+  .try-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .try-chip{font-size:13px;font-weight:500;color:var(--ink2);background:var(--bg);border:1px solid var(--line2);border-radius:999px;padding:6px 13px;cursor:pointer;white-space:nowrap;transition:all .12s ease}
+  .try-chip:hover{border-color:var(--gold-ring)}
+  .try-chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .try-meta{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin:18px 2px 12px;font-size:13px;color:var(--ink3)}
+  .try-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .pcard{display:flex;flex-direction:column;gap:9px;text-decoration:none;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px 17px;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+  .pcard:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,22,26,.10);border-color:var(--line2)}
+  .pcard-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pcard-cty{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:3px 10px}
+  .pcard-date{font-size:12.5px;color:var(--ink3);font-weight:500;white-space:nowrap}
+  .pcard-addr{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35;min-height:2.7em}
+  .pcard-figs{display:flex;gap:18px;margin-top:2px}
+  .pcard-fig .k{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em}
+  .pcard-fig .v{font-size:16px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .try-empty{padding:40px 10px;text-align:center;color:var(--ink3);font-size:15px}
   @media (max-width:880px){
     .hero-grid,.feat-grid,.step-grid{grid-template-columns:1fr}
     .statbar{grid-template-columns:repeat(2,1fr)}
     .statbar>div:nth-child(2){border-right:0}
     .statbar>div:nth-child(1),.statbar>div:nth-child(2){border-bottom:1px solid var(--line)}
     .sec-title{font-size:26px}
+    .try-grid{grid-template-columns:1fr}
+    .hero-sub{font-size:17px}
   }
+  @media (min-width:601px) and (max-width:880px){ .try-grid{grid-template-columns:repeat(2,1fr)} }
 </style>
 </head>
 <body>
@@ -55,40 +93,29 @@
     <svg width="34" height="34" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="12" stroke="#e8b91e" stroke-width="3"></circle><circle cx="20" cy="17" r="4.5" fill="#e8b91e"></circle><path d="M15 27l-3 11 8-4 8 4-3-11" stroke="#e8b91e" stroke-width="3" stroke-linejoin="round" fill="none"></path></svg>
     <span class="brand-name">Tax Deed Radar</span>
   </span>
-  <span class="tag-fl">Florida</span>
-  <span style="margin-left:auto;display:flex;gap:10px">
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
     <a class="btn btn-secondary" href="#pricing">Pricing</a>
-    <a class="btn btn-secondary" href="app/">Live demo</a>
-    <a class="btn btn-primary" href="app/">Sign in</a>
+    <a class="btn btn-secondary" href="app/">Sign in</a>
   </span>
 </nav>
 
-<header class="wrap" style="padding-top:40px;padding-bottom:56px">
-  <div class="hero-grid">
-    <div>
-      <h1 style="font-size:clamp(40px,5.5vw,60px);font-weight:600;letter-spacing:-.03em;line-height:1.03;margin:0 0 18px">Every Florida tax deed auction. One board.</h1>
-      <p class="lead" style="max-width:56ch">Stop clicking through dozens of county auction sites, appraiser pages and clerk
-      portals. Tax Deed Radar collects every upcoming sale, verifies it against the county records, and lays it out
-      on one board &mdash; and one <b style="color:var(--ink)">sale calendar</b> you build by county &mdash; so your
-      week starts organized instead of a haystack. All 67 Florida counties: live feeds for every county that sells
-      online, sale schedules and clerk records for the ones that sell at the courthouse.</p>
-      <div style="display:flex;gap:12px;margin-top:26px;flex-wrap:wrap">
-        <a class="btn btn-primary btn-lg" href="app/">See the live board &rarr;</a>
-        <a class="btn btn-secondary btn-lg" href="#pricing">View pricing</a>
-      </div>
-      <div style="font-size:13px;color:var(--ink3);margin-top:14px">The demo is the real product on live auction data &mdash; no email wall.</div>
-    </div>
-    <div class="shot-frame">
-      <a href="app/"><img class="shot" src="shots/home.png" alt="The Tax Deed Radar dashboard: upcoming auctions, saved properties, today's auctions, your lists and recently viewed parcels"></a>
-    </div>
+<header class="wrap hero-min" style="padding-top:44px;padding-bottom:36px">
+  <span class="eyebrow-pill">
+    <svg width="16" height="16" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="13" stroke="#e8b91e" stroke-width="4"></circle><circle cx="20" cy="20" r="5" fill="#e8b91e"></circle></svg>
+    Built for Florida tax deed investors
+  </span>
+  <h1 class="hero-h1">
+    <span class="l1">Florida tax deeds.</span>
+    <span class="l2">A clearer way to research.</span>
+  </h1>
+  <p class="hero-sub">Explore Florida tax deed auctions by county, review property records, and keep your auction research in one place.</p>
+  <div>
+    <a class="cta-pill" href="#try">Explore Florida tax deeds
+      <span class="arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7h10v10M7 17L17 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
   </div>
-
-  <div class="statbar" style="margin-top:48px">
-    <div><div class="statnum" id="st-total">2,400+</div><div style="font-size:12.5px;color:var(--ink2);margin-top:2px">auctions on the board now</div></div>
-    <div><div class="statnum" id="st-counties">67</div><div style="font-size:12.5px;color:var(--ink2);margin-top:2px">Florida counties &mdash; all of them</div></div>
-    <div><div class="statnum">Daily</div><div style="font-size:12.5px;color:var(--ink2);margin-top:2px">automatic refresh &middot; every morning 4 AM ET</div></div>
-    <div><div class="statnum" id="st-updated">&mdash;</div><div style="font-size:12.5px;color:var(--ink2);margin-top:2px">data last updated</div></div>
-  </div>
+  <div class="no-signup">No signup. Just start exploring.</div>
+  <div class="proof-line"><b id="st-total">2,400+</b> live auctions &middot; <b id="st-counties">67</b> Florida counties &middot; refreshed daily <span id="st-updated"></span></div>
 </header>
 
 <section style="padding:56px 0">
@@ -163,6 +190,29 @@
   </div>
 </section>
 
+<section class="wrap" id="try" style="padding:40px 0 8px">
+  <div style="text-align:center;max-width:640px;margin:0 auto 26px">
+    <div class="eyebrow">Try it now</div>
+    <h2 class="sec-title" style="margin-bottom:8px">Start looking for your next deal</h2>
+    <p class="lead" style="margin:0 auto">Real upcoming Florida tax deed auctions, live from the board. Search a county or an address &mdash; then open the full app to dig into any parcel.</p>
+  </div>
+  <div class="try-panel">
+    <div class="try-search">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="var(--ink3)" stroke-width="2"></circle><path d="M20 20l-3.2-3.2" stroke="var(--ink3)" stroke-width="2" stroke-linecap="round"></path></svg>
+      <input id="try-input" type="text" placeholder="Search by county, city or address&hellip;" autocomplete="off" aria-label="Search auctions">
+    </div>
+    <div class="try-chips" id="try-chips"></div>
+    <div class="try-meta">
+      <span id="try-count">Loading live auctions&hellip;</span>
+      <a href="app/" style="color:var(--gold-ink);font-weight:600;text-decoration:none">Open the full board &rarr;</a>
+    </div>
+    <div class="try-grid" id="try-grid"></div>
+    <div style="text-align:center;margin-top:22px">
+      <a class="btn btn-primary btn-lg" href="app/">Open the full board &mdash; free &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <section style="padding:56px 0">
   <div class="wrap" id="pricing">
     <div class="eyebrow">Pricing</div>
@@ -221,15 +271,86 @@
 </footer>
 
 <script>
-// Live numbers from the same feed the app uses — the landing page never lies
-// about the board it's selling.
-fetch("app/data/exports/master_list.json", { cache: "no-cache" }).then((r) => r.json()).then((j) => {
-  document.getElementById("st-total").textContent = j.counts.total.toLocaleString();
-  document.getElementById("st-counties").textContent = j.counts.counties_total || j.counts.counties;
-  const d = new Date(j.generated_at);
-  document.getElementById("st-updated").textContent =
-    d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
-}).catch(() => {});
+// Live data from the same feed the app uses — the landing page never lies
+// about the board it's selling, and the mini-app below is the real thing.
+(function () {
+  var CTY = { indianriver: "Indian River", miamidade: "Miami-Dade", palmbeach: "Palm Beach",
+    santarosa: "Santa Rosa", stjohns: "St. Johns", stlucie: "St. Lucie" };
+  function cty(k) { return CTY[k] || (k ? k.charAt(0).toUpperCase() + k.slice(1) : ""); }
+  function money(n) { return (n || n === 0) ? "$" + Math.round(n).toLocaleString() : "—"; }
+  function ts(d) { var p = (d || "").split("/"); return p.length === 3 ? new Date(+p[2], +p[0] - 1, +p[1]).getTime() : 0; }
+  function fmtDate(d) { var t = ts(d); if (!t) return d || ""; return new Date(t).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); }
+  function niceUse(u) { if (!u) return ""; return /^[A-Za-z]/.test(u) && u.length < 22 ? u : ""; }
+
+  var ALL = [], SEARCH = "", COUNTY = "", grid, countEl;
+
+  function render() {
+    if (!grid) return;
+    var q = SEARCH.trim().toLowerCase();
+    var rows = ALL.filter(function (r) {
+      if (COUNTY && r.county !== COUNTY) return false;
+      if (!q) return true;
+      return (r._search.indexOf(q) !== -1);
+    });
+    rows.sort(function (a, b) { return a._ts - b._ts || b._hasAddr - a._hasAddr; });
+    var shown = rows.slice(0, 24);
+    countEl.textContent = rows.length.toLocaleString() + (rows.length === 1 ? " auction" : " auctions")
+      + (q || COUNTY ? " match your search" : " coming up") + (rows.length > shown.length ? " · showing 24" : "");
+    if (!shown.length) { grid.innerHTML = '<div class="try-empty">No upcoming auctions match that yet. Try another county or clear the search.</div>'; return; }
+    grid.innerHTML = shown.map(function (r) {
+      var use = niceUse(r.property_use);
+      return '<a class="pcard" href="app/">'
+        + '<div class="pcard-top"><span class="pcard-cty">' + cty(r.county) + '</span>'
+        + '<span class="pcard-date">' + fmtDate(r.sale_date) + '</span></div>'
+        + '<div class="pcard-addr">' + (r.property_address ? esc(r.property_address) : (use || "Parcel " + esc(r.parcel_id || ""))) + '</div>'
+        + '<div class="pcard-figs">'
+        + '<div class="pcard-fig"><div class="k">Opening bid</div><div class="v">' + money(r.opening_bid) + '</div></div>'
+        + '<div class="pcard-fig"><div class="k">Assessed</div><div class="v">' + money(r.assessed_value) + '</div></div>'
+        + '</div></a>';
+    }).join("");
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  function buildChips(counts) {
+    var box = document.getElementById("try-chips"); if (!box) return;
+    var top = Object.keys(counts.by_county)
+      .map(function (k) { return { k: k, n: counts.by_county[k].scheduled || 0 }; })
+      .filter(function (o) { return o.n > 0; })
+      .sort(function (a, b) { return b.n - a.n; }).slice(0, 8);
+    var chips = [{ k: "", label: "All counties" }].concat(top.map(function (o) { return { k: o.k, label: cty(o.k) }; }));
+    box.innerHTML = chips.map(function (c) {
+      return '<button class="try-chip' + (c.k === "" ? " on" : "") + '" data-cty="' + c.k + '">' + c.label + "</button>";
+    }).join("");
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest(".try-chip"); if (!b) return;
+      COUNTY = b.getAttribute("data-cty");
+      [].forEach.call(box.children, function (el) { el.classList.toggle("on", el === b); });
+      render();
+    });
+  }
+
+  fetch("app/data/exports/master_list.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) {
+    var total = document.getElementById("st-total"), counties = document.getElementById("st-counties"), upd = document.getElementById("st-updated");
+    if (total) total.textContent = (j.counts.scheduled || j.counts.total).toLocaleString();
+    if (counties) counties.textContent = j.counts.counties_total || j.counts.counties;
+    if (upd && j.generated_at) upd.textContent = "· updated " + new Date(j.generated_at).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+
+    ALL = (j.records || []).filter(function (r) { return (r.status || "") === "Scheduled" && ts(r.sale_date); }).map(function (r) {
+      r._ts = ts(r.sale_date);
+      r._hasAddr = r.property_address ? 1 : 0;
+      r._search = (cty(r.county) + " " + (r.property_address || "") + " " + (r.parcel_id || "") + " " + (r.property_use || "")).toLowerCase();
+      return r;
+    });
+    grid = document.getElementById("try-grid");
+    countEl = document.getElementById("try-count");
+    var input = document.getElementById("try-input");
+    if (input) input.addEventListener("input", function () { SEARCH = input.value; render(); });
+    buildChips(j.counts);
+    render();
+  }).catch(function () {
+    var c = document.getElementById("try-count"); if (c) c.textContent = "Live board is loading — open the full app to explore.";
+  });
+})();
 </script>
 </body>
 </html>
