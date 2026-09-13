@@ -3064,6 +3064,59 @@ function calDayParcels(dayKey, sel) {
     return (p.saleDate.getFullYear() + "-" + p.saleDate.getMonth() + "-" + p.saleDate.getDate()) === dayKey;
   }).sort((a, b) => a.county.localeCompare(b.county) || (a.saleTime || "").localeCompare(b.saleTime || ""));
 }
+// The calendar's county picker as a right-side drawer (matches the Explore
+// Filters drawer): Select all / Clear, a find-a-county search, and tappable
+// chips. Operates on prefs.calCounties and re-renders the calendar live.
+function openCalCountiesModal() {
+  const el = $("filters-modal"); if (!el) return;
+  const all = calCounties();
+  const chip = (c) => `<button type="button" class="cty-chip ${calSelected().has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`;
+  const label = () => { const s = calSelected(); return !all.length ? "none" : s.size === all.length ? "All counties" : `${s.size} selected`; };
+  el.innerHTML = `
+    <div style="width:min(400px,100%);height:100%;margin-left:auto;background:var(--card);box-shadow:-10px 0 44px rgba(20,22,26,.20);display:flex;flex-direction:column">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px">
+        <div style="flex:1;font-size:22px;font-weight:600;letter-spacing:-.01em">Counties</div>
+        <button id="cc-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:0 4px">&times;</button>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:18px 22px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <button type="button" class="btn btn-secondary" id="cc-all" style="font-size:12.5px;padding:5px 12px">Select all</button>
+          <button type="button" class="btn btn-ghost" id="cc-clear" style="font-size:12.5px;padding:5px 12px">Clear</button>
+          <span id="cc-count" style="margin-left:auto;font-size:12px;color:var(--ink3);font-weight:500">${label()}</span>
+        </div>
+        <input class="input" id="cc-search" placeholder="Find a county&hellip;" autocomplete="off" style="width:100%;height:40px;box-sizing:border-box;margin-bottom:10px">
+        <div id="cc-list" style="display:flex;flex-wrap:wrap;gap:8px">
+          ${all.length ? all.map(chip).join("") : '<span class="text-muted" style="font-size:13px">No counties have upcoming sales right now.</span>'}
+        </div>
+      </div>
+      <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end">
+        <button class="btn btn-primary" id="cc-done" style="min-width:150px;height:46px">Done</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  const sync = () => {
+    const s = calSelected();
+    el.querySelectorAll("#cc-list .cty-chip").forEach((b) => b.classList.toggle("on", s.has(b.dataset.cty)));
+    const c = $("cc-count"); if (c) c.textContent = !all.length ? "none" : s.size === all.length ? "All counties" : `${s.size} selected`;
+  };
+  const applyCal = () => { S.calMonthIdx = 0; S.calDayKey = null; renderCalendar(); };
+  el.querySelectorAll("#cc-list .cty-chip").forEach((b) => b.onclick = () => {
+    const cs = new Set(calSelected()), c = b.dataset.cty;
+    if (cs.has(c)) cs.delete(c); else cs.add(c);
+    prefs.calCounties = [...cs]; savePrefs(); sync(); applyCal();
+  });
+  $("cc-all").onclick = () => { prefs.calCounties = all.slice(); savePrefs(); sync(); applyCal(); };
+  $("cc-clear").onclick = () => { prefs.calCounties = []; savePrefs(); sync(); applyCal(); };
+  const search = $("cc-search");
+  if (search) search.oninput = () => {
+    const q = search.value.trim().toLowerCase();
+    el.querySelectorAll("#cc-list .cty-chip").forEach((b) => { b.hidden = q && !b.dataset.cty.toLowerCase().includes(q); });
+  };
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  $("cc-x").onclick = close; $("cc-done").onclick = close;
+  el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
+}
+
 function renderCalendar() {
   const all = calCounties();
   const sel = calSelected();
@@ -3085,10 +3138,6 @@ function renderCalendar() {
   const dayAll = calDayParcels(selDayKey, sel);
   const dayParcels = dayAll.slice(0, 7);   // panel shows at most 7; the popup shows them all
   const dayIds = dayAll.map((p) => p.id);   // Prev/Next still walks the whole day
-
-  const chips = all.length
-    ? all.map((c) => `<button class="pillbtn ${sel.has(c) ? "on" : ""}" data-cty="${esc(c)}">${esc(c)}</button>`).join("")
-    : '<span class="text-muted" style="font-size:13px">No counties have upcoming sales right now.</span>';
 
   // Readable date for the day panel.
   const dayLabel = (() => {
@@ -3126,17 +3175,13 @@ function renderCalendar() {
     <h1 style="margin:0 0 6px;font-size:44px;font-weight:500;letter-spacing:-.02em">Auction calendar.</h1>
     <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
-    <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
-        <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES &middot; ${all.length ? (sel.size === all.length ? "all " + all.length : sel.size + " of " + all.length) : "none"} on the calendar</span>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
-          <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
-          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print</button>
-        </div>
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
-      <div style="font-size:12.5px;color:var(--ink3);margin-top:8px">Tap a county to add or remove it from the calendar.</div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+      <button class="btn btn-primary" id="cal-open-cty" style="height:46px;padding:0 22px;font-size:16px;display:inline-flex;align-items:center;gap:10px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"></path></svg>
+        Counties<span style="background:var(--gold);color:var(--gold-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 8px">${all.length && sel.size !== all.length ? sel.size : "All"}</span>
+      </button>
+      <span class="text-muted" style="font-size:13px">${all.length ? (sel.size === all.length ? "All " + all.length + " counties" : sel.size + " of " + all.length + " counties") : "none"} on the calendar</span>
+      <button class="btn btn-secondary" id="cal-print" style="margin-left:auto;font-size:13px;height:40px" ${months.length ? "" : "disabled"}>Print</button>
     </div>
 
     ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
@@ -3157,13 +3202,7 @@ function renderCalendar() {
       </div>`
       : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
-  const chipWrap = $("cal-chips"); if (chipWrap) chipWrap.querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
-    const cs = new Set(calSelected()), c = b.dataset.cty;
-    if (cs.has(c)) cs.delete(c); else cs.add(c);
-    prefs.calCounties = [...cs]; savePrefs(); S.calMonthIdx = 0; S.calDayKey = null; renderCalendar();
-  });
-  const allBtn = $("cal-all"); if (allBtn) allBtn.onclick = () => { prefs.calCounties = calCounties(); savePrefs(); renderCalendar(); };
-  const noneBtn = $("cal-none"); if (noneBtn) noneBtn.onclick = () => { prefs.calCounties = []; savePrefs(); renderCalendar(); };
+  const openCtyBtn = $("cal-open-cty"); if (openCtyBtn) openCtyBtn.onclick = openCalCountiesModal;
   const printBtn = $("cal-print"); if (printBtn) printBtn.onclick = printCalendar;
   const prevBtn = $("cal-prev"); if (prevBtn) prevBtn.onclick = () => { S.calMonthIdx = idx - 1; S.calDayKey = null; renderCalendar(); };
   const nextBtn = $("cal-next"); if (nextBtn) nextBtn.onclick = () => { S.calMonthIdx = idx + 1; S.calDayKey = null; renderCalendar(); };
