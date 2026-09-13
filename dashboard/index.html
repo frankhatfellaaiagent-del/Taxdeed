@@ -1938,7 +1938,7 @@ function initBoardMap(located, orderedIds) {
   if (_boardMap) { try { _boardMap.remove(); } catch (e) {} _boardMap = null; }
   // Glow tint only over street tiles in dark themes; never over satellite imagery.
   el.classList.toggle("map-glow", S.mapView !== "satellite");
-  _boardMap = L.map(el, { zoomControl: false, scrollWheelZoom: true });
+  _boardMap = L.map(el, { zoomControl: false, scrollWheelZoom: false });
   _boardBase = boardTiles().addTo(_boardMap);
   L.control.zoom({ position: "bottomright" }).addTo(_boardMap);
   _boardCluster = L.markerClusterGroup ? L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 48 }) : L.layerGroup();
@@ -2215,7 +2215,7 @@ function initParcelMap(p) {
   if (!el) return;
   if (_parcelMap) { try { _parcelMap.remove(); } catch (e) {} _parcelMap = null; }
   el.classList.toggle("map-glow", !_detailSat);   // dark-theme tint on street tiles only
-  const map = L.map(el, { zoomControl: false, attributionControl: true }).setView([p.lat, p.lng], 17);
+  const map = L.map(el, { zoomControl: false, scrollWheelZoom: false, attributionControl: true }).setView([p.lat, p.lng], 17);
   _parcelMap = map;
   parcelTiles().addTo(map);
   L.control.zoom({ position: "bottomright" }).addTo(map);
