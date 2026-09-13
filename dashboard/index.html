@@ -106,11 +106,18 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 @media (max-width:820px){
   /* Content column: small side padding, room at the bottom for the tab bar. */
   #page{width:100%!important;padding:12px 16px calc(84px + env(safe-area-inset-bottom)) 16px!important}
-  /* Header stacks: brand on top, the controls wrap to their own right-aligned row. */
-  header{display:flex!important;flex-wrap:wrap;align-items:center;gap:8px 12px}
-  header>a#brand{flex:0 1 auto}
-  header>div:last-child{flex:1 1 100%;justify-content:flex-end;gap:12px!important;flex-wrap:wrap;row-gap:8px}
+  /* Header: one tidy row — compact brand, icon-only controls, never wraps.
+     The brand truncates before the actions ever drop to a second row. */
+  header{gap:8px!important}
+  header>a#brand{min-width:0;gap:8px!important}
+  header>a#brand span{font-size:18px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  header>a#brand svg{width:30px;height:30px;flex:none}
+  header>div:last-child{gap:8px!important;flex-wrap:nowrap}
   #last-scrape{display:none}
+  #btn-export{display:none}                              /* Export stays on desktop */
+  #btn-settings .hdr-lbl,#btn-export .hdr-lbl{display:none}
+  #btn-settings{gap:0!important;padding:8px!important}
+  #btn-theme{display:none!important}                     /* theme lives in Settings on mobile */
   /* Left rail -> bottom tab bar. */
   #rail{top:auto!important;left:0!important;right:0!important;bottom:0!important;width:auto!important;
         flex-direction:row!important;justify-content:space-around!important;align-items:center!important;
@@ -131,6 +138,10 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   /* Home hero/saved: tighter padding on phones. */
   .h2-herocard,.h2-savedcard{padding:24px 22px!important;min-height:0!important}
   .h2-savedcard img{width:150px!important;height:150px!important;top:20px!important}
+  /* Darken the beach photo behind the hero text so it stays legible on phones. */
+  .h2-herocard::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:linear-gradient(90deg,rgba(16,54,68,.88),rgba(16,54,68,.55) 65%,rgba(16,54,68,.42))}
+  .h2-herocard>*{position:relative;z-index:1}
   /* Explore/list filters go full-width; card headers wrap. */
   .filters{gap:10px!important}
   .filters .field{width:100%!important;flex:1 1 100%!important}
@@ -143,6 +154,20 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 }
 @media (max-width:480px){
   .triad{grid-template-columns:1fr!important}
+}
+/* Phones: parcel-list tables can't fit three columns, so stack each row into a
+   card instead of scrolling sideways (which clipped the auction date + decision). */
+@media (max-width:600px){
+  .tablewrap>table.table{min-width:0!important}
+  table.table thead{display:none}
+  table.table, table.table tbody{display:block;width:100%}
+  table.table tr{display:block;border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;margin-bottom:10px;background:var(--card)}
+  table.table tr.redeem{opacity:.75}
+  table.table td{display:block;border:0!important;padding:0 0 8px 0!important;white-space:normal!important}
+  table.table td:last-child{padding-bottom:0!important}
+  table.table td .row-dec,table.table td select.row-dec{max-width:100%!important;width:100%!important}
+  table.table td .bm-toggle{margin-left:0}
 }
 #login-overlay{display:grid}
 /* On phones the map quick card becomes a bottom sheet and the map shrinks. */
@@ -198,8 +223,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap">
       <span id="last-scrape" class="text-muted" style="font-size:12px"></span>
       <button id="btn-theme" title="Toggle theme" aria-label="Toggle theme" style="display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;box-shadow:var(--shadow)"></button>
-      <button id="btn-settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>Settings</button>
-      <button class="btn btn-secondary" id="btn-export" style="font-size:13px;height:38px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Export</button>
+      <button id="btn-settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg><span class="hdr-lbl">Settings</span></button>
+      <button class="btn btn-secondary" id="btn-export" style="font-size:13px;height:38px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span class="hdr-lbl">Export</span></button>
       <div id="account-box"></div>
     </div>
   </header>
