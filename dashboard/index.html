@@ -2493,8 +2493,10 @@ function renderDetail() {
               ${(() => { const ll = lists.filter((l) => !l.deleted); return ll.length ? `<optgroup label="My lists">${ll.map((l) => `<option value="p:${esc(l.name)}" ${!team.membership[p.id] && it.list === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
               ${(() => { const tl = team.lists.filter((l) => !l.deleted); return tl.length ? `<optgroup label="Team lists (shared)">${tl.map((l) => `<option value="t:${esc(l.name)}" ${team.membership[p.id] === l.name ? "selected" : ""}>${esc(l.name)}</option>`).join("")}</optgroup>` : ""; })()}
             </select>
-            <label for="pos-notes" style="font-size:14px;color:var(--ink2);align-self:start;padding-top:10px">Notes</label>
-            <textarea class="input" id="pos-notes" placeholder="Add a note&hellip;" style="width:100%;box-sizing:border-box">${esc(it.notes)}</textarea>
+          </div>
+          <div style="margin-top:14px">
+            <label for="pos-notes" style="display:block;font-size:14px;color:var(--ink2);margin-bottom:7px">Notes</label>
+            <textarea class="input" id="pos-notes" placeholder="Add a note&hellip;" rows="3" style="width:100%;box-sizing:border-box;min-height:90px;resize:vertical;line-height:1.5">${esc(it.notes)}</textarea>
           </div>
           ${(() => {
             const cf = (interest[p.id] && interest[p.id]._conflict) || null;
