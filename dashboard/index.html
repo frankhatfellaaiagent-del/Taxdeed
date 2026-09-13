@@ -1059,7 +1059,6 @@ let S = {
   listName: null, listShared: false,
   savedView: "all",   // Saved screen: "all" | "p:Name" | "t:Name" — which collection the right panel shows
   calMonthIdx: 0, calDayKey: null,   // Calendar: which month (index into available months) + selected day
-  calCountyOpen: false,   // Calendar: counties dropdown open/closed
 
   // Where the open property was reached from, so Back returns exactly there and
   // Previous/Next walk that origin's ordered results (Explore OR a saved list).
@@ -2984,21 +2983,16 @@ function renderCalendar() {
     <p style="font-size:17px;color:var(--ink2);margin:0 0 20px">${total ? `${total.toLocaleString()} ${total === 1 ? "parcel" : "parcels"} across ${days} sale ${days === 1 ? "day" : "days"} · ${sel.size} ${sel.size === 1 ? "county" : "counties"}` : "Pick your counties below to build your calendar."}</p>
 
     <div class="home-card" style="padding:14px 18px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-        <button id="cal-cty-toggle" aria-expanded="${S.calCountyOpen ? "true" : "false"}" style="display:flex;align-items:center;gap:10px;flex:1;min-width:220px;height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);cursor:pointer;font-size:15px;text-align:left">
-          <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES</span>
-          <span style="flex:1;font-weight:500">${sel.size === all.length && all.length ? "All counties" : sel.size ? `${sel.size} selected` : "None selected"}</span>
-          <span style="transition:transform .15s ease;transform:rotate(${S.calCountyOpen ? "180deg" : "0"})">&#9662;</span>
-        </button>
-        <button class="btn btn-secondary" id="cal-print" style="font-size:13px;height:44px" ${months.length ? "" : "disabled"}>Print</button>
-      </div>
-      ${S.calCountyOpen ? `<div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line)">
-        <div style="display:flex;gap:8px;margin-bottom:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+        <span style="font-size:12px;letter-spacing:.13em;color:var(--ink3);font-weight:500">COUNTIES &middot; ${all.length ? (sel.size === all.length ? "all " + all.length : sel.size + " of " + all.length) : "none"} on the calendar</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
           <button class="btn btn-ghost" id="cal-all" style="font-size:12px;padding:4px 10px">Select all</button>
           <button class="btn btn-ghost" id="cal-none" style="font-size:12px;padding:4px 10px">Clear</button>
+          <button class="btn btn-secondary" id="cal-print" style="font-size:12px;padding:4px 12px" ${months.length ? "" : "disabled"}>Print</button>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
-      </div>` : ""}
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px" id="cal-chips">${chips}</div>
+      <div style="font-size:12.5px;color:var(--ink3);margin-top:8px">Tap a county to add or remove it from the calendar.</div>
     </div>
 
     ${months.length ? `<div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
@@ -3019,7 +3013,6 @@ function renderCalendar() {
       </div>`
       : `<div class="home-card" style="padding:34px 24px;text-align:center"><p class="home-empty">${sel.size ? "No upcoming tax-deed sales in the counties you picked. As soon as one is posted, it shows up here." : "Pick one or more counties above to build your calendar."}</p></div>`}`;
 
-  const ctyToggle = $("cal-cty-toggle"); if (ctyToggle) ctyToggle.onclick = () => { S.calCountyOpen = !S.calCountyOpen; renderCalendar(); };
   const chipWrap = $("cal-chips"); if (chipWrap) chipWrap.querySelectorAll("[data-cty]").forEach((b) => b.onclick = () => {
     const cs = new Set(calSelected()), c = b.dataset.cty;
     if (cs.has(c)) cs.delete(c); else cs.add(c);
