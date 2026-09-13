@@ -236,6 +236,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 <div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
 
 <div id="day-modal" hidden style="position:fixed;inset:0;z-index:65;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
+<div id="newlist-modal" hidden style="position:fixed;inset:0;z-index:66;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
 
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
@@ -2561,12 +2562,6 @@ function renderLists() {
     </div>
     <p style="font-size:17px;color:var(--ink2);margin:0 0 22px">${allSaved.length} ${allSaved.length === 1 ? "parcel" : "parcels"} across ${active.length} ${active.length === 1 ? "list" : "lists"}.${signedIn ? " Team lists are shared live with everyone signed in." : SYNC_ON ? " Sign in to sync across devices." : ""}</p>
     ${isPaid() ? "" : `<div class="plan-banner" style="margin-bottom:20px"><span class="plan-badge">Paid</span><span>Named lists &mdash; group parcels and share them with your team &mdash; are a paid feature. ${upgradeChip("Unlock lists")}</span></div>`}
-    <div id="new-list-row" hidden style="display:flex;gap:10px;max-width:560px;margin-bottom:18px;align-items:center;flex-wrap:wrap">
-      <input class="input" id="new-list" placeholder="New list name&hellip;" style="flex:1;min-width:180px">
-      ${signedIn ? `<label style="display:inline-flex;align-items:center;gap:6px;font-size:13px;cursor:pointer"><input type="checkbox" id="new-list-shared"> Shared with team</label>` : ""}
-      <button class="btn btn-primary" id="add-list" style="flex:none">Create</button>
-      <div id="new-list-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);flex-basis:100%" hidden></div>
-    </div>
     <div class="saved-grid" style="display:grid;grid-template-columns:340px 1fr;gap:22px;align-items:start">
       <div>${picker}</div>
       <div>${tableCard}</div>
@@ -2599,39 +2594,63 @@ function renderLists() {
   };
   const manageBtn = $("saved-manage"); if (manageBtn) manageBtn.onclick = () => openList(view.slice(2), view.startsWith("t:"));
 
-  // Create-list controls.
-  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = () => {
-    const row = $("new-list-row"); row.hidden = !row.hidden; if (!row.hidden) $("new-list").focus();
-  };
-  const listHint = (msg) => { const h = $("new-list-hint"); if (h) { h.textContent = msg || ""; h.hidden = !msg; } };
-  const createList = () => {
-    const inp = $("new-list");
-    const name = (inp.value || "").trim();
-    if (!name) { listHint("Type a name for the list first."); inp.focus(); return; }
-    if (lists.some((l) => l.name === name && !l.deleted) || team.lists.some((l) => l.name === name && !l.deleted)) {
-      listHint(`You already have a list called “${name}.” Pick a different name.`); return;
-    }
-    const sharedBox = $("new-list-shared");
-    const shared = !!(sharedBox && sharedBox.checked);
-    const arr = shared ? team.lists : lists;
-    const tomb = arr.find((l) => l.name === name && l.deleted);
-    if (tomb) { delete tomb.deleted; tomb.archived = false; }
-    else arr.push({ name, desc: "" });
-    shared ? saveTeam() : saveLists();
-    S.savedView = (shared ? "t:" : "p:") + name;   // select the new list
-    renderLists();
-  };
-  if ($("add-list")) {
-    $("add-list").onclick = createList;
-    $("new-list").onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); createList(); } };
-    $("new-list").oninput = () => listHint("");
-  }
+  // New list -> popup.
+  const nlBtn = $("new-list-btn"); if (nlBtn) nlBtn.onclick = openNewListModal;
   $("scr-lists").querySelectorAll("[data-restore]").forEach((b) => b.onclick = () => {
     setListArchived(b.dataset.restore, b.dataset.shared === "1", false); renderLists();
   });
 }
 // Persist the global county selection (used by the Saved "Show on map" jump).
 function persistCountiesGlobal() { prefs.counties = S.counties.slice(); savePrefs(); }
+// New-list popup: name + (signed in) share-with-team, Create/Cancel. Replaces the
+// old inline row. On create it selects the new list and re-renders Saved.
+function openNewListModal() {
+  const el = $("newlist-modal"); if (!el) return;
+  const signedIn = !!(CLOUD && CLOUD.user);
+  el.innerHTML = `
+    <div class="home-card" style="width:min(440px,100%);padding:0">
+      <div style="padding:20px 24px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:12px">
+        <div style="flex:1"><div style="font-size:22px;font-weight:600;letter-spacing:-.01em">New list</div>
+          <div style="font-size:13px;color:var(--ink2);margin-top:2px">Group the parcels you want to track together.</div></div>
+        <button id="nl-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:2px 6px">&times;</button>
+      </div>
+      <div style="padding:20px 24px">
+        <label for="nl-name" style="display:block;font-size:13px;font-weight:500;color:var(--ink2);margin-bottom:6px">List name</label>
+        <input class="input" id="nl-name" placeholder="e.g. September shortlist" autocomplete="off" style="width:100%;height:46px;box-sizing:border-box">
+        ${signedIn ? `<label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;margin-top:16px"><input type="checkbox" id="nl-shared"> Share with my team</label>
+          <div style="font-size:12.5px;color:var(--ink3);margin-top:4px">Team lists are visible live to everyone signed in to your workspace.</div>` : ""}
+        <div id="nl-hint" style="font-size:12.5px;color:var(--color-danger,#b3261e);margin-top:12px" hidden></div>
+      </div>
+      <div style="padding:14px 24px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end">
+        <button class="btn btn-secondary" id="nl-cancel">Cancel</button>
+        <button class="btn btn-primary" id="nl-create">Create list</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  const nameInp = $("nl-name"); nameInp.focus();
+  const hint = (m) => { const h = $("nl-hint"); if (h) { h.textContent = m || ""; h.hidden = !m; } };
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  const submit = () => {
+    const name = (nameInp.value || "").trim();
+    if (!name) { hint("Type a name for the list first."); nameInp.focus(); return; }
+    if (lists.some((l) => l.name === name && !l.deleted) || team.lists.some((l) => l.name === name && !l.deleted)) {
+      hint(`You already have a list called “${name}.” Pick a different name.`); return;
+    }
+    const sb = $("nl-shared"), shared = !!(sb && sb.checked);
+    const arr = shared ? team.lists : lists;
+    const tomb = arr.find((l) => l.name === name && l.deleted);
+    if (tomb) { delete tomb.deleted; tomb.archived = false; }
+    else arr.push({ name, desc: "" });
+    shared ? saveTeam() : saveLists();
+    S.savedView = (shared ? "t:" : "p:") + name;   // open the new list
+    close(); renderLists();
+  };
+  $("nl-create").onclick = submit;
+  nameInp.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); submit(); } };
+  nameInp.oninput = () => hint("");
+  $("nl-cancel").onclick = close; $("nl-x").onclick = close;
+  el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
+}
 
 // ---------- single-list page: filter, sort, manage ----------
 function renderListDetail() {
