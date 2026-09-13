@@ -316,6 +316,13 @@ textarea.input { min-height: 90px; resize: vertical; }
 .acct-item { display: block; width: 100%; text-align: left; background: none; border: none;
   padding: 12px 16px; font-size: 14px; color: var(--ink); cursor: pointer; }
 .acct-item:hover { background: var(--row-hi); }
+/* Inline per-row decision dropdown (Explore list). */
+.row-dec { font: inherit; font-size: 13px; font-weight: 500; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--line2); background: var(--card); color: var(--ink2); cursor: pointer; max-width: 140px; }
+.row-dec.dec-Interested { background: var(--gold-soft); color: var(--gold-ink); border-color: var(--gold-ring); }
+.row-dec.dec-Saved { background: var(--gold-soft); color: var(--gold-ink); border-color: var(--gold-ring); }
+.row-dec.dec-Watching { background: var(--chip); color: var(--chip-ink); }
+.row-dec.dec-Pass { color: var(--ink3); }
 /* "Planned" banner (Price intelligence). */
 .plan-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
   padding: 16px 20px; border: 1px dashed var(--line2); border-radius: var(--radius-lg);

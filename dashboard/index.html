@@ -237,6 +237,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 
 <div id="day-modal" hidden style="position:fixed;inset:0;z-index:65;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
 <div id="newlist-modal" hidden style="position:fixed;inset:0;z-index:66;display:grid;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)"></div>
+<div id="filters-modal" hidden style="position:fixed;inset:0;z-index:67;display:flex;background:color-mix(in srgb, var(--color-neutral-900) 40%, transparent)"></div>
 
 <script>
 /* Florida tax deed dashboard. Industry design system; data comes from the
@@ -1494,6 +1495,16 @@ function researchCell(p) {
   if (RESEARCH_KEYS.some((k) => r[k].state === "reviewed")) return '<span class="tag tag-ok">Reviewed</span>';
   return '<span class="tag tag-neutral">Not checked</span>';
 }
+// Inline per-row decision control for the Explore list. "Open" = undecided;
+// Interested / Watching / Pass set the decision; Saved bookmarks the parcel.
+const DECISION_OPTIONS = [["", "Open"], ["Interested", "Interested"], ["Watching", "Watching"], ["Saved", "Saved"], ["Pass", "Pass"]];
+function decisionSelect(p) {
+  const it = getInt(p.id);
+  const cur = (it.status === "Interested" || it.status === "Watching" || it.status === "Pass") ? it.status
+    : (it.bookmark ? "Saved" : "");
+  return `<select class="row-dec dec-${cur || "open"}" data-decid="${esc(p.id)}" aria-label="Set decision for this parcel">${
+    DECISION_OPTIONS.map(([v, l]) => `<option value="${v}" ${v === cur ? "selected" : ""}>${l}</option>`).join("")}</select>`;
+}
 
 // ---------- home screen ----------
 // A short first name for the greeting: from the signed-in email's local part,
@@ -1708,44 +1719,18 @@ function renderDashboard() {
 
   const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
   const ckRow = (c) => `<label style="display:flex;gap:8px;align-items:center;padding:4px 2px;font-size:13px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
+  const activeCount = (S.counties.length ? 1 : 0) + (S.type !== "All" ? 1 : 0) + (S.when !== "all" ? 1 : 0)
+    + (S.status !== "Scheduled" ? 1 : 0) + (S.deposit !== "All" ? 1 : 0) + (S.reviewOnly ? 1 : 0) + (S.q.trim() ? 1 : 0);
   $("scr-dashboard").innerHTML = `
-    <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:4px">
-      <h2 style="margin:0">Find your next parcel.</h2>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <button class="pillbtn" data-chip="upcoming" title="Show all upcoming auctions">${upcoming.length.toLocaleString()} upcoming</button>
-        <button class="pillbtn" data-chip="saved" title="Show your saved properties">${savedN.toLocaleString()} saved</button>
-        <button class="pillbtn" data-chip="review" title="Show properties whose research needs review">${reviewN.toLocaleString()} need review</button>
-      </div>
-    </div>
+    <h2 style="margin:0 0 4px">Find your next parcel.</h2>
     <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Upcoming tax-deed auctions in your counties &middot; times in each county&rsquo;s local zone (ET / CT)</div>
 
-    <div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-      <div class="field" style="width:210px;position:relative"><label>County</label>
-        <button class="input" id="f-county-btn" style="text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(countyLabel)}</span><span style="opacity:.55">&#9662;</span></button>
-        ${S.countyOpen ? `<div id="county-pop" class="blueprint" style="position:absolute;z-index:30;top:100%;left:0;margin-top:5px;width:290px;max-height:340px;overflow:auto;background:var(--color-surface);padding:10px 12px;box-shadow:var(--shadow-md)">${CORNERS}
-          <button class="pillbtn ${S.counties.length ? "" : "on"}" id="cty-all" style="width:100%;text-align:left;margin-bottom:8px">All counties</button>
-          ${counties.map(ckRow).join("")}
-          ${extraCounties.length ? `<div class="text-muted" style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
-        </div>` : ""}
-      </div>
-      <div class="field" style="width:150px"><label>Property type</label>
-        <select class="input" id="f-type">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select></div>
-      <div class="field" style="width:150px"><label>Auction date</label>
-        <select class="input" id="f-when"${isPaid() ? "" : ' disabled title="Free shows the next 5 days — upgrade to see every date"'}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select></div>
-      <div class="field" style="width:210px"><label>Sort by</label>
-        <select class="input" id="f-sort">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select></div>
-      <button class="btn btn-secondary" id="more-toggle" style="height:36px;font-size:13px">${S.moreOpen ? "Fewer filters" : "More filters"}</button>
-    </div>
-    ${S.moreOpen ? `<div class="filters" style="display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-      <div class="field" style="width:150px"><label>Status</label>
-        <select class="input" id="f-status">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select></div>
-      <div class="field" style="width:180px"><label>Deposit (5% rule)</label>
-        <select class="input" id="f-deposit">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select></div>
-    </div>` : ""}
-
-    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:12.5px">
-      <span class="text-muted">${rows.length.toLocaleString()} properties</span>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+      <button class="btn btn-primary" id="open-filters" style="height:46px;padding:0 22px;font-size:16px;display:inline-flex;align-items:center;gap:10px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"></path></svg>
+        Filters${activeCount ? `<span style="background:var(--gold);color:var(--gold-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 8px">${activeCount}</span>` : ""}
+      </button>
+      <span class="text-muted" style="font-size:13px">${rows.length.toLocaleString()} properties</span>
       ${S.dayFilter != null ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Sale day: ${esc(dayNumLabel(S.dayFilter))}
         <button id="clear-day" aria-label="Clear sale-day filter" style="background:none;border:none;color:inherit;cursor:pointer;font-size:15px;line-height:1;padding:0">&times;</button></span>` : ""}
       ${S.mapArea ? `<span class="tag tag-accent" style="display:inline-flex;gap:8px;align-items:center">Map area
@@ -1788,7 +1773,7 @@ function renderDashboard() {
             ${viewSeg()}
           </div>
           <div class="tablewrap"><table class="table">
-            <thead><tr><th>Parcel</th><th style="text-align:right">Acres</th><th>Auction</th><th>Research</th><th style="width:56px"></th></tr></thead>
+            <thead><tr><th>Parcel</th><th>Auction</th><th style="width:150px">My decision</th></tr></thead>
             <tbody>
               ${rows.slice(0, S.shown).map((p) => {
                 const t = effType(p);
@@ -1797,10 +1782,8 @@ function renderDashboard() {
                   <td><div style="font-size:16px;font-weight:500">${esc(title)}</div>
                     <div style="font-size:14px;color:var(--ink2)">${esc([p.city, p.county + " County", t].filter(Boolean).join(" · "))}</div>
                     ${p.hasAddr ? `<div class="mono" style="font-size:12px;color:var(--ink3);margin-top:2px">${esc(p.parcel)}</div>` : ""}</td>
-                  <td style="text-align:right;font-variant-numeric:tabular-nums">${p.acreage ? esc(p.acreage) : '<span class="text-muted">—</span>'}</td>
                   <td style="font-size:14px;white-space:nowrap"><span style="display:inline-flex;align-items:center;gap:7px">${CAL_GLYPH}${esc(p.auction)}</span><div style="font-size:12.5px;color:var(--ink3)">${esc(saleTimeText(p))}</div></td>
-                  <td>${researchCell(p)}</td>
-                  <td style="text-align:center"><button class="bm-toggle ${isBookmarked(p.id) ? "on" : ""}" data-bm="${esc(p.id)}" aria-label="${isBookmarked(p.id) ? "Remove bookmark" : "Bookmark"}" title="${isBookmarked(p.id) ? "Saved — click to remove" : "Save parcel"}">${BOOKMARK_ICON}</button></td>
+                  <td>${decisionSelect(p)}</td>
                 </tr>`;
               }).join("")}
             </tbody>
@@ -1816,37 +1799,22 @@ function renderDashboard() {
         </div>`}`;
 
   // ---- filters + view wiring ----
-  const setWhen = (v) => {
-    S.when = v; S.dayFilter = null;
-    if (v !== "all") { S.sort = "soonest"; prefs.sort = S.sort; savePrefs(); }
-    if (v !== "all" && S.status === "Redeemed") S.status = "Scheduled";
-    S.shown = 150; renderDashboard();
-  };
-  const wf = $("f-when"); if (wf) wf.onchange = (e) => setWhen(e.target.value);
-  const tf = $("f-type"); if (tf) tf.onchange = (e) => { S.type = e.target.value; S.shown = 150; renderDashboard(); };
-  const sf = $("f-status"); if (sf) sf.onchange = (e) => { S.status = e.target.value; S.shown = 150; renderDashboard(); };
-  const df = $("f-deposit"); if (df) df.onchange = (e) => { S.deposit = e.target.value; S.shown = 150; renderDashboard(); };
-  const sortf = $("f-sort"); if (sortf) sortf.onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); S.shown = 150; renderDashboard(); };
-  $("more-toggle").onclick = () => { S.moreOpen = !S.moreOpen; renderDashboard(); };
+  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  const openF = $("open-filters"); if (openF) openF.onclick = openFiltersModal;
   $("scr-dashboard").querySelectorAll("[data-view]").forEach((b) => b.onclick = () => {
     if (S.view !== b.dataset.view) { S.view = b.dataset.view; S.quickId = null; renderDashboard(); }
   });
-  $("scr-dashboard").querySelectorAll("[data-chip]").forEach((b) => b.onclick = () => {
-    const k = b.dataset.chip;
-    if (k === "saved") { go("lists"); return; }                 // the Saved screen
-    S.dayFilter = null; S.mapArea = null; S.reviewOnly = (k === "review");
-    if (k === "upcoming") { S.status = "Scheduled"; S.when = "all"; }
-    S.view = "list"; S.shown = 150; renderDashboard();
-  });
-  // County multi-select popover
-  const cbtn = $("f-county-btn"); if (cbtn) cbtn.onclick = (e) => { e.stopPropagation(); S.countyOpen = !S.countyOpen; renderDashboard(); };
-  const persistCounties = () => { prefs.counties = S.counties.slice(); savePrefs(); };
-  const allBtn = $("cty-all"); if (allBtn) allBtn.onclick = () => { S.counties = []; S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard(); };
-  $("scr-dashboard").querySelectorAll("#county-pop [data-cty]").forEach((cbx) => cbx.onchange = () => {
-    const c = cbx.dataset.cty;
-    if (cbx.checked) { if (!S.counties.includes(c)) S.counties.push(c); }
-    else S.counties = S.counties.filter((x) => x !== c);
-    S.dayFilter = null; persistCounties(); S.shown = 150; renderDashboard();
+  // Inline decision control per row (Open / Interested / Watching / Saved / Pass).
+  $("scr-dashboard").querySelectorAll(".row-dec").forEach((sel) => {
+    sel.onclick = (e) => e.stopPropagation();   // don't open the row
+    sel.onchange = (e) => {
+      e.stopPropagation();
+      const id = sel.dataset.decid, rec = DATA.find((x) => x.id === id), v = sel.value;
+      if (v === "Saved") setInt(id, { bookmark: true, status: "" }, rec);
+      else if (v === "") setInt(id, { status: "", bookmark: false }, rec);
+      else setInt(id, { status: v }, rec);
+      renderDashboard();
+    };
   });
   const clearDay = $("clear-day"); if (clearDay) clearDay.onclick = () => { S.dayFilter = null; S.shown = 150; renderDashboard(); };
   const clearArea = $("clear-area"); if (clearArea) clearArea.onclick = () => { S.mapArea = null; S.shown = 150; renderDashboard(); };
@@ -1862,13 +1830,6 @@ function renderDashboard() {
   const toList = $("to-list"); if (toList) toList.onclick = () => { S.view = "list"; renderDashboard(); };
   const orderedIds = rows.map((p) => p.id);
   $("scr-dashboard").querySelectorAll("[data-open]").forEach((tr) => tr.onclick = () => openParcel(tr.dataset.open, orderedIds, "dashboard"));
-  // Bookmark toggle in the parcel table — save without opening the row.
-  $("scr-dashboard").querySelectorAll("[data-bm]").forEach((b) => b.onclick = (e) => {
-    e.stopPropagation();
-    const id = b.dataset.bm, rec = DATA.find((x) => x.id === id);
-    setInt(id, { bookmark: !isBookmarked(id) }, rec);
-    renderDashboard();
-  });
 
   // ---- map view ----
   if (S.view === "map" && !regSel) {
@@ -1884,6 +1845,72 @@ function renderDashboard() {
     initBoardMap(located, orderedIds);
     if (S.quickId) { const qp = DATA.find((x) => x.id === S.quickId); if (qp) showQuickCard(qp, orderedIds); }
   }
+}
+
+// ---------- Explore filters drawer ----------
+// One popup that holds every filter (search, county, type, date, status,
+// deposit, sort, needs-review). Changes apply live to the list behind it; the
+// drawer stays open. Opened by the "Filters" button.
+function openFiltersModal() {
+  const el = $("filters-modal"); if (!el) return;
+  const opt = (v, cur, label) => `<option value="${esc(v)}" ${v === cur ? "selected" : ""}>${esc(label ?? v)}</option>`;
+  const counties = [...new Set(DATA.map((p) => p.county))].sort();
+  const extras = REG().filter((c) => !counties.includes(c.name));
+  const extraCounties = [...extras.filter((c) => c.coverage === "online").map((c) => c.name).sort(),
+                         ...extras.filter((c) => c.coverage !== "online").map((c) => c.name).sort()];
+  const ckRow = (c) => `<label style="display:flex;gap:9px;align-items:center;padding:7px 2px;font-size:14px;cursor:pointer"><input type="checkbox" data-cty="${esc(c)}" ${S.counties.includes(c) ? "checked" : ""}>${esc(c)}</label>`;
+  const field = (label, inner) => `<div style="margin-bottom:16px"><label style="display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);font-weight:500;margin-bottom:6px">${label}</label>${inner}</div>`;
+  el.innerHTML = `
+    <div style="width:min(400px,100%);height:100%;margin-left:auto;background:var(--card);box-shadow:-10px 0 44px rgba(20,22,26,.20);display:flex;flex-direction:column">
+      <div style="padding:18px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px">
+        <div style="flex:1;font-size:22px;font-weight:600;letter-spacing:-.01em">Filters</div>
+        <button class="btn btn-ghost" id="fm-reset" style="font-size:13px;padding:4px 10px">Reset all</button>
+        <button id="fm-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:0 4px">&times;</button>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:18px 22px">
+        ${field("Search", `<input class="input" id="fm-q" placeholder="Address, parcel or case #" value="${esc(S.q)}" style="width:100%;height:44px;box-sizing:border-box">`)}
+        ${field("Property type", `<select class="input" id="fm-type" style="width:100%">${opt("All", S.type, "All types")}${TYPES.map((t) => opt(t, S.type)).join("")}${opt("Unassigned", S.type)}</select>`)}
+        ${field("Auction date", `<select class="input" id="fm-when" style="width:100%"${isPaid() ? "" : " disabled"}>${WHEN_OPTIONS.map(([v, l]) => opt(v, S.when, l)).join("")}</select>${isPaid() ? "" : `<div style="font-size:12px;color:var(--ink3);margin-top:5px">Free shows the next ${FREE_DAYS} days — ${upgradeChip("upgrade")} to see every date.</div>`}`)}
+        ${field("Status", `<select class="input" id="fm-status" style="width:100%">${opt("Scheduled", S.status)}${opt("Redeemed", S.status)}${opt("All", S.status, "All")}</select>`)}
+        ${field("Deposit (5% rule)", `<select class="input" id="fm-deposit" style="width:100%">${opt("All", S.deposit, "Ignore deposits")}${opt("Within", S.deposit, "Within my deposit")}</select>`)}
+        ${field("Sort by", `<select class="input" id="fm-sort" style="width:100%">${SORT_OPTIONS.map(([v, l]) => opt(v, S.sort, l)).join("")}</select>`)}
+        <label style="display:flex;gap:9px;align-items:center;font-size:14px;cursor:pointer;margin-bottom:18px"><input type="checkbox" id="fm-review" ${S.reviewOnly ? "checked" : ""}> Only parcels whose research needs review</label>
+        ${field(`Counties`, `<button class="btn btn-ghost" id="fm-cty-clear" style="font-size:12px;padding:3px 10px;margin-bottom:8px">${S.counties.length ? "Clear — show all counties" : "All counties"}</button>
+          <div style="max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:6px 14px">
+            ${counties.map(ckRow).join("")}
+            ${extraCounties.length ? `<div style="font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);margin:8px 0 3px">No sales posted / in-person</div>${extraCounties.map(ckRow).join("")}` : ""}
+          </div>`)}
+      </div>
+      <div style="padding:14px 22px;border-top:1px solid var(--line);display:flex;justify-content:flex-end">
+        <button class="btn btn-primary" id="fm-done" style="min-width:150px;height:46px">Show <span id="fm-count">${filteredRows().length.toLocaleString()}</span> results</button>
+      </div>
+    </div>`;
+  el.hidden = false;
+  const nameInp = $("fm-q"); if (nameInp) nameInp.focus();
+  const refresh = () => { const c = $("fm-count"); if (c) c.textContent = filteredRows().length.toLocaleString(); };
+  const apply = () => { S.shown = 150; renderDashboard(); refresh(); };   // update list behind; keep drawer open
+  const persist = () => { prefs.counties = S.counties.slice(); savePrefs(); };
+  $("fm-q").oninput = (e) => { S.q = e.target.value; apply(); };
+  $("fm-type").onchange = (e) => { S.type = e.target.value; apply(); };
+  $("fm-when").onchange = (e) => { S.when = e.target.value; S.dayFilter = null; if (S.when !== "all" && S.status === "Redeemed") S.status = "Scheduled"; apply(); };
+  $("fm-status").onchange = (e) => { S.status = e.target.value; apply(); };
+  $("fm-deposit").onchange = (e) => { S.deposit = e.target.value; apply(); };
+  $("fm-sort").onchange = (e) => { S.sort = e.target.value; prefs.sort = S.sort; savePrefs(); apply(); };
+  $("fm-review").onchange = (e) => { S.reviewOnly = e.target.checked; apply(); };
+  el.querySelectorAll("[data-cty]").forEach((cb) => cb.onchange = () => {
+    const c = cb.dataset.cty;
+    if (cb.checked) { if (!S.counties.includes(c)) S.counties.push(c); } else S.counties = S.counties.filter((x) => x !== c);
+    S.dayFilter = null; persist(); apply();
+  });
+  $("fm-cty-clear").onclick = () => { S.counties = []; S.dayFilter = null; persist(); el.querySelectorAll("[data-cty]").forEach((cb) => { cb.checked = false; }); apply(); };
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  $("fm-x").onclick = close; $("fm-done").onclick = close;
+  $("fm-reset").onclick = () => {
+    S.counties = []; S.type = "All"; S.status = "Scheduled"; S.deposit = "All"; S.when = "all";
+    S.dayFilter = null; S.mapArea = null; S.reviewOnly = false; S.q = "";
+    persist(); S.shown = 150; renderDashboard(); openFiltersModal();   // repaint drawer with cleared controls
+  };
+  el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
 }
 
 // ---------- board map (Leaflet + clustering) ----------
