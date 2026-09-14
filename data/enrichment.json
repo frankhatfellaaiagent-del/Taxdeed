@@ -69,7 +69,7 @@
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
@@ -93,13 +93,13 @@
 },
 "alachua|06650-208-004|TD 2026-034": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004"
 },
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
@@ -122,31 +122,31 @@
 },
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
 "alachua|10733-043-000|TD 2026-031": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
 },
 "alachua|10893-024-000|TD 2026-026": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10893-024-000"
 },
 "alachua|14785-000-000|TD 2026-035": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
@@ -2883,19 +2883,19 @@
 },
 "hardee|05-33-25-0090-0000A-0018|252026TD002AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018"
 },
 "hardee|10-34-25-0843-00001-0019|252026TD003AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019"
 },
 "hardee|15-34-25-0830-00018-0013|252026TD001AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013"
 },
@@ -15601,7 +15601,7 @@
 },
 "okeechobee|1-03-38-35-0A00-00001-A000|2026TD091": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-03-38-35-0A00-00001-A000"
 },
@@ -15613,25 +15613,25 @@
 },
 "okeechobee|1-04-38-36-0030-00030-0160|2026TD092": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0030-00030-0160"
 },
 "okeechobee|1-05-37-35-0020-00300-0030|2026TD083": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-05-37-35-0020-00300-0030"
 },
 "okeechobee|1-06-36-34-0010-00060-0010|2026TD086": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00060-0010"
 },
 "okeechobee|1-06-36-34-0010-00360-0140|2026TD087": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00360-0140"
 },
@@ -15643,19 +15643,19 @@
 },
 "okeechobee|1-06-38-36-0A00-00007-0000|2026TD093": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00007-0000"
 },
 "okeechobee|1-09-38-36-0050-00010-0040|2026TD094": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-09-38-36-0050-00010-0040"
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -15667,49 +15667,49 @@
 },
 "okeechobee|1-11-34-33-0A00-00008-F000|2026TD104": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000"
 },
 "okeechobee|1-14-34-33-0A00-00004-F000|2026TD105": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000"
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
 "okeechobee|1-16-34-33-0A00-00012-G000|2026TD108": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00012-G000"
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
 "okeechobee|1-17-34-33-0A00-00006-J000|2026TD082": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-34-33-0A00-00006-J000"
 },
 "okeechobee|1-17-37-35-0020-00040-0020|2026TD097": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-35-0020-00040-0020"
 },
@@ -15733,7 +15733,7 @@
 },
 "okeechobee|1-18-37-35-0020-00290-0110|2026TD085": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00290-0110"
 },
@@ -15745,37 +15745,37 @@
 },
 "okeechobee|1-20-34-33-0A00-00021-B000|2026TD099": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000"
 },
 "okeechobee|1-21-34-33-0A00-00007-B000|2026TD100": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00007-B000"
 },
 "okeechobee|1-21-34-33-0A00-00012-J000|2026TD101": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00012-J000"
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
 "okeechobee|1-21-34-33-0A00-00021-F000|2026TD103": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-F000"
 },
 "okeechobee|1-22-33-35-0010-00920-0060|2026TD084": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-22-33-35-0010-00920-0060"
 },
@@ -15793,7 +15793,7 @@
 },
 "okeechobee|1-25-37-35-0070-00060-0160|2026TD096": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0070-00060-0160"
 },
@@ -15805,7 +15805,7 @@
 },
 "okeechobee|1-30-37-35-0010-00020-010A|2026TD089": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-30-37-35-0010-00020-010A"
 },
@@ -16101,13 +16101,13 @@
 },
 "osceola|01263000010429006|2112024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=01263000010429006",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=01263000010429006"
 },
 "osceola|032528340700012113|5152024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113"
 },
@@ -16119,19 +16119,19 @@
 },
 "osceola|062527252100010520|10202024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520"
 },
 "osceola|072530270201760050|15882024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050"
 },
 "osceola|082529224200016030|17482024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=082529224200016030",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=082529224200016030"
 },
@@ -16175,19 +16175,19 @@
 },
 "osceola|152529124000010060|29052024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060"
 },
 "osceola|162527560800013070|30142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070"
 },
 "osceola|162527561600010050|30182024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050"
 },
@@ -16262,13 +16262,13 @@
 },
 "osceola|222630007700010450|41862024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450"
 },
 "osceola|232527492900011280|42012024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=232527492900011280",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=232527492900011280"
 },
@@ -16312,7 +16312,7 @@
 },
 "osceola|252628610005500060|45802024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060"
 },
@@ -16482,13 +16482,13 @@
 },
 "osceola|352527484900013120|58652024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120"
 },
 "osceola|352527488100010990|59012024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990"
 },
@@ -17456,6 +17456,13 @@
 "fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252706298340003180"
+},
+"polk|25-27-21-0000-0004-4040|00150-2026": {
+"acreage": "0.41",
+"assessed_value": 56971.0,
+"fetched_at": "2026-09-14T15:22:23+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252721000000044040"
 },
 "polk|25-28-04-3190-0101-5110|00151-2026": {
 "acreage": "0.50",
@@ -18657,23 +18664,13 @@
 },
 "putnam|04-12-27-0000-0160-0010|2019-0003751": {
 "acreage": "0.11",
-"fetched_at": "2026-08-15T03:01:17+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003751",
+"clerk_platform": "template",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "just_value": 2700.0,
 "mailing_address": "3054 S PENINSULA DRIVE DAYTONA BEACH SHORES FL 32118",
 "ok": true,
 "owner_name": "CIRELLI EMILIO + KELLY E SCOFIELD + STEVEN SEMMELMAN",
-"parcel": {
-"acreage": "0.12",
-"county": "Putnam",
-"geometry_wkt": "MULTIPOLYGON(((-81.57188696917702 29.48468472790364,-81.57220263893329 29.484678287297232,-81.57220648194244 29.484820407043436,-81.57188968758243 29.484823672219875,-81.57188696917702 29.48468472790364)))",
-"lat": 29.484752,
-"lng": -81.572047,
-"mailing_address": "3054 S PENINSULA DRIVE 32118",
-"owner": "CIRELLI EMILIO + KELLY E SCOFI",
-"parcel_address": "104 WOODSIDE Ave",
-"source": "reportall"
-},
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-12-27-0000-0160-0010"
 },
@@ -19869,23 +19866,11 @@
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007783",
 "clerk_platform": "template",
-"fetched_at": "2026-08-15T03:56:22+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "just_value": 1700.0,
 "mailing_address": "438 LAGOON AVE NAPLES FL 34108",
 "ok": true,
 "owner_name": "HURLEY JENNIFER",
-"parcel": {
-"acreage": "0.25",
-"county": "Putnam",
-"geometry_wkt": "MULTIPOLYGON(((-81.9079852240271 29.633759574511433,-81.90814673972295 29.63360918402018,-81.90857501438589 29.63379258943822,-81.90849349271213 29.63385643135577,-81.90841536795931 29.63393010090124,-81.90840376730687 29.633938810454957,-81.9079852240271 29.633759574511433)))",
-"lat": 29.633763,
-"lng": -81.908253,
-"mailing_address": "438 LAGOON AVE 34108",
-"owner": "HURLEY JENNIFER",
-"parcel_address": "107 CLAUDETTE St",
-"source": "reportall"
-},
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-0351-0060-0150"
 },
@@ -21358,23 +21343,11 @@
 "acreage": "0.38",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012469",
 "clerk_platform": "template",
-"fetched_at": "2026-08-15T03:56:22+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "just_value": 4560.0,
 "mailing_address": "C/O LAVERN OR MARY ANN CONNER 143 MYRTLE RD PALATKA FL 32177",
 "ok": true,
 "owner_name": "CONNER GERALD WAYNE HEIRS OF",
-"parcel": {
-"acreage": "0.38",
-"county": "Putnam",
-"geometry_wkt": "MULTIPOLYGON(((-81.74936807044297 29.76691103329183,-81.7493446699967 29.767322983477037,-81.74899798989189 29.76732533477751,-81.74902139492944 29.76691338736116,-81.74936807044297 29.76691103329183)))",
-"lat": 29.767118,
-"lng": -81.749183,
-"mailing_address": "143 MYRTLE RD 32177",
-"owner": "CONNER GERALD WAYNE HEIRS OF",
-"parcel_address": "143 MYRTLE Rd",
-"source": "reportall"
-},
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-08-25-0000-0100-0020"
 },
@@ -22655,25 +22628,25 @@
 },
 "suwannee|00478000000|4729": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|00813020060|4732": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|00924040130|4734": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|01014012000|4735": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -22685,121 +22658,121 @@
 },
 "suwannee|01133031770|4736": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|01142031990|4739": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|01783000000|4747": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|02202000000|4751": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|02865010000|4765": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03232010190|4774": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03406080200|4726": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03406080210|4727": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090120|4788": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090160|4789": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03683005000|4775": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04264840001|4778": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04394009000|4779": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04555001000|4776": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04555001002|4777": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04573000000|4703": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04675003000|4794": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|07104060020|4720": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|08856003010|4688": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|08900000000|4723": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -22811,13 +22784,13 @@
 },
 "suwannee|09150020030|4797": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|09531090010|4714": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -22835,13 +22808,13 @@
 },
 "suwannee|10515009004|4717": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|10648000000|4800": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -22887,25 +22860,25 @@
 },
 "suwannee|11189000000|4802": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11389070030|4786": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11390070050|4787": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11666000116|4718": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-07T14:35:09+00:00",
+"fetched_at": "2026-09-14T15:22:23+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },

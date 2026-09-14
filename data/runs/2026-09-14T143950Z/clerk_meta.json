@@ -1,0 +1,64 @@
+{
+  "started_at": "2026-09-14T15:21:30+00:00",
+  "counties": {
+    "columbia": {
+      "status": "ok",
+      "records": 0,
+      "url": "https://columbiaclerk.com/clerk-services/tax-deeds/upcoming-tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [],
+      "finished_at": "2026-09-14T15:21:34+00:00"
+    },
+    "hardee": {
+      "status": "ok",
+      "records": 3,
+      "url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "10/14/2026"
+      ],
+      "finished_at": "2026-09-14T15:21:39+00:00"
+    },
+    "levy": {
+      "status": "ok",
+      "records": 26,
+      "url": "https://online.levyclerk.com/TaxSmartWeb",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "11/09/2026"
+      ],
+      "finished_at": "2026-09-14T15:21:48+00:00"
+    },
+    "okaloosa": {
+      "status": "ok",
+      "records": 17,
+      "url": "https://www.bid4assets.com/OkaloosaFLTax/listings",
+      "robots": "robots.txt HTTP 404; treating as no restrictions",
+      "sale_dates": [
+        "10/13/2026"
+      ],
+      "finished_at": "2026-09-14T15:21:55+00:00"
+    },
+    "stjohns": {
+      "status": "ok",
+      "records": 70,
+      "url": "https://apps.stjohnsclerk.com/TaxSmart",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "09/16/2026",
+        "10/21/2026",
+        "11/18/2026"
+      ],
+      "finished_at": "2026-09-14T15:22:06+00:00"
+    },
+    "sumter": {
+      "status": "ok",
+      "records": 0,
+      "url": "https://www.sumterclerk.com/tax-deed-sales",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [],
+      "finished_at": "2026-09-14T15:22:13+00:00"
+    }
+  },
+  "finished_at": "2026-09-14T15:22:13+00:00"
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "county": "flagler",
+    "sale_date": "10/13/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "26-076 TDC",
+    "certificate_number": "2024 / 1283",
+    "parcel_id": "0711317024000700120",
+    "owner_name": "",
+    "property_address": "1PRINCESS LUISE LN, PALM COAST, FL- 32164",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 2791.06,
+    "assessed_value": null,
+    "auction_status": "Canceled per County",
+    "auction_url": "https://www.flagler.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1514693&bypassPage=1",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
+    "clerk_case_url": "",
+    "source_host": "www.flagler.realtaxdeed.com",
+    "scraped_at": "2026-09-14T14:51:10+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "26-076 TDC",
+      "certificate": "2024 / 1283",
+      "opening bid": "$2,791.06",
+      "parcel id": "0711317024000700120",
+      "property address": "1PRINCESS LUISE LN",
+      "(cont:property_address)": "PALM COAST, FL- 32164"
+    }
+  },
+  {
+    "county": "flagler",
+    "sale_date": "11/17/2026",
+    "sale_time": "09:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "26-076 TDC",
+    "certificate_number": "2024 / 1283",
+    "parcel_id": "0711317024000700120",
+    "owner_name": "",
+    "property_address": "1PRINCESS LUISE LN, PALM COAST, FL- 32164",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 2830.7,
+    "assessed_value": 21437.0,
+    "auction_status": "11/17/2026 09:00 AM ET",
+    "auction_url": "https://www.flagler.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1514719&bypassPage=1",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
+    "clerk_case_url": "",
+    "source_host": "www.flagler.realtaxdeed.com",
+    "scraped_at": "2026-09-14T14:51:13+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "26-076 TDC",
+      "certificate": "2024 / 1283",
+      "opening bid": "$2,830.70",
+      "parcel id": "0711317024000700120",
+      "property address": "1PRINCESS LUISE LN",
+      "(cont:property_address)": "PALM COAST, FL- 32164",
+      "assessed value": "$21,437.00"
+    }
+  }
+]
