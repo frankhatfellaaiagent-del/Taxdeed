@@ -53,4 +53,4 @@ jobs:
             "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" \
             gh-pages
       - name: Site URL
-        run: echo "https://frankhatfellaaiagent-del.github.io/Taxdeed/"
+        run: echo "https://taxdeed.app/"
