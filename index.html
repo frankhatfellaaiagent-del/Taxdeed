@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tax Deed Radar — every Florida tax deed auction on one board</title>
+<meta name="description" content="All 67 Florida counties on one tax deed board — live auction feeds for every county that sells online, sale schedules and clerk records for the rest. Checked against county records, laid out on one sale calendar, refreshed automatically every morning.">
+<meta property="og:title" content="Tax Deed Radar">
+<meta property="og:description" content="Every Florida tax deed auction on one board — verified against county records, on one sale calendar you build by county.">
+<meta property="og:url" content="https://taxdeed.app/">
+<meta property="og:image" content="https://taxdeed.app/shots/home.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><circle cx=%2220%22 cy=%2217%22 r=%2212%22 fill=%22none%22 stroke=%22%23e8b91e%22 stroke-width=%223%22/><circle cx=%2220%22 cy=%2217%22 r=%224.5%22 fill=%22%23e8b91e%22/><path d=%22M15 27l-3 11 8-4 8 4-3-11%22 stroke=%22%23e8b91e%22 stroke-width=%223%22 fill=%22none%22 stroke-linejoin=%22round%22/></svg>">
+<link rel="stylesheet" href="ds/styles.css">
+<style>
+  html,body{overflow-x:hidden;background:var(--bg);color:var(--ink)}
+  .glow{position:fixed;inset:0;background:var(--glow);pointer-events:none;z-index:0}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  a{color:inherit}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand-name{font-size:22px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+  .tag-fl{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:3px 10px}
+  .lead{font-size:18px;line-height:1.6;color:var(--ink2)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+  .shot{display:block;width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .shot-frame{border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 12px 40px rgba(20,22,26,.10);padding:10px}
+  .card2{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+  .statbar{display:grid;grid-template-columns:repeat(4,1fr);border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+  .statbar>div{padding:20px 22px;border-right:1px solid var(--line)}
+  .statbar>div:last-child{border-right:0}
+  .statnum{font-size:34px;font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-ink);font-weight:600;margin-bottom:8px}
+  .sec-title{font-size:32px;font-weight:600;letter-spacing:-.02em;margin:0 0 8px}
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;align-items:stretch}
+  .price{padding:26px;display:flex;flex-direction:column}
+  .price.feature{border-color:var(--gold-ring);box-shadow:0 0 0 1px var(--gold-ring),var(--shadow)}
+  .price-amt{font-size:44px;font-weight:600;line-height:1;letter-spacing:-.02em;margin:8px 0 2px}
+  .price ul{font-size:14.5px;line-height:1.85;padding-left:20px;margin:0 0 20px;color:var(--ink)}
+  .btn-lg{font-size:16px;padding:13px 22px}
+  /* ---- Minimal centered hero ---- */
+  html{scroll-behavior:smooth}
+  .hero-min{max-width:840px;margin:0 auto;text-align:center;padding-top:52px;padding-bottom:12px}
+  .eyebrow-pill{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink2);background:var(--card);border:1px solid var(--line2);border-radius:999px;padding:7px 16px 7px 13px;box-shadow:0 1px 2px rgba(20,22,26,.04)}
+  .hero-h1{font-size:clamp(40px,6.6vw,70px);font-weight:600;letter-spacing:-.035em;line-height:1.03;margin:28px 0 0;text-wrap:balance}
+  .hero-h1 .l1{display:block;color:var(--ink)}
+  .hero-h1 .l2{display:block;color:var(--ink3)}
+  .hero-sub{font-size:19px;line-height:1.6;color:var(--ink2);max-width:56ch;margin:24px auto 0}
+  .cta-pill{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;font-size:16px;font-weight:500;border-radius:999px;padding:15px 15px 15px 26px;margin-top:32px;border:0;cursor:pointer;box-shadow:0 8px 24px rgba(20,22,26,.16);transition:transform .12s ease,box-shadow .12s ease}
+  .cta-pill:hover{transform:translateY(-1px);box-shadow:0 12px 30px rgba(20,22,26,.22)}
+  .cta-pill .arr{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;background:rgba(255,255,255,.16)}
+  .no-signup{font-size:14px;color:var(--ink3);margin-top:16px}
+  .proof-line{font-size:13.5px;color:var(--ink3);margin-top:34px}
+  .proof-line b{color:var(--ink2);font-weight:600;font-variant-numeric:tabular-nums}
+  /* ---- Interactive mini-app ---- */
+  #try{scroll-margin-top:20px}
+  .try-panel{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:0 12px 40px rgba(20,22,26,.08);padding:clamp(18px,3vw,30px)}
+  .try-search{display:flex;align-items:center;gap:10px;background:var(--bg);border:1px solid var(--line2);border-radius:14px;padding:12px 16px}
+  .try-search input{flex:1;border:0;background:transparent;font-size:16px;color:var(--ink);outline:none;font-family:inherit}
+  .try-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+  .try-chip{font-size:13px;font-weight:500;color:var(--ink2);background:var(--bg);border:1px solid var(--line2);border-radius:999px;padding:6px 13px;cursor:pointer;white-space:nowrap;transition:all .12s ease}
+  .try-chip:hover{border-color:var(--gold-ring)}
+  .try-chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .try-meta{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin:18px 2px 12px;font-size:13px;color:var(--ink3)}
+  .try-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .pcard{display:flex;flex-direction:column;gap:9px;text-decoration:none;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px 17px;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+  .pcard:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(20,22,26,.10);border-color:var(--line2)}
+  .pcard-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .pcard-cty{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:3px 10px}
+  .pcard-date{font-size:12.5px;color:var(--ink3);font-weight:500;white-space:nowrap}
+  .pcard-addr{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.35;min-height:2.7em}
+  .pcard-figs{display:flex;gap:18px;margin-top:2px}
+  .pcard-fig .k{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.05em}
+  .pcard-fig .v{font-size:16px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .try-empty{padding:40px 10px;text-align:center;color:var(--ink3);font-size:15px}
+  @media (max-width:880px){
+    .hero-grid,.feat-grid,.step-grid{grid-template-columns:1fr}
+    .statbar{grid-template-columns:repeat(2,1fr)}
+    .statbar>div:nth-child(2){border-right:0}
+    .statbar>div:nth-child(1),.statbar>div:nth-child(2){border-bottom:1px solid var(--line)}
+    .sec-title{font-size:26px}
+    .try-grid{grid-template-columns:1fr}
+    .hero-sub{font-size:17px}
+  }
+  @media (min-width:601px) and (max-width:880px){ .try-grid{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<nav class="wrap" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:22px;padding-bottom:14px">
+  <span class="brand">
+    <svg width="34" height="34" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="12" stroke="#e8b91e" stroke-width="3"></circle><circle cx="20" cy="17" r="4.5" fill="#e8b91e"></circle><path d="M15 27l-3 11 8-4 8 4-3-11" stroke="#e8b91e" stroke-width="3" stroke-linejoin="round" fill="none"></path></svg>
+    <span class="brand-name">Tax Deed Radar</span>
+  </span>
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+    <a class="btn btn-secondary" href="#pricing">Pricing</a>
+    <a class="btn btn-secondary" href="app/">Sign in</a>
+  </span>
+</nav>
+
+<header class="wrap hero-min" style="padding-top:44px;padding-bottom:36px">
+  <span class="eyebrow-pill">
+    <svg width="16" height="16" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="13" stroke="#e8b91e" stroke-width="4"></circle><circle cx="20" cy="20" r="5" fill="#e8b91e"></circle></svg>
+    Built for Florida tax deed investors
+  </span>
+  <h1 class="hero-h1">
+    <span class="l1">Florida tax deeds.</span>
+    <span class="l2">A clearer way to research.</span>
+  </h1>
+  <p class="hero-sub">Explore Florida tax deed auctions by county, review property records, and keep your auction research in one place.</p>
+  <div>
+    <a class="cta-pill" href="#try">Explore Florida tax deeds
+      <span class="arr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7h10v10M7 17L17 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+    </a>
+  </div>
+  <div class="no-signup">No signup. Just start exploring.</div>
+  <div class="proof-line"><b id="st-total">2,400+</b> live auctions &middot; <b id="st-counties">67</b> Florida counties &middot; refreshed daily <span id="st-updated"></span></div>
+</header>
+
+<section style="padding:56px 0">
+  <div class="wrap">
+    <div class="eyebrow">The problem</div>
+    <h2 class="sec-title">What the research looks like without it</h2>
+    <p class="lead" style="max-width:66ch">Sale lists on one county site. Land use on the appraiser&rsquo;s site. The case file &mdash; deed status,
+    the notice, the liens &mdash; buried in the clerk&rsquo;s portal, formatted differently in every county. Multiply by
+    every county you bid in, every week.</p>
+    <div class="step-grid" style="margin-top:32px">
+      <div class="card2" style="padding:24px">
+        <div class="eyebrow">Step 1 &middot; Collected</div>
+        <h3 style="font-size:20px;font-weight:600;margin:0 0 6px">Every sale, one list</h3>
+        <p style="font-size:14.5px;line-height:1.6;margin:0;color:var(--ink2)">All upcoming tax deed auctions across the covered counties, refreshed automatically.
+        Redeemed sales separated out; foreclosure auctions excluded by design.</p>
+      </div>
+      <div class="card2" style="padding:24px">
+        <div class="eyebrow">Step 2 &middot; Verified</div>
+        <h3 style="font-size:20px;font-weight:600;margin:0 0 6px">Checked against the records</h3>
+        <p style="font-size:14.5px;line-height:1.6;margin:0;color:var(--ink2)">Owner, land use, acreage and mailing address pulled from the county appraiser; the parcel&rsquo;s own
+        clerk case file linked with its paperwork &mdash; rolling out county by county.</p>
+      </div>
+      <div class="card2" style="padding:24px">
+        <div class="eyebrow">Step 3 &middot; Organized</div>
+        <h3 style="font-size:20px;font-weight:600;margin:0 0 6px">On one sale calendar</h3>
+        <p style="font-size:14.5px;line-height:1.6;margin:0;color:var(--ink2)">Pick the counties you bid in and every upcoming sale lands on one month view &mdash; county, date, start
+        time and how many parcels &mdash; printable for the wall.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:44px 0">
+  <div class="hero-grid">
+    <div class="shot-frame"><img class="shot" src="shots/detail.png" alt="A property page: the parcel record, satellite map, the clerk's case file with its documents, research checks and your decision"></div>
+    <div>
+      <div class="eyebrow">Every property</div>
+      <h2 class="sec-title">The whole file, on one card</h2>
+      <p class="lead" style="max-width:52ch">Open any property and the research is already laid out: the parcel record, the map,
+      the appraiser link, FEMA flood and national wetlands maps centered on the parcel &mdash; and where the county
+      publishes it, the clerk&rsquo;s case file itself: deed status, the applicant who forced the sale, and every
+      document in the file as a link.</p>
+      <p class="lead" style="max-width:52ch">Track your decision right there &mdash; interested, watching or pass, your max bid, notes and
+      lists &mdash; and it syncs to every device you sign in on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:44px 0">
+  <div class="hero-grid" style="grid-template-columns:1fr 1.05fr">
+    <div>
+      <div class="eyebrow">Auction day</div>
+      <h2 class="sec-title">One calendar, every county you bid in</h2>
+      <p class="lead" style="max-width:52ch">Combine any Florida counties into a single month view of every upcoming sale &mdash; the day, the
+      start time and how many parcels &mdash; then open a day to pick exactly the parcels you want. Print it for the
+      wall or work it straight from your phone.</p>
+    </div>
+    <div class="shot-frame"><img class="shot" src="shots/calendar.png" alt="The auction calendar: a month grid of sale days with a side panel of that day's auctions"></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding:44px 0 20px">
+  <div class="eyebrow">Built for how investors actually work</div>
+  <h2 class="sec-title" style="margin-bottom:28px">Everything you need on auction morning</h2>
+  <div class="feat-grid">
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Team workspace</h3><p style="font-size:14px;color:var(--ink2);margin:0">Notes, positions and max bids per person; shared lists the whole team sees live, on any device.</p></div>
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Map view</h3><p style="font-size:14px;color:var(--ink2);margin:0">See the parcels on a map with satellite imagery, search an area, and open any pin straight to its file.</p></div>
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Multi-county calendar</h3><p style="font-size:14px;color:var(--ink2);margin:0">Every upcoming sale across your counties on one month view &mdash; date, time and parcel count &mdash; printable.</p></div>
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Phone-friendly</h3><p style="font-size:14px;color:var(--ink2);margin:0">Research from the road; the satellite view opens straight in your maps app.</p></div>
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Print &amp; export</h3><p style="font-size:14px;color:var(--ink2);margin:0">Print a list with a notes column for auction day, or export the filtered board to CSV for your own models.</p></div>
+    <div class="card2" style="padding:22px 24px"><h3 style="font-size:18px;font-weight:600;margin:0 0 4px">Private by design</h3><p style="font-size:14px;color:var(--ink2);margin:0">Your lists and notes are your workspace&rsquo;s alone. Other subscribers never see your research.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="try" style="padding:40px 0 8px">
+  <div style="text-align:center;max-width:640px;margin:0 auto 26px">
+    <div class="eyebrow">Try it now</div>
+    <h2 class="sec-title" style="margin-bottom:8px">Start looking for your next deal</h2>
+    <p class="lead" style="margin:0 auto">Real upcoming Florida tax deed auctions, live from the board. Search a county or an address &mdash; then open the full app to dig into any parcel.</p>
+  </div>
+  <div class="try-panel">
+    <div class="try-search">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="var(--ink3)" stroke-width="2"></circle><path d="M20 20l-3.2-3.2" stroke="var(--ink3)" stroke-width="2" stroke-linecap="round"></path></svg>
+      <input id="try-input" type="text" placeholder="Search by county, city or address&hellip;" autocomplete="off" aria-label="Search auctions">
+    </div>
+    <div class="try-chips" id="try-chips"></div>
+    <div class="try-meta">
+      <span id="try-count">Loading live auctions&hellip;</span>
+      <a href="app/" style="color:var(--gold-ink);font-weight:600;text-decoration:none">Open the full board &rarr;</a>
+    </div>
+    <div class="try-grid" id="try-grid"></div>
+    <div style="text-align:center;margin-top:22px">
+      <a class="btn btn-primary btn-lg" href="app/">Open the full board &mdash; free &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:56px 0">
+  <div class="wrap" id="pricing">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="sec-title">Simple pricing</h2>
+    <p class="lead" style="margin-bottom:28px">Start free. Upgrade when you&rsquo;re ready &mdash; month to month, or save with yearly.</p>
+    <div class="price-grid">
+
+      <div class="card2 price">
+        <div style="font-size:20px;font-weight:600">Free</div>
+        <div class="price-amt">$0</div>
+        <p style="font-size:13.5px;color:var(--ink2);margin:0 0 16px">A taste of what&rsquo;s coming up.</p>
+        <ul>
+          <li>The next 5 days of sales</li>
+          <li>Property details, maps &amp; clerk links</li>
+          <li>View only</li>
+        </ul>
+        <a class="btn btn-secondary" href="app/" style="margin-top:auto;font-size:15px;padding:12px 18px">Open the board</a>
+      </div>
+
+      <div class="card2 price feature">
+        <div style="font-size:20px;font-weight:600">Monthly</div>
+        <div class="price-amt">$297<span style="font-size:18px;font-weight:500;color:var(--gold-ink)">/mo</span></div>
+        <p style="font-size:13.5px;color:var(--ink2);margin:0 0 16px">Everything, billed month to month. Cancel anytime.</p>
+        <ul>
+          <li>Every county &amp; every sale date</li>
+          <li>Land check &mdash; wetlands, flood, access</li>
+          <li>Downloads (CSV &amp; printable PDF)</li>
+          <li>Lists + team sharing</li>
+        </ul>
+        <a class="btn btn-primary" href="https://buy.stripe.com/cNi28qgVzbirfKVdmIbV600" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe monthly</a>
+      </div>
+
+      <div class="card2 price feature">
+        <span class="tag-fl" style="align-self:flex-start;margin-bottom:10px;color:var(--gold-ink)">Best value &middot; 30-day money-back</span>
+        <div style="font-size:20px;font-weight:600">Yearly</div>
+        <div class="price-amt">$997<span style="font-size:18px;font-weight:500;color:var(--gold-ink)">/yr</span></div>
+        <p style="font-size:13.5px;color:var(--ink2);margin:0 0 16px">Everything, one payment &mdash; about two months free vs monthly.</p>
+        <ul>
+          <li>Everything in Monthly</li>
+          <li>Best price &mdash; ~2 months free</li>
+          <li>30-day money-back guarantee</li>
+        </ul>
+        <a class="btn btn-primary" href="https://buy.stripe.com/fZu00ifRv9aj0Q1dmIbV601" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe yearly</a>
+      </div>
+
+    </div>
+    <p style="font-size:13px;color:var(--ink3);margin-top:20px">Secure checkout by Stripe &middot; promotion codes accepted &middot; cancel anytime. Prefer to talk first?
+      <a href="mailto:frankhatfellaaiagent@gmail.com?subject=Tax%20Deed%20Radar%20walkthrough" style="color:var(--gold-ink)">Book a walkthrough</a>.</p>
+  </div>
+</section>
+
+<footer class="wrap" style="display:flex;gap:16px;align-items:center;padding:28px 24px 40px;flex-wrap:wrap;border-top:1px solid var(--line)">
+  <span class="brand"><svg width="26" height="26" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="12" stroke="#e8b91e" stroke-width="3"></circle><circle cx="20" cy="17" r="4.5" fill="#e8b91e"></circle><path d="M15 27l-3 11 8-4 8 4-3-11" stroke="#e8b91e" stroke-width="3" stroke-linejoin="round" fill="none"></path></svg><span style="font-weight:600">Tax Deed Radar</span></span>
+  <span style="font-size:12px;color:var(--ink3);max-width:60ch">Public-record data, collected and organized. Informational only &mdash; verify every property with the county before bidding. Not legal or investment advice.</span>
+  <a href="mailto:frankhatfellaaiagent@gmail.com" style="margin-left:auto;font-size:13px;color:var(--gold-ink)">Contact</a>
+</footer>
+
+<script>
+// Live data from the same feed the app uses — the landing page never lies
+// about the board it's selling, and the mini-app below is the real thing.
+(function () {
+  var CTY = { indianriver: "Indian River", miamidade: "Miami-Dade", palmbeach: "Palm Beach",
+    santarosa: "Santa Rosa", stjohns: "St. Johns", stlucie: "St. Lucie" };
+  function cty(k) { return CTY[k] || (k ? k.charAt(0).toUpperCase() + k.slice(1) : ""); }
+  function money(n) { return (n || n === 0) ? "$" + Math.round(n).toLocaleString() : "—"; }
+  function ts(d) { var p = (d || "").split("/"); return p.length === 3 ? new Date(+p[2], +p[0] - 1, +p[1]).getTime() : 0; }
+  function fmtDate(d) { var t = ts(d); if (!t) return d || ""; return new Date(t).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); }
+  function niceUse(u) { if (!u) return ""; return /^[A-Za-z]/.test(u) && u.length < 22 ? u : ""; }
+
+  var ALL = [], SEARCH = "", COUNTY = "", grid, countEl;
+
+  function render() {
+    if (!grid) return;
+    var q = SEARCH.trim().toLowerCase();
+    var rows = ALL.filter(function (r) {
+      if (COUNTY && r.county !== COUNTY) return false;
+      if (!q) return true;
+      return (r._search.indexOf(q) !== -1);
+    });
+    rows.sort(function (a, b) { return a._ts - b._ts || b._hasAddr - a._hasAddr; });
+    var shown = rows.slice(0, 24);
+    countEl.textContent = rows.length.toLocaleString() + (rows.length === 1 ? " auction" : " auctions")
+      + (q || COUNTY ? " match your search" : " coming up") + (rows.length > shown.length ? " · showing 24" : "");
+    if (!shown.length) { grid.innerHTML = '<div class="try-empty">No upcoming auctions match that yet. Try another county or clear the search.</div>'; return; }
+    grid.innerHTML = shown.map(function (r) {
+      var use = niceUse(r.property_use);
+      return '<a class="pcard" href="app/">'
+        + '<div class="pcard-top"><span class="pcard-cty">' + cty(r.county) + '</span>'
+        + '<span class="pcard-date">' + fmtDate(r.sale_date) + '</span></div>'
+        + '<div class="pcard-addr">' + (r.property_address ? esc(r.property_address) : (use || "Parcel " + esc(r.parcel_id || ""))) + '</div>'
+        + '<div class="pcard-figs">'
+        + '<div class="pcard-fig"><div class="k">Opening bid</div><div class="v">' + money(r.opening_bid) + '</div></div>'
+        + '<div class="pcard-fig"><div class="k">Assessed</div><div class="v">' + money(r.assessed_value) + '</div></div>'
+        + '</div></a>';
+    }).join("");
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  function buildChips(counts) {
+    var box = document.getElementById("try-chips"); if (!box) return;
+    var top = Object.keys(counts.by_county)
+      .map(function (k) { return { k: k, n: counts.by_county[k].scheduled || 0 }; })
+      .filter(function (o) { return o.n > 0; })
+      .sort(function (a, b) { return b.n - a.n; }).slice(0, 8);
+    var chips = [{ k: "", label: "All counties" }].concat(top.map(function (o) { return { k: o.k, label: cty(o.k) }; }));
+    box.innerHTML = chips.map(function (c) {
+      return '<button class="try-chip' + (c.k === "" ? " on" : "") + '" data-cty="' + c.k + '">' + c.label + "</button>";
+    }).join("");
+    box.addEventListener("click", function (e) {
+      var b = e.target.closest(".try-chip"); if (!b) return;
+      COUNTY = b.getAttribute("data-cty");
+      [].forEach.call(box.children, function (el) { el.classList.toggle("on", el === b); });
+      render();
+    });
+  }
+
+  fetch("app/data/exports/master_list.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (j) {
+    var total = document.getElementById("st-total"), counties = document.getElementById("st-counties"), upd = document.getElementById("st-updated");
+    if (total) total.textContent = (j.counts.scheduled || j.counts.total).toLocaleString();
+    if (counties) counties.textContent = j.counts.counties_total || j.counts.counties;
+    if (upd && j.generated_at) upd.textContent = "· updated " + new Date(j.generated_at).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+
+    ALL = (j.records || []).filter(function (r) { return (r.status || "") === "Scheduled" && ts(r.sale_date); }).map(function (r) {
+      r._ts = ts(r.sale_date);
+      r._hasAddr = r.property_address ? 1 : 0;
+      r._search = (cty(r.county) + " " + (r.property_address || "") + " " + (r.parcel_id || "") + " " + (r.property_use || "")).toLowerCase();
+      return r;
+    });
+    grid = document.getElementById("try-grid");
+    countEl = document.getElementById("try-count");
+    var input = document.getElementById("try-input");
+    if (input) input.addEventListener("input", function () { SEARCH = input.value; render(); });
+    buildChips(j.counts);
+    render();
+  }).catch(function () {
+    var c = document.getElementById("try-count"); if (c) c.textContent = "Live board is loading — open the full app to explore.";
+  });
+})();
+</script>
+</body>
+</html>
