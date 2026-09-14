@@ -57,8 +57,12 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Offline regression (fixtures)
+        # Writes the discovered list to a throwaway path: the fixture seed page is
+        # a partial snapshot of the county selector, and writing it to the tracked
+        # config/counties.json used to shrink the committed 45-county list, which
+        # then made the live scrape reject every county not in the snapshot.
         run: |
-          python -m scraper discover --fixtures scraper/fixtures
+          python -m scraper discover --fixtures scraper/fixtures --out output/fixture-counties.json
           python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots --out output/fixture-regression
 
       - name: Decide run scope
