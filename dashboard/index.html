@@ -197,6 +197,10 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   table.table td:last-child{padding-bottom:0!important}
   table.table td .row-dec,table.table td select.row-dec{max-width:100%!important;width:100%!important}
   table.table td .bm-toggle{margin-left:0}
+  /* Explore list: float the decision badge to the card's top-right corner. */
+  #scr-dashboard table.table tr{position:relative}
+  #scr-dashboard table.table td:first-child{padding-right:86px!important}
+  #scr-dashboard table.table td:last-child{position:absolute;top:14px;right:16px;padding:0!important;width:auto!important}
 }
 #login-overlay{display:grid}
 /* On phones the map quick card becomes a bottom sheet and the map shrinks. */
