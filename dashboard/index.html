@@ -229,6 +229,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 .cal-date{font-size:14px;font-weight:500;color:var(--ink);width:30px;height:30px;display:grid;place-items:center;border-radius:50%}
 .cal-grid td.today .cal-date{background:var(--tab-bg);color:var(--tab-ink)}
 .cal-count{font-size:11px;font-weight:600;color:var(--gold-ink)}
+.cal-daycount{margin-top:6px;text-align:center;font-size:17px;font-weight:700;color:var(--gold-ink);font-variant-numeric:tabular-nums;line-height:1}
 .cal-sale{margin-top:3px;font-size:12px;line-height:1.3;color:var(--ink2);display:flex;align-items:center;gap:5px}
 .cal-sale b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .cal-sale .cal-n{display:inline-block;background:var(--chip);color:var(--chip-ink);border-radius:999px;padding:0 6px;font-size:10px;font-variant-numeric:tabular-nums;flex:none}
@@ -3085,8 +3086,15 @@ function calMonthGrid(y, m, byDay, opts) {
     }).join("");
     const more = sales.length > 2 ? `<div class="cal-more">+${sales.length - 2} more</div>` : "";
     const selAttr = opts.selectable && sales.length ? ` data-selday="${dayKey}"` : "";
-    const badge = sales.length ? `<span class="cal-count">${totalN} &#9873;</span>` : "";
-    cells.push(`<td class="${cls}"${selAttr}><div class="cal-daytop"><span class="cal-date">${d}</span>${badge}</div>${shown}${more}</td>`);
+    if (opts.countOnly) {
+      // Compact cell (mobile date picker): just the day number and the total
+      // auctions for that day — the county chips don't fit legibly here.
+      const body = sales.length ? `<div class="cal-daycount">${totalN}</div>` : "";
+      cells.push(`<td class="${cls}"${selAttr}><div class="cal-daytop"><span class="cal-date">${d}</span></div>${body}</td>`);
+    } else {
+      const badge = sales.length ? `<span class="cal-count">${totalN} &#9873;</span>` : "";
+      cells.push(`<td class="${cls}"${selAttr}><div class="cal-daytop"><span class="cal-date">${d}</span>${badge}</div>${shown}${more}</td>`);
+    }
   }
   while (cells.length % 7) cells.push('<td class="cal-empty"></td>');
   let rows = "";
@@ -3175,8 +3183,8 @@ function openCalPickerModal() {
           <div style="flex:1;text-align:center;font-size:17px;font-weight:600">${CAL_MONTHS[mo]} ${y}</div>
           <button class="btn btn-secondary" id="cp-next" ${pi < months.length - 1 ? "" : "disabled"} style="height:38px;width:38px;padding:0;font-size:16px">&rarr;</button>
         </div>
-        ${calMonthGrid(y, mo, byDay, { selectable: true, selDayKey: S.calDayKey })}
-        <div style="font-size:12.5px;color:var(--ink3);margin-top:10px">Tap a highlighted day to open it.</div>
+        ${calMonthGrid(y, mo, byDay, { selectable: true, selDayKey: S.calDayKey, countOnly: true })}
+        <div style="font-size:12.5px;color:var(--ink3);margin-top:10px">Tap a highlighted day &mdash; the number is how many auctions sell that day.</div>
       </div>`;
     el.hidden = false;
     $("cp-x").onclick = close;
