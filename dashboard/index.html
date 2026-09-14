@@ -108,9 +108,11 @@ a{color:var(--gold-ink)}a:hover{color:var(--gold-ink)}
 .cal-day-chip.on{background:var(--gold);border-color:var(--gold);color:#1b1d21;box-shadow:0 6px 16px rgba(240,194,58,.35)}
 .cal-day-chip.on .dow{color:rgba(27,29,33,.72)}
 .cal-day-chip.on .dcount{background:rgba(27,29,33,.15);color:#1b1d21}
+.cal-mobile-only{display:none}
 @media (max-width:820px){
   .cal-strip{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;-webkit-overflow-scrolling:touch;margin-bottom:8px}
-  .cal-monthnav,.cal-monthgrid,.cal-legend-card{display:none!important}
+  .cal-monthnav,.cal-monthgrid,.cal-legend-card,.cal-countytext{display:none!important}
+  .cal-mobile-only{display:inline-flex!important}
 }
 .pillbtn{font-family:var(--font-body);font-size:13px;padding:7px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--ink)}
 .pillbtn.on{border-color:var(--seg-active-border);background:var(--seg-active);color:var(--ink)}
@@ -3148,6 +3150,44 @@ function openCalCountiesModal() {
   el.onclick = (e) => { if (e.target === el) close(); };   // backdrop click
 }
 
+// Mobile "Calendar" button -> a centered month picker. Pick a highlighted day
+// and it drops back into the day-strip view focused on that date.
+function openCalPickerModal() {
+  const el = $("day-modal"); if (!el) return;
+  const { byDay, months } = calGroups();
+  if (!months.length) return;
+  let pi = Math.max(0, Math.min(S.calMonthIdx || 0, months.length - 1));
+  const close = () => { el.hidden = true; el.innerHTML = ""; };
+  const paint = () => {
+    const [y, mo] = months[pi];
+    el.innerHTML = `
+      <div class="home-card" style="width:min(460px,100%);max-height:88vh;overflow:auto;padding:18px 20px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="flex:1;font-size:20px;font-weight:600;letter-spacing:-.01em">Pick a date</div>
+          <button id="cp-x" aria-label="Close" style="background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink3);padding:2px 6px">&times;</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <button class="btn btn-secondary" id="cp-prev" ${pi > 0 ? "" : "disabled"} style="height:38px;width:38px;padding:0;font-size:16px">&larr;</button>
+          <div style="flex:1;text-align:center;font-size:17px;font-weight:600">${CAL_MONTHS[mo]} ${y}</div>
+          <button class="btn btn-secondary" id="cp-next" ${pi < months.length - 1 ? "" : "disabled"} style="height:38px;width:38px;padding:0;font-size:16px">&rarr;</button>
+        </div>
+        ${calMonthGrid(y, mo, byDay, { selectable: true, selDayKey: S.calDayKey })}
+        <div style="font-size:12.5px;color:var(--ink3);margin-top:10px">Tap a highlighted day to open it.</div>
+      </div>`;
+    el.hidden = false;
+    $("cp-x").onclick = close;
+    const pv = $("cp-prev"); if (pv) pv.onclick = () => { pi = Math.max(0, pi - 1); paint(); };
+    const nx = $("cp-next"); if (nx) nx.onclick = () => { pi = Math.min(months.length - 1, pi + 1); paint(); };
+    el.querySelectorAll("[data-selday]").forEach((c) => c.onclick = () => {
+      const k = c.dataset.selday, [ky, km] = k.split("-").map(Number);
+      const mi = months.findIndex((mm) => mm[0] === ky && mm[1] === km);
+      S.calMonthIdx = mi < 0 ? 0 : mi; S.calDayKey = k; close(); renderCalendar();
+    });
+  };
+  el.onclick = (e) => { if (e.target === el) close(); };
+  paint();
+}
+
 function renderCalendar() {
   const all = calCounties();
   const sel = calSelected();
@@ -3226,8 +3266,13 @@ function renderCalendar() {
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M7 12h10M10 18h4"></path></svg>
         Counties<span style="background:var(--gold);color:var(--gold-ink);border-radius:999px;font-size:12px;font-weight:700;padding:1px 8px">${all.length && sel.size !== all.length ? sel.size : "All"}</span>
       </button>
-      <span class="text-muted" style="font-size:13px">${all.length ? (sel.size === all.length ? "All " + all.length + " counties" : sel.size + " of " + all.length + " counties") : "none"} on the calendar</span>
-      <button class="btn btn-secondary" id="cal-print" style="margin-left:auto;font-size:13px;height:40px" ${months.length ? "" : "disabled"}>Print</button>
+      <span class="text-muted cal-countytext" style="font-size:13px">${all.length ? (sel.size === all.length ? "All " + all.length + " counties" : sel.size + " of " + all.length + " counties") : "none"} on the calendar</span>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="btn btn-secondary cal-mobile-only" id="cal-today" style="font-size:13px;height:40px" ${months.length ? "" : "disabled"}>Today</button>
+        <button class="btn btn-secondary cal-mobile-only" id="cal-datepick" style="font-size:13px;height:40px;align-items:center;gap:6px" ${months.length ? "" : "disabled"}>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>Calendar</button>
+        <button class="btn btn-secondary" id="cal-print" style="font-size:13px;height:40px" ${months.length ? "" : "disabled"}>Print</button>
+      </div>
     </div>
 
     ${months.length ? `<div class="cal-strip">${stripChips}</div>
@@ -3256,6 +3301,18 @@ function renderCalendar() {
     const mi = months.findIndex((mm) => mm[0] === y && mm[1] === mo);
     S.calMonthIdx = mi < 0 ? 0 : mi; S.calDayKey = k; renderCalendar();
   });
+  const todayBtn = $("cal-today");
+  if (todayBtn) todayBtn.onclick = () => {
+    // Jump to today if it's a sale day, otherwise the soonest upcoming sale day.
+    const [ty, tmo, td] = ET_YMD.format(new Date()).split("-").map(Number);
+    const tky = ty + "-" + (tmo - 1) + "-" + td;
+    const target = byDay[tky] ? tky : allDayKeys[0];
+    if (!target) return;
+    const [ky, km] = target.split("-").map(Number);
+    const mi = months.findIndex((mm) => mm[0] === ky && mm[1] === km);
+    S.calMonthIdx = mi < 0 ? 0 : mi; S.calDayKey = target; renderCalendar();
+  };
+  const dpBtn = $("cal-datepick"); if (dpBtn) dpBtn.onclick = openCalPickerModal;
   const prevBtn = $("cal-prev"); if (prevBtn) prevBtn.onclick = () => { S.calMonthIdx = idx - 1; S.calDayKey = null; renderCalendar(); };
   const nextBtn = $("cal-next"); if (nextBtn) nextBtn.onclick = () => { S.calMonthIdx = idx + 1; S.calDayKey = null; renderCalendar(); };
   // Clicking a day opens the popup listing that whole day's auctions to pick from.
