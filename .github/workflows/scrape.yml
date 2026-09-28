@@ -170,8 +170,9 @@ jobs:
           # the ReportAll parcel record.
           # --max-minutes caps enrichment so it can never push the job past its
           # 120-min timeout (which would lose the day's refresh); the queue
-          # carries over to the next run.
-          python -m scraper -v enrich --limit 300 --max-minutes 30 --debug-dir output/debug/enrich || true
+          # carries over to the next run. Measured ~1.8 s/parcel (Sep 28: 299
+          # parcels in <9 min), so 800 fits well inside the 30-min budget.
+          python -m scraper -v enrich --limit 800 --max-minutes 30 --debug-dir output/debug/enrich || true
           # Note: the land check (wetlands / flood / access) is NOT run daily —
           # it's on-demand from the property card (a per-parcel button, computed
           # client-side from free public GIS), so nothing extra is pulled every
