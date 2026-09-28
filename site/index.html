@@ -84,6 +84,13 @@
     .hero-sub{font-size:17px}
   }
   @media (min-width:601px) and (max-width:880px){ .try-grid{grid-template-columns:repeat(2,1fr)} }
+  /* Phones: logo + one call to action on a single row (Sign in lives in the app). */
+  @media (max-width:600px){
+    .nav-extra{display:none}
+    nav .brand{gap:8px} nav .brand svg{width:28px;height:28px} nav .brand-name{font-size:18px}
+    nav .btn{font-size:14px;padding:9px 15px}
+    nav.wrap{gap:8px!important}   /* inline gap is 14px */
+  }
 </style>
 </head>
 <body>
@@ -95,8 +102,9 @@
     <span class="brand-name">Tax Deed Radar</span>
   </span>
   <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
-    <a class="btn btn-secondary" href="#pricing">Pricing</a>
-    <a class="btn btn-secondary" href="app/">Sign in</a>
+    <a class="btn btn-secondary nav-extra" href="#pricing">Pricing</a>
+    <a class="btn btn-secondary nav-extra" href="app/">Sign in</a>
+    <a class="btn btn-primary" href="app/?signup=1">Start free</a>
   </span>
 </nav>
 
@@ -230,7 +238,7 @@
           <li>Property details, maps &amp; clerk links</li>
           <li>View only</li>
         </ul>
-        <a class="btn btn-secondary" href="app/" style="margin-top:auto;font-size:15px;padding:12px 18px">Open the board</a>
+        <a class="btn btn-secondary" href="app/?signup=1" style="margin-top:auto;font-size:15px;padding:12px 18px">Create free account</a>
       </div>
 
       <div class="card2 price feature">
@@ -243,7 +251,7 @@
           <li>Downloads (CSV &amp; printable PDF)</li>
           <li>Lists + team sharing</li>
         </ul>
-        <a class="btn btn-primary" href="https://buy.stripe.com/cNi28qgVzbirfKVdmIbV600" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe monthly</a>
+        <a class="btn btn-primary" href="app/?signup=1&amp;plan=monthly" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe monthly</a>
       </div>
 
       <div class="card2 price feature">
@@ -256,11 +264,11 @@
           <li>Best price &mdash; ~2 months free</li>
           <li>30-day money-back guarantee</li>
         </ul>
-        <a class="btn btn-primary" href="https://buy.stripe.com/fZu00ifRv9aj0Q1dmIbV601" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe yearly</a>
+        <a class="btn btn-primary" href="app/?signup=1&amp;plan=yearly" style="margin-top:auto;font-size:15px;padding:12px 18px">Subscribe yearly</a>
       </div>
 
     </div>
-    <p style="font-size:13px;color:var(--ink3);margin-top:20px">Secure checkout by Stripe &middot; promotion codes accepted &middot; cancel anytime. Prefer to talk first?
+    <p style="font-size:13px;color:var(--ink3);margin-top:20px">Create your account, pick a plan, and check out securely with Stripe. <b style="color:var(--ink2)">Have a promo code?</b> Enter it at checkout. Cancel anytime. Prefer to talk first?
       <a href="mailto:frankhatfellaaiagent@gmail.com?subject=Tax%20Deed%20Radar%20walkthrough" style="color:var(--gold-ink)">Book a walkthrough</a>.</p>
   </div>
 </section>
