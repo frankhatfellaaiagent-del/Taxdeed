@@ -291,6 +291,8 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
       <input class="input" id="login-email" type="email" autocomplete="username" required></div>
     <div class="field" style="margin-bottom:6px"><label>Password</label>
       <input class="input" id="login-pass" type="password" autocomplete="current-password" required></div>
+    <div class="field" id="login-code-wrap" hidden style="margin-bottom:6px;margin-top:6px"><label>Promo code <span class="text-muted" style="font-weight:400">(optional)</span></label>
+      <input class="input" id="login-code" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="40" style="text-transform:uppercase"></div>
     <div id="login-error" style="font-size:12.5px;color:var(--color-accent-800);min-height:18px;margin-bottom:8px"></div>
     <button class="btn btn-primary" type="submit" id="login-submit" style="width:100%">Sign in</button>
     <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:12.5px">
@@ -347,6 +349,11 @@ const SUPPORT_EMAIL = "frankhatfellaaiagent@gmail.com";
 const STRIPE_MONTHLY_URL = "https://buy.stripe.com/cNi28qgVzbirfKVdmIbV600";  // $297/month
 const STRIPE_YEARLY_URL  = "https://buy.stripe.com/fZu00ifRv9aj0Q1dmIbV601";  // $997/year (30-day guarantee)
 const STRIPE_PORTAL_URL  = "";                 // customer portal (manage / cancel) — set up later
+// Stripe can't take live payments until the business verification is finished.
+// While false, every Upgrade button offers "email us to upgrade" (a personal
+// hand-off) instead of a Stripe checkout that would fail. Flip to true once
+// Stripe is verified — nothing else needs to change.
+const PAYMENTS_LIVE = false;
 const PRICE_MONTHLY = "$297";
 const PRICE_YEARLY  = "$997";
 const FREE_DAYS = 5;                            // Free tier: auctions within this many days
@@ -372,6 +379,7 @@ function checkoutUrl(plan) {
 function startCheckout(plan) {
   plan = plan === "yearly" ? "yearly" : "monthly";
   if (!(CLOUD && CLOUD.user)) { PENDING_PLAN = plan; openAuth("signup"); return; }
+  if (!PAYMENTS_LIVE) { showCheckoutStep(plan); return; }   // "email us to upgrade"
   window.open(checkoutUrl(plan), "_blank", "noopener");
   watchForUpgrade(false);
 }
@@ -383,7 +391,16 @@ const upgradeChip = (label) =>
 // The signed-in account's access tier, from the profiles row ("free" | "pro").
 // A signed-out visitor is "free". isPaid() is the single gate for every limit.
 let PLAN_TIER = "free";
-const isPaid = () => PLAN_TIER === "pro";
+// End of a free month (ISO); null = no end (paid, comp, operator). The server
+// drops an expired trial to Free on the next load; isPaid() also stops the
+// moment it passes, so a tab left open can't outlive the month.
+let PLAN_EXPIRES = null;
+const trialEnded = () => !!PLAN_EXPIRES && Date.parse(PLAN_EXPIRES) <= Date.now();
+const isPaid = () => PLAN_TIER === "pro" && !trialEnded();
+const onTrial = () => isPaid() && !!PLAN_EXPIRES;
+const trialDaysLeft = () => PLAN_EXPIRES ? Math.max(0, Math.ceil((Date.parse(PLAN_EXPIRES) - Date.now()) / 864e5)) : 0;
+const fmtDay = (iso) => new Intl.DateTimeFormat("en-US",
+  { month: "short", day: "numeric", year: "numeric", timeZone: "America/New_York" }).format(new Date(iso));
 // ---------- Florida time ----------
 // Auctions are Florida events, so every date the app reasons about or prints
 // runs on America/New_York — never the device's clock. A laptop set to UTC or
@@ -914,7 +931,7 @@ async function onSignedIn(user) {
     if (!ens.error && ens.data && ens.data[0]) profile = ens.data[0];
     else {
       console.warn("ensure_my_profile failed:", ens.error);
-      const { data: p } = await sb.from("profiles").select("team_id, is_admin, plan").eq("id", user.id).maybeSingle();
+      const { data: p } = await sb.from("profiles").select("team_id, is_admin, plan, plan_expires_at").eq("id", user.id).maybeSingle();
       profile = p;
     }
     if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; renderAccount(); return; }
@@ -923,6 +940,7 @@ async function onSignedIn(user) {
     TEAM_NAME = profile.team_name || "";
     IS_ADMIN = !!profile.is_admin;
     PLAN_TIER = profile.plan === "pro" ? "pro" : "free";
+    PLAN_EXPIRES = profile.plan_expires_at || null;
     renderAccount();   // reflect admin (Refresh appears in the account menu)
 
     // First contact: merge this device's local state with the cloud. Cloud wins
@@ -984,6 +1002,7 @@ function onSignedOut() {
   TEAM_NAME = "";
   IS_ADMIN = false;
   PLAN_TIER = "free";
+  PLAN_EXPIRES = null;
   WORKSPACE_ERROR = false;
   SYNC_ERROR = false;
   team = { lists: [], membership: {} };
@@ -1043,6 +1062,8 @@ function renderAccount() {
         <div style="padding:12px 16px;border-bottom:1px solid var(--line)">
           <div style="font-size:11px;letter-spacing:.13em;color:var(--ink3);font-weight:500">SIGNED IN</div>
           <div style="font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(email)}</div>
+          ${onTrial() ? `<div style="font-size:12px;color:var(--ink3);margin-top:4px">Free month &middot; ${trialDaysLeft()} ${trialDaysLeft() === 1 ? "day" : "days"} left</div>`
+            : (PLAN_TIER === "free" && PLAN_EXPIRES ? `<div style="font-size:12px;color:var(--ink3);margin-top:4px">Free month ended ${esc(fmtDay(PLAN_EXPIRES))}</div>` : "")}
         </div>
         ${IS_ADMIN ? `<button class="acct-item" id="acct-refresh" role="menuitem">Refresh data</button>` : ""}
         <button class="acct-item" id="acct-signout" role="menuitem">Sign out</button>
@@ -1066,20 +1087,32 @@ function renderAccount() {
 let AUTH_MODE = "signin";
 let PENDING_PLAN = null;   // plan picked before the account existed ("monthly" | "yearly")
 let PENDING_NAME = null;   // name typed at signup — labels the new workspace
+let PENDING_CODE = null;   // promo code from a shared link (?code=FEEDBACK)
+let JUST_STARTED_TRIAL = false;
 let RETURNED_FROM_CHECKOUT = false;
 const planLabel = (plan) => plan === "yearly" ? `${PRICE_YEARLY}/yr` : `${PRICE_MONTHLY}/mo`;
+
+// The form's subtitle: what happens when they press the button.
+function authSub() {
+  if (AUTH_MODE !== "signup") return "Your lists, notes and positions follow you to any device.";
+  if ($("login-code").value.trim())
+    return "Create your login and your <b>free month</b> starts right away &mdash; full access, no card needed.";
+  if (PENDING_PLAN)
+    return PAYMENTS_LIVE
+      ? `Step 1 of 2 &mdash; create your login. Next is secure checkout for <b>${planLabel(PENDING_PLAN)}</b>, where you can enter a promo code.`
+      : `Step 1 of 2 &mdash; create your login, then we&rsquo;ll get your <b>${planLabel(PENDING_PLAN)}</b> plan set up.`;
+  return `Free to start &mdash; the next ${FREE_DAYS} days of auctions. Have a promo code? Add it below.`;
+}
 
 function setAuthMode(mode) {
   AUTH_MODE = mode === "signup" ? "signup" : "signin";
   const up = AUTH_MODE === "signup";
   $("login-form").hidden = false; $("checkout-step").hidden = true;
   $("login-title").textContent = up ? "Create your account" : "Sign in";
-  $("login-sub").innerHTML = up
-    ? (PENDING_PLAN
-        ? `Step 1 of 2 &mdash; create your login. Next is secure checkout for <b>${planLabel(PENDING_PLAN)}</b>, where you can enter a promo code.`
-        : `Free to start &mdash; the next ${FREE_DAYS} days of auctions. Upgrade any time.`)
-    : "Your lists, notes and positions follow you to any device.";
+  if (up && PENDING_CODE && !$("login-code").value) $("login-code").value = PENDING_CODE;
+  $("login-sub").innerHTML = authSub();
   $("login-name-wrap").hidden = !up;
+  $("login-code-wrap").hidden = !up;
   $("login-pass").autocomplete = up ? "new-password" : "current-password";
   $("login-pass").placeholder = up ? "At least 8 characters" : "";
   $("login-submit").textContent = up ? "Create account" : "Sign in";
@@ -1105,6 +1138,28 @@ function openAuth(mode) {
 function showCheckoutStep(plan) {
   PENDING_PLAN = null;
   const yearly = plan === "yearly", other = yearly ? "monthly" : "yearly";
+  if (!PAYMENTS_LIVE) {
+    // Online checkout isn't live yet: hand the upgrade to the operator by email,
+    // pre-filled with the account and plan, instead of a checkout that fails.
+    const who = (CLOUD && CLOUD.user && CLOUD.user.email) || "";
+    const href = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(`Upgrade my ${BRAND} account (${yearly ? "yearly" : "monthly"})`)}`
+      + `&body=${encodeURIComponent(`Account: ${who}\nPlan: ${yearly ? "Yearly" : "Monthly"} (${planLabel(plan)})\n\n`)}`;
+    $("checkout-step").innerHTML = `${CORNERS}
+      <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:4px">Let&rsquo;s get you set up.</div>
+      <div class="text-muted" style="font-size:13px;margin-bottom:16px">Online checkout is coming soon. Email us and we&rsquo;ll switch your account to <b>${planLabel(plan)}</b> personally &mdash; usually the same day.</div>
+      <a class="btn btn-primary" id="co-mail" href="${esc(href)}" style="width:100%;display:flex;justify-content:center">Email us to upgrade &middot; ${planLabel(plan)}</a>
+      <div style="display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12.5px">
+        <button class="btn btn-ghost" type="button" id="co-switch" style="font-size:12.5px;padding:2px 4px">Switch to ${other} &middot; ${planLabel(other)}</button>
+        <button class="btn btn-ghost" type="button" id="co-later" style="font-size:12.5px;padding:2px 4px">Not now</button>
+      </div>
+      <div class="text-muted" style="font-size:11.5px;margin-top:12px">Or write to ${esc(SUPPORT_EMAIL)}.</div>`;
+    $("login-form").hidden = true; $("checkout-step").hidden = false;
+    $("login-overlay").hidden = false;
+    $("co-mail").onclick = () => { $("login-overlay").hidden = true; };
+    $("co-switch").onclick = () => showCheckoutStep(other);
+    $("co-later").onclick = () => { $("login-overlay").hidden = true; };
+    return;
+  }
   $("checkout-step").innerHTML = `${CORNERS}
     <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:4px">You&rsquo;re in. One more step.</div>
     <div class="text-muted" style="font-size:13px;margin-bottom:16px">Finish at Stripe&rsquo;s secure checkout. <b>Have a promo code?</b> Enter it there.</div>
@@ -1135,10 +1190,10 @@ function watchForUpgrade(now) {
     _upgradeWatch = null;
   };
   const check = async () => {
-    if (!(CLOUD && CLOUD.user) || isPaid()) { stop(); return; }
-    const { data } = await CLOUD.sb.from("profiles").select("plan").eq("id", CLOUD.user.id).maybeSingle();
-    if (data && data.plan === "pro") {
-      PLAN_TIER = "pro"; stop(); renderAccount(); rerender();
+    if (!(CLOUD && CLOUD.user) || (isPaid() && !PLAN_EXPIRES)) { stop(); return; }
+    const { data } = await CLOUD.sb.from("profiles").select("plan, plan_expires_at").eq("id", CLOUD.user.id).maybeSingle();
+    if (data && data.plan === "pro" && !data.plan_expires_at) {
+      PLAN_TIER = "pro"; PLAN_EXPIRES = null; stop(); renderAccount(); rerender();
       showNotice("You're on Full access — every date, the land check, downloads and lists are unlocked.", 9000);
     }
   };
@@ -1160,8 +1215,19 @@ function afterSignedIn() {
     else watchForUpgrade(true);
   }
   if (PENDING_PLAN) {
-    if (isPaid()) { PENDING_PLAN = null; showNotice("You already have Full access."); }
+    if (isPaid()) { PENDING_PLAN = null; if (!JUST_STARTED_TRIAL) showNotice("You already have Full access."); }
     else showCheckoutStep(PENDING_PLAN);
+  }
+  if (JUST_STARTED_TRIAL) {
+    JUST_STARTED_TRIAL = false; PENDING_CODE = null;
+    if (onTrial()) showNotice(`Your free month is on — full access until ${fmtDay(PLAN_EXPIRES)}.`, 10000);
+  } else if (PLAN_TIER === "free" && PLAN_EXPIRES) {
+    // Once per browser: the free month has run out.
+    const seen = "tdd_trial_end_seen_" + PLAN_EXPIRES;
+    if (!store.get(seen, false)) {
+      store.set(seen, true);
+      showNotice(`Your free month ended on ${fmtDay(PLAN_EXPIRES)} — upgrade any time to get full access back.`, 10000);
+    }
   }
 }
 
@@ -1174,17 +1240,20 @@ function readDeepLink() {
   const plan = p.get("plan");
   if (plan === "monthly" || plan === "yearly") PENDING_PLAN = plan;
   RETURNED_FROM_CHECKOUT = p.has("upgraded");
+  const code = (p.get("code") || "").trim();
+  if (code) PENDING_CODE = code.toUpperCase().slice(0, 40);
   const signup = p.has("signup");
-  if (plan || signup || RETURNED_FROM_CHECKOUT) {
-    ["plan", "signup", "upgraded"].forEach((k) => p.delete(k));
+  if (plan || signup || code || RETURNED_FROM_CHECKOUT) {
+    ["plan", "signup", "code", "upgraded"].forEach((k) => p.delete(k));
     const qs = p.toString();
     history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
   }
-  return signup || PENDING_PLAN ? "signup" : RETURNED_FROM_CHECKOUT ? "signin" : null;
+  return signup || PENDING_PLAN || PENDING_CODE ? "signup" : RETURNED_FROM_CHECKOUT ? "signin" : null;
 }
 
 function wireLogin() {
   $("login-cancel").onclick = () => { $("login-overlay").hidden = true; PENDING_PLAN = null; };
+  $("login-code").oninput = () => { $("login-sub").innerHTML = authSub(); };
   $("login-form").onsubmit = async (e) => {
     e.preventDefault();
     if (!CLOUD) return;
@@ -1195,10 +1264,11 @@ function wireLogin() {
       if (AUTH_MODE === "signup") {
         if (pass.length < 8) throw new Error("Use a password of at least 8 characters.");
         const name = $("login-name").value.trim();
+        const code = $("login-code").value.trim();
         let res, out = {};
         try {
           res = await fetch(SIGNUP_FN_URL, { method: "POST", headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, password: pass, name }) });
+            body: JSON.stringify({ email, password: pass, name, code }) });
           out = await res.json().catch(() => ({}));
         } catch (netErr) { throw new Error("Couldn't reach the server — check your connection and try again."); }
         if (res.status === 409) {
@@ -1210,6 +1280,7 @@ function wireLogin() {
         }
         if (!res.ok) throw new Error(out.message || "Couldn't create the account — please try again.");
         PENDING_NAME = name || null;
+        JUST_STARTED_TRIAL = !!out.trial_days;
       }
       await cloudSignIn(email, pass);
       $("login-pass").value = "";
@@ -3763,7 +3834,17 @@ function renderSettings() {
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
           <h6 style="color:var(--color-accent-700);margin-bottom:12px">Subscription</h6>
-          ${isPaid() ? `
+          ${onTrial() ? `
+            <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+              <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Free month</div>
+              <span class="tag tag-accent">${trialDaysLeft()} ${trialDaysLeft() === 1 ? "day" : "days"} left</span>
+            </div>
+            <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">Full access until <b>${esc(fmtDay(PLAN_EXPIRES))}</b> &mdash; every county, all dates, the land check, downloads and lists. After that your account switches to the Free view (the next ${FREE_DAYS} days). Upgrade any time to keep full access.</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button class="btn btn-primary" id="sub-monthly" style="font-size:12.5px;padding:6px 13px">Go monthly &middot; ${PRICE_MONTHLY}/mo</button>
+              <button class="btn btn-secondary" id="sub-yearly" style="font-size:12.5px;padding:6px 13px">Go yearly &middot; ${PRICE_YEARLY}/yr</button>
+            </div>`
+          : isPaid() ? `
             <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px">
               <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Full access</div>
               <span class="tag tag-accent">active</span>
@@ -3777,12 +3858,12 @@ function renderSettings() {
               <div style="font-family:var(--font-heading);font-weight:600;font-size:20px">Free</div>
               <span class="tag tag-neutral">limited</span>
             </div>
-            <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">You see the next ${FREE_DAYS} days only. Upgrade for every date, the land check, downloads and lists.</div>
+            <div class="text-muted" style="font-size:12.5px;margin-bottom:14px">${PLAN_EXPIRES ? `Your free month ended on ${esc(fmtDay(PLAN_EXPIRES))}. ` : ""}You see the next ${FREE_DAYS} days only. Upgrade for every date, the land check, downloads and lists.</div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-primary" id="sub-monthly" style="font-size:12.5px;padding:6px 13px">Go monthly &middot; ${PRICE_MONTHLY}/mo</button>
               <button class="btn btn-secondary" id="sub-yearly" style="font-size:12.5px;padding:6px 13px">Go yearly &middot; ${PRICE_YEARLY}/yr</button>
             </div>
-            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee. Have a promo code? Enter it at checkout.</div>`}
+            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee.${PAYMENTS_LIVE ? " Have a promo code? Enter it at checkout." : ""}</div>`}
         </div>
       </div>
 

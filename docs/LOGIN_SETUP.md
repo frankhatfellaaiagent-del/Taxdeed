@@ -37,7 +37,29 @@ accounts by hand (below) — e.g. demo or comp accounts.
    that email signs up. The app re-checks the plan when the customer returns to
    its tab and unlocks without a reload.
 
-Deep links: `/app/?signup=1` opens Create account; add `&plan=monthly` or
+### Free-month codes (no card, no Stripe)
+
+Share **`https://taxdeed.app/app/?signup=1&code=FEEDBACK`** — the Create
+account form opens with the code filled in. The `signup` function checks the
+code against `trial_codes` (active rows only; a typo gets a clear error) and
+stores `{trial_days, trial_code}` in the user's `app_metadata` (service-role
+only — users can't edit it). On first sign-in `ensure_my_profile()` makes the
+account Pro with `plan_expires_at = now() + days`. When that date passes, the
+app drops to the Free view immediately (even in an open tab) and
+`ensure_my_profile()` sets the plan back to `free` on the next sign-in. A paid
+upgrade (any `set_plan_*`) clears the expiry.
+
+- Add a code: `insert into trial_codes (code, days, note) values ('SPRING', 14, '...');`
+- Retire a code: `update trial_codes set active = false where code = 'FEEDBACK';`
+- Extend one person: `update profiles set plan = 'pro', plan_expires_at = now() + interval '30 days' where id = (select id from auth.users where email = '...');`
+
+**`PAYMENTS_LIVE`** (top of the app script in `dashboard/index.html`): while
+`false`, every Upgrade button shows an "email us to upgrade" panel instead of
+opening Stripe (used while the Stripe business verification is pending). Flip
+it to `true` once Stripe can take payments.
+
+Deep links: `/app/?signup=1` opens Create account; `&code=FEEDBACK` prefills a
+free-month code; add `&plan=monthly` or
 `&plan=yearly` to go straight on to checkout after signup; `?upgraded=1` (a
 good Stripe "after payment" redirect) re-checks the plan on return.
 
