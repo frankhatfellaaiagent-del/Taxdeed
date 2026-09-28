@@ -41,8 +41,13 @@ def cmd_discover(args) -> int:
         result = discover_counties(source)
     finally:
         source.close()
-    save_counties(result, COUNTIES_PATH)
-    print(f"{len(result['counties'])} FL taxdeed counties -> {COUNTIES_PATH}")
+    # Fixture-driven discovery (offline regression) must never overwrite the
+    # authoritative production list: a saved seed page is a partial snapshot of
+    # the county selector, so writing it to config/counties.json would shrink the
+    # committed 45-county list and make the live scrape reject the missing ones.
+    out_path = Path(args.out) if getattr(args, "out", None) else COUNTIES_PATH
+    save_counties(result, out_path)
+    print(f"{len(result['counties'])} FL taxdeed counties -> {out_path}")
     for c in result["counties"]:
         print(f"  {c['slug']:<14} {c['url']}")
     if result["rejected"]:
@@ -71,9 +76,17 @@ def _select_counties(args) -> list[dict]:
         wanted = [_slugify(w) for w in _county_names_from(args.counties)]
         by_slug = {c["slug"]: c for c in counties}
         missing = [w for w in wanted if w not in by_slug]
+        selected = [by_slug[w] for w in wanted if w in by_slug]
         if missing:
-            sys.exit(f"Unknown counties: {missing}. Known: {sorted(by_slug)}")
-        counties = [by_slug[w] for w in wanted]
+            # A stale or unrecognised slug must never abort the whole run — that
+            # froze the daily feed for a week. Warn, drop the unknowns, and scrape
+            # the rest; only bail if nothing recognised is left to scrape.
+            log.warning("Skipping %d unknown counties: %s. Known: %s",
+                        len(missing), missing, sorted(by_slug))
+        if not selected:
+            sys.exit(f"No known counties to scrape from {args.counties!r}. "
+                     f"Known: {sorted(by_slug)}")
+        counties = selected
     return counties
 
 
@@ -169,6 +182,9 @@ def main(argv=None) -> int:
 
     p = sub.add_parser("discover", help="Build config/counties.json from the site's county selector")
     add_common(p)
+    p.add_argument("--out", help="Output path for the county list (default config/counties.json). "
+                                 "Use a throwaway path for fixture/offline runs so the production "
+                                 "list is never overwritten by a partial snapshot.")
 
     p = sub.add_parser("scrape", help="Scrape upcoming tax deed auctions")
     add_common(p)

@@ -38,6 +38,30 @@ def _clean(v) -> str:
     return str(v if v is not None else "").replace("\t", " ").replace("\n", " ").strip()
 
 
+def _et_today_key() -> str:
+    """Today's date in America/New_York as YYYYMMDD, so the feed's notion of
+    'past due' matches the dashboard's ET-based isPastDue exactly."""
+    try:
+        from zoneinfo import ZoneInfo
+        now = datetime.now(ZoneInfo("America/New_York"))
+    except Exception:  # zoneinfo/tzdata unavailable — fall back to UTC
+        now = datetime.now(timezone.utc)
+    return now.strftime("%Y%m%d")
+
+
+def _is_past_due(rec: dict, today_key: str) -> bool:
+    """A non-redeemed row whose sale date (MM/DD/YYYY) already passed in ET.
+    The county never posted a result, so it is no longer an upcoming auction
+    even though its raw status is still 'Scheduled'. Mirrors the dashboard's
+    isPastDue so the headline counts and the UI agree."""
+    if rec.get("status") == "Redeemed":
+        return False
+    d = rec.get("sale_date") or ""
+    if len(d) != 10:
+        return False
+    return (d[6:10] + d[0:2] + d[3:5]) < today_key
+
+
 def _load_auction_sites() -> dict:
     """config/counties.json → {slug: auction_url} for the discovered online sites.
 
@@ -56,13 +80,19 @@ def _load_auction_sites() -> dict:
     return {c["slug"]: c["url"] for c in data.get("counties", []) if c.get("slug") and c.get("url")}
 
 
-def _load_counties_registry() -> list[dict]:
+def _load_counties_registry(observed_bases: dict | None = None) -> list[dict]:
     """config/florida_counties.json → all 67 counties with coverage status.
 
     The registry is what lets the app show EVERY Florida county — the ones with
     no online auction included — with each county's sale method and clerk links.
     Online counties are given an `auction_url` (their own RealAuction site) so
     the app can always link out, even when the county has no current sales.
+
+    `observed_bases` maps slug → the base URL its rows were actually scraped
+    from this refresh. A combined-docket county runs its tax-deed auctions on
+    <slug>.realforeclose.com, not the default <slug>.realtaxdeed.com host, so we
+    prefer the observed host — the link then self-corrects from real run data
+    instead of always pointing at the (dead-end) realtaxdeed calendar.
     """
     p = ROOT / "config" / "florida_counties.json"
     if not p.exists():
@@ -74,12 +104,38 @@ def _load_counties_registry() -> list[dict]:
         return []
     counties = data.get("counties", [])
     auction_sites = _load_auction_sites()
+    observed_bases = observed_bases or {}
     for c in counties:
-        if c.get("coverage") == "online" and not c.get("auction_url"):
-            url = auction_sites.get(c.get("slug"))
+        if c.get("coverage") != "online":
+            continue
+        slug = c.get("slug")
+        observed = observed_bases.get(slug)
+        if observed:
+            c["auction_url"] = observed          # where the sales actually are
+        elif not c.get("auction_url"):
+            url = auction_sites.get(slug)        # discovered realtaxdeed default
             if url:
                 c["auction_url"] = url
     return counties
+
+
+def _observed_auction_bases(records: list[dict]) -> dict:
+    """slug → the base URL (scheme://host/) its rows were scraped from, taking
+    the most common host per county. Lets the registry point each online county
+    at the host that actually served its tax-deed sales (realforeclose.com for
+    combined-docket counties) rather than assuming realtaxdeed.com."""
+    from urllib.parse import urlsplit
+    tally: dict[str, dict[str, int]] = {}
+    for rec in records:
+        slug, au = rec.get("county"), rec.get("auction_url") or ""
+        if not slug or not au:
+            continue
+        parts = urlsplit(au)
+        if not parts.scheme or not parts.netloc:
+            continue
+        base = f"{parts.scheme}://{parts.netloc}/"
+        tally.setdefault(slug, {})[base] = tally.setdefault(slug, {}).get(base, 0) + 1
+    return {slug: max(hosts, key=hosts.get) for slug, hosts in tally.items()}
 
 
 def _load_clerk_sites() -> dict:
@@ -220,13 +276,24 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
 
     by_county: dict[str, dict] = {}
     n_redeemed = 0
+    n_past_due = 0
+    today_key = _et_today_key()
     tsv_lines = ["\t".join(TSV_COLUMNS)]
     for rec in json_records:
         redeemed = rec.get("status") == "Redeemed"
+        # Past-date sweep: a still-"Scheduled" row whose sale date has passed is
+        # not an upcoming auction. Keep it in the feed (the dashboard tags it
+        # "Past date" and saved parcels must survive), flag it, and exclude it
+        # from the "scheduled" headline so the count reflects real upcoming sales.
+        past_due = _is_past_due(rec, today_key)
+        if past_due:
+            rec["past_due"] = True
         n_redeemed += redeemed
-        c = by_county.setdefault(rec["county"], {"total": 0, "scheduled": 0, "redeemed": 0})
+        n_past_due += past_due
+        c = by_county.setdefault(rec["county"],
+                                 {"total": 0, "scheduled": 0, "redeemed": 0, "past_due": 0})
         c["total"] += 1
-        c["redeemed" if redeemed else "scheduled"] += 1
+        c["redeemed" if redeemed else "past_due" if past_due else "scheduled"] += 1
         # The TSV (the operator's Google Sheet mirror) still carries buy-box
         # columns, computed here from config/buybox.yaml. The public JSON does
         # not — each dashboard team computes its own flags client-side.
@@ -252,8 +319,9 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         "county_runs": county_runs,
         "counts": {
             "total": len(json_records),
-            "scheduled": len(json_records) - n_redeemed,
+            "scheduled": len(json_records) - n_redeemed - n_past_due,
             "redeemed": n_redeemed,
+            "past_due": n_past_due,
             "counties": len(by_county),
             "counties_total": 67,
             "by_county": dict(sorted(by_county.items())),
@@ -263,7 +331,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
         # ALL 67 Florida counties with how each sells tax deeds
         # (config/florida_counties.json) — so the app can show every county,
         # including the ones that only sell in person at the courthouse.
-        "counties_registry": _load_counties_registry(),
+        "counties_registry": _load_counties_registry(_observed_auction_bases(json_records)),
         # A NEUTRAL buy-box template — the starting point every new team's
         # editable buy-box is seeded from (flags are computed client-side).
         # Deliberately generic: all counties targeted, common land vocabulary,
