@@ -7,6 +7,11 @@
 // immediately. The app then calls ensure_my_profile() on sign-in, which gives
 // the account its private workspace on the Free plan.
 //
+// An optional promo code (trial_codes table, e.g. FEEDBACK = 30 days) grants a
+// free month: it is written to the user's app_metadata — settable only by the
+// service role, never by the user — and ensure_my_profile() turns it into a
+// Pro plan with an expiry on first sign-in.
+//
 // Called anonymously from the browser, so it is deployed with verify_jwt=false
 // and does its own validation plus a light per-IP rate limit.
 
@@ -46,17 +51,30 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (req.method !== "POST") return reply(405, { error: "method_not_allowed" });
 
-  let body: { email?: unknown; password?: unknown; name?: unknown };
+  let body: { email?: unknown; password?: unknown; name?: unknown; code?: unknown };
   try { body = await req.json(); } catch { return reply(400, { error: "bad_request", message: "Invalid request." }); }
 
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
   const name = String(body.name ?? "").trim().slice(0, 80);
+  const code = String(body.code ?? "").trim().toUpperCase().slice(0, 40);
   if (!EMAIL_RE.test(email) || email.length > 254) {
     return reply(400, { error: "invalid_email", message: "Enter a valid email address." });
   }
   if (password.length < 8 || password.length > 72) {
     return reply(400, { error: "weak_password", message: "Use a password of at least 8 characters." });
+  }
+
+  // A promo code must be real and active — a typo gets a clear error rather
+  // than a silent plain-Free account.
+  let trial: { trial_days: number; trial_code: string } | null = null;
+  if (code) {
+    const { data: tc } = await supabase.from("trial_codes")
+      .select("code, days, active").eq("code", code).maybeSingle();
+    if (!tc || !tc.active) {
+      return reply(400, { error: "invalid_code", message: "That promo code isn't valid. Check it, or leave it blank." });
+    }
+    trial = { trial_days: tc.days, trial_code: tc.code };
   }
 
   // Light abuse guard: cap account creations per client IP per hour.
@@ -74,18 +92,19 @@ Deno.serve(async (req) => {
     password,
     email_confirm: true,
     user_metadata: name ? { name } : {},
+    app_metadata: trial ?? {},
   });
   if (error) {
     const msg = (error.message || "").toLowerCase();
-    const code = (error as { code?: string }).code ?? "";
-    if (code === "email_exists" || msg.includes("already") || msg.includes("registered")) {
+    const errCode = (error as { code?: string }).code ?? "";
+    if (errCode === "email_exists" || msg.includes("already") || msg.includes("registered")) {
       return reply(409, { error: "exists", message: "An account with this email already exists — sign in instead." });
     }
-    if (code === "weak_password" || msg.includes("password")) {
+    if (errCode === "weak_password" || msg.includes("password")) {
       return reply(400, { error: "weak_password", message: error.message });
     }
     console.error("signup createUser failed:", error.message);
     return reply(500, { error: "server", message: "Couldn't create the account — please try again." });
   }
-  return reply(200, { ok: true });
+  return reply(200, { ok: true, trial_days: trial?.trial_days ?? 0 });
 });
