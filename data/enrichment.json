@@ -150,6 +150,30 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
+"baker|35-2S-20-0000-0000-0035|022026XX000002TDAXMX": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://bakerpa.com/propertydetails.php?parcel=352S20000000000035"
+},
+"bay|01118-004-000|2026-0200TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01118-004-000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01118-004-000"
+},
+"bay|07502-013-000|2026-1834TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07502-013-000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07502-013-000"
+},
+"bay|11914-020-000|2026-2481TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=11914-020-000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=11914-020-000"
+},
 "bay|13960-000-000|2026-2738TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -165,6 +189,18 @@
 "parcel_address": "1900 16TH W St",
 "source": "reportall"
 }
+},
+"bay|16485-000-000|2026-3106TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16485-000-000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16485-000-000"
+},
+"bay|17437-000-000|2026-3267TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=17437-000-000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=17437-000-000"
 },
 "bay|25166-038-000|2026-3969TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -229,6 +265,409 @@
 "parcel_address": "16819 FRONT BEACH Rd",
 "source": "reportall"
 }
+},
+"charlotte|402102380017|26-0388": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402102380017&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402103177001|26-0446": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103177001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402107182009|26-0437": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402107182009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402115102002|26-0449": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402115102002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402119152004|26-0438": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402119152004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402124106008|26-0447": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402124106008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402128427003|26-0392": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402128427003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402128428009|26-0391": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402128428009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402214313013|26-0394": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402214313013&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402215251026|26-0381": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402215251026&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402217102022|26-0398": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402217102022&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402222276014|26-0349": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402222276014&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402236226001|26-0400": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402236226001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402301176013|26-0346": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402301176013&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402301203004|26-0345": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402301203004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402301431024|26-0343": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402301431024&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402301431026|26-0344": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402301431026&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402310151002|26-0405": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310151002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402310183003|26-0455": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310183003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402310183012|26-0456": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310183012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402310333004|26-0342": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310333004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402315452002|26-0365": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402315452002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402326477006|26-0408": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402326477006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402334354006|26-0409": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402334354006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412009129009|26-0432": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412009129009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412010379010|26-0382": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412010379010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412017428003|26-0373": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412017428003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412017431001|26-0439": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412017431001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412105432002|26-0415": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412105432002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412106182015|26-0361": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412106182015&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412117328011|26-0353": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412117328011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412129157024|26-0370": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412129157024&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412132253003|26-0433": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412132253003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412132279011|26-0443": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412132279011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412132427006|26-0434": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412132427006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412133131008|26-0442": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412133131008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412303231020|26-0420": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412303231020&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412303255004|26-0451": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412303255004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412327154012|26-0386": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412327154012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412328204014|26-0422": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412328204014&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412334228009|26-0429": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334228009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412334252003|26-0341": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334252003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422104382008|26-0425": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104382008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310331008|26-0378": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310331008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422415126014|26-0452": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422415126014&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422415176010|26-0453": {
+"acreage": "Land Value",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422415176010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"citrus|1028868|2026-0176TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "217 W CONESTOGA RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1028868&jur=19&LMparent=20"
+},
+"citrus|1055342|2026-0191TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "3039 N STEPHANIE TER",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1055342&jur=19&LMparent=20"
+},
+"citrus|1088364|2026-0193TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "2 NEVINS AVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1088364&jur=19&LMparent=20"
+},
+"citrus|1089891|2026-0200TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5438 SPRING HILL DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1089891&jur=19&LMparent=20"
+},
+"citrus|1100941|2026-0213TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "200 N COUNTRY CLUB DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1100941&jur=19&LMparent=20"
+},
+"citrus|1132746|2026-0201TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "7142 W GRANT ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1132746&jur=19&LMparent=20"
+},
+"citrus|1164214|2026-0222TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5592 S SHALIMAR PT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1164214&jur=19&LMparent=20"
+},
+"citrus|1380847|2026-0218TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "29 DOE DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1380847&jur=19&LMparent=20"
+},
+"citrus|1577977|2026-0221TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "3001 E CHAPARRAL LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1577977&jur=19&LMparent=20"
 },
 "citrus|1651531|2026-0171TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -422,6 +861,186 @@
 "source": "reportall"
 }
 },
+"citrus|1777194|2026-0177TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "10519 PENELOPE PL UNIT 102",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1777194&jur=19&LMparent=20"
+},
+"citrus|1779251|2026-0178TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "20002 QUEENS OAK CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1779251&jur=19&LMparent=20"
+},
+"citrus|1822092|2026-0203TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "9607 E SOUTHGATE DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1822092&jur=19&LMparent=20"
+},
+"citrus|1825164|2026-0204TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1108 E INVERNESS BLVD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1825164&jur=19&LMparent=20"
+},
+"citrus|1938384|2026-0207TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "9469 W HEREFORD LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1938384&jur=19&LMparent=20"
+},
+"citrus|2020342|2026-0212TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "205 NORTHGROVE DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2020342&jur=19&LMparent=20"
+},
+"citrus|2024887|2026-0209TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "2977 MORGAN DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2024887&jur=19&LMparent=20"
+},
+"citrus|2038357|2026-0180TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "69 12161 237 ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2038357&jur=19&LMparent=20"
+},
+"citrus|2046180|2026-0182TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "9650 JACKSON WAY",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2046180&jur=19&LMparent=20"
+},
+"citrus|2121874|2026-0189TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5848 EAST BAY BLVD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2121874&jur=19&LMparent=20"
+},
+"citrus|2133074|2026-0183TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "ANTIOQUIA 2102 URB APOLO",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2133074&jur=19&LMparent=20"
+},
+"citrus|2134593|2026-0184TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "604 W AVENUE G APT A",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2134593&jur=19&LMparent=20"
+},
+"citrus|2169711|2026-0186TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1419 HICKORY AVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2169711&jur=19&LMparent=20"
+},
+"citrus|2185481|2026-0185TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "95 HOLLYWOOD AVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2185481&jur=19&LMparent=20"
+},
+"citrus|2195606|2026-0187TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "151 SPRINGFIELD RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2195606&jur=19&LMparent=20"
+},
+"citrus|2227711|2026-0199TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "19039 SW 91ST LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2227711&jur=19&LMparent=20"
+},
+"citrus|2273917|2026-0190TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6201 W HOLIDAY ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2273917&jur=19&LMparent=20"
+},
+"citrus|2328339|2026-0211TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6291 W ORANGE LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2328339&jur=19&LMparent=20"
+},
+"citrus|2677058|2026-0214TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5203 GREENWOOD ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2677058&jur=19&LMparent=20"
+},
+"citrus|3100897|2026-0188TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6712 EDGEWORTH DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3100897&jur=19&LMparent=20"
+},
 "citrus|3279711|2026-0174TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -437,6 +1056,21 @@
 "parcel_address": "1021 SE 4TH St",
 "source": "reportall"
 }
+},
+"citrus|3425525|2026-0217TD": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5369 S MEMORIAL DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3425525&jur=19&LMparent=20"
+},
+"clay|080425-007876-002-83|2026-0072TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=080425-007876-002-83",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=080425-007876-002-83"
 },
 "clay|100824-006919-504-00|2026-0034TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -534,6 +1168,32 @@
 "source": "reportall"
 }
 },
+"clay|230425-020570-003-00|2026-0073TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=230425-020570-003-00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=230425-020570-003-00"
+},
+"clay|240524-006567-001-00|2026-0075TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=240524-006567-001-00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=240524-006567-001-00"
+},
+"clay|340425-008154-002-02|2026-0069TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=340425-008154-002-02",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=340425-008154-002-02"
+},
+"duval|000511-0000|2026-0403TD": {
+"assessed_value": 14421.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 27632.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0005110000"
+},
 "duval|001820-0285|2026-0396TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -565,6 +1225,14 @@
 "parcel_address": "5026 NATHAN HALE Rd",
 "source": "reportall"
 }
+},
+"duval|002651-1505|2026-0576TD": {
+"assessed_value": 57200.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 65000.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0026511505"
 },
 "duval|002731-0000|2026-0388TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -613,6 +1281,31 @@
 "parcel_address": "7524 BOB-O-LINK Rd",
 "source": "reportall"
 }
+},
+"duval|004235-0000|2026-0484TD": {
+"assessed_value": 54888.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 54888.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0042350000"
+},
+"duval|004307-0025|2026-0536TD": {
+"assessed_value": 28410.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 54230.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0043070025"
+},
+"duval|004360-0000|2026-0560TD": {
+"acreage": "$26,400.00",
+"assessed_value": 143513.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 143513.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0043600000"
 },
 "duval|004394-0000|2026-0373TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -694,6 +1387,14 @@
 "source": "reportall"
 }
 },
+"duval|011414-0010|2026-0555TD": {
+"assessed_value": 157969.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 157969.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0114140010"
+},
 "duval|013861-0394|2026-0282TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -726,6 +1427,32 @@
 "source": "reportall"
 }
 },
+"duval|016279-0000|2026-0477TD": {
+"acreage": "$70,000.00",
+"assessed_value": 40254.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 72496.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0162790000"
+},
+"duval|016337-0000|2026-0452TD": {
+"acreage": "$1,500.00",
+"assessed_value": 166250.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 166250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0163370000"
+},
+"duval|016464-5684|2026-0341TD": {
+"assessed_value": 177294.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 264436.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0164645684"
+},
 "duval|018773-0000|2026-0285TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -741,6 +1468,22 @@
 "parcel_address": "2515 LA TRELLE Ct",
 "source": "reportall"
 }
+},
+"duval|019704-2620|2026-0485TD": {
+"assessed_value": 75000.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 75000.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0197042620"
+},
+"duval|019840-0090|2026-0418TD": {
+"assessed_value": 40327.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 60576.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0198400090"
 },
 "duval|020049-3000|2026-0215TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -774,6 +1517,14 @@
 "source": "reportall"
 }
 },
+"duval|021805-0000|2026-0417TD": {
+"assessed_value": 194283.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 199976.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0218050000"
+},
 "duval|021818-0000|2026-0310TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -805,6 +1556,47 @@
 "parcel_address": "8098 PIPIT Ave",
 "source": "reportall"
 }
+},
+"duval|021949-0000|2026-0422TD": {
+"assessed_value": 11137.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 11250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0219490000"
+},
+"duval|022614-0000|2026-0408TD": {
+"acreage": "$30.00",
+"assessed_value": 12586.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 23030.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0226140000"
+},
+"duval|022616-0000|2026-0496TD": {
+"assessed_value": 11759.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 21561.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0226160000"
+},
+"duval|022742-0000|2026-0399TD": {
+"assessed_value": 8244.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 15116.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0227420000"
+},
+"duval|022742-0010|2026-0502TD": {
+"assessed_value": 123835.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 163146.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0227420010"
 },
 "duval|023411-0000|2026-0298TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -1719,20 +2511,12 @@
 }
 },
 "duval|102558-0000|2026-0323TD": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.16",
-"county": "Duval",
-"geometry_wkt": "MULTIPOLYGON(((-81.69580934473265 30.248038662120848,-81.69580859733433 30.247712350031062,-81.69599860988154 30.24771153987168,-81.69599935817818 30.248037818595673,-81.69580934473265 30.248038662120848)))",
-"land_use": "Residential",
-"lat": 30.247875,
-"lng": -81.695904,
-"mailing_address": "4351 TIMUQUANA RD 32210-8537",
-"owner": "KLINGAMAN MARTHA A ESTATE",
-"parcel_address": "4351 TIMUQUANA Rd",
-"source": "reportall"
-}
+"assessed_value": 244660.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 244660.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1025580000"
 },
 "duval|103175-0000|2026-0169TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -1879,52 +2663,28 @@
 }
 },
 "duval|112922-0000|2026-0208TD": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.38",
-"county": "Duval",
-"geometry_wkt": "MULTIPOLYGON(((-81.5552894089287 30.361557989543567,-81.55563153769454 30.3615553440793,-81.55563456591537 30.36175896400363,-81.55563569060611 30.361834563015965,-81.55561800726974 30.361834629675563,-81.55511261149763 30.361836548077356,-81.55510840378881 30.361559387849276,-81.5552894089287 30.361557989543567)))",
-"land_use": "Residential",
-"lat": 30.361702,
-"lng": -81.555353,
-"mailing_address": "C/O GEORGIA M FULMER 32082-1713",
-"owner": "PUGHSLEY GEORGE W",
-"parcel_address": "0 SHAUNA OAKS Dr",
-"source": "reportall"
-}
+"assessed_value": 28187.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 68900.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1129220000"
 },
 "duval|114076-0000|2026-0173TD": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.09",
-"county": "Duval",
-"geometry_wkt": "MULTIPOLYGON(((-81.63907849144725 30.34925646337456,-81.63907827764821 30.349142266901666,-81.63938753436287 30.349137982302615,-81.6393895708436 30.349256179647142,-81.63907849144725 30.34925646337456)))",
-"land_use": "Residential",
-"lat": 30.349198,
-"lng": -81.639235,
-"mailing_address": "PO BOX 12163 95406",
-"owner": "BT GLOBAL INC",
-"parcel_address": "2053 FRANKLIN St",
-"source": "reportall"
-}
+"assessed_value": 33069.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 50721.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1140760000"
 },
 "duval|114480-0000|2026-0203TD": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.07",
-"county": "Duval",
-"geometry_wkt": "MULTIPOLYGON(((-81.64266544102054 30.339066720416245,-81.64306159716251 30.339059931182142,-81.64306305153497 30.339124284295387,-81.6430632069435 30.339131157256567,-81.64266704990321 30.339137945710487,-81.64266689449464 30.339131072749783,-81.64266544102054 30.339066720416245)))",
-"land_use": "Residential",
-"lat": 30.339097,
-"lng": -81.642862,
-"mailing_address": "10808 NW 84TH ST 33178",
-"owner": "HOMELESS2HOMEOWNERSHIP1333LANDTRUST",
-"parcel_address": "1333 EVERGREEN Ave",
-"source": "reportall"
-}
+"assessed_value": 47379.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 58721.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1144800000"
 },
 "duval|114481-0000|2026-0200TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -1943,20 +2703,12 @@
 }
 },
 "duval|114481-0020|2026-0192TD": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.06",
-"county": "Duval",
-"geometry_wkt": "MULTIPOLYGON(((-81.64266870819324 30.33921134254317,-81.6430648652335 30.33920455486965,-81.64306615880751 30.33926173334831,-81.64267000176721 30.33926852101781,-81.64266870819324 30.33921134254317)))",
-"land_use": "Residential",
-"lat": 30.339237,
-"lng": -81.642867,
-"mailing_address": "10808 NW 84TH ST 33178",
-"owner": "HOMELESS2HOMEOWNERSHIP1339LANDTRUST",
-"parcel_address": "1339 EVERGREEN Ave",
-"source": "reportall"
-}
+"assessed_value": 39031.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 48460.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1144810020"
 },
 "duval|115355-0000|2026-0193TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -2326,6 +3078,13 @@
 "source": "reportall"
 }
 },
+"escambia|011S311001015002|2024 TD 003996": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "MCGHEE APRIL ELIZABETH ANN 1/2 INT D ALEMBERTE PHOENIX 1/2 INT",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=011S311001015002"
+},
 "escambia|042S306001031021|2024 TD 002065": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -2471,20 +3230,11 @@
 }
 },
 "escambia|172S301300005037|2024 TD 002773": {
-"fetched_at": "2026-08-28T01:58:02+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
-"parcel": {
-"acreage": "0.29",
-"county": "Escambia",
-"geometry_wkt": "MULTIPOLYGON(((-87.2464673916262 30.433273780750675,-87.24648000428166 30.43305424422029,-87.24648944790367 30.432889907058204,-87.24658450274138 30.432894330754408,-87.24667955758765 30.432898754381917,-87.24677460927029 30.432903178007006,-87.2467526205597 30.43328590346869,-87.24665754106864 30.433281862697626,-87.2465624647575 30.433277821791663,-87.2464673916262 30.433273780750675)))",
-"land_use": "Residential",
-"lat": 30.433091,
-"lng": -87.246636,
-"mailing_address": "6460 HOWARD AVE 32570",
-"owner": "MCCRACKING TAMBRE EST OF",
-"parcel_address": "2605 W HERNANDEZ St",
-"source": "reportall"
-}
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "MCCRACKING TAMBRE EST OF",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=172S301300005037"
 },
 "escambia|172S301300040046|2024 TD 002782": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -2646,6 +3396,13 @@
 "source": "reportall"
 }
 },
+"escambia|212S316200001001|2024 TD 004678": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "SUPER STOP PETROLEUM INC",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=212S316200001001"
+},
 "escambia|231N312000000001|2024 TD 006246": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -2662,21 +3419,19 @@
 "source": "reportall"
 }
 },
+"escambia|292S312400000000|2024 TD 004770": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "REED DONALD",
+"property_use": "NON-AG ACREAGE",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=292S312400000000"
+},
 "escambia|332S301300010007|2024 TD 003071": {
-"fetched_at": "2026-08-28T01:58:02+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
-"parcel": {
-"acreage": "0.42",
-"county": "Escambia",
-"geometry_wkt": "MULTIPOLYGON(((-87.26003925676844 30.426371080089247,-87.26002425765941 30.426785465061126,-87.25983394123756 30.426781468424284,-87.25964362490795 30.42677747426089,-87.25965864787975 30.426362409528732,-87.25984895065305 30.42636674223117,-87.26003925676844 30.426371080089247)))",
-"land_use": "Residential",
-"lat": 30.426574,
-"lng": -87.259841,
-"mailing_address": "3803 W LEE ST 32505",
-"owner": "DUNSON VIRGINIA ANN EST OF",
-"parcel_address": "3803 W LEE St",
-"source": "reportall"
-}
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "DUNSON VIRGINIA ANN EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=332S301300010007"
 },
 "escambia|332S301300013022|2024 TD 003098": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -2726,6 +3481,34 @@
 "source": "reportall"
 }
 },
+"escambia|332S311000002026|2024 TD 004775": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "SOUTHERN LION LLC TRUSTEE FOR WAYCROSS 513 LAND TRUST",
+"property_use": "MOBILE HOME PARKS",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=332S311000002026"
+},
+"escambia|332S311010003004|2024 TD 004792": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "MURPHY AMY C",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=332S311010003004"
+},
+"escambia|332S312400022003|2024 TD 004832": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "VENTURE FIDELIS LLC",
+"property_use": "MOBILE HOME",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=332S312400022003"
+},
+"escambia|332S312500011002|2024 TD 004848": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "SOUTHERN LION LLC TRUSTEE FOR WAYCROSS 207 LAND TRUST",
+"property_use": "MOBILE HOME PARKS",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=332S312500011002"
+},
 "escambia|342S300011000008|2024 TD 003159": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -2757,6 +3540,173 @@
 "parcel_address": "124 PAUL St",
 "source": "reportall"
 }
+},
+"escambia|342S300911000002|2024 TD 003316": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "WEINHOLD SHARON",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=342S300911000002"
+},
+"escambia|342S300930012002|2024 TD 003328": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "CLARK JOHN D",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=342S300930012002"
+},
+"escambia|342S301275000035|2024 TD 003460": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "GRAND FRAY LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=342S301275000035"
+},
+"escambia|342S301310001131|2024 TD 003461": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "VANA SAMUEL ADAM BAILUND VANA SANDA",
+"property_use": "MULTI-FAMILY <=9",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=342S301310001131"
+},
+"escambia|352S303100009001|2024 TD 003480": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "HOLMES JAVIAN J",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=352S303100009001"
+},
+"escambia|352S304201001001|2024 TD 003482": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "VANA SAMUEL ADAM 1/2 INT BAILUND VANA SANDA 1/2 INT",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=352S304201001001"
+},
+"escambia|352S311000001039|2024 TD 004898": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "REVIVAL CENTER INTERNATIONAL INC",
+"property_use": "CHURCH",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=352S311000001039"
+},
+"escambia|352S311000011112|2024 TD 004978": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "ANDERSON EDWIN D ANDERSON GLORIA J",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=352S311000011112"
+},
+"escambia|352S311000013079|2024 TD 004949": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "BELUNE DEVELOPMENT LLC",
+"property_use": "VACANT COMMERCIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=352S311000013079"
+},
+"escambia|362S302201001001|2024 TD 003548": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "MANNS RALPH A EST OF GREEN TERRY D",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=362S302201001001"
+},
+"escambia|362S303500009001|2024 TD 003561": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "PREVRATIL BEN JR EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=362S303500009001"
+},
+"escambia|362S311008000005|2024 TD 005045": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "HAIRELSON ROYLENE Z EST OF MACK ROY C EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=362S311008000005"
+},
+"escambia|401S311000001011|2024 TD 004304": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "GIPE SAMANTHA D & GIPE RICHARD L",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=401S311000001011"
+},
+"escambia|502S305000017001|2024 TD 003638": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "BLACKHAWK PCS LLC",
+"property_use": "HOTEL/MOTEL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305000017001"
+},
+"escambia|502S305000022002|2024 TD 003641": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "SPELLMAN GRACE",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305000022002"
+},
+"escambia|502S305020005007|2024 TD 003704": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "MOULTRIE YOLANDA",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305020005007"
+},
+"escambia|502S305020184003|2024 TD 003701": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "FIRST CHOICE AUTOMOTIVE INC",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305020184003"
+},
+"escambia|502S305040002009|2024 TD 003714": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "HAKENSON MICHELLE MARIE",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305040002009"
+},
+"escambia|502S305050100005|2024 TD 003729": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305050100005"
+},
+"escambia|502S305090003002|2024 TD 003756": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "POTTER MELIA",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S305090003002"
+},
+"escambia|502S306093000001|2024 TD 003855": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "MULTI-FAMILY <=9",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=502S306093000001"
+},
+"escambia|512S307062007031|2024 TD 003884": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "BOOTSMA MARILYN CARRIE",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=512S307062007031"
+},
+"escambia|592S301000002004|2024 TD 003924": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "WILFONG THOMAS P JR",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=592S301000002004"
+},
+"flagler|0711317024000700120|26-076 TDC": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
 "gilchrist|090715-00770000-0240|26-0013-TD": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240",
@@ -5412,6 +6362,15 @@
 "source": "reportall"
 }
 },
+"hillsborough|0338632364|2026-687": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0338632364"
+},
 "hillsborough|0578735018|2026-590": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -5426,6 +6385,15 @@
 "parcel_address": "703 JOHNSON Dr",
 "source": "reportall"
 }
+},
+"hillsborough|0613160050|2026-670": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0613160050"
 },
 "hillsborough|0806000100|2026-592": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -5457,6 +6425,15 @@
 "source": "reportall"
 }
 },
+"hillsborough|0842380102|2026-672": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0842380102"
+},
 "hillsborough|0905420000|2026-595": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -5472,6 +6449,24 @@
 "source": "reportall"
 }
 },
+"hillsborough|1404260000|2026-684": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1404260000"
+},
+"hillsborough|1467820000|2026-682": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1467820000"
+},
 "hillsborough|1564830000|2026-583": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -5486,6 +6481,60 @@
 "parcel_address": "3310 LILA St",
 "source": "reportall"
 }
+},
+"hillsborough|1568590000|2026-685": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1568590000"
+},
+"hillsborough|1572550200|2026-655": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1572550200"
+},
+"hillsborough|1590110000|2026-676": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1590110000"
+},
+"hillsborough|1723180000|2026-677": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1723180000"
+},
+"hillsborough|1795120000|2026-661": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1795120000"
+},
+"hillsborough|1882905000|2026-680": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1882905000"
 },
 "hillsborough|2054520000|2026-585": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -5710,6 +6759,30 @@
 "source": "reportall"
 }
 },
+"jackson|02-2N-11-0083-10AF-0010|1717 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0010",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0010"
+},
+"jackson|02-2N-11-0083-10AF-0040|1719 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0040",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0040"
+},
+"jackson|02-2N-11-0083-10AG-0080|1721 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AG-0080",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AG-0080"
+},
+"jackson|02-2N-11-0084-0390-0240|1752 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0390-0240",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0390-0240"
+},
 "jackson|02-2N-11-0084-0560-0810|1653 OF 2023": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5725,6 +6798,48 @@
 "parcel_address": "MAYFLOWER Dr",
 "source": "reportall"
 }
+},
+"jackson|02-2N-11-0084-0710-0070|1886 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0710-0070",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0710-0070"
+},
+"jackson|02-2N-11-0084-0740-0240|1905 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0740-0240",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0740-0240"
+},
+"jackson|02-2N-11-0084-0760-0270|1916 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0760-0270",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0760-0270"
+},
+"jackson|02-2N-11-0084-0790-0090|1929 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0790-0090",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0790-0090"
+},
+"jackson|02-2N-11-0086-0800-0270|1940 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0800-0270",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0800-0270"
+},
+"jackson|02-2N-11-0086-0810-0100|1944 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0810-0100",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0810-0100"
+},
+"jackson|02-2N-11-0086-0840-0060|1952 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0840-0060",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0840-0060"
 },
 "jackson|02-2N-11-0087-1380-0020|2189 of 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5806,6 +6921,12 @@
 "source": "reportall"
 }
 },
+"jackson|02-2N-11-0087-1440-0050|2212 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1440-0050",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1440-0050"
+},
 "jackson|02-2N-11-0087-1440-0350|2218 OF 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5869,6 +6990,12 @@
 "parcel_address": "ALENE Dr",
 "source": "reportall"
 }
+},
+"jackson|02-2N-11-0087-1520-0240|2251 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1520-0240",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1520-0240"
 },
 "jackson|02-2N-11-0087-1610-0010|2281 OF 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5934,6 +7061,12 @@
 "source": "reportall"
 }
 },
+"jackson|02-2N-11-0095-2430-0050|3621 OF 2021": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0095-2430-0050",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0095-2430-0050"
+},
 "jackson|02-2N-11-0095-2450-0070|2604 of 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5949,6 +7082,36 @@
 "parcel_address": "GOLCONDA St",
 "source": "reportall"
 }
+},
+"jackson|02-2N-11-0095-2550-0090|2649 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0095-2550-0090",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0095-2550-0090"
+},
+"jackson|06-5N-09-0181-0200-0082|648 OF 2024": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=06-5N-09-0181-0200-0082",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=06-5N-09-0181-0200-0082"
+},
+"jackson|12-2N-11-0000-0020-0014|2803 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=12-2N-11-0000-0020-0014",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=12-2N-11-0000-0020-0014"
+},
+"jackson|20-5N-11-0000-0240-0000|2540 OF 2022": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0240-0000",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0240-0000"
+},
+"jackson|24-4N-09-0297-0000-0090|572 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=24-4N-09-0297-0000-0090",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=24-4N-09-0297-0000-0090"
 },
 "lake|01-19-26-100000C00600|03086-2023": {
 "assessed_value": "Taxable Value",
@@ -6018,6 +7181,12 @@
 "parcel_address": "2316 WELLINGTON Ave",
 "source": "reportall"
 }
+},
+"lee|01-45-27-L4-09052.0090|2026000161": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-45-27-L4-09052.0090"
 },
 "lee|02-44-23-C2-02660.A320|2026000036": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -6262,6 +7431,12 @@
 "source": "reportall"
 }
 },
+"lee|11-44-27-L2-09035.024A|2026000378": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=11-44-27-L2-09035.024A"
+},
 "lee|13-43-22-C3-05454.0450|2026000276": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -6291,6 +7466,18 @@
 "parcel_address": "4406 NW 40TH Ter",
 "source": "reportall"
 }
+},
+"lee|13-44-27-07-00035.001A|2026000366": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-44-27-07-00035.001A"
+},
+"lee|13-45-27-L4-09049.0160|2026000170": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-45-27-L4-09049.0160"
 },
 "lee|16-44-27-02-00008.0030|2026000086": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -6429,6 +7616,18 @@
 "source": "reportall"
 }
 },
+"lee|21-45-27-L2-09045.0020|2026000374": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-L2-09045.0020"
+},
+"lee|22-45-27-L1-01005.0210|2026000372": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-45-27-L1-01005.0210"
+},
 "lee|23-45-27-L2-03027.0140|2026000181": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -6446,19 +7645,10 @@
 }
 },
 "lee|23-45-27-L3-15053.0030|2026000174": {
-"fetched_at": "2026-08-28T02:16:31+00:00",
-"geom_backfilled_at": "2026-08-28T02:16:31+00:00",
-"parcel": {
-"acreage": "0.26",
-"county": "Lee",
-"geometry_wkt": "MULTIPOLYGON(((-81.58614396377196 26.543503559527533,-81.58614642197739 26.54375114862423,-81.58576409326749 26.543754206299088,-81.58576163588631 26.54350661630293,-81.58614396377196 26.543503559527533)))",
-"lat": 26.543629,
-"lng": -81.585954,
-"mailing_address": "3RD FLOOR FORBURY WORKS",
-"owner": "PUNTER SOUTHALL GOVERNANCE SER",
-"parcel_address": "853 BABBITT Ave",
-"source": "reportall"
-}
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-45-27-L3-15053.0030"
 },
 "lee|24-44-27-01-00003.0040|2026000176": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6885,6 +8075,12 @@
 "parcel_address": "4187 E 27TH St",
 "source": "reportall"
 }
+},
+"lee|36-43-27-L3-01012.0380|2026000264": {
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=36-43-27-L3-01012.0380"
 },
 "lee|36-44-27-01-00002.0050|2026000185": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7620,6 +8816,18 @@
 "parcel_address": "6039 FLINTLOCK Loop",
 "source": "reportall"
 }
+},
+"manatee|3234200008|2026TD000139": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=3234200008"
+},
+"manatee|5253000003|2026TD000165": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=5253000003"
 },
 "marion|0051-103-015|4862016": {
 "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
@@ -14625,6 +15833,138 @@
 "tax_number": "95282017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
+"martin|11-40-40-000-400-00120-0|2025-0119TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 767.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/11-40-40-000-400-00120-0 "
+},
+"martin|11-40-40-000-400-00364-1|2025-0112TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/11-40-40-000-400-00364-1 "
+},
+"martin|12-38-39-001-000-00940-5|2026-0001TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 179025.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/12-38-39-001-000-00940-5 "
+},
+"martin|15-40-40-000-100-00140-9|2025-0113TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/15-40-40-000-100-00140-9 "
+},
+"martin|18-40-40-000-300-00550-2|2025-0115TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/18-40-40-000-300-00550-2 "
+},
+"martin|19-40-40-000-400-00162-8|2025-0116TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/19-40-40-000-400-00162-8 "
+},
+"martin|20-40-40-000-100-00400-4|2025-0100TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/20-40-40-000-100-00400-4 "
+},
+"martin|20-40-40-000-200-00050-5|2025-0101TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/20-40-40-000-200-00050-5 "
+},
+"martin|20-40-40-000-400-00461-4|2025-0103TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/20-40-40-000-400-00461-4 "
+},
+"martin|21-40-40-000-100-00902-5|2025-0104TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 767.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/21-40-40-000-100-00902-5 "
+},
+"martin|21-40-40-000-100-01080-7|2025-0105TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/21-40-40-000-100-01080-7 "
+},
+"martin|24-40-39-000-100-00650-5|2025-0106TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/24-40-39-000-100-00650-5 "
+},
+"martin|29-40-40-000-100-01542-2|2025-0107TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 767.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/29-40-40-000-100-01542-2 "
+},
+"martin|29-40-40-000-200-00890-0|2025-0108TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/29-40-40-000-200-00890-0 "
+},
+"martin|30-40-40-000-200-00970-1|2025-0109TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 1530.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/30-40-40-000-200-00970-1 "
+},
+"martin|34-38-42-038-024-00130-0|2025-0110TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 14250.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/34-38-42-038-024-00130-0 "
+},
+"martin|34-38-42-042-112-00020-0|2025-0117TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 12740.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/34-38-42-042-112-00020-0 "
+},
+"martin|34-38-42-053-006-00150-2|2025-0111TD": {
+"assessed_value": 0.0,
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"just_value": 0.0,
+"ok": true,
+"url": "https://www.pamartinfl.gov/app/search/pcn/34-38-42-053-006-00150-2 "
+},
+"miamidade|01-3218-004-0050|2026A00138": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0132180040050"
+},
 "miamidade|01-3230-032-0220|2026A00210": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -14663,6 +16003,24 @@
 "parcel_address": "348 NE 20 Ter",
 "source": "reportall"
 }
+},
+"miamidade|01-4139-083-0370|2026A00217": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0141390830370"
+},
+"miamidade|01-4139-126-1580|2026A00212": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0141391261580"
+},
+"miamidade|02-3202-005-0560|2026A00215": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020050560"
 },
 "miamidade|03-4120-065-0860|2026A00205": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -14967,42 +16325,16 @@
 }
 },
 "miamidade|30-9905-000-4851|2026A00197": {
-"fetched_at": "2026-08-28T01:58:02+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
-"land_check": {
-"access": {
-"status": "unknown"
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3099050004851"
 },
-"checked_at": "2026-09-03T13:09:34+00:00",
-"flood": {
-"sfha_zones": [
-"AE"
-],
-"status": "sfha",
-"zones": [
-"AE"
-]
-},
-"from": "boundary",
-"reasons": [
-"In a FEMA flood zone (AE)"
-],
-"verdict": "review",
-"wetland": {
-"status": "unknown"
-}
-},
-"parcel": {
-"acreage": "1.24",
-"county": "Miami-Dade",
-"geometry_wkt": "MULTIPOLYGON(((-80.44656912355475 25.31832806580527,-80.44712240402306 25.318329826282667,-80.44713851890094 25.319139742239482,-80.446585071346 25.319137985021953,-80.44656912355475 25.31832806580527)))",
-"land_use": "Tax Exempt",
-"lat": 25.318734,
-"lng": -80.446854,
-"mailing_address": "5700 ALTON RD 33140-2021",
-"owner": "OROSA MANUEL &C W MARIA",
-"source": "reportall"
-}
+"miamidade|31-2202-040-0350|2026A00218": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3122020400350"
 },
 "miamidade|34-2108-010-5820|2026A00190": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -15043,6 +16375,12 @@
 "source": "reportall"
 }
 },
+"nassau|16-4N-24-0000-0004-0080|452026XX000012TDAXYX": {
+"error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=16-4N-24-0000-0004-0080 (Caused by SSLError(SSLCertVerificationErr",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=16-4N-24-0000-0004-0080"
+},
 "nassau|25-4N-24-2020-0003-0010|452026XX000011TDAXYX": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -15058,6 +16396,12 @@
 "parcel_address": "38084 DAHOMA Rd",
 "source": "reportall"
 }
+},
+"nassau|35-4N-25-4220-0002-0020|452026XX000014TDAXYX": {
+"error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020 (Caused by SSLError(SSLCertVerificationErr",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020"
 },
 "okaloosa|002S22425000000059|": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -16051,6 +17395,24 @@
 "source": "reportall"
 }
 },
+"orange|032329018027160|2024-10476": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/032329018027160"
+},
+"orange|102330892600150|2024-16066": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102330892600150"
+},
+"orange|152232233002041|2024-18390": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/152232233002041"
+},
 "orange|162231000000127|2024-17304": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -16195,6 +17557,12 @@
 "source": "reportall"
 }
 },
+"orange|272229326802050|2024-9039": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272229326802050"
+},
 "orange|272229574406110|2024-9082": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -16306,6 +17674,24 @@
 "parcel_address": "4552 COLUMBIA St",
 "source": "reportall"
 }
+},
+"orange|342229916803110|2024-10007": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/342229916803110"
+},
+"orange|352229919203060|2024-10163": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352229919203060"
+},
+"orange|362027575401050|2024-381": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362027575401050"
 },
 "osceola|012630000104290060|2112024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060",
@@ -19909,7 +21295,7 @@
 "applicant": "PP 406 WARWICK ST, EAST PALATKA1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003915",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 1570.0,
 "mailing_address": "C/O MITCHELL A DINKIN PA 4095 S STATE ROAD 7 STE L-134 WELLINGTON FL 33449",
 "ok": true,
@@ -20646,7 +22032,7 @@
 "applicant": "PP 107 SILVER LAKE RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005707",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 24800.0,
 "mailing_address": "TERRY E GORE TRUSTEE 107 FRATERNAL AVE PALATKA FL 32177",
 "ok": true,
@@ -20681,7 +22067,7 @@
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005815",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 8620.0,
 "mailing_address": "4185 N BLOOMINGTON AVE APT 103 ARLINGTON HEIGHTS IL 60004",
 "ok": true,
@@ -21371,7 +22757,7 @@
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008372",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 5300.0,
 "mailing_address": "506 QUAIL HOLLOW ROAD SATSUMA FL 32189",
 "ok": true,
@@ -21884,7 +23270,7 @@
 "applicant": "PP 332 WEST RIVER RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009837",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 18540.0,
 "mailing_address": "332 WEST RIVER RD PALATKA FL 32177",
 "ok": true,
@@ -22343,7 +23729,7 @@
 "applicant": "PP 1864 STATE RD 20, HAWTHORNE0",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011198",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 6840.0,
 "mailing_address": "1864 STATE RD 20 HAWTHORNE FL 32640",
 "ok": true,
@@ -22476,7 +23862,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011567",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 4040.0,
 "mailing_address": "C/O MEGHANN FARR 1400 MALTAS AVE INTERLACHEN FL 32148",
 "ok": true,
@@ -22785,7 +24171,7 @@
 "applicant": "PP 1136 HUNTINGTON RD, CRESCENT CITY2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012458",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 11870.0,
 "mailing_address": "1136 HUNTINGTON RD CRESCENT CITY FL 32112",
 "ok": true,
@@ -23401,7 +24787,7 @@
 "applicant": "PP 211 NEISMAN AV, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015929",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 8090.0,
 "mailing_address": "C/O JOHN C BERNINI 3069 BIRCH CIRCLE WEST WHITEHALL PA 18052-3450",
 "ok": true,
@@ -23945,7 +25331,7 @@
 "acreage": "6.05",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240016901",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 70790.0,
 "mailing_address": "177 DOBY RD SATSUMA FL 32189",
 "ok": true,
@@ -24031,9 +25417,9 @@
 "applicant": "PP 111 PORT COVE LANDING RD, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017061",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 588490.0,
-"mailing_address": "6140 SW 78TH ST MIAMI FL 33143",
+"mailing_address": "107 PORT COVE LANDING RD GEORGETOWN FL 32139",
 "ok": true,
 "owner_name": "MASSON JUAN + YOANIA C H/W",
 "property_use": "03600 - CAMPS",
@@ -24182,7 +25568,7 @@
 "applicant": "PP 1412 CARR ST, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017322",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 9000.0,
 "mailing_address": "1412 CARR ST PALATKA FL 32177",
 "ok": true,
@@ -24233,7 +25619,7 @@
 "applicant": "PP 1618 EAGLE ST, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017368",
 "clerk_platform": "template",
-"fetched_at": "2026-08-20T06:55:20+00:00",
+"fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": 2650.0,
 "mailing_address": "C/O JAMES PURDY 1618 EAGLE ST PALATKA FL 32177-3053",
 "ok": true,
@@ -24405,6 +25791,24 @@
 "source": "reportall"
 }
 },
+"santarosa|18-2N-27-2050-00000-0251|2026134": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-2N-27-2050-00000-0251 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=18-2N-27-2050-00000-0251"
+},
+"santarosa|33-2N-28-0630-00G00-0010|2026138": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=33-2N-28-0630-00G00-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=33-2N-28-0630-00G00-0010"
+},
+"santarosa|41-5N-29-0000-04100-0000|2026033": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=41-5N-29-0000-04100-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=41-5N-29-0000-04100-0000"
+},
 "santarosa|42-5N-29-0000-00201-0000|2026089": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -24532,6 +25936,72 @@
 "parcel_address": "1248 CHESSINGTON Cir",
 "source": "reportall"
 }
+},
+"stlucie|1431-801-0194-100-3|26-099": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/143180101941003"
+},
+"stlucie|1433-701-0086-000-1|26-110": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/143370100860001"
+},
+"stlucie|2405-601-0499-000-8|26-101": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240560104990008"
+},
+"stlucie|2409-602-0110-000-3|26-080": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240960201100003"
+},
+"stlucie|2410-709-0108-000-8|26-092": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/241070901080008"
+},
+"stlucie|2415-601-0207-000-6|26-095": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/241560102070006"
+},
+"stlucie|2415-601-0368-000-2|26-093": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/241560103680002"
+},
+"stlucie|3323-655-0008-000-9|26-079": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/332365500080009"
+},
+"stlucie|3323-823-0030-000-7|26-123": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/332382300300007"
+},
+"stlucie|3420-501-0027-000-2|26-143": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/342050100270002"
+},
+"stlucie|3420-510-0322-000-8|26-118": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/342051003220008"
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
@@ -25210,6 +26680,12 @@
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
+"volusia|322102000690|04369-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=322102000690"
+},
 "volusia|383205430110|00037-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25242,6 +26718,18 @@
 "source": "reportall"
 }
 },
+"volusia|42251600D100|04683-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=42251600D100"
+},
+"volusia|422522005880|04696-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422522005880"
+},
 "volusia|422530011202|11479-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25258,6 +26746,24 @@
 "source": "reportall"
 }
 },
+"volusia|424208010030|04939-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424208010030"
+},
+"volusia|424222220100|05026-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424222220100"
+},
+"volusia|424228040300|05045-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424228040300"
+},
 "volusia|424235020061|05064-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25273,6 +26779,18 @@
 "parcel_address": "1718 EVERGREEN St",
 "source": "reportall"
 }
+},
+"volusia|424294000240|09604-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424294000240"
+},
+"volusia|483401040050|00110-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=483401040050"
 },
 "volusia|520200000370|05206-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25306,21 +26824,29 @@
 "source": "reportall"
 }
 },
+"volusia|521119000670|05263-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=521119000670"
+},
 "volusia|521609000010|11020-24": {
-"fetched_at": "2026-08-28T01:58:02+00:00",
-"geom_backfilled_at": "2026-08-28T01:58:02+00:00",
-"parcel": {
-"acreage": "0.38",
-"county": "Volusia",
-"geometry_wkt": "MULTIPOLYGON(((-81.10145827237776 29.195103390521673,-81.10142660417164 29.19510962423381,-81.10141037694781 29.195057035320048,-81.101398428435 29.195011604435056,-81.10139491129341 29.194998225202117,-81.10210908960417 29.194881223899444,-81.10209434527445 29.19507649226816,-81.10150705595449 29.19521122900925,-81.10148379605731 29.195216565228318,-81.10145827237776 29.195103390521673)))",
-"land_use": "0000",
-"lat": 29.195027,
-"lng": -81.101819,
-"mailing_address": "PO BOX 173859 80217",
-"owner": "NTC & CO",
-"parcel_address": "18 PROMENADE AT LIONSPAW",
-"source": "reportall"
-}
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=521609000010"
+},
+"volusia|522209000440|09703-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=522209000440"
+},
+"volusia|523812001050|05415-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523812001050"
 },
 "volusia|523815090100|12157-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25337,6 +26863,18 @@
 "parcel_address": "HAMPTON Rd",
 "source": "reportall"
 }
+},
+"volusia|523822000390|05492-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523822000390"
+},
+"volusia|523907310060|05642-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523907310060"
 },
 "volusia|523948180140|05679-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25401,6 +26939,12 @@
 "parcel_address": "104-1909 S ATLANTIC Ave",
 "source": "reportall"
 }
+},
+"volusia|531631008220|11177-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=531631008220"
 },
 "volusia|533801150033|06392-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -25562,6 +27106,18 @@
 "source": "reportall"
 }
 },
+"volusia|533958010010|06825-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533958010010"
+},
+"volusia|533961000080|07255-23": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533961000080"
+},
 "volusia|533978000220|06848-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -25577,6 +27133,12 @@
 "parcel_address": "631 ELDORADO St",
 "source": "reportall"
 }
+},
+"volusia|533978000280|11072-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533978000280"
 },
 "volusia|534005030017|10208-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25610,6 +27172,12 @@
 "source": "reportall"
 }
 },
+"volusia|613201120260|02681-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613201120260"
+},
 "volusia|613201160120|02691-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -25641,6 +27209,36 @@
 "parcel_address": "GENERAL MARSHALL Rd",
 "source": "reportall"
 }
+},
+"volusia|631202000020|07314-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631202000020"
+},
+"volusia|631618290050|11348-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631618290050"
+},
+"volusia|633013003070|10899-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=633013003070"
+},
+"volusia|633708010090|07833-23": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=633708010090"
+},
+"volusia|641936008403|11024-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=641936008403"
 },
 "volusia|700113002430|01662-20": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25674,6 +27272,18 @@
 "source": "reportall"
 }
 },
+"volusia|700603001080|10480-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700603001080"
+},
+"volusia|701534000080|01377-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701534000080"
+},
 "volusia|701631020200|01415-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -25689,6 +27299,12 @@
 "parcel_address": "618 LARRY Dr",
 "source": "reportall"
 }
+},
+"volusia|701714060070|01489-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701714060070"
 },
 "volusia|703204020060|01860-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25738,6 +27354,18 @@
 "source": "reportall"
 }
 },
+"volusia|734306001031|07667-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734306001031"
+},
+"volusia|741808170140|11425-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=741808170140"
+},
 "volusia|741908000040|08062-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -25754,6 +27382,12 @@
 "source": "reportall"
 }
 },
+"volusia|744006160290|08178-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744006160290"
+},
 "volusia|800901060010|01987-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25769,6 +27403,12 @@
 "parcel_address": "315 CHARLES Ave",
 "source": "reportall"
 }
+},
+"volusia|801403110050|02139-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801403110050"
 },
 "volusia|803605050123|09639-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -25818,6 +27458,24 @@
 "source": "reportall"
 }
 },
+"volusia|813024030080|03789-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813024030080"
+},
+"volusia|813069010020|04164-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813069010020"
+},
+"volusia|813074050040|04212-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074050040"
+},
 "volusia|813074420130|04239-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25849,6 +27507,12 @@
 "parcel_address": "2912 CARDINAL St",
 "source": "reportall"
 }
+},
+"volusia|840500000120|10526-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840500000120"
 },
 "volusia|844701002960|08870-23": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25898,6 +27562,12 @@
 "source": "reportall"
 }
 },
+"volusia|910603090030|04300-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910603090030"
+},
 "volusia|911103001110|05234-21": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -25929,6 +27599,18 @@
 "parcel_address": "403 E HALIFAX Ave",
 "source": "reportall"
 }
+},
+"volusia|950400000015|12074-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=950400000015"
+},
+"walton|25-3N-19-19070-001-5200|2026-0119TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-5200",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-5200"
 },
 "washington|00000000-00-6184-0004|2026-TD-112": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -25993,6 +27675,108 @@
 "parcel_address": "MARLENE St",
 "source": "reportall"
 }
+},
+"washington|00000000-06-0339-0003|2026-TD-167": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0003",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0003"
+},
+"washington|00000000-06-0339-0006|2026-TD-166": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0006",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0006"
+},
+"washington|00000000-06-0342-0002|2026-TD-165": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0002",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0002"
+},
+"washington|00000000-06-0342-0009|2026-TD-164": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0009",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0009"
+},
+"washington|00000000-06-0356-0007|2026-TD-162": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0007",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0007"
+},
+"washington|00000000-06-0356-0025|2026-TD-161": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0025",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0025"
+},
+"washington|00000000-06-0356-0026|2026-TD-160": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0026",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0026"
+},
+"washington|00000000-06-0357-0008|2026-TD-159": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0008",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0008"
+},
+"washington|00000000-06-0357-0022|2026-TD-178": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0022",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0022"
+},
+"washington|00000000-06-0357-0058|2026-TD-177": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0058",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0058"
+},
+"washington|00000000-06-0362-0001|2026-TD-176": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0362-0001",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0362-0001"
+},
+"washington|00000000-06-0362-0002|2026-TD-175": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0362-0002",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0362-0002"
+},
+"washington|00000000-06-0408-0008|2026-TD-173": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0408-0008",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0408-0008"
+},
+"washington|00000000-06-0409-0007|2026-TD-172": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0409-0007",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0409-0007"
+},
+"washington|00000000-06-0410-0020|2026-TD-171": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0410-0020",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0410-0020"
+},
+"washington|00000000-06-0411-0007|2026-TD-170": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0411-0007",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0411-0007"
+},
+"washington|00000000-06-0413-0018|2026-TD-168": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0413-0018",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0413-0018"
 },
 "washington|00000000-07-0423-0029|2026-TD-133": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -26074,6 +27858,12 @@
 "source": "reportall"
 }
 },
+"washington|00000000-07-0463-0002|2026-TD-135": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0002",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0002"
+},
 "washington|00000000-08-0484-0026|2026-TD-103": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -26154,6 +27944,12 @@
 "source": "reportall"
 }
 },
+"washington|00000000-08-0499-0004|2026-TD-192": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0499-0004",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0499-0004"
+},
 "washington|00000000-08-0501-0006|2026-TD-149": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -26169,6 +27965,12 @@
 "parcel_address": "WASHINGTON Blvd",
 "source": "reportall"
 }
+},
+"washington|00000000-08-0511-0019|2026-TD-137": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0511-0019",
+"fetched_at": "2026-09-28T18:34:04+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0511-0019"
 },
 "washington|00000000-08-0512-0003|2026-TD-150": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
