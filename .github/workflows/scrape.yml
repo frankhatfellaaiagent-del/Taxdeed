@@ -140,6 +140,18 @@ jobs:
           latest=$(ls -td output/runs/*/ 2>/dev/null | head -1 || true)
           [ -z "$latest" ] && { echo "no run to commit"; exit 0; }
           name=$(basename "$latest")
+          # Build the commit on the LATEST branch tip, not the commit this run
+          # was triggered on: a run that queued behind another data refresh
+          # (the concurrency group serializes them) was checked out before that
+          # refresh landed, and replaying onto it conflicted on every retry.
+          # Nothing tracked has changed yet except config/counties.json (from
+          # live discovery) — carry that across; the run output is untracked.
+          cp config/counties.json "$RUNNER_TEMP/counties.json"
+          git fetch origin "${{ github.ref_name }}"
+          git reset --hard "origin/${{ github.ref_name }}"
+          if [ "${{ steps.discover.outcome }}" = "success" ]; then
+            cp "$RUNNER_TEMP/counties.json" config/counties.json
+          fi
           mkdir -p data/runs
           cp -r "$latest" "data/runs/$name"
           cp config/counties.json "data/runs/$name/counties.json" || true
@@ -172,26 +184,35 @@ jobs:
           git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
           # The discovery step rewrites this tracked file. Stage it with the run
           # (it IS part of the refresh) — and leaving it unstaged used to wedge
-          # the rebase below with "cannot rebase: You have unstaged changes".
+          # the push retry below with "cannot rebase: You have unstaged changes".
           git add -f config/counties.json 2>/dev/null || true
-          git commit -m "Data refresh: $name (${{ github.event.inputs.counties || 'daily auto' }})" || exit 0
-          # Anything pushed to the branch while the scrape was running (another
-          # run, or a person) rejects this push. Rebase onto the new tip and try
-          # again rather than losing an hour of scraping. On a conflict in the
-          # generated feeds, -X theirs keeps THIS run's data: during a rebase
-          # "theirs" is the commit being replayed, i.e. ours, and the fresher
-          # scrape is the one worth keeping.
+          msg="Data refresh: $name (${{ github.event.inputs.counties || 'daily auto' }})"
+          git commit -m "$msg" || exit 0
+          ours=$(git rev-parse HEAD)
+          # Anything pushed to the branch meanwhile (a person merging a PR)
+          # rejects this push. Retry on the new tip by replaying THIS run's
+          # outputs by path — the latest tip wins for everything else — rather
+          # than rebasing: each run prunes the oldest data/runs dir and adds
+          # its own, which git's (directory) rename detection pairs up, so two
+          # runs pruning the same dir hit rename/rename conflicts that no merge
+          # option resolves. Path replay can't conflict.
           pushed=0
           for attempt in 1 2 3 4 5 6 7 8; do
             if git push origin "HEAD:${{ github.ref_name }}"; then pushed=1; break; fi
-            echo "push rejected (attempt $attempt) — rebasing onto the latest tip"
-            git fetch origin "${{ github.ref_name }}" || true
-            # --autostash so a stray unstaged file (debug output, a regenerated
-            # config) can never stop the rebase and strand an hour of scraping.
-            if ! git rebase --autostash -X theirs "origin/${{ github.ref_name }}"; then
-              git rebase --abort 2>/dev/null || true
-            fi
+            echo "push rejected (attempt $attempt) — replaying this run's data onto the latest tip"
             sleep $((attempt * 10))
+            git fetch origin "${{ github.ref_name }}" || continue
+            git reset -q --hard "origin/${{ github.ref_name }}"
+            git checkout "$ours" -- "data/runs/$name" data/exports
+            git checkout "$ours" -- data/geocache.json data/enrichment.json 2>/dev/null || true
+            if [ "${{ steps.discover.outcome }}" = "success" ]; then
+              git checkout "$ours" -- config/counties.json
+            fi
+            prune=$(ls -d data/runs/*/ 2>/dev/null | sort | head -n -$keep || true)
+            [ -n "$prune" ] && git rm -rq $prune || true
+            git add -f data/runs data/exports config/counties.json
+            git add -f data/geocache.json data/enrichment.json 2>/dev/null || true
+            git commit -q -m "$msg" || true
           done
           if [ "$pushed" != 1 ]; then
             echo "::error::could not push run data after 8 attempts"
