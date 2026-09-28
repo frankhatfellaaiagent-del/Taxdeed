@@ -69,7 +69,7 @@
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
@@ -93,13 +93,13 @@
 },
 "alachua|06650-208-004|TD 2026-034": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004"
 },
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
@@ -122,7 +122,7 @@
 },
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
 },
@@ -134,7 +134,7 @@
 },
 "alachua|10733-043-000|TD 2026-031": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
 },
@@ -146,7 +146,7 @@
 },
 "alachua|14785-000-000|TD 2026-035": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
 },
@@ -2883,43 +2883,55 @@
 },
 "hardee|05-33-25-0090-0000A-0018|252026TD002AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018"
 },
 "hardee|10-34-25-0843-00001-0019|252026TD003AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019"
 },
 "hardee|15-34-25-0830-00018-0013|252026TD001AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013"
 },
 "hardee|15-34-25-0830-00019-0028|252026TD020AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028"
 },
 "hardee|17-33-25-0400-00001-0138|252026TD006AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138"
 },
+"hardee|19-34-26-0600-00001-000D|252026TD029AXMX": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=271369561&KeyValue=19-34-26-0600-00001-000D",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=271369561&KeyValue=19-34-26-0600-00001-000D"
+},
 "hardee|24-34-25-0000-05770-0000|252026TD023AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000"
 },
+"hardee|25-34-25-0000-05020-0000|252026TD036AXMX": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1330743349&KeyValue=25-34-25-0000-05020-0000",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1330743349&KeyValue=25-34-25-0000-05020-0000"
+},
 "hardee|28-33-25-0820-00036-0028|252026TD007AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028"
 },
@@ -2928,6 +2940,126 @@
 "fetched_at": "2026-09-21T15:26:16+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1682558319&KeyValue=30-33-26-0000-08130-0000"
+},
+"hendry|1 29 42 32 A00 0011.0100|25-122": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|2 29 43 02 280 0000-082.0|25-113": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 060 2193-014.0|25-130": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 060 2194-011.0|25-125": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 060 2339-023.0|25-131": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 070 2210-024.0|25-126": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 080 2280-037.0|25-127": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 080 2283-030.0|25-128": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 090 2293-003.0|25-132": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 090 2302-001.0|23-133": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 090 2304-010.0|25-134": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 090 2336-007.0|25-135": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 100 2361-022.0|25-116": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 100 2368-005.0|25-117": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 100 2375-050.0|25-118": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 110 2433-067.0|25-119": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 110 2436-006.0|25-120": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 120 2469-007.0|25-115": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 120 2497-011.0|25-121": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 120 2506-018.0|25-123": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hernando|00032208|2026-114TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7511,7 +7643,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "4342021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "4342021",
@@ -7587,17 +7719,9 @@
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=170089&YR=2026&mName=False&mSitus=False"
 },
 "marion|12677-000-03|41182018": {
-"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
-"applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
-"appraiser_error": "no recognizable fields on page",
-"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
-"clerk_platform": "newvision",
-"clerk_search_value": "41182018",
-"deed_status": "READYSALE",
-"fetched_at": "2026-08-25T22:39:48+00:00",
-"ok": true,
-"sale_date": "10/14/2026",
-"tax_number": "41182018",
+"error": "no recognizable fields on page",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3817478&YR=2026&mName=False&mSitus=False"
 },
 "marion|1534-010-005|48292021": {
@@ -7676,7 +7800,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "68952016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "68952016",
@@ -7690,7 +7814,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "64462018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "64462018",
@@ -7704,7 +7828,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "69752016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "69752016",
@@ -7746,7 +7870,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "71152018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "71152018",
@@ -7760,7 +7884,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "76052020",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "76052020",
@@ -7816,7 +7940,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "76772019",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "76772019",
@@ -7858,7 +7982,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "277262018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "277262018",
@@ -7872,7 +7996,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "87402017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "87402017",
@@ -8331,7 +8455,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88542017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88542017",
@@ -8345,7 +8469,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88552017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88552017",
@@ -8387,7 +8511,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88632017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88632017",
@@ -8401,7 +8525,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88642017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88642017",
@@ -8437,13 +8561,13 @@
 },
 "marion|2002-034-033|88672017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
-"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"applicant_address": "PO BOX 2407 = BELLEVIEW FL 34421-2407",
 "appraiser_error": "no recognizable fields on page",
 "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
 "clerk_platform": "newvision",
 "clerk_search_value": "88672017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88672017",
@@ -8457,7 +8581,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "85962018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "85962018",
@@ -8471,7 +8595,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88712017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88712017",
@@ -8485,7 +8609,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88732017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88732017",
@@ -8944,7 +9068,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "86932018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "86932018",
@@ -9471,7 +9595,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88402019",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "88402019",
@@ -9485,7 +9609,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "87722018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "87722018",
@@ -9499,7 +9623,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "87732018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "87732018",
@@ -9971,7 +10095,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "82622021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "82622021",
@@ -10511,7 +10635,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "89462018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "89462018",
@@ -11914,7 +12038,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94372017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94372017",
@@ -11928,7 +12052,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94392017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94392017",
@@ -11942,7 +12066,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94422017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94422017",
@@ -11956,7 +12080,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94482017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94482017",
@@ -11970,7 +12094,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94492017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94492017",
@@ -11998,7 +12122,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94632017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94632017",
@@ -12054,7 +12178,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94712017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94712017",
@@ -12068,7 +12192,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94772017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94772017",
@@ -12082,7 +12206,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94782017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94782017",
@@ -12096,7 +12220,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "91992018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "91992018",
@@ -12110,7 +12234,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94902017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94902017",
@@ -12124,7 +12248,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94922017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94922017",
@@ -12138,7 +12262,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94952017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "94952017",
@@ -12152,7 +12276,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95032017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95032017",
@@ -12180,7 +12304,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95062017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95062017",
@@ -12194,7 +12318,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95162017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95162017",
@@ -12208,7 +12332,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95192017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95192017",
@@ -12222,7 +12346,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95212017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95212017",
@@ -12236,7 +12360,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95222017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95222017",
@@ -12250,7 +12374,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95232017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95232017",
@@ -12264,7 +12388,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95242017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95242017",
@@ -12488,7 +12612,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "92892018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "92892018",
@@ -13393,8 +13517,8 @@
 "clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
 "clerk_platform": "newvision",
 "clerk_search_value": "106352021",
-"deed_status": "READYSALE",
-"fetched_at": "2026-08-22T06:50:23+00:00",
+"deed_status": "RESCHED",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "09/16/2026",
 "tax_number": "106352021",
@@ -13449,7 +13573,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "150152015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "150152015",
@@ -13726,7 +13850,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "184892019",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "184892019",
@@ -13740,7 +13864,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "192942017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "192942017",
@@ -13754,7 +13878,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "198782015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "198782015",
@@ -14113,7 +14237,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "228152015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "228152015",
@@ -14189,7 +14313,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "246902015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "246902015",
@@ -14223,7 +14347,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "253042015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-08-25T20:51:43+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "253042015",
@@ -15685,7 +15809,7 @@
 },
 "okeechobee|1-03-38-35-0A00-00001-A000|2026TD091": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-03-38-35-0A00-00001-A000"
 },
@@ -15697,25 +15821,25 @@
 },
 "okeechobee|1-04-38-36-0030-00030-0160|2026TD092": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0030-00030-0160"
 },
 "okeechobee|1-05-37-35-0020-00300-0030|2026TD083": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-05-37-35-0020-00300-0030"
 },
 "okeechobee|1-06-36-34-0010-00060-0010|2026TD086": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00060-0010"
 },
 "okeechobee|1-06-36-34-0010-00360-0140|2026TD087": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00360-0140"
 },
@@ -15727,19 +15851,19 @@
 },
 "okeechobee|1-06-38-36-0A00-00007-0000|2026TD093": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00007-0000"
 },
 "okeechobee|1-09-38-36-0050-00010-0040|2026TD094": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-09-38-36-0050-00010-0040"
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -15751,49 +15875,49 @@
 },
 "okeechobee|1-11-34-33-0A00-00008-F000|2026TD104": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000"
 },
 "okeechobee|1-14-34-33-0A00-00004-F000|2026TD105": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000"
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
 "okeechobee|1-16-34-33-0A00-00012-G000|2026TD108": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00012-G000"
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
 "okeechobee|1-17-34-33-0A00-00006-J000|2026TD082": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-34-33-0A00-00006-J000"
 },
 "okeechobee|1-17-37-35-0020-00040-0020|2026TD097": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-35-0020-00040-0020"
 },
@@ -15817,7 +15941,7 @@
 },
 "okeechobee|1-18-37-35-0020-00290-0110|2026TD085": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00290-0110"
 },
@@ -15829,25 +15953,25 @@
 },
 "okeechobee|1-20-34-33-0A00-00021-B000|2026TD099": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000"
 },
 "okeechobee|1-21-34-33-0A00-00007-B000|2026TD100": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00007-B000"
 },
 "okeechobee|1-21-34-33-0A00-00012-J000|2026TD101": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00012-J000"
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
@@ -15859,7 +15983,7 @@
 },
 "okeechobee|1-22-33-35-0010-00920-0060|2026TD084": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-22-33-35-0010-00920-0060"
 },
@@ -15877,7 +16001,7 @@
 },
 "okeechobee|1-25-37-35-0070-00060-0160|2026TD096": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0070-00060-0160"
 },
@@ -15889,7 +16013,7 @@
 },
 "okeechobee|1-30-37-35-0010-00020-010A|2026TD089": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-30-37-35-0010-00020-010A"
 },
@@ -16185,7 +16309,7 @@
 },
 "osceola|012630000104290060|2112024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060"
 },
@@ -16197,7 +16321,7 @@
 },
 "osceola|032528340700012113|5152024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113"
 },
@@ -16209,13 +16333,13 @@
 },
 "osceola|062527252100010520|10202024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527252100010520"
 },
 "osceola|072530270201760050|15882024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050"
 },
@@ -16265,19 +16389,19 @@
 },
 "osceola|152529124000010060|29052024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060"
 },
 "osceola|162527560800013070|30142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527560800013070"
 },
 "osceola|162527561600010050|30182024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050"
 },
@@ -16352,7 +16476,7 @@
 },
 "osceola|222630007700010450|41862024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450"
 },
@@ -16402,7 +16526,7 @@
 },
 "osceola|252628610005500060|45802024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060"
 },
@@ -16564,6 +16688,12 @@
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=292529112400010060"
 },
+"osceola|31273260001213005N|55832024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=31273260001213005N",
+"fetched_at": "2026-09-28T16:22:54+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=31273260001213005N"
+},
 "osceola|332529215400014310|57732024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=332529215400014310",
 "fetched_at": "2026-08-23T06:51:01+00:00",
@@ -16572,13 +16702,13 @@
 },
 "osceola|352527484900013120|58652024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527484900013120"
 },
 "osceola|352527488100010990|59012024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352527488100010990"
 },
@@ -24405,7 +24535,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -24430,13 +24560,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -24473,25 +24603,25 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G22AM011|5068": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G29A059A|5076": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -24515,25 +24645,25 @@
 },
 "sumter|N16A015|5074": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A021|5071": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -24545,7 +24675,7 @@
 },
 "suwannee|00813020060|4732": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24557,7 +24687,7 @@
 },
 "suwannee|01014012000|4735": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24569,25 +24699,25 @@
 },
 "suwannee|01133031770|4736": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|01142031990|4739": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|01783000000|4747": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|02202000000|4751": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24599,43 +24729,43 @@
 },
 "suwannee|03232010190|4774": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03406080200|4726": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03406080210|4727": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090120|4788": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090160|4789": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03683005000|4775": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04264840001|4778": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24647,19 +24777,19 @@
 },
 "suwannee|04555001000|4776": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04555001002|4777": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04573000000|4703": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24677,13 +24807,13 @@
 },
 "suwannee|08856003010|4688": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|08900000000|4723": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24695,13 +24825,13 @@
 },
 "suwannee|09150020030|4797": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|09531090010|4714": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24719,13 +24849,13 @@
 },
 "suwannee|10515009004|4717": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|10648000000|4800": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -24771,25 +24901,25 @@
 },
 "suwannee|11189000000|4802": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11389070030|4786": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11390070050|4787": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11666000116|4718": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
