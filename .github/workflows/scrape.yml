@@ -63,7 +63,10 @@ jobs:
         # then made the live scrape reject every county not in the snapshot.
         run: |
           python -m scraper discover --fixtures scraper/fixtures --out output/fixture-counties.json
-          python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots --out output/fixture-regression
+          # Pin "today" before the saved auction dates, or they age into the
+          # past, get skipped, and the regression silently checks nothing.
+          SCRAPER_TODAY=20260801 python -m scraper run --counties volusia,polk --fixtures scraper/fixtures --skip-robots --out output/fixture-regression
+          python -c "import json,sys; m=json.load(open('output/fixture-regression/run_meta.json')); n=sum(c.get('auctions',0) for c in m['counties'].values()); print('fixture records:', n); sys.exit(0 if n>0 else 'fixture regression parsed 0 records')"
 
       - name: Decide run scope
         id: scope
@@ -165,7 +168,10 @@ jobs:
           # Quick-look scrub: appraiser record, the parcel's clerk case file, the
           # paperwork inside it, and (only when REPORTALL_API_KEY is configured)
           # the ReportAll parcel record.
-          python -m scraper -v enrich --limit 300 --debug-dir output/debug/enrich || true
+          # --max-minutes caps enrichment so it can never push the job past its
+          # 120-min timeout (which would lose the day's refresh); the queue
+          # carries over to the next run.
+          python -m scraper -v enrich --limit 300 --max-minutes 30 --debug-dir output/debug/enrich || true
           # Note: the land check (wetlands / flood / access) is NOT run daily —
           # it's on-demand from the property card (a per-parcel button, computed
           # client-side from free public GIS), so nothing extra is pulled every

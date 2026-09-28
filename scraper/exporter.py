@@ -20,6 +20,7 @@ import yaml
 
 from . import diffing, geocode, judgment
 from .enrich import load_enrichment
+from .models import et_today_key
 
 log = logging.getLogger(__name__)
 
@@ -36,17 +37,6 @@ TSV_COLUMNS = ["County", "Sale Date", "Sale Time", "Parcel ID", "Case #",
 
 def _clean(v) -> str:
     return str(v if v is not None else "").replace("\t", " ").replace("\n", " ").strip()
-
-
-def _et_today_key() -> str:
-    """Today's date in America/New_York as YYYYMMDD, so the feed's notion of
-    'past due' matches the dashboard's ET-based isPastDue exactly."""
-    try:
-        from zoneinfo import ZoneInfo
-        now = datetime.now(ZoneInfo("America/New_York"))
-    except Exception:  # zoneinfo/tzdata unavailable — fall back to UTC
-        now = datetime.now(timezone.utc)
-    return now.strftime("%Y%m%d")
 
 
 def _is_past_due(rec: dict, today_key: str) -> bool:
@@ -277,7 +267,7 @@ def export_run(run_dir: str | Path, out_dir: str | Path | None = None) -> dict:
     by_county: dict[str, dict] = {}
     n_redeemed = 0
     n_past_due = 0
-    today_key = _et_today_key()
+    today_key = et_today_key()
     tsv_lines = ["\t".join(TSV_COLUMNS)]
     for rec in json_records:
         redeemed = rec.get("status") == "Redeemed"

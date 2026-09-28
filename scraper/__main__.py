@@ -235,6 +235,8 @@ def main(argv=None) -> int:
                    help="Feed JSON to pick targets from (default data/exports/master_list.json)")
     p.add_argument("--counties", help="Comma-separated county slugs, or @file (default: all)")
     p.add_argument("--limit", type=int, default=200, help="Max parcels to fetch this run (default 200)")
+    p.add_argument("--max-minutes", type=float, default=None,
+                   help="Stop starting new parcels after this many minutes (progress is saved)")
     p.add_argument("--out", help="Enrichment store (default data/enrichment.json)")
     p.add_argument("--debug-dir", help="Save first fetched HTML pages here for parser tuning")
     p.add_argument("--backfill-geometry", action="store_true",
@@ -333,7 +335,8 @@ def main(argv=None) -> int:
                                         limit=(args.limit or None), out_path=args.out)
         else:
             summary = enrich_records(records, counties=counties, limit=args.limit,
-                                     out_path=args.out, debug_dir=args.debug_dir)
+                                     out_path=args.out, debug_dir=args.debug_dir,
+                                     max_minutes=args.max_minutes)
         print(json.dumps(summary, indent=2))
         return 0
     if args.cmd == "run":

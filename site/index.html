@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Send http:// visitors to https:// before anything loads (belt-and-braces
+     alongside GitHub Pages' "Enforce HTTPS"; logins must never go over http). -->
+<script>if(location.protocol==="http:"&&/(^|\.)taxdeed\.app$/.test(location.hostname))location.replace("https://"+location.host+location.pathname+location.search+location.hash);</script>
 <title>Tax Deed Radar — every Florida tax deed auction on one board</title>
 <meta name="description" content="All 67 Florida counties on one tax deed board — live auction feeds for every county that sells online, sale schedules and clerk records for the rest. Checked against county records, laid out on one sale calendar, refreshed automatically every morning.">
 <meta property="og:title" content="Tax Deed Radar">
