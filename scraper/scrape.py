@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin
 
-from .models import CSV_COLUMNS, AuctionRecord
+from .models import CSV_COLUMNS, AuctionRecord, et_today_key
 from .parsing import looks_like_foreclosure, parse_auction_items, parse_calendar_dates
 from .robots import check_robots
 
@@ -65,7 +65,9 @@ def scrape_county(source, county: dict, months: int = 2, skip_robots: bool = Fal
     records: list[AuctionRecord] = []
     excluded: list[dict] = []
 
-    today = datetime.now().strftime("%Y%m%d")
+    # Florida date, not the runner's UTC clock: after 8 PM ET the UTC date has
+    # already rolled over, and today's still-upcoming sales would be skipped.
+    today = et_today_key()
 
     def _has_upcoming(es: list) -> bool:
         return any((e["date"][6:] + e["date"][:2] + e["date"][3:5]) >= today for e in es)

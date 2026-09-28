@@ -100,7 +100,9 @@ def find_anomalies(rec: AuctionRecord) -> list[str]:
         out.append("opening bid <= 0")
     if rec.assessed_value is None:
         out.append("missing assessed value")
-    elif rec.opening_bid and rec.assessed_value and rec.opening_bid > rec.assessed_value:
+    elif rec.assessed_value <= 0:
+        out.append("assessed value <= 0")   # a $0 value would otherwise pass as clean
+    elif rec.opening_bid and rec.opening_bid > rec.assessed_value:
         out.append("opening bid exceeds assessed value")
     if rec.auction_status and re.search(r"cancel|redeem|remov", rec.auction_status, re.I):
         out.append(f"status: {rec.auction_status}")

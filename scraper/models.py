@@ -3,7 +3,28 @@
 from __future__ import annotations
 
 import dataclasses
+import os
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
+
+
+def et_today_key() -> str:
+    """Today's date in America/New_York as YYYYMMDD. Auctions are Florida
+    events, so "today" (which sales are upcoming, which are past due) is always
+    the Florida date — never the runner's UTC clock, which rolls over at 8 PM ET.
+    Shared by the scraper, the exporter, and matched by the dashboard.
+
+    SCRAPER_TODAY=YYYYMMDD pins it — for the offline fixture regression, whose
+    saved auction pages would otherwise age into the past and be skipped."""
+    pinned = os.environ.get("SCRAPER_TODAY", "").strip()
+    if pinned:
+        return pinned
+    try:
+        from zoneinfo import ZoneInfo
+        now = datetime.now(ZoneInfo("America/New_York"))
+    except Exception:  # zoneinfo/tzdata unavailable — fall back to UTC
+        now = datetime.now(timezone.utc)
+    return now.strftime("%Y%m%d")
 
 
 @dataclass

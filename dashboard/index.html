@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Send http:// visitors to https:// before anything loads (belt-and-braces
+     alongside GitHub Pages' "Enforce HTTPS"; logins must never go over http). -->
+<script>if(location.protocol==="http:"&&/(^|\.)taxdeed\.app$/.test(location.hostname))location.replace("https://"+location.host+location.pathname+location.search+location.hash);</script>
 <title>Tax Deed Radar</title>
 <meta name="description" content="Every upcoming Florida tax deed auction on one board — graded against your buy box, verified against the county records, refreshed automatically.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%23a97f2a%22/><text x=%2232%22 y=%2244%22 font-family=%22Arial Narrow,Arial,sans-serif%22 font-weight=%22bold%22 font-size=%2234%22 fill=%22%23f6f3ec%22 text-anchor=%22middle%22>TR</text></svg>">
@@ -2029,13 +2032,18 @@ function renderDashboard() {
         </div>
         <div class="text-muted" style="font-size:12.5px;margin-top:10px">Showing ${located.length.toLocaleString()} of ${rows.length.toLocaleString()} on the map.${noLoc ? ` ${noLoc.toLocaleString()} ${noLoc === 1 ? "property has" : "properties have"} no map location and ${noLoc === 1 ? "appears" : "appear"} in the list only —` : ""} ${noLoc ? `<button class="btn btn-ghost" id="to-list" style="font-size:12.5px;padding:1px 6px">view the list</button>.` : ""}</div>`
       : rows.length === 0 ? `<div class="blueprint" style="padding:34px 24px;text-align:center">${CORNERS}
-          <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${filtersActive ? "No properties match these filters" : (!isPaid() && freeHidden ? "Nothing in your free 5-day window" : "No upcoming sales posted right now")}</div>
-          <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${filtersActive
-              ? "Try widening your filters, or clear the sale-day / map-area pick."
-              : (!isPaid() && freeHidden
-                  ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"} further out. Upgrade to see every date.`
-                  : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically.")}</p>
-          ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters2">Reset filters</button>` : (!isPaid() && freeHidden ? upgradeChip("See every date") : "")}
+          <div style="font-family:var(--font-heading);font-size:19px;margin-bottom:6px">${!isPaid() && freeHidden ? `Beyond your free ${FREE_DAYS}-day window` : filtersActive ? "No properties match these filters" : "No upcoming sales posted right now"}</div>
+          <p class="text-muted" style="font-size:13.5px;max-width:540px;margin:0 auto 14px">${!isPaid() && freeHidden
+              // The auctions exist — the free window is what hides them (e.g. a
+              // Calendar day further out), so say that instead of "no matches".
+              ? `There ${freeHidden === 1 ? "is" : "are"} ${freeHidden.toLocaleString()} scheduled ${freeHidden === 1 ? "auction" : "auctions"}${filtersActive ? " matching this view" : ""} further out than the next ${FREE_DAYS} days. Upgrade to see every date.`
+              : filtersActive
+                ? "Try widening your filters, or clear the sale-day / map-area pick."
+                : "We check every county every day. The moment a county posts a tax-deed sale, it shows up here automatically."}</p>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+            ${!isPaid() && freeHidden ? upgradeChip("See every date") : ""}
+            ${filtersActive ? `<button class="btn btn-secondary" id="reset-filters2">Reset filters</button>` : ""}
+          </div>
         </div>`
       : `<div class="blueprint" style="padding:0">${CORNERS}
           <div class="card-head">

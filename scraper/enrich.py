@@ -29,6 +29,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from . import landcheck, paperwork, reportall
+from .models import et_today_key
 from .clerk import ClerkResolver
 
 log = logging.getLogger(__name__)
@@ -63,11 +64,15 @@ def record_key(r: dict) -> str:
 
 def select_targets(records: list[dict], counties: list[str] | None = None,
                    limit: int | None = None) -> list[dict]:
-    """Scheduled + buy-box MATCH/REVIEW + has an appraiser link, soonest first.
+    """Every upcoming, unredeemed parcel with an appraiser link — the
+    operator's buy-box MATCH/REVIEW first, then everything else, soonest sale
+    first within each.
 
-    The feed no longer ships per-record flags (each dashboard team computes its
-    own), so targeting recomputes them here from config/buybox.yaml — the
-    operator's config decides where enrichment effort goes first."""
+    Each customer team runs its own buy-box in the dashboard, so enrichment
+    serves the whole feed; config/buybox.yaml only decides who goes FIRST (it
+    used to be a hard filter, which left ~3 in 4 parcels — every county outside
+    the operator's list — permanently unverified). Sales that already passed
+    aren't worth fetching."""
     from . import judgment
     cfg = judgment.load_buybox(None)
 
@@ -80,12 +85,14 @@ def select_targets(records: list[dict], counties: list[str] | None = None,
             return r["buybox"]
         return judgment.buybox_flag(judgment.record_from_feed(r), cfg)[0]
 
+    today = et_today_key()
     out = [r for r in records
            if r.get("status") != "Redeemed"
            and r.get("appraiser_url")
-           and (not counties or r.get("county") in counties)
-           and flag(r) in ("MATCH", "REVIEW")]
-    out.sort(key=date_key)
+           and date_key(r) >= today
+           and (not counties or r.get("county") in counties)]
+    priority = {id(r): 0 if flag(r) in ("MATCH", "REVIEW") else 1 for r in out}
+    out.sort(key=lambda r: (priority[id(r)], date_key(r)))
     return out[:limit] if limit else out
 
 
@@ -164,7 +171,8 @@ def _fetch_appraiser(rec: dict, session, dbg: Path | None, idx: int) -> dict:
 def enrich_records(records: list[dict], counties: list[str] | None = None,
                    limit: int | None = 200, out_path: str | Path | None = None,
                    debug_dir: str | Path | None = None, refresh_days: int = 30,
-                   read_docs: bool = True, use_browser: bool = True) -> dict:
+                   read_docs: bool = True, use_browser: bool = True,
+                   fail_retry_days: int = 7, max_minutes: float | None = None) -> dict:
     """Run the quick-look scrub over the selected parcels.
 
     Per parcel, in order: the county appraiser record, the clerk's case file
@@ -172,8 +180,12 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
     and — only when an API key is configured — the ReportAll parcel record.
     Every source is optional; whatever answers gets stored.
 
-    Entries younger than refresh_days are left alone, so weekly runs widen
-    coverage instead of refetching the same parcels."""
+    Good entries younger than refresh_days are left alone, and failed lookups
+    (a blocked host, an unparseable page) wait fail_retry_days before another
+    try — so each run widens coverage instead of re-hitting the same parcels.
+    max_minutes stops starting new parcels once the budget is spent (progress
+    is saved), so enrichment can never push the daily job past its timeout and
+    cost that day's data refresh."""
     out_p = Path(out_path) if out_path else DEFAULT_OUT
     store = load_enrichment(out_p)
     now = datetime.now(timezone.utc)
@@ -181,9 +193,9 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
     def is_fresh(entry: dict) -> bool:
         try:
             age = now - datetime.fromisoformat(entry["fetched_at"])
-            return entry.get("ok") and age.days < refresh_days
         except (KeyError, ValueError):
             return False
+        return age.days < (refresh_days if entry.get("ok") else fail_retry_days)
 
     targets = [r for r in select_targets(records, counties, None)
                if not is_fresh(store.get(record_key(r), {}))]
@@ -206,8 +218,13 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
 
     last_hit: dict[str, float] = {}
     n_ok = n_fail = n_cases = n_docs = n_parcels = 0
+    deadline = time.monotonic() + max_minutes * 60 if max_minutes else None
     try:
         for i, r in enumerate(targets):
+            if deadline and time.monotonic() > deadline:
+                log.info("Time budget (%s min) reached after %d of %d parcels; "
+                         "the rest go first next run", max_minutes, i, len(targets))
+                break
             entry: dict = {"fetched_at": now.isoformat(timespec="seconds"), "ok": False}
             if r.get("appraiser_url"):
                 entry["url"] = r["appraiser_url"]
@@ -274,7 +291,7 @@ def enrich_records(records: list[dict], counties: list[str] | None = None,
 
     out_p.parent.mkdir(parents=True, exist_ok=True)
     out_p.write_text(json.dumps(store, indent=0, sort_keys=True), encoding="utf-8")
-    summary = {"attempted": len(targets), "ok": n_ok, "failed": n_fail,
+    summary = {"attempted": n_ok + n_fail, "queued": len(targets), "ok": n_ok, "failed": n_fail,
                "case_files": n_cases, "docs_read": n_docs,
                "reportall_parcels": n_parcels, "store_total": len(store)}
     log.info("Enrichment done: %s", summary)
