@@ -203,6 +203,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
   #scr-dashboard table.table td:last-child{position:absolute;top:14px;right:16px;padding:0!important;width:auto!important}
 }
 #login-overlay{display:grid}
+@media (max-width:640px){#btn-signup{display:none}}
 /* On phones the map quick card becomes a bottom sheet and the map shrinks. */
 @media (max-width:640px){
   #quick-card{top:auto!important;bottom:0!important;left:0!important;right:0!important;width:auto!important}
@@ -277,10 +278,12 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
 </div>
 
 <div id="login-overlay" hidden style="position:fixed;inset:0;z-index:60;place-items:center;padding:20px;background:color-mix(in srgb, var(--color-neutral-900) 45%, transparent)">
-  <form id="login-form" class="blueprint" style="width:min(360px,100%);background:var(--color-bg);padding:24px 26px">
+  <form id="login-form" class="blueprint" style="width:min(380px,100%);background:var(--color-bg);padding:24px 26px">
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-    <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:2px">Sign in</div>
-    <div class="text-muted" style="font-size:12.5px;margin-bottom:16px">Your lists, notes and positions follow you to any device.</div>
+    <div id="login-title" style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:2px">Sign in</div>
+    <div id="login-sub" class="text-muted" style="font-size:12.5px;margin-bottom:16px">Your lists, notes and positions follow you to any device.</div>
+    <div class="field" id="login-name-wrap" hidden style="margin-bottom:12px"><label>Your name or company</label>
+      <input class="input" id="login-name" type="text" autocomplete="organization" maxlength="80"></div>
     <div class="field" style="margin-bottom:12px"><label>Email</label>
       <input class="input" id="login-email" type="email" autocomplete="username" required></div>
     <div class="field" style="margin-bottom:6px"><label>Password</label>
@@ -291,8 +294,9 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
       <button class="btn btn-ghost" type="button" id="login-forgot" style="font-size:12.5px;padding:2px 4px">Forgot password?</button>
       <button class="btn btn-ghost" type="button" id="login-cancel" style="font-size:12.5px;padding:2px 4px">Cancel</button>
     </div>
-    <div class="text-muted" style="font-size:11px;margin-top:12px">No self sign-up &mdash; accounts are set up by your workspace admin.</div>
+    <div id="login-switch" style="border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13px;text-align:center"></div>
   </form>
+  <div id="checkout-step" class="blueprint" hidden style="width:min(400px,100%);background:var(--color-bg);padding:24px 26px"></div>
 </div>
 
 <div id="undo-toast" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:70;background:var(--color-action);color:var(--color-action-text);padding:10px 16px;display:flex;gap:16px;align-items:center;box-shadow:var(--shadow-lg);font-size:13.5px;max-width:calc(100% - 32px)"></div>
@@ -344,11 +348,35 @@ const PRICE_MONTHLY = "$297";
 const PRICE_YEARLY  = "$997";
 const FREE_DAYS = 5;                            // Free tier: auctions within this many days
 const UPGRADE_FALLBACK = "../#pricing";         // landing page pricing anchor (app is at /app/)
-const upgradeUrl = () => STRIPE_MONTHLY_URL || UPGRADE_FALLBACK;
-const openUpgrade = () => window.open(upgradeUrl(), "_blank", "noopener");
-// A small "Upgrade to unlock" link used in place of a gated control.
+// Self-serve account creation (supabase/functions/signup): the account is
+// created confirmed server-side, so no confirmation email is needed to get in.
+const SIGNUP_FN_URL = `${SUPABASE_URL}/functions/v1/signup`;
+// A Stripe checkout for the signed-in account. client_reference_id ties the
+// payment to this exact account (the webhook upgrades it) and prefilled_email
+// saves retyping. Promo codes (e.g. a first month free) are entered at checkout.
+function checkoutUrl(plan) {
+  const base = plan === "yearly" ? STRIPE_YEARLY_URL : STRIPE_MONTHLY_URL;
+  if (!base) return UPGRADE_FALLBACK;
+  const u = CLOUD && CLOUD.user;
+  if (!u) return base;
+  const q = new URLSearchParams();
+  if (u.email) q.set("prefilled_email", u.email);
+  q.set("client_reference_id", u.id);
+  return base + (base.includes("?") ? "&" : "?") + q.toString();
+}
+// Every upgrade entry point lands here: signed out -> create an account first
+// (the plan is remembered); signed in -> open checkout and watch for the upgrade.
+function startCheckout(plan) {
+  plan = plan === "yearly" ? "yearly" : "monthly";
+  if (!(CLOUD && CLOUD.user)) { PENDING_PLAN = plan; openAuth("signup"); return; }
+  window.open(checkoutUrl(plan), "_blank", "noopener");
+  watchForUpgrade(false);
+}
+const openUpgrade = () => startCheckout("monthly");
+// A small "Upgrade to unlock" link used in place of a gated control; clicks go
+// through the [data-upgrade] delegate wired at boot.
 const upgradeChip = (label) =>
-  `<a href="${esc(upgradeUrl())}" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:12.5px;padding:6px 14px">🔒 ${esc(label || "Upgrade to unlock")}</a>`;
+  `<a href="#" data-upgrade="monthly" class="btn btn-secondary" style="font-size:12.5px;padding:6px 14px">🔒 ${esc(label || "Upgrade to unlock")}</a>`;
 // The signed-in account's access tier, from the profiles row ("free" | "pro").
 // A signed-out visitor is "free". isPaid() is the single gate for every limit.
 let PLAN_TIER = "free";
@@ -465,6 +493,15 @@ function pushUndo(label, undoFn) {
   $("undo-btn").onclick = () => { el.hidden = true; clearTimeout(_undoTimer); undoFn(); };
   clearTimeout(_undoTimer);
   _undoTimer = setTimeout(() => { el.hidden = true; }, 6000);
+}
+
+// A short informational toast (no action), sharing the undo toast's slot.
+function showNotice(msg, ms = 7000) {
+  const el = $("undo-toast"); if (!el) return;
+  el.innerHTML = `<span>${esc(msg)}</span>`;
+  el.hidden = false;
+  clearTimeout(_undoTimer);
+  _undoTimer = setTimeout(() => { el.hidden = true; }, ms);
 }
 
 // ---------- persisted team state (browser-local) ----------
@@ -761,6 +798,7 @@ const SYNC_MAP = {
 // Which team (customer workspace) this account belongs to — from the profiles
 // row, set by the operator at onboarding. Every workspace is isolated by RLS.
 let TEAM_ID = null;
+let TEAM_NAME = "";         // workspace display name (self-serve accounts get their own)
 let IS_ADMIN = false;        // operator flag from the profile row — gates dev-only controls
 let WORKSPACE_ERROR = false; // signed in but profile/team missing — shown, never silent
 let SYNC_ERROR = false;      // a cloud write failed — banner until the next success
@@ -861,21 +899,28 @@ async function onSignedIn(user) {
   $("login-overlay").hidden = true;
   const sb = CLOUD.sb;
   try {
-    // The profiles row names this account's team workspace (and flags the
-    // platform operator). A missing profile/team means the account wasn't fully
-    // onboarded — fail VISIBLY rather than syncing into the wrong workspace.
-    const { data: profile } = await sb.from("profiles").select("team_id, is_admin").eq("id", user.id).maybeSingle();
+    // The profile names this account's team workspace, plan, and operator flag.
+    // ensure_my_profile() also gives a brand-new self-serve account its own
+    // private workspace on the Free plan, and applies any payment that arrived
+    // before the account existed. If it can't be reached, fall back to reading
+    // the row; a still-missing workspace fails VISIBLY rather than syncing wrong.
+    const name = PENDING_NAME || (user.user_metadata && user.user_metadata.name) || null;
+    PENDING_NAME = null;
+    let profile = null;
+    const ens = await sb.rpc("ensure_my_profile", { p_name: name });
+    if (!ens.error && ens.data && ens.data[0]) profile = ens.data[0];
+    else {
+      console.warn("ensure_my_profile failed:", ens.error);
+      const { data: p } = await sb.from("profiles").select("team_id, is_admin, plan").eq("id", user.id).maybeSingle();
+      profile = p;
+    }
     if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; renderAccount(); return; }
     WORKSPACE_ERROR = false;
     TEAM_ID = profile.team_id;
+    TEAM_NAME = profile.team_name || "";
     IS_ADMIN = !!profile.is_admin;
+    PLAN_TIER = profile.plan === "pro" ? "pro" : "free";
     renderAccount();   // reflect admin (Refresh appears in the account menu)
-    // Access tier — fetched separately and defensively so a not-yet-migrated
-    // `plan` column can't break sign-in: any error just leaves the user on free.
-    try {
-      const { data: pr } = await sb.from("profiles").select("plan").eq("id", user.id).maybeSingle();
-      PLAN_TIER = pr && pr.plan === "pro" ? "pro" : "free";
-    } catch (e) { PLAN_TIER = "free"; }
 
     // First contact: merge this device's local state with the cloud. Cloud wins
     // per key; anything only known locally is kept (union). After this the cloud
@@ -924,6 +969,7 @@ async function onSignedIn(user) {
   } catch (e) { console.warn("first sync failed:", e); }
   renderAccount();
   if (DATA.length) rerender();
+  afterSignedIn();
 }
 
 function onSignedOut() {
@@ -932,6 +978,7 @@ function onSignedOut() {
     CLOUD.channels = []; CLOUD.user = null;
   }
   TEAM_ID = null;
+  TEAM_NAME = "";
   IS_ADMIN = false;
   PLAN_TIER = "free";
   WORKSPACE_ERROR = false;
@@ -954,10 +1001,12 @@ async function initCloud() {
     const { createClient } = await import(SUPABASE_SDK);
     const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, { auth: { persistSession: true, autoRefreshToken: true } });
     CLOUD = { sb, user: null, channels: [] };
-    sb.auth.onAuthStateChange((_event, session) => {
+    sb.auth.onAuthStateChange((event, session) => {
       const u = session && session.user;
       if (u && (!CLOUD.user || CLOUD.user.id !== u.id)) onSignedIn(u);
       else if (!u && CLOUD.user) onSignedOut();
+      // A password-reset link signs the person in; send them to set a new one.
+      if (event === "PASSWORD_RECOVERY") { go("settings"); setTimeout(() => openPasswordBox("Set a new password for your account."), 60); }
     });
   } catch (e) {
     console.warn("sync unavailable:", e);
@@ -1002,33 +1051,175 @@ function renderAccount() {
     $("acct-signout").onclick = () => { _acctMenuOpen = false; CLOUD.sb.auth.signOut(); };
   } else {
     _acctMenuOpen = false;
-    box.innerHTML = `<button class="btn btn-primary" id="btn-signin" style="font-size:13px;height:38px">Sign in</button>`;
-    $("btn-signin").onclick = () => {
-      $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
-      $("login-overlay").hidden = false;
-      $("login-email").focus();
-    };
+    box.innerHTML = `<div style="display:flex;gap:8px">
+      <button class="btn btn-secondary" id="btn-signin" style="font-size:13px;height:38px">Sign in</button>
+      <button class="btn btn-primary" id="btn-signup" style="font-size:13px;height:38px">Start free</button></div>`;
+    $("btn-signin").onclick = () => openAuth("signin");
+    $("btn-signup").onclick = () => openAuth("signup");
   }
 }
 
+// The sign-in overlay doubles as "Create account"; openAuth(mode) shows it.
+let AUTH_MODE = "signin";
+let PENDING_PLAN = null;   // plan picked before the account existed ("monthly" | "yearly")
+let PENDING_NAME = null;   // name typed at signup — labels the new workspace
+let RETURNED_FROM_CHECKOUT = false;
+const planLabel = (plan) => plan === "yearly" ? `${PRICE_YEARLY}/yr` : `${PRICE_MONTHLY}/mo`;
+
+function setAuthMode(mode) {
+  AUTH_MODE = mode === "signup" ? "signup" : "signin";
+  const up = AUTH_MODE === "signup";
+  $("login-form").hidden = false; $("checkout-step").hidden = true;
+  $("login-title").textContent = up ? "Create your account" : "Sign in";
+  $("login-sub").innerHTML = up
+    ? (PENDING_PLAN
+        ? `Step 1 of 2 &mdash; create your login. Next is secure checkout for <b>${planLabel(PENDING_PLAN)}</b>, where you can enter a promo code.`
+        : `Free to start &mdash; the next ${FREE_DAYS} days of auctions. Upgrade any time.`)
+    : "Your lists, notes and positions follow you to any device.";
+  $("login-name-wrap").hidden = !up;
+  $("login-pass").autocomplete = up ? "new-password" : "current-password";
+  $("login-pass").placeholder = up ? "At least 8 characters" : "";
+  $("login-submit").textContent = up ? "Create account" : "Sign in";
+  $("login-forgot").hidden = up;
+  $("login-error").textContent = "";
+  $("login-switch").innerHTML = up
+    ? 'Already have an account? <button type="button" class="btn btn-ghost" id="login-to-signin" style="font-size:13px;padding:2px 4px;font-weight:600">Sign in</button>'
+    : 'New here? <button type="button" class="btn btn-ghost" id="login-to-signup" style="font-size:13px;padding:2px 4px;font-weight:600">Create a free account</button>';
+  const a = $("login-to-signin"), b = $("login-to-signup");
+  if (a) a.onclick = () => setAuthMode("signin");
+  if (b) b.onclick = () => setAuthMode("signup");
+}
+
+function openAuth(mode) {
+  setAuthMode(mode);
+  if (!CLOUD) $("login-error").textContent = "Sync service unreachable — check your connection and reload.";
+  $("login-overlay").hidden = false;
+  (AUTH_MODE === "signup" ? $("login-name") : $("login-email")).focus();
+}
+
+// After signing up (or in) with a plan in mind: one explicit click opens Stripe
+// (a real click keeps popup blockers out of the way), with the promo-code note.
+function showCheckoutStep(plan) {
+  PENDING_PLAN = null;
+  const yearly = plan === "yearly", other = yearly ? "monthly" : "yearly";
+  $("checkout-step").innerHTML = `${CORNERS}
+    <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:4px">You&rsquo;re in. One more step.</div>
+    <div class="text-muted" style="font-size:13px;margin-bottom:16px">Finish at Stripe&rsquo;s secure checkout. <b>Have a promo code?</b> Enter it there.</div>
+    <button class="btn btn-primary" type="button" id="co-go" style="width:100%">Continue to checkout &middot; ${planLabel(plan)}</button>
+    <div style="display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12.5px">
+      <button class="btn btn-ghost" type="button" id="co-switch" style="font-size:12.5px;padding:2px 4px">Switch to ${other} &middot; ${planLabel(other)}</button>
+      <button class="btn btn-ghost" type="button" id="co-later" style="font-size:12.5px;padding:2px 4px">Not now</button>
+    </div>
+    <div class="text-muted" style="font-size:11.5px;margin-top:12px">Checkout opens in a new tab. Come back here when you&rsquo;re done &mdash; your account unlocks automatically.</div>`;
+  $("login-form").hidden = true; $("checkout-step").hidden = false;
+  $("login-overlay").hidden = false;
+  $("co-go").onclick = () => { $("login-overlay").hidden = true; startCheckout(plan); };
+  $("co-switch").onclick = () => showCheckoutStep(other);
+  $("co-later").onclick = () => { $("login-overlay").hidden = true; };
+}
+
+// Once checkout opens (or Stripe sends them back with ?upgraded=1), re-read the
+// plan whenever they return to this tab, retrying briefly while the webhook
+// lands, and flip the board to Full access without a reload.
+let _upgradeWatch = null;
+function watchForUpgrade(now) {
+  if (_upgradeWatch) { if (now) _upgradeWatch.burst(); return; }
+  let timer = null, tries = 0;
+  const stop = () => {
+    clearInterval(timer);
+    document.removeEventListener("visibilitychange", onBack);
+    window.removeEventListener("focus", onBack);
+    _upgradeWatch = null;
+  };
+  const check = async () => {
+    if (!(CLOUD && CLOUD.user) || isPaid()) { stop(); return; }
+    const { data } = await CLOUD.sb.from("profiles").select("plan").eq("id", CLOUD.user.id).maybeSingle();
+    if (data && data.plan === "pro") {
+      PLAN_TIER = "pro"; stop(); renderAccount(); rerender();
+      showNotice("You're on Full access — every date, the land check, downloads and lists are unlocked.", 9000);
+    }
+  };
+  const burst = () => {
+    clearInterval(timer); tries = 0; check();
+    timer = setInterval(() => { if (++tries > 20) clearInterval(timer); else check(); }, 3000);
+  };
+  const onBack = () => { if (document.visibilityState === "visible") burst(); };
+  document.addEventListener("visibilitychange", onBack);
+  window.addEventListener("focus", onBack);
+  _upgradeWatch = { stop, burst };
+  if (now) burst();
+}
+
+function afterSignedIn() {
+  if (RETURNED_FROM_CHECKOUT) {
+    RETURNED_FROM_CHECKOUT = false;
+    if (isPaid()) showNotice("You're on Full access — welcome aboard.", 9000);
+    else watchForUpgrade(true);
+  }
+  if (PENDING_PLAN) {
+    if (isPaid()) { PENDING_PLAN = null; showNotice("You already have Full access."); }
+    else showCheckoutStep(PENDING_PLAN);
+  }
+}
+
+// Deep links from the landing page and Stripe: ?signup=1 opens "Create
+// account", ?plan=monthly|yearly carries the chosen plan through signup to
+// checkout, and ?upgraded=1 (Stripe's return) re-checks the plan until the
+// upgrade lands. Returns the auth mode to open if nobody is signed in.
+function readDeepLink() {
+  const p = new URLSearchParams(location.search);
+  const plan = p.get("plan");
+  if (plan === "monthly" || plan === "yearly") PENDING_PLAN = plan;
+  RETURNED_FROM_CHECKOUT = p.has("upgraded");
+  const signup = p.has("signup");
+  if (plan || signup || RETURNED_FROM_CHECKOUT) {
+    ["plan", "signup", "upgraded"].forEach((k) => p.delete(k));
+    const qs = p.toString();
+    history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+  }
+  return signup || PENDING_PLAN ? "signup" : RETURNED_FROM_CHECKOUT ? "signin" : null;
+}
+
 function wireLogin() {
-  $("login-cancel").onclick = () => { $("login-overlay").hidden = true; };
+  $("login-cancel").onclick = () => { $("login-overlay").hidden = true; PENDING_PLAN = null; };
   $("login-form").onsubmit = async (e) => {
     e.preventDefault();
     if (!CLOUD) return;
+    const email = $("login-email").value.trim(), pass = $("login-pass").value;
     $("login-error").textContent = "";
     $("login-submit").disabled = true;
     try {
-      await cloudSignIn($("login-email").value.trim(), $("login-pass").value);
+      if (AUTH_MODE === "signup") {
+        if (pass.length < 8) throw new Error("Use a password of at least 8 characters.");
+        const name = $("login-name").value.trim();
+        let res, out = {};
+        try {
+          res = await fetch(SIGNUP_FN_URL, { method: "POST", headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password: pass, name }) });
+          out = await res.json().catch(() => ({}));
+        } catch (netErr) { throw new Error("Couldn't reach the server — check your connection and try again."); }
+        if (res.status === 409) {
+          setAuthMode("signin");
+          $("login-email").value = email;
+          $("login-error").textContent = "You already have an account — sign in with your password.";
+          $("login-submit").disabled = false;
+          return;
+        }
+        if (!res.ok) throw new Error(out.message || "Couldn't create the account — please try again.");
+        PENDING_NAME = name || null;
+      }
+      await cloudSignIn(email, pass);
       $("login-pass").value = "";
     } catch (err) {
-      const msg = ((err && err.message) || "").toLowerCase();
+      const raw = (err && err.message) || "";
+      const msg = raw.toLowerCase();
       $("login-error").textContent =
-        /invalid login|invalid credentials|email not confirmed/.test(msg)
-          ? "Email or password doesn't match. Try again, or use Forgot password."
-          : /rate limit|too many/.test(msg)
-            ? "Too many attempts — wait a minute and try again."
-            : "Couldn't sign in (" + ((err && err.message) || "network") + ").";
+        AUTH_MODE === "signup" ? raw
+          : /invalid login|invalid credentials|email not confirmed/.test(msg)
+            ? "Email or password doesn't match. Try again, or use Forgot password."
+            : /rate limit|too many/.test(msg)
+              ? "Too many attempts — wait a minute and try again."
+              : "Couldn't sign in (" + (raw || "network") + ").";
     }
     $("login-submit").disabled = false;
   };
@@ -1036,10 +1227,10 @@ function wireLogin() {
     if (!CLOUD) return;
     const email = $("login-email").value.trim();
     if (!email) { $("login-error").textContent = "Type your email above first, then tap Forgot password."; return; }
-    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(email);
-    $("login-error").textContent = error
-      ? "Couldn't send the reset email (" + error.message + ")."
-      : "Reset email sent to " + email + " — check your inbox.";
+    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+    $("login-error").innerHTML = error
+      ? "Couldn't send the reset email (" + esc(error.message) + ")."
+      : `If ${esc(email)} has an account, a reset link is on its way. Nothing after a few minutes? Email <a href="mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(BRAND + " password reset")}">${SUPPORT_EMAIL}</a>.`;
   };
 }
 
@@ -3521,6 +3712,12 @@ function exportRowsPdf(rows, title, subtitle) {
   };
 }
 
+// Reveal the in-app "new password" field (Settings), e.g. after a reset link.
+function openPasswordBox(msg) {
+  const box = $("pw-box"); if (!box) return;
+  box.hidden = false; $("pw-msg").textContent = msg || ""; $("pw-new").focus();
+}
+
 // ---------- settings screen: the person's account + workspace ----------
 function renderSettings() {
   const signedIn = !!(CLOUD && CLOUD.user);
@@ -3537,18 +3734,23 @@ function renderSettings() {
               <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Signed in as</div>
                 <div style="font-weight:500;overflow-wrap:anywhere">${esc(CLOUD.user.email)}</div></div>
               <div><div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase" class="text-muted">Workspace</div>
-                <div style="font-weight:500">${esc(TEAM_ID || "—")}${IS_ADMIN ? ' <span class="tag tag-accent">admin</span>' : ""}</div></div>
+                <div style="font-weight:500">${esc(TEAM_NAME || TEAM_ID || "—")}${IS_ADMIN ? ' <span class="tag tag-accent">admin</span>' : ""}</div></div>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
               <button class="btn btn-secondary" id="acct-password" style="font-size:12.5px;padding:5px 11px">Change password</button>
               <button class="btn btn-ghost" id="acct-signout" style="font-size:12.5px;padding:5px 9px">Sign out</button>
             </div>
+            <div id="pw-box" hidden style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+              <input class="input" id="pw-new" type="password" autocomplete="new-password" placeholder="New password (8+ characters)" style="flex:1;min-width:180px">
+              <button class="btn btn-primary" id="pw-save" style="font-size:12.5px;padding:6px 13px">Save password</button>
+            </div>
+            <div id="pw-msg" class="text-muted" style="font-size:12.5px;margin-top:6px"></div>
             <div style="font-size:12.5px;margin-top:12px" class="text-muted">Your lists, notes and positions sync to this account on every device you sign in on.</div>`
           : `<div style="font-size:13.5px;margin-bottom:10px">You&rsquo;re not signed in.</div>
              <div class="text-muted" style="font-size:12.5px;margin-bottom:12px">${SYNC_ON
                ? "Lists, notes and your buy box are saved in this browser only. Sign in to carry them to your phone and every other device."
                : "Lists, notes and your buy box are saved in this browser."}</div>
-             ${SYNC_ON ? '<button class="btn btn-primary" id="acct-signin">Sign in</button>' : ""}`}
+             ${SYNC_ON ? '<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-primary" id="acct-signup">Create free account</button><button class="btn btn-secondary" id="acct-signin">Sign in</button></div>' : ""}`}
         </div>
 
         <div class="blueprint" style="padding:18px 20px">${CORNERS}
@@ -3572,7 +3774,7 @@ function renderSettings() {
               <button class="btn btn-primary" id="sub-monthly" style="font-size:12.5px;padding:6px 13px">Go monthly &middot; ${PRICE_MONTHLY}/mo</button>
               <button class="btn btn-secondary" id="sub-yearly" style="font-size:12.5px;padding:6px 13px">Go yearly &middot; ${PRICE_YEARLY}/yr</button>
             </div>
-            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee.</div>`}
+            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee. Have a promo code? Enter it at checkout.</div>`}
         </div>
       </div>
 
@@ -3590,26 +3792,26 @@ function renderSettings() {
   $("scr-settings").querySelectorAll("[data-theme-mode]").forEach((b) => b.onclick = () => setThemeMode(b.dataset.themeMode));
   const so = $("acct-signout");
   if (so) so.onclick = () => CLOUD.sb.auth.signOut();
-  const si = $("acct-signin");
-  if (si) si.onclick = () => {
-    $("login-error").textContent = CLOUD ? "" : "Sync service unreachable — check your connection and reload.";
-    $("login-overlay").hidden = false; $("login-email").focus();
-  };
-  const pw = $("acct-password");
-  if (pw) pw.onclick = async () => {
-    if (!CLOUD || !CLOUD.user) return;
-    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(CLOUD.user.email);
-    alert(error ? "Couldn't send the reset email (" + error.message + ")."
-                : "Password reset email sent to " + CLOUD.user.email + " — check your inbox.");
+  const si = $("acct-signin"); if (si) si.onclick = () => openAuth("signin");
+  const su = $("acct-signup"); if (su) su.onclick = () => openAuth("signup");
+  const pw = $("acct-password"); if (pw) pw.onclick = () => openPasswordBox("");
+  const ps = $("pw-save");
+  if (ps) ps.onclick = async () => {
+    const v = $("pw-new").value;
+    if (v.length < 8) { $("pw-msg").textContent = "Use at least 8 characters."; return; }
+    ps.disabled = true;
+    const { error } = await CLOUD.sb.auth.updateUser({ password: v });
+    ps.disabled = false;
+    $("pw-msg").textContent = error ? "Couldn't update the password (" + error.message + ")." : "Password updated.";
+    if (!error) { $("pw-new").value = ""; $("pw-box").hidden = true; }
   };
   const mailto = (subject) => {
     const who = signedIn ? CLOUD.user.email : "(not signed in)";
     return `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}`
          + `&body=${encodeURIComponent(`Account: ${who}\nWorkspace: ${TEAM_ID || "—"}\n\n`)}`;
   };
-  const openLink = (url) => window.open(url || UPGRADE_FALLBACK, "_blank", "noopener");
-  const sm = $("sub-monthly"); if (sm) sm.onclick = () => openLink(STRIPE_MONTHLY_URL);
-  const sy = $("sub-yearly");  if (sy) sy.onclick = () => openLink(STRIPE_YEARLY_URL);
+  const sm = $("sub-monthly"); if (sm) sm.onclick = () => startCheckout("monthly");
+  const sy = $("sub-yearly");  if (sy) sy.onclick = () => startCheckout("yearly");
   const smg = $("sub-manage"); if (smg) smg.onclick = () => {
     if (STRIPE_PORTAL_URL) window.open(STRIPE_PORTAL_URL, "_blank", "noopener");
     else window.location.href = mailto(`${BRAND} — manage my subscription`);
@@ -3688,7 +3890,22 @@ function initTheme() {
     const pop = $("county-pop"), btn = $("f-county-btn");
     if (pop && !pop.contains(e.target) && btn && !btn.contains(e.target)) { S.countyOpen = false; renderDashboard(); }
   });
-  initCloud();                      // no await — sync comes up alongside the feed
+  const authFromLink = readDeepLink();   // ?signup / ?plan / ?upgraded
+  // No await — sync comes up alongside the feed. A deep link opens the account
+  // form once we know nobody is signed in (a signed-in visitor continues in
+  // afterSignedIn instead).
+  initCloud().then(async () => {
+    if (!authFromLink || !CLOUD) return;
+    const { data } = await CLOUD.sb.auth.getSession();
+    if (!(data && data.session)) openAuth(authFromLink);
+  });
+  // Every "Upgrade" chip routes through startCheckout (signup first if needed).
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("[data-upgrade]");
+    if (!a) return;
+    e.preventDefault();
+    startCheckout(a.dataset.upgrade);
+  });
   { const b = $("brand"); if (b) b.onclick = (e) => { e.preventDefault(); go("home"); }; }
   { const s = $("btn-settings"); if (s) s.onclick = () => go("settings"); }
   { const q = $("q"); if (q) q.oninput = (e) => { S.q = e.target.value; S.shown = 150; if (S.screen !== "dashboard") go("dashboard"); else renderDashboard(); }; }

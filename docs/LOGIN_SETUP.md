@@ -7,8 +7,39 @@ device. Lists marked **Shared with team** and the team's buy box are live for
 everyone on the team — a parcel one teammate adds shows up on another's screen
 within a second or two.
 
-Signup is **closed**: there is no sign-up form. The operator creates every
-account, so the accounts that exist are the entire access list.
+Signup is **self-serve**: anyone can create an account from the app ("Start
+free" / "Create account") or from the landing page's pricing buttons. New
+accounts start on the **Free** plan in their own private workspace; paying
+through Stripe upgrades them automatically. The operator can still create
+accounts by hand (below) — e.g. demo or comp accounts.
+
+### How a customer gets in (the self-serve flow)
+
+1. **Create account** — the app posts name/email/password to the `signup` edge
+   function, which creates the user *already confirmed* (service role,
+   `email_confirm: true`). This is deliberate: the project requires email
+   confirmation, and Supabase's built-in mailer only delivers to the project's
+   own team, so a customer's confirmation email would never arrive. The
+   function validates input and rate-limits 10 signups/IP/hour
+   (`signup_attempts`).
+2. **First sign-in** — the app calls `ensure_my_profile()`, which creates the
+   profile + a private team (`u-…`, named after what they typed) on Free, and
+   applies any payment that was parked for their email (see step 4).
+3. **Upgrade** — every upgrade button opens the Stripe payment link with
+   `client_reference_id=<user id>` and `prefilled_email=<login email>`. Promo
+   codes (e.g. FEEDBACK) are entered on the Stripe page. If they came in
+   through a landing "Subscribe" button, the app shows a "Continue to
+   checkout" step right after signup.
+4. **Webhook** (`stripe-webhook`) — on `checkout.session.completed` it upgrades
+   the account by `client_reference_id` (`set_plan_by_user`), else by the paid
+   email (`set_plan_by_email`). If no account exists for that email yet, the
+   entitlement is **parked** in `pending_entitlements` and applied the moment
+   that email signs up. The app re-checks the plan when the customer returns to
+   its tab and unlocks without a reload.
+
+Deep links: `/app/?signup=1` opens Create account; add `&plan=monthly` or
+`&plan=yearly` to go straight on to checkout after signup; `?upgraded=1` (a
+good Stripe "after payment" redirect) re-checks the plan on return.
 
 ## How it's wired
 
@@ -75,8 +106,10 @@ example values. This is the whole per-customer setup — no code changes.
    select id, 'acme', false, email from new_user;
    ```
 
-3. Give each person their email + temporary password. The dashboard's
-   **Forgot password?** link emails a reset so they can set their own.
+3. Give each person their email + temporary password. Once signed in they can
+   set their own under **Settings → Change password** (in-app, no email needed).
+   The **Forgot password?** link sends a reset email, which only reaches
+   customers once a custom SMTP sender is configured (see Notes).
 
 That's it — same dashboard, same feed, isolated workspace. To seed a team's
 starting buy box (their real counties/criteria), upsert a `team_state` row with
@@ -91,8 +124,10 @@ the list is there.
 
 ## Notes
 
-- **Password resets** use Supabase's built-in email. For heavy use, attach a
-  custom SMTP sender in the project's Auth settings.
+- **Password resets** use Supabase's built-in email, which only delivers to the
+  project's own team members — **customers won't receive reset emails until a
+  custom SMTP sender** (e.g. Resend) is set in Auth → SMTP settings. Signup does
+  not depend on email; signed-in users can change their password in-app.
 - **Authorized redirect/site URL**: set the project's Auth **Site URL** to the
   app origin (`https://frankhatfellaaiagent-del.github.io`, plus any custom
   domain) so password-reset links point back to the app.

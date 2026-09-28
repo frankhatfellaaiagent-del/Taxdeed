@@ -1,10 +1,12 @@
 // Stripe -> app access webhook.
 //
-// When someone subscribes (with the same email as their app login), flip their
-// account to Paid so they get in right away; when a subscription is cancelled or
-// lapses, drop them back to Free. All mapping happens through two SECURITY
-// DEFINER RPCs (set_plan_by_email / set_plan_by_customer) so this function never
-// needs to read auth.users directly.
+// When someone subscribes, flip their account to Paid so they get in right away;
+// when a subscription is cancelled or lapses, drop them back to Free. The app
+// sends each checkout with client_reference_id = the signed-in user's id, so the
+// payment maps to that exact account even if they pay with another email; the
+// paid email is the fallback, and a payment for an email with no account yet is
+// parked and applied when that account is created. All mapping goes through
+// SECURITY DEFINER RPCs (set_plan_by_user / _email / _customer).
 //
 // Auth: this endpoint is called by Stripe, unauthenticated, so it is deployed
 // with verify_jwt = false and instead verifies Stripe's signature on every
@@ -31,6 +33,16 @@ const supabase = createClient(
   { auth: { persistSession: false } },
 );
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+// supabase-js reports RPC failures in the result instead of throwing; throw so
+// the handler returns 500 and Stripe retries the event.
+async function rpc<T>(fn: string, args: Record<string, unknown>): Promise<T> {
+  const { data, error } = await supabase.rpc(fn, args);
+  if (error) throw new Error(`${fn}: ${error.message}`);
+  return data as T;
+}
+
 const customerId = (c: unknown): string | null =>
   typeof c === "string" ? c : (c && typeof c === "object" && "id" in c ? (c as { id: string }).id : null);
 
@@ -52,18 +64,27 @@ Deno.serve(async (req) => {
       const s = event.data.object as Stripe.Checkout.Session;
       const email = s.customer_details?.email ?? s.customer_email ?? null;
       const customer = customerId(s.customer);
-      if (email && (s.mode === "subscription" || s.payment_status === "paid")) {
-        await supabase.rpc("set_plan_by_email", { p_email: email, p_plan: "pro", p_customer: customer });
+      if (s.mode === "subscription" || s.payment_status === "paid") {
+        let applied = false;
+        const ref = s.client_reference_id;
+        if (ref && UUID_RE.test(ref)) {
+          applied = await rpc<boolean>("set_plan_by_user", { p_user: ref, p_plan: "pro", p_customer: customer });
+        }
+        if (!applied && email) {
+          await rpc("set_plan_by_email", { p_email: email, p_plan: "pro", p_customer: customer });
+          applied = true;
+        }
+        if (!applied) console.warn("checkout.session.completed with no account match:", s.id);
       }
     } else if (event.type === "customer.subscription.created" || event.type === "customer.subscription.updated") {
       const sub = event.data.object as Stripe.Subscription;
       const customer = customerId(sub.customer);
       const active = ["active", "trialing", "past_due"].includes(sub.status);
-      if (customer) await supabase.rpc("set_plan_by_customer", { p_customer: customer, p_plan: active ? "pro" : "free" });
+      if (customer) await rpc("set_plan_by_customer", { p_customer: customer, p_plan: active ? "pro" : "free" });
     } else if (event.type === "customer.subscription.deleted") {
       const sub = event.data.object as Stripe.Subscription;
       const customer = customerId(sub.customer);
-      if (customer) await supabase.rpc("set_plan_by_customer", { p_customer: customer, p_plan: "free" });
+      if (customer) await rpc("set_plan_by_customer", { p_customer: customer, p_plan: "free" });
     }
   } catch (e) {
     console.error("webhook handler error:", (e as Error).message);
