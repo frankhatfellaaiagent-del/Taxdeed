@@ -10,7 +10,7 @@ Live site: landing page at the Pages root, the app at `/app/`.
 ## Architecture
 
 ```
-GitHub Actions (daily cron, 08:00 UTC; discovery + capture Mondays only)
+GitHub Actions (daily cron, 03:17 UTC; discovery + capture Mondays only)
   └─ scraper/            Playwright collector for the county auction sites
       ├─ data/runs/<ts>/ raw per-county output (committed)
       ├─ enrich          appraiser + clerk case-file verification (best-effort)

@@ -330,9 +330,11 @@ const SUPABASE_ANON_KEY = "sb_publishable_7oPO41UqZrDS6dlpWwHwnA_up4VPiGR";
 const SYNC_ON = /^https:\/\//.test(SUPABASE_URL);
 const SUPABASE_SDK = "https://esm.sh/@supabase/supabase-js@2";
 // The one truth about the refresh schedule — every screen derives from these.
-// Keep in sync with the cron in the scraper workflow (0 8 * * * UTC).
-const SCHEDULE_UTC = { hour: 8 };                    // daily 08:00 UTC = 4:00 AM ET
-const SCHEDULE_TEXT = "morning at 4:00 AM ET";
+// Keep in sync with the cron in the scraper workflow (17 3 * * * UTC = 11:17 PM
+// ET). GitHub can start it hours late, so promise "by morning" (12:00 UTC =
+// 8 AM ET), not an exact minute.
+const SCHEDULE_UTC = { hour: 12 };                   // ready by 12:00 UTC = 8:00 AM ET
+const SCHEDULE_TEXT = "night";
 // Operators only — never rendered for customers (see isAdmin()).
 const ADMIN_ACTIONS_URL = `https://github.com/${REPO}/actions/workflows/scrape.yml`;
 const TYPES = ["Single family", "Vacant land", "Multi-family", "Commercial", "Condo/Townhome", "Mobile home"];
@@ -1646,12 +1648,12 @@ function renderNav() {
 }
 function nextRefreshText() {
   // Derived from SCHEDULE_UTC — the single source of truth for the cadence.
-  // Daily: the next 08:00 UTC, today if it hasn't passed yet, else tomorrow.
+  // Daily: the next "ready by" time, today if it hasn't passed yet, else tomorrow.
   const now = new Date();
   const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), SCHEDULE_UTC.hour, 0, 0));
   if (now.getTime() > d.getTime()) d.setUTCDate(d.getUTCDate() + 1);
   const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-  return `${DAYS[d.getUTCDay()]} ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, 4:00 AM ET`;
+  return `overnight, ready by 8:00 AM ET ${DAYS[d.getUTCDay()]} ${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`;
 }
 function go(screen, selId) {
   S.screen = screen;
