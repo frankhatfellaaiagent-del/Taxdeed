@@ -17,9 +17,12 @@ on:
         default: "@config/client_counties.txt"
         required: false
   schedule:
-    # Daily 08:00 UTC (4:00 AM ET) — yesterday's redemptions and status
-    # changes are on the board before the workday starts.
-    - cron: "0 8 * * *"
+    # Daily 03:17 UTC (11:17 PM ET). GitHub starts scheduled jobs late under
+    # load — the old 08:00 slot routinely started 4-8 hours late (12:10-16:20
+    # UTC), after the workday had begun. An early, off-the-hour slot means even
+    # a late start lands overnight, so the day's redemptions and status changes
+    # are on the board before the workday starts.
+    - cron: "17 3 * * *"
   push:
     branches: [main]
     paths:
