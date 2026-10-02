@@ -73,6 +73,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
+"alachua|05254-002-000|TD 2026-044": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000"
+},
 "alachua|05855-002-000|TD 2026-036": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05855-002-000",
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -115,6 +121,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000"
 },
+"alachua|06770-178-000|TD 2026-042": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000"
+},
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
 "fetched_at": "2026-09-28T16:22:54+00:00",
@@ -149,6 +161,18 @@
 "fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
+},
+"alachua|07836-021-003|TD 2026-043": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003"
+},
+"alachua|10032-002-000|TD 2026-045": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10032-002-000",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10032-002-000"
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
@@ -565,6 +589,12 @@
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28244-000-000"
+},
+"bay|28768-000-000|2026-4146TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000"
 },
 "bay|29282-010-000|2026-4145TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=29282-010-000",
@@ -1100,6 +1130,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|484231-AJ-0370|53958": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|484235-32-0510|54028": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -1109,6 +1145,12 @@
 "broward|484305-10-0390|54033": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|484306-CB-0160|53921": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1136,6 +1178,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494108-BA-0700|53922": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|494122-AA-0370|53995": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -1145,6 +1193,12 @@
 "broward|494123-DJ-0310|53888": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494125-HM-0590|53902": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1163,6 +1217,12 @@
 "broward|494128-13-0550|54081": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494128-DC-0190|53903": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1202,6 +1262,24 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494136-CH-0130|53924": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494202-03-1172|53942": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494202-03-1550|53957": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|494204-BH-0400|54059": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -1214,6 +1292,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494205-AH-0170|53779": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|494206-CK-0280|53676": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -1223,6 +1307,12 @@
 "broward|494211-06-5200|53731": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494212-07-2340|53956": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1274,6 +1364,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504001-68-0010|53943": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504011-01-0500|53865": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -1283,6 +1379,12 @@
 "broward|504113-04-0670|53698": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504117-CC-0310|53978": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -11993,6 +12095,102 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0080"
 },
+"jackson|02-2N-11-0086-0870-0100|1965 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100"
+},
+"jackson|02-2N-11-0086-0880-0740|1981 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0740",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0740"
+},
+"jackson|02-2N-11-0086-0880-0780|1982 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0780",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0780"
+},
+"jackson|02-2N-11-0086-0880-1100|1986 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100"
+},
+"jackson|02-2N-11-0086-0940-0050|2014 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050"
+},
+"jackson|02-2N-11-0086-1000-0170|2037 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1000-0170",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1000-0170"
+},
+"jackson|02-2N-11-0086-1110-0090|2067 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1110-0090",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1110-0090"
+},
+"jackson|02-2N-11-0086-1120-0130|2071 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130"
+},
+"jackson|02-2N-11-0086-1120-0190|2072 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190"
+},
+"jackson|02-2N-11-0087-1270-0290|2126 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290"
+},
+"jackson|02-2N-11-0087-1270-0360|2128 of 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360"
+},
+"jackson|02-2N-11-0087-1300-0200|2140 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200"
+},
+"jackson|02-2N-11-0087-1330-0030|3618 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030"
+},
+"jackson|02-2N-11-0087-1330-0050|2145 of 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050"
+},
+"jackson|02-2N-11-0087-1330-0190|2149 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0190",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0190"
+},
+"jackson|02-2N-11-0087-1350-0640|2166 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640"
+},
 "jackson|02-2N-11-0087-1380-0020|2189 of 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -12205,6 +12403,12 @@
 "source": "reportall"
 }
 },
+"jackson|02-2N-11-0087-1620-0500|2300 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1620-0500",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1620-0500"
+},
 "jackson|02-2N-11-0087-1690-0150|2326 OF 2019": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -12289,11 +12493,23 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0095-2550-0090"
 },
+"jackson|02-6N-12-0454-00C0-0130|3319 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130"
+},
 "jackson|06-5N-09-0181-0200-0082|648 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=06-5N-09-0181-0200-0082",
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=06-5N-09-0181-0200-0082"
+},
+"jackson|10-6N-11-0000-0110-0000|3105 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=10-6N-11-0000-0110-0000",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=10-6N-11-0000-0110-0000"
 },
 "jackson|12-2N-11-0000-0020-0014|2803 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=12-2N-11-0000-0020-0014",
@@ -21190,7 +21406,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95292017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-02T02:02:00+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "sale_date": "10/14/2026",
 "tax_number": "95292017",
@@ -26359,6 +26575,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328700090"
 },
+"orange|012328328741028|2024-5142": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328741028"
+},
 "orange|012328328741029|2024-5143": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -26477,6 +26699,30 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/092330733106103"
 },
+"orange|102230672900154|2024-14161": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102230672900154"
+},
+"orange|102230713009232|2024-14169": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102230713009232"
+},
+"orange|102230944514603|2024-14191": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102230944514603"
+},
+"orange|102329367100031|2024-11424": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102329367100031"
+},
 "orange|102330034406010|2024-15911": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -26525,6 +26771,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/142128594202080"
 },
+"orange|142330304300040|2024-16233": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/142330304300040"
+},
 "orange|152232233002041|2024-18390": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -26565,6 +26817,30 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329063400616"
 },
+"orange|172231630005050|2024-17342": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172231630005050"
+},
+"orange|172329895709170|2024-11869": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172329895709170"
+},
+"orange|172329895717130|2024-11881": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172329895717130"
+},
+"orange|172430000000005|2024-16792": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172430000000005"
+},
 "orange|182229700800030|2024-8271": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -26580,6 +26856,12 @@
 "parcel_address": "2711 N PINE HILLS Rd UNIT 1",
 "source": "reportall"
 }
+},
+"orange|182229805000703|2024-8307": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000703"
 },
 "orange|202231635004021|2024-17452": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -26625,6 +26907,12 @@
 "source": "reportall"
 }
 },
+"orange|232229160202112|2024-8638": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232229160202112"
+},
 "orange|232428204126203|2024-6407": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -26668,6 +26956,24 @@
 "parcel_address": "3010 DILL Rd",
 "source": "reportall"
 }
+},
+"orange|242330897700970|2024-16617": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/242330897700970"
+},
+"orange|252129546902031|2024-6678": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252129546902031"
+},
+"orange|252228035215210|2024-4529": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252228035215210"
 },
 "orange|252232621500320|2024-18949": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -26716,6 +27022,18 @@
 "parcel_address": "738 W JEFFERSON St",
 "source": "reportall"
 }
+},
+"orange|262328820301420|2024-5885": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262328820301420"
+},
+"orange|262329807008060|2024-12312": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262329807008060"
 },
 "orange|272129714004030|2024-6700": {
 "error": "no recognizable fields on page",
@@ -26769,6 +27087,48 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272230041803161"
 },
+"orange|272428064700709|2024-6476": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272428064700709"
+},
+"orange|272429011701322|2024-13389": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272429011701322"
+},
+"orange|272429814100560|2024-13419": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272429814100560"
+},
+"orange|282129062303305|2024-6741": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129062303305"
+},
+"orange|282129062306304|2024-6744": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129062306304"
+},
+"orange|282129926401620|2024-6808": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129926401620"
+},
+"orange|282129926402310|2024-6810": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129926402310"
+},
 "orange|282229920001161|2024-9235": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -26800,6 +27160,30 @@
 "parcel_address": "10967 LAKE UNDERHILL Rd STE 122",
 "source": "reportall"
 }
+},
+"orange|292329002501180|2024-12441": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292329002501180"
+},
+"orange|292431230901320|2024-18258": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292431230901320"
+},
+"orange|302130212601020|2024-13704": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302130212601020"
+},
+"orange|302229000000118|2024-9379": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302229000000118"
 },
 "orange|302229624401010|2024-9432": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -26839,6 +27223,18 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302229919500152"
 },
+"orange|302231053900960|2024-17706": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302231053900960"
+},
+"orange|302232060602890|2024-19047": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302232060602890"
+},
 "orange|302329278412000|2024-12455": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -26869,6 +27265,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312229182001600"
 },
+"orange|312229182102670|2024-9536": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312229182102670"
+},
 "orange|312233133205370|2024-19637": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -26885,11 +27287,71 @@
 "source": "reportall"
 }
 },
+"orange|312427300007020|2024-1609": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300007020"
+},
+"orange|312427300007270|2024-1616": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300007270"
+},
+"orange|312427300007370|2024-1618": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300007370"
+},
 "orange|312427300033360|2024-1670": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300033360"
+},
+"orange|312429386500280|2024-13513": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312429386500280"
+},
+"orange|322129000000006|2024-6948": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129000000006"
+},
+"orange|322129544200060|2024-6989": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129544200060"
+},
+"orange|322129544200490|2024-6990": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129544200490"
+},
+"orange|322129713403303|2024-7008": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129713403303"
+},
+"orange|322129729202110|2024-7011": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129729202110"
+},
+"orange|322130453801190|2024-13767": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322130453801190"
 },
 "orange|322130942801090|2024-13790": {
 "error": "no recognizable fields on page",
@@ -26937,6 +27399,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332229000000095"
 },
+"orange|332229899603090|2024-9841": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332229899603090"
+},
 "orange|332229901900010|2024-9877": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -26954,6 +27422,12 @@
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332229902013090"
+},
+"orange|332230216001300|2024-15081": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332230216001300"
 },
 "orange|332230323911103|2024-15105": {
 "error": "no recognizable fields on page",
@@ -27038,6 +27512,36 @@
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362129966908070"
+},
+"orange|362228641604510|2024-5011": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362228641604510"
+},
+"orange|362228866822130|2024-5034": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362228866822130"
+},
+"orange|362228921204110|2024-5058": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362228921204110"
+},
+"orange|362229313043004|2024-10207": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362229313043004"
+},
+"orange|362430497501370|2024-17013": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-02T10:28:25+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362430497501370"
 },
 "osceola|012630000102430080|1692024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080",
@@ -29857,7 +30361,7 @@
 "polk|23-27-33-0000-0001-4023|00137-2026": {
 "acreage": "0.23",
 "assessed_value": 81667.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000014023"
 },
@@ -30395,7 +30899,7 @@
 "polk|24-30-08-0000-0003-3060|00152-2026": {
 "acreage": "0.26",
 "assessed_value": 59539.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=243008000000033060"
 },
@@ -30669,7 +31173,7 @@
 "polk|25-28-11-0000-0002-3055|00154-2026": {
 "acreage": "0.25",
 "assessed_value": 59073.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811000000023055"
 },
@@ -30683,7 +31187,7 @@
 "polk|25-28-11-3378-0000-8083|00155-2026": {
 "acreage": "0.08",
 "assessed_value": 21571.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811337800008083"
 },
@@ -30698,14 +31202,14 @@
 "polk|25-28-12-3392-1000-0100|00156-2026": {
 "acreage": "0.17",
 "assessed_value": 44592.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252812339210000100"
 },
 "polk|25-28-24-3495-0000-0050|00147-2026": {
 "acreage": "0.15",
 "assessed_value": 29535.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252824349500000050"
 },
@@ -30726,7 +31230,7 @@
 "polk|25-31-32-0000-0001-1080|00157-2026": {
 "acreage": "0.22",
 "assessed_value": 3430.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=253132000000011080"
 },
@@ -30834,21 +31338,21 @@
 "polk|26-27-15-0000-0004-3110|00161-2026": {
 "acreage": "0.92",
 "assessed_value": 58616.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262715000000043110"
 },
 "polk|26-28-01-5210-1000-0520|00165-2026": {
 "acreage": "0.05",
 "assessed_value": 31547.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262801521010000520"
 },
 "polk|26-28-01-5210-3000-4260|00158-2026": {
 "acreage": "0.10",
 "assessed_value": 107559.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262801521030004260"
 },
@@ -30876,7 +31380,7 @@
 "polk|26-28-19-5536-7100-1050|00174-2026": {
 "acreage": "0.15",
 "assessed_value": 42793.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262819553671001050"
 },
@@ -30988,7 +31492,7 @@
 "polk|27-26-12-0000-0004-3040|00175-2026": {
 "acreage": "0.39",
 "assessed_value": 51469.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272612000000043040"
 },
@@ -31016,14 +31520,14 @@
 "polk|27-27-25-7578-6200-0140|00171-2026": {
 "acreage": "0.15",
 "assessed_value": 50602.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272725757862000140"
 },
 "polk|27-28-09-0000-0002-4150|00168-2026": {
 "acreage": "0.17",
 "assessed_value": 38687.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272809000000024150"
 },
@@ -31037,7 +31541,7 @@
 "polk|27-28-35-0000-0004-1120|00170-2026": {
 "acreage": "4.31",
 "assessed_value": 79641.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835000000041120"
 },
@@ -31072,14 +31576,14 @@
 "polk|27-30-35-0000-0001-2010|00191-2026": {
 "acreage": "0.12",
 "assessed_value": 65976.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273035000000012010"
 },
 "polk|27-30-35-9285-2000-0250|00169-2026": {
 "acreage": "0.14",
 "assessed_value": 81014.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273035928520000250"
 },
@@ -31107,7 +31611,7 @@
 "polk|27-32-09-9325-5100-0040|00182-2026": {
 "acreage": "2.85",
 "assessed_value": 27008.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273209932551000040"
 },
@@ -31121,7 +31625,7 @@
 "polk|27-32-12-9325-7500-0680|00184-2026": {
 "acreage": "2.67",
 "assessed_value": 31639.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273212932575000680"
 },
@@ -31206,14 +31710,14 @@
 "polk|28-28-15-9353-6003-7140|00187-2026": {
 "acreage": "0.20",
 "assessed_value": 13979.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282815935360037140"
 },
 "polk|28-29-08-0000-0004-4099|00196-2026": {
 "acreage": "0.24",
 "assessed_value": 95201.0,
-"fetched_at": "2026-08-31T16:19:49+00:00",
+"fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282908000000044099"
 },
