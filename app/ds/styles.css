@@ -1,0 +1,341 @@
+/* Industry — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Pearl (light) — design-handoff tokens. Also the bare-:root default so the
+   app still themes if the pre-paint script hasn't run. ── */
+:root, :root[data-theme="pearl"] {
+  --bg:#faf9f5;
+  --glow:radial-gradient(900px 500px at 100% 0%,rgba(250,225,150,.28),transparent 60%),radial-gradient(900px 500px at 0% 100%,rgba(250,225,150,.22),transparent 60%);
+  --ink:#1b1d21; --ink2:#5e646d; --ink3:#8c9199;
+  --card:#ffffff; --card2:#ffffff; --line:rgba(20,22,26,.075); --line2:rgba(20,22,26,.11);
+  --tab-bg:#1c1e22; --tab-ink:#ffffff; --tab-border:transparent;
+  --gold:#f0c23a; --gold-soft:#fdf6de; --gold-ink:#5a4600; --gold-ring:#f2c94c;
+  --row-hi:#fcf6e3; --chip:#eef0f3; --chip-ink:#2f353d; --ok:#dff3e5; --ok-ink:#1e6b3b;
+  --btn:#1c1e22; --btn-ink:#ffffff; --btn-border:transparent;
+  --seg-active:#fbf1cf; --seg-active-border:#f2d77d;
+  --map-glow:none; --shadow:0 1px 2px rgba(20,22,26,.04),0 8px 24px rgba(20,22,26,.05);
+  --icon-warn:#f2b400; --icon-ok:#2ea658; --icon-none:#c4c8ce;
+  --toggle:#e7e9ec; --toggle-knob:#ffffff; --danger:#b3261e;
+}
+/* Shared type / spacing / radii, and a bridge that maps the app's legacy
+   --color-* names onto the design tokens so every existing component adopts the
+   new palette; screens move to the design tokens directly as they're rebuilt. */
+:root {
+  --font-heading:"Inter",system-ui,sans-serif; --font-heading-weight:600;
+  --font-body:"Inter",system-ui,sans-serif;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:22px; --space-8:28px;
+  --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-pill:999px;
+  --shadow-sm:var(--shadow); --shadow-md:var(--shadow); --shadow-lg:var(--shadow);
+  --color-bg:var(--bg); --color-surface:var(--card); --color-text:var(--ink);
+  --color-text-secondary:var(--ink2); --color-accent:var(--gold); --color-accent-2:var(--gold);
+  --color-action:var(--btn); --color-action-text:var(--btn-ink); --color-divider:var(--line);
+  --color-danger:var(--danger);
+  --color-neutral-100:var(--chip); --color-neutral-200:var(--line2); --color-neutral-300:var(--line2);
+  --color-neutral-400:var(--ink3); --color-neutral-500:var(--ink3); --color-neutral-600:var(--ink3);
+  --color-neutral-700:var(--ink2); --color-neutral-800:var(--ink2); --color-neutral-900:var(--ink);
+  --color-accent-100:var(--gold-soft); --color-accent-200:var(--gold-soft); --color-accent-300:var(--gold);
+  --color-accent-400:var(--gold); --color-accent-500:var(--gold); --color-accent-600:var(--gold);
+  --color-accent-700:var(--gold-ink); --color-accent-800:var(--gold-ink); --color-accent-900:var(--gold-ink);
+  --color-accent-2-100:var(--chip); --color-accent-2-700:var(--ink2); --color-accent-2-800:var(--ink2);
+}
+
+/* ── Obsidian (dark) — teal-tinted deep ground. Design tokens override the pearl
+   defaults; the --color-* bridge in :root resolves against whichever is active. ── */
+:root[data-theme="obsidian"] {
+  --bg:#0a161c;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(20,70,80,.45),transparent 60%),radial-gradient(900px 600px at 0% 100%,rgba(20,60,70,.35),transparent 60%);
+  --ink:#eef2f3; --ink2:#a8b3b9; --ink3:#7f8a91;
+  --card:rgba(255,255,255,.035); --card2:rgba(12,26,32,.96); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dde3e6; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.35) hue-rotate(150deg) saturate(1.7) brightness(.85);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
+}
+/* ── Charcoal (dark) — neutral deep grey ── */
+:root[data-theme="charcoal"] {
+  --bg:#17181a;
+  --glow:radial-gradient(1000px 600px at 100% 0%,rgba(255,255,255,.04),transparent 60%);
+  --ink:#eeeeec; --ink2:#a9aaa8; --ink3:#7f807e;
+  --card:rgba(255,255,255,.035); --card2:rgba(24,25,27,.97); --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.14);
+  --tab-bg:rgba(230,194,90,.10); --tab-ink:#ecc95c; --tab-border:#c9a94a;
+  --gold:#e6c25a; --gold-soft:rgba(230,194,90,.12); --gold-ink:#f0cf6a; --gold-ring:#e6c25a;
+  --row-hi:rgba(230,194,90,.08); --chip:rgba(255,255,255,.06); --chip-ink:#dddddb; --ok:rgba(70,170,100,.18); --ok-ink:#93dba8;
+  --btn:linear-gradient(180deg,#2a2515,#171408); --btn-ink:#f0cf6a; --btn-border:#c9a94a;
+  --seg-active:rgba(230,194,90,.14); --seg-active-border:#c9a94a;
+  --map-glow:sepia(.15) brightness(.9);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+  --icon-warn:#e6c25a; --icon-ok:#4fc27a; --icon-none:#5c666d; --toggle:rgba(255,255,255,.12); --toggle-knob:#e6c25a; --danger:#f2726a;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+/* Design-handoff card: rounded, soft-shadow, on the surface color. The old
+   wireframe corner ticks are hidden so every existing ${CORNERS} card becomes a
+   clean rounded card with no markup changes. */
+.blueprint {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.blueprint.halftone, .blueprint.plate, .blueprint.duotone { overflow: visible; }
+.blueprint > .corner { display: none; }
+
+.duotone{position:relative;overflow:hidden}
+.duotone::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:var(--color-accent);mix-blend-mode:color}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is documented in
+   readme.md and demonstrated in foundations/ and components/.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: var(--color-text-secondary); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-action); color: var(--color-action-text); border-color: var(--color-action); }
+.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary:active { filter: brightness(0.92); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.seg {
+  display: inline-flex; overflow: hidden;
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.seg-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 13px; cursor: pointer;
+}
+.seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
+.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+/* Semantic status tags (distinct from the gold accent). Mixed against the current
+   theme's surface/ink so they adapt to light and dark automatically. */
+.tag-ok { background: color-mix(in srgb, #3f9d4e 20%, var(--color-surface)); color: color-mix(in srgb, #2f8b3f 62%, var(--color-text)); }
+.tag-warn { background: color-mix(in srgb, #d69a1e 24%, var(--color-surface)); color: color-mix(in srgb, #a6791a 62%, var(--color-text)); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a { color: inherit; text-decoration: none; font-size: 14px; }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — design-handoff rounding: pills for controls, rounded cards, rounded badges — */
+.btn, .input, .seg { border-radius: var(--radius-pill); }
+.tag { border-radius: var(--radius-sm); }
+.card, .dialog { border-radius: var(--radius-lg); background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.btn { border: 1px solid var(--line); }
+.btn-primary { border-color: var(--btn-border); }
+.btn-ghost { border-color: transparent; }
+.input { background: var(--card); }
+
+/* — design-handoff: tables, badges, Explore chrome — */
+.table th {
+  font-size: 12px; letter-spacing: 0.14em; color: var(--ink3);
+  border-bottom: 1px solid var(--line); padding: 12px 14px;
+}
+.table td { padding: 14px; border-bottom: 1px solid var(--line); }
+.table tbody tr:hover { background: var(--row-hi); }
+/* Status badges: 13px/500, 6×14, radius 8 — handoff palette. */
+.tag { font-size: 13px; font-weight: 500; padding: 5px 13px; letter-spacing: 0; }
+.tag-ok { background: var(--ok, #dff3e5); color: var(--ok-ink, #1e6b3b); }
+.tag-warn { background: var(--gold-soft, #fdf6de); color: var(--gold-ink, #5a4600); }
+.tag-neutral { background: var(--chip); color: var(--chip-ink); }
+.tag-accent { background: var(--gold-soft); color: var(--gold-ink); }
+.tag-outline { border: 1px solid var(--line2); color: var(--ink2); }
+/* Card section header holding a title + a control (e.g. List/Map segment). */
+.card-head { display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.card-title { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+/* Bookmark toggle in a table cell. */
+.bm-toggle { background: none; border: none; cursor: pointer; color: var(--ink3);
+  display: grid; place-items: center; padding: 4px; border-radius: 8px; }
+.bm-toggle:hover { color: var(--gold); background: var(--row-hi); }
+.bm-toggle.on { color: var(--gold); }
+.bm-toggle.on svg { fill: var(--gold); }
+.bm-toggle[aria-pressed="true"] { color: var(--gold-ink); background: var(--gold-soft); border-color: var(--gold-ring) !important; }
+.bm-toggle[aria-pressed="true"] svg { fill: var(--gold); }
+/* Account dropdown menu items. */
+.acct-item { display: block; width: 100%; text-align: left; background: none; border: none;
+  padding: 12px 16px; font-size: 14px; color: var(--ink); cursor: pointer; }
+.acct-item:hover { background: var(--row-hi); }
+/* Inline per-row decision dropdown (Explore list). */
+.row-dec { font: inherit; font-size: 13px; font-weight: 500; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--line2); background: var(--card); color: var(--ink2); cursor: pointer; max-width: 140px; }
+.row-dec.dec-Interested { background: var(--gold-soft); color: var(--gold-ink); border-color: var(--gold-ring); }
+.row-dec.dec-Saved { background: var(--gold-soft); color: var(--gold-ink); border-color: var(--gold-ring); }
+.row-dec.dec-Watching { background: var(--chip); color: var(--chip-ink); }
+.row-dec.dec-Pass { color: var(--ink3); }
+/* Property-detail "My decision" segmented control (icon + label). */
+.dec-seg { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 11px 8px; font-size: 14px; font-weight: 500; cursor: pointer; color: var(--ink2);
+  background: var(--card); border: 1px solid var(--line2); border-radius: 12px; }
+.dec-seg:hover { border-color: var(--gold-ring); }
+.dec-seg.on { background: var(--seg-active); color: var(--gold-ink); border-color: var(--seg-active-border); }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .pi-chev { transform: rotate(180deg); }
+.pi-chev { transition: transform .15s ease; }
+/* "Planned" banner (Price intelligence). */
+.plan-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 16px 20px; border: 1px dashed var(--line2); border-radius: var(--radius-lg);
+  background: var(--card); color: var(--ink2); font-size: 14px; }
+.plan-badge { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-ink); background: var(--gold-soft); border-radius: 999px; padding: 4px 12px; }
+
