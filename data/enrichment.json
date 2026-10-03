@@ -7707,6 +7707,12 @@
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010"
 },
+"gilchrist|180815-0073000B-0200|26-0014-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
+},
 "gilchrist|320715-00360019-0070|26-0010-TD": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -7959,6 +7965,14 @@
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00024930"
 },
+"hernando|00027795|2026-157TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "1232 SE PALM BEACH RD PORT SAINT LUCI FL 34952-5317",
+"ok": true,
+"owner_name": "KINGSBARNS INVESTMENTS LLC 1232 SE PALM BEACH RD PORT SAINT LUCI FL 34952-5317",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00027795"
+},
 "hernando|00032208|2026-114TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -7990,6 +8004,46 @@
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00068811"
 },
+"hernando|00074145|2026-147TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "5000 T REX AVE STE 150 BOCA RATON FL 33431-4494",
+"ok": true,
+"owner_name": "SOUTH ATLANTIC HOLDINGS INC 5000 T REX AVE STE 150 BOCA RATON FL 33431-4494",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00074145"
+},
+"hernando|00074314|2026-148TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "226 NEIFFER RD SCHWENKSVILLE PA 19473-1509",
+"ok": true,
+"owner_name": "SOUDERS STANLEY S ET UX 226 NEIFFER RD SCHWENKSVILLE PA 19473-1509",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00074314"
+},
+"hernando|00074341|2026-149TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "69 BEECHWOOD RD HALIFAX MA 02338-1514",
+"ok": true,
+"owner_name": "PRARIO ELLEN E 69 BEECHWOOD RD HALIFAX MA 02338-1514",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00074341"
+},
+"hernando|00074403|2026-150TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "2383 E CLEARVIEW DR ADRIAN MI 49221-3678",
+"ok": true,
+"owner_name": "BOYDSTON DENNIS G, BOYDSTON MARY E 2383 E CLEARVIEW DR ADRIAN MI 49221-3678",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00074403"
+},
+"hernando|00074635|2026-151TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "1713 GRANADA AVE N UNIT 83 SAINT PAUL MN 55128-4273",
+"ok": true,
+"owner_name": "HOEN WARREN H, HOEN NANCY J 1713 GRANADA AVE N UNIT 83 SAINT PAUL MN 55128-4273",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00074635"
+},
 "hernando|00135295|2026-067TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -8005,6 +8059,14 @@
 "source": "reportall"
 }
 },
+"hernando|00143473|2026-123TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "615 W FORT DADE AVE BROOKSVILLE FL 34601-2511",
+"ok": true,
+"owner_name": "FOLSOM DOUGLAS TTEE 615 W FORT DADE AVE BROOKSVILLE FL 34601-2511",
+"property_use": "01 - SINGLE FAMILY",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00143473"
+},
 "hernando|00150945|2026-132TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "mailing_address": "PO BOX 12134 BROOKSVILLE FL 34603-2134",
@@ -8012,6 +8074,14 @@
 "owner_name": "BURGESS ROBERT J PO BOX 12134 BROOKSVILLE FL 34603-2134",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00150945"
+},
+"hernando|00152275|2026-158TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "9327 NODDY TERN RD WEEKI WACHEE FL 34613-6328",
+"ok": true,
+"owner_name": "BESHAI BETH A 9327 NODDY TERN RD WEEKI WACHEE FL 34613-6328",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00152275"
 },
 "hernando|00186630|2026-088TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8058,6 +8128,14 @@
 "parcel_address": "0 SPRING HILL Dr",
 "source": "reportall"
 }
+},
+"hernando|00360950|2026-117TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "922 GOMILLION CT APT C TAMPA FL 33605-4971",
+"ok": true,
+"owner_name": "LAMAR AND PJS HELPING HANDS LLC 922 GOMILLION CT APT C TAMPA FL 33605-4971",
+"property_use": "99 - ACREAGE NOT CLASSIFIED",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00360950"
 },
 "hernando|00399571|2026-072TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -8188,6 +8266,38 @@
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00610770"
 },
+"hernando|00615418|2026-159TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "2680 SE 67TH ST # 3 OCALA FL 34480-8128",
+"ok": true,
+"owner_name": "FULKERSON YOLANDA 2680 SE 67TH ST # 3 OCALA FL 34480-8128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00615418"
+},
+"hernando|00653233|2026-154TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00653233"
+},
+"hernando|00653778|2026-155TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00653778"
+},
+"hernando|00654054|2026-156TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00654054"
+},
 "hernando|00657747|2026-073TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -8203,6 +8313,38 @@
 "source": "reportall"
 }
 },
+"hernando|00762918|2026-125TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "PO BOX 259543 MADISON WI 53725-9543",
+"ok": true,
+"owner_name": "ORILEY SALLY, LONG PATRICIA, LONG LUCIANNE PO BOX 259543 MADISON WI 53725-9543",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00762918"
+},
+"hernando|00766567|2026-153TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "PO BOX 47 ISLIP TERRACE NY 11752-0047",
+"ok": true,
+"owner_name": "RL EQUITIES INC PO BOX 47 ISLIP TERRACE NY 11752-0047",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00766567"
+},
+"hernando|00766576|2026-152TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "PO BOX 47 ISLIP TERRACE NY 11752-0047",
+"ok": true,
+"owner_name": "RL EQUITIES INC PO BOX 47 ISLIP TERRACE NY 11752-0047",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00766576"
+},
+"hernando|00786162|2026-112TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "PO BOX 772 RICHLANDS NC 28574-0772",
+"ok": true,
+"owner_name": "BRUINTON ALTON L, BRUINTON SONZIA PO BOX 772 RICHLANDS NC 28574-0772",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00786162"
+},
 "hernando|00810821|2026-089TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "mailing_address": "220 CAMPINA CT CORAL GABLES FL 33134-1814",
@@ -8210,6 +8352,14 @@
 "owner_name": "GARCIA JOSE M, GARCIA FELICIA 220 CAMPINA CT CORAL GABLES FL 33134-1814",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00810821"
+},
+"hernando|00832987|2026-108TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "648 TIMBER BAY CIR W OLDSMAR FL 34677-4317",
+"ok": true,
+"owner_name": "MORALES ANGEL M, FIGUEROA EMILY E 648 TIMBER BAY CIR W OLDSMAR FL 34677-4317",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00832987"
 },
 "hernando|00851019|2026-115TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -8226,6 +8376,14 @@
 "source": "reportall"
 }
 },
+"hernando|00861115|2026-109TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "LAGUNA DE TERMINOS #9 COLONIA ANAHUAC 00017 MEXICO D.F. MEXICO",
+"ok": true,
+"owner_name": "OLAVARRIETA VICENTE M LAGUNA DE TERMINOS #9 COLONIA ANAHUAC 00017 MEXICO D.F. MEXICO",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00861115"
+},
 "hernando|00935812|2026-140TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -8240,6 +8398,22 @@
 "parcel_address": "0 COBIA Dr",
 "source": "reportall"
 }
+},
+"hernando|00973129|2026-160TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "1150 WATERVIEW DR SOUTHOLD NY 11971-2116",
+"ok": true,
+"owner_name": "WILKINSON SAMUEL 1150 WATERVIEW DR SOUTHOLD NY 11971-2116",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00973129"
+},
+"hernando|01022379|2026-113TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "1201 FALCON AVE MIAMI SPRINGS FL 33166-4341",
+"ok": true,
+"owner_name": "NAAR JOSE E REVOCABLE LIVING TRUST, NAAR EDITH 1201 FALCON AVE MIAMI SPRINGS FL 33166-4341",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/01022379"
 },
 "hernando|01037005|2026-097TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8256,6 +8430,14 @@
 "owner_name": "BONILLA ANGEL L 6291 CASSON ST BROOKSVILLE FL 34604-8521",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/01037014"
+},
+"hernando|01037381|2026-120TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "13053 SUN RD SPRING HILL FL 34613-4135",
+"ok": true,
+"owner_name": "COLELLO WILLIAM J III 13053 SUN RD SPRING HILL FL 34613-4135",
+"property_use": "02 - MOBILE HOME",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/01037381"
 },
 "hernando|01056323|2026-070TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -8294,6 +8476,14 @@
 "parcel_address": "0 MARINER Blvd",
 "source": "reportall"
 }
+},
+"hernando|01428734|2026-146TD": {
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"mailing_address": "2050 CENTER AVE STE 440 FORT LEE NJ 07024-4934",
+"ok": true,
+"owner_name": "ROYAL PALM BCH COLONY LTD PARTNERSHIP 2050 CENTER AVE STE 440 FORT LEE NJ 07024-4934",
+"property_use": "91 - UTIL,RR,GAS,COMMICATIONS,ELECT",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/01428734"
 },
 "hernando|01567343|2026-100TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -12535,6 +12725,33 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=24-4N-09-0297-0000-0090"
 },
+"lake|01-17-28-010000007801|04376-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "29449 SOUTH BLVD PAISLEY, FL 32767 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=01-17-28-010000007801"
+},
+"lake|01-19-26-020000001602|02557-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "605 REDDICK ST EUSTIS, FL 32726 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=01-19-26-020000001602"
+},
+"lake|01-19-26-060000800700|02579-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 115 DURANT, FL 33530-0115 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=01-19-26-060000800700"
+},
 "lake|01-19-26-100000C00600|03086-2023": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-09-21T15:26:16+00:00",
@@ -12543,6 +12760,69 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=01-19-26-100000C00600"
+},
+"lake|02-19-26-000300001700|02595-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "200 E ROBINSON ST SUITE 1120 ORLANDO, FL 32801 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=02-19-26-000300001700"
+},
+"lake|02-19-26-100000025000|02612-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "486 PENNSYLVANIA AVE READING, PA 19606 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=02-19-26-100000025000"
+},
+"lake|03-18-26-000400001900|02359-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "15851 PERU RD UMATILLA, FL 32784 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=03-18-26-000400001900"
+},
+"lake|04-17-27-015000G04000|03788-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "45828 VIRGINIA RD ALTOONA, FL 32702 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=04-17-27-015000G04000"
+},
+"lake|04-17-27-030000N04000|03829-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "20403 RINGNECK RD ALTOONA, FL 32702 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=04-17-27-030000N04000"
+},
+"lake|04-17-27-030000O00500|03830-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "20414 RING NECK RD ALTOONA, FL 32702 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=04-17-27-030000O00500"
+},
+"lake|04-18-29-020000002400|05121-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA, FL 33160 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=04-18-29-020000002400"
 },
 "lake|04-19-24-000200008500|00461-2023": {
 "assessed_value": "Taxable Value",
@@ -12553,6 +12833,33 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=04-19-24-000200008500"
 },
+"lake|05-18-24-200000B00000|00010-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "8811 OLD CAMO RD OCEAN SPRINGS, MS 39564 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=05-18-24-200000B00000"
+},
+"lake|05-24-25-000300003700|02322-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA, FL 33160 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=05-24-25-000300003700"
+},
+"lake|06-18-24-035000037600|00027-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "723 TRUMAN AVE LADY LAKE, FL 32159 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=06-18-24-035000037600"
+},
 "lake|06-18-24-039000018740|00054-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-09-21T15:26:16+00:00",
@@ -12561,6 +12868,51 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=06-18-24-039000018740"
+},
+"lake|06-19-26-030000006000|02626-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "35416 LAKE BRADLEY DR LEESBURG, FL 34788-2926 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=06-19-26-030000006000"
+},
+"lake|07-15-27-070000001800|03658-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 350469 GRAND ISLAND, FL 32735-0469 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=07-15-27-070000001800"
+},
+"lake|07-15-27-100000002303|03680-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "24312 MAXWELL ST ASTOR, FL 32102 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=07-15-27-100000002303"
+},
+"lake|07-21-25-000200002300|02032-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "4725 W SAND LAKE RD ORLANDO, FL 32819 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=07-21-25-000200002300"
+},
+"lake|08-18-29-020000A01000|05142-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "5751 HIGHWAY 1 CAMBRIDGE NOVA SCOTIA B0P1G0 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=08-18-29-020000A01000"
 },
 "lake|08-20-26-050500001500|03032-2024": {
 "assessed_value": "Taxable Value",
@@ -12580,6 +12932,33 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=08-22-25-100500002400"
 },
+"lake|10-19-24-022500014800|00501-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "3 GALLINULE CT FRUITLAND PARK, FL 34731 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=10-19-24-022500014800"
+},
+"lake|12-20-24-010001300900|01022-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "129 CHESTNUT ST LEESBURG, FL 34748 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-20-24-010001300900"
+},
+"lake|13-19-26-000100000101|03319-2023": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "997 COUNTRY CLUB RD EUSTIS, FL 32726 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=13-19-26-000100000101"
+},
 "lake|23-24-25-000300002200|02348-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-09-21T15:26:16+00:00",
@@ -12588,6 +12967,51 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=23-24-25-000300002200"
+},
+"lake|24-15-27-010004601200|03734-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 547945 ORLANDO, FL 32854-7945 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-15-27-010004601200"
+},
+"lake|24-22-25-010009301700|02211-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "706 E GRAND HWY CLERMONT, FL 34711 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-22-25-010009301700"
+},
+"lake|24-22-25-010009301701|02212-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "706 E GRAND HWY CLERMONT, FL 34711 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-22-25-010009301701"
+},
+"lake|33-18-24-040000004600|00355-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "36116 PINE TREE ST FRUITLAND PARK, FL 34731 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-18-24-040000004600"
+},
+"lake|34-19-24-000100001000|00979-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-03T09:51:46+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 3587 ORLANDO, FL 32802-3587 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=34-19-24-000100001000"
 },
 "lee|01-44-23-C4-02411.0630|2026000506": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
