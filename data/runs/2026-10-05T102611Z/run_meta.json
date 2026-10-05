@@ -1,0 +1,892 @@
+{
+  "started_at": "2026-10-05T10:26:11+00:00",
+  "months": 2,
+  "live": true,
+  "counties": {
+    "alachua": {
+      "url": "https://www.alachua.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 18,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "12/01/2026",
+        "12/08/2026",
+        "12/15/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 7,
+        "12/01/2026": 4,
+        "12/08/2026": 3,
+        "12/15/2026": 4
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:26:47+00:00"
+    },
+    "baker": {
+      "url": "https://www.baker.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "combined-site fallback https://www.baker.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:27:30+00:00"
+    },
+    "bay": {
+      "url": "https://www.bay.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 70,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "10/20/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026",
+        "12/01/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 10,
+        "10/20/2026": 21,
+        "10/27/2026": 1,
+        "11/03/2026": 20,
+        "11/17/2026": 16,
+        "12/01/2026": 2
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:28:28+00:00"
+    },
+    "brevard": {
+      "url": "https://www.brevard.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 95,
+      "warnings": [
+        "combined-site fallback https://www.brevard.realforeclose.com/: 3 page(s) loaded, 2 tax-deed date(s), 2 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.brevard.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.brevard.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/22/2026",
+        "12/10/2026"
+      ],
+      "expected_counts": {
+        "10/22/2026": 68,
+        "12/10/2026": 27
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:29:51+00:00"
+    },
+    "broward": {
+      "url": "https://www.broward.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 71,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/26/2026",
+        "11/23/2026"
+      ],
+      "expected_counts": {
+        "10/26/2026": 30,
+        "11/23/2026": 41
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:30:38+00:00"
+    },
+    "calhoun": {
+      "url": "https://www.calhoun.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "combined-site fallback https://www.calhoun.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:31:39+00:00"
+    },
+    "charlotte": {
+      "url": "https://www.charlotte.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 193,
+      "warnings": [
+        "combined-site fallback https://www.charlotte.realforeclose.com/: 3 page(s) loaded, 5 tax-deed date(s), 5 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.charlotte.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.charlotte.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "10/20/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 42,
+        "10/20/2026": 51,
+        "10/27/2026": 50,
+        "11/03/2026": 49,
+        "11/17/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:33:31+00:00"
+    },
+    "citrus": {
+      "url": "https://www.citrus.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 86,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/07/2026",
+        "11/04/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 40,
+        "11/04/2026": 46
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:34:13+00:00"
+    },
+    "clay": {
+      "url": "https://www.clay.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 35,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/07/2026",
+        "10/21/2026",
+        "11/04/2026",
+        "11/18/2026",
+        "12/02/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 10,
+        "10/21/2026": 8,
+        "11/04/2026": 9,
+        "11/18/2026": 6,
+        "12/02/2026": 2
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:34:54+00:00"
+    },
+    "duval": {
+      "url": "https://www.duval.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 228,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/14/2026"
+      ],
+      "expected_counts": {
+        "10/14/2026": 228
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:35:59+00:00"
+    },
+    "escambia": {
+      "url": "https://www.escambia.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 242,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/07/2026",
+        "11/04/2026",
+        "12/02/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 82,
+        "11/04/2026": 80,
+        "12/02/2026": 80
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:37:16+00:00"
+    },
+    "flagler": {
+      "url": "https://www.flagler.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 2,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/13/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/13/2026": 1,
+        "11/17/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:37:38+00:00"
+    },
+    "gilchrist": {
+      "url": "https://www.gilchrist.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 4,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/06/2026",
+        "12/15/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 3,
+        "12/15/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:38:00+00:00"
+    },
+    "gulf": {
+      "url": "https://www.gulf.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "combined-site fallback https://www.gulf.realforeclose.com/: 3 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:38:45+00:00"
+    },
+    "hendry": {
+      "url": "https://www.hendry.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 20,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/29/2026"
+      ],
+      "expected_counts": {
+        "10/29/2026": 20
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:39:16+00:00"
+    },
+    "hernando": {
+      "url": "https://www.hernando.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 61,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/14/2026",
+        "11/04/2026"
+      ],
+      "expected_counts": {
+        "10/14/2026": 35,
+        "11/04/2026": 26
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:39:50+00:00"
+    },
+    "highlands": {
+      "url": "https://www.highlands.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 146,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/07/2026",
+        "10/21/2026",
+        "10/28/2026",
+        "11/04/2026",
+        "11/18/2026",
+        "12/09/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 47,
+        "10/21/2026": 29,
+        "10/28/2026": 25,
+        "11/04/2026": 15,
+        "11/18/2026": 29,
+        "12/09/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:41:07+00:00"
+    },
+    "hillsborough": {
+      "url": "https://www.hillsborough.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 161,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/01/2026",
+        "10/08/2026",
+        "10/15/2026",
+        "10/22/2026",
+        "10/29/2026",
+        "11/05/2026",
+        "11/12/2026",
+        "11/19/2026",
+        "12/03/2026",
+        "12/10/2026",
+        "12/17/2026"
+      ],
+      "expected_counts": {
+        "10/01/2026": 17,
+        "10/08/2026": 18,
+        "10/15/2026": 19,
+        "10/22/2026": 17,
+        "10/29/2026": 18,
+        "11/05/2026": 20,
+        "11/12/2026": 15,
+        "11/19/2026": 16,
+        "12/03/2026": 14,
+        "12/10/2026": 15,
+        "12/17/2026": 9
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:42:25+00:00"
+    },
+    "indianriver": {
+      "url": "https://www.indianriver.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 32,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/20/2026",
+        "10/27/2026"
+      ],
+      "expected_counts": {
+        "10/20/2026": 24,
+        "10/27/2026": 8
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:42:52+00:00"
+    },
+    "jackson": {
+      "url": "https://www.jackson.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 49,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 14,
+        "10/27/2026": 16,
+        "11/03/2026": 8,
+        "11/17/2026": 11
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:43:39+00:00"
+    },
+    "lake": {
+      "url": "https://www.lake.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 36,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "11/03/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "11/03/2026": 10,
+        "11/17/2026": 26
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:44:12+00:00"
+    },
+    "lee": {
+      "url": "https://www.lee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 284,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/06/2026",
+        "10/20/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026",
+        "12/01/2026",
+        "12/08/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 11,
+        "10/20/2026": 46,
+        "10/27/2026": 66,
+        "11/03/2026": 9,
+        "11/17/2026": 29,
+        "12/01/2026": 97,
+        "12/08/2026": 26
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:46:10+00:00"
+    },
+    "leon": {
+      "url": "https://www.leon.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 90,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/21/2026",
+        "11/04/2026"
+      ],
+      "expected_counts": {
+        "10/21/2026": 51,
+        "11/04/2026": 39
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:46:56+00:00"
+    },
+    "manatee": {
+      "url": "https://www.manatee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 121,
+      "warnings": [
+        "combined-site fallback https://www.manatee.realforeclose.com/: 3 page(s) loaded, 6 tax-deed date(s), 6 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.manatee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.manatee.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/12/2026",
+        "10/26/2026",
+        "11/09/2026",
+        "11/23/2026",
+        "12/07/2026",
+        "12/21/2026"
+      ],
+      "expected_counts": {
+        "10/12/2026": 2,
+        "10/26/2026": 25,
+        "11/09/2026": 25,
+        "11/23/2026": 25,
+        "12/07/2026": 25,
+        "12/21/2026": 19
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:48:33+00:00"
+    },
+    "marion": {
+      "url": "https://www.marion.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 213,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/14/2026",
+        "11/18/2026"
+      ],
+      "expected_counts": {
+        "10/14/2026": 101,
+        "11/18/2026": 112
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:50:19+00:00"
+    },
+    "martin": {
+      "url": "https://www.martin.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 24,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/07/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 24
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:50:41+00:00"
+    },
+    "miamidade": {
+      "url": "https://www.miamidade.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 37,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/01/2026",
+        "10/08/2026",
+        "10/15/2026",
+        "11/12/2026"
+      ],
+      "expected_counts": {
+        "10/01/2026": 1,
+        "10/08/2026": 16,
+        "10/15/2026": 15,
+        "11/12/2026": 6
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:51:18+00:00"
+    },
+    "monroe": {
+      "url": "https://www.monroe.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 0,
+      "warnings": [
+        "combined-site fallback https://www.monroe.realforeclose.com/: 1 page(s) loaded, 0 tax-deed date(s), 0 upcoming",
+        "calendar: no tax deed sale dates found (may be none scheduled, or page structure changed)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [],
+      "expected_counts": {},
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:52:26+00:00"
+    },
+    "nassau": {
+      "url": "https://www.nassau.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 9,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/13/2026",
+        "10/20/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/13/2026": 2,
+        "10/20/2026": 2,
+        "10/27/2026": 2,
+        "11/03/2026": 2,
+        "11/17/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:53:04+00:00"
+    },
+    "okeechobee": {
+      "url": "https://www.okeechobee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 28,
+      "warnings": [
+        "combined-site fallback https://www.okeechobee.realforeclose.com/: 3 page(s) loaded, 2 tax-deed date(s), 2 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.okeechobee.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.okeechobee.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/08/2026",
+        "10/29/2026"
+      ],
+      "expected_counts": {
+        "10/08/2026": 16,
+        "10/29/2026": 12
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:54:37+00:00"
+    },
+    "orange": {
+      "url": "https://www.orange.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 168,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/08/2026",
+        "10/15/2026",
+        "10/22/2026",
+        "10/29/2026",
+        "11/05/2026",
+        "11/19/2026"
+      ],
+      "expected_counts": {
+        "10/08/2026": 23,
+        "10/15/2026": 23,
+        "10/22/2026": 22,
+        "10/29/2026": 28,
+        "11/05/2026": 24,
+        "11/19/2026": 48
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:55:58+00:00"
+    },
+    "osceola": {
+      "url": "https://www.osceola.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 41,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/13/2026",
+        "11/10/2026"
+      ],
+      "expected_counts": {
+        "10/13/2026": 16,
+        "11/10/2026": 25
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:56:30+00:00"
+    },
+    "palmbeach": {
+      "url": "https://www.palmbeach.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 221,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/14/2026",
+        "11/18/2026",
+        "12/16/2026"
+      ],
+      "expected_counts": {
+        "10/14/2026": 75,
+        "11/18/2026": 67,
+        "12/16/2026": 79
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:57:58+00:00"
+    },
+    "pasco": {
+      "url": "https://www.pasco.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 35,
+      "warnings": [
+        "auction 10/15/2026: page loaded but no auction items parsed (structure change?)"
+      ],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/15/2026",
+        "10/29/2026"
+      ],
+      "expected_counts": {
+        "10/15/2026": 4,
+        "10/29/2026": 35
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:58:40+00:00"
+    },
+    "pinellas": {
+      "url": "https://www.pinellas.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 17,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/21/2026"
+      ],
+      "expected_counts": {
+        "10/21/2026": 17
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:59:03+00:00"
+    },
+    "polk": {
+      "url": "https://www.polk.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 95,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/15/2026",
+        "11/19/2026",
+        "12/17/2026"
+      ],
+      "expected_counts": {
+        "10/15/2026": 37,
+        "11/19/2026": 55,
+        "12/17/2026": 3
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T10:59:56+00:00"
+    },
+    "putnam": {
+      "url": "https://www.putnam.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 132,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/07/2026",
+        "10/21/2026"
+      ],
+      "expected_counts": {
+        "10/07/2026": 63,
+        "10/21/2026": 69
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:01:09+00:00"
+    },
+    "santarosa": {
+      "url": "https://www.santarosa.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 22,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/05/2026",
+        "10/26/2026",
+        "11/02/2026",
+        "12/07/2026"
+      ],
+      "expected_counts": {
+        "10/05/2026": 7,
+        "10/26/2026": 6,
+        "11/02/2026": 8,
+        "12/07/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:01:38+00:00"
+    },
+    "sarasota": {
+      "url": "https://www.sarasota.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 54,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "11/04/2026",
+        "11/05/2026"
+      ],
+      "expected_counts": {
+        "11/04/2026": 25,
+        "11/05/2026": 29
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:02:25+00:00"
+    },
+    "seminole": {
+      "url": "https://www.seminole.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 35,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/15/2026",
+        "11/12/2026",
+        "12/03/2026"
+      ],
+      "expected_counts": {
+        "10/15/2026": 15,
+        "11/12/2026": 5,
+        "12/03/2026": 15
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:03:03+00:00"
+    },
+    "stlucie": {
+      "url": "https://www.stlucie.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 33,
+      "warnings": [
+        "combined-site fallback https://www.stlucie.realforeclose.com/: 3 page(s) loaded, 3 tax-deed date(s), 3 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.stlucie.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.stlucie.realforeclose.com/",
+        "auction 11/09/2026: page loaded but no auction items parsed (structure change?)"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/05/2026",
+        "10/12/2026",
+        "11/09/2026"
+      ],
+      "expected_counts": {
+        "10/05/2026": 18,
+        "10/12/2026": 15,
+        "11/09/2026": 24
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:04:32+00:00"
+    },
+    "suwannee": {
+      "url": "https://www.suwannee.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 35,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/08/2026"
+      ],
+      "expected_counts": {
+        "10/08/2026": 35
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:05:00+00:00"
+    },
+    "volusia": {
+      "url": "https://www.volusia.realtaxdeed.com",
+      "status": "ok",
+      "auctions": 161,
+      "warnings": [],
+      "robots": "robots.txt HTTP 403; treating as no restrictions",
+      "sale_dates": [
+        "10/06/2026",
+        "10/13/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 28,
+        "10/13/2026": 33,
+        "10/27/2026": 21,
+        "11/03/2026": 38,
+        "11/17/2026": 41
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:06:08+00:00"
+    },
+    "walton": {
+      "url": "https://www.walton.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 8,
+      "warnings": [
+        "combined-site fallback https://www.walton.realforeclose.com/: 3 page(s) loaded, 3 tax-deed date(s), 3 upcoming",
+        "calendar: no upcoming tax deed sales on https://www.walton.realtaxdeed.com/; using combined foreclosure+tax-deed site https://www.walton.realforeclose.com/"
+      ],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "11/10/2026",
+        "11/17/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 3,
+        "11/10/2026": 4,
+        "11/17/2026": 1
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:07:15+00:00"
+    },
+    "washington": {
+      "url": "https://www.washington.realtaxdeed.com/",
+      "status": "ok",
+      "auctions": 76,
+      "warnings": [],
+      "robots": "robots.txt unreachable (SSLError); proceeding politely",
+      "sale_dates": [
+        "10/06/2026",
+        "10/27/2026",
+        "11/03/2026",
+        "11/17/2026",
+        "12/01/2026",
+        "12/08/2026"
+      ],
+      "expected_counts": {
+        "10/06/2026": 12,
+        "10/27/2026": 12,
+        "11/03/2026": 12,
+        "11/17/2026": 10,
+        "12/01/2026": 12,
+        "12/08/2026": 18
+      },
+      "excluded_foreclosure": 0,
+      "finished_at": "2026-10-05T11:08:13+00:00"
+    }
+  },
+  "finished_at": "2026-10-05T11:08:13+00:00"
+}
