@@ -69,7 +69,7 @@
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000"
 },
@@ -111,7 +111,7 @@
 },
 "alachua|06650-208-004|TD 2026-034": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06650-208-004"
 },
@@ -129,7 +129,7 @@
 },
 "alachua|06890-036-000|TD 2026-029": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06890-036-000"
 },
@@ -158,7 +158,7 @@
 },
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004"
 },
@@ -182,7 +182,7 @@
 },
 "alachua|10733-043-000|TD 2026-031": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-043-000"
 },
@@ -290,7 +290,7 @@
 },
 "bay|01118-004-000|2026-0200TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01118-004-000",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01118-004-000"
 },
@@ -440,7 +440,7 @@
 },
 "bay|07502-013-000|2026-1834TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07502-013-000",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07502-013-000"
 },
@@ -7620,7 +7620,7 @@
 },
 "flagler|0711317024000700120|26-076 TDC": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
@@ -7713,6 +7713,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
+"gilchrist|240816-08920000-0130|26-0015-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
+},
 "gilchrist|320715-00360019-0070|26-0010-TD": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=32-07-15-0036-0019-0070",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -7755,31 +7761,31 @@
 },
 "hardee|05-33-25-0090-0000A-0018|252026TD002AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018"
 },
 "hardee|10-34-25-0843-00001-0019|252026TD003AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019"
 },
 "hardee|15-34-25-0830-00018-0013|252026TD001AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013"
 },
 "hardee|15-34-25-0830-00019-0028|252026TD020AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028"
 },
 "hardee|17-33-25-0400-00001-0138|252026TD006AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138"
 },
@@ -7791,19 +7797,19 @@
 },
 "hardee|24-34-25-0000-05770-0000|252026TD023AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000"
 },
 "hardee|25-34-25-0000-05020-0000|252026TD036AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1330743349&KeyValue=25-34-25-0000-05020-0000",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1330743349&KeyValue=25-34-25-0000-05020-0000"
 },
 "hardee|28-33-25-0820-00036-0028|252026TD007AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028"
 },
@@ -7815,121 +7821,121 @@
 },
 "hendry|1 29 42 32 A00 0011.0100|25-122": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2193-014.0|25-130": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2194-011.0|25-125": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2339-023.0|25-131": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 070 2210-024.0|25-126": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 080 2280-037.0|25-127": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 080 2283-030.0|25-128": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2293-003.0|25-132": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2302-001.0|23-133": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2304-010.0|25-134": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2336-007.0|25-135": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2361-022.0|25-116": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2368-005.0|25-117": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2375-050.0|25-118": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2433-067.0|25-119": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2436-006.0|25-120": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2469-007.0|25-115": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2497-011.0|25-121": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2506-018.0|25-123": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -12199,19 +12205,19 @@
 },
 "jackson|02-2N-11-0083-10AF-0010|1717 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0010",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0010"
 },
 "jackson|02-2N-11-0083-10AF-0040|1719 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0040",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AF-0040"
 },
 "jackson|02-2N-11-0083-10AG-0080|1721 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AG-0080",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-10AG-0080"
 },
@@ -12239,37 +12245,37 @@
 },
 "jackson|02-2N-11-0084-0710-0070|1886 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0710-0070",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0710-0070"
 },
 "jackson|02-2N-11-0084-0740-0240|1905 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0740-0240",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0740-0240"
 },
 "jackson|02-2N-11-0084-0760-0270|1916 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0760-0270",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0760-0270"
 },
 "jackson|02-2N-11-0084-0790-0090|1929 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0790-0090",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0790-0090"
 },
 "jackson|02-2N-11-0086-0800-0270|1940 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0800-0270",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0800-0270"
 },
 "jackson|02-2N-11-0086-0810-0100|1944 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0810-0100",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0810-0100"
 },
@@ -16597,7 +16603,7 @@
 },
 "manatee|5253000003|2026TD000165": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5253000003"
 },
@@ -25473,7 +25479,7 @@
 },
 "miamidade|01-3218-004-0050|2026A00138": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0132180040050"
 },
@@ -25536,19 +25542,19 @@
 },
 "miamidade|01-4139-083-0370|2026A00217": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0141390830370"
 },
 "miamidade|01-4139-126-1580|2026A00212": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0141391261580"
 },
 "miamidade|02-3202-005-0560|2026A00215": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020050560"
 },
@@ -26001,7 +26007,7 @@
 },
 "nassau|35-4N-25-4220-0002-0020|452026XX000014TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020"
 },
@@ -26766,8 +26772,8 @@
 }
 },
 "okeechobee|1-03-38-35-0A00-00001-A000|2026TD091": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-03-38-35-0A00-00001-A000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-03-38-35-0A00-00001-A000"
 },
@@ -26778,26 +26784,26 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0020-00000-0760"
 },
 "okeechobee|1-04-38-36-0030-00030-0160|2026TD092": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-04-38-36-0030-00030-0160",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-04-38-36-0030-00030-0160"
 },
 "okeechobee|1-05-37-35-0020-00300-0030|2026TD083": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-05-37-35-0020-00300-0030",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-05-37-35-0020-00300-0030"
 },
 "okeechobee|1-06-36-34-0010-00060-0010|2026TD086": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00060-0010",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00060-0010"
 },
 "okeechobee|1-06-36-34-0010-00360-0140|2026TD087": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00360-0140",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-36-34-0010-00360-0140"
 },
@@ -26808,20 +26814,20 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00002-0000"
 },
 "okeechobee|1-06-38-36-0A00-00007-0000|2026TD093": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00007-0000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-06-38-36-0A00-00007-0000"
 },
 "okeechobee|1-09-38-36-0050-00010-0040|2026TD094": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-09-38-36-0050-00010-0040",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-09-38-36-0050-00010-0040"
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -26832,50 +26838,50 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-36-35-0A00-00004-A000"
 },
 "okeechobee|1-11-34-33-0A00-00008-F000|2026TD104": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000"
 },
 "okeechobee|1-14-34-33-0A00-00004-F000|2026TD105": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000"
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
 "okeechobee|1-16-34-33-0A00-00012-G000|2026TD108": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00012-G000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00012-G000"
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
 "okeechobee|1-17-34-33-0A00-00006-J000|2026TD082": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-17-34-33-0A00-00006-J000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-34-33-0A00-00006-J000"
 },
 "okeechobee|1-17-37-35-0020-00040-0020|2026TD097": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-17-37-35-0020-00040-0020",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-17-37-35-0020-00040-0020"
 },
@@ -26898,8 +26904,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00020-0170"
 },
 "okeechobee|1-18-37-35-0020-00290-0110|2026TD085": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00290-0110",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-35-0020-00290-0110"
 },
@@ -26910,8 +26916,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-18-37-36-0A00-00010-0290"
 },
 "okeechobee|1-20-34-33-0A00-00021-B000|2026TD099": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000"
 },
@@ -26928,8 +26934,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00012-J000"
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
@@ -26940,8 +26946,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-F000"
 },
 "okeechobee|1-22-33-35-0010-00920-0060|2026TD084": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-22-33-35-0010-00920-0060",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-22-33-35-0010-00920-0060"
 },
@@ -26958,8 +26964,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-24-37-35-0A00-00004-A000"
 },
 "okeechobee|1-25-37-35-0070-00060-0160|2026TD096": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-25-37-35-0070-00060-0160",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0070-00060-0160"
 },
@@ -26970,8 +26976,8 @@
 "url": "http://www.okeechobeepa.com/gis/?pin=1-25-37-35-0120-00110-0780"
 },
 "okeechobee|1-30-37-35-0010-00020-010A|2026TD089": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-30-37-35-0010-00020-010A",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-30-37-35-0010-00020-010A"
 },
@@ -27161,7 +27167,7 @@
 },
 "orange|102330892600150|2024-16066": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102330892600150"
 },
@@ -27903,7 +27909,7 @@
 },
 "orange|352229919203060|2024-10163": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352229919203060"
 },
@@ -27981,7 +27987,7 @@
 },
 "osceola|012630000104290060|2112024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060"
 },
@@ -28005,7 +28011,7 @@
 },
 "osceola|032528340700012113|5152024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113"
 },
@@ -28059,7 +28065,7 @@
 },
 "osceola|072530270201760050|15882024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050"
 },
@@ -28139,7 +28145,7 @@
 },
 "osceola|152529124000010060|29052024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060"
 },
@@ -28151,7 +28157,7 @@
 },
 "osceola|162527561600010050|30182024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050"
 },
@@ -28238,7 +28244,7 @@
 },
 "osceola|222630007700010450|41862024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450"
 },
@@ -28294,7 +28300,7 @@
 },
 "osceola|252628610005500060|45802024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610005500060"
 },
@@ -30684,17 +30690,83 @@
 "owner_name": "Parcel ID",
 "url": "https://www.pcpao.gov/property-details?s=01-29-15-98750-013-1350"
 },
+"pinellas|01-31-16-77166-001-0120|2024-06725": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=01-31-16-77166-001-0120"
+},
 "pinellas|02-30-15-89046-002-0050|2024-02648": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
 "url": "https://www.pcpao.gov/property-details?s=02-30-15-89046-002-0050"
 },
+"pinellas|03-27-16-00000-220-0120|2024-04178": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=03-27-16-00000-220-0120"
+},
+"pinellas|03-27-16-00000-220-0130|2024-04179": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=03-27-16-00000-220-0130"
+},
 "pinellas|03-30-15-65684-003-0740|2024-02678": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
 "url": "https://www.pcpao.gov/property-details?s=03-30-15-65684-003-0740"
+},
+"pinellas|03-31-15-36397-001-4020|2024-03792": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=03-31-15-36397-001-4020"
+},
+"pinellas|06-31-16-68976-003-0520|2024-07047": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=06-31-16-68976-003-0520"
+},
+"pinellas|07-29-16-22519-001-0062|2024-05280": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=07-29-16-22519-001-0062"
+},
+"pinellas|08-29-15-43308-000-0520|2024-01426": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=08-29-15-43308-000-0520"
+},
+"pinellas|09-28-16-23935-002-0320|2024-04589": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=09-28-16-23935-002-0320"
+},
+"pinellas|09-31-16-48456-001-0110|2024-07156": {
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"url": "https://www.pcpao.gov/property-details?s=09-31-16-48456-001-0110"
+},
+"pinellas|10-29-15-51948-001-0080|2024-01539": {
+"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": false,
+"url": "https://www.pcpao.gov/property-details?s=10-29-15-51948-001-0080"
+},
+"pinellas|10-30-15-57790-003-0450|2024-02946": {
+"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": false,
+"url": "https://www.pcpao.gov/property-details?s=10-30-15-57790-003-0450"
 },
 "pinellas|12-27-15-89982-062-0208|2024-00299": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -32341,6 +32413,18 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=303104994100032533"
 },
+"putnam|01-09-24-4086-0100-0580|2019-0000136": {
+"acreage": "0.28",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190000136",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 7280.0,
+"mailing_address": "PO BOX 1074 ELMHURST IL 60126",
+"ok": true,
+"owner_name": "21 HOLDINGS LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-09-24-4086-0100-0580"
+},
 "putnam|01-10-23-5740-0090-0090|2024-0000070": {
 "acreage": "5.24",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000070",
@@ -32398,6 +32482,55 @@
 "owner_name": "MCCASKILL ROBERT LUTRELL",
 "property_use": "00700 - MISC. RESIDENCE",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-10-26-7200-0090-0050"
+},
+"putnam|01-11-26-8241-0100-0320|2019-0000582": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190000582",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5300.0,
+"mailing_address": "124 WISTERIA CIR CLOVERDALE CA 95425",
+"ok": true,
+"owner_name": "DIMARCELLO NICHOLAS A + DOLORES T",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-11-26-8241-0100-0320"
+},
+"putnam|01-11-26-8241-0230-0270|2024-0000401": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000401",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5300.0,
+"mailing_address": "728 WYOMING AVE CROYDON PA 19021",
+"ok": true,
+"owner_name": "JAKMAN LINDA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-11-26-8241-0230-0270"
+},
+"putnam|01-12-26-2730-0000-0140|2024-0000431": {
+"acreage": "1.01",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000431",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 18180.0,
+"mailing_address": "450 W 32 PLACE HIALEAH FL 33012-5346",
+"ok": true,
+"owner_name": "DURAN DORA + MARICELA DURAN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-12-26-2730-0000-0140"
+},
+"putnam|01-13-26-4910-0070-0460|2024-0000469": {
+"acreage": "0.23",
+"applicant": "PP 119 LONGTREE ST, GEORGETOWN9",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000469",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 7580.0,
+"mailing_address": "119 LONGTREE ST GEORGETOWN FL 32139",
+"ok": true,
+"owner_name": "VAZQUEZ LOUIS R",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=01-13-26-4910-0070-0460"
 },
 "putnam|01-13-26-4910-0070-1950|2024-0000475": {
 "acreage": "0.23",
@@ -32589,6 +32722,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=02-12-27-0000-0240-0002"
 },
+"putnam|02-12-27-1829-0060-0140|2024-0000956": {
+"acreage": "0.21",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000956",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 7580.0,
+"mailing_address": "4820 VERMILION DR ST LOUIS MO 63128",
+"ok": true,
+"owner_name": "CLIPPER INVESTMENTS 401K PSP",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=02-12-27-1829-0060-0140"
+},
 "putnam|02-12-27-1829-0300-0270|2024-0001010": {
 "acreage": "0.72",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240001010",
@@ -32634,6 +32779,18 @@
 "owner_name": "HARDEE CLAUDIA J",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=03-09-24-2600-0730-0021"
+},
+"putnam|03-09-27-7731-0130-0670|2024-0001090": {
+"acreage": "0.27",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240001090",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 2750.0,
+"mailing_address": "911 NORTH HANCOCK ST PHILADELPHIA PA 19123",
+"ok": true,
+"owner_name": "DOUBLE NICKELS PROPERTIES LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=03-09-27-7731-0130-0670"
 },
 "putnam|03-10-24-2570-0010-0410|2019-0001896": {
 "acreage": "0.06",
@@ -32827,6 +32984,54 @@
 },
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5531-0050-0510"
+},
+"putnam|04-10-24-5531-0110-0490|2019-0002582": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002582",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "BARRIO KURTXE # 13 BERANGO VIZCAYA 48640 SPAIN",
+"ok": true,
+"owner_name": "ALVAREZ RAUL VASQUEZ",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5531-0110-0490"
+},
+"putnam|04-10-24-5531-0110-0500|2019-0002591": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002591",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1320.0,
+"mailing_address": "BARRIO KURTXE # 13 BERANGO VIZCAYA 48640 SPAIN",
+"ok": true,
+"owner_name": "ALVAREZ RAUL VASQUEZ",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5531-0110-0500"
+},
+"putnam|04-10-24-5531-0110-0510|2019-0002593": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002593",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 380.0,
+"mailing_address": "BARRIO KURTXE # 13 BERANGO VIZCAYA 48640 SPAIN",
+"ok": true,
+"owner_name": "ALVAREZ RAUL VASQUEZ",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5531-0110-0510"
+},
+"putnam|04-10-24-5531-0110-0520|2019-0002589": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002589",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 380.0,
+"mailing_address": "BARRIO KURTXE # 13 BERANGO VIZCAYA 48640 SPAIN",
+"ok": true,
+"owner_name": "ALVAREZ RAUL VASQUEZ",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5531-0110-0520"
 },
 "putnam|04-10-24-5532-0050-0140|2020-0002545": {
 "acreage": "0.07",
@@ -33041,6 +33246,18 @@
 "owner_name": "PUTNAM MANOR LAND TRUST 2/15/2011",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5532-0120-0050"
+},
+"putnam|04-10-24-5533-0180-0370|2019-0002840": {
+"acreage": "0.07",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190002840",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1250.0,
+"mailing_address": "130 HUDSON AV INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "LLOYD GARY L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-5533-0180-0370"
 },
 "putnam|04-10-24-5540-0020-0100|2019-0002931": {
 "acreage": "0.1",
@@ -33263,6 +33480,19 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9025-0030-0110"
 },
+"putnam|04-10-24-9025-0030-0130|2020-0003241": {
+"acreage": "0.1",
+"applicant": "Unassigned Locati,",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003241",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "2760 F ROAD LOXAHATCHEE FL 33470",
+"ok": true,
+"owner_name": "DELVA JEAN RAYMOND",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9025-0030-0130"
+},
 "putnam|04-10-24-9025-0030-0290|2019-0003220": {
 "acreage": "0.1",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -33348,6 +33578,32 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9030-0080-0380"
 },
+"putnam|04-10-24-9035-0010-0870|2024-0002564": {
+"acreage": "0.1",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240002564",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1920.0,
+"mailing_address": "PO BOX 1474 EAU CLAIRE WI 54702-1474",
+"ok": true,
+"owner_name": "TRANSPORTATION WAREHOUSING STORAGE LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0010-0870"
+},
+"putnam|04-10-24-9035-0010-0880|2024-0002565": {
+"acreage": "0.12",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240002565",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1700.0,
+"mailing_address": "PO BOX 1474 EAU CLAIRE WI 54702-1474",
+"ok": true,
+"owner_name": "TRANSPORTATION WAREHOUSING STORAGE LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0010-0880"
+},
 "putnam|04-10-24-9035-0010-0890|2019-0003455": {
 "acreage": "0.12",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003455",
@@ -33393,6 +33649,54 @@
 },
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0010-1010"
+},
+"putnam|04-10-24-9035-0040-0010|2019-0003499": {
+"acreage": "0.11",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003499",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 2250.0,
+"mailing_address": "RT 3 BOX 113A ATLANTA MI 49709",
+"ok": true,
+"owner_name": "CHILES OTTIS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0040-0010"
+},
+"putnam|04-10-24-9035-0050-0010|2019-0003520": {
+"acreage": "0.11",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003520",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 2250.0,
+"mailing_address": "PO BOX 14897 JACKSONVILLE FL 32238",
+"ok": true,
+"owner_name": "LEGGETT DONALD L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0050-0010"
+},
+"putnam|04-10-24-9035-0060-0450|2019-0003552": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003552",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "PO BOX 14897 JACKSONVILLE FL 32238",
+"ok": true,
+"owner_name": "LEGGETT DONALD L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0060-0450"
+},
+"putnam|04-10-24-9035-0060-0460|2019-0003555": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190003555",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "PO BOX 14897 JACKSONVILLE FL 32238",
+"ok": true,
+"owner_name": "LEGGETT DONALD L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=04-10-24-9035-0060-0460"
 },
 "putnam|04-10-24-9035-0080-0010|2020-0003782": {
 "acreage": "0.11",
@@ -33665,6 +33969,18 @@
 "owner_name": "JOHNSTON-CREARY CLAUDETTE",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-4928-0050-0080"
+},
+"putnam|05-10-24-4928-0050-0420|2023-0003619": {
+"acreage": "0.11",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230003619",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1940.0,
+"mailing_address": "13258 69TH ST NORTH ROYAL PALM BEACH FL 33412",
+"ok": true,
+"owner_name": "EDWARDS MERVIN + ERROL GRAHAM",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-4928-0050-0420"
 },
 "putnam|05-10-24-4928-0050-0580|2019-0004065": {
 "acreage": "0.11",
@@ -33969,6 +34285,43 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-9045-0080-0150"
 },
+"putnam|05-10-24-9045-0080-0350|2024-0003828": {
+"acreage": "0.21",
+"applicant": "PP 107 DOTHAN ST, INTERLACHEN8",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003828",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3840.0,
+"mailing_address": "750 ST MARKS AVE BROOKLYN NY 11216",
+"ok": true,
+"owner_name": "WARREN SILFORD",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-24-9045-0080-0350"
+},
+"putnam|05-10-27-0000-0030-0010|2024-0003865": {
+"acreage": "0.52",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003865",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 6140.0,
+"mailing_address": "PO BOX 33 EAST PALATKA FL 32131",
+"ok": true,
+"owner_name": "SESSIONS DARRELL",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-27-0000-0030-0010"
+},
+"putnam|05-10-27-0000-0240-0010|2024-0003871": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003871",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "C/O MARGARET SMALL 171 RAINBOW DR AVON PARK FL 33825",
+"ok": true,
+"owner_name": "LONDON VICTORIA HEIRS OF",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-10-27-0000-0240-0010"
+},
 "putnam|05-10-27-0000-0370-0010|2024-0003874": {
 "acreage": "0.3",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003874",
@@ -34018,6 +34371,78 @@
 "owner_name": "PUTNAM LAND CONSERVANCY INC",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=05-11-26-0000-8888-0017"
+},
+"putnam|06-10-25-4081-0310-0150|2024-0004115": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004115",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "5621 DE MOTT AVE COMMERCE CITY CO 80022",
+"ok": true,
+"owner_name": "HARDT ALBERT E+JO ANN+JEWELL A STRATTON",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0310-0150"
+},
+"putnam|06-10-25-4081-0350-0010|2024-0004127": {
+"acreage": "0.29",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004127",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 6370.0,
+"mailing_address": "2236 SW 166TH AVE MIRAMAR FL 33027",
+"ok": true,
+"owner_name": "VULCAIN JAMES + ROSE-MAY H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0350-0010"
+},
+"putnam|06-10-25-4081-0390-0100|2024-0004150": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004150",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "1719 BRADMOORE DR FORESTVILLE MD 20747",
+"ok": true,
+"owner_name": "RAMGEET VIVIENE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0390-0100"
+},
+"putnam|06-10-25-4081-0410-0030|2024-0004156": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004156",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "20 BARROWS COURT NORTON MA 02766",
+"ok": true,
+"owner_name": "MERVILUS LOUNA + NADINE THOMAS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0410-0030"
+},
+"putnam|06-10-25-4081-0410-0040|2024-0004157": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004157",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "20 BARROWS COURT NORTON MA 02766",
+"ok": true,
+"owner_name": "MERVILUS LOUNA + NADINE THOMAS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0410-0040"
+},
+"putnam|06-10-25-4081-0570-0200|2024-0004187": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004187",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4550.0,
+"mailing_address": "144 ISLANDER RD SATSUMA FL 32189",
+"ok": true,
+"owner_name": "SCOTT CHRISTIAN J",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-10-25-4081-0570-0200"
 },
 "putnam|06-11-26-0000-8888-0986|2019-0005293": {
 "acreage": "1.25",
@@ -34093,6 +34518,18 @@
 },
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-11-26-0000-8888-1127"
+},
+"putnam|06-11-26-0000-8888-1158|2019-0005331": {
+"acreage": "1.26",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190005331",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 13000.0,
+"mailing_address": "36620 MEADOW DR OCONOMOWOC WI 53066",
+"ok": true,
+"owner_name": "IPLAN GROUP CUSTODIAN FBO PAMELA BECKER IRA",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-11-26-0000-8888-1158"
 },
 "putnam|06-13-27-4910-0040-0170|2024-0004338": {
 "acreage": "6.39",
@@ -34190,6 +34627,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-13-27-4910-0060-1830"
 },
+"putnam|06-13-28-1830-0020-0180|2024-0004454": {
+"acreage": "0.44",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004454",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 9770.0,
+"mailing_address": "PO BOX 164 BRICK NJ 08723",
+"ok": true,
+"owner_name": "MCGINNIS RICHARD",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=06-13-28-1830-0020-0180"
+},
 "putnam|07-10-24-1650-0150-0020|2019-0005605": {
 "acreage": "0.12",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190005605",
@@ -34236,6 +34685,30 @@
 "owner_name": "KOSER CURTIS RAY",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-24-4211-0060-0160"
+},
+"putnam|07-10-24-4211-0130-0060|2024-0004537": {
+"acreage": "0.47",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004537",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3760.0,
+"mailing_address": "13315 SPRUCE CT LINDEN MI 48451",
+"ok": true,
+"owner_name": "BERGUM PAUL",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-24-4211-0130-0060"
+},
+"putnam|07-10-24-4215-0320-0080|2024-0004559": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004559",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3800.0,
+"mailing_address": "1813 SW 176TH WAY MIRAMAR FL 33029",
+"ok": true,
+"owner_name": "THARP MARLON",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-24-4215-0320-0080"
 },
 "putnam|07-10-24-7070-0020-0210|2019-0005755": {
 "acreage": "0.11",
@@ -34418,6 +34891,30 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-24-7072-0220-0200"
 },
+"putnam|07-10-25-4081-0090-0180|2024-0005002": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005002",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "204 HAMRICK ST INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "SELPH CHRISTOPHER + MICHELLE H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-25-4081-0090-0180"
+},
+"putnam|07-10-25-4081-0100-0150|2024-0005008": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005008",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "134 VOLUSIA DR INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "HACKNEY KATIE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-25-4081-0100-0150"
+},
 "putnam|07-10-25-4081-0640-0080|2024-0005062": {
 "acreage": "0.65",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005062",
@@ -34451,6 +34948,42 @@
 "owner_name": "SMOOT PAMELA",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-10-25-4095-0010-0030"
+},
+"putnam|07-11-23-9530-0000-0350|2023-0005783": {
+"acreage": "1.26",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230005783",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 15120.0,
+"mailing_address": "102 PINE DR HAWTHORNE FL 32640",
+"ok": true,
+"owner_name": "WARREN R SCHLESING + RALPH W BONNER (TIC)",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-11-23-9530-0000-0350"
+},
+"putnam|07-13-27-7060-0090-0060|2024-0005176": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005176",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 8330.0,
+"mailing_address": "907-4 GREENLEAF CIRCLE ORANGE CITY FL 32763",
+"ok": true,
+"owner_name": "NEWMAN JEANNIE M",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-13-27-7060-0090-0060"
+},
+"putnam|07-13-27-7060-0120-0160|2024-0005189": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005189",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 8330.0,
+"mailing_address": "205 MCKINLEY LN ROYSE CITY TX 75189",
+"ok": true,
+"owner_name": "ALLEYNE GILBERT O + ANA MARIA DE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=07-13-27-7060-0120-0160"
 },
 "putnam|07-13-27-7060-0130-0190|2024-0005196": {
 "acreage": "0.43",
@@ -34812,6 +35345,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-13-27-7061-0560-0180"
 },
+"putnam|08-13-27-7061-0580-0110|2024-0005839": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005839",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 8620.0,
+"mailing_address": "14541 BROOKHURST ST SUITE A1 WESTMINSTER CA 92683",
+"ok": true,
+"owner_name": "VO MERCEDES (DIEM)",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=08-13-27-7061-0580-0110"
+},
 "putnam|08-13-27-7063-1290-0350|2019-0007511": {
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007511",
@@ -34981,6 +35526,22 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-0351-0020-0020"
 },
+"putnam|09-10-24-0351-0030-0160|2024-0006117": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006117",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-0351-0030-0160"
+},
+"putnam|09-10-24-0351-0030-0170|2024-0006118": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006118",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-0351-0030-0170"
+},
 "putnam|09-10-24-0351-0060-0150|2019-0007783": {
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190007783",
@@ -35004,6 +35565,54 @@
 "owner_name": "TORRES GLORIA",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0240-0240"
+},
+"putnam|09-10-24-4067-0320-0140|2024-0006211": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006211",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3750.0,
+"mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
+"ok": true,
+"owner_name": "LEE DUC MINH",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0320-0140"
+},
+"putnam|09-10-24-4067-0320-0150|2024-0006212": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006212",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3750.0,
+"mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
+"ok": true,
+"owner_name": "LEE DUC MINH",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0320-0150"
+},
+"putnam|09-10-24-4067-0320-0160|2024-0006213": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006213",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3750.0,
+"mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
+"ok": true,
+"owner_name": "LE RICHARD CHUNG",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0320-0160"
+},
+"putnam|09-10-24-4067-0320-0170|2024-0006214": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006214",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3750.0,
+"mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
+"ok": true,
+"owner_name": "LE RICHARD CHUNG",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4067-0320-0170"
 },
 "putnam|09-10-24-4067-0350-0110|2024-0006223": {
 "acreage": "0.22",
@@ -35029,6 +35638,14 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4068-0460-0030"
 },
+"putnam|09-10-24-4069-0680-0090|2024-0006417": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006417",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-24-4069-0680-0090"
+},
 "putnam|09-10-26-0000-0760-0020|2024-0006454": {
 "acreage": "3.61",
 "applicant": "PP 7211 CRILL AV # UNIT 2, PALATKA7",
@@ -35042,6 +35659,18 @@
 "property_use": "02500 - SERVICE SHOPS",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-10-26-0000-0760-0020"
 },
+"putnam|09-12-27-0000-0400-0120|2024-0006480": {
+"acreage": "1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006480",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 13000.0,
+"mailing_address": "C/O LILA ASHWORTH 604 24TH AVE S N MYRTLE BEACH SC 29582",
+"ok": true,
+"owner_name": "ASHWORTH EZRA M + ELOISE W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=09-12-27-0000-0400-0120"
+},
 "putnam|10-09-24-2600-0590-0010|2024-0006532": {
 "acreage": "0.62",
 "applicant": "PP 303 E KANSAS ST, FLORAHOME0",
@@ -35054,6 +35683,78 @@
 "owner_name": "JANUARY STEPHANIE D",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=10-09-24-2600-0590-0010"
+},
+"putnam|10-10-24-8930-0000-0310|2024-0006760": {
+"acreage": "0.53",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006760",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 17000.0,
+"mailing_address": "806 S MANGONIA CIRCLE WEST PALM BEACH FL 33409",
+"ok": true,
+"owner_name": "NEATH SHAWN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=10-10-24-8930-0000-0310"
+},
+"putnam|11-10-23-1670-0020-0350|2024-0006874": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006874",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
+"ok": true,
+"owner_name": "ORMOND LEONEE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-1670-0020-0350"
+},
+"putnam|11-10-23-1670-0020-0360|2024-0006875": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006875",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
+"ok": true,
+"owner_name": "ORMOND LEONEE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-1670-0020-0360"
+},
+"putnam|11-10-23-1670-0020-0370|2024-0006876": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006876",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
+"ok": true,
+"owner_name": "ORMOND LEONEE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-1670-0020-0370"
+},
+"putnam|11-10-23-1670-0020-0380|2024-0006877": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006877",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
+"ok": true,
+"owner_name": "ORMOND LEONEE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-1670-0020-0380"
+},
+"putnam|11-10-23-1670-0020-0390|2023-0007875": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230007875",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1880.0,
+"mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
+"ok": true,
+"owner_name": "ORMOND LEONEE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-1670-0020-0390"
 },
 "putnam|11-10-23-9303-0110-0030|2019-0009042": {
 "acreage": "0.1",
@@ -35127,6 +35828,14 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-9303-0110-0260"
 },
+"putnam|11-10-23-9306-0160-0250|2024-0007281": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007281",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-23-9306-0160-0250"
+},
 "putnam|11-10-23-9314-0070-0280|2019-0009356": {
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190009356",
@@ -35175,6 +35884,18 @@
 "owner_name": "WHITE JOHN W+LARUE W GREATHOUSE",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-10-26-0000-0300-0000"
+},
+"putnam|11-11-26-8243-0121-0030|2024-0007525": {
+"acreage": "0.21",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007525",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3610.0,
+"mailing_address": "160 LAKE CIRCLE SATSUMA FL 32189",
+"ok": true,
+"owner_name": "WILLIAMS PAUL STEVENS",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=11-11-26-8243-0121-0030"
 },
 "putnam|11-11-26-8243-0170-0010|2024-0007541": {
 "acreage": "0.31",
@@ -35320,6 +36041,30 @@
 "owner_name": "HARS KATHY",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-24-0000-0030-0000"
+},
+"putnam|12-10-24-4075-2360-0270|2024-0008095": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008095",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4780.0,
+"mailing_address": "1346 MCCONIHE ST JACKSONVILLE FL 32209",
+"ok": true,
+"owner_name": "SMELLIE ALEXANDER GEORGE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-24-4075-2360-0270"
+},
+"putnam|12-10-24-4075-2450-0410|2024-0008109": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008109",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5070.0,
+"mailing_address": "4170 SABLE RIDGE DR WESTON FL 33331",
+"ok": true,
+"owner_name": "BARTHA BILLY + ANDREA H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-10-24-4075-2450-0410"
 },
 "putnam|12-10-24-4075-2450-0490|2024-0008111": {
 "acreage": "0.5",
@@ -35504,6 +36249,30 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=12-12-26-2730-0000-4930"
 },
+"putnam|13-08-24-5102-0610-0120|2024-0008505": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008505",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5700.0,
+"mailing_address": "2555 ROYAL PINE CIRCLE F CLEARWATER FL 34623-1123",
+"ok": true,
+"owner_name": "TOFT JOAN E",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-08-24-5102-0610-0120"
+},
+"putnam|13-08-24-5102-0650-0250|2024-0008515": {
+"acreage": "0.29",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008515",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 6860.0,
+"mailing_address": "17-36 201 STREET BAYSIDE NY 11360",
+"ok": true,
+"owner_name": "DYKES LLOYD ALLEN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-08-24-5102-0650-0250"
+},
 "putnam|13-09-24-4075-0100-0100|2024-0008568": {
 "acreage": "0.22",
 "applicant": ",",
@@ -35517,6 +36286,38 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-24-4075-0100-0100"
 },
+"putnam|13-09-24-4076-1530-0130|2024-0008637": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008637",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "C/O DANA BROWN MGR 9035 107TH AVE VERO BEACH FL 32967",
+"ok": true,
+"owner_name": "MBM LAND LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-24-4076-1530-0130"
+},
+"putnam|13-09-24-4076-1610-0600|2024-0008651": {
+"acreage": "0.38",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008651",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4430.0,
+"mailing_address": "13 ARLINGTON LANE FOX LAKE IL 60020",
+"ok": true,
+"owner_name": "VANDERGRIFT HORACE+PATRICIA J(H/W)",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-24-4076-1610-0600"
+},
+"putnam|13-09-27-0000-0181-0000|2020-0012445": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200012445",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-27-0000-0181-0000"
+},
 "putnam|13-10-24-0000-0210-0070|2024-0008703": {
 "acreage": "0.92",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008703",
@@ -35529,6 +36330,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-24-0000-0210-0070"
 },
+"putnam|13-10-24-0000-0210-0490|2024-0008706": {
+"acreage": "0.34",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008706",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 6660.0,
+"mailing_address": "1500 HWY A1A STE #1 VERO BEACH FL 32963",
+"ok": true,
+"owner_name": "VERO ATLANTIC 2 LLC",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-24-0000-0210-0490"
+},
 "putnam|13-10-24-4080-0020-0150|2024-0008742": {
 "acreage": "0.34",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008742",
@@ -35540,6 +36353,18 @@
 "owner_name": "BENDER KATHERINE",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-24-4080-0020-0150"
+},
+"putnam|13-10-24-4080-0060-0070|2024-0008745": {
+"acreage": "0.19",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008745",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4230.0,
+"mailing_address": "2201 LAUREL ST PALATKA FL 32177",
+"ok": true,
+"owner_name": "MARBERT DAYMOND A CRUZ",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-24-4080-0060-0070"
 },
 "putnam|13-10-26-2550-0020-0070|2024-0008774": {
 "acreage": "0.22",
@@ -35578,6 +36403,38 @@
 "owner_name": "MIRNEI HOLDING LLC",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-10-26-6550-0050-0040"
+},
+"putnam|13-11-26-8244-0010-0060|2019-0011632": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190011632",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-11-26-8244-0010-0060"
+},
+"putnam|13-11-26-8244-0250-0060|2024-0008881": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008881",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5300.0,
+"mailing_address": "6254 MURPHY DR VICTOR NY 14564",
+"ok": true,
+"owner_name": "BROWN RONALD C + V RUTH",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-11-26-8244-0250-0060"
+},
+"putnam|13-11-26-8244-0250-0070|2024-0008882": {
+"acreage": "0.23",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008882",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5300.0,
+"mailing_address": "104 HOOVER LANE SATSUMA FL 32189",
+"ok": true,
+"owner_name": "VICKERS BRANDI MARIE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-11-26-8244-0250-0070"
 },
 "putnam|13-11-26-8244-0340-0070|2024-0008942": {
 "acreage": "0.37",
@@ -35769,6 +36626,22 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-10-23-9314-0010-0460"
 },
+"putnam|14-10-24-4070-0060-0180|2024-0009327": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009327",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-10-24-4070-0060-0180"
+},
+"putnam|14-10-24-4070-0060-0190|2024-0009328": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009328",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-10-24-4070-0060-0190"
+},
 "putnam|14-10-24-4070-0070-0010|2024-0009331": {
 "acreage": "0.64",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009331",
@@ -35828,6 +36701,14 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-12-26-0000-0010-0022"
 },
+"putnam|14-12-26-0000-0010-0460|2019-0012344": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190012344",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-12-26-0000-0010-0460"
+},
 "putnam|14-12-26-0000-0011-0100|2024-0009441": {
 "acreage": "1.13",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009441",
@@ -35851,6 +36732,18 @@
 },
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=14-12-26-0000-0011-0100"
+},
+"putnam|15-10-23-0000-0010-0011|2024-0009490": {
+"acreage": "1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009490",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 12000.0,
+"mailing_address": "225 CHESSER MONROE RD HAWTHORNE FL 32640",
+"ok": true,
+"owner_name": "WARD RITA MICHELLE",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=15-10-23-0000-0010-0011"
 },
 "putnam|15-10-24-4050-0020-0390|2019-0012504": {
 "acreage": "0.09",
@@ -35981,6 +36874,14 @@
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-09-27-0000-0120-0000"
 },
+"putnam|17-10-23-7075-0020-0090|2024-0009843": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009843",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-10-23-7075-0020-0090"
+},
 "putnam|17-10-23-7075-0040-0020|2023-0011417": {
 "acreage": "0.2",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230011417",
@@ -36002,6 +36903,27 @@
 "owner_name": "MISKIEWICZ MARISOL",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-10-24-1520-0020-0270"
+},
+"putnam|17-10-24-4074-0190-0010|2024-0010060": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010060",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-10-24-4074-0190-0010"
+},
+"putnam|17-10-26-0000-0130-0000|2024-0010087": {
+"acreage": "0.43",
+"applicant": "PP 215 SILVER LAKE RD, PALATKA7",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010087",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 8600.0,
+"mailing_address": "219 SILVER LAKE RD PALATKA FL 32177",
+"ok": true,
+"owner_name": "COURSON JIMMY + BETTIE H/W",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=17-10-26-0000-0130-0000"
 },
 "putnam|17-11-23-4090-1080-0020|2019-0013286": {
 "acreage": "0.96",
@@ -36026,6 +36948,14 @@
 "owner_name": "COMIAN XI TAX LIEN FUND LLC",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6120-0080"
+},
+"putnam|18-08-25-5106-6120-0170|2020-0014233": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200014233",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6120-0170"
 },
 "putnam|18-08-25-5106-6120-0310|2024-0010228": {
 "acreage": "0.21",
@@ -36061,6 +36991,14 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6150-0100"
 },
+"putnam|18-08-25-5106-6170-0200|2020-0014147": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200014147",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6170-0200"
+},
 "putnam|18-08-25-5106-6180-0150|2024-0010259": {
 "acreage": "0.24",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010259",
@@ -36084,6 +37022,14 @@
 },
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6180-0150"
+},
+"putnam|18-08-25-5106-6190-0120|2022-0012068": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20220012068",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-08-25-5106-6190-0120"
 },
 "putnam|18-08-25-5108-8040-0090|2024-0010278": {
 "acreage": "0.23",
@@ -36180,6 +37126,26 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0010-0050"
 },
+"putnam|18-10-24-5112-0020-0300|2024-0010490": {
+"acreage": "0.36",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010490",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 7960.0,
+"mailing_address": "4310 ROUTE 26 WHITNEY POINT NY 13862",
+"ok": true,
+"owner_name": "HUST DONALD A + MILLICENT",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0020-0300"
+},
+"putnam|18-10-24-5112-0030-0160|2019-0013778": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190013778",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0030-0160"
+},
 "putnam|18-10-24-5112-0030-0430|2024-0010498": {
 "acreage": "0.34",
 "applicant": "PP 226 5TH WAY, INTERLACHEN8",
@@ -36216,6 +37182,27 @@
 "owner_name": "WACHTVEITL DAVID D",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0050-0130"
+},
+"putnam|18-10-24-5112-0070-0260|2024-0010521": {
+"acreage": "0.28",
+"applicant": "PP 251 2ND WAY, INTERLACHEN8",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010521",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5100.0,
+"mailing_address": "160 SAN JUAN AVE LOT 22 EAST PALATKA FL 32131",
+"ok": true,
+"owner_name": "CARRASQUILLO JUAN",
+"property_use": "00700 - MISC. RESIDENCE",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0070-0260"
+},
+"putnam|18-10-24-5112-0070-0520|2024-0010524": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010524",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=18-10-24-5112-0070-0520"
 },
 "putnam|18-10-24-6520-0040-0140|2024-0010533": {
 "acreage": "0.34",
@@ -36317,6 +37304,14 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-08-25-5109-9020-0080"
 },
+"putnam|19-08-27-0000-0030-0061|2023-0012387": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230012387",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-08-27-0000-0030-0061"
+},
 "putnam|19-09-23-9370-0000-0038|2024-0010744": {
 "acreage": "9.09",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010744",
@@ -36352,6 +37347,14 @@
 "owner_name": "NERI-HENRIQUES VIRGIE B",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-10-24-4074-0910-0310"
+},
+"putnam|19-12-28-3350-0220-0050|2024-0010940": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010940",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=19-12-28-3350-0220-0050"
 },
 "putnam|20-10-23-0000-0010-0030|2024-0010973": {
 "acreage": "0.93",
@@ -36414,6 +37417,18 @@
 "owner_name": "PIERRE AMOS + KARINE JOSEPH",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=20-10-24-4074-0270-0160"
+},
+"putnam|20-10-24-4074-0400-0140|2024-0011050": {
+"acreage": "0.44",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011050",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4500.0,
+"mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA FL 33160",
+"ok": true,
+"owner_name": "VERONA V LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=20-10-24-4074-0400-0140"
 },
 "putnam|20-10-24-4074-0410-0200|2024-0011054": {
 "acreage": "0.46",
@@ -36549,6 +37564,22 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=22-10-26-5470-0070-0100"
 },
+"putnam|22-10-26-5470-0070-0210|2024-0011469": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011469",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=22-10-26-5470-0070-0210"
+},
+"putnam|22-12-27-2501-0020-0760|2024-0011489": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011489",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=22-12-27-2501-0020-0760"
+},
 "putnam|23-08-27-0000-0071-0000|2024-0011546": {
 "acreage": "1.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011546",
@@ -36572,6 +37603,14 @@
 "owner_name": "FARR PAMELA HEIRS OF",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-09-24-4076-1140-0180"
+},
+"putnam|23-10-23-0000-0010-0030|2023-0013485": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230013485",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-10-23-0000-0010-0030"
 },
 "putnam|23-10-23-0000-0450-0000|2024-0011623": {
 "acreage": "2.03",
@@ -36628,6 +37667,30 @@
 "owner_name": "MOYER JEAN + CHRISTINE DESRASIERS + LANE LOGAN (TIC)",
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-10-24-4062-0020-0110"
+},
+"putnam|23-10-24-4062-0140-0090|2024-0011679": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011679",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-10-24-4062-0140-0090"
+},
+"putnam|23-10-24-4062-0140-0110|2024-0011681": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011681",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-10-24-4062-0140-0110"
+},
+"putnam|23-10-24-4062-0160-0180|2024-0011693": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011693",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=23-10-24-4062-0160-0180"
 },
 "putnam|23-12-26-0000-0020-0013|2024-0011749": {
 "appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
@@ -36719,6 +37782,30 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0260-0170"
 },
+"putnam|24-09-24-4075-0270-0150|2024-0011900": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011900",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "15040 SW 178 TER MIAMI FL 33187",
+"ok": true,
+"owner_name": "FIGUEROA ODALIS CASTRO + JULIO A PENA BERNAL H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0270-0150"
+},
+"putnam|24-09-24-4075-0280-0300|2024-0011919": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011919",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "156 FIR ST VALLEY STREAM NY 11580",
+"ok": true,
+"owner_name": "RICOT RONALD + MARIE MARTINE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0280-0300"
+},
 "putnam|24-09-24-4075-0320-0260|2024-0011953": {
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011953",
@@ -36768,6 +37855,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0380-0040"
 },
+"putnam|24-09-24-4075-0450-0170|2024-0012087": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012087",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "750 ST MARKS AVE BROOKLYN NY 11216",
+"ok": true,
+"owner_name": "WARREN SILFORD",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0450-0170"
+},
 "putnam|24-09-24-4075-0460-0190|2019-0016034": {
 "acreage": "0.22",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -36790,6 +37889,30 @@
 "property_use": "00700 - MISC. RESIDENCE",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0460-0220"
 },
+"putnam|24-09-24-4075-0460-0330|2024-0012107": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012107",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "1860 ROBSON ST APT #402 VANCOUVER BC V6G 3C1 CANADA",
+"ok": true,
+"owner_name": "SASUARI J P",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0460-0330"
+},
+"putnam|24-09-24-4075-0480-0100|2024-0012118": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012118",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3680.0,
+"mailing_address": "C/O CRESENCIANA BARRANDA-GACUSAN 649 MILLCREST DR MARYSVILLE OH 43040",
+"ok": true,
+"owner_name": "BARRANDA NATVIDAD G",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0480-0100"
+},
 "putnam|24-09-24-4075-0510-0210|2019-0016080": {
 "acreage": "0.22",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -36800,6 +37923,14 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-09-24-4075-0510-0210"
 },
+"putnam|24-10-23-4074-0590-0210|2024-0012274": {
+"appraiser_error": "HTTPSConnectionPool(host='apps.putnam-fl.com', port=443): Read timed out. (read timeout=25)",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012274",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": true,
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-10-23-4074-0590-0210"
+},
 "putnam|24-10-23-4074-0600-0140|2024-0012281": {
 "appraiser_error": "503 Server Error: Service Unavailable for url: https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-10-23-4074-0600-0140",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012281",
@@ -36807,6 +37938,19 @@
 "fetched_at": "2026-08-19T17:58:20+00:00",
 "ok": true,
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-10-23-4074-0600-0140"
+},
+"putnam|24-11-23-0000-0482-3330|2024-0012402": {
+"acreage": "0.49",
+"applicant": ",",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012402",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5880.0,
+"mailing_address": "401 NE 61ST TERR OCALA FL 34470",
+"ok": true,
+"owner_name": "BURNS EDNA F HEIRS OF",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=24-11-23-0000-0482-3330"
 },
 "putnam|24-12-27-0000-0120-0000|2021-0014233": {
 "acreage": "0.17",
@@ -36918,6 +38062,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0710-0100"
 },
+"putnam|25-09-24-4075-0730-0320|2024-0012619": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012619",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "20000 CALVERT ST WOODLAND HILLS CA 91367",
+"ok": true,
+"owner_name": "BERNAL TEOFILO Z + LORETO S",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0730-0320"
+},
 "putnam|25-09-24-4075-0900-0050|2020-0017552": {
 "acreage": "0.22",
 "fetched_at": "2026-08-15T03:01:17+00:00",
@@ -36927,6 +38083,30 @@
 "owner_name": "ANDREU SAID",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0900-0050"
+},
+"putnam|25-09-24-4075-0900-0240|2024-0012725": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012725",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "134 OAK WAY INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "RAMOS JOSE D",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0900-0240"
+},
+"putnam|25-09-24-4075-0900-0250|2024-0012726": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012726",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "134 OAK WAY INTERLACHEN FL 32148",
+"ok": true,
+"owner_name": "RAMOS JOSE D",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0900-0250"
 },
 "putnam|25-09-24-4075-0910-0100|2024-0012734": {
 "acreage": "0.22",
@@ -36953,6 +38133,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-0940-0040"
 },
+"putnam|25-09-24-4075-1200-0140|2024-0012861": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012861",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "57 DAYTON RD LAKE WORTH FL 33467",
+"ok": true,
+"owner_name": "LOUIJENE RONIE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=25-09-24-4075-1200-0140"
+},
 "putnam|25-09-24-4076-1300-0210|2020-0018383": {
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200018383",
@@ -36976,6 +38168,90 @@
 "owner_name": "HAMILTON LLOYD J JR",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-08-27-8152-0090-0240"
+},
+"putnam|26-09-24-4076-0470-0070|2024-0013050": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013050",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "189 OLD VILLAGE LANE BETHEL PARK PA 15102-3291",
+"ok": true,
+"owner_name": "MCKINNEY JOHN T HEIRS OF + CHERYL MCKINNEY (TIC)",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0470-0070"
+},
+"putnam|26-09-24-4076-0640-0010|2019-0017480": {
+"acreage": "0.38",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190017480",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 7760.0,
+"mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA FL 33160",
+"ok": true,
+"owner_name": "VERONA V LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0640-0010"
+},
+"putnam|26-09-24-4076-0700-0330|2024-0013160": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013160",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "17730-58A AVENUE #203 SURREY, B.C. V3S 8M5 CANADA",
+"ok": true,
+"owner_name": "LAMBERT LEO C",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0700-0330"
+},
+"putnam|26-09-24-4076-0720-0310|2024-0013174": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013174",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "8 RIVER OAKS CIR WEST BUFFALO GROVE IL 60089",
+"ok": true,
+"owner_name": "YERMAKOV MERI + VLADIMIR YERMAKOV",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0720-0310"
+},
+"putnam|26-09-24-4076-0950-0040|2024-0013245": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013245",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3730.0,
+"mailing_address": "990 TOWNSEND BLVD JACKSONVILLE FL 32211-6040",
+"ok": true,
+"owner_name": "CHARLEUS JUDITH + BICHAT D CHARLEUS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0950-0040"
+},
+"putnam|26-09-24-4076-0950-0050|2024-0013246": {
+"acreage": "0.3",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013246",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5410.0,
+"mailing_address": "990 TOWNSEND BLVD JACKSONVILLE FL 32211-6040",
+"ok": true,
+"owner_name": "CHARLEUS JUDITH + BICHAT D CHARLEUS",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0950-0050"
+},
+"putnam|26-09-24-4076-0970-0320|2024-0013261": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013261",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 3090.0,
+"mailing_address": "1621 NW 6TH AVE FORT LAUDERDALE FL 33311",
+"ok": true,
+"owner_name": "STINFIL NATALIE",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=26-09-24-4076-0970-0320"
 },
 "putnam|26-10-23-0000-0160-0011|2024-0013368": {
 "acreage": "2.5",
@@ -37002,6 +38278,18 @@
 "owner_name": "JOHN JEFFRIES + BRIDGES 39 LLC",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=27-10-23-0000-0330-0000"
+},
+"putnam|28-10-26-0000-8888-0689|2019-0018042": {
+"acreage": "1.14",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190018042",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 20800.0,
+"mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA FL 33160",
+"ok": true,
+"owner_name": "VERONA V LLC",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=28-10-26-0000-8888-0689"
 },
 "putnam|29-09-26-0000-0030-0000|2024-0013669": {
 "acreage": "0.36",
@@ -37237,6 +38525,54 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=33-10-26-8177-0180-0150"
 },
+"putnam|34-09-24-3230-0030-0600|2024-0014693": {
+"acreage": "0.08",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240014693",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1050.0,
+"mailing_address": "10735 SW 108TH AVE #308 MIAMI FL 33176-8161",
+"ok": true,
+"owner_name": "TARDIF DEAN J",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-09-24-3230-0030-0600"
+},
+"putnam|34-09-24-3230-0030-0740|2019-0019305": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190019305",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1100.0,
+"mailing_address": "P O BOX 8191 PEMBROKE PINES FL 33084-0191",
+"ok": true,
+"owner_name": "WARNSTEDT M J",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-09-24-3230-0030-0740"
+},
+"putnam|34-09-24-3230-0030-0750|2022-0017050": {
+"acreage": "0.1",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20220017050",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1110.0,
+"mailing_address": "PO BOX 8191 PEMBROKE PINES FL 33084-0191",
+"ok": true,
+"owner_name": "WARNSTEDT M J",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-09-24-3230-0030-0750"
+},
+"putnam|34-09-24-3230-0090-0430|2023-0016862": {
+"acreage": "0.08",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230016862",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1010.0,
+"mailing_address": "323 S W 16TH COURT FT LAUDERDALE FL 33315-1737",
+"ok": true,
+"owner_name": "GRAHAM EDWARD + S MICHAEL LANGSTON",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-09-24-3230-0090-0430"
+},
 "putnam|34-09-24-8630-0000-1479|2019-0019619": {
 "acreage": "0.15",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190019619",
@@ -37281,6 +38617,18 @@
 "owner_name": "SHEFFIELD DOROTHY",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-10-23-4520-0060-0030"
+},
+"putnam|34-11-27-0000-0020-0571|2024-0015194": {
+"acreage": "0.55",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015194",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 10180.0,
+"mailing_address": "115 LAR LANE CRESCENT CITY FL 32112",
+"ok": true,
+"owner_name": "DETTMANN GAIL",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=34-11-27-0000-0020-0571"
 },
 "putnam|34-12-27-5620-0050-0250|2019-0019898": {
 "acreage": "0.27",
@@ -37388,6 +38736,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4075-1560-0280"
 },
+"putnam|35-09-24-4075-1820-0010|2019-0020204": {
+"acreage": "0.25",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190020204",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 5070.0,
+"mailing_address": "244 LOUIS AVE S FLORAL PARK NY 11001",
+"ok": true,
+"owner_name": "LEE BRIAN",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4075-1820-0010"
+},
 "putnam|35-09-24-4075-1820-0020|2019-0020205": {
 "acreage": "0.24",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190020205",
@@ -37412,6 +38772,30 @@
 "owner_name": "HILTZ LINDA",
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4076-0110-0040"
+},
+"putnam|35-09-24-4076-0160-0010|2024-0015533": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015533",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "13325 POCOMOKE CT WOODBRIDGE VA 22192",
+"ok": true,
+"owner_name": "MASSEY URIEL + NAIRA H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4076-0160-0010"
+},
+"putnam|35-09-24-4076-0160-0110|2024-0015535": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015535",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "3451 SALAND WAY # 414 JACKSONVILLE FL 32246",
+"ok": true,
+"owner_name": "COLLETON JAMES R + ELLEN W H/W",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-09-24-4076-0160-0110"
 },
 "putnam|35-09-24-4076-0360-0120|2019-0020417": {
 "acreage": "0.33",
@@ -37485,6 +38869,18 @@
 "property_use": "00200 - MOBILE HOME",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=35-12-27-0000-0030-0070"
 },
+"putnam|36-09-24-4075-1170-0150|2024-0015857": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015857",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "3841 CASTLEBRIDGE LANE LEXINGTON KY 40509",
+"ok": true,
+"owner_name": "BORG JUDY BOND",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1170-0150"
+},
 "putnam|36-09-24-4075-1310-0240|2024-0015929": {
 "acreage": "0.43",
 "applicant": "PP 211 NEISMAN AV, INTERLACHEN8",
@@ -37497,6 +38893,54 @@
 "owner_name": "BERNINI MARY DIANE HEIRS OF",
 "property_use": "00700 - MISC. RESIDENCE",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1310-0240"
+},
+"putnam|36-09-24-4075-1360-0010|2024-0015947": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015947",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "PO BOX 121 FLORAHOME FL 32140",
+"ok": true,
+"owner_name": "NELSON JACQUES L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1360-0010"
+},
+"putnam|36-09-24-4075-1360-0020|2024-0015948": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015948",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "PO BOX 121 FLORAHOME FL 32140",
+"ok": true,
+"owner_name": "NELSON JACQUES L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1360-0020"
+},
+"putnam|36-09-24-4075-1360-0030|2024-0015949": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015949",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "PO BOX 121 FLORAHOME FL 32140",
+"ok": true,
+"owner_name": "NELSON JACQUES L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1360-0030"
+},
+"putnam|36-09-24-4075-1360-0040|2024-0015950": {
+"acreage": "0.22",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015950",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 4040.0,
+"mailing_address": "PO BOX 121 FLORAHOME FL 32140",
+"ok": true,
+"owner_name": "NELSON JACQUES L",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=36-09-24-4075-1360-0040"
 },
 "putnam|36-09-24-4076-0260-0230|2024-0015984": {
 "acreage": "0.22",
@@ -38266,6 +39710,18 @@
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-2200-0800"
 },
+"putnam|42-10-27-6850-2200-1000|2019-0022395": {
+"acreage": "0.09",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20190022395",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 1370.0,
+"mailing_address": "2520 ASPEN DR ANCHORAGE AK 99517-3290",
+"ok": true,
+"owner_name": "OSWALD TOMMY D",
+"property_use": "00000 - Vacant",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=42-10-27-6850-2200-1000"
+},
 "putnam|42-10-27-6850-2610-0040|2024-0017322": {
 "acreage": "0.12",
 "applicant": "PP 1412 CARR ST, PALATKA7",
@@ -38425,6 +39881,18 @@
 "property_use": "00000 - Vacant",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=43-10-27-8255-0100-0140"
 },
+"putnam|43-10-27-8255-0130-0010|2024-0017532": {
+"acreage": "0.54",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017532",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 17680.0,
+"mailing_address": "266 TROPIC AVE SATSUMA FL 32189",
+"ok": true,
+"owner_name": "PETERSON ROBERT",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=43-10-27-8255-0130-0010"
+},
 "putnam|48-10-27-4570-0030-0070|2024-0017617": {
 "acreage": "0.83",
 "applicant": "PP 119 CULPEPPER RD, SAN MATEO7",
@@ -38437,6 +39905,18 @@
 "owner_name": "MONROE TRACY L LIFE ESTATE",
 "property_use": "00100 - SINGLE FAMILY",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=48-10-27-4570-0030-0070"
+},
+"putnam|48-10-27-8221-0000-0350|2024-0017625": {
+"acreage": "0.46",
+"clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240017625",
+"clerk_platform": "template",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"just_value": 22500.0,
+"mailing_address": "121 WEERTS RD SAN MATEO FL 32187",
+"ok": true,
+"owner_name": "JACKSON JOHN JR HEIRS OF + TERRY LEE JACKSON TIC",
+"property_use": "00200 - MOBILE HOME",
+"url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=48-10-27-8221-0000-0350"
 },
 "putnam|49-09-27-0220-0040-0100|2024-0017651": {
 "acreage": "1.7",
@@ -39380,7 +40860,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -39405,13 +40885,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -39448,25 +40928,25 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G22AM011|5068": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G29A059A|5076": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -39490,25 +40970,25 @@
 },
 "sumter|N16A015|5074": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A021|5071": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -39520,7 +41000,7 @@
 },
 "suwannee|00813020060|4732": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39532,7 +41012,7 @@
 },
 "suwannee|01014012000|4735": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39544,7 +41024,7 @@
 },
 "suwannee|01133031770|4736": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39578,39 +41058,45 @@
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
+"suwannee|03399030009|4803": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-06T11:00:40+00:00",
+"ok": false,
+"url": "https://www.suwanneepa.com/gis/"
+},
 "suwannee|03406080200|4726": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03406080210|4727": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090120|4788": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03497090160|4789": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|03683005000|4775": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|04264840001|4778": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39634,7 +41120,7 @@
 },
 "suwannee|04573000000|4703": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39652,7 +41138,7 @@
 },
 "suwannee|08856003010|4688": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39670,13 +41156,13 @@
 },
 "suwannee|09150020030|4797": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|09531090010|4714": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39694,7 +41180,7 @@
 },
 "suwannee|10515009004|4717": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -39752,19 +41238,19 @@
 },
 "suwannee|11389070030|4786": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11390070050|4787": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
 "suwannee|11666000116|4718": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T16:22:54+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -40057,7 +41543,7 @@
 },
 "volusia|322102000690|04369-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=322102000690"
 },
@@ -40107,13 +41593,13 @@
 },
 "volusia|42251600D100|04683-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=42251600D100"
 },
 "volusia|422522005880|04696-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422522005880"
 },
@@ -40217,13 +41703,13 @@
 },
 "volusia|424294000240|09604-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424294000240"
 },
 "volusia|483401040050|00110-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=483401040050"
 },
@@ -40279,7 +41765,7 @@
 },
 "volusia|522209000440|09703-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=522209000440"
 },
@@ -40431,7 +41917,7 @@
 },
 "volusia|531631008220|11177-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=531631008220"
 },
@@ -40633,7 +42119,7 @@
 },
 "volusia|533961000080|07255-23": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533961000080"
 },
@@ -40655,7 +42141,7 @@
 },
 "volusia|533978000280|11072-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533978000280"
 },
@@ -40747,7 +42233,7 @@
 },
 "volusia|613201120260|02681-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613201120260"
 },
@@ -40869,7 +42355,7 @@
 },
 "volusia|633013003070|10899-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=633013003070"
 },
@@ -40887,7 +42373,7 @@
 },
 "volusia|641936008403|11024-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=641936008403"
 },
@@ -40925,7 +42411,7 @@
 },
 "volusia|700603001080|10480-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700603001080"
 },
@@ -40965,7 +42451,7 @@
 },
 "volusia|701714060070|01489-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701714060070"
 },
@@ -41073,7 +42559,7 @@
 },
 "volusia|734306001031|07667-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734306001031"
 },
@@ -41207,7 +42693,7 @@
 },
 "volusia|801403110050|02139-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801403110050"
 },
@@ -41279,7 +42765,7 @@
 },
 "volusia|813024030080|03789-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813024030080"
 },
@@ -41291,7 +42777,7 @@
 },
 "volusia|813074050040|04212-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074050040"
 },
@@ -41341,7 +42827,7 @@
 },
 "volusia|840500000120|10526-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840500000120"
 },
@@ -41719,25 +43205,25 @@
 },
 "washington|00000000-06-0339-0003|2026-TD-167": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0003",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0003"
 },
 "washington|00000000-06-0339-0006|2026-TD-166": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0006",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0339-0006"
 },
 "washington|00000000-06-0342-0002|2026-TD-165": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0002",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0002"
 },
 "washington|00000000-06-0342-0009|2026-TD-164": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0009",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0342-0009"
 },
@@ -41749,7 +43235,7 @@
 },
 "washington|00000000-06-0356-0007|2026-TD-162": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0007",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0007"
 },
@@ -41773,7 +43259,7 @@
 },
 "washington|00000000-06-0357-0008|2026-TD-159": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0008",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0008"
 },
@@ -41785,7 +43271,7 @@
 },
 "washington|00000000-06-0357-0022|2026-TD-178": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0022",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0022"
 },
@@ -42089,7 +43575,7 @@
 },
 "washington|00000000-08-0499-0004|2026-TD-192": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0499-0004",
-"fetched_at": "2026-09-28T18:34:04+00:00",
+"fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0499-0004"
 },
