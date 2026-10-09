@@ -1,0 +1,30 @@
+[
+  {
+    "county": "suwannee",
+    "sale_date": "11/05/2026",
+    "sale_time": "11:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "4803",
+    "certificate_number": "2020-1086",
+    "parcel_id": "03399030009",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 2886.08,
+    "assessed_value": null,
+    "auction_status": "11/05/2026 11:00 AM ET",
+    "auction_url": "https://www.suwannee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1523756&bypassPage=1",
+    "appraiser_url": "https://www.suwanneepa.com/gis/",
+    "clerk_case_url": "",
+    "source_host": "www.suwannee.realtaxdeed.com",
+    "scraped_at": "2026-10-09T11:10:44+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "4803",
+      "certificate": "2020-1086",
+      "opening bid": "$2,886.08",
+      "parcel id": "03399030009"
+    }
+  }
+]
