@@ -668,6 +668,12 @@
 "source": "reportall"
 }
 },
+"brevard|2000576|260358": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2000576",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
+},
 "brevard|2104517|260308": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2104517",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -1466,6 +1472,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"charlotte|402101154016|26-0626": {
+"error": "522 Server Error: <none> for url: https://www.ccappraiser.com/Show_parcel.asp?acct=402101154016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402101154016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|402102380017|26-0388": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -1479,6 +1491,34 @@
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103177001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402103330002|26-0628": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103330002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402103332015|26-0623": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103332015&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402103455006|26-0624": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103455006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402104283001|26-0627": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402104283001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402105110004|26-0458": {
 "acreage": "Land Value",
@@ -1577,6 +1617,13 @@
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402108158006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402108302016|26-0653": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402108302016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402108380007|26-0562": {
 "acreage": "Land Value",
@@ -1970,6 +2017,27 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310333004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|402310383001|26-0621": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310383001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402311376001|26-0622": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402311376001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|402315104001|26-0654": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402315104001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|402315452002|26-0365": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -2025,6 +2093,13 @@
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412010379010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412017240005|26-0616": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412017240005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|412017428003|26-0373": {
 "acreage": "Land Value",
@@ -2082,6 +2157,13 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412117328011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|412120129004|26-0614": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412120129004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|412129157024|26-0370": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -2138,12 +2220,26 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412133337007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|412133353004|26-0655": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412133353004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|412133388012|26-0441": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412133388012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412213232008|26-0652": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412213232008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|412302326005|26-0560": {
 "acreage": "Land Value",
@@ -2235,6 +2331,20 @@
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412304402012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412313302005|26-0613": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412313302005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|412321101006|26-0657": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412321101006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|412322378010|26-0242": {
 "acreage": "Land Value",
@@ -2334,6 +2444,13 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334252003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|412334407010|26-0610": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334407010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|422104233001|26-0590": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -2411,12 +2528,40 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422109251002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|422302178007|26-0615": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302178007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|422302283009|26-0557": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302283009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422302311008|26-0611": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302311008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422302356011|26-0612": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302356011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422302358019|26-0633": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302358019&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422302379012|26-0558": {
 "acreage": "Land Value",
@@ -2446,6 +2591,41 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303126021&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|422303153018|26-0634": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303153018&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303154012|26-0635": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303154012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303155012|26-0647": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303155012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303157002|26-0636": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303157002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303157003|26-0637": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303157003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|422303206011|26-0569": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -2467,6 +2647,62 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303277009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|422303326007|26-0630": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303326007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303326022|26-0631": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303326022&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422303326023|26-0632": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303326023&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310131005|26-0639": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310131005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310131006|26-0638": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310131006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310135003|26-0648": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310135003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310135004|26-0640": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310135004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310307009|26-0649": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310307009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|422310331008|26-0378": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -2474,12 +2710,68 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310331008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"charlotte|422310356007|26-0650": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310356007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310356008|26-0642": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310356008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310357033|26-0641": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310357033&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310357034|26-0643": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310357034&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310380017|26-0646": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310380017&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310381017|26-0644": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310381017&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422310382008|26-0645": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310382008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
 "charlotte|422329162005|26-0602": {
 "acreage": "Land Value",
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422329162005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
+},
+"charlotte|422330428011|26-0595": {
+"acreage": "Land Value",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"property_use": "Zoning",
+"url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422330428011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422330458001|26-0603": {
 "acreage": "Land Value",
@@ -7661,7 +7953,7 @@
 },
 "flagler|0711317024000700120|26-076 TDC": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
@@ -7710,6 +8002,12 @@
 "source": "reportall"
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240"
+},
+"gilchrist|150816-02200000-0090|26-0016-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090"
 },
 "gilchrist|161015-00000048-0010|26-0006-TD": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010",
@@ -7762,7 +8060,7 @@
 },
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
 },
@@ -7814,31 +8112,31 @@
 },
 "hardee|05-33-25-0090-0000A-0018|252026TD002AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=591765235&KeyValue=05-33-25-0090-0000A-0018"
 },
 "hardee|10-34-25-0843-00001-0019|252026TD003AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1717494334&KeyValue=10-34-25-0843-00001-0019"
 },
 "hardee|15-34-25-0830-00018-0013|252026TD001AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2141339041&KeyValue=15-34-25-0830-00018-0013"
 },
 "hardee|15-34-25-0830-00019-0028|252026TD020AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=2072927804&KeyValue=15-34-25-0830-00019-0028"
 },
 "hardee|17-33-25-0400-00001-0138|252026TD006AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138"
 },
@@ -7850,7 +8148,7 @@
 },
 "hardee|24-34-25-0000-05770-0000|252026TD023AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000"
 },
@@ -7862,7 +8160,7 @@
 },
 "hardee|28-33-25-0820-00036-0028|252026TD007AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028"
 },
@@ -7874,49 +8172,49 @@
 },
 "hendry|1 29 42 32 A00 0011.0100|25-122": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2193-014.0|25-130": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2194-011.0|25-125": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2339-023.0|25-131": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 070 2210-024.0|25-126": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 080 2280-037.0|25-127": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 080 2283-030.0|25-128": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -7928,67 +8226,67 @@
 },
 "hendry|4 29 43 10 090 2302-001.0|23-133": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2304-010.0|25-134": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2336-007.0|25-135": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2361-022.0|25-116": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2368-005.0|25-117": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2375-050.0|25-118": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2433-067.0|25-119": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2436-006.0|25-120": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2469-007.0|25-115": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2497-011.0|25-121": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2506-018.0|25-123": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -10723,6 +11021,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0121000100"
+},
+"hillsborough|0134510025|2026-913": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0134510025"
 },
 "hillsborough|0163293668|2026-818": {
 "assessed_value": "Exemptions",
@@ -16294,6 +16601,12 @@
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=332103C0920"
 },
+"leon|410125D0100|26-0065": {
+"error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/410125D0100?mode=&UseSearch=no&pin=410125D0100",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=410125D0100"
+},
 "leon|4101460000330|26-0067": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4101460000330?mode=&UseSearch=no&pin=4101460000330",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -16335,6 +16648,12 @@
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4109500000130"
+},
+"leon|4110350010020|26-0071": {
+"error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4110350010020?mode=&UseSearch=no&pin=4110350010020",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4110350010020"
 },
 "leon|4111200060000|26-0159": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4111200060000?mode=&UseSearch=no&pin=4111200060000",
@@ -26130,7 +26449,7 @@
 },
 "nassau|35-4N-25-4220-0002-0020|452026XX000014TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=35-4N-25-4220-0002-0020"
 },
@@ -26950,7 +27269,7 @@
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -26962,25 +27281,25 @@
 },
 "okeechobee|1-11-34-33-0A00-00008-F000|2026TD104": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-11-34-33-0A00-00008-F000"
 },
 "okeechobee|1-14-34-33-0A00-00004-F000|2026TD105": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00004-F000"
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
@@ -26992,7 +27311,7 @@
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
@@ -27040,7 +27359,7 @@
 },
 "okeechobee|1-20-34-33-0A00-00021-B000|2026TD099": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-20-34-33-0A00-00021-B000"
 },
@@ -27058,7 +27377,7 @@
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
@@ -28110,7 +28429,7 @@
 },
 "osceola|012630000104290060|2112024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000104290060"
 },
@@ -28134,7 +28453,7 @@
 },
 "osceola|032528340700012113|5152024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012113"
 },
@@ -28280,7 +28599,7 @@
 },
 "osceola|162527561600010050|30182024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=162527561600010050"
 },
@@ -28367,7 +28686,7 @@
 },
 "osceola|222630007700010450|41862024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=222630007700010450"
 },
@@ -30531,6 +30850,15 @@
 "property_use": "Conditions",
 "url": "http://search.pascopa.com/parcel.aspx?parcel=162618040000004014A"
 },
+"pasco|19-24-17-0010-00000-0054|512026XX000127TDAXXX": {
+"acreage": "Tax Area",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"just_value": 142811.0,
+"mailing_address": "BOLES LUTHER H & LOTTIE & BOLES CAROLYN D 15611 LILLY LN HUDSON, FL 34667-8803",
+"ok": true,
+"property_use": "Conditions",
+"url": "http://search.pascopa.com/parcel.aspx?parcel=1724190010000000054"
+},
 "pasco|21-25-17-0130-22200-0040|512026XX000187TDAXXX": {
 "acreage": "Tax Area",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -30886,15 +31214,15 @@
 "url": "https://www.pcpao.gov/property-details?s=09-31-16-48456-001-0110"
 },
 "pinellas|10-29-15-51948-001-0080|2024-01539": {
-"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
-"fetched_at": "2026-10-06T11:00:40+00:00",
-"ok": false,
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
 "url": "https://www.pcpao.gov/property-details?s=10-29-15-51948-001-0080"
 },
 "pinellas|10-30-15-57790-003-0450|2024-02946": {
-"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
-"fetched_at": "2026-10-06T11:00:40+00:00",
-"ok": false,
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
 "url": "https://www.pcpao.gov/property-details?s=10-30-15-57790-003-0450"
 },
 "pinellas|11-31-16-68166-001-0320|2024-07237": {
@@ -41157,7 +41485,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -41182,13 +41510,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -41225,25 +41553,25 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G22AM011|5068": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G29A059A|5076": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -41267,25 +41595,25 @@
 },
 "sumter|N16A015|5074": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A021|5071": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -41357,7 +41685,7 @@
 },
 "suwannee|03399030009|4803": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -41840,7 +42168,7 @@
 },
 "volusia|322102000690|04369-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=322102000690"
 },
@@ -41888,15 +42216,21 @@
 "source": "reportall"
 }
 },
+"volusia|422302030100|04624-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422302030100"
+},
 "volusia|42251600D100|04683-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=42251600D100"
 },
 "volusia|422522005880|04696-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422522005880"
 },
@@ -42000,7 +42334,7 @@
 },
 "volusia|424294000240|09604-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424294000240"
 },
@@ -42218,6 +42552,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=531631008220"
 },
+"volusia|532250001280|12575-23": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=532250001280"
+},
 "volusia|533801150033|06392-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -42396,6 +42736,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700056"
 },
+"volusia|533903700061|06725-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
+},
 "volusia|533950030010|06817-24": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -42438,7 +42784,7 @@
 },
 "volusia|533978000280|11072-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533978000280"
 },
@@ -42464,11 +42810,35 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=534401060070"
 },
+"volusia|580201590010|00150-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
+},
 "volusia|600516010110|00617-24": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110"
+},
+"volusia|600700000490|00640-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600700000490"
+},
+"volusia|602601000341|07336-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=602601000341"
+},
+"volusia|603805000010|00787-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603805000010"
 },
 "volusia|603812000680|00808-24": {
 "error": "no recognizable fields on page",
@@ -42504,11 +42874,29 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601090010"
 },
+"volusia|611601250130|03068-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130"
+},
+"volusia|611602020090|12107-20": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
+},
 "volusia|611602030270|03569-20": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602030270"
+},
+"volusia|611602210150|03578-20": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150"
 },
 "volusia|612901110240|03774-20": {
 "error": "no recognizable fields on page",
@@ -42530,7 +42918,7 @@
 },
 "volusia|613201120260|02681-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613201120260"
 },
@@ -42556,11 +42944,29 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301060020"
 },
+"volusia|613301070250|05074-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250"
+},
+"volusia|613301100260|10746-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
+},
 "volusia|613301130200|03083-23": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301130200"
+},
+"volusia|613301150090|14045-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090"
 },
 "volusia|613301160180|04015-20": {
 "error": "no recognizable fields on page",
@@ -42652,7 +43058,7 @@
 },
 "volusia|633013003070|10899-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=633013003070"
 },
@@ -42674,6 +43080,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=641936008403"
 },
+"volusia|694301060020|00298-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020"
+},
 "volusia|700113002430|01662-20": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -42689,6 +43101,12 @@
 "parcel_address": "PROPERTY LOCATION IS NOT AVAIL",
 "source": "reportall"
 }
+},
+"volusia|700400001060|01154-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060"
 },
 "volusia|700501000061|01188-24": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -42717,6 +43135,12 @@
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291"
+},
+"volusia|701531000030|01375-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030"
 },
 "volusia|701534000080|01377-24": {
 "error": "no recognizable fields on page",
@@ -42758,11 +43182,23 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110"
 },
+"volusia|702003000010|01643-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010"
+},
 "volusia|702007010160|01657-24": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160"
+},
+"volusia|702012030110|12279-19": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110"
 },
 "volusia|703204020060|01860-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -42856,7 +43292,7 @@
 },
 "volusia|734306001031|07667-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734306001031"
 },
@@ -42900,6 +43336,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820"
 },
+"volusia|743005040130|08124-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130"
+},
 "volusia|744006160290|08178-24": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -42911,6 +43353,12 @@
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030"
+},
+"volusia|744109010050|08201-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050"
 },
 "volusia|744130040040|08230-24": {
 "error": "no recognizable fields on page",
@@ -42982,6 +43430,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360"
 },
+"volusia|801108280050|02083-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
+},
 "volusia|801301000640|02394-23": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -42990,7 +43444,7 @@
 },
 "volusia|801403110050|02139-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801403110050"
 },
@@ -43015,6 +43469,12 @@
 "parcel_address": "C-609 BELLTOWER Ave",
 "source": "reportall"
 }
+},
+"volusia|810401010130|12166-23": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130"
 },
 "volusia|810404030120|03402-24": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -43066,6 +43526,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813024030080"
 },
+"volusia|813063300060|04130-24": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813063300060"
+},
 "volusia|813069010020|04164-24": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -43074,7 +43540,7 @@
 },
 "volusia|813074050040|04212-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074050040"
 },
@@ -43124,7 +43590,7 @@
 },
 "volusia|840500000120|10526-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-10-13T11:17:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840500000120"
 },
@@ -43166,6 +43632,12 @@
 "source": "reportall"
 }
 },
+"volusia|844702060860|09589-21": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860"
+},
 "volusia|844702073000|09156-23": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -43181,6 +43653,12 @@
 "parcel_address": "PROPERTY LOCATION IS NOT AVAIL",
 "source": "reportall"
 }
+},
+"volusia|844702073021|09753-23": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-13T11:17:03+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
 "volusia|853812000901|10095-23": {
 "error": "no recognizable fields on page",
