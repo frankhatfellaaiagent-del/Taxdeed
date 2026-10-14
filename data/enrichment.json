@@ -794,6 +794,12 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426611"
 },
+"brevard|2428121|260019": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2428121",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2428121"
+},
 "brevard|2429936|260314": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2429936",
 "fetched_at": "2026-10-08T11:16:31+00:00",
@@ -1082,6 +1088,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|484106-07-0240|54126": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|484107-06-0170|53710": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-08T11:16:31+00:00",
@@ -1139,6 +1151,12 @@
 "broward|484228-27-0250|54052": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|484229-HD-0290|54133": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1292,6 +1310,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494204-AH-0340|54336": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|494204-BH-0400|54059": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -1412,9 +1436,27 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504203-BF-0860|54341": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504205-10-0010|53673": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-08T11:16:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504214-03-0633|54342": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504235-AC-0060|54325": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1433,6 +1475,12 @@
 "broward|514119-06-0741|53740": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-08T11:16:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|514126-14-1200|54318": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-14T09:23:49+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -8003,6 +8051,12 @@
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240"
 },
+"gilchrist|100816-00000004-0010|26-0018-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010"
+},
 "gilchrist|150816-02200000-0090|26-0016-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
 "fetched_at": "2026-10-13T11:17:03+00:00",
@@ -12301,6 +12355,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33390200026000000012.0"
 },
+"indianriver|33391200015000000002.9|2026-0047TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9"
+},
 "indianriver|33391300009000300007.0|2026-0033TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391300009000300007.0",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -12370,6 +12430,12 @@
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33393600002070000003.0"
+},
+"indianriver|33400500012010000005.0|2026-0065TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0",
+"fetched_at": "2026-10-14T09:23:49+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0"
 },
 "indianriver|33400700004000200102.0|2026-0039TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400700004000200102.0",
