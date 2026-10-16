@@ -87,7 +87,7 @@
 },
 "alachua|06107-306-001|TD 2026-039": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06107-306-001",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06107-306-001"
 },
@@ -117,7 +117,7 @@
 },
 "alachua|06706-304-000|TD 2026-041": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000"
 },
@@ -152,7 +152,7 @@
 },
 "alachua|07294-201-125|TD 2026-037": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125"
 },
@@ -176,7 +176,7 @@
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
@@ -194,13 +194,13 @@
 },
 "alachua|11276-008-000|TD 2026-038": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000"
 },
 "alachua|11908-000-000|TD 2026-040": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000"
 },
@@ -486,7 +486,7 @@
 },
 "bay|15624-000-000|2026-2969TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000"
 },
@@ -688,7 +688,7 @@
 },
 "brevard|2111705|260122": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2111705",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2111705"
 },
@@ -712,7 +712,7 @@
 },
 "brevard|2209090|260312": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2209090",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2209090"
 },
@@ -724,7 +724,7 @@
 },
 "brevard|2302009|240524": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2302009",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2302009"
 },
@@ -772,19 +772,19 @@
 },
 "brevard|2424555|260363": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2424555",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2424555"
 },
 "brevard|2426124|260355": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426124",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426124"
 },
 "brevard|2426129|260356": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426129",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426129"
 },
@@ -802,7 +802,7 @@
 },
 "brevard|2429936|260314": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2429936",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2429936"
 },
@@ -832,13 +832,13 @@
 },
 "brevard|2703225|260320": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2703225",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2703225"
 },
 "brevard|2708655|260321": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2708655",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2708655"
 },
@@ -862,7 +862,7 @@
 },
 "brevard|2729714|260327": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2729714",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2729714"
 },
@@ -886,7 +886,7 @@
 },
 "brevard|2800504|260326": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2800504",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2800504"
 },
@@ -910,7 +910,7 @@
 },
 "brevard|2804338|260331": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2804338",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2804338"
 },
@@ -922,7 +922,7 @@
 },
 "brevard|2813643|260357": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2813643",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2813643"
 },
@@ -952,13 +952,13 @@
 },
 "brevard|2831490|260340": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2831490",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2831490"
 },
 "brevard|2834443|260343": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2834443",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2834443"
 },
@@ -976,7 +976,7 @@
 },
 "brevard|2837785|260345": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2837785",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2837785"
 },
@@ -994,7 +994,7 @@
 },
 "brevard|2844485|260366": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2844485",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2844485"
 },
@@ -1006,13 +1006,13 @@
 },
 "brevard|2849883|260346": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2849883",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2849883"
 },
 "brevard|2900727|260368": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2900727",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2900727"
 },
@@ -1024,7 +1024,7 @@
 },
 "brevard|2905917|260369": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2905917",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2905917"
 },
@@ -1048,13 +1048,13 @@
 },
 "brevard|2936893|260351": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2936893",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2936893"
 },
 "brevard|2938170|260350": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2938170",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2938170"
 },
@@ -1072,7 +1072,7 @@
 },
 "brevard|3010671|260362": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/3010671",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/3010671"
 },
@@ -1096,13 +1096,13 @@
 },
 "broward|484107-06-0170|53710": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|484114-01-2120|53649": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1114,7 +1114,7 @@
 },
 "broward|484122-AK-0260|53894": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1126,7 +1126,7 @@
 },
 "broward|484134-AB-0200|53867": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1222,7 +1222,7 @@
 },
 "broward|494108-01-0023|53864": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1246,7 +1246,7 @@
 },
 "broward|494123-DJ-0310|53888": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1258,7 +1258,7 @@
 },
 "broward|494126-AB-2090|53726": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1282,7 +1282,7 @@
 },
 "broward|494135-AE-0040|53707": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1300,7 +1300,7 @@
 },
 "broward|494135-FH-0050|53839": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1312,7 +1312,7 @@
 },
 "broward|494136-BK-0170|53694": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1348,7 +1348,7 @@
 },
 "broward|494204-DK-0600|53869": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1366,7 +1366,7 @@
 },
 "broward|494211-06-5200|53731": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1378,13 +1378,13 @@
 },
 "broward|494212-09-2690|53732": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|494212-AH-0730|53768": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1408,7 +1408,7 @@
 },
 "broward|494232-01-4120|53769": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1432,13 +1432,13 @@
 },
 "broward|504011-01-0500|53865": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|504113-04-0670|53698": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1468,7 +1468,7 @@
 },
 "broward|504205-10-0010|53673": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1486,19 +1486,19 @@
 },
 "broward|514024-03-0181|53741": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|514116-02-0110|53487": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|514119-06-0741|53740": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1522,7 +1522,7 @@
 },
 "broward|514222-DB-0350|53817": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -3873,7 +3873,7 @@
 },
 "clay|210823-004592-000-00|2026-0108TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-004592-000-00",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-004592-000-00"
 },
@@ -8031,7 +8031,7 @@
 },
 "gilchrist|040814-00000001-0010|26-0023-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010"
 },
@@ -13549,7 +13549,7 @@
 },
 "lee|01-44-26-10-00107.0010|2026000649": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-26-10-00107.0010"
 },
@@ -13646,7 +13646,7 @@
 },
 "lee|02-44-26-08-00069.0090|2026000667": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-26-08-00069.0090"
 },
@@ -13757,7 +13757,7 @@
 },
 "lee|03-45-26-09-00088.0170|2026000659": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-45-26-09-00088.0170"
 },
@@ -14155,7 +14155,7 @@
 },
 "lee|11-44-26-02-00016.0180|2026000602": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=11-44-26-02-00016.0180"
 },
@@ -14191,7 +14191,7 @@
 },
 "lee|12-44-26-07-00064.0020|2026000662": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-44-26-07-00064.0020"
 },
@@ -14203,7 +14203,7 @@
 },
 "lee|12-44-27-07-00027.001A|2026000603": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-44-27-07-00027.001A"
 },
@@ -14347,7 +14347,7 @@
 },
 "lee|13-45-26-02-00020.0080|2026000632": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-45-26-02-00020.0080"
 },
@@ -14395,13 +14395,13 @@
 },
 "lee|14-44-27-04-00016.0060|2026000633": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-27-04-00016.0060"
 },
 "lee|14-44-27-04-00016.0070|2026000634": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-27-04-00016.0070"
 },
@@ -14425,13 +14425,13 @@
 },
 "lee|15-44-27-11-00041.0140|2026000635": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-44-27-11-00041.0140"
 },
 "lee|15-44-27-11-00044.013B|2026000607": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-44-27-11-00044.013B"
 },
@@ -14449,7 +14449,7 @@
 },
 "lee|16-44-26-08-00027.0140|2026000614": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=16-44-26-08-00027.0140"
 },
@@ -14630,7 +14630,7 @@
 },
 "lee|18-44-27-09-00036.0180|2026000637": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-44-27-09-00036.0180"
 },
@@ -14769,7 +14769,7 @@
 },
 "lee|21-44-27-05-00017.012B|2026000612": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-05-00017.012B"
 },
@@ -14781,19 +14781,19 @@
 },
 "lee|21-45-27-08-00042.0120|2026000716": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-08-00042.0120"
 },
 "lee|21-45-27-11-00063.0060|2026000613": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-11-00063.0060"
 },
 "lee|21-45-27-11-00068.0060|2026000621": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-11-00068.0060"
 },
@@ -14832,13 +14832,13 @@
 },
 "lee|22-44-27-05-00017.013A|2026000622": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-44-27-05-00017.013A"
 },
 "lee|22-44-27-11-00037.0100|2026000617": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-44-27-11-00037.0100"
 },
@@ -14880,7 +14880,7 @@
 },
 "lee|23-44-27-02-00006.0100|2026000624": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-02-00006.0100"
 },
@@ -14993,13 +14993,13 @@
 },
 "lee|24-44-27-12-00045.0240|2026000724": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-27-12-00045.0240"
 },
 "lee|24-44-27-12-00048.0020|2026000644": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-27-12-00048.0020"
 },
@@ -15115,7 +15115,7 @@
 },
 "lee|25-44-27-06-00024.0120|2026000655": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-27-06-00024.0120"
 },
@@ -15290,7 +15290,7 @@
 },
 "lee|29-44-26-04-00029.0080|2026000747": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-44-26-04-00029.0080"
 },
@@ -16957,13 +16957,13 @@
 },
 "manatee|1344200159|2026TD000244": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1344200159"
 },
 "manatee|1371400001|2026TD000245": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1371400001"
 },
@@ -16975,25 +16975,25 @@
 },
 "manatee|1594600007|2026TD000269": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1594600007"
 },
 "manatee|1609800006|2026TD000247": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1609800006"
 },
 "manatee|1734304106|2026TD000249": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1734304106"
 },
 "manatee|1740710007|2026TD000220": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1740710007"
 },
@@ -17005,7 +17005,7 @@
 },
 "manatee|1987300116|2026TD000250": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1987300116"
 },
@@ -17017,13 +17017,13 @@
 },
 "manatee|2504300001|2026TD000274": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2504300001"
 },
 "manatee|2567701009|2026TD000275": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2567701009"
 },
@@ -17053,13 +17053,13 @@
 },
 "manatee|2618400051|2026TD000251": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2618400051"
 },
 "manatee|2652100005|2026TD000252": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2652100005"
 },
@@ -17071,7 +17071,7 @@
 },
 "manatee|3196600104|2026TD000253": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3196600104"
 },
@@ -17089,7 +17089,7 @@
 },
 "manatee|3432000002|2026TD000234": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3432000002"
 },
@@ -17113,7 +17113,7 @@
 },
 "manatee|4605500000|2026TD000235": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=4605500000"
 },
@@ -17155,7 +17155,7 @@
 },
 "manatee|5485500002|2026TD000256": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5485500002"
 },
@@ -17167,13 +17167,13 @@
 },
 "manatee|5491000005|2026TD000257": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5491000005"
 },
 "manatee|5493000003|2026TD000258": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5493000003"
 },
@@ -17191,19 +17191,19 @@
 },
 "manatee|5542800007|2026TD000260": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5542800007"
 },
 "manatee|5589715753|2026TD000272": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5589715753"
 },
 "manatee|5779300002|2026TD000276": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5779300002"
 },
@@ -17215,7 +17215,7 @@
 },
 "manatee|6100102959|2026TD000263": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6100102959"
 },
@@ -17245,7 +17245,7 @@
 },
 "manatee|6464600003|2026TD000239": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6464600003"
 },
@@ -17257,13 +17257,13 @@
 },
 "manatee|6617727208|2026TD000278": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6617727208"
 },
 "manatee|6779600003|2026TD000264": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6779600003"
 },
@@ -17281,7 +17281,7 @@
 },
 "manatee|7991500409|2026TD000265": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7991500409"
 },
@@ -27473,6 +27473,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328741029"
 },
+"orange|012329664801081|2024-10335": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012329664801081"
+},
 "orange|012429851651204|2024-12699": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -27549,6 +27555,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/072232000000001"
 },
+"orange|072329735932360|2024-11247": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/072329735932360"
+},
 "orange|082429750018330|2024-12890": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -27603,6 +27615,12 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102230944514603"
 },
+"orange|102328932700830|2024-5418": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102328932700830"
+},
 "orange|102329367100031|2024-11424": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-09T11:14:30+00:00",
@@ -27626,6 +27644,36 @@
 "fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102330892600150"
+},
+"orange|112328826000320|2024-5434": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/112328826000320"
+},
+"orange|122229066400150|2024-7947": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122229066400150"
+},
+"orange|122229617203420|2024-7988": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122229617203420"
+},
+"orange|122231145801780|2024-17225": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122231145801780"
+},
+"orange|122328818701702|2024-5503": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122328818701702"
 },
 "orange|132128055200070|2024-2629": {
 "error": "no recognizable fields on page",
@@ -27651,6 +27699,18 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132328278600250"
 },
+"orange|132329745600610|2024-11576": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132329745600610"
+},
+"orange|132329745600620|2024-11579": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132329745600620"
+},
 "orange|142128594202080|2024-2685": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-15T08:57:09+00:00",
@@ -27674,6 +27734,12 @@
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162128000000069"
+},
+"orange|162128604403220|2024-2927": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162128604403220"
 },
 "orange|162231000000127|2024-17304": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -27703,6 +27769,36 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329063400616"
 },
+"orange|162329253502140|2024-11774": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329253502140"
+},
+"orange|162329253508150|2024-11780": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329253508150"
+},
+"orange|162329945201080|2024-11855": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329945201080"
+},
+"orange|162429925001000|2024-13084": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162429925001000"
+},
+"orange|172229595400071|2024-8214": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172229595400071"
+},
 "orange|172231630005050|2024-17342": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-09T11:14:30+00:00",
@@ -27727,6 +27823,18 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172430000000005"
 },
+"orange|182228712200620|2024-4219": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182228712200620"
+},
+"orange|182228713001420|2024-4249": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182228713001420"
+},
 "orange|182229700800030|2024-8271": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -27748,6 +27856,36 @@
 "fetched_at": "2026-10-09T11:14:30+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000703"
+},
+"orange|182229805000905|2024-8312": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000905"
+},
+"orange|192229696003140|2024-8436": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/192229696003140"
+},
+"orange|192229701003020|2024-8490": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/192229701003020"
+},
+"orange|202228000000074|2024-4277": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/202228000000074"
+},
+"orange|202229455206090|2024-8535": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/202229455206090"
 },
 "orange|202231635004021|2024-17452": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -27792,6 +27930,30 @@
 "parcel_address": "950 PINEDALE Ave",
 "source": "reportall"
 }
+},
+"orange|222228476004020|2024-4345": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/222228476004020"
+},
+"orange|222329726823007|2024-12116": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/222329726823007"
+},
+"orange|222429818100760|2024-13220": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/222429818100760"
+},
+"orange|232229160202111|2024-8637": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232229160202111"
 },
 "orange|232229160202112|2024-8638": {
 "error": "no recognizable fields on page",
@@ -27861,6 +28023,18 @@
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252228035215210"
 },
+"orange|252229393200509|2024-8785": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252229393200509"
+},
+"orange|252229905701708|2024-8870": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252229905701708"
+},
 "orange|252232621500320|2024-18949": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -27892,6 +28066,36 @@
 "parcel_address": "3010 DILL Rd",
 "source": "reportall"
 }
+},
+"orange|252329000000027|2024-12241": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252329000000027"
+},
+"orange|252329444401770|2024-12263": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252329444401770"
+},
+"orange|252429602242230|2024-13308": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252429602242230"
+},
+"orange|252430497800870|2024-16871": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252430497800870"
+},
+"orange|252430497801380|2024-16873": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252430497801380"
 },
 "orange|262229846004081|2024-8995": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -28046,6 +28250,18 @@
 "parcel_address": "10967 LAKE UNDERHILL Rd STE 122",
 "source": "reportall"
 }
+},
+"orange|292130783006040|2024-13691": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292130783006040"
+},
+"orange|292232788200420|2024-19036": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292232788200420"
 },
 "orange|292329002501180|2024-12441": {
 "error": "no recognizable fields on page",
@@ -28431,13 +28647,13 @@
 },
 "osceola|012630000102430080|1692024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080"
 },
 "osceola|012630000102430110|1702024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110"
 },
@@ -28455,13 +28671,13 @@
 },
 "osceola|022528325400012360|2962024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=022528325400012360",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=022528325400012360"
 },
 "osceola|032528298300042340|4602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340"
 },
@@ -28473,25 +28689,25 @@
 },
 "osceola|032528340700012200|5242024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200"
 },
 "osceola|032528340700013223|5742024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700013223",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700013223"
 },
 "osceola|032528340700014216|5992024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216"
 },
 "osceola|032528340700014223|6032024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223"
 },
@@ -28503,7 +28719,7 @@
 },
 "osceola|052629319600010280|9612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280"
 },
@@ -28515,7 +28731,7 @@
 },
 "osceola|062527314300032080|10472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527314300032080",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=062527314300032080"
 },
@@ -28533,7 +28749,7 @@
 },
 "osceola|092529365300010060|19272024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060"
 },
@@ -28583,19 +28799,19 @@
 },
 "osceola|112630060907440030|22902024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030"
 },
 "osceola|112630060907440040|22912024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040"
 },
 "osceola|122730495000010061|23312022": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061"
 },
@@ -28650,7 +28866,7 @@
 },
 "osceola|192631495000010320|38142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320"
 },
@@ -28675,7 +28891,7 @@
 },
 "osceola|202629288100010090|39292024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202629288100010090",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202629288100010090"
 },
@@ -28731,7 +28947,7 @@
 },
 "osceola|242833000033110010|44602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010"
 },
@@ -28857,19 +29073,19 @@
 },
 "osceola|252628613821250050|47992024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821250050",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821250050"
 },
 "osceola|252628613821290040|48062024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040"
 },
 "osceola|252833000001610000|49232024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000"
 },
@@ -28938,19 +29154,19 @@
 },
 "osceola|302527512100011080|53122024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080"
 },
 "osceola|302530497100011020|53762024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302530497100011020",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302530497100011020"
 },
 "osceola|312530000000600000|55472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000"
 },
@@ -28986,7 +29202,7 @@
 },
 "osceola|352630495000010850|59632024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352630495000010850",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352630495000010850"
 },
@@ -41031,13 +41247,13 @@
 },
 "seminole|09-21-30-511-0000-0010|20260074/2024-001285": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=09-21-30-511-0000-0010"
 },
 "seminole|11-21-31-503-0000-0370|20260079/2024-001704": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=11-21-31-503-0000-0370"
 },
@@ -41105,7 +41321,7 @@
 },
 "seminole|18-21-30-509-0000-024B|20260096/2024-002957": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=18-21-30-509-0000-024B"
 },
@@ -41127,19 +41343,19 @@
 },
 "seminole|20-21-31-506-0000-2010|20260099/2024-003307": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-21-31-506-0000-2010"
 },
 "seminole|20-21-31-506-0000-2014|20260101/2024-003308": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-21-31-506-0000-2014"
 },
 "seminole|21-21-30-514-0000-009A|20260103/2024-003471": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-009A"
 },
@@ -41151,13 +41367,13 @@
 },
 "seminole|21-21-30-514-0000-010C|20260107/2024-003477": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-010C"
 },
 "seminole|21-21-30-514-0000-010D|20260109/2024-003478": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-010D"
 },
@@ -41169,7 +41385,7 @@
 },
 "seminole|24-21-30-523-0500-0000|20260072/2024-003970": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=24-21-30-523-0500-0000"
 },
@@ -41203,13 +41419,13 @@
 },
 "seminole|28-21-30-536-3900-2060|20260091/2024-004735": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=28-21-30-536-3900-2060"
 },
 "seminole|32-19-31-513-0000-2210|20260100/2024-005333": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=32-19-31-513-0000-2210"
 },
@@ -41221,13 +41437,13 @@
 },
 "seminole|33-19-31-506-0300-0120|20260112/2024-005561": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-506-0300-0120"
 },
 "seminole|33-19-31-506-0600-0030|20260114/2024-005567": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-506-0600-0030"
 },
@@ -41373,7 +41589,7 @@
 },
 "stlucie|2409-605-0043-000-1|26-195": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500430001"
 },
@@ -41409,7 +41625,7 @@
 },
 "stlucie|2415-711-0017-000-5|26-197": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/241571100170005"
 },
@@ -41475,7 +41691,7 @@
 },
 "stlucie|4414-601-0022-000-8|26-189": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/441460100220008"
 },
@@ -43810,31 +44026,31 @@
 },
 "washington|00000000-00-2071-0000|2026-TD-226": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000"
 },
 "washington|00000000-00-4151-0125|2026-TD-239": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4151-0125",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4151-0125"
 },
 "washington|00000000-00-4155-0363|2026-TD-247": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4155-0363",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4155-0363"
 },
 "washington|00000000-00-4985-0006|2026-TD-248": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006"
 },
 "washington|00000000-00-5760-0001|2026-TD-246": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5760-0001",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5760-0001"
 },
@@ -43856,13 +44072,13 @@
 },
 "washington|00000000-01-0006-0016|2026-TD-186": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0016",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0016"
 },
 "washington|00000000-01-0062-0009|2026-TD-187": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0062-0009",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0062-0009"
 },
@@ -43874,7 +44090,7 @@
 },
 "washington|00000000-01-0078-0011|2026-TD-197": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0078-0011",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0078-0011"
 },
@@ -43948,19 +44164,19 @@
 },
 "washington|00000000-04-0202-0021|2026-TD-231": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0021",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0021"
 },
 "washington|00000000-04-0205-0006|2026-TD-234": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0205-0006",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0205-0006"
 },
 "washington|00000000-04-1642-0005|2026-TD-190": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-1642-0005",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-1642-0005"
 },
@@ -43982,7 +44198,7 @@
 },
 "washington|00000000-05-0313-0012|2026-TD-232": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0313-0012",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0313-0012"
 },
@@ -44090,7 +44306,7 @@
 },
 "washington|00000000-06-0380-0006|2026-TD-244": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0380-0006",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0380-0006"
 },
@@ -44242,7 +44458,7 @@
 },
 "washington|00000000-07-0463-0001|2026-TD-209": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0001",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0001"
 },
@@ -44254,7 +44470,7 @@
 },
 "washington|00000000-08-0484-0011|2026-TD-194": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0484-0011",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0484-0011"
 },
@@ -44292,13 +44508,13 @@
 },
 "washington|00000000-08-0486-0008|2026-TD-218": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0008",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0008"
 },
 "washington|00000000-08-0486-0009|2026-TD-219": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0009",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0009"
 },
@@ -44320,13 +44536,13 @@
 },
 "washington|00000000-08-0489-0011|2026-TD-230": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0489-0011",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0489-0011"
 },
 "washington|00000000-08-0495-0013|2026-TD-217": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0495-0013",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0495-0013"
 },
@@ -44386,13 +44602,13 @@
 },
 "washington|00000000-08-0509-0003|2026-TD-228": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0003",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0003"
 },
 "washington|00000000-08-0509-0016|2026-TD-227": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0016",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0016"
 },
@@ -44484,7 +44700,7 @@
 },
 "washington|00000000-08-0513-0008|2026-TD-225": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0513-0008",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0513-0008"
 },
@@ -44556,13 +44772,13 @@
 },
 "washington|00000000-09-0544-0030|2026-TD-221": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0030",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0030"
 },
 "washington|00000000-09-0544-0031|2026-TD-222": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0031",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0031"
 },
@@ -44608,13 +44824,13 @@
 },
 "washington|00000000-10-0588-0026|2026-TD-214": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0588-0026",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0588-0026"
 },
 "washington|00000000-10-0613-0014|2026-TD-139": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014"
 },
@@ -44636,7 +44852,7 @@
 },
 "washington|00000000-11-0751-0001|2026-TD-215": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0001",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0001"
 },
@@ -44704,13 +44920,13 @@
 },
 "washington|00000000-12-1004-0003|2026-TD-223": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0003",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0003"
 },
 "washington|00000000-12-1004-0004|2026-TD-224": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0004",
-"fetched_at": "2026-10-08T11:16:31+00:00",
+"fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0004"
 },
