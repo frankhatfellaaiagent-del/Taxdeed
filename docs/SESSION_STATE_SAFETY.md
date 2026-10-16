@@ -16,14 +16,20 @@ exactly matches the audited public snapshot (SHA-256
   directly from one account to another while viewing Saved or a property.
 - Outgoing data is cloned when queued and bound to the captured user/team.
   Requests drain in order. An older acknowledgement cannot mark a newer edit
-  saved. A failed key remains retryable even if another state key succeeds.
+  saved. Later reversals are rebased against the acknowledged payload; failed
+  requests retain the earlier baseline so unsent fields survive retry. A failed
+  key remains retryable even if another state key succeeds.
 - Initialization reads must succeed before replacement writes are allowed.
   Notes, preferences, personal lists, shared lists and existing buy-box changes
   made while initialization is pending are retained and drained before success.
 - Pending edits have an account/team journal. Explicit shared changes are
   rebased onto a freshly read row, preserving unrelated remote fields, list
-  entries and memberships. A missing buy-box seed uses `ignoreDuplicates`.
-  Login by itself does not replace existing shared rows.
+  entries and memberships. The journal is restored before new initialization
+  edits can persist, including when initial reads fail. A missing buy-box seed
+  uses `ignoreDuplicates` on initial attempts and retries, then adopts the stored
+  winner. Login by itself does not replace existing shared rows.
+- Initial reads, seed readback and accepted realtime rows retain timestamp
+  watermarks, so older callbacks cannot replace newer state in the same session.
 - Settings provides sync retry and ownership-confirmed recovery of older or
   guest browser notes/lists. Recovery creates a local backup of both inputs,
   retains the original keys, and requires an unchecked-by-default confirmation
@@ -55,6 +61,10 @@ Supabase is a stub module and no customer account is created or modified.
 The browser suite covers rendered notes/lists across account changes, pending
 saves, late profiles/realtime, shared-state initialization, failure/retry,
 recovery, and desktop/mobile reflow. It does not use the shared signed-in demo.
+The aggregate contains 37 audit checks, 23 additional application regressions,
+20 queue/replay checks and 8 isolated browser flows. Independent review found
+four additional ordering/retry cases; each now has a regression covering the
+observed failure, including in-flight success and failure.
 
 A read-only GitHub Actions workflow runs these tests for application PRs and the
 review branch. It has no deploy step and no credentials beyond repository read.

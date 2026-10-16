@@ -940,11 +940,12 @@ function setSyncValue(name, value) {
 function scopedRequest(query) {
   return SYNC_ABORT && typeof query.abortSignal === "function" ? query.abortSignal(SYNC_ABORT.signal) : query;
 }
-function makeSyncQueue(epoch, userId, teamId, sb, journalKey, userJournalKey) {
+function makeSyncQueue(epoch, userId, teamId, sb, journalKey, userJournalKey, retained = {}) {
   const current = () => isCurrentSession(epoch, userId, sb) && TEAM_ID === teamId;
   let lastStamp = 0;
   return TaxDeedState.createQueue({
     current,
+    initial: retained,
     changed: (pending) => {
       store.set(journalKey,Object.fromEntries(Object.entries(pending).filter(([key]) => SYNC_MAP[key].scope === "team")));
       store.set(userJournalKey,Object.fromEntries(Object.entries(pending).filter(([key]) => SYNC_MAP[key].scope === "user")));
@@ -978,15 +979,17 @@ function makeSyncQueue(epoch, userId, teamId, sb, journalKey, userJournalKey) {
         .upsert(row, { onConflict: m.scope === "team" ? "team_id,key" : "user_id,key", ...(entry.seed ? {ignoreDuplicates:true} : {}) }));
       if (!current()) return { error: new Error("Session changed") };
       if (!result.error) {
+        let acknowledgedStamp = stamp;
         if (entry.seed) {
           const stored = await scopedRequest(sb.from("team_state").select("data, updated_at").eq("team_id",teamId).eq("key",m.key).maybeSingle());
           if (!current()) return {error:new Error("Session changed")};
           if (stored.error || !stored.data) return {error:stored.error || new Error("Seed could not be read back")};
           data = stored.data.data;
+          acknowledgedStamp = stored.data.updated_at || null;
           setSyncValue(name,TaxDeedState.rebase(payload,syncValue(name),data));
         }
         SYNC_BASES[name] = cloneCacheValue(data);
-        SYNC_ACK_TIMES[name] = stamp;
+        if (acknowledgedStamp && (!SYNC_ACK_TIMES[name] || Date.parse(acknowledgedStamp) > Date.parse(SYNC_ACK_TIMES[name]))) SYNC_ACK_TIMES[name] = acknowledgedStamp;
         // Preserve an edit made while the request was in flight, while keeping
         // unrelated fields found by the fresh shared-state read.
         if (m.scope === "team" && !entry.seed) setSyncValue(name, TaxDeedState.rebase(payload, syncValue(name), data));
@@ -1096,18 +1099,23 @@ async function onSignedIn(user) {
     SYNC_BASES = Object.fromEntries(Object.keys(SYNC_MAP).map((key) => [key, cloneCacheValue(syncValue(key))]));
     const journalKey = `tdd_pending_v1:${encodeURIComponent(user.id)}:${encodeURIComponent(teamId)}`;
     const userJournalKey = `tdd_pending_user_v1:${encodeURIComponent(user.id)}`;
-    const retained = {...store.get(journalKey, {}),...store.get(userJournalKey,{})};
-    const queue = makeSyncQueue(epoch, user.id, teamId, sb, journalKey,userJournalKey);
+    const retained = Object.fromEntries(Object.entries({...store.get(journalKey, {}),...store.get(userJournalKey,{})})
+      .filter(([key,entry]) => SYNC_MAP[key] && entry && Object.prototype.hasOwnProperty.call(entry,"data")));
+    const queue = makeSyncQueue(epoch, user.id, teamId, sb, journalKey,userJournalKey,retained);
     SYNC_QUEUE = queue;
     renderAccount();
     const [us, ts] = await Promise.all([
-      scopedRequest(sb.from("user_state").select("key, data").eq("user_id", user.id)),
-      scopedRequest(sb.from("team_state").select("key, data").eq("team_id", teamId)),
+      scopedRequest(sb.from("user_state").select("key, data, updated_at").eq("user_id", user.id)),
+      scopedRequest(sb.from("team_state").select("key, data, updated_at").eq("team_id", teamId)),
     ]);
     if (!current()) return;
     if (us.error || ts.error || !Array.isArray(us.data) || !Array.isArray(ts.data)) throw new Error("Could not read account state; no seed writes were attempted.");
     const U = Object.fromEntries(us.data.map((r) => [r.key,r.data]));
     const T = Object.fromEntries(ts.data.map((r) => [r.key,r.data]));
+    for (const [scope,rows] of [["user",us.data],["team",ts.data]]) for (const row of rows) {
+      const key = Object.keys(SYNC_MAP).find((key) => SYNC_MAP[key].scope === scope && SYNC_MAP[key].key === row.key);
+      if (key && Number.isFinite(Date.parse(row.updated_at))) SYNC_ACK_TIMES[key] = row.updated_at;
+    }
     const edits = {...retained, ...queue.snapshot()};
     const fresh = {
       interest: mergeInterest(interest, remapIdKeys(U.interest || {}).out),
@@ -1117,7 +1125,7 @@ async function onSignedIn(user) {
     };
     for (const key of Object.keys(SYNC_MAP)) {
       let edit = edits && edits[key];
-      if (key === "teambuybox" && edit && edit.seed && T.buybox) edit = null;
+      if (key === "teambuybox" && edit && edit.seed && T.buybox) { edit = null; queue.discard(key); }
       const base = cloneCacheValue(fresh[key]);
       let value = base;
       if (edit && Object.prototype.hasOwnProperty.call(edit,"data")) {
@@ -1127,7 +1135,7 @@ async function onSignedIn(user) {
       SYNC_BASES[key] = base;
       // Personal merges are owner-scoped. Shared rows are written only for an
       // actual retained/new edit, or an insert-only missing buy-box seed.
-      if (SYNC_MAP[key].scope === "user" || edit) queue.enqueue(key, value, {base,replaceBase:true});
+      if (SYNC_MAP[key].scope === "user" || edit) queue.enqueue(key, value, {base,seed:!!(edit && edit.seed),replaceBase:true});
       else if (key === "teambuybox" && !T.buybox) queue.enqueue(key, value, {base,seed:true,replaceBase:true});
     }
     if (!(await queue.start())) throw new Error("Could not save pending account changes");
@@ -1140,7 +1148,9 @@ async function onSignedIn(user) {
       if (scope === "team" && row.team_id && row.team_id !== teamId) return;
       const key = Object.keys(SYNC_MAP).find((key) => SYNC_MAP[key].scope === scope && SYNC_MAP[key].key === row.key);
       if (!key || queue.has(key)) return;
-      if (row.updated_at && SYNC_ACK_TIMES[key] && row.updated_at < SYNC_ACK_TIMES[key]) return;
+      const stamp = Date.parse(row.updated_at), watermark = Date.parse(SYNC_ACK_TIMES[key]);
+      if (Number.isFinite(watermark) && (!Number.isFinite(stamp) || stamp < watermark)) return;
+      if (Number.isFinite(stamp)) SYNC_ACK_TIMES[key] = row.updated_at;
       SYNC_BASES[key] = cloneCacheValue(row.data);
       if (scope === "user") applyUserRow(row.key,row.data); else applyTeamRow(row.key,row.data);
     };

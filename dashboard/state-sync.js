@@ -38,9 +38,15 @@
     return clone(local);
   }
 
-  function createQueue({ current, write, changed = () => {}, status = () => {}, delay = 800 }) {
+  function createQueue({ current, write, changed = () => {}, status = () => {}, delay = 800, initial = {} }) {
     const pending = new Map(), failures = new Map();
     let active = null, timer = null, ready = false, cancelled = false, revision = 0, wrote = false;
+    // Restore the complete journal before any new edit can persist a snapshot.
+    for (const [name, entry] of Object.entries(initial)) {
+      if (entry && Object.prototype.hasOwnProperty.call(entry, "data")) pending.set(name, {
+        data: clone(entry.data), base: clone(entry.base), seed: !!entry.seed, revision: ++revision,
+      });
+    }
     const valid = () => !cancelled && current();
     const notify = () => { if (valid()) status(failures.size ? "error" : pending.size ? "saving" : wrote ? "saved" : "idle"); };
     const snapshot = () => Object.fromEntries([...pending].map(([key, value]) => [key, clone(value)]));
@@ -76,6 +82,10 @@
             wrote = true;
             // An older acknowledgement must never delete a newer edit.
             if (pending.get(name) === entry) pending.delete(name);
+            // A newer edit expresses changes relative to the acknowledged
+            // payload, including reverting a value or removing a just-added
+            // list. On failure its original baseline must stay intact.
+            else if (pending.has(name)) pending.get(name).base = clone(entry.data);
           }
           persist(); notify();
         }
@@ -89,6 +99,7 @@
       start() { ready = true; return flush(); },
       retry() { failures.clear(); ready = true; notify(); return flush(); },
       has(name) { return pending.has(name); },
+      discard(name) { if (!valid()) return; pending.delete(name); failures.delete(name); persist(); notify(); },
       cancel() { cancelled = true; ready = false; clearTimeout(timer); },
     };
   }
