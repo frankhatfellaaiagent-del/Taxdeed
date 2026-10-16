@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css">
+<script src="state-sync.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
 <script>
@@ -261,7 +262,7 @@ tr.redeem td{color:color-mix(in srgb,var(--color-text) 55%, transparent)}
     <div style="display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap">
       <span id="last-scrape" class="text-muted" style="font-size:12px"></span>
       <button id="btn-theme" title="Toggle theme" aria-label="Toggle theme" style="display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);cursor:pointer;box-shadow:var(--shadow)"></button>
-      <button id="btn-settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg><span class="hdr-lbl">Settings</span></button>
+      <button id="btn-settings" aria-label="Settings" style="display:flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--ink);font-size:15px;cursor:pointer;padding:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg><span class="hdr-lbl">Settings</span></button>
       <button class="btn btn-secondary" id="btn-export" style="font-size:13px;height:38px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg><span class="hdr-lbl">Export</span></button>
       <div id="account-box"></div>
     </div>
@@ -509,10 +510,11 @@ const LINK_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" st
 // is one click to reverse.
 let _undoTimer = null;
 function pushUndo(label, undoFn) {
+  const epoch = AUTH_EPOCH;
   const el = $("undo-toast"); if (!el) return;
   el.innerHTML = `<span>${esc(label)}</span><button class="btn" id="undo-btn" style="color:inherit;border:1px solid currentColor;font-size:12.5px;padding:2px 12px">Undo</button>`;
   el.hidden = false;
-  $("undo-btn").onclick = () => { el.hidden = true; clearTimeout(_undoTimer); undoFn(); };
+  $("undo-btn").onclick = () => { el.hidden = true; clearTimeout(_undoTimer); if (AUTH_EPOCH === epoch) undoFn(); };
   clearTimeout(_undoTimer);
   _undoTimer = setTimeout(() => { el.hidden = true; }, 6000);
 }
@@ -527,9 +529,22 @@ function showNotice(msg, ms = 7000) {
 }
 
 // ---------- persisted team state (browser-local) ----------
+// Account-specific caches prevent one person's browser data from being merged
+// into a different account. Legacy unscoped keys are retained, never auto-imported.
+// A separate, explicit migration UI is required before importing legacy data.
+const PRIVATE_CACHE_KEYS = new Set(["tdd_interest", "tdd_recent", "tdd_lists", "tdd_prefs", "tdd_buybox", "tdd_team"]);
+let CACHE_OWNER = null, CACHE_TEAM = null;
+const cacheKey = (k) => {
+  if (!PRIVATE_CACHE_KEYS.has(k)) return k;
+  const owner = CACHE_OWNER ? "user:" + encodeURIComponent(CACHE_OWNER) : "guest";
+  const workspace = CACHE_OWNER && (k === "tdd_buybox" || k === "tdd_team")
+    ? ":team:" + encodeURIComponent(CACHE_TEAM || "unassigned") : "";
+  return `tdd_cache_v2:${owner}${workspace}:${k}`;
+};
+const cloneCacheValue = (v) => v === undefined ? undefined : JSON.parse(JSON.stringify(v));
 const store = {
-  get(k, fallback) { try { return JSON.parse(localStorage.getItem(k)) ?? fallback; } catch { return fallback; } },
-  set(k, v) { localStorage.setItem(k, JSON.stringify(v)); },
+  get(k, fallback) { try { return JSON.parse(localStorage.getItem(cacheKey(k))) ?? cloneCacheValue(fallback); } catch { return cloneCacheValue(fallback); } },
+  set(k, v) { localStorage.setItem(cacheKey(k), JSON.stringify(v)); },
 };
 // Two generic starter lists every new account (and the signed-out demo) begins
 // with. Existing users keep whatever lists are already in their browser/cloud.
@@ -551,7 +566,7 @@ let prefs = store.get("tdd_prefs", DEFAULT_PREFS);
 const saveInterest = () => { store.set("tdd_interest", interest); cloudPush("interest", () => ({ data: interest })); };
 const savePrefs = () => { store.set("tdd_prefs", prefs); cloudPush("prefs", () => ({ data: prefs })); };
 const saveLists = () => { store.set("tdd_lists", lists); cloudPush("lists", () => ({ data: lists })); };
-const saveTeam = () => cloudPush("team", () => team);
+const saveTeam = () => { store.set("tdd_team", team); cloudPush("team", () => team); };
 const saveBuybox = () => { store.set("tdd_buybox", buybox); cloudPush("teambuybox", () => buybox); };
 
 // ---------- buy-box (per-team, editable in Settings) ----------
@@ -576,7 +591,7 @@ const kwHits = (keywords, text) => keywords.filter((k) => new RegExp("\\b" + k.r
 // both keyword lists are empty, seed the feed's default land/non-land keywords
 // so grading works; the team's own counties and limits are left untouched.
 function ensureKeywords(bb) {
-  const b = { ...EMPTY_BUYBOX, ...(bb || {}) };
+  const b = { ...cloneCacheValue(EMPTY_BUYBOX), ...(bb || {}) };
   const hasLand = Array.isArray(b.land_use_keywords) && b.land_use_keywords.length;
   const hasNon = Array.isArray(b.non_land_keywords) && b.non_land_keywords.length;
   if (!hasLand && !hasNon) {
@@ -668,8 +683,8 @@ function setInt(id, patch, rec) {
   const next = { ...cur, ...patch, _ts: ts };
   if (rec) next.snap = snapOf(rec);
   interest[id] = next;
+  if (CLOUD && CLOUD.user) setSaveState("saving");   // saveInterest may synchronously report an error
   saveInterest();
-  if (CLOUD && CLOUD.user) setSaveState("saving");   // reflect the in-flight save
 }
 // Bookmark = saved without a named list (a list is optional, added later).
 const isBookmarked = (id) => !!getInt(id).bookmark;
@@ -841,33 +856,161 @@ function paintSaveStatus() {
   });
 }
 function setSaveState(s) {
+  clearTimeout(_saveIdleTimer);
   SAVE_STATE = s; paintSaveStatus();
-  if (s === "saved") { clearTimeout(_saveIdleTimer); _saveIdleTimer = setTimeout(() => { SAVE_STATE = "idle"; paintSaveStatus(); }, 1800); }
+  if (s === "saved") { const epoch = AUTH_EPOCH; _saveIdleTimer = setTimeout(() => { if (AUTH_EPOCH === epoch && SAVE_STATE === "saved") { SAVE_STATE = "idle"; paintSaveStatus(); } }, 1800); }
 }
-function retrySave() { setSaveState("saving"); saveInterest(); }
+function retrySave() {
+  if (!(CLOUD && CLOUD.user)) return;
+  if (SYNC_LOADING) return;
+  return onSignedIn(CLOUD.user);
+}
 
-function cloudPush(name, payload) {
-  if (!CLOUD || !CLOUD.user || !TEAM_ID) return;
-  const m = SYNC_MAP[name]; if (!m) return;
-  clearTimeout(cloudTimers[name]);
-  // Debounced whole-row upsert: rows are small and mostly per-person (the two
-  // shared team rows have a ~1s clobber window, fine for a small team).
-  cloudTimers[name] = setTimeout(async () => {
-    const row = m.scope === "team"
-      ? { team_id: TEAM_ID, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() }
-      : { user_id: CLOUD.user.id, key: m.key, data: m.value(payload), updated_at: new Date().toISOString() };
-    const table = m.scope === "team" ? "team_state" : "user_state";
-    const onConflict = m.scope === "team" ? "team_id,key" : "user_id,key";
-    const { error } = await CLOUD.sb.from(table).upsert(row, { onConflict });
-    if (error) {
-      console.warn("sync push failed:", error.message);
-      if (name === "interest") setSaveState("error");
-      if (!SYNC_ERROR) { SYNC_ERROR = true; renderAccount(); }
-    } else {
-      if (name === "interest") setSaveState("saved");   // the whole interest row (this field's value + _ts) is acknowledged
-      if (SYNC_ERROR) { SYNC_ERROR = false; renderAccount(); }
+// Session-bound cache and sync guard.
+let AUTH_EPOCH = 0;
+let SYNC_READY = false;
+let SYNC_LOADING = false;
+let SYNC_QUEUE = null;
+let SYNC_ABORT = null;
+let SYNC_BASES = {};
+let SYNC_ACK_TIMES = {};
+function clearSessionUi() {
+  ++AUTH_FORM_VERSION;
+  clearTimeout(_undoTimer);
+  clearTimeout(_saveIdleTimer);
+  if (_upgradeWatch) _upgradeWatch.stop();
+  for (const id of ["undo-toast", "newlist-modal", "filters-modal", "day-modal", "quick-card"]) {
+    const el = $(id);
+    if (el) { el.hidden = true; el.innerHTML = ""; }
+  }
+  _acctMenuOpen = false;
+  const checkout = $("checkout-step"); if (checkout) checkout.innerHTML = "";
+  const password = $("login-pass"); if (password) password.value = "";
+  SAVE_STATE = "idle";
+}
+function cancelCloudTimers() {
+  for (const name of Object.keys(cloudTimers)) { clearTimeout(cloudTimers[name]); delete cloudTimers[name]; }
+  if (SYNC_QUEUE) SYNC_QUEUE.cancel();
+  SYNC_QUEUE = null;
+  if (SYNC_ABORT) SYNC_ABORT.abort();
+  SYNC_ABORT = null;
+}
+function defaultBuybox() {
+  return cloneCacheValue({ ...EMPTY_BUYBOX, ...((META && META.default_buybox) || {}) });
+}
+function switchCacheOwner(userId) {
+  CACHE_OWNER = userId || null;
+  CACHE_TEAM = null;
+  interest = store.get("tdd_interest", {});
+  recent = store.get("tdd_recent", []);
+  lists = store.get("tdd_lists", DEFAULT_LISTS);
+  prefs = store.get("tdd_prefs", DEFAULT_PREFS);
+  team = { lists: [], membership: {} };
+  buybox = CACHE_OWNER ? defaultBuybox() : store.get("tdd_buybox", null) || defaultBuybox();
+  // Remove the previous account's navigation and rendered private controls now,
+  // before the first asynchronous profile request can complete.
+  if (typeof S !== "undefined") {
+    S.screen = "home"; S.selId = null; S.listName = null; S.listShared = false;
+    S.savedView = "all"; S.origin = null; S.quickId = null; S.q = "";
+    S.counties = Array.isArray(prefs.counties) ? prefs.counties.slice() : [];
+    S.sort = normSort(prefs.sort); S.ld = { county:"All",status:"All",buybox:"All",sort:"soonest",q:"" };
+    const q = $("q"); if (q) q.value = "";
+    if (DATA.length) {
+      for (const id of ["scr-home","scr-dashboard","scr-detail","scr-lists","scr-listdetail","scr-calendar","scr-settings"]) { const el = $(id); if (el) el.innerHTML = ""; }
+      go("home");
     }
-  }, 800);
+  }
+}
+function isCurrentSession(epoch, userId, sb) {
+  return AUTH_EPOCH === epoch && CLOUD && CLOUD.sb === sb && CLOUD.user && CLOUD.user.id === userId;
+}
+function syncValue(name) {
+  return ({ interest, prefs, lists, team, teambuybox: buybox })[name];
+}
+function setSyncValue(name, value) {
+  const copy = cloneCacheValue(value);
+  if (name === "interest") interest = copy;
+  else if (name === "prefs") prefs = copy;
+  else if (name === "lists") lists = copy;
+  else if (name === "team") team = copy;
+  else if (name === "teambuybox") buybox = copy;
+  const key = {interest:"tdd_interest",prefs:"tdd_prefs",lists:"tdd_lists",team:"tdd_team",teambuybox:"tdd_buybox"}[name];
+  if (key) store.set(key, copy);
+}
+function scopedRequest(query) {
+  return SYNC_ABORT && typeof query.abortSignal === "function" ? query.abortSignal(SYNC_ABORT.signal) : query;
+}
+function makeSyncQueue(epoch, userId, teamId, sb, journalKey, userJournalKey) {
+  const current = () => isCurrentSession(epoch, userId, sb) && TEAM_ID === teamId;
+  let lastStamp = 0;
+  return TaxDeedState.createQueue({
+    current,
+    changed: (pending) => {
+      store.set(journalKey,Object.fromEntries(Object.entries(pending).filter(([key]) => SYNC_MAP[key].scope === "team")));
+      store.set(userJournalKey,Object.fromEntries(Object.entries(pending).filter(([key]) => SYNC_MAP[key].scope === "user")));
+    },
+    status: (state) => {
+      if (!current()) return;
+      const changed = SYNC_ERROR !== (state === "error");
+      SYNC_ERROR = state === "error";
+      setSaveState(state);
+      const status = $("settings-sync-status");
+      if (status) status.textContent = state === "error" ? "Some changes could not sync. Your account-scoped browser work is retained for retry." : state === "saving" ? "Changes are syncing…" : "Account sync is ready.";
+      if (changed) renderAccount();
+    },
+    write: async (name, payload, entry) => {
+      if (!current()) return { error: new Error("Session changed") };
+      const m = SYNC_MAP[name];
+      let data = payload;
+      if (m.scope === "team" && !entry.seed) {
+        // Read immediately before an explicit shared edit and apply its delta.
+        // This is not a replacement write of an unread/stale team cache.
+        const remote = await scopedRequest(sb.from("team_state").select("data, updated_at").eq("team_id", teamId).eq("key", m.key).maybeSingle());
+        if (!current()) return { error: new Error("Session changed") };
+        if (remote.error) return remote;
+        data = TaxDeedState.rebase(entry.base, payload, remote.data ? remote.data.data : (name === "team" ? {lists:[],membership:{}} : {}));
+      }
+      lastStamp = Math.max(Date.now(), lastStamp + 1);
+      const stamp = new Date(lastStamp).toISOString();
+      const row = { [m.scope === "team" ? "team_id" : "user_id"]: m.scope === "team" ? teamId : userId,
+        key: m.key, data: cloneCacheValue(data), updated_at: stamp };
+      const result = await scopedRequest(sb.from(m.scope === "team" ? "team_state" : "user_state")
+        .upsert(row, { onConflict: m.scope === "team" ? "team_id,key" : "user_id,key", ...(entry.seed ? {ignoreDuplicates:true} : {}) }));
+      if (!current()) return { error: new Error("Session changed") };
+      if (!result.error) {
+        if (entry.seed) {
+          const stored = await scopedRequest(sb.from("team_state").select("data, updated_at").eq("team_id",teamId).eq("key",m.key).maybeSingle());
+          if (!current()) return {error:new Error("Session changed")};
+          if (stored.error || !stored.data) return {error:stored.error || new Error("Seed could not be read back")};
+          data = stored.data.data;
+          setSyncValue(name,TaxDeedState.rebase(payload,syncValue(name),data));
+        }
+        SYNC_BASES[name] = cloneCacheValue(data);
+        SYNC_ACK_TIMES[name] = stamp;
+        // Preserve an edit made while the request was in flight, while keeping
+        // unrelated fields found by the fresh shared-state read.
+        if (m.scope === "team" && !entry.seed) setSyncValue(name, TaxDeedState.rebase(payload, syncValue(name), data));
+      }
+      return result;
+    },
+  });
+}
+function cloudPush(name, payload) {
+  if (!CLOUD || !CLOUD.user) return;
+  const m = SYNC_MAP[name]; if (!m) return;
+  if (!TEAM_ID || !SYNC_QUEUE) {
+    if (SYNC_LOADING && m.scope === "user") {
+      const key = `tdd_pending_user_v1:${encodeURIComponent(CLOUD.user.id)}`;
+      const pending = store.get(key,{});
+      pending[name] = {data:cloneCacheValue(m.value(payload)),base:cloneCacheValue(pending[name] ? pending[name].base : SYNC_BASES[name])};
+      store.set(key,pending);
+      setSaveState("saving");
+    }
+    if (!SYNC_LOADING) { SYNC_ERROR = true; setSaveState("error"); renderAccount(); }
+    return;  // private cache is retained for the next successful read
+  }
+  SYNC_QUEUE.enqueue(name, m.value(payload), {base:SYNC_BASES[name]});
+  if (!SYNC_READY && !SYNC_LOADING) { SYNC_ERROR = true; setSaveState("error"); renderAccount(); }
 }
 
 // Apply an incoming change only when it truly differs — this swallows the echo
@@ -908,94 +1051,120 @@ function applyUserRow(key, data) {
     const merged = mergeInterest(interest, remapIdKeys(data || {}).out);
     if (JSON.stringify(merged) !== JSON.stringify(interest)) { interest = merged; store.set("tdd_interest", interest); rerender(); }
   }
-  else if (key === "prefs") { const n = applySnap(prefs, { ...DEFAULT_PREFS, ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
+  else if (key === "prefs") { const n = applySnap(prefs, { ...cloneCacheValue(DEFAULT_PREFS), ...(data || {}) }); if (n) { prefs = n; store.set("tdd_prefs", prefs); rerender(); } }
   else if (key === "lists") { const n = applySnap(lists, data || []); if (n) { lists = n; store.set("tdd_lists", lists); rerender(); } }
 }
 function applyTeamRow(key, data) {
   if (key === "lists") { const n = applySnap(team, { lists: (data && data.lists) || [], membership: (data && data.membership) || {} }); if (n) { team = n; rerender(); } }
-  else if (key === "buybox") { const n = applySnap(buybox, { ...EMPTY_BUYBOX, ...(data || {}) }); if (n) { buybox = n; recomputeBuybox(); rerender(); } }
+  else if (key === "buybox") { const n = applySnap(buybox, { ...cloneCacheValue(EMPTY_BUYBOX), ...(data || {}) }); if (n) { buybox = n; recomputeBuybox(); rerender(); } }
 }
 
 async function onSignedIn(user) {
-  CLOUD.user = user;
+  const epoch = ++AUTH_EPOCH;
+  SYNC_READY = false; SYNC_LOADING = true;
+  cancelCloudTimers(); clearSessionUi();
+  (CLOUD.channels || []).forEach((c) => { try { CLOUD.sb.removeChannel(c); } catch {} });
+  CLOUD.channels = []; CLOUD.user = user;
+  TEAM_ID = null; TEAM_NAME = ""; IS_ADMIN = false; PLAN_TIER = "free"; PLAN_EXPIRES = null;
+  WORKSPACE_ERROR = false; SYNC_ERROR = false; SYNC_ACK_TIMES = {};
+  switchCacheOwner(user.id);
+  SYNC_BASES = Object.fromEntries(Object.keys(SYNC_MAP).map((key) => [key,cloneCacheValue(syncValue(key))]));
+  renderAccount();
   $("login-overlay").hidden = true;
   const sb = CLOUD.sb;
+  SYNC_ABORT = new AbortController();
+  const current = () => isCurrentSession(epoch, user.id, sb);
   try {
-    // The profile names this account's team workspace, plan, and operator flag.
-    // ensure_my_profile() also gives a brand-new self-serve account its own
-    // private workspace on the Free plan, and applies any payment that arrived
-    // before the account existed. If it can't be reached, fall back to reading
-    // the row; a still-missing workspace fails VISIBLY rather than syncing wrong.
-    const name = PENDING_NAME || (user.user_metadata && user.user_metadata.name) || null;
-    PENDING_NAME = null;
+    const name = (PENDING_SIGNUP_EMAIL && PENDING_SIGNUP_EMAIL === user.email ? PENDING_NAME : null) || (user.user_metadata && user.user_metadata.name) || null;
+    PENDING_NAME = null; PENDING_SIGNUP_EMAIL = null;
     let profile = null;
-    const ens = await sb.rpc("ensure_my_profile", { p_name: name });
+    const ens = await scopedRequest(sb.rpc("ensure_my_profile", {p_name:name}));
+    if (!current()) return;
     if (!ens.error && ens.data && ens.data[0]) profile = ens.data[0];
     else {
-      console.warn("ensure_my_profile failed:", ens.error);
-      const { data: p } = await sb.from("profiles").select("team_id, is_admin, plan, plan_expires_at").eq("id", user.id).maybeSingle();
-      profile = p;
+      const result = await scopedRequest(sb.from("profiles").select("team_id, is_admin, plan, plan_expires_at").eq("id", user.id).maybeSingle());
+      if (!current()) return;
+      profile = result.data;
     }
-    if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; renderAccount(); return; }
-    WORKSPACE_ERROR = false;
-    TEAM_ID = profile.team_id;
-    TEAM_NAME = profile.team_name || "";
-    IS_ADMIN = !!profile.is_admin;
-    PLAN_TIER = profile.plan === "pro" ? "pro" : "free";
-    PLAN_EXPIRES = profile.plan_expires_at || null;
-    renderAccount();   // reflect admin (Refresh appears in the account menu)
-
-    // First contact: merge this device's local state with the cloud. Cloud wins
-    // per key; anything only known locally is kept (union). After this the cloud
-    // is the source of truth and realtime keeps every device live.
+    if (!profile || !profile.team_id) { WORKSPACE_ERROR = true; throw new Error("Account workspace unavailable"); }
+    const teamId = profile.team_id;
+    TEAM_ID = teamId; CACHE_TEAM = teamId;
+    TEAM_NAME = profile.team_name || ""; IS_ADMIN = !!profile.is_admin;
+    PLAN_TIER = profile.plan === "pro" ? "pro" : "free"; PLAN_EXPIRES = profile.plan_expires_at || null;
+    team = store.get("tdd_team", {lists:[],membership:{}});
+    buybox = store.get("tdd_buybox", null) || defaultBuybox();
+    SYNC_BASES = Object.fromEntries(Object.keys(SYNC_MAP).map((key) => [key, cloneCacheValue(syncValue(key))]));
+    const journalKey = `tdd_pending_v1:${encodeURIComponent(user.id)}:${encodeURIComponent(teamId)}`;
+    const userJournalKey = `tdd_pending_user_v1:${encodeURIComponent(user.id)}`;
+    const retained = {...store.get(journalKey, {}),...store.get(userJournalKey,{})};
+    const queue = makeSyncQueue(epoch, user.id, teamId, sb, journalKey,userJournalKey);
+    SYNC_QUEUE = queue;
+    renderAccount();
     const [us, ts] = await Promise.all([
-      sb.from("user_state").select("key, data").eq("user_id", user.id),
-      sb.from("team_state").select("key, data").eq("team_id", TEAM_ID),
+      scopedRequest(sb.from("user_state").select("key, data").eq("user_id", user.id)),
+      scopedRequest(sb.from("team_state").select("key, data").eq("team_id", teamId)),
     ]);
-    const U = Object.fromEntries((us.data || []).map((r) => [r.key, r.data]));
-    const T = Object.fromEntries((ts.data || []).map((r) => [r.key, r.data]));
-    // Field-level merge with the cloud (ids canonicalised first), so nothing this
-    // device changed offline is lost and no stale cloud field overwrites it.
-    interest = mergeInterest(interest, remapIdKeys(U.interest || {}).out);
-    prefs = { ...prefs, ...(U.prefs || {}) };
-    // Union cloud + local by name, but let deletions (tombstones) win so a
-    // list deleted on another device stays deleted instead of being resurrected.
-    lists = mergeLists(U.lists || [], lists);
-    team = { lists: (T.lists && T.lists.lists) || [], membership: (T.lists && T.lists.membership) || {} };
-    team.membership = remapIdKeys(team.membership).out;   // canonicalise shared list membership ids
-    // The team shares one buy box — a personal edit made before signing in is a
-    // starting point, not something that overrides what the team already set.
-    const cloudBuybox = T.buybox;
-    if (cloudBuybox) buybox = { ...EMPTY_BUYBOX, ...cloudBuybox };
-    store.set("tdd_interest", interest); store.set("tdd_prefs", prefs); store.set("tdd_lists", lists);
-
-    // Push the merged state up. Realtime echoes come back through applySnap,
-    // which no-ops on identical values, so the merge can't be clobbered.
-    const stamp = new Date().toISOString();
-    await Promise.all([
-      sb.from("user_state").upsert({ user_id: user.id, key: "interest", data: interest, updated_at: stamp }, { onConflict: "user_id,key" }),
-      sb.from("user_state").upsert({ user_id: user.id, key: "prefs", data: prefs, updated_at: stamp }, { onConflict: "user_id,key" }),
-      sb.from("user_state").upsert({ user_id: user.id, key: "lists", data: lists, updated_at: stamp }, { onConflict: "user_id,key" }),
-      ...(cloudBuybox ? [] : [sb.from("team_state").upsert({ team_id: TEAM_ID, key: "buybox", data: buybox || EMPTY_BUYBOX, updated_at: stamp }, { onConflict: "team_id,key" })]),
-    ]);
-
-    // Live subscriptions: this user's personal rows + the whole team's shared rows.
-    const userCh = sb.channel("user_state:" + user.id)
-      .on("postgres_changes", { event: "*", schema: "public", table: "user_state", filter: "user_id=eq." + user.id },
-          (p) => { const r = p.new || {}; applyUserRow(r.key, r.data); })
-      .subscribe();
-    const teamCh = sb.channel("team_state:" + TEAM_ID)
-      .on("postgres_changes", { event: "*", schema: "public", table: "team_state", filter: "team_id=eq." + TEAM_ID },
-          (p) => { const r = p.new || {}; applyTeamRow(r.key, r.data); })
-      .subscribe();
-    CLOUD.channels = [userCh, teamCh];
-  } catch (e) { console.warn("first sync failed:", e); }
+    if (!current()) return;
+    if (us.error || ts.error || !Array.isArray(us.data) || !Array.isArray(ts.data)) throw new Error("Could not read account state; no seed writes were attempted.");
+    const U = Object.fromEntries(us.data.map((r) => [r.key,r.data]));
+    const T = Object.fromEntries(ts.data.map((r) => [r.key,r.data]));
+    const edits = {...retained, ...queue.snapshot()};
+    const fresh = {
+      interest: mergeInterest(interest, remapIdKeys(U.interest || {}).out),
+      prefs: {...prefs, ...(U.prefs || {})}, lists: mergeLists(U.lists || [], lists),
+      team: {lists:(T.lists && T.lists.lists) || [], membership:remapIdKeys((T.lists && T.lists.membership) || {}).out},
+      teambuybox: T.buybox ? {...cloneCacheValue(EMPTY_BUYBOX), ...T.buybox} : defaultBuybox(),
+    };
+    for (const key of Object.keys(SYNC_MAP)) {
+      let edit = edits && edits[key];
+      if (key === "teambuybox" && edit && edit.seed && T.buybox) edit = null;
+      const base = cloneCacheValue(fresh[key]);
+      let value = base;
+      if (edit && Object.prototype.hasOwnProperty.call(edit,"data")) {
+        value = TaxDeedState.rebase(edit.base, edit.data, base);
+      }
+      setSyncValue(key, value);
+      SYNC_BASES[key] = base;
+      // Personal merges are owner-scoped. Shared rows are written only for an
+      // actual retained/new edit, or an insert-only missing buy-box seed.
+      if (SYNC_MAP[key].scope === "user" || edit) queue.enqueue(key, value, {base,replaceBase:true});
+      else if (key === "teambuybox" && !T.buybox) queue.enqueue(key, value, {base,seed:true,replaceBase:true});
+    }
+    if (!(await queue.start())) throw new Error("Could not save pending account changes");
+    if (!current()) return;
+    SYNC_READY = true; SYNC_LOADING = false; SYNC_ERROR = false;
+    const incoming = (scope) => (event) => {
+      if (!current() || TEAM_ID !== teamId) return;
+      const row = event.new || {};
+      if (scope === "user" && row.user_id && row.user_id !== user.id) return;
+      if (scope === "team" && row.team_id && row.team_id !== teamId) return;
+      const key = Object.keys(SYNC_MAP).find((key) => SYNC_MAP[key].scope === scope && SYNC_MAP[key].key === row.key);
+      if (!key || queue.has(key)) return;
+      if (row.updated_at && SYNC_ACK_TIMES[key] && row.updated_at < SYNC_ACK_TIMES[key]) return;
+      SYNC_BASES[key] = cloneCacheValue(row.data);
+      if (scope === "user") applyUserRow(row.key,row.data); else applyTeamRow(row.key,row.data);
+    };
+    const userCh = sb.channel("user_state:" + user.id).on("postgres_changes", {event:"*",schema:"public",table:"user_state",filter:"user_id=eq."+user.id}, incoming("user")).subscribe();
+    const teamCh = sb.channel("team_state:" + teamId).on("postgres_changes", {event:"*",schema:"public",table:"team_state",filter:"team_id=eq."+teamId}, incoming("team")).subscribe();
+    CLOUD.channels = [userCh,teamCh];
+  } catch (e) {
+    if (!current()) return;
+    console.warn("first sync failed:", e.message);
+    SYNC_LOADING = false; SYNC_READY = false; SYNC_ERROR = true; setSaveState("error");
+  }
+  if (!current()) return;
   renderAccount();
-  if (DATA.length) rerender();
-  afterSignedIn();
+  if (DATA.length) { recomputeBuybox(); rerender(); }
+  if (SYNC_READY) afterSignedIn();
 }
 
 function onSignedOut() {
+  ++AUTH_EPOCH;
+  SYNC_READY = false;
+  SYNC_LOADING = false;
+  cancelCloudTimers();
+  clearSessionUi();
+  switchCacheOwner(null);
   if (CLOUD) {
     (CLOUD.channels || []).forEach((c) => { try { CLOUD.sb.removeChannel(c); } catch {} });
     CLOUD.channels = []; CLOUD.user = null;
@@ -1012,7 +1181,7 @@ function onSignedOut() {
   lists = store.get("tdd_lists", DEFAULT_LISTS);
   prefs = store.get("tdd_prefs", DEFAULT_PREFS);
   buybox = store.get("tdd_buybox", null) ||
-    (META && META.default_buybox ? { ...EMPTY_BUYBOX, ...META.default_buybox } : { ...EMPTY_BUYBOX });
+    defaultBuybox();
   recomputeBuybox();
   renderAccount();
   if (DATA.length) rerender();
@@ -1030,7 +1199,7 @@ async function initCloud() {
       if (u && (!CLOUD.user || CLOUD.user.id !== u.id)) onSignedIn(u);
       else if (!u && CLOUD.user) onSignedOut();
       // A password-reset link signs the person in; send them to set a new one.
-      if (event === "PASSWORD_RECOVERY") { go("settings"); setTimeout(() => openPasswordBox("Set a new password for your account."), 60); }
+      if (event === "PASSWORD_RECOVERY" && u) { const epoch = AUTH_EPOCH; go("settings"); setTimeout(() => { if (isCurrentSession(epoch,u.id,sb)) openPasswordBox("Set a new password for your account."); }, 60); }
     });
   } catch (e) {
     console.warn("sync unavailable:", e);
@@ -1052,7 +1221,7 @@ function renderAccount() {
     const initial = (email[0] || "?").toUpperCase();
     const warn = WORKSPACE_ERROR
       ? '<span title="Workspace not set up — changes won’t sync" style="color:var(--danger);font-size:14px">&#9888;</span>'
-      : SYNC_ERROR ? '<span title="Sync issue — retrying" style="color:var(--icon-warn);font-size:14px">&#8635;</span>' : "";
+      : SYNC_ERROR ? '<span title="Changes could not sync — open Settings to retry" style="color:var(--icon-warn);font-size:14px">&#8635;</span>' : "";
     box.innerHTML = `<div style="position:relative">
       <button id="acct-btn" aria-haspopup="menu" aria-expanded="${_acctMenuOpen ? "true" : "false"}" title="Account"
         style="display:flex;align-items:center;gap:6px;background:none;border:0;cursor:pointer;padding:0">
@@ -1087,7 +1256,9 @@ function renderAccount() {
 
 // The sign-in overlay doubles as "Create account"; openAuth(mode) shows it.
 let AUTH_MODE = "signin";
+let AUTH_FORM_VERSION = 0;
 let PENDING_PLAN = null;   // plan picked before the account existed ("monthly" | "yearly")
+let PENDING_SIGNUP_EMAIL = null;
 let PENDING_NAME = null;   // name typed at signup — labels the new workspace
 let PENDING_CODE = null;   // promo code from a shared link (?code=FEEDBACK)
 let JUST_STARTED_TRIAL = false;
@@ -1098,7 +1269,7 @@ const planLabel = (plan) => plan === "yearly" ? `${PRICE_YEARLY}/yr` : `${PRICE_
 function authSub() {
   if (AUTH_MODE !== "signup") return "Your lists, notes and positions follow you to any device.";
   if ($("login-code").value.trim())
-    return "Create your login and your <b>free month</b> starts right away &mdash; full access, no card needed.";
+    return "We&rsquo;ll check your promo code when you create your account. Your access details will appear after sign-in. No card is needed to create your account.";
   if (PENDING_PLAN)
     return PAYMENTS_LIVE
       ? `Step 1 of 2 &mdash; create your login. Next is secure checkout for <b>${planLabel(PENDING_PLAN)}</b>, where you can enter a promo code.`
@@ -1107,6 +1278,8 @@ function authSub() {
 }
 
 function setAuthMode(mode) {
+  ++AUTH_FORM_VERSION;
+  $("login-submit").disabled = false;
   AUTH_MODE = mode === "signup" ? "signup" : "signin";
   const up = AUTH_MODE === "signup";
   $("login-form").hidden = false; $("checkout-step").hidden = true;
@@ -1148,7 +1321,7 @@ function showCheckoutStep(plan) {
       + `&body=${encodeURIComponent(`Account: ${who}\nPlan: ${yearly ? "Yearly" : "Monthly"} (${planLabel(plan)})\n\n`)}`;
     $("checkout-step").innerHTML = `${CORNERS}
       <div style="font-family:var(--font-heading);font-weight:600;font-size:22px;margin-bottom:4px">Let&rsquo;s get you set up.</div>
-      <div class="text-muted" style="font-size:13px;margin-bottom:16px">Online checkout is coming soon. Email us and we&rsquo;ll switch your account to <b>${planLabel(plan)}</b> personally &mdash; usually the same day.</div>
+      <div class="text-muted" style="font-size:13px;margin-bottom:16px">Email us to confirm access and billing terms for <b>${planLabel(plan)}</b>. Paid access is currently arranged by email.</div>
       <a class="btn btn-primary" id="co-mail" href="${esc(href)}" style="width:100%;display:flex;justify-content:center">Email us to upgrade &middot; ${planLabel(plan)}</a>
       <div style="display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12.5px">
         <button class="btn btn-ghost" type="button" id="co-switch" style="font-size:12.5px;padding:2px 4px">Switch to ${other} &middot; ${planLabel(other)}</button>
@@ -1183,17 +1356,20 @@ function showCheckoutStep(plan) {
 // lands, and flip the board to Full access without a reload.
 let _upgradeWatch = null;
 function watchForUpgrade(now) {
+  if (!(CLOUD && CLOUD.user)) return;
+  const epoch = AUTH_EPOCH, userId = CLOUD.user.id, sb = CLOUD.sb;
   if (_upgradeWatch) { if (now) _upgradeWatch.burst(); return; }
   let timer = null, tries = 0;
   const stop = () => {
     clearInterval(timer);
     document.removeEventListener("visibilitychange", onBack);
     window.removeEventListener("focus", onBack);
-    _upgradeWatch = null;
+    if (_upgradeWatch === watch) _upgradeWatch = null;
   };
   const check = async () => {
-    if (!(CLOUD && CLOUD.user) || (isPaid() && !PLAN_EXPIRES)) { stop(); return; }
-    const { data } = await CLOUD.sb.from("profiles").select("plan, plan_expires_at").eq("id", CLOUD.user.id).maybeSingle();
+    if (!isCurrentSession(epoch, userId, sb) || (isPaid() && !PLAN_EXPIRES)) { stop(); return; }
+    const { data } = await sb.from("profiles").select("plan, plan_expires_at").eq("id", userId).maybeSingle();
+    if (!isCurrentSession(epoch, userId, sb)) { stop(); return; }
     if (data && data.plan === "pro" && !data.plan_expires_at) {
       PLAN_TIER = "pro"; PLAN_EXPIRES = null; stop(); renderAccount(); rerender();
       showNotice("You're on Full access — every date, the land check, downloads and lists are unlocked.", 9000);
@@ -1206,11 +1382,20 @@ function watchForUpgrade(now) {
   const onBack = () => { if (document.visibilityState === "visible") burst(); };
   document.addEventListener("visibilitychange", onBack);
   window.addEventListener("focus", onBack);
-  _upgradeWatch = { stop, burst };
+  const watch = { stop, burst };
+  _upgradeWatch = watch;
   if (now) burst();
 }
 
+function clearAuthDeepLink() {
+  const p = new URLSearchParams(location.search);
+  ["plan", "signup", "code", "upgraded"].forEach((k) => p.delete(k));
+  const qs = p.toString();
+  history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
+}
+
 function afterSignedIn() {
+  clearAuthDeepLink();
   if (RETURNED_FROM_CHECKOUT) {
     RETURNED_FROM_CHECKOUT = false;
     if (isPaid()) showNotice("You're on Full access — welcome aboard.", 9000);
@@ -1245,20 +1430,17 @@ function readDeepLink() {
   const code = (p.get("code") || "").trim();
   if (code) PENDING_CODE = code.toUpperCase().slice(0, 40);
   const signup = p.has("signup");
-  if (plan || signup || code || RETURNED_FROM_CHECKOUT) {
-    ["plan", "signup", "code", "upgraded"].forEach((k) => p.delete(k));
-    const qs = p.toString();
-    history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
-  }
   return signup || PENDING_PLAN || PENDING_CODE ? "signup" : RETURNED_FROM_CHECKOUT ? "signin" : null;
 }
 
 function wireLogin() {
-  $("login-cancel").onclick = () => { $("login-overlay").hidden = true; PENDING_PLAN = null; };
+  $("login-cancel").onclick = () => { ++AUTH_FORM_VERSION; $("login-overlay").hidden = true; PENDING_PLAN = null; };
   $("login-code").oninput = () => { $("login-sub").innerHTML = authSub(); };
   $("login-form").onsubmit = async (e) => {
     e.preventDefault();
-    if (!CLOUD) return;
+    if (!CLOUD || $("login-submit").disabled) return;
+    const formVersion = AUTH_FORM_VERSION, epoch = AUTH_EPOCH, client = CLOUD.sb;
+    const fresh = () => AUTH_FORM_VERSION === formVersion && AUTH_EPOCH === epoch && CLOUD && CLOUD.sb === client;
     const email = $("login-email").value.trim(), pass = $("login-pass").value;
     $("login-error").textContent = "";
     $("login-submit").disabled = true;
@@ -1272,6 +1454,7 @@ function wireLogin() {
           res = await fetch(SIGNUP_FN_URL, { method: "POST", headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password: pass, name, code }) });
           out = await res.json().catch(() => ({}));
+          if (!fresh()) return;
         } catch (netErr) { throw new Error("Couldn't reach the server — check your connection and try again."); }
         if (res.status === 409) {
           setAuthMode("signin");
@@ -1281,12 +1464,15 @@ function wireLogin() {
           return;
         }
         if (!res.ok) throw new Error(out.message || "Couldn't create the account — please try again.");
-        PENDING_NAME = name || null;
+        PENDING_NAME = name || null; PENDING_SIGNUP_EMAIL = email;
         JUST_STARTED_TRIAL = !!out.trial_days;
       }
+      if (!fresh()) return;
       await cloudSignIn(email, pass);
+      if (!fresh()) return;
       $("login-pass").value = "";
     } catch (err) {
+      if (!fresh()) return;
       const raw = (err && err.message) || "";
       const msg = raw.toLowerCase();
       $("login-error").textContent =
@@ -1297,13 +1483,16 @@ function wireLogin() {
               ? "Too many attempts — wait a minute and try again."
               : "Couldn't sign in (" + (raw || "network") + ").";
     }
-    $("login-submit").disabled = false;
+    if (fresh()) $("login-submit").disabled = false;
   };
   $("login-forgot").onclick = async () => {
     if (!CLOUD) return;
     const email = $("login-email").value.trim();
     if (!email) { $("login-error").textContent = "Type your email above first, then tap Forgot password."; return; }
-    const { error } = await CLOUD.sb.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname });
+    const epoch = AUTH_EPOCH, client = CLOUD.sb, formVersion = AUTH_FORM_VERSION;
+    let error;
+    try { ({error} = await client.auth.resetPasswordForEmail(email, { redirectTo: location.origin + location.pathname })); } catch (e) { error = e; }
+    if (AUTH_EPOCH !== epoch || AUTH_FORM_VERSION !== formVersion || !CLOUD || CLOUD.sb !== client) return;
     $("login-error").innerHTML = error
       ? "Couldn't send the reset email (" + esc(error.message) + ")."
       : `If ${esc(email)} has an account, a reset link is on its way. Nothing after a few minutes? Email <a href="mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(BRAND + " password reset")}">${SUPPORT_EMAIL}</a>.`;
@@ -1611,7 +1800,7 @@ async function loadFeed() {
       META = j; DATA = j.records.map(mapRecord);
       // Seed this team's buy-box from the feed's default the first time
       // there's nothing saved yet (new team, or first load ever).
-      if (!buybox) buybox = j.default_buybox ? { ...EMPTY_BUYBOX, ...j.default_buybox } : { ...EMPTY_BUYBOX };
+      if (!buybox) buybox = defaultBuybox();
       recomputeBuybox();
       return true;
     } catch (e) { /* try next */ }
@@ -2538,11 +2727,13 @@ async function lcRun(p) {
 }
 function runLandCheck(p) {
   if (!isPaid()) { openUpgrade(); return; }   // land check is a paid feature
+  const epoch = AUTH_EPOCH, userId = CLOUD && CLOUD.user && CLOUD.user.id, sb = CLOUD && CLOUD.sb;
   const btn = document.getElementById("run-landcheck");
   const msg = document.getElementById("lc-msg");
   if (btn) { btn.disabled = true; btn.textContent = "Checking…"; }
   if (msg) msg.innerHTML = '<span class="ai-spin"></span> Checking wetlands, flood and road access…';
   lcRun(p).then((res) => {
+    if (!isCurrentSession(epoch, userId, sb)) return;
     LC_MEM[p.id] = res;
     try { localStorage.setItem("tdd_lc_" + p.id, JSON.stringify(res)); } catch (e) {}
     if (res.verdict === "unknown") {
@@ -2558,6 +2749,7 @@ function runLandCheck(p) {
     }, p);
     if (S.screen === "detail" && S.selId === p.id) renderDetail();
   }).catch(() => {
+    if (!isCurrentSession(epoch, userId, sb)) return;
     setResearch(p.id, "landCheck", { state: "couldntCheck", checkedAt: nowIso(), source: "land check" }, p);
     if (S.screen === "detail" && S.selId === p.id) renderDetail();
   });
@@ -3799,6 +3991,71 @@ function openPasswordBox(msg) {
   box.hidden = false; $("pw-msg").textContent = msg || ""; $("pw-new").focus();
 }
 
+// Older unscoped and signed-out browser work is never auto-assigned to an account.
+function recoveryData(source) {
+  const out = {};
+  for (const key of ["tdd_interest","tdd_lists","tdd_recent","tdd_prefs","tdd_buybox"]) {
+    try { out[key] = JSON.parse(localStorage.getItem(source === "guest" ? `tdd_cache_v2:guest:${key}` : key)); }
+    catch { out[key] = null; }
+  }
+  return out;
+}
+function hasRecoveryData(source) {
+  const data = recoveryData(source);
+  return Object.keys(data.tdd_interest || {}).length > 0 || (Array.isArray(data.tdd_lists) && data.tdd_lists.length > 0);
+}
+function importBrowserWork(source, confirmed, epoch, userId) {
+  if (!confirmed || !["legacy","guest"].includes(source) || !SYNC_READY || !CLOUD ||
+      !isCurrentSession(epoch,userId,CLOUD.sb)) return false;
+  const data = recoveryData(source);
+  // Retain an untouched backup of both inputs before any merge or cloud write.
+  store.set(`tdd_recovery_v1:${encodeURIComponent(userId)}:${Date.now()}`, {
+    source, owner:userId, team:TEAM_ID, at:nowIso(), input:data,
+    before:{interest:cloneCacheValue(interest),lists:cloneCacheValue(lists),recent:cloneCacheValue(recent)},
+  });
+  interest = mergeInterest(interest, remapIdKeys(data.tdd_interest && typeof data.tdd_interest === "object" ? data.tdd_interest : {}).out);
+  lists = mergeLists(lists, Array.isArray(data.tdd_lists) ? data.tdd_lists : []);
+  recent = [...new Set([...recent, ...(Array.isArray(data.tdd_recent) ? data.tdd_recent.map(normId) : [])])].slice(0,7);
+  store.set("tdd_recent",recent);
+  saveInterest(); saveLists();
+  return true;
+}
+function recoveryHtml() {
+  if (!(CLOUD && CLOUD.user)) return "";
+  const sources = [["legacy","Older browser work"],["guest","Signed-out browser work"]].filter(([key]) => hasRecoveryData(key));
+  if (!sources.length) return "";
+  return `<div class="blueprint" style="padding:18px 20px">
+    <h6 style="color:var(--color-accent-700);margin-bottom:12px">Recover browser work</h6>
+    <p class="text-muted" style="font-size:13px;margin-bottom:12px">Older notes and lists have no verified account owner. They stay separate until you confirm they belong to this account. Original browser data is retained.</p>
+    <label for="recover-source">Work to recover</label>
+    <select class="input" id="recover-source">${sources.map(([key,label]) => `<option value="${key}">${label}</option>`).join("")}</select>
+    <label style="display:flex;gap:9px;align-items:start;margin:14px 0;font-size:13px"><input type="checkbox" id="recover-confirm"> <span>I confirm this work belongs to <b>${esc(CLOUD.user.email || CLOUD.user.id)}</b> and want to recover it into this account.</span></label>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" id="recover-import" disabled>Recover notes and lists</button><button class="btn btn-secondary" id="recover-backup" disabled>Download original backup</button></div>
+    <p class="text-muted" style="font-size:12px;margin-top:12px">Only personal notes, lists and recent properties are imported. Preferences and buy-box settings are included in the backup for manual review; shared team settings are unchanged.</p>
+    <p id="recover-message" role="status" style="font-size:13px;margin-top:12px"></p>
+  </div>`;
+}
+function wireRecovery() {
+  const confirm = $("recover-confirm"); if (!confirm) return;
+  const epoch = AUTH_EPOCH, userId = CLOUD.user.id, client = CLOUD.sb;
+  const current = () => isCurrentSession(epoch,userId,client);
+  confirm.onchange = () => { $("recover-import").disabled = !confirm.checked || !SYNC_READY; $("recover-backup").disabled = !confirm.checked; };
+  $("recover-import").onclick = () => {
+    if (!current()) return;
+    try {
+      const ok = importBrowserWork($("recover-source").value,confirm.checked,epoch,userId);
+      $("recover-message").textContent = ok ? "Recovered into this account. Changes are queued for sync; the original browser data is retained." : "Confirm ownership and wait for this account to finish syncing before recovery.";
+    } catch { $("recover-message").textContent = "Recovery could not be saved. Original browser data is retained; download a backup and retry."; }
+  };
+  $("recover-backup").onclick = () => {
+    if (!current() || !confirm.checked) return;
+    const blob = new Blob([JSON.stringify(recoveryData($("recover-source").value),null,2)],{type:"application/json"});
+    const url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = "taxdeed-browser-work-backup.json"; a.click();
+    setTimeout(() => URL.revokeObjectURL(url),0);
+  };
+}
+
 // ---------- settings screen: the person's account + workspace ----------
 function renderSettings() {
   const signedIn = !!(CLOUD && CLOUD.user);
@@ -3865,7 +4122,7 @@ function renderSettings() {
               <button class="btn btn-primary" id="sub-monthly" style="font-size:12.5px;padding:6px 13px">Go monthly &middot; ${PRICE_MONTHLY}/mo</button>
               <button class="btn btn-secondary" id="sub-yearly" style="font-size:12.5px;padding:6px 13px">Go yearly &middot; ${PRICE_YEARLY}/yr</button>
             </div>
-            <div class="text-muted" style="font-size:12px;margin-top:10px">Yearly includes a 30-day money-back guarantee.${PAYMENTS_LIVE ? " Have a promo code? Enter it at checkout." : ""}</div>`}
+            <div class="text-muted" style="font-size:12px;margin-top:10px">Confirm cancellation and refund terms with the team before paying.${PAYMENTS_LIVE ? " Have a promo code? Enter it at checkout." : ""}</div>`}
         </div>
       </div>
 
@@ -3877,9 +4134,13 @@ function renderSettings() {
         </div>
       </div>
 
+      ${signedIn ? `<div class="blueprint" style="padding:18px 20px"><h6>Account sync</h6><p id="settings-sync-status" role="status">${SYNC_ERROR ? "Some changes could not sync. Your account-scoped browser work is retained for retry." : SYNC_LOADING ? "Loading and syncing this account…" : "Account sync is ready."}</p><button class="btn btn-secondary" id="sync-retry" ${SYNC_LOADING ? "disabled" : ""}>Retry account sync</button></div>` : ""}
+      ${recoveryHtml()}
       ${dataUpdatesHtml()}
     </div>`;
 
+  wireRecovery();
+  const retry = $("sync-retry"); if (retry) retry.onclick = retrySave;
   $("scr-settings").querySelectorAll("[data-theme-mode]").forEach((b) => b.onclick = () => setThemeMode(b.dataset.themeMode));
   const so = $("acct-signout");
   if (so) so.onclick = () => CLOUD.sb.auth.signOut();
@@ -3890,8 +4151,11 @@ function renderSettings() {
   if (ps) ps.onclick = async () => {
     const v = $("pw-new").value;
     if (v.length < 8) { $("pw-msg").textContent = "Use at least 8 characters."; return; }
+    const epoch = AUTH_EPOCH, userId = CLOUD.user.id, client = CLOUD.sb;
     ps.disabled = true;
-    const { error } = await CLOUD.sb.auth.updateUser({ password: v });
+    let error;
+    try { ({error} = await client.auth.updateUser({ password: v })); } catch (e) { error = e; }
+    if (!isCurrentSession(epoch,userId,client)) return;
     ps.disabled = false;
     $("pw-msg").textContent = error ? "Couldn't update the password (" + error.message + ")." : "Password updated.";
     if (!error) { $("pw-new").value = ""; $("pw-box").hidden = true; }
@@ -3987,7 +4251,9 @@ function initTheme() {
   // afterSignedIn instead).
   initCloud().then(async () => {
     if (!authFromLink || !CLOUD) return;
-    const { data } = await CLOUD.sb.auth.getSession();
+    const epoch = AUTH_EPOCH, client = CLOUD.sb;
+    const { data } = await client.auth.getSession();
+    if (AUTH_EPOCH !== epoch || !CLOUD || CLOUD.sb !== client) return;
     if (!(data && data.session)) openAuth(authFromLink);
   });
   // Every "Upgrade" chip routes through startCheckout (signup first if needed).

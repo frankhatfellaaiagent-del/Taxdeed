@@ -7,3 +7,5 @@ output/
 !docs/**/*.xlsx
 !data/**/*.xlsx
 .DS_Store
+node_modules/
+test-results/

@@ -1,0 +1,53 @@
+name: App session regressions
+
+on:
+  pull_request:
+    paths:
+      - "dashboard/**"
+      - "tests/**"
+      - ".github/workflows/app-session-tests.yml"
+  push:
+    branches: ["chatgpt/app-fixes-*"]
+    paths:
+      - "dashboard/**"
+      - "tests/**"
+      - ".github/workflows/app-session-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  session-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tests/browser/package-lock.json
+      - name: Client and queue regressions (synthetic identities only)
+        run: |
+          node tests/app-regressions.cjs
+          node tests/app-session-regressions.cjs
+          node --test tests/state-sync.test.cjs
+      - name: Install pinned browser test runner
+        run: npm ci --prefix tests/browser
+      - name: Install isolated Chromium
+        working-directory: tests/browser
+        run: npx playwright install --with-deps chromium
+      - name: Browser regression (all backend and network access mocked)
+        run: |
+          mkdir -p test-results
+          node tests/browser/session-browser.cjs
+        env:
+          RESULT_FILE: ${{ github.workspace }}/test-results/browser-results.json
+      - name: Upload browser results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-session-results
+          path: test-results/
+          if-no-files-found: ignore
