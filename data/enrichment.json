@@ -1556,6 +1556,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|514226-RT-0570|54356": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-20T09:11:09+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|514226-RX-0130|54107": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-15T08:57:09+00:00",
@@ -26127,6 +26133,20 @@
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "100162017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|Property Appraiser|11622017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11622017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-20T09:11:09+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11622017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|Property Appraiser|95282017": {
