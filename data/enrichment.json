@@ -670,7 +670,7 @@
 },
 "brevard|2000576|260358": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2000576",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
 },
@@ -1569,9 +1569,10 @@
 "url": "https://bcpa.net/"
 },
 "charlotte|402101154016|26-0626": {
-"error": "522 Server Error: <none> for url: https://www.ccappraiser.com/Show_parcel.asp?acct=402101154016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T",
-"fetched_at": "2026-10-13T11:17:03+00:00",
-"ok": false,
+"acreage": "Land Value",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402101154016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402102380017|26-0388": {
@@ -3950,6 +3951,12 @@
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=240524-006567-001-00"
+},
+"clay|260424-005605-009-02|2026-0111TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=260424-005605-009-02",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=260424-005605-009-02"
 },
 "clay|330823-004923-009-00|2026-0096TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-004923-009-00",
@@ -8049,7 +8056,7 @@
 },
 "flagler|0711317024000700120|26-076 TDC": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
@@ -8119,7 +8126,7 @@
 },
 "gilchrist|150816-02200000-0090|26-0016-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090"
 },
@@ -8174,7 +8181,7 @@
 },
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
 },
@@ -8250,7 +8257,7 @@
 },
 "hardee|17-33-25-0400-00001-0138|252026TD006AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=428009354&KeyValue=17-33-25-0400-00001-0138"
 },
@@ -8262,7 +8269,7 @@
 },
 "hardee|24-34-25-0000-05770-0000|252026TD023AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1053263744&KeyValue=24-34-25-0000-05770-0000"
 },
@@ -8274,7 +8281,7 @@
 },
 "hardee|28-33-25-0820-00036-0028|252026TD007AXMX": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1024850033&KeyValue=28-33-25-0820-00036-0028"
 },
@@ -8286,43 +8293,43 @@
 },
 "hendry|1 29 42 32 A00 0011.0100|25-122": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2193-014.0|25-130": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2194-011.0|25-125": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2339-023.0|25-131": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 070 2210-024.0|25-126": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 080 2280-037.0|25-127": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8340,13 +8347,13 @@
 },
 "hendry|4 29 43 10 090 2302-001.0|23-133": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 090 2304-010.0|25-134": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8358,25 +8365,25 @@
 },
 "hendry|4 29 43 10 100 2361-022.0|25-116": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2368-005.0|25-117": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2375-050.0|25-118": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2433-067.0|25-119": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8388,19 +8395,19 @@
 },
 "hendry|4 29 43 10 120 2469-007.0|25-115": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2497-011.0|25-121": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2506-018.0|25-123": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -16963,7 +16970,7 @@
 },
 "leon|410125D0100|26-0065": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/410125D0100?mode=&UseSearch=no&pin=410125D0100",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=410125D0100"
 },
@@ -17722,6 +17729,132 @@
 "tax_number": "31502018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=170089&YR=2026&mName=False&mSitus=False"
 },
+"marion|1021502|166242021": {
+"applicant": "TLGFY LLC. CAPITAL ONE N.A. AS COLLATE",
+"applicant_address": "C/O CAPITAL ONE N A AS COLL PO BOX 669139 DALLAS TX 752669139",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "166242021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "166242021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1066841|171702021": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "171702021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "171702021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1100631|204362015": {
+"applicant": "BUFFALO BILL LLC",
+"applicant_address": "1500 HIGHWAY A1A VERO BEACH FL 32963",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "204362015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "204362015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1183201|187632021": {
+"applicant": "HMF FL J LLC. TESCO CUSTODIAN",
+"applicant_address": "C/O HMF FL J LLC PO BOX 30538 TAMPA FL 33630",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "187632021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "187632021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1188466|215112017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "215112017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "215112017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1199166|221192015": {
+"applicant": "FRITZ JEAN-BAPTISTE",
+"applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "221192015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "221192015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1200105|221522015": {
+"applicant": "FRITZ JEAN-BAPTISTE",
+"applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "221522015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "221522015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1201292|221912015": {
+"applicant": "FRITZ JEAN-BAPTISTE",
+"applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "221912015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "221912015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1233569|133662015": {
+"applicant": "FRITZ JEAN-BAPTISTE",
+"applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "133662015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "133662015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|12677-000-03|41182018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -17749,6 +17882,90 @@
 "sale_date": "11/18/2026",
 "tax_number": "40112021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1811023&YR=2026&mName=False&mSitus=False"
+},
+"marion|1454671|233502021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "233502021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "233502021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1456266|272482020": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "272482020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "272482020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1456665|234172021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "234172021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "234172021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1505437|301142015": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "301142015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "301142015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1506778|301432015": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "301432015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "301432015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|152901|29242017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "29242017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "29242017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|1534-010-005|48292021": {
 "applicant": "FIG 20 LLC",
@@ -17797,6 +18014,20 @@
 "sale_date": "09/09/2026",
 "tax_number": "48292021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2376953&YR=2026&mName=False&mSitus=False"
+},
+"marion|163210|27772021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "27772021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "27772021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|16558-001-08|50892021": {
 "applicant": "TLGFY LLC",
@@ -18055,6 +18286,48 @@
 "sale_date": "10/14/2026",
 "tax_number": "277262018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=464431&YR=2026&mName=False&mSitus=False"
+},
+"marion|195367|33702021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "33702021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "33702021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|195600|38012017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "38012017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "38012017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|195618|38022017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "38022017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "38022017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|2001-001-024|87402017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24338,6 +24611,34 @@
 "tax_number": "100222017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=520128&YR=2026&mName=False&mSitus=False"
 },
+"marion|20745|5702016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5702016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5702016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|20982|5442020": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5442020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5442020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|2100-064-003|105242017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -24824,6 +25125,160 @@
 "tax_number": "106362021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=579939&YR=2026&mName=False&mSitus=False"
 },
+"marion|2338903|164492015": {
+"applicant": "CAPE SABLE CONSULTING LLC",
+"applicant_address": "C/O RYAN MCFARLAND 217 SE 1ST AVE SUITE 200-59 OCALA FL 34471",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "164492015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "164492015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2385944|84622021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "84622021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "84622021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2385952|84632021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "84632021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "84632021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2413701|168702019": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "168702019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "168702019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2427108|5262016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5262016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5262016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2427141|5302016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5302016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5302016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2464232|233042021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "233042021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "233042021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2481030|283332020": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "283332020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "283332020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2502240|233392021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "233392021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "233392021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2504358|234372021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "234372021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "234372021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|251801|48212015": {
+"applicant": "DWYANE L WILLIAMS OR BARBARA F WILLIAMS",
+"applicant_address": "2410 NW 63RD PLACE OCALA FL 34475-2458",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "48212015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "48212015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|2618-002-009|112962021": {
 "applicant": "FIG 20 LLC",
 "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411",
@@ -24851,6 +25306,62 @@
 "tax_number": "112962021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1250501&YR=2026&mName=False&mSitus=False"
 },
+"marion|2680431|6312016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "6312016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "6312016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2680491|6322016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "6322016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "6322016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|2946792|23692021": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "23692021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "23692021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|325597|53082021": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "53082021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "53082021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|3295-138-021|150152015": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -24864,6 +25375,90 @@
 "sale_date": "10/14/2026",
 "tax_number": "150152015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2309385&YR=2026&mName=False&mSitus=False"
+},
+"marion|3366395|11622017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11622017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11622017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|3368223|11632017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11632017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11632017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|3378008|99682017": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "99682017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "99682017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|3455673|5182016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5182016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5182016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|3457587|5452020": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5452020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5452020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|3482778|6042016": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "6042016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "6042016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|3490-056-101|152432017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24892,6 +25487,20 @@
 "sale_date": "11/18/2026",
 "tax_number": "155112017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2813377&YR=2026&mName=False&mSitus=False"
+},
+"marion|354970|62952019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "62952019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "62952019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|3571-003-028|165242017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24948,6 +25557,20 @@
 "tax_number": "169322016",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=726745&YR=2026&mName=False&mSitus=False"
 },
+"marion|362379|68472016": {
+"applicant": "BUFFALO BILL LLC",
+"applicant_address": "1500 HIGHWAY A1A VERO BEACH FL 32963",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "68472016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "68472016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|3680-003-008|150922021": {
 "applicant": "MIKON FINANCIAL SERVICES INC AND OCEAN BANK",
 "applicant_address": "780 NW 42ND AVE #204 MIAMI FL 33126",
@@ -24961,6 +25584,34 @@
 "sale_date": "08/19/2026",
 "tax_number": "150922021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=917214&YR=2026&mName=False&mSitus=False"
+},
+"marion|373443|59542021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59542021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "59542021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|379336|70232015": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "70232015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "70232015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|39430-15-453|177582017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -25282,6 +25933,34 @@
 "tax_number": "198782015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1073481&YR=2026&mName=False&mSitus=False"
 },
+"marion|43541|7462021": {
+"applicant": "TLGFY LLC. CAPITAL ONE N.A. AS COLLATE",
+"applicant_address": "C/O CAPITAL ONE N A AS COLL PO BOX 669139 DALLAS TX 752669139",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "7462021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "7462021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|439681|69822021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "69822021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "69822021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|4505-013-019|199052017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -25366,6 +26045,34 @@
 "tax_number": "176412021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2036206&YR=2026&mName=False&mSitus=False"
 },
+"marion|452548|82782020": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "82782020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "82782020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|453609|72782021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "72782021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "72782021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|4551-009-037|178312021": {
 "applicant": "FIG 20 LLC",
 "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411",
@@ -25392,6 +26099,20 @@
 "sale_date": "09/09/2026",
 "tax_number": "178312021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1107059&YR=2026&mName=False&mSitus=False"
+},
+"marion|455270|83582020": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "83582020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "83582020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|4559-001-003|208812016": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -25560,6 +26281,20 @@
 "tax_number": "180372021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1121396&YR=2026&mName=False&mSitus=False"
 },
+"marion|464741|85912015": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "85912015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "85912015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|4716-014-003|182982021": {
 "applicant": "FIG 20 LLC",
 "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411",
@@ -25587,6 +26322,34 @@
 "tax_number": "182982021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1152232&YR=2026&mName=False&mSitus=False"
 },
+"marion|489689|88332019": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "88332019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "88332019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|495905|94502015": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "94502015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "94502015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|5020-005-057|187882021": {
 "applicant": "STEVEN C CULLEN",
 "applicant_address": "125 HALFMOON TRAIL MELROSE FL 32666",
@@ -25600,6 +26363,20 @@
 "sale_date": "11/18/2026",
 "tax_number": "187882021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1184444&YR=2026&mName=False&mSitus=False"
+},
+"marion|505676|86962021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "86962021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "86962021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|5068-226-000|190692021": {
 "applicant": "FIG 20 LLC",
@@ -25642,6 +26419,20 @@
 "tax_number": "209052018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1195489&YR=2026&mName=False&mSitus=False"
 },
+"marion|507300|87662021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "87662021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "87662021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|5075-012-001|218522017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -25655,6 +26446,104 @@
 "sale_date": "08/19/2026",
 "tax_number": "218522017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1679095&YR=2026&mName=False&mSitus=False"
+},
+"marion|575534|116522016": {
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "116522016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "116522016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|58033|11762017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11762017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11762017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|58041|11772017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11772017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11772017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|58092|11802017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11802017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11802017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|58343|11852017": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11852017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11852017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|59382|11622018": {
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "11622018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "11622018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|621129|120392018": {
+"applicant": "DH INVESTMENT TRUST",
+"applicant_address": "3900 NORTH POINT DRIVE ANCHORAGE AK 99502",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "120392018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "120392018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|7013-006-040|197232021": {
 "applicant": "FIG 20 LLC",
@@ -25682,6 +26571,20 @@
 "sale_date": "09/09/2026",
 "tax_number": "197232021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2703822&YR=2026&mName=False&mSitus=False"
+},
+"marion|772411|145142017": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "145142017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "145142017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|8001-0251-10|228152015": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -25886,6 +26789,20 @@
 "sale_date": "10/14/2026",
 "tax_number": "259182014",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2589060&YR=2026&mName=False&mSitus=False"
+},
+"marion|878430|144472021": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "144472021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "144472021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|9009-0053-21|264712014": {
 "applicant": "BEAMIF A LLC",
@@ -26121,6 +27038,132 @@
 "tax_number": "301602015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2472294&YR=2026&mName=False&mSitus=False"
 },
+"marion|909131|162812018": {
+"applicant": "SHRAVAN SAMUEL NEILL",
+"applicant_address": "2350 SE 66TH STREET OCALA FL 34480",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "162812018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "162812018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|910422|149532021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "149532021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "149532021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|924610|152132021": {
+"applicant": "TRUZAR PROPERTIES LLC",
+"applicant_address": "952 GOLF HOUSE RD W STE 1 PMB 224 WHITSETT NC 27377",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "152132021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "152132021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|979953|159692021": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "159692021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "159692021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|984485|160842021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "160842021",
+"deed_status": "REMOVE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "DEED STATUS:",
+"tax_number": "160842021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|988260|161582021": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "161582021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "161582021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|998630|163402021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "163402021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "163402021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|999105|163522021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "163522021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "163522021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|999172|163542021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "163542021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "163542021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|Property Appraiser|100162017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -26147,6 +27190,20 @@
 "ok": true,
 "sale_date": "12/09/2026",
 "tax_number": "11622017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|Property Appraiser|198782015": {
+"applicant": "PRISCILLA FLANARY",
+"applicant_address": "C/O PRISCILLA FLANARY 14545 SE 30TH CT SUMMERFIELD FL 34491",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "198782015",
+"deed_status": "RESCHED",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "198782015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|Property Appraiser|95282017": {
@@ -27555,7 +28612,7 @@
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -27579,13 +28636,13 @@
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
@@ -27597,7 +28654,7 @@
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
@@ -27663,7 +28720,7 @@
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
@@ -41987,7 +43044,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -42012,13 +43069,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -42055,7 +43112,7 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -42067,13 +43124,13 @@
 },
 "sumter|G29A059A|5076": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -42103,19 +43160,19 @@
 },
 "sumter|Q21A021|5071": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -42187,7 +43244,7 @@
 },
 "suwannee|03399030009|4803": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -42720,7 +43777,7 @@
 },
 "volusia|422302030100|04624-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422302030100"
 },
@@ -43056,7 +44113,7 @@
 },
 "volusia|532250001280|12575-23": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=532250001280"
 },
@@ -43240,7 +44297,7 @@
 },
 "volusia|533903700061|06725-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
 },
@@ -43314,7 +44371,7 @@
 },
 "volusia|580201590010|00150-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
 },
@@ -43332,7 +44389,7 @@
 },
 "volusia|602601000341|07336-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=602601000341"
 },
@@ -43378,13 +44435,13 @@
 },
 "volusia|611601250130|03068-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130"
 },
 "volusia|611602020090|12107-20": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
 },
@@ -43396,7 +44453,7 @@
 },
 "volusia|611602210150|03578-20": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150"
 },
@@ -43448,13 +44505,13 @@
 },
 "volusia|613301070250|05074-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250"
 },
 "volusia|613301100260|10746-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
 },
@@ -43466,7 +44523,7 @@
 },
 "volusia|613301150090|14045-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090"
 },
@@ -43584,7 +44641,7 @@
 },
 "volusia|694301060020|00298-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020"
 },
@@ -43606,7 +44663,7 @@
 },
 "volusia|700400001060|01154-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060"
 },
@@ -43640,7 +44697,7 @@
 },
 "volusia|701531000030|01375-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030"
 },
@@ -43686,7 +44743,7 @@
 },
 "volusia|702003000010|01643-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010"
 },
@@ -43698,7 +44755,7 @@
 },
 "volusia|702012030110|12279-19": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110"
 },
@@ -43794,7 +44851,7 @@
 },
 "volusia|734306001031|07667-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734306001031"
 },
@@ -43840,7 +44897,7 @@
 },
 "volusia|743005040130|08124-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130"
 },
@@ -43858,7 +44915,7 @@
 },
 "volusia|744109010050|08201-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050"
 },
@@ -43934,7 +44991,7 @@
 },
 "volusia|801108280050|02083-24": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
 },
@@ -43974,7 +45031,7 @@
 },
 "volusia|810401010130|12166-23": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130"
 },
@@ -44136,7 +45193,7 @@
 },
 "volusia|844702060860|09589-21": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860"
 },
@@ -44158,7 +45215,7 @@
 },
 "volusia|844702073021|09753-23": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-10-21T09:12:36+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
@@ -44272,11 +45329,29 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-6210"
 },
+"walton|25-3N-19-19330-000-0017|2026-0135TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017"
+},
 "walton|25-3N-19-19560-000-0200|2026-0129TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200",
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200"
+},
+"walton|25-4N-21-38010-000-0481|2026-0136TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-4N-21-38010-000-0481",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-4N-21-38010-000-0481"
+},
+"walton|30-3N-18-10000-027-0130|2026-0128TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130"
 },
 "walton|33-4N-20-29000-002-0210|2026-0130TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-4N-20-29000-002-0210",
@@ -44289,6 +45364,12 @@
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0280"
+},
+"walton|33-6N-20-31010-000-0500|2026-0133TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500",
+"fetched_at": "2026-10-21T09:12:36+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500"
 },
 "walton|34-3N-19-19500-00D-0050|2026-0134TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050",
