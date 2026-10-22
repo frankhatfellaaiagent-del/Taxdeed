@@ -308,19 +308,19 @@
 },
 "bay|01547-000-000|2026-0281TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000"
 },
 "bay|01601-000-000|2026-00262TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000"
 },
 "bay|02332-000-000|2026-0454TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000"
 },
@@ -416,19 +416,19 @@
 },
 "bay|07379-100-000|2026-1619TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000"
 },
 "bay|07399-644-006|2026-1707TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006"
 },
 "bay|07399-951-000|2026-1713TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000"
 },
@@ -446,7 +446,7 @@
 },
 "bay|07852-010-000|2026-1972TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07852-010-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07852-010-000"
 },
@@ -510,7 +510,7 @@
 },
 "bay|16869-000-000|2026-3170TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000"
 },
@@ -528,25 +528,25 @@
 },
 "bay|19314-000-000|2026-3438TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000"
 },
 "bay|23410-000-000|2026-3642TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000"
 },
 "bay|23411-000-000|2026-3643TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000"
 },
 "bay|23438-000-000|2026-3738TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000"
 },
@@ -586,7 +586,7 @@
 },
 "bay|27554-130-010|2026-4239TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010"
 },
@@ -632,7 +632,7 @@
 },
 "bay|32543-244-010|2026-4931TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=32543-244-010",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=32543-244-010"
 },
@@ -676,13 +676,13 @@
 },
 "brevard|2104517|260308": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2104517",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2104517"
 },
 "brevard|2106367|260260": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2106367",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2106367"
 },
@@ -700,7 +700,7 @@
 },
 "brevard|2206158|260273": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2206158",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2206158"
 },
@@ -748,7 +748,7 @@
 },
 "brevard|2317337|260210": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2317337",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2317337"
 },
@@ -790,7 +790,7 @@
 },
 "brevard|2426611|260117": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426611",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426611"
 },
@@ -898,7 +898,7 @@
 },
 "brevard|2802335|260286": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2802335",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2802335"
 },
@@ -946,7 +946,7 @@
 },
 "brevard|2825893|260227": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2825893",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2825893"
 },
@@ -970,7 +970,7 @@
 },
 "brevard|2836666|260280": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2836666",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2836666"
 },
@@ -982,7 +982,7 @@
 },
 "brevard|2840630|260250": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2840630",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2840630"
 },
@@ -1018,7 +1018,7 @@
 },
 "brevard|2905358|260220": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2905358",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2905358"
 },
@@ -1036,13 +1036,13 @@
 },
 "brevard|2926429|260221": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2926429",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2926429"
 },
 "brevard|2936053|260223": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2936053",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2936053"
 },
@@ -1060,13 +1060,13 @@
 },
 "brevard|2940872|260222": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940872",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2940872"
 },
 "brevard|2952727|260115": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952727",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2952727"
 },
@@ -3786,7 +3786,7 @@
 },
 "clay|080524-005951-005-37|2026-0105TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=080524-005951-005-37",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=080524-005951-005-37"
 },
@@ -3966,7 +3966,7 @@
 },
 "clay|330823-005230-000-00|2026-0060TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-005230-000-00",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-005230-000-00"
 },
@@ -3996,7 +3996,7 @@
 },
 "clay|410426-020240-000-00|2026-0042TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=410426-020240-000-00",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=410426-020240-000-00"
 },
@@ -8068,7 +8068,7 @@
 },
 "gilchrist|040916-00000002-0190|26-0017-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190"
 },
@@ -8114,13 +8114,13 @@
 },
 "gilchrist|100816-00000004-0010|26-0018-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010",
-"fetched_at": "2026-10-14T09:23:49+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010"
 },
 "gilchrist|111015-02370000-0270|26-0019-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270"
 },
@@ -8187,7 +8187,7 @@
 },
 "gilchrist|280814-1931000C-0020|26-0020-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020"
 },
@@ -12328,7 +12328,7 @@
 },
 "indianriver|31370000007008000010.0|2026-0056TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31370000007008000010.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31370000007008000010.0"
 },
@@ -12352,19 +12352,19 @@
 },
 "indianriver|31390600010000000025.0|2026-0059TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31390600010000000025.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31390600010000000025.0"
 },
 "indianriver|31391900001620000030.0|2026-0054TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31391900001620000030.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31391900001620000030.0"
 },
 "indianriver|31392700006000000016.0|2026-0062TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31392700006000000016.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=31392700006000000016.0"
 },
@@ -12382,7 +12382,7 @@
 },
 "indianriver|32392200006011000009.1|2026-0063TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392200006011000009.1",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392200006011000009.1"
 },
@@ -12400,7 +12400,7 @@
 },
 "indianriver|32403100007021000008.0|2026-0060TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32403100007021000008.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32403100007021000008.0"
 },
@@ -12412,19 +12412,19 @@
 },
 "indianriver|33390100036020000006.0|2026-0048TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33390100036020000006.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33390100036020000006.0"
 },
 "indianriver|33390200026000000012.0|2026-0049TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33390200026000000012.0",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33390200026000000012.0"
 },
 "indianriver|33391200015000000002.9|2026-0047TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9",
-"fetched_at": "2026-10-14T09:23:49+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9"
 },
@@ -12500,7 +12500,7 @@
 },
 "indianriver|33400500012010000005.0|2026-0065TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0",
-"fetched_at": "2026-10-14T09:23:49+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0"
 },
@@ -12542,7 +12542,7 @@
 },
 "jackson|02-2N-11-0081-00D0-0100|1415 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0081-00D0-0100",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0081-00D0-0100"
 },
@@ -12564,7 +12564,7 @@
 },
 "jackson|02-2N-11-0083-00E0-0190|1468 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-00E0-0190",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-00E0-0190"
 },
@@ -12634,7 +12634,7 @@
 },
 "jackson|02-2N-11-0083-00U0-0140|1675 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-00U0-0140",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0083-00U0-0140"
 },
@@ -12834,7 +12834,7 @@
 },
 "jackson|02-2N-11-0086-0870-0080|1964 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0080",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0080"
 },
@@ -13000,7 +13000,7 @@
 },
 "jackson|02-2N-11-0087-1410-0030|1963 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1410-0030",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1410-0030"
 },
@@ -13098,19 +13098,19 @@
 },
 "jackson|02-2N-11-0087-1520-0400|2011 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1520-0400",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1520-0400"
 },
 "jackson|02-2N-11-0087-1550-0150|2022 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1550-0150",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1550-0150"
 },
 "jackson|02-2N-11-0087-1550-0170|2024 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1550-0170",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1550-0170"
 },
@@ -13170,19 +13170,19 @@
 },
 "jackson|02-2N-11-0087-1780-0060|2113 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1780-0060",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1780-0060"
 },
 "jackson|02-2N-11-0087-1860-0040|2128 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1860-0040",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1860-0040"
 },
 "jackson|02-2N-11-0087-1870-0270|2395 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1870-0270",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1870-0270"
 },
@@ -13204,7 +13204,7 @@
 },
 "jackson|02-2N-11-0087-2040-0080|2172 OF 2023": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-2040-0080",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-2040-0080"
 },
@@ -13262,7 +13262,7 @@
 },
 "jackson|13-4N-12-0000-0070-0000|3145 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=13-4N-12-0000-0070-0000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=13-4N-12-0000-0070-0000"
 },
@@ -13307,7 +13307,7 @@
 },
 "lake|01-19-26-100000C00600|03086-2023": {
 "assessed_value": "Taxable Value",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "PO BOX 350066 GRAND ISLAND, FL 32735-0066 Update Mailing Address",
 "ok": true,
@@ -13379,7 +13379,7 @@
 },
 "lake|04-19-24-000200008500|00461-2023": {
 "assessed_value": "Taxable Value",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "35920 POINSETTIA AVE FRUITLAND PARK, FL 34731 Update Mailing Address",
 "ok": true,
@@ -13487,7 +13487,7 @@
 },
 "lake|08-22-25-100500002400|02087-2024": {
 "assessed_value": "Taxable Value",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "PO BOX 121216 CLERMONT, FL 34712-1216 Update Mailing Address",
 "ok": true,
@@ -13685,7 +13685,7 @@
 },
 "lake|23-24-25-000300002200|02348-2024": {
 "assessed_value": "Taxable Value",
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "120 LAKE EVELYN DR WEST PALM BEACH, FL 33411-2021 Update Mailing Address",
 "ok": true,
@@ -14952,8 +14952,8 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-44-26-01-00005.0140"
 },
 "lee|20-44-26-07-00044.0080|2026000431": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='www.leepa.org', port=80): Max retries exceeded with url: /Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-44-26-07-00044.0080 (Caused by ConnectTimeoutError(<HTTPConnection(",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-44-26-07-00044.0080"
 },
@@ -15708,8 +15708,8 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-43-25-01-00011.0000"
 },
 "lee|33-44-27-08-00030.0070|2026000423": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='www.leepa.org', port=80): Max retries exceeded with url: /Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-44-27-08-00030.0070 (Caused by ConnectTimeoutError(<HTTPConnection(",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-44-27-08-00030.0070"
 },
@@ -16198,7 +16198,7 @@
 },
 "leon|1116204580000|26-0243": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/1116204580000?mode=&UseSearch=no&pin=1116204580000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=1116204580000"
 },
@@ -16258,7 +16258,7 @@
 },
 "leon|1222202310000|26-0205": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/1222202310000?mode=&UseSearch=no&pin=1222202310000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=1222202310000"
 },
@@ -16292,7 +16292,7 @@
 },
 "leon|1425200500000|26-0245": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/1425200500000?mode=&UseSearch=no&pin=1425200500000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=1425200500000"
 },
@@ -16488,13 +16488,13 @@
 },
 "leon|2126200960000|16-0726": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/2126200960000?mode=&UseSearch=no&pin=2126200960000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=2126200960000"
 },
 "leon|212635G0040|26-0196": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/212635G0040?mode=&UseSearch=no&pin=212635G0040",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=212635G0040"
 },
@@ -16547,13 +16547,13 @@
 },
 "leon|212645A0050|26-0217": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/212645A0050?mode=&UseSearch=no&pin=212645A0050",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=212645A0050"
 },
 "leon|212645A0440|26-0121": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/212645A0440?mode=&UseSearch=no&pin=212645A0440",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=212645A0440"
 },
@@ -16575,7 +16575,7 @@
 },
 "leon|213061B0050|26-0218": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/213061B0050?mode=&UseSearch=no&pin=213061B0050",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=213061B0050"
 },
@@ -16722,7 +16722,7 @@
 },
 "leon|310135I0240|26-0017": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/310135I0240?mode=&UseSearch=no&pin=310135I0240",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=310135I0240"
 },
@@ -16750,7 +16750,7 @@
 },
 "leon|310328D0150|26-0228": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/310328D0150?mode=&UseSearch=no&pin=310328D0150",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=310328D0150"
 },
@@ -16794,7 +16794,7 @@
 },
 "leon|3107202660000|26-0197": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/3107202660000?mode=&UseSearch=no&pin=3107202660000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=3107202660000"
 },
@@ -16916,7 +16916,7 @@
 },
 "leon|3223202120000|26-0229": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/3223202120000?mode=&UseSearch=no&pin=3223202120000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=3223202120000"
 },
@@ -16940,7 +16940,7 @@
 },
 "leon|331740E0130|26-0193": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/331740E0130?mode=&UseSearch=no&pin=331740E0130",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=331740E0130"
 },
@@ -16952,7 +16952,7 @@
 },
 "leon|332103C0220|26-0222": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/332103C0220?mode=&UseSearch=no&pin=332103C0220",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=332103C0220"
 },
@@ -16994,7 +16994,7 @@
 },
 "leon|410255B0180|26-0210": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/410255B0180?mode=&UseSearch=no&pin=410255B0180",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=410255B0180"
 },
@@ -17006,7 +17006,7 @@
 },
 "leon|410270D0160|26-0206": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/410270D0160?mode=&UseSearch=no&pin=410270D0160",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=410270D0160"
 },
@@ -17054,7 +17054,7 @@
 },
 "leon|411175A0450|26-0207": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/411175A0450?mode=&UseSearch=no&pin=411175A0450",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=411175A0450"
 },
@@ -17066,19 +17066,19 @@
 },
 "leon|411315J0060|26-0230": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/411315J0060?mode=&UseSearch=no&pin=411315J0060",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=411315J0060"
 },
 "leon|4113202020000|26-0236": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4113202020000?mode=&UseSearch=no&pin=4113202020000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4113202020000"
 },
 "leon|411350A0110|26-0225": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/411350A0110?mode=&UseSearch=no&pin=411350A0110",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=411350A0110"
 },
@@ -17090,25 +17090,25 @@
 },
 "leon|4123204060020|26-0231": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4123204060020?mode=&UseSearch=no&pin=4123204060020",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4123204060020"
 },
 "leon|4124206430000|26-0237": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4124206430000?mode=&UseSearch=no&pin=4124206430000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4124206430000"
 },
 "leon|4124206580000|26-0163": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4124206580000?mode=&UseSearch=no&pin=4124206580000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4124206580000"
 },
 "leon|4124550000040|26-0232": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4124550000040?mode=&UseSearch=no&pin=4124550000040",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4124550000040"
 },
@@ -17120,7 +17120,7 @@
 },
 "leon|4126130000410|26-0208": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4126130000410?mode=&UseSearch=no&pin=4126130000410",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4126130000410"
 },
@@ -17138,13 +17138,13 @@
 },
 "leon|4307250000100|26-0164": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4307250000100?mode=&UseSearch=no&pin=4307250000100",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4307250000100"
 },
 "leon|441230C0160|26-0219": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/441230C0160?mode=&UseSearch=no&pin=441230C0160",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=441230C0160"
 },
@@ -17156,7 +17156,7 @@
 },
 "leon|4610200420030|26-0239": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4610200420030?mode=&UseSearch=no&pin=4610200420030",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4610200420030"
 },
@@ -17168,13 +17168,13 @@
 },
 "leon|461030E0010|26-0220": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/461030E0010?mode=&UseSearch=no&pin=461030E0010",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=461030E0010"
 },
 "leon|461108E0070|26-0221": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/461108E0070?mode=&UseSearch=no&pin=461108E0070",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=461108E0070"
 },
@@ -17198,25 +17198,25 @@
 },
 "leon|4612200630000|26-0209": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4612200630000?mode=&UseSearch=no&pin=4612200630000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4612200630000"
 },
 "leon|4701202370000|26-0240": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4701202370000?mode=&UseSearch=no&pin=4701202370000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4701202370000"
 },
 "leon|4711204580000|26-0226": {
 "error": "403 Client Error: Forbidden for url: https://search.leonpa.gov/Property/Details/4711204580000?mode=&UseSearch=no&pin=4711204580000",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.leonpa.org/pt/Datalets/Datalet.aspx?mode=&UseSearch=no&pin=4711204580000"
 },
 "manatee|1295300109|2026TD000192": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1295300109"
 },
@@ -17234,7 +17234,7 @@
 },
 "manatee|1391800459|2026TD000194": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1391800459"
 },
@@ -17264,7 +17264,7 @@
 },
 "manatee|1918523159|2026TD000117": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1918523159"
 },
@@ -17366,7 +17366,7 @@
 },
 "manatee|4456429002|2026TD000198": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=4456429002"
 },
@@ -17390,7 +17390,7 @@
 },
 "manatee|5081500406|2026TD000199": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5081500406"
 },
@@ -17426,7 +17426,7 @@
 },
 "manatee|5488700005|2026TD000201": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5488700005"
 },
@@ -17450,7 +17450,7 @@
 },
 "manatee|5519700008|2026TD000202": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5519700008"
 },
@@ -17474,7 +17474,7 @@
 },
 "manatee|5814400007|2026TD000203": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5814400007"
 },
@@ -17486,7 +17486,7 @@
 },
 "manatee|6111500002|2026TD000185": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6111500002"
 },
@@ -17755,6 +17755,20 @@
 "ok": true,
 "sale_date": "12/09/2026",
 "tax_number": "171702021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|1073481|198782015": {
+"applicant": "PRISCILLA FLANARY",
+"applicant_address": "C/O PRISCILLA FLANARY 14545 SE 30TH CT SUMMERFIELD FL 34491",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "198782015",
+"deed_status": "RESCHED",
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"sale_date": "10/14/2026",
+"tax_number": "198782015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
 "marion|1100631|204362015": {
@@ -27348,7 +27362,7 @@
 },
 "miamidade|01-3126-047-0090|2026A00242": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131260470090"
 },
@@ -27447,7 +27461,7 @@
 },
 "miamidade|02-3234-193-0700|2026A00235": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232341930700"
 },
@@ -27539,7 +27553,7 @@
 },
 "miamidade|30-5816-000-0301|2026A00264": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3058160000301"
 },
@@ -27746,13 +27760,13 @@
 },
 "nassau|01-6N-29-V28T-2511-0000|452026XX000019TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=01-6N-29-V28T-2511-0000 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=01-6N-29-V28T-2511-0000"
 },
 "nassau|01-6N-29-V28T-2530-0000|452026XX000020TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=01-6N-29-V28T-2530-0000 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=01-6N-29-V28T-2530-0000"
 },
@@ -27798,13 +27812,13 @@
 },
 "nassau|39-2N-27-0000-0001-0020|452026XX000017TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=39-2N-27-0000-0001-0020 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=39-2N-27-0000-0001-0020"
 },
 "nassau|42-2N-27-4613-0008-0010|452026XX000018TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=42-2N-27-4613-0008-0010 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=42-2N-27-4613-0008-0010"
 },
@@ -28862,19 +28876,19 @@
 },
 "orange|062332122800100|2024-19303": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/062332122800100"
 },
 "orange|062429740004205|2024-12790": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/062429740004205"
 },
 "orange|072229705001240|2024-7747": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/072229705001240"
 },
@@ -28964,7 +28978,7 @@
 },
 "orange|102330890800135|2024-16023": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102330890800135"
 },
@@ -29012,19 +29026,19 @@
 },
 "orange|132229092801040|2024-8014": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132229092801040"
 },
 "orange|132328277805032|2022-4885": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132328277805032"
 },
 "orange|132328278600250|2024-5522": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132328278600250"
 },
@@ -29060,7 +29074,7 @@
 },
 "orange|162128000000069|2023-2626": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162128000000069"
 },
@@ -29094,7 +29108,7 @@
 },
 "orange|162329063400616|2024-11761": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162329063400616"
 },
@@ -29456,7 +29470,7 @@
 },
 "orange|272129714004030|2024-6700": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272129714004030"
 },
@@ -29490,19 +29504,19 @@
 },
 "orange|272229919801000|2024-9120": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272229919801000"
 },
 "orange|272230038007080|2024-14806": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272230038007080"
 },
 "orange|272230041803161|2024-14845": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272230041803161"
 },
@@ -29674,13 +29688,13 @@
 },
 "orange|302430266507203|2024-16897": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302430266507203"
 },
 "orange|302431486002032|2024-18274": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302431486002032"
 },
@@ -29692,7 +29706,7 @@
 },
 "orange|312229182001600|2024-9521": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312229182001600"
 },
@@ -29792,7 +29806,7 @@
 },
 "orange|322229182800250|2024-9599": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322229182800250"
 },
@@ -29814,7 +29828,7 @@
 },
 "orange|322229548600640|2024-9665": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322229548600640"
 },
@@ -29844,7 +29858,7 @@
 },
 "orange|332229901900020|2024-9878": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332229901900020"
 },
@@ -29862,7 +29876,7 @@
 },
 "orange|332230323911103|2024-15105": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332230323911103"
 },
@@ -29886,7 +29900,7 @@
 },
 "orange|342428933105105|2024-6542": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/342428933105105"
 },
@@ -29898,7 +29912,7 @@
 },
 "orange|352129691200170|2024-7199": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352129691200170"
 },
@@ -29916,13 +29930,13 @@
 },
 "orange|352428435831312|2024-6587": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352428435831312"
 },
 "orange|352428435904403|2024-6596": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352428435904403"
 },
@@ -29940,7 +29954,7 @@
 },
 "orange|362129966908070|2024-7321": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362129966908070"
 },
@@ -33180,12 +33194,34 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232625000580001420"
 },
+"polk|232709000000033160|00219-2026": {
+"acreage": "2.36",
+"assessed_value": 1180.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232709000000033160"
+},
 "polk|232733000000014023|00137-2026": {
 "acreage": "0.23",
 "assessed_value": 81667.0,
 "fetched_at": "2026-09-21T15:26:16+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000014023"
+},
+"polk|232733000000033075|00237-2026": {
+"acreage": "0.28",
+"assessed_value": 80248.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000033075"
+},
+"polk|232736013900003110|00253-2026": {
+"acreage": "0.59",
+"assessed_value": 52688.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736013900003110"
 },
 "polk|232736016026000790|00092-2026": {
 "acreage": "0.02",
@@ -33194,12 +33230,48 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736016026000790"
 },
+"polk|232811029500002260|00244-2026": {
+"acreage": "0.27",
+"assessed_value": 51519.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811029500002260"
+},
+"polk|232811029500002272|00245-2026": {
+"acreage": "0.35",
+"assessed_value": 64921.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811029500002272"
+},
+"polk|232812045500003100|00246-2026": {
+"acreage": "0.24",
+"assessed_value": 146326.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812045500003100"
+},
 "polk|232812055500001050|00135-2026": {
 "acreage": "0.12",
 "assessed_value": 36410.0,
 "fetched_at": "2026-08-19T17:58:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812055500001050"
+},
+"polk|232814079500003120|00230-2026": {
+"acreage": "0.20",
+"assessed_value": 91374.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232814079500003120"
+},
+"polk|232814084000002010|00235-2026": {
+"acreage": "0.36",
+"assessed_value": 200727.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232814084000002010"
 },
 "polk|232815085500000506|00110-2026": {
 "acreage": "0.12",
@@ -33279,6 +33351,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232923000000044070"
 },
+"polk|232928142050001700|00227-2026": {
+"acreage": "0.43",
+"assessed_value": 243028.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232928142050001700"
+},
 "polk|232931142217000070|00107-2026": {
 "acreage": "0.37",
 "assessed_value": 73874.0,
@@ -33299,6 +33378,13 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233001144120015050"
+},
+"polk|233012000000031670|00231-2026": {
+"acreage": "0.13",
+"assessed_value": 100321.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233012000000031670"
 },
 "polk|24-25-14-0000-0002-1040|01091-2025": {
 "acreage": "0.00",
@@ -33708,6 +33794,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242809175500010107"
 },
+"polk|242810178711000405|00249-2026": {
+"acreage": "0.07",
+"assessed_value": 41069.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242810178711000405"
+},
 "polk|242823242220000730|00143-2026": {
 "acreage": "0.14",
 "assessed_value": 73874.0,
@@ -33729,12 +33822,56 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000032020"
 },
+"polk|242831261490008280|00221-2026": {
+"acreage": "0.16",
+"assessed_value": 148924.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242831261490008280"
+},
+"polk|242908279470000340|00254-2026": {
+"acreage": "0.35",
+"assessed_value": 454827.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242908279470000340"
+},
+"polk|242913282022000040|00255-2026": {
+"acreage": "2.08",
+"assessed_value": 691409.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242913282022000040"
+},
 "polk|242914283000090640|00149-2026": {
 "acreage": "0.19",
 "assessed_value": 29684.0,
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283000090640"
+},
+"polk|242914283141000160|00222-2026": {
+"acreage": "0.27",
+"assessed_value": 213929.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283141000160"
+},
+"polk|242916284551000380|00257-2026": {
+"acreage": "0.41",
+"assessed_value": 1010366.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242916284551000380"
+},
+"polk|243008000000033040|00261-2026": {
+"acreage": "1.49",
+"assessed_value": 230249.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=243008000000033040"
 },
 "polk|243008000000033060|00152-2026": {
 "acreage": "0.26",
@@ -33878,6 +34015,27 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=253132000000011080"
 },
+"polk|252506000000033300|00209-2026": {
+"acreage": "1.51",
+"assessed_value": 753.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000033300"
+},
+"polk|252506000000041100|00211-2026": {
+"acreage": "1.25",
+"assessed_value": 625.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000041100"
+},
+"polk|252506000000043120|00212-2026": {
+"acreage": "1.56",
+"assessed_value": 782.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000043120"
+},
 "polk|252604000000011110|00013-2026": {
 "acreage": "4.13",
 "assessed_value": 2066.0,
@@ -33913,6 +34071,21 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252721000000044040"
 },
+"polk|252736305501003040|00260-2026": {
+"acreage": "0.33",
+"assessed_value": 460833.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252736305501003040"
+},
+"polk|252809321320003070|00263-2026": {
+"acreage": "0.25",
+"assessed_value": 146796.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252809321320003070"
+},
 "polk|252811000000023055|00154-2026": {
 "acreage": "0.25",
 "assessed_value": 59073.0,
@@ -33920,12 +34093,27 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811000000023055"
 },
+"polk|252811337800005132|00264-2026": {
+"acreage": "0.09",
+"assessed_value": 60962.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811337800005132"
+},
 "polk|252811337800008083|00155-2026": {
 "acreage": "0.08",
 "assessed_value": 21571.0,
 "fetched_at": "2026-09-21T15:26:16+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811337800008083"
+},
+"polk|252812338200000840|00243-2026": {
+"acreage": "0.15",
+"assessed_value": 172822.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252812338200000840"
 },
 "polk|252812339210000100|00156-2026": {
 "acreage": "0.17",
@@ -33955,6 +34143,13 @@
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252824353600004074"
+},
+"polk|252914359700000070|00262-2026": {
+"acreage": "0.17",
+"assessed_value": 122962.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252914359700000070"
 },
 "polk|253132000000011080|00157-2026": {
 "acreage": "0.22",
@@ -34091,10 +34286,26 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262502488047014110"
 },
+"polk|262512999967332040|00265-2026": {
+"acreage": "0.01",
+"assessed_value": 163500.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262512999967332040"
+},
+"polk|262513999943008350|00268-2026": {
+"acreage": "0.02",
+"assessed_value": 170000.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262513999943008350"
+},
 "polk|262715000000043110|00161-2026": {
 "acreage": "0.92",
 "assessed_value": 58616.0,
-"fetched_at": "2026-09-21T15:26:16+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262715000000043110"
 },
@@ -34119,12 +34330,68 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262806527010001440"
 },
+"polk|262808528800000230|00266-2026": {
+"acreage": "0.22",
+"assessed_value": 128719.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808528800000230"
+},
+"polk|262808529000000040|00267-2026": {
+"acreage": "1.19",
+"assessed_value": 155661.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808529000000040"
+},
 "polk|262819553671001050|00174-2026": {
 "acreage": "0.15",
 "assessed_value": 42793.0,
 "fetched_at": "2026-09-21T15:26:16+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262819553671001050"
+},
+"polk|262829621000052060|00224-2026": {
+"acreage": "0.15",
+"assessed_value": 86384.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262829621000052060"
+},
+"polk|262919000000014280|00213-2026": {
+"acreage": "1.04",
+"assessed_value": 521.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000014280"
+},
+"polk|262919000000023080|00214-2026": {
+"acreage": "1.01",
+"assessed_value": 504.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000023080"
+},
+"polk|262919000000032040|00215-2026": {
+"acreage": "1.01",
+"assessed_value": 504.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032040"
+},
+"polk|262919000000032200|00216-2026": {
+"acreage": "1.01",
+"assessed_value": 504.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032200"
+},
+"polk|262919000000032220|00220-2026": {
+"acreage": "1.05",
+"assessed_value": 523.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032220"
 },
 "polk|263019000000021080|00160-2026": {
 "acreage": "0.85",
@@ -34308,6 +34575,20 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835000000041120"
 },
+"polk|272909857300000170|00192-2026": {
+"acreage": "0.15",
+"assessed_value": 37555.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272909857300000170"
+},
+"polk|272909857800000090|00193-2026": {
+"acreage": "0.16",
+"assessed_value": 100870.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272909857800000090"
+},
 "polk|273035000000012010|00191-2026": {
 "acreage": "0.12",
 "assessed_value": 65976.0,
@@ -34393,6 +34674,21 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282707000000031050"
 },
+"polk|282733934460451070|00199-2026": {
+"acreage": "0.18",
+"assessed_value": 40000.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460451070"
+},
+"polk|282733934460490040|00200-2026": {
+"acreage": "0.20",
+"assessed_value": 40000.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460490040"
+},
 "polk|282802934710015020|00048-2026": {
 "acreage": "0.22",
 "assessed_value": 24890.0,
@@ -34456,6 +34752,27 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283034000000042020"
 },
+"polk|283128963800006080|00218-2026": {
+"acreage": "0.16",
+"assessed_value": 11073.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128963800006080"
+},
+"polk|283128965000002210|00233-2026": {
+"acreage": "0.16",
+"assessed_value": 38148.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128965000002210"
+},
+"polk|283208000000034200|00201-2026": {
+"acreage": "0.31",
+"assessed_value": 64833.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283208000000034200"
+},
 "polk|29-29-30-9917-5000-2170|00202-2026": {
 "acreage": "0.99",
 "assessed_value": 35150.0,
@@ -34498,6 +34815,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060023718"
 },
+"polk|292930991750002170|00202-2026": {
+"acreage": "0.99",
+"assessed_value": 35150.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=292930991750002170"
+},
 "polk|293022999997004810|00021-2026": {
 "acreage": "0.03",
 "assessed_value": 96500.0,
@@ -34518,6 +34842,41 @@
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293032993021000100"
+},
+"polk|293112994060021507|00207-2026": {
+"acreage": "0.50",
+"assessed_value": 4027.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021507"
+},
+"polk|293112994060021617|00208-2026": {
+"acreage": "0.50",
+"assessed_value": 4027.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021617"
+},
+"polk|293112994060021618|00252-2026": {
+"acreage": "0.50",
+"assessed_value": 4027.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021618"
+},
+"polk|293112994060021704|00234-2026": {
+"acreage": "0.50",
+"assessed_value": 4027.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021704"
+},
+"polk|293112994060023718|00204-2026": {
+"acreage": "0.50",
+"assessed_value": 4027.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060023718"
 },
 "polk|30-31-04-9941-0003-2533|00016-2026": {
 "acreage": "0.53",
@@ -34560,6 +34919,13 @@
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=303104994100032533"
+},
+"polk|303105994000007123|00205-2026": {
+"acreage": "0.50",
+"assessed_value": 9000.0,
+"fetched_at": "2026-10-22T09:14:52+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=303105994000007123"
 },
 "putnam|01-09-24-4086-0100-0580|2019-0000136": {
 "acreage": "0.28",
@@ -42136,31 +42502,31 @@
 },
 "santarosa|18-2S-26-1920-19800-0120|2026189": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-2S-26-1920-19800-0120 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-2S-26-1920-19800-0120"
 },
 "santarosa|18-2S-26-1920-26300-0330|2026172": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-2S-26-1920-26300-0330 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-2S-26-1920-26300-0330"
 },
 "santarosa|19-2S-27-1010-00A00-1170|2026205": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-1170 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-1170"
 },
 "santarosa|19-2S-27-1010-00C00-0220|2026217": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00C00-0220 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00C00-0220"
 },
 "santarosa|21-2N-28-2360-00100-0450|2026218": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=21-2N-28-2360-00100-0450 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=21-2N-28-2360-00100-0450"
 },
@@ -42172,7 +42538,7 @@
 },
 "santarosa|32-2N-28-0000-05050-0000|2026219": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=32-2N-28-0000-05050-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=32-2N-28-0000-05050-0000"
 },
@@ -42184,13 +42550,13 @@
 },
 "santarosa|34-2N-28-0570-00Q00-0020|2026207": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020"
 },
 "santarosa|40-1N-28-0090-52100-0070|2026203": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52100-0070 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52100-0070"
 },
@@ -42218,31 +42584,31 @@
 },
 "sarasota|0043010004|2026 TD 000387": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0043010004"
 },
 "sarasota|0043100039|2026 TD 000375": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0043100039"
 },
 "sarasota|0093120012|2026 TD 000378": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0093120012"
 },
 "sarasota|0170080004|2026 TD 000385": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0170080004"
 },
 "sarasota|0170090044|2026 TD 000377": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0170090044"
 },
@@ -42254,7 +42620,7 @@
 },
 "sarasota|0422150015|2026 TD 000381": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0422150015"
 },
@@ -42272,25 +42638,25 @@
 },
 "sarasota|0950133110|2026 TD 000347": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0950133110"
 },
 "sarasota|0950133703|2026 TD 000369": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0950133703"
 },
 "sarasota|0952123705|2026 TD 000372": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0952123705"
 },
 "sarasota|0953149305|2026 TD 000345": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0953149305"
 },
@@ -42302,7 +42668,7 @@
 },
 "sarasota|0954126708|2026 TD 000366": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0954126708"
 },
@@ -42320,19 +42686,19 @@
 },
 "sarasota|0957118917|2026 TD 000401": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0957118917"
 },
 "sarasota|0958066673|2026 TD 000404": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0958066673"
 },
 "sarasota|0958067711|2026 TD 000403": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0958067711"
 },
@@ -42356,67 +42722,67 @@
 },
 "sarasota|0965092522|2026 TD 000402": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0965092522"
 },
 "sarasota|0966050711|2026 TD 000394": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0966050711"
 },
 "sarasota|0966050712|2026 TD 000395": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0966050712"
 },
 "sarasota|0967059011|2026 TD 000390": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0967059011"
 },
 "sarasota|0967059311|2026 TD 000391": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0967059311"
 },
 "sarasota|0967059524|2026 TD 000392": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0967059524"
 },
 "sarasota|0967059819|2026 TD 000396": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0967059819"
 },
 "sarasota|0971128208|2026 TD 000367": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0971128208"
 },
 "sarasota|0973172923|2026 TD 000412": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0973172923"
 },
 "sarasota|0974181026|2026 TD 000355": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0974181026"
 },
 "sarasota|0974181027|2026 TD 000350": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0974181027"
 },
@@ -42428,37 +42794,37 @@
 },
 "sarasota|0982043208|2026 TD 000388": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0982043208"
 },
 "sarasota|0984015415|2026 TD 000365": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0984015415"
 },
 "sarasota|0984047412|2026 TD 000413": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0984047412"
 },
 "sarasota|0984047606|2026 TD 000389": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0984047606"
 },
 "sarasota|0984048321|2026 TD 000397": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0984048321"
 },
 "sarasota|1000030068|2026 TD 000346": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1000030068"
 },
@@ -42480,13 +42846,13 @@
 },
 "sarasota|1003016014|2026 TD 000414": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1003016014"
 },
 "sarasota|1004019522|2026 TD 000406": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1004019522"
 },
@@ -42516,43 +42882,43 @@
 },
 "sarasota|1008254813|2026 TD 000359": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1008254813"
 },
 "sarasota|1120156027|2026 TD 000358": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1120156027"
 },
 "sarasota|1133104635|2026 TD 000357": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1133104635"
 },
 "sarasota|1135159608|2026 TD 000356": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1135159608"
 },
 "sarasota|1137158109|2026 TD 000353": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1137158109"
 },
 "sarasota|1137163209|2026 TD 000363": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1137163209"
 },
 "sarasota|1144085607|2026 TD 000364": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1144085607"
 },
@@ -42570,7 +42936,7 @@
 },
 "seminole|08-21-30-511-0A00-0160|20260030/2024-001109": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=08-21-30-511-0A00-0160"
 },
@@ -42794,7 +43160,7 @@
 },
 "seminole|35-19-30-505-0000-0260|20260118/2024-006065": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-505-0000-0260"
 },
@@ -42816,7 +43182,7 @@
 },
 "seminole|36-19-30-514-0000-0080|20260123/2024-006421": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-514-0000-0080"
 },
@@ -42834,7 +43200,7 @@
 },
 "stlucie|1428-702-1274-000-0|26-169": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/142870212740000"
 },
@@ -42852,43 +43218,43 @@
 },
 "stlucie|2309-322-0005-000-8|26-172": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/230932200050008"
 },
 "stlucie|2404-609-0098-000-8|26-168": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240460900980008"
 },
 "stlucie|2404-810-0018-000-2|26-186": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240481000180002"
 },
 "stlucie|2405-601-0126-000-3|26-176": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101260003"
 },
 "stlucie|2405-601-0185-000-4|26-164": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101850004"
 },
 "stlucie|2405-601-0186-000-1|26-165": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101860001"
 },
 "stlucie|2405-601-0244-010-9|26-166": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560102440109"
 },
@@ -42906,7 +43272,7 @@
 },
 "stlucie|2406-502-0059-000-1|26-187": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240650200590001"
 },
@@ -42924,7 +43290,7 @@
 },
 "stlucie|2409-605-0098-000-1|26-185": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500980001"
 },
@@ -42960,7 +43326,7 @@
 },
 "stlucie|2417-506-0143-000-3|26-184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/241750601430003"
 },
@@ -42990,7 +43356,7 @@
 },
 "stlucie|3420-505-0815-000-5|26-170": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342050508150005"
 },
@@ -43002,13 +43368,13 @@
 },
 "stlucie|3420-515-0874-000-7|26-212": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342051508740007"
 },
 "stlucie|3420-640-0580-000-4|26-182": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342064005800004"
 },
@@ -43026,7 +43392,7 @@
 },
 "stlucie|4427-600-0093-000-3|26-174": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/442760000930003"
 },
@@ -43732,8 +44098,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=322102000690"
 },
 "volusia|372500000090|00002-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=372500000090 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=372500000090"
 },
@@ -43754,8 +44120,8 @@
 }
 },
 "volusia|402500000040|10445-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040"
 },
@@ -44006,8 +44372,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523836090110"
 },
 "volusia|523836100090|05546-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523836100090 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523836100090"
 },
@@ -44040,20 +44406,20 @@
 }
 },
 "volusia|530414001014|11397-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530414001014 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530414001014"
 },
 "volusia|530414001418|11400-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530414001418 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530414001418"
 },
 "volusia|530940000510|08441-20": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530940000510 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=530940000510"
 },
@@ -44290,8 +44656,8 @@
 }
 },
 "volusia|533903700056|06724-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700056 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700056"
 },
@@ -44302,14 +44668,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
 },
 "volusia|533950030010|06817-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533950030010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533950030010"
 },
 "volusia|533950030020|06818-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533950030020 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533950030020"
 },
@@ -44364,8 +44730,8 @@
 }
 },
 "volusia|534401060070|07089-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=534401060070 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=534401060070"
 },
@@ -44428,8 +44794,8 @@
 }
 },
 "volusia|611601090010|09244-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601090010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601090010"
 },
@@ -44446,8 +44812,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
 },
 "volusia|611602030270|03569-20": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602030270 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602030270"
 },
@@ -44464,14 +44830,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=612901110240"
 },
 "volusia|613001020140|02607-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613001020140 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613001020140"
 },
 "volusia|613101070020|02636-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613101070020 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613101070020"
 },
@@ -44498,8 +44864,8 @@
 }
 },
 "volusia|613301060020|09551-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301060020 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301060020"
 },
@@ -44516,8 +44882,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
 },
 "volusia|613301130200|03083-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301130200 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301130200"
 },
@@ -44562,8 +44928,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=630603120010"
 },
 "volusia|630802000670|07216-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=630802000670 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=630802000670"
 },
@@ -44708,8 +45074,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701534000080"
 },
 "volusia|701630130200|11082-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701630130200 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701630130200"
 },
@@ -44792,26 +45158,26 @@
 }
 },
 "volusia|710601100080|02906-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710601100080 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710601100080"
 },
 "volusia|712802110010|03294-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=712802110010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=712802110010"
 },
 "volusia|722000003660|05789-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=722000003660 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=722000003660"
 },
 "volusia|722501031140|05822-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=722501031140 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=722501031140"
 },
@@ -44838,8 +45204,8 @@
 }
 },
 "volusia|723601030910|05933-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723601030910 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723601030910"
 },
@@ -44856,8 +45222,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734306001031"
 },
 "volusia|734403002151|12136-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151"
 },
@@ -44938,14 +45304,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=745221000A60"
 },
 "volusia|791502000491|06794-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791502000491 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791502000491"
 },
 "volusia|791502000640|06264-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791502000640 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791502000640"
 },
@@ -44996,8 +45362,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
 },
 "volusia|801301000640|02394-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801301000640 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801301000640"
 },
@@ -45142,8 +45508,8 @@
 }
 },
 "volusia|830401010360|13852-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360"
 },
@@ -45154,8 +45520,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840500000120"
 },
 "volusia|843600000040|10131-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=843600000040 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=843600000040"
 },
@@ -45220,14 +45586,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
 "volusia|853812000901|10095-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901"
 },
 "volusia|900801020380|02366-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=900801020380 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=900801020380"
 },
@@ -45238,20 +45604,20 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910100000002"
 },
 "volusia|91010000009A|11114-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A"
 },
 "volusia|910302030161|10909-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910302030161 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910302030161"
 },
 "volusia|910302030171|10826-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910302030171 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=910302030171"
 },
@@ -45284,8 +45650,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920701000011"
 },
 "volusia|920900000021|05999-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920900000021 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920900000021"
 },
@@ -45337,7 +45703,7 @@
 },
 "walton|25-3N-19-19560-000-0200|2026-0129TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200"
 },
@@ -45355,13 +45721,13 @@
 },
 "walton|33-4N-20-29000-002-0210|2026-0130TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-4N-20-29000-002-0210",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-4N-20-29000-002-0210"
 },
 "walton|33-6N-20-31010-000-0280|2026-0131TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0280",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0280"
 },
@@ -45373,7 +45739,7 @@
 },
 "walton|34-3N-19-19500-00D-0050|2026-0134TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050"
 },
@@ -45437,7 +45803,7 @@
 },
 "washington|00000000-01-0075-0003|2026-TD-196": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0075-0003",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0075-0003"
 },
@@ -45449,13 +45815,13 @@
 },
 "washington|00000000-01-0088-0009|2026-TD-198": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0088-0009",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0088-0009"
 },
 "washington|00000000-02-0208-0006|2026-TD-199": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0208-0006",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0208-0006"
 },
@@ -45483,7 +45849,7 @@
 },
 "washington|00000000-03-0286-0011|2026-TD-201": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-03-0286-0011",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-03-0286-0011"
 },
@@ -45505,7 +45871,7 @@
 },
 "washington|00000000-04-0202-0014|2026-TD-189": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0014",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0014"
 },
@@ -45557,7 +45923,7 @@
 },
 "washington|00000000-05-0333-0006|2026-TD-191": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0333-0006",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0333-0006"
 },
@@ -45587,7 +45953,7 @@
 },
 "washington|00000000-06-0344-0004|2026-TD-202": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0344-0004",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0344-0004"
 },
@@ -45599,7 +45965,7 @@
 },
 "washington|00000000-06-0356-0021|2026-TD-207": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0021",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0021"
 },
@@ -45665,7 +46031,7 @@
 },
 "washington|00000000-06-0391-0009|2026-TD-208": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0009",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0009"
 },
@@ -45677,25 +46043,25 @@
 },
 "washington|00000000-06-0401-0016|2026-TD-180": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0401-0016",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0401-0016"
 },
 "washington|00000000-06-0402-0008|2026-TD-181": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0402-0008",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0402-0008"
 },
 "washington|00000000-06-0404-0001|2026-TD-182": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0404-0001",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0404-0001"
 },
 "washington|00000000-06-0406-0001|2026-TD-183": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0406-0001",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0406-0001"
 },
@@ -46153,25 +46519,25 @@
 },
 "washington|00000000-10-0572-0023|2026-TD-210": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0572-0023",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0572-0023"
 },
 "washington|00000000-10-0578-0009|2026-TD-211": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0578-0009",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0578-0009"
 },
 "washington|00000000-10-0578-0010|2026-TD-212": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0578-0010",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0578-0010"
 },
 "washington|00000000-10-0579-0004|2026-TD-213": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0579-0004",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0579-0004"
 },
@@ -46211,31 +46577,31 @@
 },
 "washington|00000000-11-0751-0021|2026-TD-144": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0021",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0021"
 },
 "washington|00000000-11-0757-0002|2026-TD-143": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0002",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0002"
 },
 "washington|00000000-11-0766-0002|2026-TD-142": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0766-0002",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0766-0002"
 },
 "washington|00000000-11-0774-0019|2026-TD-141": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0774-0019",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0774-0019"
 },
 "washington|00000000-11-0778-0017|2026-TD-140": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0017",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0017"
 },
@@ -46297,7 +46663,7 @@
 },
 "washington|00000000-16-0596-0002|2026-TD-216": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-16-0596-0002",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-16-0596-0002"
 },
