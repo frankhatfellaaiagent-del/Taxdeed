@@ -75,7 +75,7 @@
 },
 "alachua|05254-002-000|TD 2026-044": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000"
 },
@@ -123,7 +123,7 @@
 },
 "alachua|06770-178-000|TD 2026-042": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000"
 },
@@ -164,7 +164,7 @@
 },
 "alachua|07836-021-003|TD 2026-043": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003"
 },
@@ -598,7 +598,7 @@
 },
 "bay|28768-000-000|2026-4146TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000"
 },
@@ -1180,7 +1180,7 @@
 },
 "broward|484231-AJ-0370|53958": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1228,7 +1228,7 @@
 },
 "broward|494108-BA-0700|53922": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1246,7 +1246,7 @@
 },
 "broward|494122-AC-0390|54366": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1258,7 +1258,7 @@
 },
 "broward|494125-HM-0590|53902": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1282,7 +1282,7 @@
 },
 "broward|494128-DC-0190|53903": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1360,7 +1360,7 @@
 },
 "broward|494205-AH-0170|53779": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1378,7 +1378,7 @@
 },
 "broward|494212-07-2340|53956": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1432,7 +1432,7 @@
 },
 "broward|504001-68-0010|53943": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1462,7 +1462,7 @@
 },
 "broward|504126-04-0370|54305": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1516,7 +1516,7 @@
 },
 "broward|514123-07-3960|54355": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -12840,97 +12840,97 @@
 },
 "jackson|02-2N-11-0086-0870-0100|1965 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100"
 },
 "jackson|02-2N-11-0086-0880-0740|1981 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0740",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0740"
 },
 "jackson|02-2N-11-0086-0880-0780|1982 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0780",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-0780"
 },
 "jackson|02-2N-11-0086-0880-1100|1986 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100"
 },
 "jackson|02-2N-11-0086-0940-0050|2014 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050"
 },
 "jackson|02-2N-11-0086-1000-0170|2037 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1000-0170",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1000-0170"
 },
 "jackson|02-2N-11-0086-1110-0090|2067 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1110-0090",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1110-0090"
 },
 "jackson|02-2N-11-0086-1120-0130|2071 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130"
 },
 "jackson|02-2N-11-0086-1120-0190|2072 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190"
 },
 "jackson|02-2N-11-0087-1270-0290|2126 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290"
 },
 "jackson|02-2N-11-0087-1270-0360|2128 of 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360"
 },
 "jackson|02-2N-11-0087-1300-0200|2140 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200"
 },
 "jackson|02-2N-11-0087-1330-0030|3618 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030"
 },
 "jackson|02-2N-11-0087-1330-0050|2145 of 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050"
 },
 "jackson|02-2N-11-0087-1330-0190|2149 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0190",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0190"
 },
 "jackson|02-2N-11-0087-1350-0640|2166 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640"
 },
@@ -13148,7 +13148,7 @@
 },
 "jackson|02-2N-11-0087-1620-0500|2300 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1620-0500",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1620-0500"
 },
@@ -13238,7 +13238,7 @@
 },
 "jackson|02-6N-12-0454-00C0-0130|3319 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130"
 },
@@ -13250,7 +13250,7 @@
 },
 "jackson|10-6N-11-0000-0110-0000|3105 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=10-6N-11-0000-0110-0000",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=10-6N-11-0000-0110-0000"
 },
@@ -13494,6 +13494,15 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=08-22-25-100500002400"
 },
+"lake|09-18-26-000100000602|02365-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "14833 COUNTY ROAD 450 UMATILLA, FL 32784 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=09-18-26-000100000602"
+},
 "lake|09-22-26-070005000000|03241-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-10-17T08:26:10+00:00",
@@ -13511,6 +13520,15 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=10-19-24-022500014800"
+},
+"lake|12-18-26-080000A00000|02388-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "913 N CENTRAL AVE # 61 UMATILLA, FL 32784 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-18-26-080000A00000"
 },
 "lake|12-20-24-010001300900|01022-2024": {
 "assessed_value": "Taxable Value",
@@ -13538,6 +13556,15 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-23-25-026500009300"
+},
+"lake|13-18-26-230000B01300|02402-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "41 N OAK AVE UMATILLA, FL 32784-8604 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=13-18-26-230000B01300"
 },
 "lake|13-18-26-270000000500|02406-2024": {
 "assessed_value": "Taxable Value",
@@ -13619,6 +13646,15 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=18-20-25-000200001002"
+},
+"lake|18-22-26-000300010100|03347-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "500 WATER ST JACKSONVILLE, FL 32202-4420 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=18-22-26-000300010100"
 },
 "lake|19-22-26-110000001500|03387-2024": {
 "assessed_value": "Taxable Value",
@@ -13710,6 +13746,42 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-15-27-010007401000"
 },
+"lake|24-18-26-000300003706|02435-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "38337 CHURCH ST UMATILLA, FL 32784 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-18-26-000300003706"
+},
+"lake|24-18-26-000300004500|02439-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 483 PAISLEY, FL 32767-0483 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-18-26-000300004500"
+},
+"lake|24-18-26-070000000501|02461-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "37215 CALHOUN RD EUSTIS, FL 32736 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-18-26-070000000501"
+},
+"lake|24-22-25-010005800401|02198-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "210 RIVER ST # 21 HACKENSACK, NJ 06701 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-22-25-010005800401"
+},
 "lake|24-22-25-010009301700|02211-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-10-03T09:51:46+00:00",
@@ -13728,6 +13800,114 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-22-25-010009301701"
 },
+"lake|26-19-26-010000001200|02870-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "2821 TUPELO CT LONGWOOD, FL 32779 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=26-19-26-010000001200"
+},
+"lake|28-18-24-050000B00800|00322-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "216 SKYLINE DR LADY LAKE, FL 32159 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=28-18-24-050000B00800"
+},
+"lake|29-17-29-000400011800|05026-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "43652 COOTER POND RD DELAND, FL 32720 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=29-17-29-000400011800"
+},
+"lake|29-19-27-005011000007|04193-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "8820 SW 22ND ST MIRAMAR, FL 33025-2033 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=29-19-27-005011000007"
+},
+"lake|30-15-28-010000000003|04308-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "103 MADISON VILLAS WAY MADISON, AL 35758-8804 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=30-15-28-010000000003"
+},
+"lake|30-15-28-020014701200|04325-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "55006 6TH ST ASTOR, FL 32102 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=30-15-28-020014701200"
+},
+"lake|30-15-28-040000017500|04337-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 547945 ORLANDO, FL 32854-7945 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=30-15-28-040000017500"
+},
+"lake|31-19-26-020000001300|02974-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "28533 DISCOVERY RD TAVARES, FL 32778 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=31-19-26-020000001300"
+},
+"lake|32-17-27-000200001901|03906-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "19331 E ALTOONA RD ALTOONA, FL 32702 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=32-17-27-000200001901"
+},
+"lake|33-17-29-000100001700|05059-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "17085 SE 252ND AVE UMATILLA, FL 32784 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-17-29-000100001700"
+},
+"lake|33-17-29-010000C00700|05072-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "PO BOX 252 SORRENTO, FL 32776-0252 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-17-29-010000C00700"
+},
+"lake|33-17-29-010000H01300|05091-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "42018 CHERRY AVE DELAND, FL 32720 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-17-29-010000H01300"
+},
 "lake|33-18-24-040000004600|00355-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-10-03T09:51:46+00:00",
@@ -13737,6 +13917,24 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-18-24-040000004600"
 },
+"lake|33-19-27-010000201700|04286-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "700 CENTER ST MOUNT DORA, FL 32757 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=33-19-27-010000201700"
+},
+"lake|34-17-29-000200000200|05092-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "32951 FOXFIRE LN DELAND, FL 32720 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=34-17-29-000200000200"
+},
 "lake|34-19-24-000100001000|00979-2024": {
 "assessed_value": "Taxable Value",
 "fetched_at": "2026-10-03T09:51:46+00:00",
@@ -13745,6 +13943,15 @@
 "ok": true,
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=34-19-24-000100001000"
+},
+"lake|36-17-28-010014600900|04696-2024": {
+"assessed_value": "Taxable Value",
+"fetched_at": "2026-10-24T08:44:52+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "12909 WINFIELD SCOTT BLVD ORLANDO, FL 32837 Update Mailing Address",
+"ok": true,
+"property_use": "Frontage",
+"url": "https://lakecopropappr.com/property-details.aspx?ParcelID=36-17-28-010014600900"
 },
 "lee|01-44-23-C4-02411.0630|2026000506": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -13863,7 +14070,7 @@
 },
 "lee|02-44-26-11-00112.0120|2026000963": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-26-11-00112.0120"
 },
@@ -14540,7 +14747,7 @@
 },
 "lee|13-44-27-06-00015.0140|2026000305": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-44-27-06-00015.0140"
 },
@@ -15004,7 +15211,7 @@
 },
 "lee|21-44-27-03-00010.013A|2026000969": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-03-00010.013A"
 },
@@ -15127,13 +15334,13 @@
 },
 "lee|23-44-27-03-00012.0170|2026000970": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-03-00012.0170"
 },
 "lee|23-44-27-12-00045.0060|2026000971": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-12-00045.0060"
 },
@@ -28793,7 +29000,7 @@
 },
 "orange|012328328741028|2024-5142": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328741028"
 },
@@ -29239,7 +29446,7 @@
 },
 "orange|172329895709170|2024-11869": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172329895709170"
 },
@@ -29285,7 +29492,7 @@
 },
 "orange|182229805000703|2024-8307": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000703"
 },
@@ -29413,7 +29620,7 @@
 },
 "orange|232229160202112|2024-8638": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232229160202112"
 },
@@ -29505,7 +29712,7 @@
 },
 "orange|252228035215210|2024-4529": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252228035215210"
 },
@@ -29631,7 +29838,7 @@
 },
 "orange|262329807008060|2024-12312": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262329807008060"
 },
@@ -29701,13 +29908,13 @@
 },
 "orange|272429814100560|2024-13419": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272429814100560"
 },
 "orange|282129062303305|2024-6741": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129062303305"
 },
@@ -29775,13 +29982,13 @@
 },
 "orange|292329002501180|2024-12441": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292329002501180"
 },
 "orange|292431230901320|2024-18258": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292431230901320"
 },
@@ -29793,7 +30000,7 @@
 },
 "orange|302229000000118|2024-9379": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302229000000118"
 },
@@ -29879,7 +30086,7 @@
 },
 "orange|312229182102670|2024-9536": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312229182102670"
 },
@@ -29913,7 +30120,7 @@
 },
 "orange|312427300007370|2024-1618": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300007370"
 },
@@ -29931,31 +30138,31 @@
 },
 "orange|322129000000006|2024-6948": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129000000006"
 },
 "orange|322129544200060|2024-6989": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129544200060"
 },
 "orange|322129544200490|2024-6990": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129544200490"
 },
 "orange|322129713403303|2024-7008": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129713403303"
 },
 "orange|322129729202110|2024-7011": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129729202110"
 },
@@ -30145,13 +30352,13 @@
 },
 "orange|362229313043004|2024-10207": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362229313043004"
 },
 "orange|362430497501370|2024-17013": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-17T08:26:10+00:00",
+"fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362430497501370"
 },

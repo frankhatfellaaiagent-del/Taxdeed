@@ -1,0 +1,2 @@
+county,sale_date,sale_time,parcel_id,case_number,certificate_number,owner_name,property_address,property_use,acreage,opening_bid,assessed_value,auction_status,auction_type,auction_url,appraiser_url,clerk_case_url,source_host,scraped_at
+baker,12/08/2026,,32-2S-22-0008-0005-0140,022026XX000003TDAXMX,,,,,,0.0,,Redeemed,TAXDEED,https://www.baker.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525556&bypassPage=1,http://bakerpa.com/propertydetails.php?parcel=322S22000800050140,,www.baker.realtaxdeed.com,2026-10-24T08:08:32+00:00
