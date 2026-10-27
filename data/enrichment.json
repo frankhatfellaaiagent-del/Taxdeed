@@ -1160,6 +1160,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|484223-04-0920|54159": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|484225-04-0470|53993": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -1181,6 +1187,12 @@
 "broward|484231-AJ-0370|53958": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-24T08:44:52+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|484235-27-0100|54146": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1226,9 +1238,21 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494108-AG-0070|54156": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|494108-BA-0700|53922": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-24T08:44:52+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494109-AM-0640|54165": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1307,6 +1331,12 @@
 "broward|494135-FH-0050|53839": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-16T08:49:46+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494136-BA-0090|54213": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1442,6 +1472,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504111-04-0680|54217": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504113-04-0670|53698": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-16T08:49:46+00:00",
@@ -1466,15 +1502,45 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504130-10-0030|54211": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504136-04-0030|54210": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504201-BA-0600|54013": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504201-BA-0870|54185": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504203-BF-0860|54341": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504204-09-0030|54187": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|504204-25-0420|53547": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1502,15 +1568,33 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|514032-AA-0660|54190": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|514116-02-0110|53487": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|514117-AB-5200|54195": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|514119-06-0741|53740": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|514121-AC-2180|54176": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1532,6 +1616,18 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|514203-AK-0030|54184": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|514212-BG-0060|54186": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|514219-01-2631|54119": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
@@ -1550,6 +1646,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|514226-HD-2820|54198": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|514226-HK-0480|53856": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
@@ -1558,7 +1660,7 @@
 },
 "broward|514226-RT-0570|54356": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-20T09:11:09+00:00",
+"fetched_at": "2026-10-27T09:37:06+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -27572,6 +27674,12 @@
 "just_value": 0.0,
 "ok": true,
 "url": "https://www.pamartinfl.gov/app/search/pcn/34-38-42-053-006-00150-2 "
+},
+"miamidade|01-3122-052-2400|2026A00184": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131220522400"
 },
 "miamidade|01-3126-047-0090|2026A00242": {
 "error": "no recognizable fields on page",
