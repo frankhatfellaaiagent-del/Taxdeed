@@ -1,0 +1,68 @@
+[
+  {
+    "county": "hardee",
+    "sale_date": "10/28/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "252026TD029AXMX",
+    "certificate_number": "789",
+    "parcel_id": "19-34-26-0600-00001-000D",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 5498.89,
+    "assessed_value": null,
+    "auction_status": "Redeemed 09/29/2026",
+    "auction_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=271369561&KeyValue=19-34-26-0600-00001-000D",
+    "clerk_case_url": "",
+    "source_host": "www.hardeeclerk.com",
+    "scraped_at": "2026-10-28T10:15:29+00:00",
+    "raw_fields": {
+      "cell_labels": {
+        "cert": "789",
+        "parcel number": "19-34-26-0600-00001-000D",
+        "file number": "252026TD029AXMX",
+        "sale date": "10/28/2026",
+        "opening bid": "$5,498.89",
+        "cert holder": "FIG 20 LLC FBO SEC PTY",
+        "status": "Redeemed 09/29/2026"
+      },
+      "cert_holder": "FIG 20 LLC FBO SEC PTY"
+    }
+  },
+  {
+    "county": "hardee",
+    "sale_date": "10/28/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "252026TD036AXMX",
+    "certificate_number": "614",
+    "parcel_id": "25-34-25-0000-05020-0000",
+    "owner_name": "",
+    "property_address": "",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 12615.12,
+    "assessed_value": null,
+    "auction_status": "Redeemed 10/09/2026",
+    "auction_url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=813&LayerID=14471&PageTypeID=4&PageID=6254&Q=1330743349&KeyValue=25-34-25-0000-05020-0000",
+    "clerk_case_url": "",
+    "source_host": "www.hardeeclerk.com",
+    "scraped_at": "2026-10-28T10:15:29+00:00",
+    "raw_fields": {
+      "cell_labels": {
+        "cert": "614",
+        "parcel number": "25-34-25-0000-05020-0000",
+        "file number": "252026TD036AXMX",
+        "sale date": "10/28/2026",
+        "opening bid": "$12,615.12",
+        "cert holder": "FIG 20 LLC FBO SEC PTY",
+        "status": "Redeemed 10/09/2026"
+      },
+      "cert_holder": "FIG 20 LLC FBO SEC PTY"
+    }
+  }
+]

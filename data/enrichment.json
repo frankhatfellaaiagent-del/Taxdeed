@@ -670,7 +670,7 @@
 },
 "brevard|2000576|260358": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2000576",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
 },
@@ -1166,6 +1166,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|484223-BM-0570|54231": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|484225-04-0470|53993": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
@@ -1277,6 +1283,18 @@
 "broward|494123-DJ-0310|53888": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494123-GA-0100|54199": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|494124-HC-0730|54273": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1478,6 +1496,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504112-06-0490|54236": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504113-04-0670|53698": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-16T08:49:46+00:00",
@@ -1556,6 +1580,12 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504234-01-0900|54261": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
 "broward|504235-AC-0060|54325": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
@@ -1571,6 +1601,12 @@
 "broward|514032-AA-0660|54190": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-27T09:37:06+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|514111-11-0790|54292": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1631,6 +1667,12 @@
 "broward|514219-01-2631|54119": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-23T09:18:31+00:00",
+"ok": false,
+"url": "https://bcpa.net/"
+},
+"broward|514219-BD-0010|54296": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -4056,7 +4098,7 @@
 },
 "clay|260424-005605-009-02|2026-0111TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=260424-005605-009-02",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=260424-005605-009-02"
 },
@@ -8158,7 +8200,7 @@
 },
 "flagler|0711317024000700120|26-076 TDC": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
@@ -8228,7 +8270,7 @@
 },
 "gilchrist|150816-02200000-0090|26-0016-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090"
 },
@@ -8283,7 +8325,7 @@
 },
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
 },
@@ -8395,13 +8437,13 @@
 },
 "hendry|1 29 42 32 A00 0011.0100|25-122": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8413,13 +8455,13 @@
 },
 "hendry|4 29 43 10 060 2194-011.0|25-125": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 060 2339-023.0|25-131": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8431,7 +8473,7 @@
 },
 "hendry|4 29 43 10 080 2280-037.0|25-127": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8455,7 +8497,7 @@
 },
 "hendry|4 29 43 10 090 2304-010.0|25-134": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8467,25 +8509,25 @@
 },
 "hendry|4 29 43 10 100 2361-022.0|25-116": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2368-005.0|25-117": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 100 2375-050.0|25-118": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 110 2433-067.0|25-119": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -8497,19 +8539,19 @@
 },
 "hendry|4 29 43 10 120 2469-007.0|25-115": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2497-011.0|25-121": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
 "hendry|4 29 43 10 120 2506-018.0|25-123": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -28916,7 +28958,7 @@
 },
 "okeechobee|1-10-34-33-0A00-00012-1500|2026TD098": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-10-34-33-0A00-00012-1500"
 },
@@ -28940,13 +28982,13 @@
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
 "okeechobee|1-14-34-33-0A00-00021-B000|2026TD107": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00021-B000"
 },
@@ -28958,7 +29000,7 @@
 },
 "okeechobee|1-16-34-33-0A00-00021-M000|2026TD109": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-16-34-33-0A00-00021-M000"
 },
@@ -29024,7 +29066,7 @@
 },
 "okeechobee|1-21-34-33-0A00-00021-B000|2026TD102": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-21-34-33-0A00-00021-B000"
 },
@@ -43298,11 +43340,35 @@
 "property_use": "00700 - MISC. RESIDENCE",
 "url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=49-09-27-1420-0000-0767"
 },
+"santarosa|01-1N-28-0000-00418-0000|2026260": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=01-1N-28-0000-00418-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=01-1N-28-0000-00418-0000"
+},
 "santarosa|03-1N-28-0000-03500-0000|2026165": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=03-1N-28-0000-03500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=03-1N-28-0000-03500-0000"
+},
+"santarosa|03-1N-28-2530-00600-0011|2026245": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=03-1N-28-2530-00600-0011 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=03-1N-28-2530-00600-0011"
+},
+"santarosa|04-1N-29-0000-02633-0000|2026246": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=04-1N-29-0000-02633-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=04-1N-29-0000-02633-0000"
+},
+"santarosa|05-1N-27-0000-00150-0000|2026232": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=05-1N-27-0000-00150-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=05-1N-27-0000-00150-0000"
 },
 "santarosa|05-3S-29-1570-00300-0170|2026122": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -43320,6 +43386,18 @@
 "source": "reportall"
 }
 },
+"santarosa|06-1N-26-0000-00141-0000|2026244": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=06-1N-26-0000-00141-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=06-1N-26-0000-00141-0000"
+},
+"santarosa|09-1N-29-5433-00A00-0220|2026252": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-29-5433-00A00-0220 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-29-5433-00A00-0220"
+},
 "santarosa|09-1N-29-5520-00C00-0150|2026131": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -43335,6 +43413,24 @@
 "parcel_address": "3992 DEERWOOD Cir",
 "source": "reportall"
 }
+},
+"santarosa|10-1N-28-3040-00400-0030|2026261": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-1N-28-3040-00400-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=10-1N-28-3040-00400-0030"
+},
+"santarosa|15-1N-29-1290-00C00-0040|2026253": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=15-1N-29-1290-00C00-0040 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=15-1N-29-1290-00C00-0040"
+},
+"santarosa|16-2N-28-0000-04501-0000|2026236": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=16-2N-28-0000-04501-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=16-2N-28-0000-04501-0000"
 },
 "santarosa|18-2N-27-2050-00000-0251|2026134": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-2N-27-2050-00000-0251 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -43354,6 +43450,12 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-2S-26-1920-26300-0330"
 },
+"santarosa|19-2S-27-1010-00A00-0830|2026228": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-0830 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-0830"
+},
 "santarosa|19-2S-27-1010-00A00-1170|2026205": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-1170 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-22T09:14:52+00:00",
@@ -43371,6 +43473,24 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=21-2N-28-2360-00100-0450"
+},
+"santarosa|22-5N-28-0000-01309-0000|2026259": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-5N-28-0000-01309-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=22-5N-28-0000-01309-0000"
+},
+"santarosa|24-3N-30-0000-00903-0000|2026254": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=24-3N-30-0000-00903-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=24-3N-30-0000-00903-0000"
+},
+"santarosa|28-2S-26-9170-000IT-PARK|2026220": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2S-26-9170-000IT-PARK (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=28-2S-26-9170-000IT-PARK"
 },
 "santarosa|32-2N-27-0000-00201-0000|2026175": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=32-2N-27-0000-00201-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -43396,11 +43516,29 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020"
 },
+"santarosa|40-1N-28-0090-22500-0090|2026224": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-22500-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-22500-0090"
+},
 "santarosa|40-1N-28-0090-52100-0070|2026203": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52100-0070 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52100-0070"
+},
+"santarosa|40-1N-28-0090-63700-0100|2026221": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0100 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0100"
+},
+"santarosa|40-1N-28-0090-63700-0110|2026258": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-10-28T10:15:58+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0110"
 },
 "santarosa|41-5N-29-0000-04100-0000|2026033": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=41-5N-29-0000-04100-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -44252,7 +44390,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -44277,13 +44415,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -44320,7 +44458,7 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -44332,13 +44470,13 @@
 },
 "sumter|G29A059A|5076": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -44374,13 +44512,13 @@
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -44452,7 +44590,7 @@
 },
 "suwannee|03399030009|4803": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://www.suwanneepa.com/gis/"
 },
@@ -44984,8 +45122,8 @@
 }
 },
 "volusia|422302030100|04624-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422302030100 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=422302030100"
 },
@@ -45320,8 +45458,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=531631008220"
 },
 "volusia|532250001280|12575-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=532250001280 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=532250001280"
 },
@@ -45504,8 +45642,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700056"
 },
 "volusia|533903700061|06725-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
 },
@@ -45578,8 +45716,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=534401060070"
 },
 "volusia|580201590010|00150-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
 },
@@ -45596,8 +45734,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600700000490"
 },
 "volusia|602601000341|07336-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=602601000341 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=602601000341"
 },
@@ -45642,14 +45780,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601090010"
 },
 "volusia|611601250130|03068-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130"
 },
 "volusia|611602020090|12107-20": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
 },
@@ -45660,8 +45798,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602030270"
 },
 "volusia|611602210150|03578-20": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150"
 },
@@ -45712,14 +45850,14 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301060020"
 },
 "volusia|613301070250|05074-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250"
 },
 "volusia|613301100260|10746-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
 },
@@ -45730,8 +45868,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301130200"
 },
 "volusia|613301150090|14045-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090"
 },
@@ -45848,8 +45986,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=641936008403"
 },
 "volusia|694301060020|00298-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020"
 },
@@ -45870,8 +46008,8 @@
 }
 },
 "volusia|700400001060|01154-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060"
 },
@@ -45904,8 +46042,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291"
 },
 "volusia|701531000030|01375-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030"
 },
@@ -45950,8 +46088,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110"
 },
 "volusia|702003000010|01643-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010"
 },
@@ -45962,8 +46100,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160"
 },
 "volusia|702012030110|12279-19": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110"
 },
@@ -46104,8 +46242,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820"
 },
 "volusia|743005040130|08124-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130"
 },
@@ -46122,8 +46260,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030"
 },
 "volusia|744109010050|08201-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050"
 },
@@ -46198,8 +46336,8 @@
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360"
 },
 "volusia|801108280050|02083-24": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
 },
@@ -46238,8 +46376,8 @@
 }
 },
 "volusia|810401010130|12166-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130"
 },
@@ -46400,8 +46538,8 @@
 }
 },
 "volusia|844702060860|09589-21": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860"
 },
@@ -46422,8 +46560,8 @@
 }
 },
 "volusia|844702073021|09753-23": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
@@ -46539,7 +46677,7 @@
 },
 "walton|25-3N-19-19330-000-0017|2026-0135TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017"
 },
@@ -46557,7 +46695,7 @@
 },
 "walton|30-3N-18-10000-027-0130|2026-0128TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130"
 },
@@ -46575,7 +46713,7 @@
 },
 "walton|33-6N-20-31010-000-0500|2026-0133TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500",
-"fetched_at": "2026-10-21T09:12:36+00:00",
+"fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500"
 },
