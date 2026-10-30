@@ -117,7 +117,7 @@
 },
 "alachua|06706-304-000|TD 2026-041": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000"
 },
@@ -152,7 +152,7 @@
 },
 "alachua|07294-201-125|TD 2026-037": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125"
 },
@@ -176,7 +176,7 @@
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
@@ -194,13 +194,13 @@
 },
 "alachua|11276-008-000|TD 2026-038": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000"
 },
 "alachua|11908-000-000|TD 2026-040": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000"
 },
@@ -218,7 +218,7 @@
 },
 "bay|00047-009-010|2026-0011TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00047-009-010",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00047-009-010"
 },
@@ -230,7 +230,7 @@
 },
 "bay|00085-000-000|2026-0021TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00085-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00085-000-000"
 },
@@ -242,7 +242,7 @@
 },
 "bay|00186-030-004|2026-0039TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00186-030-004",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00186-030-004"
 },
@@ -272,13 +272,13 @@
 },
 "bay|00802-000-000|2026-0148TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00802-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00802-000-000"
 },
 "bay|00813-000-000|2026-0150TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00813-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=00813-000-000"
 },
@@ -296,13 +296,13 @@
 },
 "bay|01372-000-000|2026-0257TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01372-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01372-000-000"
 },
 "bay|01443-000-000|2026-0262TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01443-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01443-000-000"
 },
@@ -326,13 +326,13 @@
 },
 "bay|02709-000-000|2026-0504TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02709-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02709-000-000"
 },
 "bay|02962-010-019|2026-0506TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02962-010-019",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02962-010-019"
 },
@@ -344,13 +344,13 @@
 },
 "bay|03396-000-000|2026-0614TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=03396-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=03396-000-000"
 },
 "bay|03622-070-000|2026-0644TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=03622-070-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=03622-070-000"
 },
@@ -380,7 +380,7 @@
 },
 "bay|05641-510-006|2026-1135TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=05641-510-006",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=05641-510-006"
 },
@@ -474,19 +474,19 @@
 },
 "bay|14554-000-000|2026-2577TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=14554-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=14554-000-000"
 },
 "bay|15196-037-000|2026-2913TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15196-037-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15196-037-000"
 },
 "bay|15624-000-000|2026-2969TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000"
 },
@@ -574,7 +574,7 @@
 },
 "bay|26707-086-000|2026-3897TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=26707-086-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=26707-086-000"
 },
@@ -592,7 +592,7 @@
 },
 "bay|28244-000-000|2026-4354TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28244-000-000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28244-000-000"
 },
@@ -1108,7 +1108,7 @@
 },
 "broward|484120-HE-0040|53988": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1120,7 +1120,7 @@
 },
 "broward|484133-AK-0080|54030": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1150,7 +1150,7 @@
 },
 "broward|484201-03-0820|54120": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1210,13 +1210,13 @@
 },
 "broward|484235-32-0510|54028": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|484305-10-0390|54033": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1240,7 +1240,7 @@
 },
 "broward|494102-07-1270|54066": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1276,7 +1276,7 @@
 },
 "broward|494122-AA-0370|53995": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1324,7 +1324,7 @@
 },
 "broward|494128-13-0550|54081": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1348,7 +1348,7 @@
 },
 "broward|494135-FH-0010|54040": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1366,7 +1366,7 @@
 },
 "broward|494136-BE-0290|54062": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1462,13 +1462,13 @@
 },
 "broward|494227-AC-0150|54092": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
 "broward|494229-07-0300|54011": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1492,7 +1492,7 @@
 },
 "broward|494318-01-3080|54093": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1558,7 +1558,7 @@
 },
 "broward|504201-BA-0600|54013": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1690,7 +1690,7 @@
 },
 "broward|514219-01-2631|54119": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1708,7 +1708,7 @@
 },
 "broward|514226-CG-1060|54027": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1732,7 +1732,7 @@
 },
 "broward|514226-RX-0130|54107": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
 },
@@ -1801,21 +1801,21 @@
 },
 "charlotte|402105310002|26-0579": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402105310002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402105351008|26-0575": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402105351008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402105351009|26-0576": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402105351009&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -1836,14 +1836,14 @@
 },
 "charlotte|402106304021|26-0583": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402106304021&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402106304022|26-0582": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402106304022&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -1857,14 +1857,14 @@
 },
 "charlotte|402107230017|26-0581": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402107230017&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402107432007|26-0512": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402107432007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -1892,49 +1892,49 @@
 },
 "charlotte|402108380007|26-0562": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402108380007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109256005|26-0516": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109256005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109330010|26-0584": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109330010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109354028|26-0585": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109354028&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109377019|26-0586": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109377019&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109380012|26-0587": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109380012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402109427006|26-0588": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402109427006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -1997,7 +1997,7 @@
 },
 "charlotte|402116427026|26-0577": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402116427026&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2144,7 +2144,7 @@
 },
 "charlotte|402132355005|26-0574": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402132355005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2557,7 +2557,7 @@
 },
 "charlotte|412303286001|26-0573": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412303286001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2592,7 +2592,7 @@
 },
 "charlotte|412304402012|26-0571": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412304402012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2613,7 +2613,7 @@
 },
 "charlotte|412322378010|26-0242": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412322378010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2634,7 +2634,7 @@
 },
 "charlotte|412333355002|26-0607": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412333355002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2662,21 +2662,21 @@
 },
 "charlotte|412333454020|26-0606": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412333454020&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|412333481005|26-0608": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412333481005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|412334157004|26-0609": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334157004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2718,28 +2718,28 @@
 },
 "charlotte|422104233001|26-0590": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104233001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422104233002|26-0597": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104233002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422104233003|26-0592": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104233003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422104233006|26-0605": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104233006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2760,21 +2760,21 @@
 },
 "charlotte|422104404015|26-0593": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422104404015&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422105330003|26-0599": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422105330003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422105383005|26-0594": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422105383005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2830,28 +2830,28 @@
 },
 "charlotte|422302379012|26-0558": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302379012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422302381014|26-0570": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302381014&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422302478004|26-0559": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302478004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422303126021|26-0572": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303126021&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2893,7 +2893,7 @@
 },
 "charlotte|422303206011|26-0569": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303206011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3026,7 +3026,7 @@
 },
 "charlotte|422329162005|26-0602": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422329162005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3040,7 +3040,7 @@
 },
 "charlotte|422330458001|26-0603": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422330458001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3089,14 +3089,14 @@
 },
 "charlotte|422416376005|26-0591": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422416376005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422416376006|26-0604": {
 "acreage": "Land Value",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422416376006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3942,7 +3942,7 @@
 },
 "clay|050524-005932-007-10|2026-0097TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=050524-005932-007-10",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=050524-005932-007-10"
 },
@@ -3960,7 +3960,7 @@
 },
 "clay|090524-005953-215-00|2026-0085TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=090524-005953-215-00",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=090524-005953-215-00"
 },
@@ -4128,7 +4128,7 @@
 },
 "clay|330823-004923-009-00|2026-0096TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-004923-009-00",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-004923-009-00"
 },
@@ -4152,7 +4152,7 @@
 },
 "clay|380626-017905-000-00|2026-0102TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=380626-017905-000-00",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=380626-017905-000-00"
 },
@@ -7067,7 +7067,7 @@
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1805210100"
 },
 "escambia|000S009010010083|2024 TD 007086": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "PENSACOLA HEALTH CARE SERVICES LLC",
 "property_use": "VACANT RESIDENTIAL",
@@ -7095,7 +7095,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009020004079"
 },
 "escambia|000S009020008062|2024 TD 007195": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "ORTIZ FREDY",
 "property_use": "SINGLE FAMILY RESID",
@@ -7123,14 +7123,14 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009020014102"
 },
 "escambia|000S009020020058|2024 TD 007192": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "TRACYB LLC",
 "property_use": "RESTAURANT,CAFETERIA",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009020020058"
 },
 "escambia|000S009020040083|2024 TD 007210": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "BOOKER DAVID M JR & BOOKER SHEILA L",
 "property_use": "MOBILE HOME",
@@ -7144,7 +7144,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009020060001"
 },
 "escambia|000S009020310127|2024 TD 007275": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "BIVINS WALTER L BIVINS WALTER L JR",
 "property_use": "SINGLE FAMILY RESID",
@@ -7249,7 +7249,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=021S311201000990"
 },
 "escambia|022N324430000000|2024 TD 006794": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "PARKER TONY L LIFE EST THOMPSON CARA MARIE",
 "property_use": "MOBILE HOME",
@@ -7279,10 +7279,10 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=052S295905001031"
 },
 "escambia|055N303133000001|2024 TD 005742": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "TORREY JULIA LEE EST OF",
-"property_use": "SINGLE FAMILY RESID",
+"property_use": "VACANT RESIDENTIAL",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=055N303133000001"
 },
 "escambia|071S292000050004|2024 TD 000063": {
@@ -7314,14 +7314,14 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=081S303102004021"
 },
 "escambia|091N311000153002|2024 TD 005983": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "NEWBURN SKYLA DAWN",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=091N311000153002"
 },
 "escambia|091N311000361004|2024 TD 005995": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "JOHNSON LEE MICHELL",
 "property_use": "SINGLE FAMILY RESID",
@@ -7446,21 +7446,21 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=121S305402000000"
 },
 "escambia|121S321103000007|2024 TD 005229": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "BEULAH PROPERTY INVESTMENTS LLC",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=121S321103000007"
 },
 "escambia|123S322000024023|2024 TD 005359": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "EDSON CHRISTOPHER",
 "property_use": "MOBILE HOME",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=123S322000024023"
 },
 "escambia|141N311003009003|2024 TD 006080": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "MCCLAIN ALEXIS GAIL",
 "property_use": "VACANT RESIDENTIAL",
@@ -7531,14 +7531,14 @@
 }
 },
 "escambia|161N311000040006|2024 TD 006127": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "KING PHENIX",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=161N311000040006"
 },
 "escambia|161N312207001002|2024 TD 006181": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "THOMPKINS ALBERTA",
 "property_use": "SINGLE FAMILY RESID",
@@ -7761,7 +7761,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=181N311201000000"
 },
 "escambia|181N313205000000|2024 TD 006223": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "DAVIDSON CARROLL LYN EST OF",
 "property_use": "MOBILE HOME",
@@ -7898,7 +7898,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=261S305105002001"
 },
 "escambia|263S321000003004|2024 TD 005463": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "MALKOSKIE RICHARD ALFRED MALKOSKIE MARIANA",
 "property_use": "VACANT RESIDENTIAL",
@@ -8230,7 +8230,7 @@
 },
 "gilchrist|040814-00000001-0010|26-0023-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010"
 },
@@ -8279,6 +8279,12 @@
 "source": "reportall"
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-07-15-0077-0000-0240"
+},
+"gilchrist|091015-01080000-0860|26-0024-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-10-15-0108-0000-0860",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-10-15-0108-0000-0860"
 },
 "gilchrist|100816-00000004-0010|26-0018-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010",
@@ -8341,6 +8347,12 @@
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0048-0010"
 },
+"gilchrist|161015-00000049-0000|26-0025-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0049-0000",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0049-0000"
+},
 "gilchrist|180815-0073000B-0200|26-0014-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
 "fetched_at": "2026-10-25T09:02:25+00:00",
@@ -8352,6 +8364,12 @@
 "fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
+},
+"gilchrist|250814-00200009-0010|26-0022-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=25-08-14-0020-0009-0010",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=25-08-14-0020-0009-0010"
 },
 "gilchrist|280814-1931000C-0020|26-0020-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020",
@@ -11295,7 +11313,7 @@
 },
 "hillsborough|0100730000|2026-826": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11349,7 +11367,7 @@
 },
 "hillsborough|0213820384|2026-788": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11419,7 +11437,7 @@
 },
 "hillsborough|0348737368|2026-769": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11641,7 +11659,7 @@
 },
 "hillsborough|0731768168|2026-821": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11659,7 +11677,7 @@
 },
 "hillsborough|0737780720|2026-815": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11749,7 +11767,7 @@
 },
 "hillsborough|0794865000|2026-813": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11920,7 +11938,7 @@
 },
 "hillsborough|0923610000|2026-759": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11929,7 +11947,7 @@
 },
 "hillsborough|0948110100|2026-772": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11965,7 +11983,7 @@
 },
 "hillsborough|1055660000|2026-827": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11992,7 +12010,7 @@
 },
 "hillsborough|1146890000|2026-791": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12109,7 +12127,7 @@
 },
 "hillsborough|1465190000|2026-754": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12118,7 +12136,7 @@
 },
 "hillsborough|1466330000|2026-752": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12172,7 +12190,7 @@
 },
 "hillsborough|1534730010|2026-765": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12181,7 +12199,7 @@
 },
 "hillsborough|1535800000|2026-761": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12190,7 +12208,7 @@
 },
 "hillsborough|1546620000|2026-852": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12259,7 +12277,7 @@
 },
 "hillsborough|1572960000|2026-786": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12268,7 +12286,7 @@
 },
 "hillsborough|1584940000|2026-766": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12286,7 +12304,7 @@
 },
 "hillsborough|1590110002|2026-760": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12295,7 +12313,7 @@
 },
 "hillsborough|1590110004|2026-773": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12313,7 +12331,7 @@
 },
 "hillsborough|1648020000|2026-755": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12376,7 +12394,7 @@
 },
 "hillsborough|1846900000|2026-817": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12403,7 +12421,7 @@
 },
 "hillsborough|1891160000|2026-819": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12430,7 +12448,7 @@
 },
 "hillsborough|2048670000|2026-824": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -13030,11 +13048,47 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100"
 },
+"jackson|02-2N-11-0086-0880-1780|1993 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1780",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1780"
+},
+"jackson|02-2N-11-0086-0880-1790|1994 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1790",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1790"
+},
+"jackson|02-2N-11-0086-0880-1910|1997 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1910",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1910"
+},
+"jackson|02-2N-11-0086-0920-0120|2009 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0120",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0120"
+},
+"jackson|02-2N-11-0086-0920-0190|2011 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0190",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0190"
+},
 "jackson|02-2N-11-0086-0940-0050|2014 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050",
 "fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050"
+},
+"jackson|02-2N-11-0086-0980-0010|2027 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0980-0010",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0980-0010"
 },
 "jackson|02-2N-11-0086-1000-0170|2037 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1000-0170",
@@ -13095,6 +13149,12 @@
 "fetched_at": "2026-10-24T08:44:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0190"
+},
+"jackson|02-2N-11-0087-1350-0180|2156 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0180",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0180"
 },
 "jackson|02-2N-11-0087-1350-0640|2166 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640",
@@ -13434,17 +13494,35 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=13-4N-12-0000-0070-0000"
 },
+"jackson|20-4N-11-0242-0000-0070|2803 OF 2024": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-4N-11-0242-0000-0070",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-4N-11-0242-0000-0070"
+},
 "jackson|20-5N-11-0000-0240-0000|2540 OF 2022": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0240-0000",
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0240-0000"
 },
+"jackson|20-5N-11-0000-0260-0040|2867 OF 2024": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0260-0040",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-5N-11-0000-0260-0040"
+},
 "jackson|24-4N-09-0297-0000-0090|572 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=24-4N-09-0297-0000-0090",
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=24-4N-09-0297-0000-0090"
+},
+"jackson|33-5N-11-0000-0190-0090|2969 OF 2024": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=33-5N-11-0000-0190-0090",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=33-5N-11-0000-0190-0090"
 },
 "lake|01-17-28-010000007801|04376-2024": {
 "assessed_value": "Taxable Value",
@@ -14273,7 +14351,7 @@
 }
 },
 "lee|02-45-24-P2-00800.0140|2026000790": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-45-24-P2-00800.0140"
@@ -15010,7 +15088,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-45-27-05-00028.0250"
 },
 "lee|15-43-27-00-00003.0070|2026000783": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-43-27-00-00003.0070"
@@ -15303,7 +15381,7 @@
 }
 },
 "lee|19-44-25-P2-00801.0050|2026000707": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P2-00801.0050"
@@ -15541,13 +15619,13 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-47-25-B4-0090D.2140"
 },
 "lee|24-43-24-03-00023.006C|2026000721": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-43-24-03-00023.006C"
 },
 "lee|24-44-22-00-00018.0000|2026000800": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-22-00-00018.0000"
@@ -15983,7 +16061,7 @@
 }
 },
 "lee|31-43-23-C3-04279.0300|2026000786": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C3-04279.0300"
@@ -16059,25 +16137,25 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-43-24-C3-02230.0300"
 },
 "lee|32-44-23-C2-05974.0190|2026000518": {
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-23-C2-05974.0190"
 },
 "lee|32-44-24-C1-01205.0170|2026000759": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-24-C1-01205.0170"
 },
 "lee|32-47-25-B3-00203.0180|2026000760": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-47-25-B3-00203.0180"
 },
 "lee|33-43-25-01-00011.0000|2026000762": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-43-25-01-00011.0000"
@@ -16089,7 +16167,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-44-27-08-00030.0070"
 },
 "lee|33-45-24-15-00000.0590|2026000797": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-45-24-15-00000.0590"
@@ -16101,7 +16179,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-47-25-B3-00257.0010"
 },
 "lee|34-43-23-C4-02942.A030|2026000785": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=34-43-23-C4-02942.A030"
@@ -16123,7 +16201,7 @@
 }
 },
 "lee|34-43-25-09-00000.2600|2026000763": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=34-43-25-09-00000.2600"
@@ -16228,7 +16306,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-44-27-07-00027.0230"
 },
 "lee|35-46-25-E4-0100H.0340|2026000769": {
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-46-25-E4-0100H.0340"
@@ -17651,7 +17729,7 @@
 },
 "manatee|2494600006|2026TD000222": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2494600006"
 },
@@ -17669,13 +17747,13 @@
 },
 "manatee|2582500308|2026TD000223": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2582500308"
 },
 "manatee|2582500555|2026TD000224": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2582500555"
 },
@@ -17705,7 +17783,7 @@
 },
 "manatee|3122101359|2026TD000230": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3122101359"
 },
@@ -17723,7 +17801,7 @@
 },
 "manatee|3352000958|2026TD000233": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3352000958"
 },
@@ -17873,7 +17951,7 @@
 },
 "manatee|6202200009|2026TD000206": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6202200009"
 },
@@ -17915,7 +17993,7 @@
 },
 "manatee|7054400002|2026TD000211": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7054400002"
 },
@@ -17939,7 +18017,7 @@
 },
 "manatee|877732750|2026TD000217": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=877732750"
 },
@@ -17965,7 +18043,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "5042016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "5042016",
@@ -18041,17 +18119,9 @@
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=59072&YR=2026&mName=False&mSitus=False"
 },
 "marion|0392-022-072|12032017": {
-"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
-"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
-"appraiser_error": "no recognizable fields on page",
-"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
-"clerk_platform": "newvision",
-"clerk_search_value": "12032017",
-"deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
-"ok": true,
-"sale_date": "11/18/2026",
-"tax_number": "12032017",
+"error": "no recognizable fields on page",
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": false,
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=59285&YR=2026&mName=False&mSitus=False"
 },
 "marion|04650-021-00|14502015": {
@@ -18062,7 +18132,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "14502015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "14502015",
@@ -18090,7 +18160,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "23272017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "23272017",
@@ -18272,7 +18342,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "40112021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "40112021",
@@ -18432,7 +18502,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "50892021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "50892021",
@@ -18508,7 +18578,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "69292020",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "69292020",
@@ -18578,7 +18648,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "67922021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "67922021",
@@ -19331,7 +19401,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "88702017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "88702017",
@@ -19598,7 +19668,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "86932019",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "86932019",
@@ -19668,7 +19738,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "91542015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "91542015",
@@ -19757,7 +19827,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "91032016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "91032016",
@@ -20995,7 +21065,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "91382017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "91382017",
@@ -22614,7 +22684,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94062017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "94062017",
@@ -23012,7 +23082,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94722017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "94722017",
@@ -23026,7 +23096,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "94732017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "94732017",
@@ -23124,7 +23194,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95012017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "95012017",
@@ -23180,7 +23250,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "93162019",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "93162019",
@@ -23278,7 +23348,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "95262017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "95262017",
@@ -23320,7 +23390,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97892020",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97892020",
@@ -23334,7 +23404,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "92492018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "92492018",
@@ -23936,7 +24006,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96392017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96392017",
@@ -23950,7 +24020,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96402017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96402017",
@@ -23978,7 +24048,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96422017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96422017",
@@ -23992,7 +24062,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96452017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96452017",
@@ -24006,7 +24076,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96512017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96512017",
@@ -24020,7 +24090,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96522017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96522017",
@@ -24034,7 +24104,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96532017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96532017",
@@ -24048,7 +24118,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96572017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96572017",
@@ -24062,7 +24132,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96602017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96602017",
@@ -24076,7 +24146,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96622017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96622017",
@@ -24090,7 +24160,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96692017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96692017",
@@ -24104,7 +24174,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96712017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96712017",
@@ -24118,7 +24188,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96732017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96732017",
@@ -24132,7 +24202,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96762017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96762017",
@@ -24146,7 +24216,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96802017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96802017",
@@ -24160,7 +24230,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96812017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96812017",
@@ -24174,7 +24244,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96822017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96822017",
@@ -24188,7 +24258,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96892017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96892017",
@@ -24202,7 +24272,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96912017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96912017",
@@ -24216,7 +24286,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96932017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96932017",
@@ -24230,7 +24300,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96952017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96952017",
@@ -24244,7 +24314,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96962017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96962017",
@@ -24258,7 +24328,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "96992017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "96992017",
@@ -24272,7 +24342,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97022017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97022017",
@@ -24286,7 +24356,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97052017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97052017",
@@ -24300,7 +24370,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97062017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97062017",
@@ -24314,7 +24384,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97072017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97072017",
@@ -24328,7 +24398,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97082017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97082017",
@@ -24342,7 +24412,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97092017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97092017",
@@ -24356,7 +24426,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97122017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97122017",
@@ -24370,7 +24440,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97132017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97132017",
@@ -24384,7 +24454,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97172017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97172017",
@@ -24398,7 +24468,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97182017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97182017",
@@ -24412,7 +24482,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97192017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97192017",
@@ -24426,7 +24496,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97202017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97202017",
@@ -24440,7 +24510,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97242017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97242017",
@@ -24454,7 +24524,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97252017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97252017",
@@ -24468,7 +24538,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97302017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97302017",
@@ -24482,7 +24552,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97312017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97312017",
@@ -24496,7 +24566,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97332017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97332017",
@@ -24524,7 +24594,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97362017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97362017",
@@ -24538,7 +24608,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97382017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97382017",
@@ -24552,7 +24622,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97402017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97402017",
@@ -24566,7 +24636,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97482017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97482017",
@@ -24580,7 +24650,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97492017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97492017",
@@ -24594,7 +24664,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97502017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97502017",
@@ -24608,7 +24678,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97522017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97522017",
@@ -24622,7 +24692,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97542017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97542017",
@@ -24636,7 +24706,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97552017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97552017",
@@ -24650,7 +24720,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97562017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97562017",
@@ -24664,7 +24734,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97582017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97582017",
@@ -24678,7 +24748,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97592017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97592017",
@@ -24692,7 +24762,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97712017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97712017",
@@ -24706,7 +24776,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97722017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97722017",
@@ -24720,7 +24790,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97782017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97782017",
@@ -24734,7 +24804,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97822017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97822017",
@@ -24748,7 +24818,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97832017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97832017",
@@ -24762,7 +24832,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97842017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97842017",
@@ -24832,7 +24902,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97942017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97942017",
@@ -24846,7 +24916,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97972017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97972017",
@@ -24860,7 +24930,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "97982017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "97982017",
@@ -24888,7 +24958,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "98102017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "98102017",
@@ -24902,7 +24972,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "99152017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "99152017",
@@ -24916,7 +24986,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "99192017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "99192017",
@@ -24930,7 +25000,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "99482017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "99482017",
@@ -24944,7 +25014,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "99492017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "99492017",
@@ -24958,7 +25028,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "99652017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "99652017",
@@ -24972,7 +25042,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "100162017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "100162017",
@@ -24986,7 +25056,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "100172017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "100172017",
@@ -25000,7 +25070,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "100222017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "100222017",
@@ -25042,7 +25112,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "105242017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "105242017",
@@ -25056,7 +25126,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "109142016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "109142016",
@@ -25222,7 +25292,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "114882017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "114882017",
@@ -25236,7 +25306,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "115592016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "115592016",
@@ -25877,7 +25947,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "155112017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "155112017",
@@ -25905,7 +25975,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "165242017",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "165242017",
@@ -26184,7 +26254,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "163552021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "163552021",
@@ -26238,7 +26308,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "194402015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "194402015",
@@ -26280,7 +26350,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "196302020",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "196302020",
@@ -26294,7 +26364,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "197962015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "197962015",
@@ -26308,7 +26378,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "188162018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "188162018",
@@ -26434,7 +26504,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "176412021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "176412021",
@@ -26670,7 +26740,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "180372021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "180372021",
@@ -26753,7 +26823,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "187882021",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "187882021",
@@ -26808,7 +26878,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "209052018",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "209052018",
@@ -27051,7 +27121,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "245252015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "245252015",
@@ -27343,7 +27413,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "291292015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "291292015",
@@ -27357,7 +27427,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "293452015",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "293452015",
@@ -27371,7 +27441,7 @@
 "clerk_platform": "newvision",
 "clerk_search_value": "322872016",
 "deed_status": "READYSALE",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "sale_date": "11/18/2026",
 "tax_number": "322872016",
@@ -30538,13 +30608,13 @@
 },
 "osceola|012630000102430080|1692024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080"
 },
 "osceola|012630000102430110|1702024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110"
 },
@@ -30568,7 +30638,7 @@
 },
 "osceola|032528298300042340|4602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340"
 },
@@ -30580,7 +30650,7 @@
 },
 "osceola|032528340700012200|5242024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200"
 },
@@ -30592,13 +30662,13 @@
 },
 "osceola|032528340700014216|5992024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216"
 },
 "osceola|032528340700014223|6032024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223"
 },
@@ -30610,7 +30680,7 @@
 },
 "osceola|052629319600010280|9612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280"
 },
@@ -30640,7 +30710,7 @@
 },
 "osceola|092529365300010060|19272024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060"
 },
@@ -30690,19 +30760,19 @@
 },
 "osceola|112630060907440030|22902024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030"
 },
 "osceola|112630060907440040|22912024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040"
 },
 "osceola|122730495000010061|23312022": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061"
 },
@@ -30757,7 +30827,7 @@
 },
 "osceola|192631495000010320|38142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320"
 },
@@ -30782,7 +30852,7 @@
 },
 "osceola|202629288100010090|39292024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202629288100010090",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202629288100010090"
 },
@@ -30838,7 +30908,7 @@
 },
 "osceola|242833000033110010|44602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010"
 },
@@ -30970,13 +31040,13 @@
 },
 "osceola|252628613821290040|48062024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040"
 },
 "osceola|252833000001610000|49232024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000"
 },
@@ -31045,19 +31115,19 @@
 },
 "osceola|302527512100011080|53122024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080"
 },
 "osceola|302530497100011020|53762024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302530497100011020",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302530497100011020"
 },
 "osceola|312530000000600000|55472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000"
 },
@@ -31093,7 +31163,7 @@
 },
 "osceola|352630495000010850|59632024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352630495000010850",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=352630495000010850"
 },
@@ -31145,7 +31215,7 @@
 "palmbeach|00-41-42-17-00-000-7890|2026-2959TD": {
 "acreage": "1.39",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31167,7 +31237,7 @@
 "palmbeach|00-41-42-19-00-000-7310|2026-2956TD": {
 "acreage": "1.31",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31189,7 +31259,7 @@
 "palmbeach|00-41-43-11-00-000-4320|2026-2958TD": {
 "acreage": "1.29",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31200,7 +31270,7 @@
 "palmbeach|00-41-43-11-00-000-6250|2026-2963TD": {
 "acreage": "1.33",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31211,7 +31281,7 @@
 "palmbeach|00-41-45-12-00-000-7370|2026-2965TD": {
 "acreage": ".48",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31222,7 +31292,7 @@
 "palmbeach|00-41-47-25-02-000-3580|2026-2990TD": {
 "acreage": ".10",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31388,7 +31458,7 @@
 "palmbeach|00-42-43-26-03-000-0110|2026-2960TD": {
 "acreage": ".12",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31410,7 +31480,7 @@
 "palmbeach|00-42-43-27-05-067-0281|2026-2967TD": {
 "acreage": "3.63",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31441,7 +31511,7 @@
 },
 "palmbeach|00-42-43-28-07-003-4270|2026-2961TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31515,7 +31585,7 @@
 "palmbeach|00-42-44-01-08-002-0200|2026-2916TD": {
 "acreage": ".23",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31598,7 +31668,7 @@
 },
 "palmbeach|00-42-44-22-24-005-3080|2026-2929TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31642,7 +31712,7 @@
 "palmbeach|00-42-44-28-04-000-1680|2025-1736TD": {
 "acreage": ".28",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31674,7 +31744,7 @@
 "palmbeach|00-42-45-35-07-000-0330|2026-2939TD": {
 "acreage": ".11",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31694,7 +31764,7 @@
 },
 "palmbeach|00-42-46-15-21-004-4070|2026-2946TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31704,7 +31774,7 @@
 },
 "palmbeach|00-42-46-15-21-009-3030|2026-2947TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31714,7 +31784,7 @@
 },
 "palmbeach|00-42-46-16-20-003-6050|2026-2948TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31744,7 +31814,7 @@
 },
 "palmbeach|00-42-46-22-13-001-0020|2026-2968TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31754,7 +31824,7 @@
 },
 "palmbeach|00-42-46-22-13-012-5600|2026-2970TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31774,7 +31844,7 @@
 },
 "palmbeach|00-42-47-08-05-007-2830|2026-2940TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31784,7 +31854,7 @@
 },
 "palmbeach|00-42-47-08-08-008-3020|2026-2949TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31794,7 +31864,7 @@
 },
 "palmbeach|00-42-47-08-13-005-2000|2026-2941TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31815,7 +31885,7 @@
 "palmbeach|00-42-47-15-22-000-1401|2026-2994TD": {
 "acreage": ".12",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31825,7 +31895,7 @@
 },
 "palmbeach|00-42-47-20-03-000-4506|2026-2952TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31897,7 +31967,7 @@
 },
 "palmbeach|00-43-44-17-50-000-3120|2026-2973TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32117,7 +32187,7 @@
 },
 "palmbeach|12-43-46-18-64-003-1030|2026-2914TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32212,7 +32282,7 @@
 },
 "palmbeach|18-42-44-26-15-324-0021|2026-2976TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32223,7 +32293,7 @@
 "palmbeach|18-42-44-27-21-000-0202|2026-2986TD": {
 "acreage": ".05",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32233,7 +32303,7 @@
 },
 "palmbeach|18-42-44-27-28-006-0050|2026-2987TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32244,7 +32314,7 @@
 "palmbeach|36-43-42-20-01-041-0210|2026-2988TD": {
 "acreage": ".17",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32255,7 +32325,7 @@
 "palmbeach|41-41-43-17-01-326-0050|2026-2810TD": {
 "acreage": "5.00",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32266,7 +32336,7 @@
 "palmbeach|48-37-42-18-16-002-0080|2026-2981TD": {
 "acreage": ".09",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32329,7 +32399,7 @@
 "palmbeach|56-43-42-29-05-004-0040|2026-2964TD": {
 "acreage": ".22",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32392,7 +32462,7 @@
 "palmbeach|70-42-44-24-02-001-0160|2026-2998TD": {
 "acreage": ".20",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32424,7 +32494,7 @@
 "palmbeach|73-41-44-32-00-000-5010|2026-2975TD": {
 "acreage": "5.14",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32542,7 +32612,7 @@
 "palmbeach|74-43-43-18-03-000-0043|2026-2982TD": {
 "acreage": ".03",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-30T10:20:59+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -33953,6 +34023,20 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736016026000790"
 },
+"polk|23-28-01-0180-0004-0171|00238-2026": {
+"acreage": "0.16",
+"assessed_value": 98950.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232801018000040171"
+},
+"polk|23-28-10-0000-0002-3014|00307-2026": {
+"acreage": "0.31",
+"assessed_value": 141596.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232810000000023014"
+},
 "polk|23-28-11-0295-0000-2260|00244-2026": {
 "acreage": "0.27",
 "assessed_value": 51519.0,
@@ -33968,12 +34052,26 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811029500002272"
 },
+"polk|23-28-11-0361-0000-4100|00240-2026": {
+"acreage": "0.18",
+"assessed_value": 97336.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811036100004100"
+},
 "polk|23-28-12-0455-0000-3100|00246-2026": {
 "acreage": "0.24",
 "assessed_value": 146326.0,
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812045500003100"
+},
+"polk|23-28-12-0525-0000-2090|00302-2026": {
+"acreage": "0.15",
+"assessed_value": 61051.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812052500002090"
 },
 "polk|23-28-12-0555-0000-1050|00135-2026": {
 "acreage": "0.12",
@@ -33988,6 +34086,13 @@
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232813063500000262"
+},
+"polk|23-28-13-0745-0000-9052|00316-2026": {
+"acreage": "0.08",
+"assessed_value": 33504.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232813074500009052"
 },
 "polk|23-28-14-0795-0000-3120|00230-2026": {
 "acreage": "0.20",
@@ -34010,6 +34115,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000818"
 },
+"polk|23-28-15-0855-0000-0828|00303-2026": {
+"acreage": "0.10",
+"assessed_value": 103395.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000828"
+},
 "polk|23-28-15-0855-0000-1107|00112-2026": {
 "acreage": "0.21",
 "assessed_value": 28432.0,
@@ -34024,6 +34136,13 @@
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232822091000000404"
+},
+"polk|23-28-23-0985-0000-2150|00232-2026": {
+"acreage": "0.17",
+"assessed_value": 128963.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232823098500002150"
 },
 "polk|23-28-25-1270-0000-6120|00139-2026": {
 "acreage": "0.14",
@@ -34087,6 +34206,13 @@
 "fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233001144120015050"
+},
+"polk|23-30-04-1552-0300-0020|00306-2026": {
+"acreage": "0.33",
+"assessed_value": 153957.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233004155203000020"
 },
 "polk|23-30-12-0000-0003-1670|00231-2026": {
 "acreage": "0.13",
@@ -34482,6 +34608,13 @@
 "fetched_at": "2026-09-07T14:35:09+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000032020"
+},
+"polk|24-28-27-2430-0000-1050|00308-2026": {
+"acreage": "0.37",
+"assessed_value": 39344.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827243000001050"
 },
 "polk|24-28-31-2614-9000-8280|00221-2026": {
 "acreage": "0.16",
@@ -35082,6 +35215,22 @@
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262513999943008350"
 },
+"polk|26-25-14-9999-8200-0590|00271-2026": {
+"acreage": "0.15",
+"assessed_value": 348136.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262514999982000590"
+},
+"polk|26-25-24-9999-7100-0160|00272-2026": {
+"acreage": "0.22",
+"assessed_value": 337709.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262524999971000160"
+},
 "polk|26-27-15-0000-0004-3110|00161-2026": {
 "acreage": "0.92",
 "assessed_value": 58616.0,
@@ -35124,6 +35273,14 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808529000000040"
 },
+"polk|26-28-16-5405-0000-7100|00309-2026": {
+"acreage": "0.17",
+"assessed_value": 49457.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262816540500007100"
+},
 "polk|26-28-19-5536-7100-1050|00174-2026": {
 "acreage": "0.15",
 "assessed_value": 42793.0,
@@ -35131,12 +35288,55 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262819553671001050"
 },
+"polk|26-28-21-0000-0003-2040|00284-2026": {
+"acreage": "0.33",
+"assessed_value": 182024.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262821000000032040"
+},
+"polk|26-28-22-5880-0000-0013|00273-2026": {
+"acreage": "1.57",
+"assessed_value": 72240.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262822588000000013"
+},
+"polk|26-28-28-5965-0000-5121|00274-2026": {
+"acreage": "0.23",
+"assessed_value": 189585.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262828596500005121"
+},
 "polk|26-28-29-6210-0005-2060|00224-2026": {
 "acreage": "0.15",
 "assessed_value": 86384.0,
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262829621000052060"
+},
+"polk|26-28-30-0000-0002-2570|00286-2026": {
+"acreage": "0.16",
+"assessed_value": 228148.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262830000000022570"
+},
+"polk|26-28-34-6585-0000-0102|00275-2026": {
+"acreage": "0.35",
+"assessed_value": 299197.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262834658500000102"
+},
+"polk|26-29-02-6636-7000-1030|00276-2026": {
+"acreage": "0.00",
+"assessed_value": 116763.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262902663670001030"
 },
 "polk|26-29-19-0000-0001-4280|00213-2026": {
 "acreage": "1.04",
@@ -35179,6 +35379,13 @@
 "fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262928000000031020"
+},
+"polk|26-29-28-6910-0400-0220|00285-2026": {
+"acreage": "0.72",
+"assessed_value": 175628.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262928691004000220"
 },
 "polk|26-30-19-0000-0002-1080|00160-2026": {
 "acreage": "0.85",
@@ -35308,12 +35515,42 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=263019000000021080"
 },
+"polk|27-26-04-7011-0700-2070|00278-2026": {
+"acreage": "0.13",
+"assessed_value": 375314.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272604701107002070"
+},
+"polk|27-26-06-7012-0800-0730|00287-2026": {
+"acreage": "0.40",
+"assessed_value": 337699.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272606701208000730"
+},
+"polk|27-26-10-7013-0300-0470|00279-2026": {
+"acreage": "0.06",
+"assessed_value": 322500.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272610701303000470"
+},
 "polk|27-26-12-0000-0004-3040|00175-2026": {
 "acreage": "0.39",
 "assessed_value": 51469.0,
 "fetched_at": "2026-10-02T10:28:25+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272612000000043040"
+},
+"polk|27-27-03-7215-2300-2660|00277-2026": {
+"acreage": "0.11",
+"assessed_value": 265162.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272703721523002660"
 },
 "polk|27-27-11-0000-0002-2060|00189-2026": {
 "acreage": "0.92",
@@ -35335,6 +35572,20 @@
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721753000000440"
+},
+"polk|27-27-21-7530-0000-0520|00289-2026": {
+"acreage": "0.09",
+"assessed_value": 88657.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721753000000520"
+},
+"polk|27-27-21-7540-0000-6040|00318-2026": {
+"acreage": "0.12",
+"assessed_value": 15374.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721754000006040"
 },
 "polk|27-27-25-7578-6200-0140|00171-2026": {
 "acreage": "0.15",
@@ -35364,6 +35615,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835000000041120"
 },
+"polk|27-28-35-8530-5000-0040|00290-2026": {
+"acreage": "5.03",
+"assessed_value": 874002.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835853050000040"
+},
 "polk|27-29-09-8573-0000-0170|00192-2026": {
 "acreage": "0.15",
 "assessed_value": 37555.0,
@@ -35391,6 +35649,35 @@
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273001883000051050"
+},
+"polk|27-30-02-9055-0000-1010|00315-2026": {
+"acreage": "0.38",
+"assessed_value": 151884.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273002905500001010"
+},
+"polk|27-30-02-9100-1000-0070|00321-2026": {
+"acreage": "0.21",
+"assessed_value": 63400.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273002910010000070"
+},
+"polk|27-30-12-9255-0000-2130|00322-2026": {
+"acreage": "0.30",
+"assessed_value": 73319.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273012925500002130"
+},
+"polk|27-30-31-0000-0001-4020|00310-2026": {
+"acreage": "1.16",
+"assessed_value": 93034.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273031000000014020"
 },
 "polk|27-30-35-0000-0001-2010|00191-2026": {
 "acreage": "0.12",
@@ -35426,6 +35713,13 @@
 "fetched_at": "2026-08-31T16:19:49+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273202932501000260"
+},
+"polk|27-32-03-9325-1100-3870|00312-2026": {
+"acreage": "3.10",
+"assessed_value": 23065.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273203932511003870"
 },
 "polk|27-32-09-9325-5100-0040|00182-2026": {
 "acreage": "2.85",
@@ -35525,6 +35819,55 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273212932575000680"
 },
+"polk|28-26-06-9328-0000-3060|00291-2026": {
+"acreage": "1.83",
+"assessed_value": 107335.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282606932800003060"
+},
+"polk|28-26-18-9329-0102-0690|00292-2026": {
+"acreage": "0.22",
+"assessed_value": 706700.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282618932901020690"
+},
+"polk|28-27-22-9339-1000-0960|00298-2026": {
+"acreage": "0.13",
+"assessed_value": 201284.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282722933910000960"
+},
+"polk|28-27-25-9340-6007-4214|00295-2026": {
+"acreage": "0.31",
+"assessed_value": 187271.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282725934060074214"
+},
+"polk|28-27-33-9344-6034-8010|00323-2026": {
+"acreage": "0.25",
+"assessed_value": 40000.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460348010"
+},
+"polk|28-27-33-9344-6036-6030|00324-2026": {
+"acreage": "0.16",
+"assessed_value": 28000.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460366030"
+},
+"polk|28-27-33-9344-6038-6050|00217-2026": {
+"acreage": "0.33",
+"assessed_value": 289925.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460386050"
+},
 "polk|28-27-33-9344-6045-1070|00199-2026": {
 "acreage": "0.18",
 "assessed_value": 40000.0,
@@ -35540,6 +35883,27 @@
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460490040"
 },
+"polk|28-28-06-9349-3002-2500|00301-2026": {
+"acreage": "0.00",
+"assessed_value": 72183.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282806934930022500"
+},
+"polk|28-28-06-9350-1003-9660|00313-2026": {
+"acreage": "0.00",
+"assessed_value": 74000.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282806935010039660"
+},
+"polk|28-28-10-9352-4079-3050|00294-2026": {
+"acreage": "0.30",
+"assessed_value": 207491.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282810935240793050"
+},
 "polk|28-28-15-9353-6003-7140|00187-2026": {
 "acreage": "0.20",
 "assessed_value": 13979.0,
@@ -35554,6 +35918,27 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282908000000044099"
 },
+"polk|28-29-18-9371-0200-3100|00325-2026": {
+"acreage": "0.59",
+"assessed_value": 54574.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282918937102003100"
+},
+"polk|28-30-01-9390-1002-8080|00326-2026": {
+"acreage": "0.10",
+"assessed_value": 156874.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283001939010028080"
+},
+"polk|28-30-06-9401-0000-4140|00297-2026": {
+"acreage": "0.22",
+"assessed_value": 157409.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283006940100004140"
+},
 "polk|28-31-28-9638-0000-6080|00218-2026": {
 "acreage": "0.16",
 "assessed_value": 11073.0,
@@ -35567,6 +35952,13 @@
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128965000002210"
+},
+"polk|28-32-05-0000-0004-4360|00314-2026": {
+"acreage": "0.13",
+"assessed_value": 117324.0,
+"fetched_at": "2026-10-30T10:36:45+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283205000000044360"
 },
 "polk|28-32-08-0000-0003-4200|00201-2026": {
 "acreage": "0.31",
@@ -44288,7 +44680,7 @@
 },
 "stlucie|2409-605-0043-000-1|26-195": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500430001"
 },
@@ -44324,7 +44716,7 @@
 },
 "stlucie|2415-711-0017-000-5|26-197": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/241571100170005"
 },
@@ -44390,7 +44782,7 @@
 },
 "stlucie|4414-601-0022-000-8|26-189": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/441460100220008"
 },
@@ -45181,13 +45573,13 @@
 },
 "volusia|423301010140|04752-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423301010140 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423301010140"
 },
 "volusia|423309000290|04779-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423309000290 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423309000290"
 },
@@ -45199,7 +45591,7 @@
 },
 "volusia|424211040380|04952-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424211040380 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424211040380"
 },
@@ -45211,13 +45603,13 @@
 },
 "volusia|424219240151|04988-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424219240151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424219240151"
 },
 "volusia|424220160151|05015-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424220160151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424220160151"
 },
@@ -45229,13 +45621,13 @@
 },
 "volusia|424227010460|05036-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424227010460 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424227010460"
 },
 "volusia|424228020340|05041-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424228020340 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424228020340"
 },
@@ -45337,7 +45729,7 @@
 },
 "volusia|523722030170|05390-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523722030170 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=523722030170"
 },
@@ -45747,7 +46139,7 @@
 },
 "volusia|600516010110|00617-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110"
 },
@@ -45771,13 +46163,13 @@
 },
 "volusia|603812000680|00808-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603812000680 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603812000680"
 },
 "volusia|611001240130|03550-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001240130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001240130"
 },
@@ -45829,7 +46221,7 @@
 },
 "volusia|612901110240|03774-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=612901110240 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=612901110240"
 },
@@ -45899,13 +46291,13 @@
 },
 "volusia|613301160180|04015-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301160180 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301160180"
 },
 "volusia|620601110260|05274-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=620601110260 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=620601110260"
 },
@@ -45957,13 +46349,13 @@
 },
 "volusia|631204004340|07321-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631204004340 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631204004340"
 },
 "volusia|631504110510|07380-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631504110510 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631504110510"
 },
@@ -45981,7 +46373,7 @@
 },
 "volusia|632204000191|12521-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=632204000191 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=632204000191"
 },
@@ -46061,7 +46453,7 @@
 },
 "volusia|701033000291|08659-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291"
 },
@@ -46107,7 +46499,7 @@
 },
 "volusia|701739040110|01548-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110"
 },
@@ -46119,7 +46511,7 @@
 },
 "volusia|702007010160|01657-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160"
 },
@@ -46187,7 +46579,7 @@
 },
 "volusia|723100001380|03849-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723100001380 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723100001380"
 },
@@ -46227,7 +46619,7 @@
 },
 "volusia|734403002151|12136-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151"
 },
@@ -46261,7 +46653,7 @@
 },
 "volusia|743005030820|08123-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820"
 },
@@ -46279,7 +46671,7 @@
 },
 "volusia|744109010030|08200-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030"
 },
@@ -46343,19 +46735,19 @@
 },
 "volusia|800905140290|02012-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800905140290 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800905140290"
 },
 "volusia|800906030330|02029-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030330 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030330"
 },
 "volusia|800906030360|02030-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360"
 },
@@ -46379,7 +46771,7 @@
 },
 "volusia|802301190062|12751-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=802301190062 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=802301190062"
 },
@@ -46439,13 +46831,13 @@
 },
 "volusia|813011500010|03697-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813011500010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813011500010"
 },
 "volusia|813015200040|03733-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813015200040 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813015200040"
 },
@@ -46475,7 +46867,7 @@
 },
 "volusia|813074090110|04216-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074090110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074090110"
 },
@@ -46513,7 +46905,7 @@
 },
 "volusia|830401010360|13852-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360"
 },
@@ -46591,7 +46983,7 @@
 },
 "volusia|853812000901|10095-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901"
 },
@@ -46609,7 +47001,7 @@
 },
 "volusia|91010000009A|11114-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A"
 },
@@ -46649,7 +47041,7 @@
 },
 "volusia|920701000011|05973-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920701000011 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920701000011"
 },
@@ -46683,7 +47075,7 @@
 },
 "volusia|950600000750|09000-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=950600000750 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=950600000750"
 },
@@ -46695,7 +47087,7 @@
 },
 "walton|25-3N-19-19070-001-6210|2026-0132TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-6210",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-6210"
 },
@@ -46831,7 +47223,7 @@
 },
 "washington|00000000-02-0247-0006|2026-TD-200": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0247-0006",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0247-0006"
 },
@@ -46881,7 +47273,7 @@
 },
 "washington|00000000-04-0202-0020|2026-TD-188": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0020",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0020"
 },
@@ -46993,7 +47385,7 @@
 },
 "washington|00000000-06-0357-0009|2026-TD-203": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0009",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0009"
 },
@@ -47023,7 +47415,7 @@
 },
 "washington|00000000-06-0364-0009|2026-TD-204": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0364-0009",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0364-0009"
 },
@@ -47041,7 +47433,7 @@
 },
 "washington|00000000-06-0391-0014|2026-TD-205": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0014",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0014"
 },
@@ -47461,7 +47853,7 @@
 },
 "washington|00000000-08-0528-0005|2026-TD-193": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0528-0005",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0528-0005"
 },
@@ -47483,13 +47875,13 @@
 },
 "washington|00000000-08-0531-0016|2026-TD-220": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0531-0016",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0531-0016"
 },
 "washington|00000000-08-0533-0010|2026-TD-195": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0533-0010",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0533-0010"
 },
@@ -47655,13 +48047,13 @@
 },
 "washington|00000000-14-1226-0008|2026-TD-184": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1226-0008",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1226-0008"
 },
 "washington|00000000-14-1261-0017|2026-TD-185": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1261-0017",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1261-0017"
 },
