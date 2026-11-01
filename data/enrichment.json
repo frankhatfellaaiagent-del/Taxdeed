@@ -33,6 +33,12 @@
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01386-100-062"
 },
+"alachua|01488-315-000|TD 2026-049": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000"
+},
 "alachua|01550-001-000|TD 2026-021": {
 "appraiser_error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01550-001-000",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -66,6 +72,12 @@
 "source": "reportall"
 },
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=02684-000-000"
+},
+"alachua|04165-005-000|TD 2026-046": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000"
 },
 "alachua|04603-005-000|TD 2026-033": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04603-005-000",
@@ -156,6 +168,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125"
 },
+"alachua|07650-000-000|TD 2026-052": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000"
+},
 "alachua|07836-014-004|TD 2026-030": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-014-004",
 "fetched_at": "2026-10-06T11:00:40+00:00",
@@ -173,6 +191,12 @@
 "fetched_at": "2026-10-17T08:26:10+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10032-002-000"
+},
+"alachua|10677-020-000|TD 2026-051": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000"
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
@@ -204,11 +228,35 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000"
 },
+"alachua|14125-000-000|TD 2026-050": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000"
+},
 "alachua|14785-000-000|TD 2026-035": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000",
 "fetched_at": "2026-09-28T16:22:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14785-000-000"
+},
+"alachua|17751-003-000|TD 2026-057": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000"
+},
+"alachua|18354-059-001|TD 2026-055": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001"
+},
+"alachua|20002-005-002|TD 2026-056": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002"
 },
 "baker|35-2S-20-0000-0000-0035|022026XX000002TDAXMX": {
 "error": "no recognizable fields on page",
@@ -674,6 +722,12 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
 },
+"brevard|2001173|260409": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2001173",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2001173"
+},
 "brevard|2104517|260308": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2104517",
 "fetched_at": "2026-10-22T09:14:52+00:00",
@@ -716,11 +770,23 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2209090"
 },
+"brevard|2210811|260407": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2210811",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2210811"
+},
 "brevard|2213511|260262": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2213511",
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2213511"
+},
+"brevard|2301408|260408": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2301408",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2301408"
 },
 "brevard|2302009|240524": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2302009",
@@ -3208,7 +3274,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1100941&jur=19&LMparent=20"
 },
 "citrus|1127181|2026-0229TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "2325 S SANDBURG PT",
 "ok": true,
@@ -3226,7 +3292,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1132746&jur=19&LMparent=20"
 },
 "citrus|1155088|2026-0240TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "PO BOX 2471",
 "ok": true,
@@ -3253,7 +3319,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1178118&jur=19&LMparent=20"
 },
 "citrus|1205701|2026-0230TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "10891 SE 132ND PL",
 "ok": true,
@@ -3262,7 +3328,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1205701&jur=19&LMparent=20"
 },
 "citrus|1216672|2026-0231TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "592 CALLE CESAR GONZALEZ",
 "ok": true,
@@ -3271,7 +3337,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1216672&jur=19&LMparent=20"
 },
 "citrus|1220637|2026-0232TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "2675 DEER TRACK CT",
 "ok": true,
@@ -3280,7 +3346,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1220637&jur=19&LMparent=20"
 },
 "citrus|1234263|2026-0233TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "8264 RIVERSIDE DR",
 "ok": true,
@@ -3289,7 +3355,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1234263&jur=19&LMparent=20"
 },
 "citrus|1270022|2026-0234TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "3128 LYNN DRIVE",
 "ok": true,
@@ -3307,7 +3373,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1380847&jur=19&LMparent=20"
 },
 "citrus|1393884|2026-0235TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "FLAT E 3 F SUN TAO BUILDING",
 "ok": true,
@@ -3325,7 +3391,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1434351&jur=19&LMparent=20"
 },
 "citrus|1445531|2026-0260TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "1134 STERLING PL",
 "ok": true,
@@ -3334,7 +3400,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1445531&jur=19&LMparent=20"
 },
 "citrus|1445540|2026-0261TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "1134 STERLING PL",
 "ok": true,
@@ -3343,7 +3409,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1445540&jur=19&LMparent=20"
 },
 "citrus|1453500|2026-0256TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "7097 N BRUTUS AVE",
 "ok": true,
@@ -3352,7 +3418,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1453500&jur=19&LMparent=20"
 },
 "citrus|1470544|2026-0244TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "100 S DESOTO ST",
 "ok": true,
@@ -3361,7 +3427,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1470544&jur=19&LMparent=20"
 },
 "citrus|1482607|2026-0236TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "100 S DESOTO ST",
 "ok": true,
@@ -3539,7 +3605,7 @@
 }
 },
 "citrus|1711941|2026-0255TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "2580 N JUNGLECAMP RD",
 "ok": true,
@@ -3557,7 +3623,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1727243&jur=19&LMparent=20"
 },
 "citrus|1763550|2026-0252TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "6137 ROUND LAKE RD",
 "ok": true,
@@ -3643,7 +3709,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1849110&jur=19&LMparent=20"
 },
 "citrus|1902983|2026-0195TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "PO BOX 1490",
 "ok": true,
@@ -3661,7 +3727,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1938384&jur=19&LMparent=20"
 },
 "citrus|1995922|2026-0205TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "18305 BISCAYNE BLVD STE 400",
 "ok": true,
@@ -3706,7 +3772,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2046180&jur=19&LMparent=20"
 },
 "citrus|2056797|2026-0263TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "1302 3975 GRAND PARK DR",
 "ok": true,
@@ -3715,7 +3781,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2056797&jur=19&LMparent=20"
 },
 "citrus|2071974|2026-0237TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "813 W PEREZ AVE",
 "ok": true,
@@ -3724,7 +3790,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2071974&jur=19&LMparent=20"
 },
 "citrus|2089016|2026-0238TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "6F 223 RUEIGUANG ROAD",
 "ok": true,
@@ -3796,7 +3862,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2227711&jur=19&LMparent=20"
 },
 "citrus|2245417|2026-0196TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "3725 WEETAMOO CIR",
 "ok": true,
@@ -3805,7 +3871,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2245417&jur=19&LMparent=20"
 },
 "citrus|2249111|2026-0227TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "13333 MOORE RD",
 "ok": true,
@@ -3850,7 +3916,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2417498&jur=19&LMparent=20"
 },
 "citrus|2498439|2026-0228TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "6059 S MORROW PT",
 "ok": true,
@@ -3859,7 +3925,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2498439&jur=19&LMparent=20"
 },
 "citrus|2522275|2026-0268TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "5711 S CALDER PT",
 "ok": true,
@@ -3868,7 +3934,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2522275&jur=19&LMparent=20"
 },
 "citrus|2536101|2026-0264TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "300 W 110TH ST APT 14 K",
 "ok": true,
@@ -3886,7 +3952,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2677058&jur=19&LMparent=20"
 },
 "citrus|2797169|2026-0225TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "3845 S FLAMINGO TER",
 "ok": true,
@@ -3922,7 +3988,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3220074&jur=19&LMparent=20"
 },
 "citrus|3279109|2026-0197TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "8921 W OAKLAND PARK BLVD",
 "ok": true,
@@ -3956,7 +4022,7 @@
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3425525&jur=19&LMparent=20"
 },
 "citrus|3486025|2026-0265TD": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
 "mailing_address": "PO BOX 90",
 "ok": true,
@@ -4117,6 +4183,12 @@
 "parcel_address": "6416 CASCADE Dr",
 "source": "reportall"
 }
+},
+"clay|210823-003514-000-00|2026-0110TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00"
 },
 "clay|210823-004592-000-00|2026-0108TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-004592-000-00",
@@ -5853,6 +5925,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0764530000"
 },
+"duval|076629-0000|2023-0629TD": {
+"assessed_value": 7245.0,
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": 10890.0,
+"ok": true,
+"property_use": "4000 Vacant Industrial",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0766290000"
+},
 "duval|077546-0000|2026-0413TD": {
 "assessed_value": 34179.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -7205,70 +7285,70 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009020310127"
 },
 "escambia|000S009050009090|2024 TD 007455": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "STOKES KENNETH",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009050009090"
 },
 "escambia|000S009050017072|2024 TD 007449": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "STOKES KENNETH",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009050017072"
 },
 "escambia|000S009060007028|2024 TD 007495": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WATSON BAMA EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060007028"
 },
 "escambia|000S009060008028|2024 TD 007496": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WATSON FRANK SR EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060008028"
 },
 "escambia|000S009060008215|2024 TD 007647": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "PAGE HARRIET N",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060008215"
 },
 "escambia|000S009060009199|2024 TD 007633": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "HARVELL CLAUDIA EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060009199"
 },
 "escambia|000S009060011149|2024 TD 007591": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WEAVER ALLEN R & JUSTICE LOIS C EST OF",
 "property_use": "AUTO REPAIR",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060011149"
 },
 "escambia|000S009060030026|2024 TD 007491": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "RESTORATION FULL GOSPEL BAPTIST CHURCH INC",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060030026"
 },
 "escambia|000S009060110019|2024 TD 007484": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "ALEX BUYS VEGAS HOUSES LLC",
 "property_use": "VACANT RESIDENTIAL",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=000S009060110019"
 },
 "escambia|000S009060131056|2024 TD 007524": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "LAWRENCE GARRY J",
 "property_use": "VACANT COMMERCIAL",
@@ -7289,14 +7369,14 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=011S321000010002"
 },
 "escambia|012S312000005007|2024 TD 004325": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "FAZANDE CHERYL C",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=012S312000005007"
 },
 "escambia|021S311201000990|2024 TD 004004": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "ARREOLA MOISES SIMONETTI NATALIN JIMENA",
 "property_use": "SINGLE FAMILY RESID",
@@ -7308,6 +7388,34 @@
 "owner_name": "PARKER TONY L LIFE EST THOMPSON CARA MARIE",
 "property_use": "MOBILE HOME",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=022N324430000000"
+},
+"escambia|042S303001000002|2024 TD 001993": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "SAMBA CO 5 LLC",
+"property_use": "VACANT COMMERCIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=042S303001000002"
+},
+"escambia|042S304000000045|2024 TD 002005": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "NARLOCH DAVID & NARLOCH DAVID JR",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=042S304000000045"
+},
+"escambia|042S305002000001|2024 TD 002006": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "AMAZING JOURNEY INC",
+"property_use": "NIGHTCLUB/LOUNGE/BAR",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=042S305002000001"
+},
+"escambia|042S306001005014|2024 TD 002047": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "WATERS EDDIE L JR & WATERS SHIRLEY A WATERS LATRICIA WATERS TYNETTA",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=042S306001005014"
 },
 "escambia|042S306001031021|2024 TD 002065": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -7325,12 +7433,26 @@
 "source": "reportall"
 }
 },
+"escambia|042S307001011004|2024 TD 002094": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "WITHERSPOON KIMBERLY P",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=042S307001011004"
+},
 "escambia|052S295905001031|2024 TD 000294": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "BRISCOE MELISSA SUZANNE",
 "property_use": "MULTI-FAMILY <=9",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=052S295905001031"
+},
+"escambia|052S306900000024|2024 TD 002125": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "WILLIAMS MONIQUE 50% INT & WILLIAMS TRISTIAN X 10% INT & WILLIAMS KHADIJA AJAHNE 10% INT & WILLIAMS BARCARDIUS Z 10% INT &...",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=052S306900000024"
 },
 "escambia|055N303133000001|2024 TD 005742": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -7340,7 +7462,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=055N303133000001"
 },
 "escambia|071S292000050004|2024 TD 000063": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WHITE THEODORE & MYRTLE MARIE",
 "property_use": "SINGLE FAMILY RESID",
@@ -7361,7 +7483,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=075N304202000002"
 },
 "escambia|081S303102004021|2024 TD 000424": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WILLIAMS ANGELA",
 "property_use": "SINGLE FAMILY RESID",
@@ -7389,18 +7511,25 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=091S291500541018"
 },
 "escambia|091S293000002001|2024 TD 000114": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "MITCHELL KATHERINE A",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=091S293000002001"
 },
 "escambia|091S302101022008|2024 TD 000448": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "YODER DAVID K",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=091S302101022008"
+},
+"escambia|092S300600008010|2024 TD 002166": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "BETTIS LEROY EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=092S300600008010"
 },
 "escambia|092S301001000150|2024 TD 002240": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -7417,6 +7546,13 @@
 "parcel_address": "3404 N ANDREW Ave",
 "source": "reportall"
 }
+},
+"escambia|092S301001001139|2024 TD 002237": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "SMITH WILLIAM J",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=092S301001001139"
 },
 "escambia|092S301100000093|2024 TD 002244": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -7442,11 +7578,32 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=093S322000011002"
 },
 "escambia|101S291000040015|2024 TD 000141": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "ROSIGNOL RUSSELL LEWIS",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=101S291000040015"
+},
+"escambia|102S301000002029|2024 TD 002341": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=102S301000002029"
+},
+"escambia|102S301000004019|2024 TD 002325": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CAUSEY BRANDON",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=102S301000004019"
+},
+"escambia|102S301000017036|2024 TD 002347": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "NELSON MICHAEL S NELSON SUSAN C",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=102S301000017036"
 },
 "escambia|102S301001040002|2024 TD 002358": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -7464,22 +7621,29 @@
 "source": "reportall"
 }
 },
+"escambia|102S301001070011|2024 TD 002372": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=102S301001070011"
+},
 "escambia|111S301100003002|2024 TD 000487": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "MOCK CHARLES A EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=111S301100003002"
 },
 "escambia|111S307000000008|2024 TD 000572": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "PERRY BETTYE J EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=111S307000000008"
 },
 "escambia|111S313101000011|2024 TD 004058": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "KIRKSEY BRIAN E",
 "property_use": "MOBILE HOME",
@@ -7493,7 +7657,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=111S321000000005"
 },
 "escambia|121S305402000000|2024 TD 000620": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "CRUM EULA MAE",
 "property_use": "SINGLE FAMILY RESID",
@@ -7512,6 +7676,13 @@
 "owner_name": "EDSON CHRISTOPHER",
 "property_use": "MOBILE HOME",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=123S322000024023"
+},
+"escambia|132S304400017009|2024 TD 002465": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "ORTEGA RAFAEL JR EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=132S304400017009"
 },
 "escambia|141N311003009003|2024 TD 006080": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -7536,6 +7707,27 @@
 "source": "reportall"
 }
 },
+"escambia|142S306000000043|2024 TD 002483": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "DIBATTISTA ALEXANDRA PAGANOS ELAINE PANAGOS GEORGE",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=142S306000000043"
+},
+"escambia|142S306000000065|2024 TD 002484": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "MELNYCHENKO ANDREW & RABOV VADIM",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=142S306000000065"
+},
+"escambia|142S308001090002|2024 TD 002491": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "SENTERFITT SUZANNE EST OF",
+"property_use": "VACANT RESIDENTIAL",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=142S308001090002"
+},
 "escambia|152S301000004027|2024 TD 002569": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -7552,6 +7744,13 @@
 "source": "reportall"
 }
 },
+"escambia|152S301000016023|2024 TD 002561": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CHINN ROGER S EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=152S301000016023"
+},
 "escambia|152S301000018008|2024 TD 002517": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -7567,6 +7766,20 @@
 "parcel_address": "321 GARFIELD Dr",
 "source": "reportall"
 }
+},
+"escambia|152S301000040012|2024 TD 002525": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "BOATMAN CHRISTINE M",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=152S301000040012"
+},
+"escambia|152S301000130012|2024 TD 002527": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "GOLDSBY HAROLD O EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=152S301000130012"
 },
 "escambia|152S306200004012|2024 TD 002603": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -7599,14 +7812,14 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=161N312207001002"
 },
 "escambia|161S290750019008|2024 TD 000254": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "MCDANIEL JORDAN P",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=161S290750019008"
 },
 "escambia|161S302350022003|2024 TD 000715": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "PRICE JOHN TODD",
 "property_use": "SINGLE FAMILY RESID",
@@ -7636,7 +7849,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=171S302101001090"
 },
 "escambia|171S304300160001|2024 TD 000761": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "MARCHANT DEBORAH EST OF",
 "property_use": "SINGLE FAMILY RESID",
@@ -7650,7 +7863,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=171S304400002018"
 },
 "escambia|171S313401004001|2024 TD 004139": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "DAVIS ANN ELIZABETH PATTERSON",
 "property_use": "SINGLE FAMILY RESID",
@@ -7838,21 +8051,21 @@
 }
 },
 "escambia|201S301200640001|2024 TD 000802": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "RAMIREZ SUSAN LIFE EST YATES JOSHUA",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=201S301200640001"
 },
 "escambia|211S301127000009|2024 TD 000877": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "CHRISTIAN ALEXANDER",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=211S301127000009"
 },
 "escambia|211S302101150013|2024 TD 000894": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "WADE MICKEY",
 "property_use": "SINGLE FAMILY RESID",
@@ -7866,7 +8079,7 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=212S316200001001"
 },
 "escambia|221S304300000023|2024 TD 000977": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "HORN ALONZO",
 "property_use": "SINGLE FAMILY RESID",
@@ -7903,25 +8116,32 @@
 }
 },
 "escambia|231S301201005018|2024 TD 001002": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "SOLES JOHN R SOLES ANNIE P EST OF",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=231S301201005018"
 },
 "escambia|231S301800000016|2024 TD 001028": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "MCCOVERY CATRENNA EST OF MCCOVERY EDWIN",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=231S301800000016"
 },
 "escambia|231S302500025003|2024 TD 001048": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "THRASH EMILY R 1/7 INT THRASH ALEATHA MARIE 1/7 INT THRASH JACQUELINE EST OF 1/7 INT SWANSTON JOYCE 1/7 INT...",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=231S302500025003"
+},
+"escambia|231S303400000002|2024 TD 001062": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "MCCALL JANET M EST OF",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=231S303400000002"
 },
 "escambia|232N314102000000|2024 TD 006457": {
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -7938,14 +8158,21 @@
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=242N321101002003"
 },
 "escambia|252S313100007005|2024 TD 004731": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "KETTLES VALERIE THERESA",
 "property_use": "SINGLE FAMILY RESID",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=252S313100007005"
 },
+"escambia|261S305100070005|2024 TD 001171": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "WATKINS IVY 1/4 INT WATKINS IVY B 1/4 INT BOLAR GLENDA L 1/4 INT BOLAR RASHAN R 1/4 INT",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=261S305100070005"
+},
 "escambia|261S305105002001|2024 TD 001192": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "JUDGMENT PARTNERS LLC",
 "property_use": "MINERAL PROCESSING",
@@ -7958,12 +8185,75 @@
 "property_use": "VACANT RESIDENTIAL",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=263S321000003004"
 },
+"escambia|281S302000045001|2024 TD 001249": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "THEDFORD RUTH B",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=281S302000045001"
+},
+"escambia|282S262150003022|2024 TD 007918": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "PENSAGO LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=282S262150003022"
+},
 "escambia|292S312400000000|2024 TD 004770": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": true,
 "owner_name": "REED DONALD",
 "property_use": "NON-AG ACREAGE",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=292S312400000000"
+},
+"escambia|301S307600011001|2024 TD 001307": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "MANCUSO MICHAEL T EST OF",
+"property_use": "CONDO-RES UNIT",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=301S307600011001"
+},
+"escambia|301S307902083013|2024 TD 001318": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "BEACON HOMES INVESTMENT GROUP LLC",
+"property_use": "SINGLE FAMILY - TOWNHOME",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=301S307902083013"
+},
+"escambia|331S300401001015|2024 TD 001405": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "STANLEY SCOTT R",
+"property_use": "CONDO-RES UNIT",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=331S300401001015"
+},
+"escambia|331S300401001016|2024 TD 001410": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "LEE JOHN W",
+"property_use": "CONDO-RES UNIT",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=331S300401001016"
+},
+"escambia|331S300401004015|2024 TD 001407": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "STANLEY SCOTT R",
+"property_use": "CONDO-RES UNIT",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=331S300401004015"
+},
+"escambia|331S302000811018|2024 TD 001427": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "MORTON ROBERT THOMAS",
+"property_use": "CONDO-RES UNIT",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=331S302000811018"
+},
+"escambia|331S309100019004|2024 TD 001474": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "ENGLISH SHARETA",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=331S309100019004"
 },
 "escambia|332S301300010007|2024 TD 003071": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -8199,6 +8489,69 @@
 "property_use": "VACANT RESIDENTIAL",
 "url": "http://www.escpa.org/cama/Detail_a.aspx?s=401S311000001011"
 },
+"escambia|421S302201003019|2024 TD 001655": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "TAULBEE TONYA M 1/4 INT BARNHILL KIMBERLY D 1/4 INT CARR ROBERT ANTHONY JR 1/4 INT KILPATRICK RICHARD EST OF 1/4 INT",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=421S302201003019"
+},
+"escambia|441S301000012023|2024 TD 001713": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "SCHRADER JOHN F",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=441S301000012023"
+},
+"escambia|441S302000008015|2024 TD 001743": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "LORD LINDA EST OF LAMBERT SAMANTHA LYNN",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=441S302000008015"
+},
+"escambia|451S303000000038|2024 TD 001771": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "DOYLE VICKIE",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=451S303000000038"
+},
+"escambia|461S301100002004|2024 TD 001780": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=461S301100002004"
+},
+"escambia|461S301100005012|2024 TD 001807": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "DODD RODNEY K",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=461S301100005012"
+},
+"escambia|461S301100011004|2024 TD 001782": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "CSS LLC",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=461S301100011004"
+},
+"escambia|461S302001005028|2024 TD 001841": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "TYSON JOHNNY ENGRO JEANETTE",
+"property_use": "SINGLE FAMILY RESID",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=461S302001005028"
+},
+"escambia|461S302001030015|2024 TD 001817": {
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": true,
+"owner_name": "STEWART VIRGINIA ANNETTE EST OF",
+"property_use": "MULTI-FAMILY <=9",
+"url": "http://www.escpa.org/cama/Detail_a.aspx?s=461S302001030015"
+},
 "escambia|502S305000017001|2024 TD 003638": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": true,
@@ -8409,7 +8762,7 @@
 },
 "gilchrist|180815-0073000B-0200|26-0014-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
-"fetched_at": "2026-10-25T09:02:25+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
@@ -11439,7 +11792,7 @@
 },
 "hillsborough|0250560000|2026-861": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11498,6 +11851,24 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0348737368"
 },
+"hillsborough|0349870000|2027-17": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0349870000"
+},
+"hillsborough|0368895130|2027-18": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0368895130"
+},
 "hillsborough|0370488066|2026-858": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -11534,6 +11905,33 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0415760000"
 },
+"hillsborough|0415770000|2027-1": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0415770000"
+},
+"hillsborough|0420655000|2027-16": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0420655000"
+},
+"hillsborough|0420655050|2027-9": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0420655050"
+},
 "hillsborough|0420655100|2026-692": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -11545,16 +11943,25 @@
 },
 "hillsborough|0426030100|2026-873": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0426030100"
 },
+"hillsborough|0435610000|2027-19": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0435610000"
+},
 "hillsborough|0440480000|2026-854": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11572,7 +11979,7 @@
 },
 "hillsborough|0471216000|2026-914": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11581,7 +11988,7 @@
 },
 "hillsborough|0498280000|2026-859": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11608,7 +12015,7 @@
 },
 "hillsborough|0578132030|2026-890": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11659,7 +12066,7 @@
 },
 "hillsborough|0615540525|2026-893": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11668,7 +12075,7 @@
 },
 "hillsborough|0620930000|2026-907": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11677,7 +12084,7 @@
 },
 "hillsborough|0625540160|2026-900": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11695,7 +12102,7 @@
 },
 "hillsborough|0659310000|2026-897": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11704,7 +12111,7 @@
 },
 "hillsborough|0720040000|2026-892": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11749,7 +12156,7 @@
 },
 "hillsborough|0771030000|2026-881": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11812,7 +12219,7 @@
 },
 "hillsborough|0777751458|2026-884": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11887,7 +12294,7 @@
 },
 "hillsborough|0820370000|2026-910": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11896,7 +12303,7 @@
 },
 "hillsborough|0828200500|2026-906": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11932,7 +12339,7 @@
 },
 "hillsborough|0844990000|2026-870": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11941,7 +12348,7 @@
 },
 "hillsborough|0864530204|2026-896": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -11950,7 +12357,7 @@
 },
 "hillsborough|0868240000|2026-898": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12010,7 +12417,7 @@
 },
 "hillsborough|0978820000|2026-882": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12028,7 +12435,7 @@
 },
 "hillsborough|1035250100|2026-855": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12053,6 +12460,15 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1061190000"
 },
+"hillsborough|1090790000|2027-3": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1090790000"
+},
 "hillsborough|1092180000|2026-749": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -12073,7 +12489,7 @@
 },
 "hillsborough|1224030000|2026-864": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12082,7 +12498,7 @@
 },
 "hillsborough|1350960000|2026-856": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12091,7 +12507,7 @@
 },
 "hillsborough|1366680020|2026-883": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12118,7 +12534,7 @@
 },
 "hillsborough|1388240000|2026-889": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12208,7 +12624,7 @@
 },
 "hillsborough|1470150000|2026-895": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12376,7 +12792,7 @@
 },
 "hillsborough|1594060000|2026-908": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12511,7 +12927,7 @@
 },
 "hillsborough|2050101022|2026-886": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12529,7 +12945,7 @@
 },
 "hillsborough|2054240000|2026-885": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -14326,7 +14742,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-23-C4-02411.0630"
 },
 "lee|01-44-24-02-00000.0020|2026000808": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-24-02-00000.0020"
@@ -14338,7 +14754,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-26-10-00107.0010"
 },
 "lee|01-44-27-L1-11044.0170|2026000594": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-27-L1-11044.0170"
@@ -14377,7 +14793,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-45-27-L4-09052.0090"
 },
 "lee|01-46-23-02-00000.1060|2026000666": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-46-23-02-00000.1060"
@@ -14399,7 +14815,7 @@
 }
 },
 "lee|02-44-23-C3-02673.0120|2026000809": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-23-C3-02673.0120"
@@ -14411,7 +14827,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-23-C3-02678.0160"
 },
 "lee|02-44-23-C4-02628.0590|2026000810": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-23-C4-02628.0590"
@@ -14489,7 +14905,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-46-23-00-00010.0030"
 },
 "lee|02-46-24-04-00000.4010|2026000814": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-46-24-04-00000.4010"
@@ -14501,19 +14917,19 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-23-C2-02880.0090"
 },
 "lee|03-44-23-C3-02860.0310|2026000817": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-23-C3-02860.0310"
 },
 "lee|03-44-25-01-00043.0210|2026000668": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-25-01-00043.0210"
 },
 "lee|03-44-26-06-00028.0280|2026000600": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-26-06-00028.0280"
@@ -14604,13 +15020,13 @@
 }
 },
 "lee|04-44-23-C4-03832.0130|2026000824": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-44-23-C4-03832.0130"
 },
 "lee|04-44-25-03-00009.3610|2026000825": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-44-25-03-00009.3610"
@@ -14622,13 +15038,13 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-46-24-17-00023.0050"
 },
 "lee|05-44-22-01-00023.0390|2026000642": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=05-44-22-01-00023.0390"
 },
 "lee|05-44-23-C3-04037.0110|2026000827": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=05-44-23-C3-04037.0110"
@@ -14649,13 +15065,13 @@
 }
 },
 "lee|05-45-21-13-00000.0020|2026000828": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=05-45-21-13-00000.0020"
 },
 "lee|05-45-24-C1-00577.025A|2026000592": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=05-45-24-C1-00577.025A"
@@ -14719,7 +15135,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-44-23-C4-04220.0100"
 },
 "lee|06-44-24-C2-02067.0480|2026000833": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-44-24-C2-02067.0480"
@@ -14746,7 +15162,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-45-27-L2-01005.0280"
 },
 "lee|06-45-27-L2-01007.0180|2026000643": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-45-27-L2-01007.0180"
@@ -14758,7 +15174,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-46-24-32-00000.0140"
 },
 "lee|06-48-26-B3-0010C.0020|2026000803": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-48-26-B3-0010C.0020"
@@ -14779,13 +15195,13 @@
 }
 },
 "lee|07-44-23-C1-04143.0070|2026000836": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-44-23-C1-04143.0070"
 },
 "lee|07-44-23-C3-04130.0200|2026000839": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-44-23-C3-04130.0200"
@@ -14803,7 +15219,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-44-27-L4-06021.0120"
 },
 "lee|07-46-24-02-00W00.0470|2026000676": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-46-24-02-00W00.0470"
@@ -14827,7 +15243,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-44-23-C3-03977.0300"
 },
 "lee|08-44-24-C4-01510.0250|2026000198": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-44-24-C4-01510.0250"
@@ -14860,19 +15276,19 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-44-24-06-00000.0370"
 },
 "lee|09-45-21-01-00000.0480|2026000851": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-45-21-01-00000.0480"
 },
 "lee|09-45-25-P3-00200.5010|2026000852": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-45-25-P3-00200.5010"
 },
 "lee|09-45-25-P4-00200.1204|2026000853": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-45-25-P4-00200.1204"
@@ -14896,7 +15312,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=10-43-25-00-00013.0160"
 },
 "lee|10-44-24-14-0000B.0060|2026000855": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=10-44-24-14-0000B.0060"
@@ -15010,7 +15426,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-45-23-C1-00251.0150"
 },
 "lee|12-45-27-L1-06029.0060|2026000862": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-45-27-L1-06029.0060"
@@ -15046,7 +15462,7 @@
 }
 },
 "lee|13-44-23-C2-01125.0370|2026000864": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-44-23-C2-01125.0370"
@@ -15160,25 +15576,25 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-46-27-00-00013.0000"
 },
 "lee|14-43-25-00-00008.0400|2026000694": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-43-25-00-00008.0400"
 },
 "lee|14-44-23-C3-00100.1010|2026000868": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-23-C3-00100.1010"
 },
 "lee|14-44-23-C3-00100.1030|2026000869": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-23-C3-00100.1030"
 },
 "lee|14-44-23-C3-00100.1080|2026000870": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-23-C3-00100.1080"
@@ -15238,7 +15654,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-47-25-B4-0020H.7950"
 },
 "lee|16-44-24-06-00000.0650|2026000696": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=16-44-24-06-00000.0650"
@@ -15271,13 +15687,13 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=16-45-24-21-00004.1148"
 },
 "lee|17-43-24-C1-05775.0010|2026000876": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-43-24-C1-05775.0010"
 },
 "lee|17-43-24-C1-05818.0100|2026000698": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-43-24-C1-05818.0100"
@@ -15313,13 +15729,13 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-25-P1-0190F.0060"
 },
 "lee|17-44-25-P1-0190F.0100|2026000663": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-25-P1-0190F.0100"
 },
 "lee|17-44-25-P1-0250A.0200|2026000886": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-25-P1-0250A.0200"
@@ -15373,7 +15789,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-44-23-C3-05325.0350"
 },
 "lee|18-44-23-C3-05333.0030|2026000893": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-44-23-C3-05333.0030"
@@ -15443,7 +15859,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-46-25-01-00000.1390"
 },
 "lee|19-43-24-C2-05589.0070|2026000704": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-43-24-C2-05589.0070"
@@ -15461,7 +15877,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00202.0010"
 },
 "lee|19-44-25-P1-00212.0010|2026000706": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00212.0010"
@@ -15473,7 +15889,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00219.0010"
 },
 "lee|19-44-25-P1-00317.0020|2026000595": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00317.0020"
@@ -15513,7 +15929,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P3-00917.0010"
 },
 "lee|19-46-23-T4-0100A.0020|2026000708": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-46-23-T4-0100A.0020"
@@ -15588,7 +16004,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-05-00017.012B"
 },
 "lee|21-45-24-32-00000.8060|2026000715": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-24-32-00000.8060"
@@ -15934,7 +16350,7 @@
 }
 },
 "lee|25-44-24-01-00018.0000|2026000654": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-24-01-00018.0000"
@@ -15991,7 +16407,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-43-24-01-00007.0000"
 },
 "lee|26-43-24-03-00054.0030|2026000734": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-43-24-03-00054.0030"
@@ -16109,7 +16525,7 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-43-26-06-00067.0120"
 },
 "lee|29-44-24-C2-00001.0060|2026000646": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-44-24-C2-00001.0060"
@@ -16148,19 +16564,19 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-45-24-00-00003.0240"
 },
 "lee|29-45-27-L2-02003.0130|2026000749": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-45-27-L2-02003.0130"
 },
 "lee|29-46-25-E3-22000.F470|2026000752": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-46-25-E3-22000.F470"
 },
 "lee|30-43-26-01-00001.0680|2026000753": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=30-43-26-01-00001.0680"
@@ -16187,19 +16603,19 @@
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C3-04279.0300"
 },
 "lee|31-43-23-C4-04287.0510|2026000657": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C4-04287.0510"
 },
 "lee|31-43-24-C2-02130.0350|2026000629": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-24-C2-02130.0350"
 },
 "lee|31-43-24-C3-02140.0180|2026000755": {
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-24-C3-02140.0180"
@@ -17799,6 +18215,12 @@
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1344200159"
 },
+"manatee|1361100009|2026TD000193": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=1361100009"
+},
 "manatee|1371400001|2026TD000245": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -17811,6 +18233,12 @@
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1391800459"
 },
+"manatee|1401623358|2026TD000195": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=1401623358"
+},
 "manatee|1594600007|2026TD000269": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -17822,6 +18250,18 @@
 "fetched_at": "2026-10-23T09:18:31+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1609800006"
+},
+"manatee|1619600354|2026TD000196": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=1619600354"
+},
+"manatee|1619600439|2026TD000197": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=1619600439"
 },
 "manatee|1734304106|2026TD000249": {
 "error": "no recognizable fields on page",
@@ -17981,7 +18421,7 @@
 },
 "manatee|5344112858|2026TD000200": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-15T08:57:09+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5344112858"
 },
@@ -18023,7 +18463,7 @@
 },
 "manatee|5519700008|2026TD000202": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5519700008"
 },
@@ -18111,11 +18551,23 @@
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6779600003"
 },
+"manatee|6819800109|2026TD000210": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=6819800109"
+},
 "manatee|7054400002|2026TD000211": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7054400002"
+},
+"manatee|7163900009|2026TD000212": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=7163900009"
 },
 "manatee|7991500359|2026TD000214": {
 "error": "no recognizable fields on page",
@@ -18128,6 +18580,12 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7991500409"
+},
+"manatee|8008416656|2026TD000215": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.manateepao.com/parcel/?parid=8008416656"
 },
 "manatee|825945108|2026TD000216": {
 "error": "no recognizable fields on page",
@@ -31434,7 +31892,7 @@
 "palmbeach|00-37-41-33-03-047-0101|2026-2928TD": {
 "acreage": ".11",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31445,7 +31903,7 @@
 "palmbeach|00-40-42-14-00-000-8170|2026-3003TD": {
 "acreage": "1.21",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31577,7 +32035,7 @@
 "palmbeach|00-42-43-02-02-007-0220|2026-3053TD": {
 "acreage": ".15",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31587,7 +32045,7 @@
 },
 "palmbeach|00-42-43-22-02-005-1070|2026-3048TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31597,7 +32055,7 @@
 },
 "palmbeach|00-42-43-22-02-007-1520|2026-3060TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31607,7 +32065,7 @@
 },
 "palmbeach|00-42-43-23-03-003-0530|2026-3063TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31635,9 +32093,19 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-43-23-06-007-1630"
 },
+"palmbeach|00-42-43-23-14-014-3350|2026-3091TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ANAYA LUIS JR & ANAYA STACEY G 313 NORWICH N WEST PALM BEACH FL 33417 7928 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-43-23-14-014-3350"
+},
 "palmbeach|00-42-43-23-25-014-3440|2026-3061TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31657,7 +32125,7 @@
 },
 "palmbeach|00-42-43-23-31-004-0870|2026-3068TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31667,7 +32135,7 @@
 },
 "palmbeach|00-42-43-23-36-014-2740|2026-3072TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31677,7 +32145,7 @@
 },
 "palmbeach|00-42-43-23-43-000-0050|2026-3002TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31743,7 +32211,7 @@
 "palmbeach|00-42-43-27-21-009-0100|2026-3054TD": {
 "acreage": ".18",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31753,7 +32221,7 @@
 },
 "palmbeach|00-42-43-28-07-002-1950|2026-3055TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31783,7 +32251,7 @@
 },
 "palmbeach|00-42-43-28-24-005-2010|2026-3041TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31793,7 +32261,7 @@
 },
 "palmbeach|00-42-43-29-21-001-3040|2026-2873TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31804,7 +32272,7 @@
 "palmbeach|00-42-43-35-16-000-0440|2026-2925TD": {
 "acreage": ".02",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31815,7 +32283,7 @@
 "palmbeach|00-42-44-01-05-000-0620|2026-3057TD": {
 "acreage": ".24",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31848,7 +32316,7 @@
 "palmbeach|00-42-44-11-24-000-1492|2026-3069TD": {
 "acreage": ".05",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31858,7 +32326,7 @@
 },
 "palmbeach|00-42-44-12-33-000-0130|2026-2991TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31869,7 +32337,7 @@
 "palmbeach|00-42-44-13-04-003-0191|2026-3065TD": {
 "acreage": ".19",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31877,10 +32345,20 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-44-13-04-003-0191"
 },
+"palmbeach|00-42-44-13-17-007-0020|2026-3100TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions RIPA JEANNE O 2819 ASHLEY DR W APT B WEST PALM BEACH FL 33415 8245 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-44-13-17-007-0020"
+},
 "palmbeach|00-42-44-14-07-000-0080|2026-3067TD": {
 "acreage": ".18",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31900,7 +32378,7 @@
 },
 "palmbeach|00-42-44-14-45-003-0050|2026-3071TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31931,7 +32409,7 @@
 "palmbeach|00-42-44-24-10-000-8030|2026-3005TD": {
 "acreage": ".11",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -31983,6 +32461,16 @@
 "property_use": "9700\u2014OUTDR REC/PARK LAND",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-44-42-03-003-0000"
 },
+"palmbeach|00-42-45-23-20-000-5516|2026-3109TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions VEGA MARIA C 5139 FLORIA DR BOYNTON BEACH FL 33437 5218 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-45-23-20-000-5516"
+},
 "palmbeach|00-42-45-26-21-056-2010|2026-2876TD": {
 "assessed_value": "Cap Differential",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -32013,6 +32501,28 @@
 "owner_name": "Owner(s) Mailing Address Actions KALVAITIS HOLDINGS LLC 7450 NW 84TH AVE POMPANO BEACH FL 33067 1008 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-02-13-001-2010"
+},
+"palmbeach|00-42-46-10-03-010-0410|2026-3115TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HERTZAN SUSAN TRUST & HERTZAN MORGAN & HERTZAN PAUL & HERTZAN MARSHALL LITVACK ERIKA H & HERTZAN MARSHALL TR LITVACK ERIKA H TR 103 HAMILTON AVE MASSAPEQUA NY 11758 39",
+"property_use": "0110\u2014TOWNHOUSE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-10-03-010-0410"
+},
+"palmbeach|00-42-46-15-17-008-0170|2026-3110TD": {
+"acreage": ".22",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ROWEN LOUIS W 14863 SUMMERSONG LN DELRAY BEACH FL 33484 3540 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-15-17-008-0170"
 },
 "palmbeach|00-42-46-15-21-004-4070|2026-2946TD": {
 "assessed_value": "Cap Differential",
@@ -32046,7 +32556,7 @@
 },
 "palmbeach|00-42-46-22-07-005-1960|2026-3027TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32056,13 +32566,23 @@
 },
 "palmbeach|00-42-46-22-08-011-4960|2026-2997TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions BALLATO JAMES J & GERST JEFFREY A 496 MONACO K DELRAY BEACH FL 33446 1427 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-22-08-011-4960"
+},
+"palmbeach|00-42-46-22-09-014-6330|2026-3089TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MCCABE SCHNEIDER MARSHA & SCHNEIDER BARRY 5 FOXWOOD CIR EAST GREENBUSH NY 12061 9600 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-22-09-014-6330"
 },
 "palmbeach|00-42-46-22-13-001-0020|2026-2968TD": {
 "assessed_value": "Cap Differential",
@@ -32086,13 +32606,23 @@
 },
 "palmbeach|00-42-46-22-17-005-1960|2026-3029TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions NOTO JERILYN & NOTO JOHN ZUCKERMAN ARLINE ZUCKERMAN LESTER 3616 HENRY HUDSON PKWY E BRONX NY 10463 1505 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-22-17-005-1960"
+},
+"palmbeach|00-42-46-23-62-001-0060|2026-3119TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions GOMEZ DELFA 228 KENSINGGTON WAY WELLINGTON FL 33414 4316 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-46-23-62-001-0060"
 },
 "palmbeach|00-42-47-08-05-007-2830|2026-2940TD": {
 "assessed_value": "Cap Differential",
@@ -32124,6 +32654,36 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-08-13-005-2000"
 },
+"palmbeach|00-42-47-08-16-002-0790|2026-3079TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CULASSO ANIBAL J 3401 SW 160TH AVE STE 330 HOLLYWOOD FL 33027 6306 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-08-16-002-0790"
+},
+"palmbeach|00-42-47-08-18-003-4046|2026-3083TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions RAPHAEL MADELEINE RAPHAEL SAMUEL & 2923 BAYSWATER AVE FAR ROCKAWAY NY 11691 1729 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-08-18-003-4046"
+},
+"palmbeach|00-42-47-08-19-002-4021|2026-3082TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions SLOCHOWSKY HOWARD SLOCHOWSKY MICHAEL & 6 IRIS ST CEDARHURST NY 11516 2611 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-08-19-002-4021"
+},
 "palmbeach|00-42-47-15-05-000-0906|2026-3030TD": {
 "assessed_value": "Cap Differential",
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -32145,6 +32705,16 @@
 "property_use": "0110\u2014TOWNHOUSE",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-15-22-000-1401"
 },
+"palmbeach|00-42-47-17-05-014-2020|2026-3107TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MARINO JACQUELINE 16 LONGSTREET DR LAKE GROVE NY 11755 2315 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-17-05-014-2020"
+},
 "palmbeach|00-42-47-20-03-000-4506|2026-2952TD": {
 "assessed_value": "Cap Differential",
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -32158,7 +32728,7 @@
 "palmbeach|00-42-47-21-02-004-0090|2026-2885TD": {
 "acreage": ".22",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-09-29T12:21:51+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32177,6 +32747,16 @@
 "property_use": "0110\u2014TOWNHOUSE",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-21-23-000-1380"
 },
+"palmbeach|00-42-47-28-32-008-8040|2026-3147TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions YOUNG BARBARA L 7770 LAGO DEL MAR DR UNIT 804 BOCA RATON FL 33433 4904 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-28-32-008-8040"
+},
 "palmbeach|00-42-47-31-15-000-0403|2026-2954TD": {
 "assessed_value": "Cap Differential",
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -32187,15 +32767,46 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-31-15-000-0403"
 },
+"palmbeach|00-42-47-33-08-001-2802|2026-3143TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CROWDER CINDY TRUST 7137 PROMENADE DR APT 802 BOCA RATON FL 33433 6966 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-33-08-001-2802"
+},
 "palmbeach|00-42-47-33-19-000-6101|2026-2993TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions DRAGNET ECKERT FLORENCE PO BOX 220657 WEST PALM BEACH FL 33422 0657 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-42-47-33-19-000-6101"
+},
+"palmbeach|00-43-41-06-15-000-0120|2026-3087TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions IORIO LAURA IORIO ROBERT & 8 MOUNTAINCREST DR CHESHIRE CT 06410 3553 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-41-06-15-000-0120"
+},
+"palmbeach|00-43-42-04-23-000-0210|2026-3085TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions WINDSOR VILLAGE INC 1986 WINDSOR DR NORTH PALM BEACH FL 33408 2843 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-42-04-23-000-0210"
 },
 "palmbeach|00-43-42-04-23-000-0310|2026-2955TD": {
 "assessed_value": "Cap Differential",
@@ -32207,15 +32818,46 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-43-42-04-23-000-0310"
 },
+"palmbeach|00-43-43-29-02-005-0030|2026-3086TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ANGELES ARIEL & ANGELES FLOR C 2009 WHITNEY RD WEST PALM BEACH FL 33409 6431 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-43-29-02-005-0030"
+},
+"palmbeach|00-43-44-17-29-000-2010|2026-3120TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions RIVERA LEONOR 2851 GARDEN DR N # 201 LAKE WORTH BEACH FL 33461 6207 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-44-17-29-000-2010"
+},
 "palmbeach|00-43-44-17-36-000-2110|2026-3031TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions TRAJAN CLAUDEL 1741 SHORESIDE CIR WELLINGTON FL 33414 8038 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-43-44-17-36-000-2110"
+},
+"palmbeach|00-43-44-17-38-000-2090|2026-3137TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HENRY BEATRICE J HENRY FERNANDO & 16104 TAWNEY RIDGE LN VICTORVILLE CA 92394 1521 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-44-17-38-000-2090"
 },
 "palmbeach|00-43-44-17-50-000-3120|2026-2973TD": {
 "assessed_value": "Cap Differential",
@@ -32226,6 +32868,27 @@
 "owner_name": "Owner(s) Mailing Address Actions BICKNELL KERTTU H 1800 SOUTH DR LAKE WORTH BEACH FL 33461 6133 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=00-43-44-17-50-000-3120"
+},
+"palmbeach|00-43-44-20-04-013-0070|2026-3104TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HURLEY HOOVER H JR 2910 FRENCH AVE LAKE WORTH BEACH FL 33461 3717 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-44-20-04-013-0070"
+},
+"palmbeach|00-43-45-05-08-000-2060|2026-3122TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions VIGIL DARCY 2878 DONNELLY DR APT 206 LAKE WORTH FL 33462 2551 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=00-43-45-05-08-000-2060"
 },
 "palmbeach|04-37-43-31-01-030-0700|2026-2857TD": {
 "acreage": ".23",
@@ -32252,7 +32915,7 @@
 "palmbeach|04-37-43-31-17-000-0060|2026-3009TD": {
 "acreage": ".23",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32274,7 +32937,7 @@
 "palmbeach|04-37-43-42-01-006-0230|2026-3010TD": {
 "acreage": ".17",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32293,6 +32956,17 @@
 "property_use": "0000\u2014VACANT",
 "url": "https://pbcpao.gov/Property/Details?parcelId=04-37-43-42-05-003-0150"
 },
+"palmbeach|06-42-47-24-02-003-0111|2026-3135TD": {
+"acreage": ".32",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions COHEN ISRAEL 6748 NW 65TH TER PARKLAND FL 33067 1444 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-42-47-24-02-003-0111"
+},
 "palmbeach|06-43-47-08-21-000-1030|2026-3070TD": {
 "assessed_value": "Cap Differential",
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -32302,6 +32976,26 @@
 "owner_name": "Owner(s) Mailing Address Actions SHOSHAN MANNY 1532 SE 9TH ST DEERFIELD BCH FL 33441 5834 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-08-21-000-1030"
+},
+"palmbeach|06-43-47-08-27-003-0037|2026-3103TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BOCA COMMERCIAL PROPERTIES LLC 4722 NW BOCA RATON BLVD STE C108 BOCA RATON FL 33431 4873 Change of Mailing Address",
+"property_use": "1704\u2014OFF BLDG- NON MEDIC 1 TO 3 STORIES CONDO",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-08-27-003-0037"
+},
+"palmbeach|06-43-47-08-27-003-0038|2026-3098TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BOCA COMMERCIAL PROPERTIES LLC 4722 NW BOCA RATON BLVD STE C108 BOCA RATON FL 33431 4873 Change of Mailing Address",
+"property_use": "1704\u2014OFF BLDG- NON MEDIC 1 TO 3 STORIES CONDO",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-08-27-003-0038"
 },
 "palmbeach|06-43-47-18-07-000-0070|2026-2979TD": {
 "assessed_value": "Cap Differential",
@@ -32316,7 +33010,7 @@
 "palmbeach|06-43-47-19-06-008-0090|2026-3033TD": {
 "acreage": ".19",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32324,15 +33018,46 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-19-06-008-0090"
 },
+"palmbeach|06-43-47-30-37-007-5120|2026-3136TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MILLER ERIC S 55 SW 2ND AVE APT 512 BOCA RATON FL 33432 4770 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-30-37-007-5120"
+},
 "palmbeach|06-43-47-31-06-012-1010|2026-3013TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions COHEN KEVIN 12 ROYAL PALM WAY # 101 BOCA RATON FL 33432 7810 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-31-06-012-1010"
+},
+"palmbeach|06-43-47-32-01-018-0030|2026-3130TD": {
+"acreage": ".35",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BUCKLEY CORINNE A 1315 ANGELO DR BEVERLY HILLS CA 90210 2040 Change of Mailing Address",
+"property_use": "0000\u2014VACANT",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-32-01-018-0030"
+},
+"palmbeach|06-43-47-32-19-000-0071|2026-3124TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions PASCIUTO FRANK & PASCIUTO MARIA 1669 SE 7TH ST DEERFIELD BEACH FL 33441 5813 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=06-43-47-32-19-000-0071"
 },
 "palmbeach|08-42-46-01-12-000-0144|2026-2995TD": {
 "assessed_value": "Cap Differential",
@@ -32343,6 +33068,17 @@
 "owner_name": "Owner(s) Mailing Address Actions LAINER ELLEN F LAINER RANDALL S & 2 BETH CT BRIDGEWATER NJ 08807 1166 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-42-46-01-12-000-0144"
+},
+"palmbeach|08-43-45-15-11-005-0010|2026-3163TD": {
+"acreage": ".04",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions WASTERSEDGE 726 BOYNTON BCH LLC 2063 N UNIVERSITY DR FORT LAUDERDALE FL 33322 3936 Change of Mailing Address",
+"property_use": "0110\u2014TOWNHOUSE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-15-11-005-0010"
 },
 "palmbeach|08-43-45-16-01-018-0190|2026-3073TD": {
 "acreage": ".14",
@@ -32355,15 +33091,57 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-16-01-018-0190"
 },
+"palmbeach|08-43-45-16-01-024-0220|2026-3101TD": {
+"acreage": ".17",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions PIERRE JEAN 2300 N SEACREST BLVD BOYNTON BEACH FL 33435 1709 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-16-01-024-0220"
+},
 "palmbeach|08-43-45-16-08-021-2010|2026-3034TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions WILHIDE JEFFREY 2223 NE 1ST CT APT 21-201 BOYNTON BEACH FL 33435 2321 Change of Mailing Address",
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-16-08-021-2010"
+},
+"palmbeach|08-43-45-17-18-000-2324|2026-3076TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HYRES CHARLES 1660 RNSSNC COMMONS BLVD APT 2324 BOYNTON BEACH FL 33426 7223 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-17-18-000-2324"
+},
+"palmbeach|08-43-45-18-13-000-0060|2026-3142TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions VALENTE SUZANNE & VALENTE VINCENT 6 LAWRENCE LAKE DR BOYNTON BEACH FL 33436 2020 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-18-13-000-0060"
+},
+"palmbeach|08-43-45-19-16-000-0630|2026-3102TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions DIVINEY CHERYL EST 9769 NICKELS BLVD UNIT 603 BOYNTON BEACH FL 33436 3951 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-19-16-000-0630"
 },
 "palmbeach|08-43-45-20-18-000-2060|2026-2980TD": {
 "assessed_value": "Cap Differential",
@@ -32395,6 +33173,26 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-20-18-000-3050"
 },
+"palmbeach|08-43-45-20-30-001-3120|2026-3164TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions SUMMER WINDS HOLDINGS 33458 TRUST PALM BEACH REALTY 22 TRUST & SOUTHEAST ASSET 2023 TRUST 1312 RENAISSANCE WAY BOYNTON BEACH FL 33426 8223 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-20-30-001-3120"
+},
+"palmbeach|08-43-45-27-35-000-0050|2026-3151TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BUCKLEY PATRICE M BUCKLEY PATRICK & 4376 MARTHA AVE BRONX NY 10470 1723 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-27-35-000-0050"
+},
 "palmbeach|08-43-45-28-19-000-0191|2026-3037TD": {
 "acreage": ".17",
 "assessed_value": "Cap Differential",
@@ -32405,6 +33203,17 @@
 "owner_name": "Owner(s) Mailing Address Actions NOEL DIEUCEL 420 SW 7TH CT BOYNTON BEACH FL 33435 5532 Change of Mailing Address",
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-28-19-000-0191"
+},
+"palmbeach|08-43-45-29-11-078-0030|2026-3090TD": {
+"acreage": ".10",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BROOKINS HEIDI 2394 SW CONGRESS BLVD BOYNTON BEACH FL 33426 5348 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-29-11-078-0030"
 },
 "palmbeach|08-43-45-33-22-010-1040|2026-2894TD": {
 "assessed_value": "Cap Differential",
@@ -32426,10 +33235,51 @@
 "property_use": "0510\u2014COOPERATIVE",
 "url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-33-36-000-0110"
 },
+"palmbeach|08-43-45-33-49-015-0020|2026-3093TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BENNETT DAVID A & BENNETT LINDSAY N 2015 S SEACREST BLVD APT B BOYNTON BEACH FL 33435 6838 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=08-43-45-33-49-015-0020"
+},
+"palmbeach|12-42-46-13-11-086-0020|2026-3167TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HIGH POINT OF DELRAY CONDOMINIUM ASSN AJW LAW GROUP C/O 12300 S SHORE BLVD STE 202 WELLINGTON FL 33414 6509 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-42-46-13-11-086-0020"
+},
+"palmbeach|12-43-46-07-21-009-0250|2026-3131TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions KESSLER BERNICE BERNICE KESSLER TR TITL HLDR KESSLER BARRY TR KESSLER BERNICE TR 3160 NW 6TH ST DELRAY BEACH FL 33445 2089 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-07-21-009-0250"
+},
+"palmbeach|12-43-46-07-43-004-4230|2026-3139TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions QUBX ENTERPRISE LLC 14537 S MILITARY TRL STE B DELRAY BEACH FL 33484 3703 Change of Mailing Address",
+"property_use": "4804\u2014WAREH/DIST TERM CONDO",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-07-43-004-4230"
+},
 "palmbeach|12-43-46-17-22-001-0010|2026-3016TD": {
 "acreage": ".16",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32460,7 +33310,7 @@
 "palmbeach|12-43-46-19-01-001-0105|2026-3000TD": {
 "acreage": ".02",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32471,7 +33321,7 @@
 "palmbeach|12-43-46-19-01-001-0112|2026-3023TD": {
 "acreage": ".03",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32482,13 +33332,45 @@
 "palmbeach|12-43-46-19-01-001-0113|2026-3021TD": {
 "acreage": ".03",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions MAESEL SHAWN R 4658 PINE TREE DR BOYNTON BEACH FL 33436 4823 Change of Mailing Address",
 "property_use": "0110\u2014TOWNHOUSE",
 "url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-19-01-001-0113"
+},
+"palmbeach|12-43-46-19-16-103-0040|2026-3108TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions STAGNONE FAMILY LIVING TRUST STAGNONE PAUL J TR STAGNONE RICHARD JR TR & 7 SPRAGUE AVE HOLBROOK MA 02343 1424 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-19-16-103-0040"
+},
+"palmbeach|12-43-46-20-02-001-0041|2026-3165TD": {
+"acreage": ".20",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BLUE MULE GROUP LLC 9948 BOYNTON GARDENS WAY BOYNTON BEACH FL 33437 5344 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-20-02-001-0041"
+},
+"palmbeach|12-43-46-20-06-000-0161|2026-3099TD": {
+"acreage": ".18",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MA CAPITAL INVESTMENT PLUS LLC 6901 OKEECHOBEE BLVD STE K3 ROYAL PALM BEACH FL 33411 2511 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-20-06-000-0161"
 },
 "palmbeach|12-43-46-20-13-013-0130|2026-2658TD": {
 "acreage": ".06",
@@ -32504,13 +33386,45 @@
 "palmbeach|12-43-46-20-33-000-0020|2026-3074TD": {
 "acreage": ".21",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
 "owner_name": "Owner(s) Mailing Address Actions SAUVEUR MARIE L 813 SW 6TH AVE DELRAY BEACH FL 33444 2343 Change of Mailing Address",
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-20-33-000-0020"
+},
+"palmbeach|12-43-46-30-01-017-1705|2026-3133TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions EMERTON MICHELLE 2760 SW 22ND AVE APT 1705 DELRAY BEACH FL 33445 7242 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=12-43-46-30-01-017-1705"
+},
+"palmbeach|18-42-44-10-08-000-0141|2026-3125TD": {
+"acreage": ".03",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MULLAN ROBERTA J TRUST 80 GREY HAWK DR # 674 MASHPEE MA 02649 4420 Change of Mailing Address",
+"property_use": "0110\u2014TOWNHOUSE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=18-42-44-10-08-000-0141"
+},
+"palmbeach|18-42-44-23-01-010-0270|2026-3150TD": {
+"acreage": ".15",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ABRAMS JASON CARBN LLC TR CARBN LLC TR TITL HLDR 333 JACKSON AVE LAKE WORTH FL 33463 3317 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=18-42-44-23-01-010-0270"
 },
 "palmbeach|18-42-44-23-12-413-0022|2026-2985TD": {
 "assessed_value": "Cap Differential",
@@ -32524,7 +33438,7 @@
 },
 "palmbeach|18-42-44-26-14-235-0042|2026-3056TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32563,6 +33477,47 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=18-42-44-27-28-006-0050"
 },
+"palmbeach|24-43-46-33-19-000-0501|2026-3096TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions 3201 OCEAN BOULEVARD LLC 2501 JEROME AVE BRONX NY 10468 4305 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=24-43-46-33-19-000-0501"
+},
+"palmbeach|28-43-41-28-33-000-1010|2026-3138TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions JUNO BEACH 101 LLC 4060 N HILLS DR APT 5 HOLLYWOOD FL 33021 2430 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=28-43-41-28-33-000-1010"
+},
+"palmbeach|30-42-41-10-13-000-5810|2026-3145TD": {
+"acreage": ".36",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions MIRPURI KIMBERLY MIRPURI SUNIL & 189 RAINTREE TRL JUPITER FL 33458 7350 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=30-42-41-10-13-000-5810"
+},
+"palmbeach|30-43-41-05-03-004-4140|2026-3111TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CORBO ANTHONY L & CORBO MARY 23365 WESTBURY ST ST CLR SHORES MI 48080 2546 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=30-43-41-05-03-004-4140"
+},
 "palmbeach|36-43-42-20-01-041-0210|2026-2988TD": {
 "acreage": ".17",
 "assessed_value": "Cap Differential",
@@ -32573,6 +33528,165 @@
 "owner_name": "Owner(s) Mailing Address Actions LRA FLORIDA 2 LLC 340 S LEMON AVE STE 9680 WALNUT CA 91789 2706 Change of Mailing Address",
 "property_use": "1700\u2014OFFICE BLDG-NON MEDICAL 1 TO 3 STORIES",
 "url": "https://pbcpao.gov/Property/Details?parcelId=36-43-42-20-01-041-0210"
+},
+"palmbeach|38-43-44-15-34-000-0070|2026-3126TD": {
+"acreage": ".24",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BISHOP BROOKS & BISHOP OLYMPIA 9 BELLA VISTA AVE LAKE WORTH BEACH FL 33460 6665 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-15-34-000-0070"
+},
+"palmbeach|38-43-44-16-37-000-0160|2026-3128TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions WEISS ADAM 1829 N A ST APT 16 LAKE WORTH BEACH FL 33460 6468 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-16-37-000-0160"
+},
+"palmbeach|38-43-44-21-15-046-0150|2026-3129TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions 18 WAVES LLC 7300 BISCAYNE BLVD STE 200 MIAMI FL 33138 5182 Change of Mailing Address",
+"property_use": "0000\u2014VACANT",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-21-15-046-0150"
+},
+"palmbeach|38-43-44-21-15-048-0310|2026-3106TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions LURTZ MARK 314 S LAKESIDE DR LAKE WORTH BEACH FL 33460 4628 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-21-15-048-0310"
+},
+"palmbeach|38-43-44-21-15-103-0081|2026-3140TD": {
+"acreage": ".08",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BERGMANN PHILLIP J 119 3RD AVE S LAKE WORTH BEACH FL 33460 4222 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-21-15-103-0081"
+},
+"palmbeach|38-43-44-21-15-227-0040|2026-3153TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CHEN NICHOLAS 17683 83RD PL N LOXAHATCHEE FL 33470 2651 Change of Mailing Address",
+"property_use": "0800\u2014MULTIFAMILY < 5 UNITS",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-21-15-227-0040"
+},
+"palmbeach|38-43-44-21-15-366-0010|2026-3132TD": {
+"acreage": ".15",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions 312 12TH AVE NORTH LP 1199 S FEDERAL HWY BOCA RATON FL 33432 7335 Change of Mailing Address",
+"property_use": "0101\u2014SINGLE FAMILY-COMM ZONING",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-21-15-366-0010"
+},
+"palmbeach|38-43-44-27-01-020-0140|2026-3152TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions PALLANGO JEFTE 821 S N ST LAKE WORTH BEACH FL 33460 5053 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-27-01-020-0140"
+},
+"palmbeach|38-43-44-27-01-036-0020|2026-3155TD": {
+"acreage": ".16",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ROSA JANET 980 SW 21ST LN BOCA RATON FL 33486 6837 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-27-01-036-0020"
+},
+"palmbeach|38-43-44-29-09-000-0090|2026-3112TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions EDWARDS TAWANNA S 2290 SUNSET AVE APT 9 LAKE WORTH BEACH FL 33461 5643 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-29-09-000-0090"
+},
+"palmbeach|38-43-44-29-17-005-1110|2026-3154TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions SMITH BRYAN SMITH LLOYD & 3200 LAKE OSBORNE DR APT 111 LAKE WORTH BEACH FL 33461 5945 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-29-17-005-1110"
+},
+"palmbeach|38-43-44-29-17-020-1110|2026-3113TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions NELSON JOEL PO BOX 968 HUNTINGTON NY 11743 0968 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-29-17-020-1110"
+},
+"palmbeach|38-43-44-29-17-023-2070|2026-3127TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions BURKE LESLIE & KIRKON MICHELLE H & RUGGIERO ROBERTA E & UGOLIK CHARLAYNE & HANDY MARK EST HANDY RUSSELL & 6805 MASSACHUSETTS DR LAKE WORTH FL 33462 3837 Change of Mail",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=38-43-44-29-17-023-2070"
+},
+"palmbeach|40-43-44-34-43-007-0080|2026-3160TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ZOELLIN MARIANNA 230 GROVE ACRE AVE APT 205 PACIFIC GROVE CA 93950 2374 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=40-43-44-34-43-007-0080"
+},
+"palmbeach|41-41-43-17-01-104-0020|2026-3159TD": {
+"acreage": "5.00",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions KANDOR FARM LLC 5665 NW 100TH ST OCALA FL 34482 1217 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=41-41-43-17-01-104-0020"
 },
 "palmbeach|41-41-43-17-01-326-0050|2026-2810TD": {
 "acreage": "5.00",
@@ -32607,9 +33721,19 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=48-37-42-19-01-000-0260"
 },
+"palmbeach|50-43-44-14-01-003-2030|2026-3171TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions TEBELE CHARLES 4709 30TH ST STE 605 LONG IS CITY NY 11101 3400 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=50-43-44-14-01-003-2030"
+},
 "palmbeach|50-43-44-14-01-003-3070|2026-3036TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32617,10 +33741,20 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=50-43-44-14-01-003-3070"
 },
+"palmbeach|50-43-44-35-18-001-4050|2026-3170TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions KARIKAS ANASTASIA KARIKAS SOFIA & 3540 204TH ST # 1 BAYSIDE NY 11361 1232 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=50-43-44-35-18-001-4050"
+},
 "palmbeach|52-42-42-15-13-006-0070|2026-3062TD": {
 "acreage": ".12",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32628,9 +33762,41 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=52-42-42-15-13-006-0070"
 },
+"palmbeach|52-43-42-06-15-016-3030|2026-3114TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions WARNCKE GREG 101 WOODLAND MNR TINTON FALLS NJ 07724 2860 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=52-43-42-06-15-016-3030"
+},
+"palmbeach|52-43-42-07-18-099-1219|2026-3123TD": {
+"acreage": ".03",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions ZEDLER DONALD L 1219 12TH CT PALM BEACH GARDENS FL 33410 5164 Change of Mailing Address",
+"property_use": "0110\u2014TOWNHOUSE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=52-43-42-07-18-099-1219"
+},
+"palmbeach|52-43-42-18-15-000-0483|2026-3134TD": {
+"acreage": ".05",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CONNER HEATHER M ANN 4803 LAKE CATHERINE DR LAKE PARK FL 33403 1166 Change of Mailing Address",
+"property_use": "0110\u2014TOWNHOUSE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=52-43-42-18-15-000-0483"
+},
 "palmbeach|56-43-42-22-28-003-0503|2026-3038TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32648,6 +33814,16 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-22-28-004-0220"
 },
+"palmbeach|56-43-42-26-07-000-0071|2026-3162TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions SULLIVAN JAMES & SULLIVAN MARY 56 GURNET RD DUXBURY MA 02332 4010 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-26-07-000-0071"
+},
 "palmbeach|56-43-42-29-05-004-0040|2026-2964TD": {
 "acreage": ".22",
 "assessed_value": "Cap Differential",
@@ -32659,10 +33835,21 @@
 "property_use": "1000\u2014VACANT COMMERCIAL LAND",
 "url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-29-05-004-0040"
 },
+"palmbeach|56-43-42-29-13-001-0190|2026-3161TD": {
+"acreage": ".14",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions EDWARDS JONATHAN 267 W 15TH ST RIVIERA BEACH FL 33404 6105 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-29-13-001-0190"
+},
 "palmbeach|56-43-42-29-16-004-0130|2026-3042TD": {
 "acreage": ".12",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32670,10 +33857,21 @@
 "property_use": "0100\u2014SINGLE FAMILY",
 "url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-29-16-004-0130"
 },
+"palmbeach|56-43-42-29-41-000-0070|2026-3146TD": {
+"acreage": ".17",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions DAVIS SYDNEY & DAVIS TARYA L 1249 W 9TH ST RIVIERA BEACH FL 33404 6626 Change of Mailing Address",
+"property_use": "0800\u2014MULTIFAMILY < 5 UNITS",
+"url": "https://pbcpao.gov/Property/Details?parcelId=56-43-42-29-41-000-0070"
+},
 "palmbeach|56-43-42-31-30-046-0060|2026-3001TD": {
 "acreage": ".02",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32683,7 +33881,7 @@
 },
 "palmbeach|62-43-45-02-02-006-0070|2026-3019TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32693,7 +33891,7 @@
 },
 "palmbeach|68-43-42-04-19-002-0420|2026-3059TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32711,6 +33909,56 @@
 "property_use": "0400\u2014CONDOMINIUM",
 "url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-09-04-000-2030"
 },
+"palmbeach|68-43-42-09-35-000-1060|2026-3158TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions SHERRI A BRIEGEL LIVNG TRUST BRIEGEL SHERRI TR BRIEGEL THOMAS I TR 2327 W 60TH ST DAVENPORT IA 52806 2724 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-09-35-000-1060"
+},
+"palmbeach|68-43-42-17-29-000-3100|2026-3156TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions CEDENO ESTATES LLC 11891 GUMBO LIMBO CT JUPITER FL 33458 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-17-29-000-3100"
+},
+"palmbeach|68-43-42-17-38-817-0010|2026-3116TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HABASHY PETER 4388 GOLFERS CIR W PALM BEACH GARDENS FL 33410 4632 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-17-38-817-0010"
+},
+"palmbeach|68-43-42-17-38-817-0020|2026-3118TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions HABASHY PETER 4388 GOLFERS CIR W PALM BEACH GARDENS FL 33410 4632 Change of Mailing Address",
+"property_use": "0400\u2014CONDOMINIUM",
+"url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-17-38-817-0020"
+},
+"palmbeach|68-43-42-21-23-002-1030|2026-3148TD": {
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions WARCHELAK IRENE & NUGENT CHARLES WARCHELAK JOHN & 101 DOOLEN CT APT 103B NORTH PALM BEACH FL 33408 5741 Change of Mailing Address",
+"property_use": "0510\u2014COOPERATIVE",
+"url": "https://pbcpao.gov/Property/Details?parcelId=68-43-42-21-23-002-1030"
+},
 "palmbeach|70-42-44-24-02-001-0160|2026-2998TD": {
 "acreage": ".20",
 "assessed_value": "Cap Differential",
@@ -32722,9 +33970,42 @@
 "property_use": "0000\u2014VACANT",
 "url": "https://pbcpao.gov/Property/Details?parcelId=70-42-44-24-02-001-0160"
 },
+"palmbeach|70-43-44-18-05-008-0050|2026-3157TD": {
+"acreage": ".25",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions DESINAT WILKENS 3190 DOLAN RD WEST PALM BEACH FL 33406 7922 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=70-43-44-18-05-008-0050"
+},
+"palmbeach|72-41-43-14-01-012-0070|2026-3149TD": {
+"acreage": ".24",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions K H L TRUST KACHOUROFF CHRIS TR 215 LAS PALMAS ROYAL PALM BEACH FL 33411 1324 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=72-41-43-14-01-012-0070"
+},
+"palmbeach|72-41-43-26-07-004-0010|2026-3044TD": {
+"acreage": ".35",
+"assessed_value": "Cap Differential",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"just_value": "Assessed Value",
+"mailing_address": "Actions",
+"ok": true,
+"owner_name": "Owner(s) Mailing Address Actions JAMES AUDREY 246 SANDPIPER AVE ROYAL PALM BEACH FL 33411 2940 Change of Mailing Address",
+"property_use": "0100\u2014SINGLE FAMILY",
+"url": "https://pbcpao.gov/Property/Details?parcelId=72-41-43-26-07-004-0010"
+},
 "palmbeach|72-41-43-26-13-006-1030|2026-3045TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32735,7 +34016,7 @@
 "palmbeach|73-41-44-18-01-011-0020|2026-3017TD": {
 "acreage": "1.00",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32768,7 +34049,7 @@
 "palmbeach|73-42-44-17-02-001-5770|2026-3020TD": {
 "acreage": ".24",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32779,7 +34060,7 @@
 "palmbeach|74-41-42-24-01-002-0390|2026-3026TD": {
 "acreage": ".35",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32811,7 +34092,7 @@
 "palmbeach|74-42-43-24-00-000-1090|2026-3039TD": {
 "acreage": "3.05",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32822,7 +34103,7 @@
 "palmbeach|74-43-43-04-08-065-0190|2026-3047TD": {
 "acreage": ".12",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32895,7 +34176,7 @@
 "palmbeach|74-43-43-19-02-012-0060|2026-3050TD": {
 "acreage": ".17",
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -32916,7 +34197,7 @@
 },
 "palmbeach|74-43-43-33-41-002-0170|2026-3007TD": {
 "assessed_value": "Cap Differential",
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Assessed Value",
 "mailing_address": "Actions",
 "ok": true,
@@ -34271,7 +35552,7 @@
 "polk|23-27-36-0160-2600-0790|00092-2026": {
 "acreage": "0.02",
 "assessed_value": 12500.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736016026000790"
 },
@@ -34808,7 +36089,7 @@
 "polk|24-27-07-0000-0004-3420|00117-2026": {
 "acreage": "0.28",
 "assessed_value": 35982.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242707000000043420"
 },
@@ -35290,7 +36571,7 @@
 "polk|25-28-24-3536-0000-4074|00040-2026": {
 "acreage": "0.18",
 "assessed_value": 59258.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252824353600004074"
 },
@@ -35821,7 +37102,7 @@
 "polk|27-27-21-7530-0000-0440|00179-2026": {
 "acreage": "0.10",
 "assessed_value": 90420.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721753000000440"
 },
@@ -44570,11 +45851,23 @@
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1144085607"
 },
+"seminole|01-20-30-504-2800-0060|20260068/2024-000049 HD": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=01-20-30-504-2800-0060"
+},
 "seminole|01-20-30-506-0000-2660|20260069/2024-000064": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=01-20-30-506-0000-2660"
+},
+"seminole|07-21-30-505-0D00-0220|20260127/2024-000951": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=07-21-30-505-0D00-0220"
 },
 "seminole|08-21-29-515-0C00-0020|20260071": {
 "error": "no recognizable fields on page",
@@ -44668,6 +45961,18 @@
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=18-21-30-509-0000-024B"
 },
+"seminole|20-19-30-501-0000-3140|20260124/2021-000058 CS": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3140"
+},
+"seminole|20-19-30-501-0000-3180|20260125/2021-000059": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3180"
+},
 "seminole|20-21-30-504-0000-0330|20260050/2024-003231": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -44744,6 +46049,12 @@
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AG-110B-0040"
 },
+"seminole|25-19-30-5AI-0913-0050|20260087 2024-004346 DP": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AI-0913-0050"
+},
 "seminole|26-19-30-504-0000-0010|20260040/2024-004473": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -44778,6 +46089,12 @@
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-300-041H-0000"
 },
+"seminole|33-19-31-300-1390-0000|20260110/2024-005542": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-300-1390-0000"
+},
 "seminole|33-19-31-506-0300-0120|20260112/2024-005561": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -44789,6 +46106,12 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-506-0600-0030"
+},
+"seminole|33-19-31-507-0000-1260|20260115 2024-005598 DP": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-507-0000-1260"
 },
 "seminole|34-21-30-530-0000-1110|20260056/2024-005984": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -44812,6 +46135,12 @@
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-505-0000-0260"
 },
+"seminole|35-19-30-513-2200-0060|20260126/2021-000489 HD": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-513-2200-0060"
+},
 "seminole|36-19-29-5NH-0000-0230|20260028/2024-006395": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -44827,6 +46156,18 @@
 "parcel_address": "1248 CHESSINGTON Cir",
 "source": "reportall"
 }
+},
+"seminole|36-19-30-300-0320-0000|20260121/2024-006401": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-300-0320-0000"
+},
+"seminole|36-19-30-506-0000-061A|20260122/2024-006413": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-506-0000-061A"
 },
 "seminole|36-19-30-514-0000-0080|20260123/2024-006421": {
 "error": "no recognizable fields on page",
@@ -44858,6 +46199,12 @@
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/143180101941003"
 },
+"stlucie|1432-806-0036-000-5|26-224": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/143280600360005"
+},
 "stlucie|1433-701-0086-000-1|26-110": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -44881,6 +46228,12 @@
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240481000180002"
+},
+"stlucie|2405-501-0127-000-3|26-218": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240550101270003"
 },
 "stlucie|2405-601-0126-000-3|26-176": {
 "error": "no recognizable fields on page",
@@ -44918,17 +46271,47 @@
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560104990008"
 },
+"stlucie|2405-701-0042-000-7|26-213": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240570100420007"
+},
+"stlucie|2406-114-0009-000-5|26-214": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240611400090005"
+},
 "stlucie|2406-502-0059-000-1|26-187": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240650200590001"
 },
+"stlucie|2409-122-0006-000-8|26-219": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240912200060008"
+},
+"stlucie|2409-501-0071-000-7|26-227": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240950100710007"
+},
 "stlucie|2409-602-0110-000-3|26-080": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960201100003"
+},
+"stlucie|2409-602-0154-000-3|26-228": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240960201540003"
 },
 "stlucie|2409-605-0043-000-1|26-195": {
 "error": "no recognizable fields on page",
@@ -44941,6 +46324,18 @@
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500980001"
+},
+"stlucie|2409-820-0033-000-9|26-229": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240982000330009"
+},
+"stlucie|2409-823-0043-000-1|26-216": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/240982300430001"
 },
 "stlucie|2410-709-0108-000-8|26-092": {
 "error": "no recognizable fields on page",
@@ -44996,6 +46391,12 @@
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/332382300300007"
 },
+"stlucie|3407-506-0040-000-3|26-226": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/340750600400003"
+},
 "stlucie|3420-501-0027-000-2|26-143": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -45013,6 +46414,12 @@
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342051003220008"
+},
+"stlucie|3420-515-0259-000-0|26-024": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://apps.paslc.gov/rerecordcard/342051502590000"
 },
 "stlucie|3420-515-0874-000-7|26-212": {
 "error": "no recognizable fields on page",
@@ -47391,11 +48798,29 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050"
 },
+"washington|00000000-00-0950-0000|2026-TD-257": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-0950-0000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-0950-0000"
+},
+"washington|00000000-00-1539-0000|2026-TD-263": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000"
+},
 "washington|00000000-00-2071-0000|2026-TD-226": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000",
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000"
+},
+"washington|00000000-00-4096-0016|2026-TD-250": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016"
 },
 "washington|00000000-00-4151-0125|2026-TD-239": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4151-0125",
@@ -47409,11 +48834,41 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4155-0363"
 },
+"washington|00000000-00-4414-0312|2026-TD-251": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312"
+},
+"washington|00000000-00-4877-0000|2026-TD-317": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000"
+},
 "washington|00000000-00-4985-0006|2026-TD-248": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006",
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006"
+},
+"washington|00000000-00-5049-0005|2026-TD-252": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005"
+},
+"washington|00000000-00-5411-0121|2026-TD-318": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121"
+},
+"washington|00000000-00-5512-0001|2026-TD-277": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001"
 },
 "washington|00000000-00-5760-0001|2026-TD-246": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5760-0001",
@@ -47442,6 +48897,12 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0016"
+},
+"washington|00000000-01-0006-0017|2026-TD-233": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017"
 },
 "washington|00000000-01-0062-0009|2026-TD-187": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0062-0009",
@@ -47473,6 +48934,24 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0208-0006"
 },
+"washington|00000000-02-0223-0026|2026-TD-236": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026"
+},
+"washington|00000000-02-0242-0009|2026-TD-255": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009"
+},
+"washington|00000000-02-0244-0017|2026-TD-240": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017"
+},
 "washington|00000000-02-0247-0006|2026-TD-200": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0247-0006",
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -47500,6 +48979,12 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-03-0286-0011"
+},
+"washington|00000000-04-0156-0038|2026-TD-276": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038"
 },
 "washington|00000000-04-0199-0024|2026-TD-081": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -47541,6 +49026,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0205-0006"
 },
+"washington|00000000-04-0206-0011|2026-TD-261": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011"
+},
 "washington|00000000-04-1642-0005|2026-TD-190": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-1642-0005",
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -47568,6 +49059,12 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0313-0012"
+},
+"washington|00000000-05-0318-0002|2026-TD-242": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002"
 },
 "washington|00000000-05-0333-0006|2026-TD-191": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0333-0006",
@@ -47604,6 +49101,12 @@
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0344-0004"
+},
+"washington|00000000-06-0348-0003|2026-TD-259": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003"
 },
 "washington|00000000-06-0356-0007|2026-TD-162": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0356-0007",
@@ -47670,6 +49173,12 @@
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0364-0009"
+},
+"washington|00000000-06-0369-0019|2026-TD-254": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019"
 },
 "washington|00000000-06-0380-0006|2026-TD-244": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0380-0006",
@@ -47791,6 +49300,12 @@
 "source": "reportall"
 }
 },
+"washington|00000000-07-0433-0033|2026-TD-241": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033"
+},
 "washington|00000000-07-0450-0007|2026-TD-101": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -47834,6 +49349,12 @@
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0002"
+},
+"washington|00000000-07-0464-0007|2026-TD-272": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007"
 },
 "washington|00000000-08-0484-0011|2026-TD-194": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0484-0011",
@@ -48149,6 +49670,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0031"
 },
+"washington|00000000-10-0567-0008|2026-TD-271": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008"
+},
 "washington|00000000-10-0571-0011|2026-TD-123": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -48229,11 +49756,29 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0021"
 },
+"washington|00000000-11-0753-0011|2026-TD-269": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011"
+},
+"washington|00000000-11-0757-0001|2026-TD-268": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001"
+},
 "washington|00000000-11-0757-0002|2026-TD-143": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0002",
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0002"
+},
+"washington|00000000-11-0765-0012|2026-TD-267": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012"
 },
 "washington|00000000-11-0766-0002|2026-TD-142": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0766-0002",
@@ -48252,6 +49797,12 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0017"
+},
+"washington|00000000-11-0778-0027|2026-TD-266": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027"
 },
 "washington|00000000-11-0786-0011|2026-TD-106": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -48285,6 +49836,12 @@
 "source": "reportall"
 }
 },
+"washington|00000000-12-1003-0025|2026-TD-265": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025"
+},
 "washington|00000000-12-1004-0003|2026-TD-223": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0003",
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -48296,6 +49853,18 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0004"
+},
+"washington|00000000-12-1006-0016|2026-TD-279": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016"
+},
+"washington|00000000-12-1007-0009|2026-TD-278": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009",
+"fetched_at": "2026-11-01T11:05:14+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009"
 },
 "washington|00000000-14-1226-0008|2026-TD-184": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1226-0008",
