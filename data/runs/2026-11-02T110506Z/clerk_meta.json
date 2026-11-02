@@ -1,0 +1,63 @@
+{
+  "started_at": "2026-11-02T11:42:03+00:00",
+  "counties": {
+    "columbia": {
+      "status": "ok",
+      "records": 0,
+      "url": "https://columbiaclerk.com/clerk-services/tax-deeds/upcoming-tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [],
+      "finished_at": "2026-11-02T11:42:07+00:00"
+    },
+    "hardee": {
+      "status": "ok",
+      "records": 0,
+      "url": "https://www.hardeeclerk.com/departments/tax-deeds/tax-deed-sales/",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [],
+      "finished_at": "2026-11-02T11:42:12+00:00"
+    },
+    "levy": {
+      "status": "error",
+      "records": 0,
+      "url": "https://online.levyclerk.com/TaxSmartWeb",
+      "robots": "robots.txt unreachable (ReadTimeout); proceeding politely",
+      "error": "HTTPError: 522 Server Error: <none> for url: https://online.levyclerk.com/TaxSmartWeb",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/Taxdeed/Taxdeed/scraper/clerk_scrape.py\", line 616, in scrape_clerk_counties\n    recs = collector(entry, session, rate)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Taxdeed/Taxdeed/scraper/clerk_scrape.py\", line 305, in collect_taxsmart\n    r.raise_for_status()\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py\", line 1167, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 522 Server Error: <none> for url: https://online.levyclerk.com/TaxSmartWeb\n",
+      "finished_at": "2026-11-02T11:42:46+00:00"
+    },
+    "okaloosa": {
+      "status": "ok",
+      "records": 21,
+      "url": "https://www.bid4assets.com/OkaloosaFLTax/listings",
+      "robots": "robots.txt HTTP 404; treating as no restrictions",
+      "sale_dates": [
+        "11/10/2026",
+        "12/08/2026"
+      ],
+      "finished_at": "2026-11-02T11:42:50+00:00"
+    },
+    "stjohns": {
+      "status": "ok",
+      "records": 43,
+      "url": "https://apps.stjohnsclerk.com/TaxSmart",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "11/18/2026",
+        "12/16/2026"
+      ],
+      "finished_at": "2026-11-02T11:43:01+00:00"
+    },
+    "sumter": {
+      "status": "ok",
+      "records": 11,
+      "url": "https://www.sumterclerk.com/tax-deed-sales",
+      "robots": "robots.txt permits required paths",
+      "sale_dates": [
+        "11/19/2026"
+      ],
+      "finished_at": "2026-11-02T11:43:08+00:00"
+    }
+  },
+  "finished_at": "2026-11-02T11:43:08+00:00"
+}
