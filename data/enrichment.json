@@ -1249,10 +1249,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|484223-04-0920|54159": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 309390.0,
+"mailing_address": "171 NE 25 CT POMPANO BEACH FL 33064-3855",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484223040920"
 },
 "broward|484223-BM-0570|54231": {
 "error": "no recognizable fields on page",
@@ -1287,10 +1288,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484231AJ0370"
 },
 "broward|484235-27-0100|54146": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 3010.0,
+"mailing_address": "915 NE 2 ST POMPANO BEACH FL 33060",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484235270100"
 },
 "broward|484235-32-0510|54028": {
 "error": "no recognizable fields on page",
@@ -1335,10 +1337,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494108-AG-0070|54156": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 103560.0,
+"mailing_address": "1126 S FEDERAL HWY #391 FORT LAUDERDALE FL 33316",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494108AG0070"
 },
 "broward|494108-BA-0700|53922": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1348,10 +1351,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494108BA0700"
 },
 "broward|494109-AM-0640|54165": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 124960.0,
+"mailing_address": "PO BOX 770850 CORAL SPRINGS FL 33077-0850",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494109AM0640"
 },
 "broward|494111-AD-1080|54365": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1455,10 +1459,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494136-BA-0090|54213": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 6430.0,
+"mailing_address": "11457 SW 17 CT MIRAMAR FL 33025",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494136BA0090"
 },
 "broward|494136-BE-0290|54062": {
 "error": "no recognizable fields on page",
@@ -1609,10 +1614,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|504111-04-0680|54217": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 729560.0,
+"mailing_address": "401 S BEL AIR DR PLANTATION FL 33317",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504111040680"
 },
 "broward|504112-06-0490|54236": {
 "error": "no recognizable fields on page",
@@ -1646,16 +1652,18 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504126040370"
 },
 "broward|504130-10-0030|54211": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 1476760.0,
+"mailing_address": "1083 N COLLIER BLVD #421 MARCO ISLAND FL 34145",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504130100030"
 },
 "broward|504136-04-0030|54210": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 1225650.0,
+"mailing_address": "200 POWELL PL BRENTWOOD TN 37027",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504136040030"
 },
 "broward|504201-BA-0600|54013": {
 "error": "no recognizable fields on page",
@@ -1664,10 +1672,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|504201-BA-0870|54185": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 116390.0,
+"mailing_address": "2670 E SUNRISE BLVD #702 FORT LAUDERDALE FL 33304",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504201BA0870"
 },
 "broward|504203-BF-0860|54341": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1677,16 +1686,18 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504203BF0860"
 },
 "broward|504204-09-0030|54187": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 411640.0,
+"mailing_address": "1812 NW 8 CT FORT LAUDERDALE FL 33311-6913",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504204090030"
 },
 "broward|504204-25-0420|53547": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 315500.0,
+"mailing_address": "% ANGELA ELOUIDOR 529 NW 17 AVE FORT LAUDERDALE FL 33311",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504204250420"
 },
 "broward|504205-10-0010|53673": {
 "error": "no recognizable fields on page",
@@ -1727,10 +1738,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514032-AA-0660|54190": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 311990.0,
+"mailing_address": "4702 SW 160 AVE #321 MIRAMAR FL 33027",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514032AA0660"
 },
 "broward|514108-BD-0010|54247": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1752,10 +1764,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514117-AB-5200|54195": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 141660.0,
+"mailing_address": "8911 S HOLLYBROOK BLVD #310 PEMBROKE PINES FL 33025-1352",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514117AB5200"
 },
 "broward|514119-06-0741|53740": {
 "error": "no recognizable fields on page",
@@ -1764,10 +1777,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514121-AC-2180|54176": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 195730.0,
+"mailing_address": "2294 SW 81 ST HOLLYWOOD FL 33025",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514121AC2180"
 },
 "broward|514123-07-3960|54355": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1797,16 +1811,18 @@
 "url": "https://bcpa.net/"
 },
 "broward|514203-AK-0030|54184": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 199930.0,
+"mailing_address": "390 CHEMIN DES CHARLETS *COATICOOK QC CA J1A 2S4",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514203AK0030"
 },
 "broward|514212-BG-0060|54186": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 134660.0,
+"mailing_address": "600 THREE ISLANDS BLVD APT 103 HALLANDALE BEACH FL 33009-2842",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514212BG0060"
 },
 "broward|514219-01-2631|54119": {
 "error": "no recognizable fields on page",
@@ -1833,10 +1849,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514226-HD-2820|54198": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"just_value": 315860.0,
+"mailing_address": "3725 S OCEAN DR #PH03 HOLLYWOOD FL 33019",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514226HD2820"
 },
 "broward|514226-HK-0480|53856": {
 "error": "no recognizable fields on page",
@@ -8766,6 +8783,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
+"gilchrist|201014-02820015-0040|26-0026-TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040"
+},
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
 "fetched_at": "2026-10-28T10:15:58+00:00",
@@ -13529,6 +13552,18 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1100"
+},
+"jackson|02-2N-11-0086-0880-1430|1991 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430"
+},
+"jackson|02-2N-11-0086-0880-1540|1992 OF 2019": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540"
 },
 "jackson|02-2N-11-0086-0880-1780|1993 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1780",
@@ -28523,7 +28558,7 @@
 },
 "miamidade|01-3122-052-2400|2026A00184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-27T09:37:06+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131220522400"
 },
@@ -35523,7 +35558,7 @@
 "polk|23-27-09-0000-0003-3160|00219-2026": {
 "acreage": "2.36",
 "assessed_value": 1180.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232709000000033160"
 },
@@ -35537,7 +35572,7 @@
 "polk|23-27-33-0000-0003-3075|00237-2026": {
 "acreage": "0.28",
 "assessed_value": 80248.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232733000000033075"
@@ -35545,7 +35580,7 @@
 "polk|23-27-36-0139-0000-3110|00253-2026": {
 "acreage": "0.59",
 "assessed_value": 52688.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736013900003110"
 },
@@ -35573,7 +35608,7 @@
 "polk|23-28-11-0295-0000-2260|00244-2026": {
 "acreage": "0.27",
 "assessed_value": 51519.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811029500002260"
@@ -35581,7 +35616,7 @@
 "polk|23-28-11-0295-0000-2272|00245-2026": {
 "acreage": "0.35",
 "assessed_value": 64921.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232811029500002272"
 },
@@ -35595,7 +35630,7 @@
 "polk|23-28-12-0455-0000-3100|00246-2026": {
 "acreage": "0.24",
 "assessed_value": 146326.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812045500003100"
 },
@@ -35630,14 +35665,14 @@
 "polk|23-28-14-0795-0000-3120|00230-2026": {
 "acreage": "0.20",
 "assessed_value": 91374.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232814079500003120"
 },
 "polk|23-28-14-0840-0000-2010|00235-2026": {
 "acreage": "0.36",
 "assessed_value": 200727.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232814084000002010"
 },
@@ -35708,7 +35743,7 @@
 "polk|23-29-28-1420-5000-1700|00227-2026": {
 "acreage": "0.43",
 "assessed_value": 243028.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232928142050001700"
 },
@@ -35750,7 +35785,7 @@
 "polk|23-30-12-0000-0003-1670|00231-2026": {
 "acreage": "0.13",
 "assessed_value": 100321.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233012000000031670"
 },
@@ -36110,7 +36145,7 @@
 "polk|24-28-10-1787-1100-0405|00249-2026": {
 "acreage": "0.07",
 "assessed_value": 41069.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242810178711000405"
 },
@@ -36152,21 +36187,21 @@
 "polk|24-28-31-2614-9000-8280|00221-2026": {
 "acreage": "0.16",
 "assessed_value": 148924.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242831261490008280"
 },
 "polk|24-29-08-2794-7000-0340|00254-2026": {
 "acreage": "0.35",
 "assessed_value": 454827.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242908279470000340"
 },
 "polk|24-29-13-2820-2200-0040|00255-2026": {
 "acreage": "2.08",
 "assessed_value": 691409.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242913282022000040"
 },
@@ -36180,7 +36215,7 @@
 "polk|24-29-14-2831-4100-0160|00222-2026": {
 "acreage": "0.27",
 "assessed_value": 213929.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242914283141000160"
@@ -36188,14 +36223,14 @@
 "polk|24-29-16-2845-5100-0380|00257-2026": {
 "acreage": "0.41",
 "assessed_value": 1010366.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242916284551000380"
 },
 "polk|24-30-08-0000-0003-3040|00261-2026": {
 "acreage": "1.49",
 "assessed_value": 230249.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=243008000000033040"
@@ -36457,7 +36492,7 @@
 "polk|25-25-06-0000-0003-3300|00209-2026": {
 "acreage": "1.51",
 "assessed_value": 753.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000033300"
 },
@@ -36471,14 +36506,14 @@
 "polk|25-25-06-0000-0004-1100|00211-2026": {
 "acreage": "1.25",
 "assessed_value": 625.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000041100"
 },
 "polk|25-25-06-0000-0004-3120|00212-2026": {
 "acreage": "1.56",
 "assessed_value": 782.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252506000000043120"
 },
@@ -36506,7 +36541,7 @@
 "polk|25-27-36-3055-0100-3040|00260-2026": {
 "acreage": "0.33",
 "assessed_value": 460833.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252736305501003040"
 },
@@ -36520,7 +36555,7 @@
 "polk|25-28-09-3213-2000-3070|00263-2026": {
 "acreage": "0.25",
 "assessed_value": 146796.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252809321320003070"
@@ -36535,7 +36570,7 @@
 "polk|25-28-11-3378-0000-5132|00264-2026": {
 "acreage": "0.09",
 "assessed_value": 60962.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252811337800005132"
 },
@@ -36549,7 +36584,7 @@
 "polk|25-28-12-3382-0000-0840|00243-2026": {
 "acreage": "0.15",
 "assessed_value": 172822.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252812338200000840"
@@ -36578,7 +36613,7 @@
 "polk|25-29-14-3597-0000-0070|00262-2026": {
 "acreage": "0.17",
 "assessed_value": 122962.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=252914359700000070"
 },
@@ -36735,7 +36770,7 @@
 "polk|26-25-12-9999-6733-2040|00265-2026": {
 "acreage": "0.01",
 "assessed_value": 163500.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262512999967332040"
@@ -36743,7 +36778,7 @@
 "polk|26-25-13-9999-4300-8350|00268-2026": {
 "acreage": "0.02",
 "assessed_value": 170000.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262513999943008350"
@@ -36767,7 +36802,7 @@
 "polk|26-27-15-0000-0004-3110|00161-2026": {
 "acreage": "0.92",
 "assessed_value": 58616.0,
-"fetched_at": "2026-10-02T10:28:25+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262715000000043110"
 },
@@ -36795,14 +36830,14 @@
 "polk|26-28-08-5288-0000-0230|00266-2026": {
 "acreage": "0.22",
 "assessed_value": 128719.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808528800000230"
 },
 "polk|26-28-08-5290-0000-0040|00267-2026": {
 "acreage": "1.19",
 "assessed_value": 155661.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808529000000040"
 },
@@ -36845,7 +36880,7 @@
 "polk|26-28-29-6210-0005-2060|00224-2026": {
 "acreage": "0.15",
 "assessed_value": 86384.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262829621000052060"
 },
@@ -36874,35 +36909,35 @@
 "polk|26-29-19-0000-0001-4280|00213-2026": {
 "acreage": "1.04",
 "assessed_value": 521.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000014280"
 },
 "polk|26-29-19-0000-0002-3080|00214-2026": {
 "acreage": "1.01",
 "assessed_value": 504.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000023080"
 },
 "polk|26-29-19-0000-0003-2040|00215-2026": {
 "acreage": "1.01",
 "assessed_value": 504.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032040"
 },
 "polk|26-29-19-0000-0003-2200|00216-2026": {
 "acreage": "1.01",
 "assessed_value": 504.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032200"
 },
 "polk|26-29-19-0000-0003-2220|00220-2026": {
 "acreage": "1.05",
 "assessed_value": 523.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032220"
 },
@@ -37158,14 +37193,14 @@
 "polk|27-29-09-8573-0000-0170|00192-2026": {
 "acreage": "0.15",
 "assessed_value": 37555.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272909857300000170"
 },
 "polk|27-29-09-8578-0000-0090|00193-2026": {
 "acreage": "0.16",
 "assessed_value": 100870.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272909857800000090"
 },
@@ -37404,14 +37439,14 @@
 "polk|28-27-33-9344-6045-1070|00199-2026": {
 "acreage": "0.18",
 "assessed_value": 40000.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460451070"
 },
 "polk|28-27-33-9344-6049-0040|00200-2026": {
 "acreage": "0.20",
 "assessed_value": 40000.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "owner_name": "Owner Name2",
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460490040"
@@ -37475,14 +37510,14 @@
 "polk|28-31-28-9638-0000-6080|00218-2026": {
 "acreage": "0.16",
 "assessed_value": 11073.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128963800006080"
 },
 "polk|28-31-28-9650-0000-2210|00233-2026": {
 "acreage": "0.16",
 "assessed_value": 38148.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128965000002210"
 },
@@ -37496,7 +37531,7 @@
 "polk|28-32-08-0000-0003-4200|00201-2026": {
 "acreage": "0.31",
 "assessed_value": 64833.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283208000000034200"
 },
@@ -37609,42 +37644,42 @@
 "polk|29-29-30-9917-5000-2170|00202-2026": {
 "acreage": "0.99",
 "assessed_value": 35150.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=292930991750002170"
 },
 "polk|29-31-12-9940-6002-1507|00207-2026": {
 "acreage": "0.50",
 "assessed_value": 4027.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021507"
 },
 "polk|29-31-12-9940-6002-1617|00208-2026": {
 "acreage": "0.50",
 "assessed_value": 4027.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021617"
 },
 "polk|29-31-12-9940-6002-1618|00252-2026": {
 "acreage": "0.50",
 "assessed_value": 4027.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021618"
 },
 "polk|29-31-12-9940-6002-1704|00234-2026": {
 "acreage": "0.50",
 "assessed_value": 4027.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060021704"
 },
 "polk|29-31-12-9940-6002-3718|00204-2026": {
 "acreage": "0.50",
 "assessed_value": 4027.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=293112994060023718"
 },
@@ -37721,7 +37756,7 @@
 "polk|30-31-05-9940-0000-7123|00205-2026": {
 "acreage": "0.50",
 "assessed_value": 9000.0,
-"fetched_at": "2026-10-01T10:50:35+00:00",
+"fetched_at": "2026-11-03T11:29:51+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=303105994000007123"
 },
@@ -45295,6 +45330,12 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=01-1N-28-0000-00418-0000"
 },
+"santarosa|02-1N-28-0000-11500-0000|2026285": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=02-1N-28-0000-11500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=02-1N-28-0000-11500-0000"
+},
 "santarosa|03-1N-28-0000-03500-0000|2026165": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=03-1N-28-0000-03500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -45341,6 +45382,12 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=06-1N-26-0000-00141-0000"
 },
+"santarosa|09-1N-28-0000-05600-0000|2026280": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-28-0000-05600-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-28-0000-05600-0000"
+},
 "santarosa|09-1N-29-5433-00A00-0220|2026252": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-29-5433-00A00-0220 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-28T10:15:58+00:00",
@@ -45369,6 +45416,18 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-1N-28-3040-00400-0030"
 },
+"santarosa|10-3S-29-4935-00000-0850|2026277": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-3S-29-4935-00000-0850 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=10-3S-29-4935-00000-0850"
+},
+"santarosa|12-1N-28-0000-00428-0000|2026264": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=12-1N-28-0000-00428-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=12-1N-28-0000-00428-0000"
+},
 "santarosa|15-1N-29-1290-00C00-0040|2026253": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=15-1N-29-1290-00C00-0040 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-28T10:15:58+00:00",
@@ -45380,6 +45439,12 @@
 "fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=16-2N-28-0000-04501-0000"
+},
+"santarosa|18-1N-28-0000-04203-0000|2026265": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-1N-28-0000-04203-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=18-1N-28-0000-04203-0000"
 },
 "santarosa|18-2N-27-2050-00000-0251|2026134": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-2N-27-2050-00000-0251 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -45423,17 +45488,35 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=21-2N-28-2360-00100-0450"
 },
+"santarosa|22-1N-28-0000-04405-0000|2026266": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-1N-28-0000-04405-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=22-1N-28-0000-04405-0000"
+},
 "santarosa|22-5N-28-0000-01309-0000|2026259": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-5N-28-0000-01309-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-5N-28-0000-01309-0000"
 },
+"santarosa|23-1N-29-1210-02100-0090|2026272": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=23-1N-29-1210-02100-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=23-1N-29-1210-02100-0090"
+},
 "santarosa|24-3N-30-0000-00903-0000|2026254": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=24-3N-30-0000-00903-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=24-3N-30-0000-00903-0000"
+},
+"santarosa|28-2N-28-0000-04105-0000|2026267": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2N-28-0000-04105-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=28-2N-28-0000-04105-0000"
 },
 "santarosa|28-2S-26-9170-000IT-PARK|2026220": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2S-26-9170-000IT-PARK (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -45471,11 +45554,41 @@
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-22500-0090"
 },
+"santarosa|40-1N-28-0090-45000-0130|2026283": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-45000-0130 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-45000-0130"
+},
+"santarosa|40-1N-28-0090-47000-0160|2026268": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-47000-0160 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-47000-0160"
+},
 "santarosa|40-1N-28-0090-52100-0070|2026203": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52100-0070 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52100-0070"
+},
+"santarosa|40-1N-28-0090-52200-0150|2026269": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52200-0150 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52200-0150"
+},
+"santarosa|40-1N-28-0090-56200-0010|2026270": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56200-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56200-0010"
+},
+"santarosa|40-1N-28-0090-56800-0110|2026286": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56800-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56800-0110"
 },
 "santarosa|40-1N-28-0090-63700-0100|2026221": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0100 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
@@ -45488,6 +45601,12 @@
 "fetched_at": "2026-10-28T10:15:58+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0110"
+},
+"santarosa|40-1N-28-0090-75800-0030|2026279": {
+"error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-75800-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
+"fetched_at": "2026-11-03T11:29:51+00:00",
+"ok": false,
+"url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-75800-0030"
 },
 "santarosa|41-5N-29-0000-04100-0000|2026033": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=41-5N-29-0000-04100-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
