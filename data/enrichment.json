@@ -356,19 +356,19 @@
 },
 "bay|01547-000-000|2026-0281TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000"
 },
 "bay|01601-000-000|2026-00262TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000"
 },
 "bay|02332-000-000|2026-0454TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000"
 },
@@ -464,19 +464,19 @@
 },
 "bay|07379-100-000|2026-1619TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000"
 },
 "bay|07399-644-006|2026-1707TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006"
 },
 "bay|07399-951-000|2026-1713TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000"
 },
@@ -558,7 +558,7 @@
 },
 "bay|16869-000-000|2026-3170TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000"
 },
@@ -576,25 +576,25 @@
 },
 "bay|19314-000-000|2026-3438TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000"
 },
 "bay|23410-000-000|2026-3642TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000"
 },
 "bay|23411-000-000|2026-3643TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000"
 },
 "bay|23438-000-000|2026-3738TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000"
 },
@@ -634,7 +634,7 @@
 },
 "bay|27554-130-010|2026-4239TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010"
 },
@@ -728,6 +728,12 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2001173"
 },
+"brevard|2002854|260429": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2002854",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2002854"
+},
 "brevard|2104517|260308": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2104517",
 "fetched_at": "2026-10-22T09:14:52+00:00",
@@ -739,6 +745,18 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2106367"
+},
+"brevard|2108267|260428": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2108267",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2108267"
+},
+"brevard|2109744|260427": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2109744",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2109744"
 },
 "brevard|2111705|260122": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2111705",
@@ -757,6 +775,12 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2206158"
+},
+"brevard|2206591|260434": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2206591",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2206591"
 },
 "brevard|2208093|260291": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2208093",
@@ -824,17 +848,83 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2400440"
 },
+"brevard|2406410|260403": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406410",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2406410"
+},
+"brevard|2406488|260405": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406488",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2406488"
+},
+"brevard|2406552|260404": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406552",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2406552"
+},
+"brevard|2409831|260445": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2409831",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2409831"
+},
 "brevard|2411122|260197": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2411122",
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2411122"
 },
+"brevard|2413725|260456": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2413725",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2413725"
+},
 "brevard|2414276|260294": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2414276",
 "fetched_at": "2026-10-07T10:58:25+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2414276"
+},
+"brevard|2415328|260447": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2415328",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2415328"
+},
+"brevard|2417894|260468": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2417894",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2417894"
+},
+"brevard|2419293|260455": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2419293",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2419293"
+},
+"brevard|2419581|260450": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2419581",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2419581"
+},
+"brevard|2422648|260469": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2422648",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2422648"
+},
+"brevard|2422739|260463": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2422739",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2422739"
 },
 "brevard|2424555|260363": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2424555",
@@ -859,6 +949,12 @@
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426611"
+},
+"brevard|2427275|260459": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2427275",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2427275"
 },
 "brevard|2428121|260019": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2428121",
@@ -920,11 +1016,29 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2711426"
 },
+"brevard|2717640|260375": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2717640",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2717640"
+},
 "brevard|2719444|260271": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2719444",
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2719444"
+},
+"brevard|2719588|260386": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2719588",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2719588"
+},
+"brevard|2724533|260387": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2724533",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2724533"
 },
 "brevard|2729714|260327": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2729714",
@@ -1082,11 +1196,23 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2849883"
 },
+"brevard|2851331|260392": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2851331",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2851331"
+},
 "brevard|2900727|260368": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2900727",
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2900727"
+},
+"brevard|2903138|260400": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2903138",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2903138"
 },
 "brevard|2905358|260220": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2905358",
@@ -1100,11 +1226,29 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2905917"
 },
+"brevard|2910239|260401": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2910239",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2910239"
+},
 "brevard|2910867|260397": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2910867",
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2910867"
+},
+"brevard|2919665|260402": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2919665",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2919665"
+},
+"brevard|2923054|260376": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2923054",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2923054"
 },
 "brevard|2923063|260283": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2923063",
@@ -1148,11 +1292,23 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2940872"
 },
+"brevard|2944771|260399": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2944771",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2944771"
+},
 "brevard|2952727|260115": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952727",
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2952727"
+},
+"brevard|2952749|260406": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952749",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2952749"
 },
 "brevard|3004355|260394": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/3004355",
@@ -1261,10 +1417,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|484203-B7-0140|54266": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"just_value": 99420.0,
+"mailing_address": "59 CANTERBURY PL *DOLLARD DES ORMEAUX QC CA H9B 2H7",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484203B70140"
 },
 "broward|484203-BK-0240|53989": {
 "error": "no recognizable fields on page",
@@ -1511,10 +1668,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494202-03-1011|54244": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"just_value": 143570.0,
+"mailing_address": "3631 NW 7 CT LAUDERHILL FL 33311",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494202031011"
 },
 "broward|494202-03-1172|53942": {
 "error": "no recognizable fields on page",
@@ -1586,10 +1744,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494212-NS-0110|54278": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"just_value": 117070.0,
+"mailing_address": "6260 NE 18 AVE #711 FORT LAUDERDALE FL 33334-5143",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494212NS0110"
 },
 "broward|494227-AC-0150|54092": {
 "error": "no recognizable fields on page",
@@ -1748,10 +1907,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504234010900"
 },
 "broward|504234-01-2320|54251": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"just_value": 89500.0,
+"mailing_address": "232 NW 14 WAY DANIA BEACH FL 33004",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504234012320"
 },
 "broward|504235-AC-0060|54325": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -4342,6 +4502,12 @@
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=200823-002509-000-00"
 },
+"clay|200823-002538-000-00|2026-0088TD": {
+"error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=200823-002538-000-00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=200823-002538-000-00"
+},
 "clay|200823-021899-003-00|2026-0032TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -6114,6 +6280,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0775460000"
+},
+"duval|081154-0000|2026-0918TD": {
+"assessed_value": 1105834.0,
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"just_value": 1497287.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0811540000"
 },
 "duval|084505-0000|2026-0074TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -8817,7 +8991,7 @@
 },
 "gilchrist|040916-00000002-0190|26-0017-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190"
 },
@@ -8869,13 +9043,13 @@
 },
 "gilchrist|100816-00000004-0010|26-0018-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010"
 },
 "gilchrist|111015-02370000-0270|26-0019-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270"
 },
@@ -8960,7 +9134,7 @@
 },
 "gilchrist|280814-1931000C-0020|26-0020-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020"
 },
@@ -13272,7 +13446,7 @@
 },
 "indianriver|33391200015000000002.9|2026-0047TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9"
 },
@@ -13354,7 +13528,7 @@
 },
 "indianriver|33400500012010000005.0|2026-0065TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0"
 },
@@ -18439,7 +18613,7 @@
 },
 "manatee|1391800459|2026TD000194": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1391800459"
 },
@@ -18613,7 +18787,7 @@
 },
 "manatee|5081500406|2026TD000199": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5081500406"
 },
@@ -18649,7 +18823,7 @@
 },
 "manatee|5488700005|2026TD000201": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5488700005"
 },
@@ -18697,7 +18871,7 @@
 },
 "manatee|5814400007|2026TD000203": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5814400007"
 },
@@ -18709,7 +18883,7 @@
 },
 "manatee|6111500002|2026TD000185": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6111500002"
 },
@@ -28739,7 +28913,7 @@
 },
 "miamidade|01-3126-047-0090|2026A00242": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131260470090"
 },
@@ -28899,7 +29073,7 @@
 },
 "miamidade|30-5816-000-0301|2026A00264": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3058160000301"
 },
@@ -30492,7 +30666,7 @@
 },
 "orange|132328278600250|2024-5522": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132328278600250"
 },
@@ -31042,13 +31216,13 @@
 },
 "orange|272229919801000|2024-9120": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272229919801000"
 },
 "orange|272230038007080|2024-14806": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272230038007080"
 },
@@ -31226,7 +31400,7 @@
 },
 "orange|302430266507203|2024-16897": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/302430266507203"
 },
@@ -31396,7 +31570,7 @@
 },
 "orange|332229901900020|2024-9878": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/332229901900020"
 },
@@ -31438,7 +31612,7 @@
 },
 "orange|342428933105105|2024-6542": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/342428933105105"
 },
@@ -31474,7 +31648,7 @@
 },
 "orange|352428435904403|2024-6596": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/352428435904403"
 },
@@ -31592,6 +31766,12 @@
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223"
 },
+"osceola|032530420800010510|6682024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032530420800010510",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032530420800010510"
+},
 "osceola|052527316100010460|8352024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052527316100010460",
 "fetched_at": "2026-09-07T14:35:09+00:00",
@@ -31621,6 +31801,12 @@
 "fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072530270201760050"
+},
+"osceola|072732000012440010|16702024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072732000012440010",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072732000012440010"
 },
 "osceola|082529224200016030|17482024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=082529224200016030",
@@ -31652,6 +31838,36 @@
 "source": "reportall"
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=0926315330000B0092"
+},
+"osceola|092732000024130030|20062024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092732000024130030",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092732000024130030"
+},
+"osceola|102731000019200000|21352024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000019200000",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000019200000"
+},
+"osceola|102731000020700000|21372024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000020700000",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000020700000"
+},
+"osceola|102731000021200000|21402024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021200000",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021200000"
+},
+"osceola|102731000021300000|21412024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021300000",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021300000"
 },
 "osceola|112528539700030280|22382024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112528539700030280",
@@ -31690,11 +31906,59 @@
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040"
 },
+"osceola|112731000023230020|23472024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000023230020",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000023230020"
+},
+"osceola|112731000032440010|23642024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000032440010",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000032440010"
+},
 "osceola|122730495000010061|23312022": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061"
+},
+"osceola|132731999102120010|26532024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999102120010",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999102120010"
+},
+"osceola|132731999202220010|26612024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220010",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220010"
+},
+"osceola|132731999202220020|26622024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220020",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220020"
+},
+"osceola|132731999203210020|26632024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999203210020",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999203210020"
+},
+"osceola|142731000044340010|25432023": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340010",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340010"
+},
+"osceola|142731000044340020|25442023": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340020",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340020"
 },
 "osceola|152529124000010060|29052024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=152529124000010060",
@@ -31776,6 +32040,12 @@
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=202629288100010090"
 },
+"osceola|20273200003243001H|39562024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=20273200003243001H",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=20273200003243001H"
+},
 "osceola|2125291900000D0090|40212024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2125291900000D0090",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -31825,6 +32095,18 @@
 "source": "reportall"
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242730000000150000"
+},
+"osceola|24273160003214001B|44032024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003214001B",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003214001B"
+},
+"osceola|24273160003423001B|44102024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003423001B",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003423001B"
 },
 "osceola|242833000033110010|44602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010",
@@ -31914,6 +32196,12 @@
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628610006500040"
 },
+"osceola|252628611413590170|46512024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611413590170",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611413590170"
+},
 "osceola|252628611815430190|47332024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611815430190",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -31970,6 +32258,30 @@
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000"
 },
+"osceola|262630061300010120|56742019": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010120",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010120"
+},
+"osceola|262630061300010140|56752019": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010140",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010140"
+},
+"osceola|262630061300012430|58352019": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012430",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012430"
+},
+"osceola|262630061300012450|58372019": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012450",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012450"
+},
 "osceola|262630061300012490|58392019": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012490",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -32008,6 +32320,12 @@
 },
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012500"
 },
+"osceola|26273100004244001C|51072024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=26273100004244001C",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=26273100004244001C"
+},
 "osceola|2725273038000N101N|51362024": {
 "appraiser_error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=2725273038000N101N",
 "fetched_at": "2026-08-28T01:25:07+00:00",
@@ -32044,6 +32362,18 @@
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302530497100011020"
+},
+"osceola|30273260003242002G|54802024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260003242002G",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260003242002G"
+},
+"osceola|30273260004442001G|55012024": {
+"error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260004442001G",
+"fetched_at": "2026-11-05T11:33:37+00:00",
+"ok": false,
+"url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260004442001G"
 },
 "osceola|312530000000600000|55472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000",
@@ -35449,10 +35779,11 @@
 "url": "https://www.pcpao.gov/property-details?s=01-29-15-98750-013-1350"
 },
 "pinellas|01-31-16-77166-001-0120|2024-06725": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=01-31-16-77166-001-0120"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163101771660010120"
 },
 "pinellas|02-29-15-87714-000-0230|2024-01257": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -35475,16 +35806,18 @@
 "url": "https://www.pcpao.gov/property-details?s=163202494821010040"
 },
 "pinellas|03-27-16-00000-220-0120|2024-04178": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=03-27-16-00000-220-0120"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162703000002200120"
 },
 "pinellas|03-27-16-00000-220-0130|2024-04179": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=03-27-16-00000-220-0130"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162703000002200130"
 },
 "pinellas|03-30-15-65684-003-0740|2024-02678": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -35520,10 +35853,11 @@
 "url": "https://www.pcpao.gov/property-details?s=163106615060000080"
 },
 "pinellas|06-31-16-68976-003-0520|2024-07047": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=06-31-16-68976-003-0520"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163106689760030520"
 },
 "pinellas|07-28-16-94147-002-0130|2024-04540": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -35559,16 +35893,18 @@
 "url": "https://www.pcpao.gov/property-details?s=08-29-15-43308-000-0520"
 },
 "pinellas|09-28-16-23935-002-0320|2024-04589": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=09-28-16-23935-002-0320"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162809239350020320"
 },
 "pinellas|09-31-16-48456-001-0110|2024-07156": {
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=09-31-16-48456-001-0110"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163109484560010110"
 },
 "pinellas|10-29-15-18450-004-0150|2024-01497": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -38334,7 +38670,7 @@
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000401",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5300.0,
 "mailing_address": "728 WYOMING AVE CROYDON PA 19021",
 "ok": true,
@@ -38346,7 +38682,7 @@
 "acreage": "1.01",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000431",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 18180.0,
 "mailing_address": "450 W 32 PLACE HIALEAH FL 33012-5346",
 "ok": true,
@@ -38359,7 +38695,7 @@
 "applicant": "PP 119 LONGTREE ST, GEORGETOWN9",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240000469",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 7580.0,
 "mailing_address": "119 LONGTREE ST GEORGETOWN FL 32139",
 "ok": true,
@@ -38631,9 +38967,9 @@
 "acreage": "0.27",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240001090",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 2750.0,
-"mailing_address": "911 NORTH HANCOCK ST PHILADELPHIA PA 19123",
+"mailing_address": "10041 OAKRIDGE DR WEXFORD PA 15090",
 "ok": true,
 "owner_name": "DOUBLE NICKELS PROPERTIES LLC",
 "property_use": "00000 - Vacant",
@@ -39895,7 +40231,7 @@
 "applicant": "Unassigned Locati,",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20200003241",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "2760 F ROAD LOXAHATCHEE FL 33470",
 "ok": true,
@@ -40832,7 +41168,7 @@
 "applicant": "PP 107 DOTHAN ST, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003828",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3840.0,
 "mailing_address": "750 ST MARKS AVE BROOKLYN NY 11216",
 "ok": true,
@@ -40856,7 +41192,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240003871",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "C/O MARGARET SMALL 171 RAINBOW DR AVON PARK FL 33825",
 "ok": true,
@@ -40930,7 +41266,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004115",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "5621 DE MOTT AVE COMMERCE CITY CO 80022",
 "ok": true,
@@ -40954,7 +41290,7 @@
 "acreage": "0.29",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004127",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 6370.0,
 "mailing_address": "2236 SW 166TH AVE MIRAMAR FL 33027",
 "ok": true,
@@ -40966,7 +41302,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004150",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "1719 BRADMOORE DR FORESTVILLE MD 20747",
 "ok": true,
@@ -40978,7 +41314,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004156",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "20 BARROWS COURT NORTON MA 02766",
 "ok": true,
@@ -40990,7 +41326,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004157",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "20 BARROWS COURT NORTON MA 02766",
 "ok": true,
@@ -41002,7 +41338,7 @@
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004187",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4550.0,
 "mailing_address": "144 ISLANDER RD SATSUMA FL 32189",
 "ok": true,
@@ -41280,7 +41616,7 @@
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240004559",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3800.0,
 "mailing_address": "1813 SW 176TH WAY MIRAMAR FL 33029",
 "ok": true,
@@ -41485,7 +41821,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005002",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "204 HAMRICK ST INTERLACHEN FL 32148",
 "ok": true,
@@ -41497,7 +41833,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240005008",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4780.0,
 "mailing_address": "134 VOLUSIA DR INTERLACHEN FL 32148",
 "ok": true,
@@ -42196,7 +42532,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006211",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3750.0,
 "mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
 "ok": true,
@@ -42208,7 +42544,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006212",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3750.0,
 "mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
 "ok": true,
@@ -42220,7 +42556,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006213",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3750.0,
 "mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
 "ok": true,
@@ -42232,7 +42568,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006214",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3750.0,
 "mailing_address": "8608 S MEADE AVE BURBANK IL 60459",
 "ok": true,
@@ -42349,7 +42685,7 @@
 "acreage": "1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006480",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 13000.0,
 "mailing_address": "C/O LILA ASHWORTH 604 24TH AVE S N MYRTLE BEACH SC 29582",
 "ok": true,
@@ -42374,7 +42710,7 @@
 "acreage": "0.53",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006760",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 17000.0,
 "mailing_address": "806 S MANGONIA CIRCLE WEST PALM BEACH FL 33409",
 "ok": true,
@@ -42386,7 +42722,7 @@
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006874",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
 "ok": true,
@@ -42398,7 +42734,7 @@
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006875",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
 "ok": true,
@@ -42410,7 +42746,7 @@
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006876",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
 "ok": true,
@@ -42422,7 +42758,7 @@
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240006877",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
 "ok": true,
@@ -42434,7 +42770,7 @@
 "acreage": "0.1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20230007875",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 1880.0,
 "mailing_address": "8 HOLLY TERRACE N6 6LX HIGHGATE LONDON UNITED KINGDOM",
 "ok": true,
@@ -42575,7 +42911,7 @@
 "acreage": "0.21",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240007525",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3610.0,
 "mailing_address": "160 LAKE CIRCLE SATSUMA FL 32189",
 "ok": true,
@@ -42876,7 +43212,7 @@
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008109",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5070.0,
 "mailing_address": "4170 SABLE RIDGE DR WESTON FL 33331",
 "ok": true,
@@ -43071,7 +43407,7 @@
 "acreage": "0.25",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008505",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5700.0,
 "mailing_address": "2555 ROYAL PINE CIRCLE F CLEARWATER FL 34623-1123",
 "ok": true,
@@ -43083,7 +43419,7 @@
 "acreage": "0.29",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008515",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 6860.0,
 "mailing_address": "17-36 201 STREET BAYSIDE NY 11360",
 "ok": true,
@@ -43108,7 +43444,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008637",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "C/O DANA BROWN MGR 9035 107TH AVE VERO BEACH FL 32967",
 "ok": true,
@@ -43120,7 +43456,7 @@
 "acreage": "0.38",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008651",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4430.0,
 "mailing_address": "13 ARLINGTON LANE FOX LAKE IL 60020",
 "ok": true,
@@ -43164,7 +43500,7 @@
 "acreage": "0.34",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008706",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 6660.0,
 "mailing_address": "1500 HWY A1A STE #1 VERO BEACH FL 32963",
 "ok": true,
@@ -43246,7 +43582,7 @@
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008881",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5300.0,
 "mailing_address": "6254 MURPHY DR VICTOR NY 14564",
 "ok": true,
@@ -43258,7 +43594,7 @@
 "acreage": "0.23",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240008882",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5300.0,
 "mailing_address": "104 HOOVER LANE SATSUMA FL 32189",
 "ok": true,
@@ -43567,7 +43903,7 @@
 "acreage": "1",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240009490",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 12000.0,
 "mailing_address": "225 CHESSER MONROE RD HAWTHORNE FL 32640",
 "ok": true,
@@ -43747,7 +44083,7 @@
 "applicant": "PP 215 SILVER LAKE RD, PALATKA7",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010087",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 8600.0,
 "mailing_address": "219 SILVER LAKE RD PALATKA FL 32177",
 "ok": true,
@@ -43984,7 +44320,7 @@
 "acreage": "0.36",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010490",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 7960.0,
 "mailing_address": "4310 ROUTE 26 WHITNEY POINT NY 13862",
 "ok": true,
@@ -44042,7 +44378,7 @@
 "applicant": "PP 251 2ND WAY, INTERLACHEN8",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240010521",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 5100.0,
 "mailing_address": "160 SAN JUAN AVE LOT 22 EAST PALATKA FL 32131",
 "ok": true,
@@ -44314,7 +44650,7 @@
 "acreage": "0.44",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011050",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4500.0,
 "mailing_address": "18305 BISCAYNE BLVD STE 400 AVENTURA FL 33160",
 "ok": true,
@@ -44778,7 +45114,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240011900",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "15040 SW 178 TER MIAMI FL 33187",
 "ok": true,
@@ -44851,7 +45187,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012087",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "750 ST MARKS AVE BROOKLYN NY 11216",
 "ok": true,
@@ -44885,7 +45221,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012107",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "1860 ROBSON ST APT #402 VANCOUVER BC V6G 3C1 CANADA",
 "ok": true,
@@ -44897,7 +45233,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012118",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 3680.0,
 "mailing_address": "C/O CRESENCIANA BARRANDA-GACUSAN 649 MILLCREST DR MARYSVILLE OH 43040",
 "ok": true,
@@ -45082,7 +45418,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012619",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "20000 CALVERT ST WOODLAND HILLS CA 91367",
 "ok": true,
@@ -45116,7 +45452,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012725",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "134 OAK WAY INTERLACHEN FL 32148",
 "ok": true,
@@ -45128,7 +45464,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012726",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "134 OAK WAY INTERLACHEN FL 32148",
 "ok": true,
@@ -45165,7 +45501,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240012861",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "57 DAYTON RD LAKE WORTH FL 33467",
 "ok": true,
@@ -45214,7 +45550,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013050",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "189 OLD VILLAGE LANE BETHEL PARK PA 15102-3291",
 "ok": true,
@@ -45250,7 +45586,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013160",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "17730-58A AVENUE #203 SURREY, B.C. V3S 8M5 CANADA",
 "ok": true,
@@ -45262,7 +45598,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240013174",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "8 RIVER OAKS CIR WEST BUFFALO GROVE IL 60089",
 "ok": true,
@@ -45951,7 +46287,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015533",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "13325 POCOMOKE CT WOODBRIDGE VA 22192",
 "ok": true,
@@ -45963,7 +46299,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015535",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "3451 SALAND WAY # 414 JACKSONVILLE FL 32246",
 "ok": true,
@@ -46071,7 +46407,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015857",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "3841 CASTLEBRIDGE LANE LEXINGTON KY 40509",
 "ok": true,
@@ -46108,7 +46444,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015947",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "PO BOX 121 FLORAHOME FL 32140",
 "ok": true,
@@ -46120,7 +46456,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015948",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "PO BOX 121 FLORAHOME FL 32140",
 "ok": true,
@@ -46132,7 +46468,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015949",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "PO BOX 121 FLORAHOME FL 32140",
 "ok": true,
@@ -46144,7 +46480,7 @@
 "acreage": "0.22",
 "clerk_case_url": "https://apps.putnam-fl.com/coc/taxdeeds/public/public_certification.php?certnum=20240015950",
 "clerk_platform": "template",
-"fetched_at": "2026-10-06T11:00:40+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 4040.0,
 "mailing_address": "PO BOX 121 FLORAHOME FL 32140",
 "ok": true,
@@ -47384,7 +47720,7 @@
 },
 "santarosa|19-2S-27-1010-00A00-1170|2026205": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-1170 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-1170"
 },
@@ -47396,7 +47732,7 @@
 },
 "santarosa|21-2N-28-2360-00100-0450|2026218": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=21-2N-28-2360-00100-0450 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=21-2N-28-2360-00100-0450"
 },
@@ -47444,7 +47780,7 @@
 },
 "santarosa|32-2N-28-0000-05050-0000|2026219": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=32-2N-28-0000-05050-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=32-2N-28-0000-05050-0000"
 },
@@ -47456,7 +47792,7 @@
 },
 "santarosa|34-2N-28-0570-00Q00-0020|2026207": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020"
 },
@@ -47480,7 +47816,7 @@
 },
 "santarosa|40-1N-28-0090-52100-0070|2026203": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52100-0070 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52100-0070"
 },
@@ -47556,7 +47892,7 @@
 },
 "sarasota|0093120012|2026 TD 000378": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0093120012"
 },
@@ -47568,7 +47904,7 @@
 },
 "sarasota|0170090044|2026 TD 000377": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0170090044"
 },
@@ -47646,7 +47982,7 @@
 },
 "sarasota|0957118917|2026 TD 000401": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0957118917"
 },
@@ -47658,7 +47994,7 @@
 },
 "sarasota|0958067711|2026 TD 000403": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0958067711"
 },
@@ -47718,7 +48054,7 @@
 },
 "sarasota|0967059819|2026 TD 000396": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/0967059819"
 },
@@ -47806,7 +48142,7 @@
 },
 "sarasota|1003016014|2026 TD 000414": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://www.sc-pa.com/propertysearch/parcel/1003016014"
 },
@@ -47908,7 +48244,7 @@
 },
 "seminole|08-21-30-511-0A00-0160|20260030/2024-001109": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=08-21-30-511-0A00-0160"
 },
@@ -48040,7 +48376,7 @@
 },
 "seminole|21-21-30-514-0000-009B|20260105/2024-003472": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-009B"
 },
@@ -48162,7 +48498,7 @@
 },
 "seminole|35-19-30-505-0000-0260|20260118/2024-006065": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-505-0000-0260"
 },
@@ -48202,7 +48538,7 @@
 },
 "seminole|36-19-30-514-0000-0080|20260123/2024-006421": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-514-0000-0080"
 },
@@ -48220,7 +48556,7 @@
 },
 "stlucie|1428-702-1274-000-0|26-169": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/142870212740000"
 },
@@ -48250,7 +48586,7 @@
 },
 "stlucie|2404-609-0098-000-8|26-168": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240460900980008"
 },
@@ -48268,19 +48604,19 @@
 },
 "stlucie|2405-601-0126-000-3|26-176": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101260003"
 },
 "stlucie|2405-601-0185-000-4|26-164": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101850004"
 },
 "stlucie|2405-601-0186-000-1|26-165": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240560101860001"
 },
@@ -48316,7 +48652,7 @@
 },
 "stlucie|2406-502-0059-000-1|26-187": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240650200590001"
 },
@@ -48352,7 +48688,7 @@
 },
 "stlucie|2409-605-0098-000-1|26-185": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500980001"
 },
@@ -48400,7 +48736,7 @@
 },
 "stlucie|2417-506-0143-000-3|26-184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/241750601430003"
 },
@@ -48436,7 +48772,7 @@
 },
 "stlucie|3420-505-0815-000-5|26-170": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342050508150005"
 },
@@ -49207,7 +49543,7 @@
 },
 "volusia|402500000040|10445-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040"
 },
@@ -50789,7 +51125,7 @@
 },
 "walton|25-3N-19-19560-000-0200|2026-0129TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19560-000-0200"
 },
@@ -50807,13 +51143,13 @@
 },
 "walton|33-4N-20-29000-002-0210|2026-0130TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-4N-20-29000-002-0210",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-4N-20-29000-002-0210"
 },
 "walton|33-6N-20-31010-000-0280|2026-0131TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0280",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0280"
 },
@@ -50825,7 +51161,7 @@
 },
 "walton|34-3N-19-19500-00D-0050|2026-0134TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=34-3N-19-19500-00D-0050"
 },
@@ -51755,7 +52091,7 @@
 },
 "washington|00000000-10-0613-0014|2026-TD-139": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014",
-"fetched_at": "2026-10-23T09:18:31+00:00",
+"fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014"
 },
