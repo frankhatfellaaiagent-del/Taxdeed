@@ -129,7 +129,7 @@
 },
 "alachua|06706-304-000|TD 2026-041": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06706-304-000"
 },
@@ -164,7 +164,7 @@
 },
 "alachua|07294-201-125|TD 2026-037": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07294-201-125"
 },
@@ -200,7 +200,7 @@
 },
 "alachua|10733-009-000|TD 2026-025": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10733-009-000"
 },
@@ -218,13 +218,13 @@
 },
 "alachua|11276-008-000|TD 2026-038": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11276-008-000"
 },
 "alachua|11908-000-000|TD 2026-040": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=11908-000-000"
 },
@@ -344,7 +344,7 @@
 },
 "bay|01372-000-000|2026-0257TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01372-000-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01372-000-000"
 },
@@ -528,13 +528,13 @@
 },
 "bay|15196-037-000|2026-2913TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15196-037-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15196-037-000"
 },
 "bay|15624-000-000|2026-2969TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=15624-000-000"
 },
@@ -1366,10 +1366,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|484120-HE-0040|53988": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 214640.0,
+"mailing_address": "11573 NW 39 PLACE CORAL SPRINGS FL 33065",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484120HE0040"
 },
 "broward|484122-AK-0260|53894": {
 "error": "no recognizable fields on page",
@@ -1378,10 +1379,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|484133-AK-0080|54030": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 274010.0,
+"mailing_address": "9799 RIVERSIDE DR #56-5 CORAL SPRINGS FL 33071-6895",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484133AK0080"
 },
 "broward|484134-AB-0200|53867": {
 "error": "no recognizable fields on page",
@@ -1411,10 +1413,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484136AA0010"
 },
 "broward|484201-03-0820|54120": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 182800.0,
+"mailing_address": "3385 NW 23 ST LAUDERDALE LAKES FL 33311",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484201030820"
 },
 "broward|484203-B7-0140|54266": {
 "fetched_at": "2026-11-05T11:33:37+00:00",
@@ -1477,16 +1480,18 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484235270100"
 },
 "broward|484235-32-0510|54028": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 274070.0,
+"mailing_address": "232 NW 14 WAY DANIA BEACH FL 33004",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484235320510"
 },
 "broward|484305-10-0390|54033": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 656930.0,
+"mailing_address": "1278 SE 7 CT DEERFIELD BEACH FL 33441-5869",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484305100390"
 },
 "broward|484306-CB-0160|53921": {
 "error": "no recognizable fields on page",
@@ -1507,10 +1512,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494102-07-1270|54066": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 328470.0,
+"mailing_address": "7207 SW 4 CT NORTH LAUDERDALE FL 33068",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494102071270"
 },
 "broward|494108-01-0023|53864": {
 "error": "no recognizable fields on page",
@@ -1547,10 +1553,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494111AD1080"
 },
 "broward|494122-AA-0370|53995": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 110440.0,
+"mailing_address": "1526 NW 157 AVE PEMBROKE PINES FL 33028",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494122AA0370"
 },
 "broward|494122-AC-0390|54366": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1606,10 +1613,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494128-13-0550|54081": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 436420.0,
+"mailing_address": "2641 NW 87 AVE SUNRISE FL 33322-2931",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494128130550"
 },
 "broward|494128-DC-0190|53903": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1631,10 +1639,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494135-FH-0010|54040": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 294740.0,
+"mailing_address": "7018 AVE M BROOKLYN NY 11234",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494135FH0010"
 },
 "broward|494135-FH-0050|53839": {
 "error": "no recognizable fields on page",
@@ -1650,10 +1659,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494136BA0090"
 },
 "broward|494136-BE-0290|54062": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 96140.0,
+"mailing_address": "1320 NW 43 TER APT 206 LAUDERHILL FL 33313",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494136BE0290"
 },
 "broward|494136-BK-0170|53694": {
 "error": "no recognizable fields on page",
@@ -1751,16 +1761,18 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494212NS0110"
 },
 "broward|494227-AC-0150|54092": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 155820.0,
+"mailing_address": "1600 S DIXIE HWY #501 BOCA RATON FL 33432",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494227AC0150"
 },
 "broward|494229-07-0300|54011": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 403890.0,
+"mailing_address": "2751 NW 25 ST FORT LAUDERDALE FL 33311-2831",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494229070300"
 },
 "broward|494230-BB-0830|53981": {
 "error": "no recognizable fields on page",
@@ -1781,10 +1793,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|494318-01-3080|54093": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 4276110.0,
+"mailing_address": "157 POWERS RD OAKDALE TN 37829",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494318013080"
 },
 "broward|504001-68-0010|53943": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
@@ -1853,10 +1866,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504136040030"
 },
 "broward|504201-BA-0600|54013": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 93830.0,
+"mailing_address": "17070 COLLINS AVE STE 256 SUNNY ISLES BEACH FL 33160",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504201BA0600"
 },
 "broward|504201-BA-0870|54185": {
 "fetched_at": "2026-11-03T11:29:51+00:00",
@@ -2015,10 +2029,11 @@
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514212BG0060"
 },
 "broward|514219-01-2631|54119": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 336390.0,
+"mailing_address": "4520 SW 23 ST WEST PARK FL 33023",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514219012631"
 },
 "broward|514219-BD-0010|54296": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -2034,10 +2049,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514226-CG-1060|54027": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 336600.0,
+"mailing_address": "15 CARBON PL APT 412 JERSEY CITY NJ 07305-5326",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514226CG1060"
 },
 "broward|514226-HD-2820|54198": {
 "fetched_at": "2026-11-03T11:29:51+00:00",
@@ -2059,10 +2075,11 @@
 "url": "https://bcpa.net/"
 },
 "broward|514226-RX-0130|54107": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
-"url": "https://bcpa.net/"
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"just_value": 126360.0,
+"mailing_address": "7171 DRAKE DR FORT MYERS FL 33908",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514226RX0130"
 },
 "charlotte|402101154016|26-0626": {
 "acreage": "Land Value",
@@ -4414,7 +4431,7 @@
 },
 "clay|090524-005953-215-00|2026-0085TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=090524-005953-215-00",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=090524-005953-215-00"
 },
@@ -4594,7 +4611,7 @@
 },
 "clay|330823-004923-009-00|2026-0096TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-004923-009-00",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=330823-004923-009-00"
 },
@@ -4618,7 +4635,7 @@
 },
 "clay|380626-017905-000-00|2026-0102TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=380626-017905-000-00",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=380626-017905-000-00"
 },
@@ -8985,7 +9002,7 @@
 },
 "gilchrist|040814-00000001-0010|26-0023-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-08-14-0000-0001-0010"
 },
@@ -9037,7 +9054,7 @@
 },
 "gilchrist|091015-01080000-0860|26-0024-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-10-15-0108-0000-0860",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=09-10-15-0108-0000-0860"
 },
@@ -9104,7 +9121,7 @@
 },
 "gilchrist|161015-00000049-0000|26-0025-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0049-0000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=16-10-15-0000-0049-0000"
 },
@@ -9128,7 +9145,7 @@
 },
 "gilchrist|250814-00200009-0010|26-0022-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=25-08-14-0020-0009-0010",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=25-08-14-0020-0009-0010"
 },
@@ -9244,9 +9261,69 @@
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
+"hendry|1 29 43 27 010 00B2-021.0|25-142": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 31 43 35 010 000M-011.0|25-154": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 31 43 35 010 000M-012.0|25-155": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 31 43 36 010 000N-015.0|25-156": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 31 43 36 010 000N-016.0|25-157": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 32 44 36 A00 0176.0100|25-158": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 33 44 07 030 0002-008.0|25-124": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 34 43 14 A00 0054.0300|25-136": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-28T10:15:58+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|3 34 43 01 010 0081-110.0|25-161": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 030 2136-021.0|25-145": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -9330,7 +9407,7 @@
 },
 "hendry|4 29 43 10 110 2433-067.0|25-119": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-"fetched_at": "2026-10-28T10:15:58+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -13916,31 +13993,31 @@
 },
 "jackson|02-2N-11-0086-0880-1780|1993 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1780",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1780"
 },
 "jackson|02-2N-11-0086-0880-1790|1994 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1790",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1790"
 },
 "jackson|02-2N-11-0086-0880-1910|1997 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1910",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1910"
 },
 "jackson|02-2N-11-0086-0920-0120|2009 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0120",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0120"
 },
 "jackson|02-2N-11-0086-0920-0190|2011 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0190",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0920-0190"
 },
@@ -13952,7 +14029,7 @@
 },
 "jackson|02-2N-11-0086-0980-0010|2027 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0980-0010",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0980-0010"
 },
@@ -14018,7 +14095,7 @@
 },
 "jackson|02-2N-11-0087-1350-0180|2156 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0180",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0180"
 },
@@ -14392,7 +14469,7 @@
 },
 "jackson|20-4N-11-0242-0000-0070|2803 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-4N-11-0242-0000-0070",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=20-4N-11-0242-0000-0070"
 },
@@ -14440,7 +14517,7 @@
 },
 "jackson|33-5N-11-0000-0190-0090|2969 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=33-5N-11-0000-0190-0090",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=33-5N-11-0000-0190-0090"
 },
@@ -18673,7 +18750,7 @@
 },
 "manatee|2494600006|2026TD000222": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2494600006"
 },
@@ -18727,7 +18804,7 @@
 },
 "manatee|3122101359|2026TD000230": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3122101359"
 },
@@ -18745,7 +18822,7 @@
 },
 "manatee|3352000958|2026TD000233": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3352000958"
 },
@@ -18895,7 +18972,7 @@
 },
 "manatee|6202200009|2026TD000206": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6202200009"
 },
@@ -18943,7 +19020,7 @@
 },
 "manatee|7054400002|2026TD000211": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7054400002"
 },
@@ -18979,7 +19056,7 @@
 },
 "manatee|877732750|2026TD000217": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=877732750"
 },
@@ -19081,9 +19158,17 @@
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=59072&YR=2026&mName=False&mSitus=False"
 },
 "marion|0392-022-072|12032017": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
-"ok": false,
+"applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
+"applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "12032017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-06T11:29:42+00:00",
+"ok": true,
+"sale_date": "11/18/2026",
+"tax_number": "12032017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=59285&YR=2026&mName=False&mSitus=False"
 },
 "marion|04650-021-00|14502015": {
@@ -31702,13 +31787,13 @@
 },
 "osceola|012630000102430080|1692024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430080"
 },
 "osceola|012630000102430110|1702024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=012630000102430110"
 },
@@ -31732,7 +31817,7 @@
 },
 "osceola|032528298300042340|4602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528298300042340"
 },
@@ -31744,7 +31829,7 @@
 },
 "osceola|032528340700012200|5242024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700012200"
 },
@@ -31756,13 +31841,13 @@
 },
 "osceola|032528340700014216|5992024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014216"
 },
 "osceola|032528340700014223|6032024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032528340700014223"
 },
@@ -31780,7 +31865,7 @@
 },
 "osceola|052629319600010280|9612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=052629319600010280"
 },
@@ -31816,7 +31901,7 @@
 },
 "osceola|092529365300010060|19272024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092529365300010060"
 },
@@ -31896,13 +31981,13 @@
 },
 "osceola|112630060907440030|22902024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440030"
 },
 "osceola|112630060907440040|22912024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112630060907440040"
 },
@@ -31920,7 +32005,7 @@
 },
 "osceola|122730495000010061|23312022": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061"
 },
@@ -32011,7 +32096,7 @@
 },
 "osceola|192631495000010320|38142024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=192631495000010320"
 },
@@ -32110,7 +32195,7 @@
 },
 "osceola|242833000033110010|44602024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=242833000033110010"
 },
@@ -32248,13 +32333,13 @@
 },
 "osceola|252628613821290040|48062024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628613821290040"
 },
 "osceola|252833000001610000|49232024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252833000001610000"
 },
@@ -32353,7 +32438,7 @@
 },
 "osceola|302527512100011080|53122024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=302527512100011080"
 },
@@ -32377,7 +32462,7 @@
 },
 "osceola|312530000000600000|55472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=312530000000600000"
 },
@@ -35977,10 +36062,11 @@
 "url": "https://www.pcpao.gov/property-details?s=13-28-15-91669-000-0220"
 },
 "pinellas|13-32-16-71316-029-0180|2024-09365": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=13-32-16-71316-029-0180"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163213713160290180"
 },
 "pinellas|15-29-15-54018-003-0120|2024-01837": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -36021,16 +36107,18 @@
 "url": "https://www.pcpao.gov/property-details?s=162819988300055020"
 },
 "pinellas|20-30-16-33264-000-4380|2024-05919": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=20-30-16-33264-000-4380"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163020332640004380"
 },
 "pinellas|20-30-16-82818-033-0290|2024-05945": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=20-30-16-82818-033-0290"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163020828180330290"
 },
 "pinellas|20-31-16-24048-009-0020|2024-07657": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -36098,10 +36186,11 @@
 "url": "https://www.pcpao.gov/property-details?s=163025567360420050"
 },
 "pinellas|25-30-16-97953-003-2111|2024-06110": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=25-30-16-97953-003-2111"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163025979530032111"
 },
 "pinellas|25-31-16-37170-000-0180|2024-08145": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -36169,28 +36258,32 @@
 "url": "https://www.pcpao.gov/property-details?s=163127886860000042"
 },
 "pinellas|28-30-16-40752-000-0130|2024-06211": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=28-30-16-40752-000-0130"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163028407520000130"
 },
 "pinellas|28-30-16-71064-017-0120|2024-06234": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=28-30-16-71064-017-0120"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163028710640170120"
 },
 "pinellas|29-27-16-48824-016-0180|2024-04379": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=29-27-16-48824-016-0180"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162729488240160180"
 },
 "pinellas|29-28-16-98257-001-0992|2024-04911": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=29-28-16-98257-001-0992"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162829982570010992"
 },
 "pinellas|29-31-16-12150-000-1090|2024-08711": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -36227,10 +36320,11 @@
 "url": "https://www.pcpao.gov/property-details?s=173131844560000480"
 },
 "pinellas|32-30-16-20664-000-0880|2024-06402": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=32-30-16-20664-000-0880"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163032206640000880"
 },
 "pinellas|32-30-16-33185-000-0610|2024-06410": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -36240,10 +36334,11 @@
 "url": "https://www.pcpao.gov/property-details?s=163032331850000610"
 },
 "pinellas|33-28-16-20209-000-1901|2024-05066": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=33-28-16-20209-000-1901"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162833202090001901"
 },
 "pinellas|33-29-15-07326-000-0200|2021-02154": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -36265,10 +36360,11 @@
 "url": "https://www.pcpao.gov/property-details?s=34-29-15-07812-000-0640"
 },
 "pinellas|34-30-16-44514-004-0120|2024-06506": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=34-30-16-44514-004-0120"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=163034445140040120"
 },
 "pinellas|34-31-16-96718-015-0060|2024-08940": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -36278,10 +36374,11 @@
 "url": "https://www.pcpao.gov/property-details?s=163134967180150060"
 },
 "pinellas|35-27-16-11388-000-1030|2024-04469": {
-"fetched_at": "2026-10-07T10:58:25+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=35-27-16-11388-000-1030"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=162735113880001030"
 },
 "pinellas|35-28-15-92304-000-0230|2024-01173": {
 "fetched_at": "2026-11-04T11:32:33+00:00",
@@ -48682,7 +48779,7 @@
 },
 "stlucie|2409-605-0043-000-1|26-195": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960500430001"
 },
@@ -48730,7 +48827,7 @@
 },
 "stlucie|2415-711-0017-000-5|26-197": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/241571100170005"
 },
@@ -48808,7 +48905,7 @@
 },
 "stlucie|4414-601-0022-000-8|26-189": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/441460100220008"
 },
@@ -49599,13 +49696,13 @@
 },
 "volusia|423301010140|04752-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423301010140 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423301010140"
 },
 "volusia|423309000290|04779-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423309000290 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=423309000290"
 },
@@ -49617,7 +49714,7 @@
 },
 "volusia|424211040380|04952-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424211040380 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424211040380"
 },
@@ -49629,13 +49726,13 @@
 },
 "volusia|424219240151|04988-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424219240151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424219240151"
 },
 "volusia|424220160151|05015-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424220160151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424220160151"
 },
@@ -49647,13 +49744,13 @@
 },
 "volusia|424227010460|05036-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424227010460 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424227010460"
 },
 "volusia|424228020340|05041-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424228020340 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=424228020340"
 },
@@ -50165,7 +50262,7 @@
 },
 "volusia|600516010110|00617-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110"
 },
@@ -50189,13 +50286,13 @@
 },
 "volusia|603812000680|00808-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603812000680 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603812000680"
 },
 "volusia|611001240130|03550-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001240130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001240130"
 },
@@ -50247,13 +50344,13 @@
 },
 "volusia|612901110240|03774-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=612901110240 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=612901110240"
 },
 "volusia|613001020140|02607-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613001020140 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-29T10:33:55+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613001020140"
 },
@@ -50317,7 +50414,7 @@
 },
 "volusia|613301160180|04015-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301160180 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301160180"
 },
@@ -50381,7 +50478,7 @@
 },
 "volusia|631504110510|07380-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631504110510 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=631504110510"
 },
@@ -50399,7 +50496,7 @@
 },
 "volusia|632204000191|12521-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=632204000191 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=632204000191"
 },
@@ -50479,7 +50576,7 @@
 },
 "volusia|701033000291|08659-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701033000291"
 },
@@ -50525,7 +50622,7 @@
 },
 "volusia|701739040110|01548-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701739040110"
 },
@@ -50537,7 +50634,7 @@
 },
 "volusia|702007010160|01657-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702007010160"
 },
@@ -50605,7 +50702,7 @@
 },
 "volusia|723100001380|03849-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723100001380 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=723100001380"
 },
@@ -50645,7 +50742,7 @@
 },
 "volusia|734403002151|12136-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=734403002151"
 },
@@ -50679,7 +50776,7 @@
 },
 "volusia|743005030820|08123-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005030820"
 },
@@ -50697,7 +50794,7 @@
 },
 "volusia|744109010030|08200-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010030"
 },
@@ -50761,19 +50858,19 @@
 },
 "volusia|800905140290|02012-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800905140290 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800905140290"
 },
 "volusia|800906030330|02029-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030330 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030330"
 },
 "volusia|800906030360|02030-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=800906030360"
 },
@@ -50797,7 +50894,7 @@
 },
 "volusia|802301190062|12751-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=802301190062 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=802301190062"
 },
@@ -50857,13 +50954,13 @@
 },
 "volusia|813011500010|03697-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813011500010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813011500010"
 },
 "volusia|813015200040|03733-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813015200040 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813015200040"
 },
@@ -50893,7 +50990,7 @@
 },
 "volusia|813074090110|04216-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074090110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813074090110"
 },
@@ -50931,7 +51028,7 @@
 },
 "volusia|830401010360|13852-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360"
 },
@@ -51009,7 +51106,7 @@
 },
 "volusia|853812000901|10095-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=853812000901"
 },
@@ -51027,7 +51124,7 @@
 },
 "volusia|91010000009A|11114-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=91010000009A"
 },
@@ -51067,7 +51164,7 @@
 },
 "volusia|920701000011|05973-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920701000011 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=920701000011"
 },
@@ -51101,7 +51198,7 @@
 },
 "volusia|950600000750|09000-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=950600000750 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=950600000750"
 },
@@ -51113,7 +51210,7 @@
 },
 "walton|25-3N-19-19070-001-6210|2026-0132TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-6210",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19070-001-6210"
 },
@@ -51321,7 +51418,7 @@
 },
 "washington|00000000-02-0247-0006|2026-TD-200": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0247-0006",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0247-0006"
 },
@@ -51377,7 +51474,7 @@
 },
 "washington|00000000-04-0202-0020|2026-TD-188": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0020",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0020"
 },
@@ -51507,7 +51604,7 @@
 },
 "washington|00000000-06-0357-0009|2026-TD-203": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0009",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0357-0009"
 },
@@ -51537,7 +51634,7 @@
 },
 "washington|00000000-06-0364-0009|2026-TD-204": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0364-0009",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0364-0009"
 },
@@ -51561,7 +51658,7 @@
 },
 "washington|00000000-06-0391-0014|2026-TD-205": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0014",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0391-0014"
 },
@@ -51993,7 +52090,7 @@
 },
 "washington|00000000-08-0528-0005|2026-TD-193": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0528-0005",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0528-0005"
 },
@@ -52015,13 +52112,13 @@
 },
 "washington|00000000-08-0531-0016|2026-TD-220": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0531-0016",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0531-0016"
 },
 "washington|00000000-08-0533-0010|2026-TD-195": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0533-0010",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0533-0010"
 },
@@ -52235,13 +52332,13 @@
 },
 "washington|00000000-14-1226-0008|2026-TD-184": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1226-0008",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1226-0008"
 },
 "washington|00000000-14-1261-0017|2026-TD-185": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1261-0017",
-"fetched_at": "2026-10-30T10:36:45+00:00",
+"fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-14-1261-0017"
 },
