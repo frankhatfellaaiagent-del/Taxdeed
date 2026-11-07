@@ -1,0 +1,33 @@
+[
+  {
+    "county": "nassau",
+    "sale_date": "11/17/2026",
+    "sale_time": "",
+    "auction_type": "TAXDEED",
+    "case_number": "452026XX000021TDAXYX",
+    "certificate_number": "1465",
+    "parcel_id": "00-00-31-150F-0008-0050",
+    "owner_name": "",
+    "property_address": "404 S 17TH ST FERNANDINA BEACH, FERNANDINA BEACH, FL- 32034",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 54213.41,
+    "assessed_value": 98109.0,
+    "auction_status": "Redeemed",
+    "auction_url": "https://www.nassau.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1517870&bypassPage=1",
+    "appraiser_url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=00-00-31-150F-0008-0050",
+    "clerk_case_url": "",
+    "source_host": "www.nassau.realtaxdeed.com",
+    "scraped_at": "2026-11-07T10:29:53+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "452026XX000021TDAXYX",
+      "certificate": "1465",
+      "opening bid": "$54,213.41",
+      "parcel id": "00-00-31-150F-0008-0050",
+      "property address": "404 S 17TH ST FERNANDINA BEACH",
+      "(cont:property_address)": "FERNANDINA BEACH, FL- 32034",
+      "assessed value": "$98,109.00"
+    }
+  }
+]

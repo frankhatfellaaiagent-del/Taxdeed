@@ -87,7 +87,7 @@
 },
 "alachua|05254-002-000|TD 2026-044": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=05254-002-000"
 },
@@ -135,7 +135,7 @@
 },
 "alachua|06770-178-000|TD 2026-042": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=06770-178-000"
 },
@@ -182,7 +182,7 @@
 },
 "alachua|07836-021-003|TD 2026-043": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07836-021-003"
 },
@@ -646,7 +646,7 @@
 },
 "bay|28768-000-000|2026-4146TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=28768-000-000"
 },
@@ -760,7 +760,7 @@
 },
 "brevard|2111705|260122": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2111705",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2111705"
 },
@@ -790,7 +790,7 @@
 },
 "brevard|2209090|260312": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2209090",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2209090"
 },
@@ -814,7 +814,7 @@
 },
 "brevard|2302009|240524": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2302009",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2302009"
 },
@@ -838,7 +838,7 @@
 },
 "brevard|2317337|260210": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2317337",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2317337"
 },
@@ -928,25 +928,25 @@
 },
 "brevard|2424555|260363": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2424555",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2424555"
 },
 "brevard|2426124|260355": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426124",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426124"
 },
 "brevard|2426129|260356": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426129",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426129"
 },
 "brevard|2426611|260117": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2426611",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2426611"
 },
@@ -958,7 +958,7 @@
 },
 "brevard|2428121|260019": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2428121",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2428121"
 },
@@ -994,13 +994,13 @@
 },
 "brevard|2703225|260320": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2703225",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2703225"
 },
 "brevard|2708655|260321": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2708655",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2708655"
 },
@@ -1042,7 +1042,7 @@
 },
 "brevard|2729714|260327": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2729714",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2729714"
 },
@@ -1072,7 +1072,7 @@
 },
 "brevard|2800504|260326": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2800504",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2800504"
 },
@@ -1108,7 +1108,7 @@
 },
 "brevard|2813643|260357": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2813643",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2813643"
 },
@@ -1138,13 +1138,13 @@
 },
 "brevard|2831490|260340": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2831490",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2831490"
 },
 "brevard|2834443|260343": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2834443",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2834443"
 },
@@ -1162,7 +1162,7 @@
 },
 "brevard|2837785|260345": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2837785",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2837785"
 },
@@ -1180,7 +1180,7 @@
 },
 "brevard|2844485|260366": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2844485",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2844485"
 },
@@ -1192,7 +1192,7 @@
 },
 "brevard|2849883|260346": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2849883",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2849883"
 },
@@ -1204,7 +1204,7 @@
 },
 "brevard|2900727|260368": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2900727",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2900727"
 },
@@ -1222,7 +1222,7 @@
 },
 "brevard|2905917|260369": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2905917",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2905917"
 },
@@ -1234,7 +1234,7 @@
 },
 "brevard|2910867|260397": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2910867",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2910867"
 },
@@ -1264,7 +1264,7 @@
 },
 "brevard|2934833|260398": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2934833",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2934833"
 },
@@ -1276,7 +1276,7 @@
 },
 "brevard|2936893|260351": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2936893",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2936893"
 },
@@ -1759,6 +1759,13 @@
 "mailing_address": "6260 NE 18 AVE #711 FORT LAUDERDALE FL 33334-5143",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494212NS0110"
+},
+"broward|494222-08-0521|54208": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": 674870.0,
+"mailing_address": "1746 E SILVER STAR RD OCOEE FL 34761-7014",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494222080521"
 },
 "broward|494227-AC-0150|54092": {
 "fetched_at": "2026-11-06T11:29:42+00:00",
@@ -4395,13 +4402,13 @@
 },
 "clay|030824-006919-527-00|2026-0099TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=030824-006919-527-00",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=030824-006919-527-00"
 },
 "clay|040526-014173-001-70|2026-0100TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=040526-014173-001-70",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=040526-014173-001-70"
 },
@@ -4549,7 +4556,7 @@
 },
 "clay|210823-004592-000-00|2026-0108TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-004592-000-00",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-004592-000-00"
 },
@@ -4641,7 +4648,7 @@
 },
 "clay|410426-018557-000-00|2026-0098TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=410426-018557-000-00",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=410426-018557-000-00"
 },
@@ -9451,6 +9458,14 @@
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00019802"
 },
+"hernando|00022433|2026-171TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "18216 N US HIGHWAY 41 LUTZ FL 33549-4400",
+"ok": true,
+"owner_name": "LONG & ASSOCIATE OF TAMPA LLC 18216 N US HIGHWAY 41 LUTZ FL 33549-4400",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00022433"
+},
 "hernando|00024761|2026-129TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "mailing_address": "11504 RIVER COUNTRY DR RIVERVIEW FL 33569-5242",
@@ -9458,6 +9473,14 @@
 "owner_name": "KING JACQUELINE D, DRIGGERS IRVANNA 11504 RIVER COUNTRY DR RIVERVIEW FL 33569-5242",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00024761"
+},
+"hernando|00024789|2026-167TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "1634 W MENTOR ST PHILADELPHIA PA 19141-1512",
+"ok": true,
+"owner_name": "PUGH GENEVA, ABDUL-KAREEM JANNAH 1634 W MENTOR ST PHILADELPHIA PA 19141-1512",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00024789"
 },
 "hernando|00024930|2026-130TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -9760,6 +9783,14 @@
 "source": "reportall"
 }
 },
+"hernando|00585316|2026-169TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "324 WOOD DOVE AVE TARPON SPRINGS FL 34689-7529",
+"ok": true,
+"owner_name": "BUSGITH HENRY, BUSGITH CHANDRA 324 WOOD DOVE AVE TARPON SPRINGS FL 34689-7529",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00585316"
+},
 "hernando|00610770|2026-137TD": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "mailing_address": "7468 SUDAN DR WEBSTER FL 33597",
@@ -9775,6 +9806,22 @@
 "owner_name": "FULKERSON YOLANDA 2680 SE 67TH ST # 3 OCALA FL 34480-8128",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00615418"
+},
+"hernando|00616587|2026-168TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "15 F/C CLEVELAND ST CAUSEWAY BAY",
+"ok": true,
+"owner_name": "SETIANUGRAHA BUJUNG ARIES 15 F/C CLEVELAND ST CAUSEWAY BAY",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00616587"
+},
+"hernando|00627780|2026-163TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00627780"
 },
 "hernando|00653233|2026-154TD": {
 "fetched_at": "2026-10-03T09:51:46+00:00",
@@ -9815,6 +9862,22 @@
 "source": "reportall"
 }
 },
+"hernando|00703322|2026-170TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "4697 E EUCLID AVE CENTENNIAL CO 80121-3224",
+"ok": true,
+"owner_name": "GREEN J ABRAM SR 4697 E EUCLID AVE CENTENNIAL CO 80121-3224",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00703322"
+},
+"hernando|00759496|2026-164TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "41219 HOCKEY DR LOT 135 ZEPHYRHILLS FL 33540-7538",
+"ok": true,
+"owner_name": "ZIEGLER BLAYNE 41219 HOCKEY DR LOT 135 ZEPHYRHILLS FL 33540-7538",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00759496"
+},
 "hernando|00762918|2026-125TD": {
 "fetched_at": "2026-11-02T11:43:18+00:00",
 "mailing_address": "PO BOX 259543 MADISON WI 53725-9543",
@@ -9822,6 +9885,22 @@
 "owner_name": "ORILEY SALLY, LONG PATRICIA, LONG LUCIANNE PO BOX 259543 MADISON WI 53725-9543",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00762918"
+},
+"hernando|00762972|2026-161TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00762972"
+},
+"hernando|00763007|2026-162TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"ok": true,
+"owner_name": "SUPER STOP STORES INC 6221 W ATLANTIC BLVD MARGATE FL 33063-5128",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00763007"
 },
 "hernando|00766567|2026-153TD": {
 "fetched_at": "2026-11-02T11:43:18+00:00",
@@ -9838,6 +9917,22 @@
 "owner_name": "RL EQUITIES INC PO BOX 47 ISLIP TERRACE NY 11752-0047",
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/00766576"
+},
+"hernando|00766932|2026-165TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "15 F/C CLEVELAND ST CAUSEWAY BAY",
+"ok": true,
+"owner_name": "SETIANUGRAHA BUJUNG ARIES 15 F/C CLEVELAND ST CAUSEWAY BAY",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00766932"
+},
+"hernando|00766941|2026-166TD": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"mailing_address": "15 F/C CLEVELAND ST CAUSEWAY BAY",
+"ok": true,
+"owner_name": "SETIANUGRAHA BUJUNG ARIES 15 F/C CLEVELAND ST CAUSEWAY BAY",
+"property_use": "00 - VACANT RESIDENTIAL",
+"url": "https://propsearch.hernandocountypa-florida.us/parcel/00766941"
 },
 "hernando|00786162|2026-112TD": {
 "fetched_at": "2026-10-03T09:51:46+00:00",
@@ -12131,6 +12226,15 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0014440000"
 },
+"hillsborough|0037250000|2027-14": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0037250000"
+},
 "hillsborough|0045807302|2026-722": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -12157,6 +12261,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0100730000"
+},
+"hillsborough|0119875138|2027-15": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0119875138"
 },
 "hillsborough|0121000100|2026-701": {
 "assessed_value": "Exemptions",
@@ -12290,6 +12403,24 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0349870000"
+},
+"hillsborough|0351729406|2027-8": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0351729406"
+},
+"hillsborough|0351729418|2027-12": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0351729418"
 },
 "hillsborough|0368895130|2027-18": {
 "assessed_value": "Exemptions",
@@ -12713,6 +12844,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0810450005"
+},
+"hillsborough|0814810000|2027-13": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0814810000"
 },
 "hillsborough|0814810050|2026-829": {
 "assessed_value": "Exemptions",
@@ -13320,6 +13460,15 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1882905000"
 },
+"hillsborough|1890690000|2027-10": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1890690000"
+},
 "hillsborough|1891160000|2026-819": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -13373,6 +13522,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=2051607525"
+},
+"hillsborough|2053320000|2027-11": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=2053320000"
 },
 "hillsborough|2054240000|2026-885": {
 "assessed_value": "Exemptions",
@@ -13875,7 +14033,7 @@
 },
 "jackson|02-2N-11-0084-0390-0230|1751 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0390-0230",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0084-0390-0230"
 },
@@ -13951,13 +14109,13 @@
 },
 "jackson|02-2N-11-0086-0870-0100|1965 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0100"
 },
 "jackson|02-2N-11-0086-0870-0160|1967 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0160",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0870-0160"
 },
@@ -14023,7 +14181,7 @@
 },
 "jackson|02-2N-11-0086-0940-0050|2014 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0940-0050"
 },
@@ -14047,43 +14205,43 @@
 },
 "jackson|02-2N-11-0086-1120-0130|2071 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130"
 },
 "jackson|02-2N-11-0086-1120-0190|2072 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0190"
 },
 "jackson|02-2N-11-0087-1270-0290|2126 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0290"
 },
 "jackson|02-2N-11-0087-1270-0360|2128 of 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1270-0360"
 },
 "jackson|02-2N-11-0087-1300-0200|2140 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1300-0200"
 },
 "jackson|02-2N-11-0087-1330-0030|3618 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0030"
 },
 "jackson|02-2N-11-0087-1330-0050|2145 of 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1330-0050"
 },
@@ -14101,7 +14259,7 @@
 },
 "jackson|02-2N-11-0087-1350-0640|2166 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0087-1350-0640"
 },
@@ -14409,31 +14567,31 @@
 },
 "jackson|02-6N-12-0454-00C0-0130|3319 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-6N-12-0454-00C0-0130"
 },
 "jackson|03-4N-10-0000-0970-0000|965 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=03-4N-10-0000-0970-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=03-4N-10-0000-0970-0000"
 },
 "jackson|04-4N-10-0000-1290-0000|1014 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0000-1290-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0000-1290-0000"
 },
 "jackson|04-4N-10-0040-0110-0110|1049 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0040-0110-0110",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0040-0110-0110"
 },
 "jackson|04-4N-10-0040-0150-0012|1058 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0040-0150-0012",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=04-4N-10-0040-0150-0012"
 },
@@ -14463,7 +14621,7 @@
 },
 "jackson|13-5N-09-0000-0170-0000|679 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=13-5N-09-0000-0170-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=13-5N-09-0000-0170-0000"
 },
@@ -14487,7 +14645,7 @@
 },
 "jackson|21-4N-10-0000-0030-0150|1288 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=21-4N-10-0000-0030-0150",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=21-4N-10-0000-0030-0150"
 },
@@ -14499,7 +14657,7 @@
 },
 "jackson|26-5N-09-0000-0040-0000|727 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=26-5N-09-0000-0040-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=26-5N-09-0000-0040-0000"
 },
@@ -14511,7 +14669,7 @@
 },
 "jackson|31-6N-08-0000-0060-0000|481 OF 2024": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=31-6N-08-0000-0060-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=31-6N-08-0000-0060-0000"
 },
@@ -15196,11 +15354,23 @@
 "property_use": "Frontage",
 "url": "https://lakecopropappr.com/property-details.aspx?ParcelID=36-17-28-010014600900"
 },
+"lee|01-43-25-00-00003.0060|2026001071": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-43-25-00-00003.0060"
+},
 "lee|01-44-23-C4-02411.0630|2026000506": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-23-C4-02411.0630"
+},
+"lee|01-44-24-01-0000B.0120|2026001065": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-24-01-0000B.0120"
 },
 "lee|01-44-24-02-00000.0020|2026000808": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -15208,9 +15378,15 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-24-02-00000.0020"
 },
+"lee|01-44-26-06-00061.0060|2026001012": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-26-06-00061.0060"
+},
 "lee|01-44-26-10-00107.0010|2026000649": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=01-44-26-10-00107.0010"
 },
@@ -15307,13 +15483,13 @@
 },
 "lee|02-44-26-08-00069.0090|2026000667": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-26-08-00069.0090"
 },
 "lee|02-44-26-11-00112.0120|2026000963": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=02-44-26-11-00112.0120"
 },
@@ -15389,6 +15565,18 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-25-01-00043.0210"
 },
+"lee|03-44-25-03-0000G.0070|2026001051": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-25-03-0000G.0070"
+},
+"lee|03-44-25-05-00003.0060|2026001076": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-44-25-05-00003.0060"
+},
 "lee|03-44-26-06-00028.0280|2026000600": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
@@ -15424,7 +15612,7 @@
 },
 "lee|03-45-26-09-00088.0170|2026000659": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-45-26-09-00088.0170"
 },
@@ -15443,6 +15631,18 @@
 "parcel_address": "2907 YVONNE S Ave",
 "source": "reportall"
 }
+},
+"lee|03-48-25-B2-01625.2522|2026001078": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-48-25-B2-01625.2522"
+},
+"lee|03-48-26-B2-01000.0410|2026001079": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=03-48-26-B2-01000.0410"
 },
 "lee|04-44-23-C2-03800.0350|2026000274": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -15486,6 +15686,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-44-23-C4-03832.0130"
 },
+"lee|04-44-24-00-00061.0000|2026001080": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-44-24-00-00061.0000"
+},
 "lee|04-44-25-03-00009.3610|2026000825": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
@@ -15524,6 +15730,12 @@
 "parcel_address": "820 NW 31ST Pl",
 "source": "reportall"
 }
+},
+"lee|05-44-26-00-00017.0030|2026001082": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=05-44-26-00-00017.0030"
 },
 "lee|05-45-21-13-00000.0020|2026000828": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -15616,6 +15828,12 @@
 "source": "reportall"
 }
 },
+"lee|06-45-24-C4-02600.6030|2026001059": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=06-45-24-C4-02600.6030"
+},
 "lee|06-45-27-L2-01005.0280|2026000835": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -15679,6 +15897,18 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-44-27-L4-06021.0120"
 },
+"lee|07-45-24-C1-00273.0030|2026001086": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-45-24-C1-00273.0030"
+},
+"lee|07-45-26-15-0000B.0040|2026001015": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-45-26-15-0000B.0040"
+},
 "lee|07-46-24-02-00W00.0470|2026000676": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
@@ -15690,6 +15920,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-46-24-17-00000.5210"
+},
+"lee|07-46-24-19-00000.0117|2026001088": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=07-46-24-19-00000.0117"
 },
 "lee|08-44-23-C3-03972.0310|2026000534": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -15708,6 +15944,24 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-44-24-C4-01510.0250"
+},
+"lee|08-45-27-32-00033.00B0|2026001089": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-45-27-32-00033.00B0"
+},
+"lee|08-46-25-14-00014.0560|2026001090": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-46-25-14-00014.0560"
+},
+"lee|08-47-25-E3-31016.0202|2026001016": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=08-47-25-E3-31016.0202"
 },
 "lee|09-44-23-C2-03756.0270|2026000261": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -15793,6 +16047,24 @@
 "source": "reportall"
 }
 },
+"lee|10-46-25-10-0000C.0320|2026001095": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=10-46-25-10-0000C.0320"
+},
+"lee|11-44-23-C1-02564.0740|2026001053": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=11-44-23-C1-02564.0740"
+},
+"lee|11-44-23-C2-02558.0240|2026001052": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=11-44-23-C2-02558.0240"
+},
 "lee|11-44-23-C2-02604.0530|2026000111": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -15828,7 +16100,7 @@
 },
 "lee|11-44-26-02-00016.0180|2026000602": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=11-44-26-02-00016.0180"
 },
@@ -15864,7 +16136,7 @@
 },
 "lee|12-44-26-07-00064.0020|2026000662": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-44-26-07-00064.0020"
 },
@@ -15876,7 +16148,7 @@
 },
 "lee|12-44-27-07-00027.001A|2026000603": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-44-27-07-00027.001A"
 },
@@ -15990,7 +16262,7 @@
 },
 "lee|13-44-27-06-00015.0140|2026000305": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-44-27-06-00015.0140"
 },
@@ -16011,6 +16283,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-45-23-C2-00105.0190"
+},
+"lee|13-45-24-35-00000.0140|2026001039": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-45-24-35-00000.0140"
 },
 "lee|13-45-26-01-00005.0060|2026000317": {
 "error": "no recognizable fields on page",
@@ -16068,13 +16346,13 @@
 },
 "lee|14-44-27-04-00016.0060|2026000633": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-27-04-00016.0060"
 },
 "lee|14-44-27-04-00016.0070|2026000634": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-44-27-04-00016.0070"
 },
@@ -16083,6 +16361,12 @@
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-45-27-05-00028.0250"
+},
+"lee|15-43-27-00-00003.0050|2026001097": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-43-27-00-00003.0050"
 },
 "lee|15-43-27-00-00003.0070|2026000783": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -16104,7 +16388,7 @@
 },
 "lee|15-44-27-11-00044.013B|2026000607": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=15-44-27-11-00044.013B"
 },
@@ -16171,6 +16455,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-23-C1-03954.0090"
 },
+"lee|17-44-23-C2-03959.0290|2026000883": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-23-C2-03959.0290"
+},
 "lee|17-44-24-C1-01329.0010|2026000700": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -16201,6 +16491,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-25-P1-0250A.0200"
 },
+"lee|17-44-27-20-000M0.0480|2026001098": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-27-20-000M0.0480"
+},
 "lee|17-45-24-02-00008.0000|2026000702": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -16221,6 +16517,12 @@
 "parcel_address": "4145 OLD BURNT STORE N Rd",
 "source": "reportall"
 }
+},
+"lee|18-43-23-C1-05532.0250|2026001099": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-43-23-C1-05532.0250"
 },
 "lee|18-43-23-C4-05509.0310|2026000248": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -16303,15 +16605,27 @@
 },
 "lee|18-44-27-09-00036.0180|2026000637": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-44-27-09-00036.0180"
+},
+"lee|18-45-24-C1-00054.0010|2026000895": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-45-24-C1-00054.0010"
 },
 "lee|18-45-27-18-00066.0060|2026000966": {
 "fetched_at": "2026-10-17T08:26:10+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-45-27-18-00066.0060"
+},
+"lee|18-46-25-01-00000.0630|2026001023": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=18-46-25-01-00000.0630"
 },
 "lee|18-46-25-01-00000.1390|2026000703": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -16324,6 +16638,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-43-24-C2-05589.0070"
+},
+"lee|19-43-24-C3-05619.0070|2026000898": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-43-24-C3-05619.0070"
 },
 "lee|19-43-26-04-0000D.021D|2026000427": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -16348,6 +16668,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00219.0010"
+},
+"lee|19-44-25-P1-00308.0060|2026000899": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-44-25-P1-00308.0060"
 },
 "lee|19-44-25-P1-00317.0020|2026000595": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -16394,6 +16720,18 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-46-23-T4-0100A.0020"
+},
+"lee|20-43-25-L2-01000.0420|2026000961": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-43-25-L2-01000.0420"
+},
+"lee|20-44-25-P4-00800.0570|2026001024": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-44-25-P4-00800.0570"
 },
 "lee|20-44-26-01-00005.0140|2026000619": {
 "error": "no recognizable fields on page",
@@ -16452,9 +16790,33 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-46-23-T1-00100.0010"
 },
+"lee|20-46-23-T1-00604.4130|2026000906": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-46-23-T1-00604.4130"
+},
+"lee|20-46-25-12-0000A.0050|2026000907": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=20-46-25-12-0000A.0050"
+},
+"lee|21-44-22-01-00001.0110|2026000972": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-22-01-00001.0110"
+},
+"lee|21-44-27-02-00007.013A|2026000908": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-02-00007.013A"
+},
 "lee|21-44-27-03-00010.013A|2026000969": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-03-00010.013A"
 },
@@ -16464,6 +16826,24 @@
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-05-00017.012B"
 },
+"lee|21-44-27-07-00026.024B|2026000973": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-07-00026.024B"
+},
+"lee|21-45-24-15-00WF3.004E|2026001104": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-24-15-00WF3.004E"
+},
+"lee|21-45-24-15-00WF4.003E|2026000909": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-24-15-00WF4.003E"
+},
 "lee|21-45-24-32-00000.8060|2026000715": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
@@ -16472,19 +16852,19 @@
 },
 "lee|21-45-27-08-00042.0120|2026000716": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-08-00042.0120"
 },
 "lee|21-45-27-11-00063.0060|2026000613": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-11-00063.0060"
 },
 "lee|21-45-27-11-00068.0060|2026000621": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-11-00068.0060"
 },
@@ -16521,15 +16901,21 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-45-27-L2-09045.0020"
 },
+"lee|22-43-27-01-00009.0160|2026001105": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-43-27-01-00009.0160"
+},
 "lee|22-44-27-05-00017.013A|2026000622": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-44-27-05-00017.013A"
 },
 "lee|22-44-27-11-00037.0100|2026000617": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-44-27-11-00037.0100"
 },
@@ -16551,11 +16937,23 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-45-27-L1-02010.0010"
 },
+"lee|22-47-25-B1-02200.0007|2026000912": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-47-25-B1-02200.0007"
+},
 "lee|22-47-25-B2-00200.6990|2026000466": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-47-25-B2-00200.6990"
+},
+"lee|23-43-20-23-00000.0980|2026001106": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-43-20-23-00000.0980"
 },
 "lee|23-43-25-00-00011.017A|2026000489": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -16571,21 +16969,39 @@
 },
 "lee|23-44-27-02-00006.0100|2026000624": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-02-00006.0100"
 },
+"lee|23-44-27-03-00011.0100|2026000977": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-03-00011.0100"
+},
 "lee|23-44-27-03-00012.0170|2026000970": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-03-00012.0170"
 },
 "lee|23-44-27-12-00045.0060|2026000971": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-12-00045.0060"
+},
+"lee|23-45-22-02-00010.0080|2026001061": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-45-22-02-00010.0080"
+},
+"lee|23-45-24-26-00000.1180|2026000914": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-45-24-26-00000.1180"
 },
 "lee|23-45-27-L2-03027.0140|2026000181": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -16609,11 +17025,29 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-45-27-L3-15053.0030"
 },
+"lee|23-45-27-L4-05016.0020|2026001029": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-45-27-L4-05016.0020"
+},
 "lee|23-47-25-B4-0090D.2140|2026000565": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-47-25-B4-0090D.2140"
+},
+"lee|24-43-22-C3-05416.0190|2026000915": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-43-22-C3-05416.0190"
+},
+"lee|24-43-22-C3-05441.0090|2026000998": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-43-22-C3-05441.0090"
 },
 "lee|24-43-24-03-00023.006C|2026000721": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -16621,17 +17055,41 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-43-24-03-00023.006C"
 },
+"lee|24-43-24-03-00050.0030|2026001107": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-43-24-03-00050.0030"
+},
 "lee|24-44-22-00-00018.0000|2026000800": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-22-00-00018.0000"
 },
+"lee|24-44-24-P1-00605.0050|2026000917": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-24-P1-00605.0050"
+},
+"lee|24-44-24-P3-0260C.0070|2026000918": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-24-P3-0260C.0070"
+},
 "lee|24-44-26-02-00015.0190|2026000567": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-26-02-00015.0190"
+},
+"lee|24-44-26-09-00068.0070|2026000722": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-26-09-00068.0070"
 },
 "lee|24-44-27-01-00003.0040|2026000176": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -16647,6 +17105,12 @@
 "parcel_address": "816 LEROY Ave",
 "source": "reportall"
 }
+},
+"lee|24-44-27-03-00011.0200|2026000974": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-27-03-00011.0200"
 },
 "lee|24-44-27-04-00015.0090|2026000177": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -16696,13 +17160,13 @@
 },
 "lee|24-44-27-12-00045.0240|2026000724": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-27-12-00045.0240"
 },
 "lee|24-44-27-12-00048.0020|2026000644": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-27-12-00048.0020"
 },
@@ -16774,6 +17238,12 @@
 "source": "reportall"
 }
 },
+"lee|25-43-22-C2-05200.0300|2026000921": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-43-22-C2-05200.0300"
+},
 "lee|25-43-22-C3-05179.0500|2026000249": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -16788,6 +17258,12 @@
 "parcel_address": "4125 NW 25TH Ter",
 "source": "reportall"
 }
+},
+"lee|25-43-22-C4-05191.0400|2026000923": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-43-22-C4-05191.0400"
 },
 "lee|25-43-22-C4-05192.0110|2026000728": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -16816,11 +17292,35 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-24-01-00018.0000"
 },
+"lee|25-44-24-P1-0090G.0040|2026001062": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-24-P1-0090G.0040"
+},
+"lee|25-44-27-05-00017.0090|2026000982": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-27-05-00017.0090"
+},
+"lee|25-44-27-05-00020.0170|2026000975": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-27-05-00020.0170"
+},
 "lee|25-44-27-06-00024.0120|2026000655": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-27-06-00024.0120"
+},
+"lee|25-44-27-09-00033.013A|2026000976": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-44-27-09-00033.013A"
 },
 "lee|25-44-27-11-00043.0240|2026000180": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -16861,6 +17361,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-46-22-T4-01113.0060"
 },
+"lee|25-47-25-B3-00902.0260|2026001112": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-47-25-B3-00902.0260"
+},
 "lee|26-43-24-01-00007.0000|2026000733": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -16884,6 +17390,36 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-43-24-05-00000.2320"
+},
+"lee|26-44-27-09-00035.0230|2026000984": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-44-27-09-00035.0230"
+},
+"lee|26-44-27-13-00052.0090|2026001114": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-44-27-13-00052.0090"
+},
+"lee|26-45-27-L4-09026.0290|2026000978": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-45-27-L4-09026.0290"
+},
+"lee|26-45-27-L4-10033.0030|2026000979": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-45-27-L4-10033.0030"
+},
+"lee|26-47-25-B3-00540.0000|2026001041": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-47-25-B3-00540.0000"
 },
 "lee|26-47-25-B3-00541.0000|2026000421": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -16918,6 +17454,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-43-23-C3-02991.0320"
 },
+"lee|27-43-23-C3-02998.0630|2026000929": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-43-23-C3-02998.0630"
+},
 "lee|27-43-24-02-00007.0030|2026000645": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -16940,6 +17482,30 @@
 "source": "reportall"
 }
 },
+"lee|27-44-27-01-00001.0160|2026000981": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-44-27-01-00001.0160"
+},
+"lee|27-44-27-17-00000.2160|2026001063": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-44-27-17-00000.2160"
+},
+"lee|27-45-24-24-00000.0440|2026000930": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-45-24-24-00000.0440"
+},
+"lee|27-47-25-B1-00819.0100|2026001116": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-47-25-B1-00819.0100"
+},
 "lee|28-43-23-C3-05079.0120|2026000787": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
@@ -16961,11 +17527,59 @@
 "source": "reportall"
 }
 },
+"lee|28-44-22-00-00018.0010|2026001032": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-44-22-00-00018.0010"
+},
 "lee|28-44-22-05-000K0.0060|2026000741": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-44-22-05-000K0.0060"
+},
+"lee|28-44-27-02-00008.0130|2026000985": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-44-27-02-00008.0130"
+},
+"lee|28-44-27-03-00012.0180|2026000932": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-44-27-03-00012.0180"
+},
+"lee|28-45-24-33-00003.3301|2026001117": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-45-24-33-00003.3301"
+},
+"lee|28-45-25-12-00001.0308|2026001033": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-45-25-12-00001.0308"
+},
+"lee|28-45-25-13-0000D.0500|2026001118": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-45-25-13-0000D.0500"
+},
+"lee|28-45-27-02-00001.0260|2026000986": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-45-27-02-00001.0260"
+},
+"lee|28-45-27-07-00032.0290|2026001007": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-45-27-07-00032.0290"
 },
 "lee|28-46-25-E2-060K0.0230|2026000746": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -16978,6 +17592,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-43-24-C3-02251.0070"
+},
+"lee|29-43-24-C3-02280.0060|2026000933": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-43-24-C3-02280.0060"
 },
 "lee|29-43-26-06-00067.0120|2026000396": {
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -16993,9 +17613,15 @@
 },
 "lee|29-44-26-04-00029.0080|2026000747": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-44-26-04-00029.0080"
+},
+"lee|29-44-26-06-00053.0020|2026001119": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-44-26-06-00053.0020"
 },
 "lee|29-44-27-07-00028.013B|2026000184": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -17030,6 +17656,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-45-27-L2-02003.0130"
 },
+"lee|29-46-23-T1-00200.4C10|2026000935": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-46-23-T1-00200.4C10"
+},
 "lee|29-46-25-E3-22000.F470|2026000752": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
@@ -17057,17 +17689,35 @@
 "source": "reportall"
 }
 },
+"lee|31-43-23-C3-04279.028A|2026000936": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C3-04279.028A"
+},
 "lee|31-43-23-C3-04279.0300|2026000786": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C3-04279.0300"
 },
+"lee|31-43-23-C3-04306.0130|2026000937": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C3-04306.0130"
+},
 "lee|31-43-23-C4-04287.0510|2026000657": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-23-C4-04287.0510"
+},
+"lee|31-43-24-C1-02165.0130|2026000938": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-43-24-C1-02165.0130"
 },
 "lee|31-43-24-C2-02130.0350|2026000629": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -17093,6 +17743,18 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-44-25-P1-01013.1070"
 },
+"lee|31-44-27-01-00004.0070|2026001120": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-44-27-01-00004.0070"
+},
+"lee|31-44-27-02-00009.0240|2026000943": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-44-27-02-00009.0240"
+},
 "lee|31-44-27-06-00001.A020|2026000098": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -17109,6 +17771,12 @@
 "source": "reportall"
 }
 },
+"lee|31-44-27-09-00006.0220|2026000944": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-44-27-09-00006.0220"
+},
 "lee|31-44-27-13-00000.0200|2026000946": {
 "fetched_at": "2026-10-17T08:26:10+00:00",
 "ok": true,
@@ -17121,11 +17789,23 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-45-24-20-0000E.0130"
 },
+"lee|31-45-24-L4-69006.0308|2026001035": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-45-24-L4-69006.0308"
+},
 "lee|31-47-25-B3-01400.0908|2026000757": {
 "fetched_at": "2026-09-30T10:20:59+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-47-25-B3-01400.0908"
+},
+"lee|32-43-23-C4-04101.0160|2026000947": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-43-23-C4-04101.0160"
 },
 "lee|32-43-24-C3-02230.0300|2026000788": {
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -17139,17 +17819,47 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-23-C2-05974.0190"
 },
+"lee|32-44-23-C4-05949.0010|2026000951": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-23-C4-05949.0010"
+},
 "lee|32-44-24-C1-01205.0170|2026000759": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-24-C1-01205.0170"
 },
+"lee|32-44-27-20-00006.0150|2026000952": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-27-20-00006.0150"
+},
+"lee|32-46-25-E3-26003.0101|2026000953": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-46-25-E3-26003.0101"
+},
 "lee|32-47-25-B3-00203.0180|2026000760": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-47-25-B3-00203.0180"
+},
+"lee|33-43-23-C1-03890.0300|2026000955": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-43-23-C1-03890.0300"
+},
+"lee|33-43-24-01-00000.2460|2026001064": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=33-43-24-01-00000.2460"
 },
 "lee|33-43-25-01-00011.0000|2026000762": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -17180,6 +17890,12 @@
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=34-43-23-C4-02942.A030"
+},
+"lee|34-43-24-01-00017.0230|2026000956": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=34-43-24-01-00017.0230"
 },
 "lee|34-43-24-02-00028.0230|2026000208": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -17269,6 +17985,12 @@
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-43-23-C4-02712.0540"
 },
+"lee|35-44-23-C2-01861.0270|2026000991": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-44-23-C2-01861.0270"
+},
 "lee|35-44-26-03-00022.0100|2026000403": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-15T08:57:09+00:00",
@@ -17296,17 +18018,35 @@
 "source": "reportall"
 }
 },
+"lee|35-44-27-03-00010.0060|2026000987": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-44-27-03-00010.0060"
+},
 "lee|35-44-27-07-00027.0230|2026000438": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-44-27-07-00027.0230"
 },
+"lee|35-44-27-11-00042.001B|2026001011": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-44-27-11-00042.001B"
+},
 "lee|35-46-25-E4-0100H.0340|2026000769": {
 "fetched_at": "2026-10-30T10:36:45+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-46-25-E4-0100H.0340"
+},
+"lee|35-47-25-B2-02300.1010|2026001036": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=35-47-25-B2-02300.1010"
 },
 "lee|36-43-23-C3-02484.0150|2026000284": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -17572,11 +18312,23 @@
 "source": "reportall"
 }
 },
+"lee|36-44-27-09-00035.0080|2026000990": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": false,
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=36-44-27-09-00035.0080"
+},
 "lee|36-45-23-03-0000B.0030|2026000778": {
 "fetched_at": "2026-09-30T10:20:59+00:00",
 "ok": true,
 "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
 "url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=36-45-23-03-0000B.0030"
+},
+"lee|36-45-23-17-00000.0850|2026000960": {
+"fetched_at": "2026-11-07T10:45:09+00:00",
+"ok": true,
+"owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+"url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=36-45-23-17-00000.0850"
 },
 "leon|110250CD0150|26-0086": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -18672,7 +19424,7 @@
 },
 "manatee|1344200159|2026TD000244": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1344200159"
 },
@@ -18684,7 +19436,7 @@
 },
 "manatee|1371400001|2026TD000245": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1371400001"
 },
@@ -18702,7 +19454,7 @@
 },
 "manatee|1594600007|2026TD000269": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1594600007"
 },
@@ -18732,7 +19484,7 @@
 },
 "manatee|1740710007|2026TD000220": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1740710007"
 },
@@ -18744,7 +19496,7 @@
 },
 "manatee|1987300116|2026TD000250": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=1987300116"
 },
@@ -18756,13 +19508,13 @@
 },
 "manatee|2504300001|2026TD000274": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2504300001"
 },
 "manatee|2567701009|2026TD000275": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2567701009"
 },
@@ -18792,7 +19544,7 @@
 },
 "manatee|2618400051|2026TD000251": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=2618400051"
 },
@@ -18810,7 +19562,7 @@
 },
 "manatee|3196600104|2026TD000253": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3196600104"
 },
@@ -18828,7 +19580,7 @@
 },
 "manatee|3432000002|2026TD000234": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=3432000002"
 },
@@ -18852,7 +19604,7 @@
 },
 "manatee|4605500000|2026TD000235": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=4605500000"
 },
@@ -18894,7 +19646,7 @@
 },
 "manatee|5485500002|2026TD000256": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5485500002"
 },
@@ -18906,13 +19658,13 @@
 },
 "manatee|5491000005|2026TD000257": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5491000005"
 },
 "manatee|5493000003|2026TD000258": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5493000003"
 },
@@ -18930,13 +19682,13 @@
 },
 "manatee|5542800007|2026TD000260": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5542800007"
 },
 "manatee|5589715753|2026TD000272": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=5589715753"
 },
@@ -18954,7 +19706,7 @@
 },
 "manatee|6100102959|2026TD000263": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6100102959"
 },
@@ -18984,13 +19736,13 @@
 },
 "manatee|6464600003|2026TD000239": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6464600003"
 },
 "manatee|649200209|2026TD000277": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=649200209"
 },
@@ -19002,13 +19754,13 @@
 },
 "manatee|6617727208|2026TD000278": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6617727208"
 },
 "manatee|6779600003|2026TD000264": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=6779600003"
 },
@@ -19038,7 +19790,7 @@
 },
 "manatee|7991500409|2026TD000265": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=7991500409"
 },
@@ -28867,7 +29619,7 @@
 },
 "martin|14-40-40-000-100-00940.4|2026-0048TD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.pamartinfl.gov/app/search/pcn/14-40-40-000-100-00940.4 "
 },
@@ -29152,7 +29904,7 @@
 },
 "miamidade|16-7824-008-1050|2026A00209": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=1678240081050"
 },
@@ -29164,7 +29916,7 @@
 },
 "miamidade|30-8814-000-0940|2026A00199": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3088140000940"
 },
@@ -29284,13 +30036,13 @@
 },
 "miamidade|30-9905-000-1170|2026A00196": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3099050001170"
 },
 "miamidade|30-9905-000-4180|2026A00198": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3099050004180"
 },
@@ -30405,13 +31157,13 @@
 },
 "orange|012328328700010|2024-5078": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328700010"
 },
 "orange|012328328700060|2024-5083": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328700060"
 },
@@ -30423,7 +31175,7 @@
 },
 "orange|012328328741028|2024-5142": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012328328741028"
 },
@@ -30435,7 +31187,7 @@
 },
 "orange|012329664801081|2024-10335": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/012329664801081"
 },
@@ -30493,7 +31245,7 @@
 },
 "orange|052229187663979|2024-7556": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/052229187663979"
 },
@@ -30553,7 +31305,7 @@
 },
 "orange|072329735932360|2024-11247": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/072329735932360"
 },
@@ -30577,7 +31329,7 @@
 },
 "orange|082228596015080|2024-3719": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/082228596015080"
 },
@@ -30643,7 +31395,7 @@
 },
 "orange|102328932700830|2024-5418": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/102328932700830"
 },
@@ -30679,13 +31431,13 @@
 },
 "orange|112328826000320|2024-5434": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/112328826000320"
 },
 "orange|112328933100380|2024-5438": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/112328933100380"
 },
@@ -30697,7 +31449,7 @@
 },
 "orange|122229617203420|2024-7988": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122229617203420"
 },
@@ -30709,7 +31461,7 @@
 },
 "orange|122328818701502|2024-5500": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/122328818701502"
 },
@@ -30733,7 +31485,7 @@
 },
 "orange|132228613213030|2024-3989": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132228613213030"
 },
@@ -30757,13 +31509,13 @@
 },
 "orange|132329745600610|2024-11576": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132329745600610"
 },
 "orange|132329745600620|2024-11579": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/132329745600620"
 },
@@ -30799,7 +31551,7 @@
 },
 "orange|162128604403220|2024-2927": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162128604403220"
 },
@@ -30869,7 +31621,7 @@
 },
 "orange|172329895709170|2024-11869": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/172329895709170"
 },
@@ -30887,13 +31639,13 @@
 },
 "orange|182228712200620|2024-4219": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182228712200620"
 },
 "orange|182228713001420|2024-4249": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182228713001420"
 },
@@ -30915,13 +31667,13 @@
 },
 "orange|182229805000703|2024-8307": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000703"
 },
 "orange|182229805000905|2024-8312": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/182229805000905"
 },
@@ -30933,13 +31685,13 @@
 },
 "orange|192229696001030|2024-8433": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/192229696001030"
 },
 "orange|192229696003140|2024-8436": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/192229696003140"
 },
@@ -30951,13 +31703,13 @@
 },
 "orange|202228000000074|2024-4277": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/202228000000074"
 },
 "orange|202229455206090|2024-8535": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/202229455206090"
 },
@@ -30979,7 +31731,7 @@
 },
 "orange|212028003201080|2024-1862": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/212028003201080"
 },
@@ -31019,13 +31771,13 @@
 },
 "orange|222329726823007|2024-12116": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/222329726823007"
 },
 "orange|222429818100760|2024-13220": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/222429818100760"
 },
@@ -31049,13 +31801,13 @@
 },
 "orange|232229597400311|2024-8661": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232229597400311"
 },
 "orange|232230127400320|2024-14656": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232230127400320"
 },
@@ -31067,7 +31819,7 @@
 },
 "orange|232329014104570|2024-12159": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/232329014104570"
 },
@@ -31141,7 +31893,7 @@
 },
 "orange|252229393200509|2024-8785": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252229393200509"
 },
@@ -31185,7 +31937,7 @@
 },
 "orange|252328498003000|2024-5805": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252328498003000"
 },
@@ -31197,7 +31949,7 @@
 },
 "orange|252329444401770|2024-12263": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252329444401770"
 },
@@ -31209,19 +31961,19 @@
 },
 "orange|252430497800870|2024-16871": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252430497800870"
 },
 "orange|252430497801380|2024-16873": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/252430497801380"
 },
 "orange|262229715801506|2024-8960": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262229715801506"
 },
@@ -31249,7 +32001,7 @@
 },
 "orange|262328120602040|2024-5859": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262328120602040"
 },
@@ -31261,7 +32013,7 @@
 },
 "orange|262329807008060|2024-12312": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/262329807008060"
 },
@@ -31331,13 +32083,13 @@
 },
 "orange|272429814100560|2024-13419": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/272429814100560"
 },
 "orange|282129062303305|2024-6741": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/282129062303305"
 },
@@ -31399,7 +32151,7 @@
 },
 "orange|292232788200420|2024-19036": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292232788200420"
 },
@@ -31411,7 +32163,7 @@
 },
 "orange|292431230901320|2024-18258": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292431230901320"
 },
@@ -31509,7 +32261,7 @@
 },
 "orange|312229182102670|2024-9536": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312229182102670"
 },
@@ -31543,7 +32295,7 @@
 },
 "orange|312427300007370|2024-1618": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/312427300007370"
 },
@@ -31561,7 +32313,7 @@
 },
 "orange|322129000000006|2024-6948": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129000000006"
 },
@@ -31585,7 +32337,7 @@
 },
 "orange|322129729202110|2024-7011": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/322129729202110"
 },
@@ -31775,7 +32527,7 @@
 },
 "orange|362229313043004|2024-10207": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/362229313043004"
 },
@@ -47883,7 +48635,7 @@
 },
 "santarosa|33-2N-28-0630-00G00-0010|2026138": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=33-2N-28-0630-00G00-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=33-2N-28-0630-00G00-0010"
 },
@@ -48347,13 +49099,13 @@
 },
 "seminole|09-21-30-511-0000-0010|20260074/2024-001285": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=09-21-30-511-0000-0010"
 },
 "seminole|11-21-31-503-0000-0370|20260079/2024-001704": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=11-21-31-503-0000-0370"
 },
@@ -48421,7 +49173,7 @@
 },
 "seminole|18-21-30-509-0000-024B|20260096/2024-002957": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=18-21-30-509-0000-024B"
 },
@@ -48467,7 +49219,7 @@
 },
 "seminole|21-21-30-514-0000-009A|20260103/2024-003471": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-009A"
 },
@@ -48479,13 +49231,13 @@
 },
 "seminole|21-21-30-514-0000-010C|20260107/2024-003477": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-010C"
 },
 "seminole|21-21-30-514-0000-010D|20260109/2024-003478": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-010D"
 },
@@ -48503,13 +49255,13 @@
 },
 "seminole|25-19-30-5AG-0715-0010|20260080/2024-004167": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AG-0715-0010"
 },
 "seminole|25-19-30-5AG-110B-0040|20260080/2024-004240": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AG-110B-0040"
 },
@@ -48537,13 +49289,13 @@
 },
 "seminole|28-21-30-536-3900-2060|20260091/2024-004735": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=28-21-30-536-3900-2060"
 },
 "seminole|32-19-31-513-0000-2210|20260100/2024-005333": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=32-19-31-513-0000-2210"
 },
@@ -48561,13 +49313,13 @@
 },
 "seminole|33-19-31-506-0300-0120|20260112/2024-005561": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-506-0300-0120"
 },
 "seminole|33-19-31-506-0600-0030|20260114/2024-005567": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-506-0600-0030"
 },
@@ -51276,7 +52028,7 @@
 },
 "washington|00000000-00-2071-0000|2026-TD-226": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-2071-0000"
 },
@@ -51288,13 +52040,13 @@
 },
 "washington|00000000-00-4151-0125|2026-TD-239": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4151-0125",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4151-0125"
 },
 "washington|00000000-00-4155-0363|2026-TD-247": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4155-0363",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4155-0363"
 },
@@ -51312,7 +52064,7 @@
 },
 "washington|00000000-00-4985-0006|2026-TD-248": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4985-0006"
 },
@@ -51336,7 +52088,7 @@
 },
 "washington|00000000-00-5760-0001|2026-TD-246": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5760-0001",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5760-0001"
 },
@@ -51358,7 +52110,7 @@
 },
 "washington|00000000-01-0006-0016|2026-TD-186": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0016",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0016"
 },
@@ -51370,7 +52122,7 @@
 },
 "washington|00000000-01-0062-0009|2026-TD-187": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0062-0009",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0062-0009"
 },
@@ -51382,7 +52134,7 @@
 },
 "washington|00000000-01-0078-0011|2026-TD-197": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0078-0011",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0078-0011"
 },
@@ -51480,13 +52232,13 @@
 },
 "washington|00000000-04-0202-0021|2026-TD-231": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0021",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0202-0021"
 },
 "washington|00000000-04-0205-0006|2026-TD-234": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0205-0006",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0205-0006"
 },
@@ -51498,7 +52250,7 @@
 },
 "washington|00000000-04-1642-0005|2026-TD-190": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-1642-0005",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-1642-0005"
 },
@@ -51520,7 +52272,7 @@
 },
 "washington|00000000-05-0313-0012|2026-TD-232": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0313-0012",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0313-0012"
 },
@@ -51646,7 +52398,7 @@
 },
 "washington|00000000-06-0380-0006|2026-TD-244": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0380-0006",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0380-0006"
 },
@@ -51804,7 +52556,7 @@
 },
 "washington|00000000-07-0463-0001|2026-TD-209": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0001",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0463-0001"
 },
@@ -51822,7 +52574,7 @@
 },
 "washington|00000000-08-0484-0011|2026-TD-194": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0484-0011",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0484-0011"
 },
@@ -51860,13 +52612,13 @@
 },
 "washington|00000000-08-0486-0008|2026-TD-218": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0008",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0008"
 },
 "washington|00000000-08-0486-0009|2026-TD-219": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0009",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0486-0009"
 },
@@ -51888,13 +52640,13 @@
 },
 "washington|00000000-08-0489-0011|2026-TD-230": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0489-0011",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0489-0011"
 },
 "washington|00000000-08-0495-0013|2026-TD-217": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0495-0013",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0495-0013"
 },
@@ -51954,13 +52706,13 @@
 },
 "washington|00000000-08-0509-0003|2026-TD-228": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0003",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0003"
 },
 "washington|00000000-08-0509-0016|2026-TD-227": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0016",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0509-0016"
 },
@@ -52052,7 +52804,7 @@
 },
 "washington|00000000-08-0513-0008|2026-TD-225": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0513-0008",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-08-0513-0008"
 },
@@ -52124,13 +52876,13 @@
 },
 "washington|00000000-09-0544-0030|2026-TD-221": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0030",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0030"
 },
 "washington|00000000-09-0544-0031|2026-TD-222": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0031",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-09-0544-0031"
 },
@@ -52182,7 +52934,7 @@
 },
 "washington|00000000-10-0588-0026|2026-TD-214": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0588-0026",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0588-0026"
 },
@@ -52210,7 +52962,7 @@
 },
 "washington|00000000-11-0751-0001|2026-TD-215": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0001",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0751-0001"
 },
@@ -52308,13 +53060,13 @@
 },
 "washington|00000000-12-1004-0003|2026-TD-223": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0003",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0003"
 },
 "washington|00000000-12-1004-0004|2026-TD-224": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0004",
-"fetched_at": "2026-10-31T10:14:27+00:00",
+"fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1004-0004"
 },
