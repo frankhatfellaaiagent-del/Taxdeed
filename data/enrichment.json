@@ -35,7 +35,7 @@
 },
 "alachua|01488-315-000|TD 2026-049": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000"
 },
@@ -75,7 +75,7 @@
 },
 "alachua|04165-005-000|TD 2026-046": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000"
 },
@@ -170,7 +170,7 @@
 },
 "alachua|07650-000-000|TD 2026-052": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000"
 },
@@ -194,7 +194,7 @@
 },
 "alachua|10677-020-000|TD 2026-051": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000"
 },
@@ -230,7 +230,7 @@
 },
 "alachua|14125-000-000|TD 2026-050": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000"
 },
@@ -242,19 +242,19 @@
 },
 "alachua|17751-003-000|TD 2026-057": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000"
 },
 "alachua|18354-059-001|TD 2026-055": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001"
 },
 "alachua|20002-005-002|TD 2026-056": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002"
 },
@@ -724,7 +724,7 @@
 },
 "brevard|2001173|260409": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2001173",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2001173"
 },
@@ -796,7 +796,7 @@
 },
 "brevard|2210811|260407": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2210811",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2210811"
 },
@@ -808,7 +808,7 @@
 },
 "brevard|2301408|260408": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2301408",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2301408"
 },
@@ -4550,7 +4550,7 @@
 },
 "clay|210823-003514-000-00|2026-0110TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00"
 },
@@ -9134,7 +9134,7 @@
 },
 "gilchrist|180815-0073000B-0200|26-0014-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
@@ -12691,7 +12691,7 @@
 },
 "hillsborough|0733656000|2026-911": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-09T11:14:30+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -12952,7 +12952,7 @@
 },
 "hillsborough|0910030200|2026-912": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-09T11:14:30+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -13558,7 +13558,7 @@
 },
 "hillsborough|212811ZZZ000003514000U|2026-901": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-09T11:14:30+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -49069,7 +49069,7 @@
 },
 "seminole|01-20-30-504-2800-0060|20260068/2024-000049 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=01-20-30-504-2800-0060"
 },
@@ -49081,7 +49081,7 @@
 },
 "seminole|07-21-30-505-0D00-0220|20260127/2024-000951": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=07-21-30-505-0D00-0220"
 },
@@ -49179,13 +49179,13 @@
 },
 "seminole|20-19-30-501-0000-3140|20260124/2021-000058 CS": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3140"
 },
 "seminole|20-19-30-501-0000-3180|20260125/2021-000059": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3180"
 },
@@ -49267,7 +49267,7 @@
 },
 "seminole|25-19-30-5AI-0913-0050|20260087 2024-004346 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AI-0913-0050"
 },
@@ -49307,7 +49307,7 @@
 },
 "seminole|33-19-31-300-1390-0000|20260110/2024-005542": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-300-1390-0000"
 },
@@ -49325,7 +49325,7 @@
 },
 "seminole|33-19-31-507-0000-1260|20260115 2024-005598 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-507-0000-1260"
 },
@@ -49353,7 +49353,7 @@
 },
 "seminole|35-19-30-513-2200-0060|20260126/2021-000489 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-513-2200-0060"
 },
@@ -49375,13 +49375,13 @@
 },
 "seminole|36-19-30-300-0320-0000|20260121/2024-006401": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-300-0320-0000"
 },
 "seminole|36-19-30-506-0000-061A|20260122/2024-006413": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-506-0000-061A"
 },
@@ -49417,7 +49417,7 @@
 },
 "stlucie|1432-806-0036-000-5|26-224": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/143280600360005"
 },
@@ -49447,7 +49447,7 @@
 },
 "stlucie|2405-501-0127-000-3|26-218": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240550101270003"
 },
@@ -49489,13 +49489,13 @@
 },
 "stlucie|2405-701-0042-000-7|26-213": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240570100420007"
 },
 "stlucie|2406-114-0009-000-5|26-214": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240611400090005"
 },
@@ -49507,13 +49507,13 @@
 },
 "stlucie|2409-122-0006-000-8|26-219": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240912200060008"
 },
 "stlucie|2409-501-0071-000-7|26-227": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240950100710007"
 },
@@ -49525,7 +49525,7 @@
 },
 "stlucie|2409-602-0154-000-3|26-228": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960201540003"
 },
@@ -49543,13 +49543,13 @@
 },
 "stlucie|2409-820-0033-000-9|26-229": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982000330009"
 },
 "stlucie|2409-823-0043-000-1|26-216": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982300430001"
 },
@@ -49609,7 +49609,7 @@
 },
 "stlucie|3407-506-0040-000-3|26-226": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/340750600400003"
 },
@@ -49633,7 +49633,7 @@
 },
 "stlucie|3420-515-0259-000-0|26-024": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342051502590000"
 },
@@ -52016,13 +52016,13 @@
 },
 "washington|00000000-00-0950-0000|2026-TD-257": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-0950-0000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-0950-0000"
 },
 "washington|00000000-00-1539-0000|2026-TD-263": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000"
 },
@@ -52034,7 +52034,7 @@
 },
 "washington|00000000-00-4096-0016|2026-TD-250": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016"
 },
@@ -52052,13 +52052,13 @@
 },
 "washington|00000000-00-4414-0312|2026-TD-251": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312"
 },
 "washington|00000000-00-4877-0000|2026-TD-317": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000"
 },
@@ -52070,19 +52070,19 @@
 },
 "washington|00000000-00-5049-0005|2026-TD-252": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005"
 },
 "washington|00000000-00-5411-0121|2026-TD-318": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121"
 },
 "washington|00000000-00-5512-0001|2026-TD-277": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001"
 },
@@ -52116,7 +52116,7 @@
 },
 "washington|00000000-01-0006-0017|2026-TD-233": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017"
 },
@@ -52152,19 +52152,19 @@
 },
 "washington|00000000-02-0223-0026|2026-TD-236": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026"
 },
 "washington|00000000-02-0242-0009|2026-TD-255": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009"
 },
 "washington|00000000-02-0244-0017|2026-TD-240": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017"
 },
@@ -52198,7 +52198,7 @@
 },
 "washington|00000000-04-0156-0038|2026-TD-276": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038"
 },
@@ -52244,7 +52244,7 @@
 },
 "washington|00000000-04-0206-0011|2026-TD-261": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011"
 },
@@ -52278,7 +52278,7 @@
 },
 "washington|00000000-05-0318-0002|2026-TD-242": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002"
 },
@@ -52320,7 +52320,7 @@
 },
 "washington|00000000-06-0348-0003|2026-TD-259": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003"
 },
@@ -52392,7 +52392,7 @@
 },
 "washington|00000000-06-0369-0019|2026-TD-254": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019"
 },
@@ -52518,7 +52518,7 @@
 },
 "washington|00000000-07-0433-0033|2026-TD-241": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033"
 },
@@ -52568,7 +52568,7 @@
 },
 "washington|00000000-07-0464-0007|2026-TD-272": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007"
 },
@@ -52888,7 +52888,7 @@
 },
 "washington|00000000-10-0567-0008|2026-TD-271": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008"
 },
@@ -52974,13 +52974,13 @@
 },
 "washington|00000000-11-0753-0011|2026-TD-269": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011"
 },
 "washington|00000000-11-0757-0001|2026-TD-268": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001"
 },
@@ -52992,7 +52992,7 @@
 },
 "washington|00000000-11-0765-0012|2026-TD-267": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012"
 },
@@ -53016,7 +53016,7 @@
 },
 "washington|00000000-11-0778-0027|2026-TD-266": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027"
 },
@@ -53054,7 +53054,7 @@
 },
 "washington|00000000-12-1003-0025|2026-TD-265": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025"
 },
@@ -53072,13 +53072,13 @@
 },
 "washington|00000000-12-1006-0016|2026-TD-279": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016"
 },
 "washington|00000000-12-1007-0009|2026-TD-278": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009",
-"fetched_at": "2026-11-01T11:05:14+00:00",
+"fetched_at": "2026-11-09T12:08:25+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009"
 },
