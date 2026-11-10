@@ -746,6 +746,12 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2106367"
 },
+"brevard|2106380|260477": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2106380",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2106380"
+},
 "brevard|2108267|260428": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2108267",
 "fetched_at": "2026-11-05T11:33:37+00:00",
@@ -817,6 +823,18 @@
 "fetched_at": "2026-11-07T10:45:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2302009"
+},
+"brevard|2304230|260484": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2304230",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2304230"
+},
+"brevard|2307229|260475": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2307229",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2307229"
 },
 "brevard|2310973|260204": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2310973",
@@ -967,6 +985,12 @@
 "fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2429936"
+},
+"brevard|2434288|260476": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2434288",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2434288"
 },
 "brevard|2503643|260316": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2503643",
@@ -1262,6 +1286,18 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2926429"
 },
+"brevard|2928769|260479": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2928769",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2928769"
+},
+"brevard|2930081|260483": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2930081",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2930081"
+},
 "brevard|2934833|260398": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2934833",
 "fetched_at": "2026-11-07T10:45:09+00:00",
@@ -1286,6 +1322,18 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2938170"
 },
+"brevard|2940638|260480": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940638",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2940638"
+},
+"brevard|2940680|260471": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940680",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2940680"
+},
 "brevard|2940872|260222": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940872",
 "fetched_at": "2026-10-22T09:14:52+00:00",
@@ -1297,6 +1345,12 @@
 "fetched_at": "2026-11-05T11:33:37+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2944771"
+},
+"brevard|2947482|260482": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2947482",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2947482"
 },
 "brevard|2952727|260115": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952727",
@@ -4731,6 +4785,14 @@
 "source": "reportall"
 }
 },
+"duval|003708-0000|2026-0906TD": {
+"assessed_value": 132201.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 132201.0,
+"ok": true,
+"property_use": "7100 Church",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0037080000"
+},
 "duval|003709-0000|2026-0175TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -4851,6 +4913,15 @@
 "parcel_address": "7710 PASCHAL St",
 "source": "reportall"
 }
+},
+"duval|007221-0010|2026-1009TD": {
+"acreage": "$39,875.00",
+"assessed_value": 467777.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 467777.0,
+"ok": true,
+"property_use": "7100 Church",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0072210010"
 },
 "duval|007440-0060|2026-0405TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -4981,6 +5052,14 @@
 "ok": true,
 "property_use": "0200 Mobile Home",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0198400090"
+},
+"duval|019896-0015|2026-0900TD": {
+"assessed_value": 34903.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 68936.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0198960015"
 },
 "duval|020049-3000|2026-0215TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5423,6 +5502,14 @@
 "property_use": "7100 Church",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0318250000"
 },
+"duval|031832-0000|2026-0904TD": {
+"assessed_value": 36077.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 43801.0,
+"ok": true,
+"property_use": "0800 Multi-Family Units 2-9",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0318320000"
+},
 "duval|031935-0000|2026-0221TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5551,6 +5638,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0366030000"
 },
+"duval|036770-0000|2026-0899TD": {
+"assessed_value": 11412.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 17800.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0367700000"
+},
 "duval|036809-1000|2026-0244TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5632,6 +5727,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0374860010"
 },
+"duval|037817-0000|2026-0901TD": {
+"assessed_value": 28910.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 53040.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0378170000"
+},
 "duval|037889-0000|2026-0446TD": {
 "assessed_value": 21359.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -5696,6 +5799,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0403530000"
 },
+"duval|040509-0000|2026-0907TD": {
+"assessed_value": 50612.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 50612.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0405090000"
+},
 "duval|041328-0000|2026-0277TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5736,6 +5847,14 @@
 "property_use": "0800 Multi-Family Units 2-9",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0445210000"
 },
+"duval|044539-0000|2026-0903TD": {
+"assessed_value": 49659.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 49659.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0445390000"
+},
 "duval|045769-0010|2026-0409TD": {
 "assessed_value": 35085.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -5751,6 +5870,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0462820000"
+},
+"duval|046618-0000|2026-0902TD": {
+"assessed_value": 52495.0,
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"just_value": 52495.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0466180000"
 },
 "duval|046987-0000|2026-0457TD": {
 "assessed_value": 62053.0,
@@ -9140,7 +9267,7 @@
 },
 "gilchrist|201014-02820015-0040|26-0026-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040"
 },
@@ -14139,13 +14266,13 @@
 },
 "jackson|02-2N-11-0086-0880-1430|1991 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430"
 },
 "jackson|02-2N-11-0086-0880-1540|1992 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540"
 },
@@ -29744,7 +29871,7 @@
 },
 "miamidade|01-3122-052-2400|2026A00184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131220522400"
 },
@@ -29840,6 +29967,12 @@
 "fetched_at": "2026-10-06T11:00:40+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020050560"
+},
+"miamidade|02-3202-093-0290|2025A00272": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020930290"
 },
 "miamidade|02-3234-004-0500|2026A00257": {
 "error": "no recognizable fields on page",
@@ -30069,6 +30202,12 @@
 "fetched_at": "2026-10-15T08:57:09+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3122110210140"
+},
+"miamidade|34-2103-009-0570|2025A00631": {
+"error": "no recognizable fields on page",
+"fetched_at": "2026-11-10T11:50:33+00:00",
+"ok": false,
+"url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3421030090570"
 },
 "miamidade|34-2108-010-5820|2026A00190": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -48429,7 +48568,7 @@
 },
 "santarosa|02-1N-28-0000-11500-0000|2026285": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=02-1N-28-0000-11500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=02-1N-28-0000-11500-0000"
 },
@@ -48481,7 +48620,7 @@
 },
 "santarosa|09-1N-28-0000-05600-0000|2026280": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-28-0000-05600-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-28-0000-05600-0000"
 },
@@ -48515,13 +48654,13 @@
 },
 "santarosa|10-3S-29-4935-00000-0850|2026277": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-3S-29-4935-00000-0850 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-3S-29-4935-00000-0850"
 },
 "santarosa|12-1N-28-0000-00428-0000|2026264": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=12-1N-28-0000-00428-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=12-1N-28-0000-00428-0000"
 },
@@ -48539,7 +48678,7 @@
 },
 "santarosa|18-1N-28-0000-04203-0000|2026265": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-1N-28-0000-04203-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-1N-28-0000-04203-0000"
 },
@@ -48587,7 +48726,7 @@
 },
 "santarosa|22-1N-28-0000-04405-0000|2026266": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-1N-28-0000-04405-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-1N-28-0000-04405-0000"
 },
@@ -48599,7 +48738,7 @@
 },
 "santarosa|23-1N-29-1210-02100-0090|2026272": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=23-1N-29-1210-02100-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=23-1N-29-1210-02100-0090"
 },
@@ -48611,7 +48750,7 @@
 },
 "santarosa|28-2N-28-0000-04105-0000|2026267": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2N-28-0000-04105-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=28-2N-28-0000-04105-0000"
 },
@@ -48653,13 +48792,13 @@
 },
 "santarosa|40-1N-28-0090-45000-0130|2026283": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-45000-0130 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-45000-0130"
 },
 "santarosa|40-1N-28-0090-47000-0160|2026268": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-47000-0160 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-47000-0160"
 },
@@ -48671,19 +48810,19 @@
 },
 "santarosa|40-1N-28-0090-52200-0150|2026269": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52200-0150 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52200-0150"
 },
 "santarosa|40-1N-28-0090-56200-0010|2026270": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56200-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56200-0010"
 },
 "santarosa|40-1N-28-0090-56800-0110|2026286": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56800-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56800-0110"
 },
@@ -48701,7 +48840,7 @@
 },
 "santarosa|40-1N-28-0090-75800-0030|2026279": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-75800-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-03T11:29:51+00:00",
+"fetched_at": "2026-11-10T11:50:33+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-75800-0030"
 },
