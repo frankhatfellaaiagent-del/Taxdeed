@@ -718,7 +718,7 @@
 },
 "brevard|2000576|260358": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2000576",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
 },
@@ -1084,7 +1084,7 @@
 },
 "brevard|2742939|260371": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2742939",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2742939"
 },
@@ -1352,6 +1352,18 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2947482"
 },
+"brevard|2949546|260472": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2949546",
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2949546"
+},
+"brevard|2951109|260481": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2951109",
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2951109"
+},
 "brevard|2952727|260115": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952727",
 "fetched_at": "2026-10-22T09:14:52+00:00",
@@ -1366,7 +1378,7 @@
 },
 "brevard|3004355|260394": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/3004355",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/3004355"
 },
@@ -1378,7 +1390,7 @@
 },
 "brevard|3006701|260379": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/3006701",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/3006701"
 },
@@ -3640,6 +3652,15 @@
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422422101007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
+"citrus|1010128|2026-0308TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "2917 GRAND TRAVERSE CIR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1010128&jur=19&LMparent=20"
+},
 "citrus|1028868|2026-0176TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3649,6 +3670,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1028868&jur=19&LMparent=20"
 },
+"citrus|1053731|2026-0270TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4589 N TIMBERWOOD PT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1053731&jur=19&LMparent=20"
+},
 "citrus|1055342|2026-0191TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3657,6 +3687,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1055342&jur=19&LMparent=20"
+},
+"citrus|1073081|2026-0301TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "7286 SUNSHINE GROVE RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1073081&jur=19&LMparent=20"
 },
 "citrus|1088364|2026-0193TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -3721,6 +3760,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1164214&jur=19&LMparent=20"
 },
+"citrus|1173221|2026-0286TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "197 SLACK TIDE DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1173221&jur=19&LMparent=20"
+},
 "citrus|1178118|2026-0246TD": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3730,6 +3778,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1178118&jur=19&LMparent=20"
 },
+"citrus|1187532|2026-0297TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "7578 W TROPICAL LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1187532&jur=19&LMparent=20"
+},
 "citrus|1205701|2026-0230TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3738,6 +3795,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1205701&jur=19&LMparent=20"
+},
+"citrus|1209587|2026-0322TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "8 FAIRVIEW LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1209587&jur=19&LMparent=20"
 },
 "citrus|1216672|2026-0231TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -3757,6 +3823,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1220637&jur=19&LMparent=20"
 },
+"citrus|1227054|2026-0332TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1416 SUMNER DRIVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1227054&jur=19&LMparent=20"
+},
+"citrus|1228107|2026-0333TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1442 GUNDERSON",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1228107&jur=19&LMparent=20"
+},
 "citrus|1234263|2026-0233TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3765,6 +3849,42 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1234263&jur=19&LMparent=20"
+},
+"citrus|1256674|2026-0328TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5821 SHILOH PATH",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1256674&jur=19&LMparent=20"
+},
+"citrus|1260698|2026-0334TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5438 74TH PLACE E",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1260698&jur=19&LMparent=20"
+},
+"citrus|1260965|2026-0258TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "524 SOUTHPORT DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1260965&jur=19&LMparent=20"
+},
+"citrus|1262119|2026-0327TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "FLAT E 3 F SUN TAO BUILDING",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1262119&jur=19&LMparent=20"
 },
 "citrus|1270022|2026-0234TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -3775,6 +3895,51 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1270022&jur=19&LMparent=20"
 },
+"citrus|1292077|2026-0336TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "3705 S GEORGE MASON DR APT 2112 S",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1292077&jur=19&LMparent=20"
+},
+"citrus|1292824|2026-0329TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1302 3975 GRAND PARK DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1292824&jur=19&LMparent=20"
+},
+"citrus|1298393|2026-0330TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6479 TRILLIUM CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1298393&jur=19&LMparent=20"
+},
+"citrus|1365244|2026-0335TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "FLAT E 3 F SUN TAO BUILDING",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1365244&jur=19&LMparent=20"
+},
+"citrus|1374529|2026-0337TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6900 WESTCLIFF DR STE 603",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1374529&jur=19&LMparent=20"
+},
 "citrus|1380847|2026-0218TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3783,6 +3948,24 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1380847&jur=19&LMparent=20"
+},
+"citrus|1382122|2026-0342TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "203 WASHINGTON ST UNIT 165",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1382122&jur=19&LMparent=20"
+},
+"citrus|1390796|2026-0318TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "REPARTO UNIVERSITARIO",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1390796&jur=19&LMparent=20"
 },
 "citrus|1393884|2026-0235TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -3802,6 +3985,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1434351&jur=19&LMparent=20"
 },
+"citrus|1440564|2026-0319TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "PO BOX 181",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1440564&jur=19&LMparent=20"
+},
 "citrus|1445531|2026-0260TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3820,6 +4012,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1445540&jur=19&LMparent=20"
 },
+"citrus|1448077|2026-0320TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "JULIUS BRECHT STRASSE 3",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1448077&jur=19&LMparent=20"
+},
 "citrus|1453500|2026-0256TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3828,6 +4029,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1453500&jur=19&LMparent=20"
+},
+"citrus|1470340|2026-0279TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "PO BOX 1040",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1470340&jur=19&LMparent=20"
 },
 "citrus|1470544|2026-0244TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -3847,6 +4057,33 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1482607&jur=19&LMparent=20"
 },
+"citrus|1484871|2026-0262TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "PO BOX 1462",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1484871&jur=19&LMparent=20"
+},
+"citrus|1500397|2026-0290TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "361 S SCARBORO AVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1500397&jur=19&LMparent=20"
+},
+"citrus|1545480|2026-0340TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5939 CANDYTUFT PL",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1545480&jur=19&LMparent=20"
+},
 "citrus|1577977|2026-0221TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -3855,6 +4092,42 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1577977&jur=19&LMparent=20"
+},
+"citrus|1586674|2026-0275TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6050 N SPECKLED PERCH TER",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1586674&jur=19&LMparent=20"
+},
+"citrus|1596467|2026-0287TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "30175 MICKELSON WAY",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1596467&jur=19&LMparent=20"
+},
+"citrus|1607094|2026-0316TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "354 EMERSON PL",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1607094&jur=19&LMparent=20"
+},
+"citrus|1607108|2026-0321TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "354 EMERSON PL",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1607108&jur=19&LMparent=20"
 },
 "citrus|1651531|2026-0171TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -4016,6 +4289,24 @@
 "source": "reportall"
 }
 },
+"citrus|1696399|2026-0276TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4666 E BOW N ARROW LOOP",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1696399&jur=19&LMparent=20"
+},
+"citrus|1696917|2026-0280TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4266 S EMBER TRL",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1696917&jur=19&LMparent=20"
+},
 "citrus|1711941|2026-0255TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4033,6 +4324,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1727243&jur=19&LMparent=20"
+},
+"citrus|1752515|2026-0281TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "PO BOX 36",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1752515&jur=19&LMparent=20"
 },
 "citrus|1763550|2026-0252TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -4093,6 +4393,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1779251&jur=19&LMparent=20"
 },
+"citrus|1809037|2026-0267TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "159 WEEKS RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1809037&jur=19&LMparent=20"
+},
 "citrus|1822092|2026-0203TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4120,6 +4429,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1849110&jur=19&LMparent=20"
 },
+"citrus|1883156|2026-0298TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "18326 RIGSBY RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1883156&jur=19&LMparent=20"
+},
+"citrus|1888905|2026-0299TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "11090 E TROUT CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1888905&jur=19&LMparent=20"
+},
 "citrus|1902983|2026-0195TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4137,6 +4464,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1938384&jur=19&LMparent=20"
+},
+"citrus|1955823|2026-0294TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5563 W KINGSWAY CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=1955823&jur=19&LMparent=20"
 },
 "citrus|1995922|2026-0205TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -4192,6 +4528,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2056797&jur=19&LMparent=20"
 },
+"citrus|2063807|2026-0324TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4625 FIFTH AVE 716",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2063807&jur=19&LMparent=20"
+},
+"citrus|2064706|2026-0325TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6742 POMPEII RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2064706&jur=19&LMparent=20"
+},
 "citrus|2071974|2026-0237TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4200,6 +4554,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2071974&jur=19&LMparent=20"
+},
+"citrus|2082364|2026-0326TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "23 ROLAN CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2082364&jur=19&LMparent=20"
 },
 "citrus|2089016|2026-0238TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -4237,6 +4600,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2134593&jur=19&LMparent=20"
 },
+"citrus|2165138|2026-0282TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4123 W 21ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2165138&jur=19&LMparent=20"
+},
 "citrus|2169711|2026-0186TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4273,6 +4645,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2227711&jur=19&LMparent=20"
 },
+"citrus|2238186|2026-0310TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "119 PIKE HILL RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2238186&jur=19&LMparent=20"
+},
 "citrus|2245417|2026-0196TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4300,6 +4681,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2251891&jur=19&LMparent=20"
 },
+"citrus|2263644|2026-0300TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "774 S FAIRLANE TER",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2263644&jur=19&LMparent=20"
+},
+"citrus|2271931|2026-0293TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "8164 S KIMBERLY CIR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2271931&jur=19&LMparent=20"
+},
 "citrus|2273917|2026-0190TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4308,6 +4707,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2273917&jur=19&LMparent=20"
+},
+"citrus|2275383|2026-0312TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "3309 E LAKE NINA DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2275383&jur=19&LMparent=20"
 },
 "citrus|2328339|2026-0211TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -4318,6 +4726,42 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2328339&jur=19&LMparent=20"
 },
+"citrus|2331241|2026-0338TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5415 W STARBURST LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2331241&jur=19&LMparent=20"
+},
+"citrus|2390409|2026-0292TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "5415 W STARBURST LN",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2390409&jur=19&LMparent=20"
+},
+"citrus|2401478|2026-0291TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4940 S POWELL PT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2401478&jur=19&LMparent=20"
+},
+"citrus|2401656|2026-0273TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "127 N DUNDEE WAY",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2401656&jur=19&LMparent=20"
+},
 "citrus|2417498|2026-0266TD": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4326,6 +4770,42 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2417498&jur=19&LMparent=20"
+},
+"citrus|2421771|2026-0313TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "4695 TOWER RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2421771&jur=19&LMparent=20"
+},
+"citrus|2457902|2026-0314TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "13227 PALMILLA CIR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2457902&jur=19&LMparent=20"
+},
+"citrus|2475269|2026-0304TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "8551 W MOON HAZE CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2475269&jur=19&LMparent=20"
+},
+"citrus|2490209|2026-0346TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "13314 E SHAWNEE TR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2490209&jur=19&LMparent=20"
 },
 "citrus|2498439|2026-0228TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -4345,6 +4825,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2522275&jur=19&LMparent=20"
 },
+"citrus|2535067|2026-0269TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "46 JIAN AN ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2535067&jur=19&LMparent=20"
+},
 "citrus|2536101|2026-0264TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4353,6 +4842,24 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2536101&jur=19&LMparent=20"
+},
+"citrus|2549564|2026-0283TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1637 VINE CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2549564&jur=19&LMparent=20"
+},
+"citrus|2567902|2026-0284TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "8905 S BRITTANY PATH",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2567902&jur=19&LMparent=20"
 },
 "citrus|2677058|2026-0214TD": {
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -4372,6 +4879,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2797169&jur=19&LMparent=20"
 },
+"citrus|2956429|2026-0343TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "10809 SW 100TH AVE",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2956429&jur=19&LMparent=20"
+},
+"citrus|2962798|2026-0317TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "6565 W COUNTRY CLUB DR",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=2962798&jur=19&LMparent=20"
+},
 "citrus|2999373|2026-0241TD": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4390,6 +4915,15 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3100897&jur=19&LMparent=20"
 },
+"citrus|3129859|2026-0305TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "7327 S HALF HITCH TER",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3129859&jur=19&LMparent=20"
+},
 "citrus|3220074|2026-0224TD": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4398,6 +4932,15 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3220074&jur=19&LMparent=20"
+},
+"citrus|3229882|2026-0272TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "19 W FLAGLER ST STE 516",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3229882&jur=19&LMparent=20"
 },
 "citrus|3279109|2026-0197TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
@@ -4433,6 +4976,24 @@
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3425525&jur=19&LMparent=20"
 },
+"citrus|3474021|2026-0307TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "3103 W SHADOW CREEK LOOP",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3474021&jur=19&LMparent=20"
+},
+"citrus|3480173|2026-0315TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "7171 ARDMORE RD",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3480173&jur=19&LMparent=20"
+},
 "citrus|3486025|2026-0265TD": {
 "fetched_at": "2026-11-01T11:05:14+00:00",
 "just_value": "Non-Sch. Assessed",
@@ -4441,6 +5002,24 @@
 "owner_name": "Address Search",
 "property_use": "Type",
 "url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3486025&jur=19&LMparent=20"
+},
+"citrus|3520921|2026-0285TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "9434 E RIVER MOON CT",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3520921&jur=19&LMparent=20"
+},
+"citrus|3523736|2026-0306TD": {
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": "Non-Sch. Assessed",
+"mailing_address": "1418 BRUCE ST",
+"ok": true,
+"owner_name": "Address Search",
+"property_use": "Type",
+"url": "http://www.citruspa.org/_Web/datalets/datalet.aspx?mode=profileall&UseSearch=no&pin=3523736&jur=19&LMparent=20"
 },
 "citrus|CCCC|2026-0245TD": {
 "fetched_at": "2026-10-01T10:50:35+00:00",
@@ -4720,6 +5299,22 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0005110000"
 },
+"duval|000850-0000|2026-0879TD": {
+"assessed_value": 28403.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 49470.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0008500000"
+},
+"duval|000860-0000|2026-0880TD": {
+"assessed_value": 28988.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 50490.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0008600000"
+},
 "duval|001291-4000|2026-0592TD": {
 "acreage": "$69,300.00",
 "assessed_value": 70099.0,
@@ -4784,6 +5379,14 @@
 "parcel_address": "6522 BARTH Rd",
 "source": "reportall"
 }
+},
+"duval|003697-0000|2026-0817TD": {
+"assessed_value": 102930.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 102930.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0036970000"
 },
 "duval|003708-0000|2026-0906TD": {
 "assessed_value": 132201.0,
@@ -4866,6 +5469,14 @@
 "source": "reportall"
 }
 },
+"duval|004820-0000|2026-0807TD": {
+"assessed_value": 61184.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 64304.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0048200000"
+},
 "duval|005220-0000|2026-0293TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -4947,6 +5558,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0114140010"
 },
+"duval|013717-0210|2026-0820TD": {
+"assessed_value": 58758.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 60866.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0137170210"
+},
 "duval|013861-0394|2026-0282TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -4963,6 +5582,15 @@
 "source": "reportall"
 }
 },
+"duval|016027-0500|2026-0818TD": {
+"acreage": "$227,400.00",
+"assessed_value": 83496.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 260319.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0160270500"
+},
 "duval|016030-0200|2026-0382TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -4978,6 +5606,14 @@
 "parcel_address": "7241 RICKER Rd",
 "source": "reportall"
 }
+},
+"duval|016057-8410|2026-0803TD": {
+"assessed_value": 233636.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 233636.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0160578410"
 },
 "duval|016279-0000|2026-0477TD": {
 "acreage": "$70,000.00",
@@ -5101,6 +5737,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0215780370"
 },
+"duval|021743-0000|2026-0881TD": {
+"assessed_value": 19727.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 33750.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0217430000"
+},
 "duval|021805-0000|2026-0417TD": {
 "assessed_value": 194283.0,
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -5148,6 +5792,22 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0219490000"
+},
+"duval|021963-0000|2026-0878TD": {
+"assessed_value": 14757.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 25250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0219630000"
+},
+"duval|022026-0000|2026-0877TD": {
+"assessed_value": 8992.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 15390.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0220260000"
 },
 "duval|022614-0000|2026-0408TD": {
 "acreage": "$30.00",
@@ -5261,6 +5921,14 @@
 "ok": true,
 "property_use": "1000 Vacant Comm",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0256860000"
+},
+"duval|025723-0000|2026-0802TD": {
+"assessed_value": 90614.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 90614.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0257230000"
 },
 "duval|026019-0000|2026-0248TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5389,6 +6057,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0282730000"
+},
+"duval|028362-0000|2026-0808TD": {
+"assessed_value": 76777.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 87605.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0283620000"
 },
 "duval|028510-0000|2026-0300TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5542,6 +6218,14 @@
 "source": "reportall"
 }
 },
+"duval|032695-0020|2026-0809TD": {
+"assessed_value": 65223.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 109188.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0326950020"
+},
 "duval|034106-0000|2026-0278TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5558,6 +6242,14 @@
 "source": "reportall"
 }
 },
+"duval|034125-0000|2026-0882TD": {
+"assessed_value": 99389.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 101905.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0341250000"
+},
 "duval|035684-0000|2026-0513TD": {
 "assessed_value": 94523.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -5573,6 +6265,22 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0359770000"
+},
+"duval|036025-0000|2026-0822TD": {
+"assessed_value": 87853.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 89228.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0360250000"
+},
+"duval|036062-0000|2026-0844TD": {
+"assessed_value": 139816.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 139816.0,
+"ok": true,
+"property_use": "1192 Store,Retail/Multi Bldg",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0360620000"
 },
 "duval|036214-0000|2026-0258TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -5727,6 +6435,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0374860010"
 },
+"duval|037575-0510|2026-0819TD": {
+"assessed_value": 101883.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 101883.0,
+"ok": true,
+"property_use": "1000 Vacant Comm",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0375750510"
+},
 "duval|037817-0000|2026-0901TD": {
 "assessed_value": 28910.0,
 "fetched_at": "2026-11-10T11:50:33+00:00",
@@ -5750,6 +6466,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0379820000"
+},
+"duval|038335-0000|2026-0821TD": {
+"assessed_value": 98645.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 107758.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0383350000"
 },
 "duval|038961-0000|2026-0490TD": {
 "assessed_value": 132426.0,
@@ -6873,6 +7597,22 @@
 "source": "reportall"
 }
 },
+"duval|108751-0000|2026-0799TD": {
+"assessed_value": 143688.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 281225.0,
+"ok": true,
+"property_use": "4900 Open Storage",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1087510000"
+},
+"duval|108755-0000|2026-0800TD": {
+"assessed_value": 143639.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 286806.0,
+"ok": true,
+"property_use": "4900 Open Storage",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1087550000"
+},
 "duval|110724-0000|2026-0286TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -7249,6 +7989,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1315970000"
+},
+"duval|131881-0000|2026-0876TD": {
+"assessed_value": 67753.0,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"just_value": 80595.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1318810000"
 },
 "duval|132706-0000|2026-0486TD": {
 "assessed_value": 10436.0,
@@ -9130,7 +9878,7 @@
 },
 "flagler|0711317024000700120|26-076 TDC": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=07-11-31-7024-00070-0120"
 },
@@ -9206,7 +9954,7 @@
 },
 "gilchrist|150816-02200000-0090|26-0016-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090"
 },
@@ -9273,7 +10021,7 @@
 },
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
 },
@@ -13748,7 +14496,7 @@
 },
 "indianriver|32392100003012000009.0|2026-0068TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392100003012000009.0",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392100003012000009.0"
 },
@@ -13766,7 +14514,7 @@
 },
 "indianriver|32392300003001000026.0|2026-0067TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392300003001000026.0",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392300003001000026.0"
 },
@@ -13844,7 +14592,7 @@
 },
 "indianriver|33392600001014000001.0|2026-0069TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33392600001014000001.0",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33392600001014000001.0"
 },
@@ -30294,6 +31042,12 @@
 "source": "reportall"
 }
 },
+"nassau|29-2N-28-0000-0001-0040|452026XX000022TDAXYX": {
+"error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=29-2N-28-0000-0001-0040 (Caused by SSLError(SSLCertVerificationErr",
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"ok": false,
+"url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=29-2N-28-0000-0001-0040"
+},
 "nassau|31-2N-28-1601-0062-0000|452026XX000016TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=31-2N-28-1601-0062-0000 (Caused by SSLError(SSLCertVerificationErr",
 "fetched_at": "2026-10-15T08:57:09+00:00",
@@ -31146,7 +31900,7 @@
 },
 "okeechobee|1-14-34-33-0A00-00019-O000|2026TD106": {
 "error": "404 Client Error: Not Found for url: https://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000"
 },
@@ -37043,9 +37797,10 @@
 "url": "https://www.pcpao.gov/property-details?s=163121352440300040"
 },
 "pinellas|23-31-16-24138-002-0110|2024-07933": {
-"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
-"fetched_at": "2026-11-04T11:32:33+00:00",
-"ok": false,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"property_use": "Land Dimensions",
 "url": "https://www.pcpao.gov/property-details?s=163123241380020110"
 },
 "pinellas|24-30-16-98234-001-0105|2024-06043": {
@@ -37136,9 +37891,10 @@
 "url": "https://www.pcpao.gov/property-details?s=152827555120000090"
 },
 "pinellas|27-31-16-13518-000-0070|2023-08415": {
-"error": "HTTPSConnectionPool(host='www.pcpao.gov', port=443): Read timed out. (read timeout=25)",
-"fetched_at": "2026-11-04T11:32:33+00:00",
-"ok": false,
+"fetched_at": "2026-11-11T11:34:18+00:00",
+"ok": true,
+"owner_name": "Parcel ID",
+"property_use": "Land Dimensions",
 "url": "https://www.pcpao.gov/property-details?s=163127135180000070"
 },
 "pinellas|27-31-16-88686-000-0042|2024-08576": {
@@ -48562,7 +49318,7 @@
 },
 "santarosa|01-1N-28-0000-00418-0000|2026260": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=01-1N-28-0000-00418-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=01-1N-28-0000-00418-0000"
 },
@@ -48580,7 +49336,7 @@
 },
 "santarosa|03-1N-28-2530-00600-0011|2026245": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=03-1N-28-2530-00600-0011 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=03-1N-28-2530-00600-0011"
 },
@@ -48592,7 +49348,7 @@
 },
 "santarosa|05-1N-27-0000-00150-0000|2026232": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=05-1N-27-0000-00150-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=05-1N-27-0000-00150-0000"
 },
@@ -48626,7 +49382,7 @@
 },
 "santarosa|09-1N-29-5433-00A00-0220|2026252": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-29-5433-00A00-0220 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-29-5433-00A00-0220"
 },
@@ -48648,7 +49404,7 @@
 },
 "santarosa|10-1N-28-3040-00400-0030|2026261": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-1N-28-3040-00400-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-1N-28-3040-00400-0030"
 },
@@ -48666,13 +49422,13 @@
 },
 "santarosa|15-1N-29-1290-00C00-0040|2026253": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=15-1N-29-1290-00C00-0040 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=15-1N-29-1290-00C00-0040"
 },
 "santarosa|16-2N-28-0000-04501-0000|2026236": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=16-2N-28-0000-04501-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=16-2N-28-0000-04501-0000"
 },
@@ -48702,7 +49458,7 @@
 },
 "santarosa|19-2S-27-1010-00A00-0830|2026228": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-0830 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-0830"
 },
@@ -48732,7 +49488,7 @@
 },
 "santarosa|22-5N-28-0000-01309-0000|2026259": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-5N-28-0000-01309-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-5N-28-0000-01309-0000"
 },
@@ -48744,7 +49500,7 @@
 },
 "santarosa|24-3N-30-0000-00903-0000|2026254": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=24-3N-30-0000-00903-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=24-3N-30-0000-00903-0000"
 },
@@ -48786,7 +49542,7 @@
 },
 "santarosa|40-1N-28-0090-22500-0090|2026224": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-22500-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-22500-0090"
 },
@@ -48828,13 +49584,13 @@
 },
 "santarosa|40-1N-28-0090-63700-0100|2026221": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0100 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0100"
 },
 "santarosa|40-1N-28-0090-63700-0110|2026258": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0110"
 },
@@ -49820,7 +50576,7 @@
 },
 "sumter|D19A007|5069": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -49845,13 +50601,13 @@
 },
 "sumter|F35A182|5070": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|G06B235|5075": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -49888,7 +50644,7 @@
 },
 "sumter|G06P029|5077": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -49906,7 +50662,7 @@
 },
 "sumter|G30C005|5073": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -49942,13 +50698,13 @@
 },
 "sumter|Q21A049|5072": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
 "sumter|R10-025|5067": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://sumterpa.com"
 },
@@ -51073,7 +51829,7 @@
 },
 "volusia|533903700061|06725-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
 },
@@ -51147,7 +51903,7 @@
 },
 "volusia|580201590010|00150-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
 },
@@ -51211,13 +51967,13 @@
 },
 "volusia|611601250130|03068-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130"
 },
 "volusia|611602020090|12107-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
 },
@@ -51229,7 +51985,7 @@
 },
 "volusia|611602210150|03578-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150"
 },
@@ -51281,13 +52037,13 @@
 },
 "volusia|613301070250|05074-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250"
 },
 "volusia|613301100260|10746-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
 },
@@ -51299,7 +52055,7 @@
 },
 "volusia|613301150090|14045-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090"
 },
@@ -51417,7 +52173,7 @@
 },
 "volusia|694301060020|00298-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020"
 },
@@ -51439,7 +52195,7 @@
 },
 "volusia|700400001060|01154-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700400001060"
 },
@@ -51473,7 +52229,7 @@
 },
 "volusia|701531000030|01375-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030"
 },
@@ -51519,7 +52275,7 @@
 },
 "volusia|702003000010|01643-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010"
 },
@@ -51531,7 +52287,7 @@
 },
 "volusia|702012030110|12279-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110"
 },
@@ -51673,7 +52429,7 @@
 },
 "volusia|743005040130|08124-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130"
 },
@@ -51691,7 +52447,7 @@
 },
 "volusia|744109010050|08201-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050"
 },
@@ -51767,7 +52523,7 @@
 },
 "volusia|801108280050|02083-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
 },
@@ -51807,7 +52563,7 @@
 },
 "volusia|810401010130|12166-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130"
 },
@@ -51969,7 +52725,7 @@
 },
 "volusia|844702060860|09589-21": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860"
 },
@@ -51991,7 +52747,7 @@
 },
 "volusia|844702073021|09753-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
@@ -52107,7 +52863,7 @@
 },
 "walton|25-3N-19-19330-000-0017|2026-0135TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017"
 },
@@ -52125,7 +52881,7 @@
 },
 "walton|30-3N-18-10000-027-0130|2026-0128TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130"
 },
@@ -52143,7 +52899,7 @@
 },
 "walton|33-6N-20-31010-000-0500|2026-0133TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500",
-"fetched_at": "2026-11-04T11:32:33+00:00",
+"fetched_at": "2026-11-11T11:34:18+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500"
 },
