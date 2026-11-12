@@ -356,19 +356,19 @@
 },
 "bay|01547-000-000|2026-0281TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01547-000-000"
 },
 "bay|01601-000-000|2026-00262TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=01601-000-000"
 },
 "bay|02332-000-000|2026-0454TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=02332-000-000"
 },
@@ -464,19 +464,19 @@
 },
 "bay|07379-100-000|2026-1619TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07379-100-000"
 },
 "bay|07399-644-006|2026-1707TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-644-006"
 },
 "bay|07399-951-000|2026-1713TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=07399-951-000"
 },
@@ -558,7 +558,7 @@
 },
 "bay|16869-000-000|2026-3170TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=16869-000-000"
 },
@@ -576,25 +576,25 @@
 },
 "bay|19314-000-000|2026-3438TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=19314-000-000"
 },
 "bay|23410-000-000|2026-3642TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23410-000-000"
 },
 "bay|23411-000-000|2026-3643TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23411-000-000"
 },
 "bay|23438-000-000|2026-3738TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=23438-000-000"
 },
@@ -634,7 +634,7 @@
 },
 "bay|27554-130-010|2026-4239TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/application.aspx?AppID=834&LayerID=15170&PageTypeID=4&PageID=6825&Q=192963963&KeyValue=27554-130-010"
 },
@@ -730,7 +730,7 @@
 },
 "brevard|2002854|260429": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2002854",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2002854"
 },
@@ -754,13 +754,13 @@
 },
 "brevard|2108267|260428": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2108267",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2108267"
 },
 "brevard|2109744|260427": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2109744",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2109744"
 },
@@ -784,7 +784,7 @@
 },
 "brevard|2206591|260434": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2206591",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2206591"
 },
@@ -868,25 +868,25 @@
 },
 "brevard|2406410|260403": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406410",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2406410"
 },
 "brevard|2406488|260405": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406488",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2406488"
 },
 "brevard|2406552|260404": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2406552",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2406552"
 },
 "brevard|2409831|260445": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2409831",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2409831"
 },
@@ -898,7 +898,7 @@
 },
 "brevard|2413725|260456": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2413725",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2413725"
 },
@@ -910,37 +910,37 @@
 },
 "brevard|2415328|260447": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2415328",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2415328"
 },
 "brevard|2417894|260468": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2417894",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2417894"
 },
 "brevard|2419293|260455": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2419293",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2419293"
 },
 "brevard|2419581|260450": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2419581",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2419581"
 },
 "brevard|2422648|260469": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2422648",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2422648"
 },
 "brevard|2422739|260463": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2422739",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2422739"
 },
@@ -1042,7 +1042,7 @@
 },
 "brevard|2717640|260375": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2717640",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2717640"
 },
@@ -1054,13 +1054,13 @@
 },
 "brevard|2719588|260386": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2719588",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2719588"
 },
 "brevard|2724533|260387": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2724533",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2724533"
 },
@@ -1222,7 +1222,7 @@
 },
 "brevard|2851331|260392": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2851331",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2851331"
 },
@@ -1234,7 +1234,7 @@
 },
 "brevard|2903138|260400": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2903138",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2903138"
 },
@@ -1252,7 +1252,7 @@
 },
 "brevard|2910239|260401": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2910239",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2910239"
 },
@@ -1264,13 +1264,13 @@
 },
 "brevard|2919665|260402": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2919665",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2919665"
 },
 "brevard|2923054|260376": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2923054",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2923054"
 },
@@ -1342,7 +1342,7 @@
 },
 "brevard|2944771|260399": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2944771",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2944771"
 },
@@ -1372,7 +1372,7 @@
 },
 "brevard|2952749|260406": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2952749",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2952749"
 },
@@ -2198,28 +2198,28 @@
 },
 "charlotte|402103330002|26-0628": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103330002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402103332015|26-0623": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103332015&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402103455006|26-0624": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402103455006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402104283001|26-0627": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402104283001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2324,7 +2324,7 @@
 },
 "charlotte|402108302016|26-0653": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402108302016&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -2807,21 +2807,21 @@
 },
 "charlotte|402310383001|26-0621": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402310383001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402311376001|26-0622": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402311376001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|402315104001|26-0654": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=402315104001&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3010,7 +3010,7 @@
 },
 "charlotte|412133353004|26-0655": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412133353004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3024,7 +3024,7 @@
 },
 "charlotte|412213232008|26-0652": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412213232008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3234,7 +3234,7 @@
 },
 "charlotte|412334407010|26-0610": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=412334407010&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3318,7 +3318,7 @@
 },
 "charlotte|422302178007|26-0615": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302178007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3332,21 +3332,21 @@
 },
 "charlotte|422302311008|26-0611": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302311008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422302356011|26-0612": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302356011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422302358019|26-0633": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422302358019&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3388,28 +3388,28 @@
 },
 "charlotte|422303154012|26-0635": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303154012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422303155012|26-0647": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303155012&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422303157002|26-0636": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303157002&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422303157003|26-0637": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303157003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3465,42 +3465,42 @@
 },
 "charlotte|422303326022|26-0631": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303326022&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422303326023|26-0632": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422303326023&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310131005|26-0639": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310131005&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310131006|26-0638": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310131006&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310135003|26-0648": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310135003&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310135004|26-0640": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310135004&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3521,35 +3521,35 @@
 },
 "charlotte|422310356007|26-0650": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310356007&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310356008|26-0642": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310356008&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310357033|26-0641": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310357033&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310357034|26-0643": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310357034&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
 },
 "charlotte|422310380017|26-0646": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422310380017&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -3577,7 +3577,7 @@
 },
 "charlotte|422330428011|26-0595": {
 "acreage": "Land Value",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "property_use": "Zoning",
 "url": "http://www.ccappraiser.com/Show_parcel.asp?acct=422330428011&gen=T&tax=T&bld=T&oth=T&sal=T&lnd=T&leg=T"
@@ -5161,7 +5161,7 @@
 },
 "clay|200823-002538-000-00|2026-0088TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=200823-002538-000-00",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=200823-002538-000-00"
 },
@@ -9890,7 +9890,7 @@
 },
 "gilchrist|040916-00000002-0190|26-0017-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=04-09-16-0000-0002-0190"
 },
@@ -9942,13 +9942,13 @@
 },
 "gilchrist|100816-00000004-0010|26-0018-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=10-08-16-0000-0004-0010"
 },
 "gilchrist|111015-02370000-0270|26-0019-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=11-10-15-0237-0000-0270"
 },
@@ -10033,7 +10033,7 @@
 },
 "gilchrist|280814-1931000C-0020|26-0020-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=28-08-14-1931-000C-0020"
 },
@@ -13157,7 +13157,7 @@
 },
 "hillsborough|0134510025|2026-913": {
 "assessed_value": "Exemptions",
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "just_value": "Assessed Value",
 "ok": true,
 "owner_name": "Search Clear",
@@ -14556,7 +14556,7 @@
 },
 "indianriver|33391200015000000002.9|2026-0047TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33391200015000000002.9"
 },
@@ -14638,7 +14638,7 @@
 },
 "indianriver|33400500012010000005.0|2026-0065TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33400500012010000005.0"
 },
@@ -30791,7 +30791,7 @@
 },
 "miamidade|30-5816-000-0301|2026A00264": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3058160000301"
 },
@@ -33498,7 +33498,7 @@
 },
 "osceola|032530420800010510|6682024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032530420800010510",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=032530420800010510"
 },
@@ -33534,7 +33534,7 @@
 },
 "osceola|072732000012440010|16702024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072732000012440010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=072732000012440010"
 },
@@ -33571,31 +33571,31 @@
 },
 "osceola|092732000024130030|20062024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092732000024130030",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=092732000024130030"
 },
 "osceola|102731000019200000|21352024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000019200000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000019200000"
 },
 "osceola|102731000020700000|21372024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000020700000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000020700000"
 },
 "osceola|102731000021200000|21402024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021200000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021200000"
 },
 "osceola|102731000021300000|21412024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021300000",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=102731000021300000"
 },
@@ -33638,13 +33638,13 @@
 },
 "osceola|112731000023230020|23472024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000023230020",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000023230020"
 },
 "osceola|112731000032440010|23642024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000032440010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=112731000032440010"
 },
@@ -33656,37 +33656,37 @@
 },
 "osceola|132731999102120010|26532024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999102120010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999102120010"
 },
 "osceola|132731999202220010|26612024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220010"
 },
 "osceola|132731999202220020|26622024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220020",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999202220020"
 },
 "osceola|132731999203210020|26632024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999203210020",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=132731999203210020"
 },
 "osceola|142731000044340010|25432023": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340010",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340010"
 },
 "osceola|142731000044340020|25442023": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340020",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=142731000044340020"
 },
@@ -33772,7 +33772,7 @@
 },
 "osceola|20273200003243001H|39562024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=20273200003243001H",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=20273200003243001H"
 },
@@ -33828,13 +33828,13 @@
 },
 "osceola|24273160003214001B|44032024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003214001B",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003214001B"
 },
 "osceola|24273160003423001B|44102024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003423001B",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=24273160003423001B"
 },
@@ -33928,7 +33928,7 @@
 },
 "osceola|252628611413590170|46512024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611413590170",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=252628611413590170"
 },
@@ -33990,25 +33990,25 @@
 },
 "osceola|262630061300010120|56742019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010120",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010120"
 },
 "osceola|262630061300010140|56752019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010140",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010140"
 },
 "osceola|262630061300012430|58352019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012430",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012430"
 },
 "osceola|262630061300012450|58372019": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012450",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012450"
 },
@@ -34052,7 +34052,7 @@
 },
 "osceola|26273100004244001C|51072024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=26273100004244001C",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=26273100004244001C"
 },
@@ -34095,13 +34095,13 @@
 },
 "osceola|30273260003242002G|54802024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260003242002G",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260003242002G"
 },
 "osceola|30273260004442001G|55012024": {
 "error": "523 Server Error: <none> for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260004442001G",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260004442001G"
 },
@@ -37644,10 +37644,11 @@
 "url": "https://www.pcpao.gov/property-details?s=152910184500040150"
 },
 "pinellas|10-29-15-51948-001-0080|2024-01539": {
-"fetched_at": "2026-10-13T11:17:03+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": true,
 "owner_name": "Parcel ID",
-"url": "https://www.pcpao.gov/property-details?s=10-29-15-51948-001-0080"
+"property_use": "Land Dimensions",
+"url": "https://www.pcpao.gov/property-details?s=152910519480010080"
 },
 "pinellas|10-30-15-57790-003-0450|2024-02946": {
 "fetched_at": "2026-10-13T11:17:03+00:00",
@@ -49464,7 +49465,7 @@
 },
 "santarosa|19-2S-27-1010-00A00-1170|2026205": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-1170 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-1170"
 },
@@ -49476,7 +49477,7 @@
 },
 "santarosa|21-2N-28-2360-00100-0450|2026218": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=21-2N-28-2360-00100-0450 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=21-2N-28-2360-00100-0450"
 },
@@ -49524,7 +49525,7 @@
 },
 "santarosa|32-2N-28-0000-05050-0000|2026219": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=32-2N-28-0000-05050-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=32-2N-28-0000-05050-0000"
 },
@@ -49536,7 +49537,7 @@
 },
 "santarosa|34-2N-28-0570-00Q00-0020|2026207": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=34-2N-28-0570-00Q00-0020"
 },
@@ -49560,7 +49561,7 @@
 },
 "santarosa|40-1N-28-0090-52100-0070|2026203": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52100-0070 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52100-0070"
 },
@@ -49988,7 +49989,7 @@
 },
 "seminole|08-21-30-511-0A00-0160|20260030/2024-001109": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=08-21-30-511-0A00-0160"
 },
@@ -50120,7 +50121,7 @@
 },
 "seminole|21-21-30-514-0000-009B|20260105/2024-003472": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=21-21-30-514-0000-009B"
 },
@@ -50242,7 +50243,7 @@
 },
 "seminole|35-19-30-505-0000-0260|20260118/2024-006065": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-505-0000-0260"
 },
@@ -50282,7 +50283,7 @@
 },
 "seminole|36-19-30-514-0000-0080|20260123/2024-006421": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-514-0000-0080"
 },
@@ -51287,7 +51288,7 @@
 },
 "volusia|402500000040|10445-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=402500000040"
 },
@@ -53835,7 +53836,7 @@
 },
 "washington|00000000-10-0613-0014|2026-TD-139": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014",
-"fetched_at": "2026-11-05T11:33:37+00:00",
+"fetched_at": "2026-11-12T11:45:19+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0613-0014"
 },

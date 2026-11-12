@@ -1,0 +1,32 @@
+[
+  {
+    "county": "okeechobee",
+    "sale_date": "11/19/2026",
+    "sale_time": "10:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "2026TD106",
+    "certificate_number": "240-2024",
+    "parcel_id": "1-14-34-33-0A00-00019-O000",
+    "owner_name": "",
+    "property_address": "16473 NW 292ND ST, OKEECHOBEE, FL- 34972",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 1572.0,
+    "assessed_value": null,
+    "auction_status": "11/19/2026 10:00 AM ET",
+    "auction_url": "https://www.okeechobee.realforeclose.com/index.cfm?zaction=auction&zmethod=details&AID=1527593&bypassPage=1",
+    "appraiser_url": "http://www.okeechobeepa.com/gis/?pin=1-14-34-33-0A00-00019-O000",
+    "clerk_case_url": "",
+    "source_host": "www.okeechobee.realforeclose.com",
+    "scraped_at": "2026-11-12T11:31:58+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "2026TD106",
+      "certificate": "240-2024",
+      "opening bid": "$1,572.00",
+      "parcel id": "1-14-34-33-0A00-00019-O000",
+      "property address": "16473 NW 292ND ST",
+      "(cont:property_address)": "OKEECHOBEE, FL- 34972"
+    }
+  }
+]
