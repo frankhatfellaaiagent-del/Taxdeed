@@ -1,50 +1,50 @@
 {
- "generated_at": "2026-11-14T11:13:15+00:00",
- "source_run": "2026-11-14T102446Z",
+ "generated_at": "2026-11-15T11:30:27+00:00",
+ "source_run": "2026-11-15T105231Z",
  "county_runs": {
-  "alachua": "2026-11-14T102446Z",
-  "baker": "2026-11-14T102446Z",
-  "bay": "2026-11-14T102446Z",
-  "brevard": "2026-11-14T102446Z",
-  "broward": "2026-11-14T102446Z",
-  "charlotte": "2026-11-14T102446Z",
-  "citrus": "2026-11-14T102446Z",
-  "clay": "2026-11-14T102446Z",
-  "duval": "2026-11-14T102446Z",
-  "escambia": "2026-11-14T102446Z",
-  "flagler": "2026-11-14T102446Z",
-  "gilchrist": "2026-11-14T102446Z",
-  "hendry": "2026-11-14T102446Z",
-  "hernando": "2026-11-14T102446Z",
-  "highlands": "2026-11-14T102446Z",
-  "hillsborough": "2026-11-14T102446Z",
-  "indianriver": "2026-11-14T102446Z",
-  "jackson": "2026-11-14T102446Z",
-  "lake": "2026-11-14T102446Z",
-  "lee": "2026-11-14T102446Z",
-  "levy": "2026-11-14T102446Z",
-  "manatee": "2026-11-14T102446Z",
-  "marion": "2026-11-14T102446Z",
-  "martin": "2026-11-14T102446Z",
-  "miamidade": "2026-11-14T102446Z",
-  "nassau": "2026-11-14T102446Z",
-  "okaloosa": "2026-11-14T102446Z",
-  "okeechobee": "2026-11-14T102446Z",
-  "orange": "2026-11-14T102446Z",
-  "osceola": "2026-11-14T102446Z",
-  "palmbeach": "2026-11-14T102446Z",
-  "pasco": "2026-11-14T102446Z",
-  "pinellas": "2026-11-14T102446Z",
-  "polk": "2026-11-14T102446Z",
-  "putnam": "2026-11-14T102446Z",
-  "santarosa": "2026-11-14T102446Z",
-  "seminole": "2026-11-14T102446Z",
-  "stjohns": "2026-11-14T102446Z",
-  "stlucie": "2026-11-14T102446Z",
-  "sumter": "2026-11-14T102446Z",
-  "volusia": "2026-11-14T102446Z",
-  "walton": "2026-11-14T102446Z",
-  "washington": "2026-11-14T102446Z",
+  "alachua": "2026-11-15T105231Z",
+  "baker": "2026-11-15T105231Z",
+  "bay": "2026-11-15T105231Z",
+  "brevard": "2026-11-15T105231Z",
+  "broward": "2026-11-15T105231Z",
+  "charlotte": "2026-11-15T105231Z",
+  "citrus": "2026-11-15T105231Z",
+  "clay": "2026-11-15T105231Z",
+  "duval": "2026-11-15T105231Z",
+  "escambia": "2026-11-15T105231Z",
+  "flagler": "2026-11-15T105231Z",
+  "gilchrist": "2026-11-15T105231Z",
+  "hendry": "2026-11-15T105231Z",
+  "hernando": "2026-11-15T105231Z",
+  "highlands": "2026-11-15T105231Z",
+  "hillsborough": "2026-11-15T105231Z",
+  "indianriver": "2026-11-15T105231Z",
+  "jackson": "2026-11-15T105231Z",
+  "lake": "2026-11-15T105231Z",
+  "lee": "2026-11-15T105231Z",
+  "levy": "2026-11-15T105231Z",
+  "manatee": "2026-11-15T105231Z",
+  "marion": "2026-11-15T105231Z",
+  "martin": "2026-11-15T105231Z",
+  "miamidade": "2026-11-15T105231Z",
+  "nassau": "2026-11-15T105231Z",
+  "okaloosa": "2026-11-15T105231Z",
+  "okeechobee": "2026-11-15T105231Z",
+  "orange": "2026-11-15T105231Z",
+  "osceola": "2026-11-15T105231Z",
+  "palmbeach": "2026-11-15T105231Z",
+  "pasco": "2026-11-15T105231Z",
+  "pinellas": "2026-11-15T105231Z",
+  "polk": "2026-11-15T105231Z",
+  "putnam": "2026-11-15T105231Z",
+  "santarosa": "2026-11-15T105231Z",
+  "seminole": "2026-11-15T105231Z",
+  "stjohns": "2026-11-15T105231Z",
+  "stlucie": "2026-11-15T105231Z",
+  "sumter": "2026-11-15T105231Z",
+  "volusia": "2026-11-15T105231Z",
+  "walton": "2026-11-15T105231Z",
+  "washington": "2026-11-15T105231Z",
   "columbia": "2026-08-31T154611Z",
   "hardee": "2026-10-28T094008Z",
   "leon": "2026-11-04T105440Z",
@@ -52,9 +52,9 @@
   "suwannee": "2026-11-05T105536Z"
  },
  "counts": {
-  "total": 2754,
-  "scheduled": 1916,
-  "redeemed": 802,
+  "total": 2774,
+  "scheduled": 1932,
+  "redeemed": 806,
   "past_due": 36,
   "counties": 48,
   "counties_total": 67,
@@ -180,9 +180,9 @@
     "past_due": 0
    },
    "lake": {
-    "total": 50,
-    "scheduled": 30,
-    "redeemed": 20,
+    "total": 70,
+    "scheduled": 46,
+    "redeemed": 24,
     "past_due": 0
    },
    "lee": {
@@ -25432,6 +25432,690 @@
    "lat": 30.185364,
    "lng": -85.692862,
    "parcel_geometry": ""
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "08-18-29-030000M02300",
+   "case_number": "05169-2024",
+   "certificate_number": "05169-2024",
+   "owner_name": "",
+   "mailing_address": "40313 SUNSET PL EUSTIS, FL 32736 Update Mailing Address",
+   "property_address": "40313 SUNSET PL, EUSTIS, FL- 32736",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 6489.94,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525537&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=08-18-29-030000M02300",
+   "lat": 28.934833,
+   "lng": -81.426424,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90911",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90911"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "09-22-26-070005000000",
+   "case_number": "03241-2024",
+   "certificate_number": "03241-2024",
+   "owner_name": "",
+   "mailing_address": "PO BOX 120042 CLERMONT, FL 34712-0042 Update Mailing Address",
+   "property_address": "E JUNIATA ST, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 3984.72,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525525&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=09-22-26-070005000000",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91124",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91124"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "12-23-25-020000000800",
+   "case_number": "02268-2024",
+   "certificate_number": "02268-2024",
+   "owner_name": "",
+   "mailing_address": "11039 OSWALT RD CLERMONT, FL 34711 Update Mailing Address",
+   "property_address": "11039 OSWALT RD, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 95664.28,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525520&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-23-25-020000000800",
+   "lat": 28.497683,
+   "lng": -81.77212,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90917",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90917"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "12-23-25-026500009300",
+   "case_number": "02269-2024",
+   "certificate_number": "02269-2024",
+   "owner_name": "",
+   "mailing_address": "10509 VIA DE ROBINA CT CLERMONT, FL 34711 Update Mailing Address",
+   "property_address": "10509 VIA DE ROBINA CT, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 135498.27,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525521&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-23-25-026500009300",
+   "lat": 28.500677,
+   "lng": -81.765271,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91126",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91126"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "13-18-26-270000000500",
+   "case_number": "02406-2024",
+   "certificate_number": "02406-2024",
+   "owner_name": "",
+   "mailing_address": "128 CASSADY ST UMATILLA, FL 32784 Update Mailing Address",
+   "property_address": "CASSADY ST, UMATILLA, FL- 32784",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 3401.49,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525523&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=13-18-26-270000000500",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91121",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91121"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "14-17-28-020001002100",
+   "case_number": "04442-2024",
+   "certificate_number": "04442-2024",
+   "owner_name": "",
+   "mailing_address": "28435 POINSETTIA AVE PAISLEY, FL 32767 Update Mailing Address",
+   "property_address": "28435 POINSETTIA AVE, PAISLEY, FL- 32767",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 18371.07,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525531&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=14-17-28-020001002100",
+   "lat": 29.013313,
+   "lng": -81.48638,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90914",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90914"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "14-17-28-040000004500",
+   "case_number": "04489-2024",
+   "certificate_number": "04489-2024",
+   "owner_name": "",
+   "mailing_address": "28148 HIBISCUS AVE PAISLEY, FL 32767 Update Mailing Address",
+   "property_address": "28148 HIBISCUS AVE, PAISLEY, FL- 32767",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 16894.58,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525532&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=14-17-28-040000004500",
+   "lat": 29.011384,
+   "lng": -81.491418,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90912",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90912"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "15-17-28-010002601200",
+   "case_number": "04515-2024",
+   "certificate_number": "04515-2024",
+   "owner_name": "",
+   "mailing_address": "PO BOX 383 PAISLEY, FL 32767-0383 Update Mailing Address",
+   "property_address": "45305 GEORGIA ST, PAISLEY, FL- 32767",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 3407.71,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525533&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=15-17-28-010002601200",
+   "lat": 29.008728,
+   "lng": -81.502057,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90910",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90910"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "15-17-28-010002702600",
+   "case_number": "04520-2024",
+   "certificate_number": "04520-2024",
+   "owner_name": "",
+   "mailing_address": "45234 GEORGIA ST PAISLEY, FL 32767 Update Mailing Address",
+   "property_address": "45234 GEORGIA ST, PAISLEY, FL- 32767",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 23215.4,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525534&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=15-17-28-010002702600",
+   "lat": 29.008209,
+   "lng": -81.501928,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90915",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90915"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "",
+   "parcel_id": "16-22-26-191500002300",
+   "case_number": "03339-2024",
+   "certificate_number": "03339-2024",
+   "owner_name": "",
+   "mailing_address": "2601 DIAMOND PLAYERS CLUB DR CLERMONT, FL 34711 Update Mailing Address",
+   "property_address": "2521 CASTLE PINES ST, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 3515.88,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value",
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525526&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=16-22-26-191500002300",
+   "lat": 28.560173,
+   "lng": -81.712797,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91125",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91125"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "17-17-29-020000J02300",
+   "case_number": "04906-2024",
+   "certificate_number": "04906-2024",
+   "owner_name": "",
+   "mailing_address": "3924 GREENGARDEN RD ERIE, PA 16509-1119 Update Mailing Address",
+   "property_address": "31621 LAKESIDE DR, DELAND, FL- 32720",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7785.44,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525535&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=17-17-29-020000J02300",
+   "lat": 29.000605,
+   "lng": -81.430849,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91120",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91120"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "18-20-25-000200001002",
+   "case_number": "01942-2024",
+   "certificate_number": "01942-2024",
+   "owner_name": "",
+   "mailing_address": "27551 JACKSON CT OKAHUMPKA, FL 34762 Update Mailing Address",
+   "property_address": "JACKSON CT, OKAHUMPKA, FL- 34762",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 6311.43,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525519&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=18-20-25-000200001002",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90913",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90913"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "",
+   "parcel_id": "19-22-26-110000001500",
+   "case_number": "03387-2024",
+   "certificate_number": "03387-2024",
+   "owner_name": "",
+   "mailing_address": "10718 LAKE MINNEOLA SHORES CLERMONT, FL 34711 Update Mailing Address",
+   "property_address": "526 E MONTROSE ST, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 3405.02,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value",
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525527&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=19-22-26-110000001500",
+   "lat": 28.555054,
+   "lng": -81.7495,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91122",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91122"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "20-17-29-000400006200",
+   "case_number": "04950-2024",
+   "certificate_number": "04950-2024",
+   "owner_name": "",
+   "mailing_address": "44333 JEFFREY RD DELAND, FL 32720 Update Mailing Address",
+   "property_address": "44333 JEFFREY RD, DELAND, FL- 32720",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7183.8,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525536&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=20-17-29-000400006200",
+   "lat": 28.991063,
+   "lng": -81.429346,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/90916",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/90916"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "20-19-24-000400007900",
+   "case_number": "00583-2024",
+   "certificate_number": "00583-2024",
+   "owner_name": "",
+   "mailing_address": "PO BOX 490086 LEESBURG, FL 34749-0086 Update Mailing Address",
+   "property_address": "1724 JONES DR, LEESBURG, FL- 34748",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7610.76,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525518&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=20-19-24-000400007900",
+   "lat": 28.818585,
+   "lng": -81.924227,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91119",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91119"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "20-20-26-000400000800",
+   "case_number": "03052-2024",
+   "certificate_number": "03052-2024",
+   "owner_name": "",
+   "mailing_address": "100 NW 32ND ST POMPANO BEACH, FL 33064 Update Mailing Address",
+   "property_address": "13509 VIRGINIA AVE, ASTATULA, FL- 34705",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7647.22,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525524&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=20-20-26-000400000800",
+   "lat": 28.724658,
+   "lng": -81.733008,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91179",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91179"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "21-19-27-005000004600",
+   "case_number": "04089-2024",
+   "certificate_number": "04089-2024",
+   "owner_name": "",
+   "mailing_address": "6829 WILLOW ST MOUNT DORA, FL 32757 Update Mailing Address",
+   "property_address": "DORA PINES RD, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 2751.67,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525529&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=21-19-27-005000004600",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91180",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91180"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "",
+   "parcel_id": "22-23-25-000300004000",
+   "case_number": "02292-2024",
+   "certificate_number": "02292-2024",
+   "owner_name": "",
+   "mailing_address": "8047 COUNTY ROAD 561 CLERMONT, FL 34711 Update Mailing Address",
+   "property_address": "COUNTY ROAD 561, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 4682.36,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value",
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525522&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=22-23-25-000300004000",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91181",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91181"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "23-19-27-016000006000",
+   "case_number": "04125-2024",
+   "certificate_number": "04125-2024",
+   "owner_name": "",
+   "mailing_address": "1889 JESSICA CT WINTER PARK, FL 32789 Update Mailing Address",
+   "property_address": "32727 WOLFS TRL, SORRENTO, FL- 32776",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 10190.99,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525530&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=23-19-27-016000006000",
+   "lat": 28.825548,
+   "lng": -81.580105,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91182",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91182"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "12/01/2026",
+   "sale_time": "",
+   "parcel_id": "24-15-27-010007401000",
+   "case_number": "03752-2024",
+   "certificate_number": "03752-2024",
+   "owner_name": "",
+   "mailing_address": "23730 W OTTER RD ASTOR, FL 32102 Update Mailing Address",
+   "property_address": "W OTTER RD, ASTOR, FL- 32102",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 2364.24,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value",
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525528&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=24-15-27-010007401000",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91183",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91183"
+    }
+   ]
   },
   {
    "county": "lee",
