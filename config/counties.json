@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T12:34:16+00:00",
+  "generated_at": "2026-11-16T11:16:34+00:00",
   "seed_url": "https://www.volusia.realtaxdeed.com/",
   "counties": [
     {
@@ -99,13 +99,6 @@
       "url": "https://www.gulf.realtaxdeed.com/",
       "host": "www.gulf.realtaxdeed.com",
       "label": "Gulf Taxdeed"
-    },
-    {
-      "slug": "hendry",
-      "name": "Hendry",
-      "url": "https://www.hendry.realtaxdeed.com/",
-      "host": "www.hendry.realtaxdeed.com",
-      "label": "Hendry TaxDeed"
     },
     {
       "slug": "hernando",
@@ -614,5 +607,7 @@
       "kind": "taxdeed"
     }
   ],
-  "client_list_missing": []
+  "client_list_missing": [
+    "Hendry"
+  ]
 }
