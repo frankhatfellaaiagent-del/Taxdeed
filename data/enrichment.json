@@ -35,7 +35,7 @@
 },
 "alachua|01488-315-000|TD 2026-049": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000"
 },
@@ -75,7 +75,7 @@
 },
 "alachua|04165-005-000|TD 2026-046": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000"
 },
@@ -170,7 +170,7 @@
 },
 "alachua|07650-000-000|TD 2026-052": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000"
 },
@@ -194,7 +194,7 @@
 },
 "alachua|10677-020-000|TD 2026-051": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000"
 },
@@ -230,7 +230,7 @@
 },
 "alachua|14125-000-000|TD 2026-050": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000"
 },
@@ -242,19 +242,19 @@
 },
 "alachua|17751-003-000|TD 2026-057": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000"
 },
 "alachua|18354-059-001|TD 2026-055": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001"
 },
 "alachua|20002-005-002|TD 2026-056": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002"
 },
@@ -724,7 +724,7 @@
 },
 "brevard|2001173|260409": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2001173",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2001173"
 },
@@ -748,7 +748,7 @@
 },
 "brevard|2106380|260477": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2106380",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2106380"
 },
@@ -802,7 +802,7 @@
 },
 "brevard|2210811|260407": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2210811",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2210811"
 },
@@ -814,7 +814,7 @@
 },
 "brevard|2301408|260408": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2301408",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2301408"
 },
@@ -826,13 +826,13 @@
 },
 "brevard|2304230|260484": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2304230",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2304230"
 },
 "brevard|2307229|260475": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2307229",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2307229"
 },
@@ -988,7 +988,7 @@
 },
 "brevard|2434288|260476": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2434288",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2434288"
 },
@@ -1288,13 +1288,13 @@
 },
 "brevard|2928769|260479": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2928769",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2928769"
 },
 "brevard|2930081|260483": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2930081",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2930081"
 },
@@ -1324,13 +1324,13 @@
 },
 "brevard|2940638|260480": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940638",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2940638"
 },
 "brevard|2940680|260471": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940680",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2940680"
 },
@@ -1348,7 +1348,7 @@
 },
 "brevard|2947482|260482": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2947482",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2947482"
 },
@@ -5183,7 +5183,7 @@
 },
 "clay|210823-003514-000-00|2026-0110TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00"
 },
@@ -5355,6 +5355,15 @@
 "parcel_address": "5026 NATHAN HALE Rd",
 "source": "reportall"
 }
+},
+"duval|002588-0050|2026-0910TD": {
+"acreage": "$18,480.00",
+"assessed_value": 3104.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 18480.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0025880050"
 },
 "duval|002651-1505|2026-0576TD": {
 "assessed_value": 57200.0,
@@ -5826,6 +5835,22 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0220260000"
 },
+"duval|022299-0000|2026-0979TD": {
+"assessed_value": 5006.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 5006.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0222990000"
+},
+"duval|022331-0000|2026-0986TD": {
+"assessed_value": 2506.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 5006.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0223310000"
+},
 "duval|022610-0000|2026-0920TD": {
 "assessed_value": 12733.0,
 "fetched_at": "2026-11-13T11:35:53+00:00",
@@ -6219,6 +6244,14 @@
 "source": "reportall"
 }
 },
+"duval|031320-0000|2026-0981TD": {
+"assessed_value": 5542.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 10086.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0313200000"
+},
 "duval|031825-0000|2026-0598TD": {
 "assessed_value": 261635.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6572,6 +6605,39 @@
 "source": "reportall"
 }
 },
+"duval|040165-0000|2026-0985TD": {
+"acreage": "$770.00",
+"assessed_value": 3976.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 13811.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0401650000"
+},
+"duval|040171-0000|2026-0980TD": {
+"assessed_value": 359.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 12075.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0401710000"
+},
+"duval|040310-0000|2026-0982TD": {
+"assessed_value": 1972.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9396.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0403100000"
+},
+"duval|040325-0000|2026-0983TD": {
+"assessed_value": 1925.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9177.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0403250000"
+},
 "duval|040353-0000|2026-0514TD": {
 "assessed_value": 27894.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6580,6 +6646,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0403530000"
 },
+"duval|040366-0000|2026-0984TD": {
+"assessed_value": 2063.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9832.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0403660000"
+},
 "duval|040509-0000|2026-0907TD": {
 "assessed_value": 50612.0,
 "fetched_at": "2026-11-10T11:50:33+00:00",
@@ -6587,6 +6661,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0405090000"
+},
+"duval|040536-0075|2026-0952TD": {
+"assessed_value": 7241.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 7245.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0405360075"
 },
 "duval|041328-0000|2026-0277TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6603,6 +6685,14 @@
 "parcel_address": "4273 KATANGA N Dr",
 "source": "reportall"
 }
+},
+"duval|041472-0000|2026-0909TD": {
+"assessed_value": 1604.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 45244.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0414720000"
 },
 "duval|044273-0165|2026-0563TD": {
 "assessed_value": 99758.0,
@@ -6636,6 +6726,30 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0445390000"
 },
+"duval|045306-0000|2026-0958TD": {
+"assessed_value": 11327.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11327.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0453060000"
+},
+"duval|045709-0000|2026-0951TD": {
+"assessed_value": 5731.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 13128.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457090000"
+},
+"duval|045769-0000|2026-0953TD": {
+"assessed_value": 7165.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11792.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457690000"
+},
 "duval|045769-0010|2026-0409TD": {
 "assessed_value": 35085.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6643,6 +6757,46 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457690010"
+},
+"duval|045794-0000|2026-0962TD": {
+"assessed_value": 7165.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11792.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457940000"
+},
+"duval|045852-0000|2026-0944TD": {
+"assessed_value": 5893.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8473.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0458520000"
+},
+"duval|045892-0000|2026-1012TD": {
+"assessed_value": 9660.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9660.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0458920000"
+},
+"duval|046010-0000|2026-0963TD": {
+"assessed_value": 5373.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11792.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0460100000"
+},
+"duval|046207-0000|2026-0924TD": {
+"assessed_value": 5120.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11792.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0462070000"
 },
 "duval|046282-0000|2023-0007TD": {
 "assessed_value": 7881.0,
@@ -6659,6 +6813,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0466180000"
+},
+"duval|046713-0000|2026-0957TD": {
+"assessed_value": 4857.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11127.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0467130000"
 },
 "duval|046987-0000|2026-0457TD": {
 "assessed_value": 62053.0,
@@ -6715,6 +6877,14 @@
 "parcel_address": "2512 VERNON St",
 "source": "reportall"
 }
+},
+"duval|048195-0000|2026-0946TD": {
+"assessed_value": 5809.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8526.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0481950000"
 },
 "duval|048367-0000|2026-0544TD": {
 "assessed_value": 98230.0,
@@ -6796,6 +6966,14 @@
 "property_use": "4000 Vacant Industrial",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0504250000"
 },
+"duval|050519-0000|2026-0956TD": {
+"assessed_value": 7482.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 20079.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0505190000"
+},
 "duval|050715-0000|2026-0415TD": {
 "assessed_value": 37032.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6803,6 +6981,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0507150000"
+},
+"duval|050997-0000|2026-1011TD": {
+"assessed_value": 10529.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 10529.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0509970000"
 },
 "duval|051541-0140|2026-0465TD": {
 "assessed_value": 36008.0,
@@ -6812,6 +6998,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0515410140"
 },
+"duval|051542-0000|2026-0939TD": {
+"assessed_value": 6245.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8928.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0515420000"
+},
 "duval|051739-0000|2026-0472TD": {
 "assessed_value": 67191.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6820,6 +7014,22 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0517390000"
 },
+"duval|051760-0000|2026-0911TD": {
+"assessed_value": 3334.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9968.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0517600000"
+},
+"duval|052146-0000|2026-0928TD": {
+"assessed_value": 11498.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11498.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0521460000"
+},
 "duval|052166-0000|2026-0583TD": {
 "assessed_value": 97380.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6827,6 +7037,22 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0521660000"
+},
+"duval|052254-0000|2026-0914TD": {
+"assessed_value": 11826.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11826.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0522540000"
+},
+"duval|052364-0000|2026-0932TD": {
+"assessed_value": 12457.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 16614.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0523640000"
 },
 "duval|052467-0000|2026-0406TD": {
 "assessed_value": 16477.0,
@@ -6843,6 +7069,14 @@
 "ok": true,
 "property_use": "7000 Vacant Institute",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0524900010"
+},
+"duval|052703-0000|2026-0929TD": {
+"assessed_value": 4895.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 13419.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0527030000"
 },
 "duval|052957-0000|2026-0210TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6892,6 +7126,70 @@
 "source": "reportall"
 }
 },
+"duval|053753-0000|2026-0908TD": {
+"assessed_value": 341.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8673.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0537530000"
+},
+"duval|053804-0000|2026-0965TD": {
+"assessed_value": 4944.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8673.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0538040000"
+},
+"duval|053816-0100|2026-0925TD": {
+"assessed_value": 4944.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8673.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0538160100"
+},
+"duval|053910-0000|2026-0915TD": {
+"assessed_value": 273.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 5894.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0539100000"
+},
+"duval|053945-0000|2026-0913TD": {
+"assessed_value": 341.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8673.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0539450000"
+},
+"duval|053991-0000|2026-0940TD": {
+"assessed_value": 3792.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9499.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0539910000"
+},
+"duval|054022-0000|2026-0959TD": {
+"assessed_value": 2414.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 6053.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0540220000"
+},
+"duval|054098-0000|2026-0950TD": {
+"assessed_value": 3792.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9499.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0540980000"
+},
 "duval|054219-0000|2026-0500TD": {
 "assessed_value": 46459.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6907,6 +7205,14 @@
 "ok": true,
 "property_use": "1191 Store Retail",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0545660000"
+},
+"duval|054589-0000|2026-1010TD": {
+"assessed_value": 4253.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8410.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0545890000"
 },
 "duval|054695-0000|2026-0213TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6947,6 +7253,22 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0555430000"
+},
+"duval|055899-0030|2026-0947TD": {
+"assessed_value": 10769.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 10769.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0558990030"
+},
+"duval|055899-0100|2026-0948TD": {
+"assessed_value": 12238.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 12238.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0558990100"
 },
 "duval|056353-0000|2026-0216TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7197,6 +7519,30 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0760410000"
 },
+"duval|076276-0000|2026-0923TD": {
+"assessed_value": 4948.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 20884.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0762760000"
+},
+"duval|076284-0000|2026-0938TD": {
+"assessed_value": 4368.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 18428.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0762840000"
+},
+"duval|076363-0000|2026-0943TD": {
+"assessed_value": 4765.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 17355.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0763630000"
+},
 "duval|076453-0000|2026-0657TD": {
 "assessed_value": 58058.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -7212,6 +7558,30 @@
 "ok": true,
 "property_use": "4000 Vacant Industrial",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0766290000"
+},
+"duval|076650-0000|2026-0935TD": {
+"assessed_value": 4702.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 19845.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0766500000"
+},
+"duval|076895-0000|2026-0941TD": {
+"assessed_value": 4315.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11592.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0768950000"
+},
+"duval|077348-0000|2026-0961TD": {
+"assessed_value": 4870.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 15130.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0773480000"
 },
 "duval|077546-0000|2026-0413TD": {
 "assessed_value": 34179.0,
@@ -7229,6 +7599,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0811540000"
 },
+"duval|083889-0000|2026-0954TD": {
+"assessed_value": 14792.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 14792.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0838890000"
+},
 "duval|084505-0000|2026-0074TD": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -7244,6 +7622,14 @@
 "parcel_address": "3418 DAVIS N St",
 "source": "reportall"
 }
+},
+"duval|084826-0010|2026-0912TD": {
+"assessed_value": 6758.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 10413.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0848260010"
 },
 "duval|084970-0010|2026-0198TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7325,6 +7711,22 @@
 "property_use": "7100 Church",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0865960000"
 },
+"duval|086613-0000|2026-0968TD": {
+"assessed_value": 4907.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 8904.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0866130000"
+},
+"duval|086753-0000|2026-0936TD": {
+"assessed_value": 4292.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 7791.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0867530000"
+},
 "duval|086901-0000|2026-0172TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -7340,6 +7742,14 @@
 "parcel_address": "1551 24TH W St",
 "source": "reportall"
 }
+},
+"duval|087074-0000|2026-0966TD": {
+"assessed_value": 4292.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 7791.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0870740000"
 },
 "duval|087202-0000|2026-0194TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7357,6 +7767,14 @@
 "source": "reportall"
 }
 },
+"duval|087255-0000|2026-0964TD": {
+"assessed_value": 5241.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 10680.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0872550000"
+},
 "duval|087350-0000|2026-0504TD": {
 "assessed_value": 83234.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -7372,6 +7790,22 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0875630000"
+},
+"duval|087564-0000|2026-0942TD": {
+"assessed_value": 6447.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 14018.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0875640000"
+},
+"duval|087666-0000|2026-0937TD": {
+"assessed_value": 14018.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 14018.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0876660000"
 },
 "duval|087949-0000|2026-0523TD": {
 "assessed_value": 88760.0,
@@ -7743,6 +8177,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1129220000"
 },
+"duval|113518-0100|2026-0997TD": {
+"assessed_value": 34500.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 34500.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1135180100"
+},
 "duval|114076-0000|2026-0173TD": {
 "assessed_value": 33069.0,
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -7750,6 +8192,30 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1140760000"
+},
+"duval|114183-0000|2026-0945TD": {
+"assessed_value": 5767.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 14485.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1141830000"
+},
+"duval|114377-0030|2026-0969TD": {
+"assessed_value": 4126.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9472.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1143770030"
+},
+"duval|114427-0000|2026-0927TD": {
+"assessed_value": 11276.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 11276.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1144270000"
 },
 "duval|114480-0000|2026-0203TD": {
 "assessed_value": 47379.0,
@@ -7791,6 +8257,14 @@
 "property_use": "1200 Mixed Use Res/Store/Off",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1148160000"
 },
+"duval|115188-0000|2026-0949TD": {
+"assessed_value": 5476.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 12890.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1151880000"
+},
 "duval|115355-0000|2026-0193TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -7806,6 +8280,14 @@
 "parcel_address": "2140 EGNER St",
 "source": "reportall"
 }
+},
+"duval|116094-0000|2026-0955TD": {
+"assessed_value": 4554.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 9594.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1160940000"
 },
 "duval|119244-0000|2026-0634TD": {
 "assessed_value": 147854.0,
@@ -8351,6 +8833,15 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1563321036"
+},
+"duval|156489-0000|2026-0977TD": {
+"acreage": "$1,190.00",
+"assessed_value": 1190.0,
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": 1190.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1564890000"
 },
 "duval|158763-0682|2026-0578TD": {
 "assessed_value": 258750.0,
@@ -10082,13 +10573,13 @@
 },
 "gilchrist|180815-0073000B-0200|26-0014-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
 "gilchrist|201014-02820015-0040|26-0026-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040"
 },
@@ -14264,6 +14755,15 @@
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1572550200"
 },
+"hillsborough|1572550200|2027-81": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=1572550200"
+},
 "hillsborough|1572960000|2026-786": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-10-30T10:36:45+00:00",
@@ -15087,13 +15587,13 @@
 },
 "jackson|02-2N-11-0086-0880-1430|1991 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430"
 },
 "jackson|02-2N-11-0086-0880-1540|1992 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540"
 },
@@ -31124,7 +31624,7 @@
 },
 "miamidade|01-3122-052-2400|2026A00184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131220522400"
 },
@@ -31222,8 +31722,8 @@
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020050560"
 },
 "miamidade|02-3202-093-0290|2025A00272": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"error": "HTTPSConnectionPool(host='www.miamidade.gov', port=443): Read timed out. (read timeout=25)",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020930290"
 },
@@ -31458,7 +31958,7 @@
 },
 "miamidade|34-2103-009-0570|2025A00631": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3421030090570"
 },
@@ -31518,6 +32018,12 @@
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=01-6N-29-V28T-2530-0000"
+},
+"nassau|04-2N-27-0000-0003-0450|452026XX000023TDAXYX": {
+"error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=04-2N-27-0000-0003-0450 (Caused by SSLError(SSLCertVerificationErr",
+"fetched_at": "2026-11-17T12:28:54+00:00",
+"ok": false,
+"url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=04-2N-27-0000-0003-0450"
 },
 "nassau|08-3N-24-2380-0103-0110|452026XX000015TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=08-3N-24-2380-0103-0110 (Caused by SSLError(SSLCertVerificationErr",
@@ -49831,7 +50337,7 @@
 },
 "santarosa|02-1N-28-0000-11500-0000|2026285": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=02-1N-28-0000-11500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=02-1N-28-0000-11500-0000"
 },
@@ -49883,7 +50389,7 @@
 },
 "santarosa|09-1N-28-0000-05600-0000|2026280": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-28-0000-05600-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-28-0000-05600-0000"
 },
@@ -49917,13 +50423,13 @@
 },
 "santarosa|10-3S-29-4935-00000-0850|2026277": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-3S-29-4935-00000-0850 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-3S-29-4935-00000-0850"
 },
 "santarosa|12-1N-28-0000-00428-0000|2026264": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=12-1N-28-0000-00428-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=12-1N-28-0000-00428-0000"
 },
@@ -49941,7 +50447,7 @@
 },
 "santarosa|18-1N-28-0000-04203-0000|2026265": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-1N-28-0000-04203-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-1N-28-0000-04203-0000"
 },
@@ -49989,7 +50495,7 @@
 },
 "santarosa|22-1N-28-0000-04405-0000|2026266": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-1N-28-0000-04405-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-1N-28-0000-04405-0000"
 },
@@ -50001,7 +50507,7 @@
 },
 "santarosa|23-1N-29-1210-02100-0090|2026272": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=23-1N-29-1210-02100-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=23-1N-29-1210-02100-0090"
 },
@@ -50013,7 +50519,7 @@
 },
 "santarosa|28-2N-28-0000-04105-0000|2026267": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2N-28-0000-04105-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=28-2N-28-0000-04105-0000"
 },
@@ -50055,13 +50561,13 @@
 },
 "santarosa|40-1N-28-0090-45000-0130|2026283": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-45000-0130 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-45000-0130"
 },
 "santarosa|40-1N-28-0090-47000-0160|2026268": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-47000-0160 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-47000-0160"
 },
@@ -50073,19 +50579,19 @@
 },
 "santarosa|40-1N-28-0090-52200-0150|2026269": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52200-0150 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52200-0150"
 },
 "santarosa|40-1N-28-0090-56200-0010|2026270": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56200-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56200-0010"
 },
 "santarosa|40-1N-28-0090-56800-0110|2026286": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56800-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56800-0110"
 },
@@ -50103,7 +50609,7 @@
 },
 "santarosa|40-1N-28-0090-75800-0030|2026279": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-75800-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-10T11:50:33+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-75800-0030"
 },
@@ -50471,7 +50977,7 @@
 },
 "seminole|01-20-30-504-2800-0060|20260068/2024-000049 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=01-20-30-504-2800-0060"
 },
@@ -50483,7 +50989,7 @@
 },
 "seminole|07-21-30-505-0D00-0220|20260127/2024-000951": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=07-21-30-505-0D00-0220"
 },
@@ -50581,13 +51087,13 @@
 },
 "seminole|20-19-30-501-0000-3140|20260124/2021-000058 CS": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3140"
 },
 "seminole|20-19-30-501-0000-3180|20260125/2021-000059": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3180"
 },
@@ -50669,7 +51175,7 @@
 },
 "seminole|25-19-30-5AI-0913-0050|20260087 2024-004346 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AI-0913-0050"
 },
@@ -50709,7 +51215,7 @@
 },
 "seminole|33-19-31-300-1390-0000|20260110/2024-005542": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-300-1390-0000"
 },
@@ -50727,7 +51233,7 @@
 },
 "seminole|33-19-31-507-0000-1260|20260115 2024-005598 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-507-0000-1260"
 },
@@ -50755,7 +51261,7 @@
 },
 "seminole|35-19-30-513-2200-0060|20260126/2021-000489 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-513-2200-0060"
 },
@@ -50777,13 +51283,13 @@
 },
 "seminole|36-19-30-300-0320-0000|20260121/2024-006401": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-300-0320-0000"
 },
 "seminole|36-19-30-506-0000-061A|20260122/2024-006413": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-506-0000-061A"
 },
@@ -50819,7 +51325,7 @@
 },
 "stlucie|1432-806-0036-000-5|26-224": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/143280600360005"
 },
@@ -50849,7 +51355,7 @@
 },
 "stlucie|2405-501-0127-000-3|26-218": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240550101270003"
 },
@@ -50891,13 +51397,13 @@
 },
 "stlucie|2405-701-0042-000-7|26-213": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240570100420007"
 },
 "stlucie|2406-114-0009-000-5|26-214": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240611400090005"
 },
@@ -50909,13 +51415,13 @@
 },
 "stlucie|2409-122-0006-000-8|26-219": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240912200060008"
 },
 "stlucie|2409-501-0071-000-7|26-227": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240950100710007"
 },
@@ -50927,7 +51433,7 @@
 },
 "stlucie|2409-602-0154-000-3|26-228": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960201540003"
 },
@@ -50945,13 +51451,13 @@
 },
 "stlucie|2409-820-0033-000-9|26-229": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982000330009"
 },
 "stlucie|2409-823-0043-000-1|26-216": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982300430001"
 },
@@ -51011,7 +51517,7 @@
 },
 "stlucie|3407-506-0040-000-3|26-226": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/340750600400003"
 },
@@ -51035,7 +51541,7 @@
 },
 "stlucie|3420-515-0259-000-0|26-024": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342051502590000"
 },
@@ -53532,7 +54038,7 @@
 },
 "washington|00000000-00-1539-0000|2026-TD-263": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000"
 },
@@ -53544,7 +54050,7 @@
 },
 "washington|00000000-00-4096-0016|2026-TD-250": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016"
 },
@@ -53562,13 +54068,13 @@
 },
 "washington|00000000-00-4414-0312|2026-TD-251": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312"
 },
 "washington|00000000-00-4877-0000|2026-TD-317": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000"
 },
@@ -53580,19 +54086,19 @@
 },
 "washington|00000000-00-5049-0005|2026-TD-252": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005"
 },
 "washington|00000000-00-5411-0121|2026-TD-318": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121"
 },
 "washington|00000000-00-5512-0001|2026-TD-277": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001"
 },
@@ -53626,7 +54132,7 @@
 },
 "washington|00000000-01-0006-0017|2026-TD-233": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017"
 },
@@ -53662,19 +54168,19 @@
 },
 "washington|00000000-02-0223-0026|2026-TD-236": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026"
 },
 "washington|00000000-02-0242-0009|2026-TD-255": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009"
 },
 "washington|00000000-02-0244-0017|2026-TD-240": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017"
 },
@@ -53708,7 +54214,7 @@
 },
 "washington|00000000-04-0156-0038|2026-TD-276": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038"
 },
@@ -53754,7 +54260,7 @@
 },
 "washington|00000000-04-0206-0011|2026-TD-261": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011"
 },
@@ -53788,7 +54294,7 @@
 },
 "washington|00000000-05-0318-0002|2026-TD-242": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002"
 },
@@ -53830,7 +54336,7 @@
 },
 "washington|00000000-06-0348-0003|2026-TD-259": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003"
 },
@@ -53902,7 +54408,7 @@
 },
 "washington|00000000-06-0369-0019|2026-TD-254": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019"
 },
@@ -54028,7 +54534,7 @@
 },
 "washington|00000000-07-0433-0033|2026-TD-241": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033"
 },
@@ -54078,7 +54584,7 @@
 },
 "washington|00000000-07-0464-0007|2026-TD-272": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007"
 },
@@ -54398,7 +54904,7 @@
 },
 "washington|00000000-10-0567-0008|2026-TD-271": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008"
 },
@@ -54484,13 +54990,13 @@
 },
 "washington|00000000-11-0753-0011|2026-TD-269": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011"
 },
 "washington|00000000-11-0757-0001|2026-TD-268": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001"
 },
@@ -54502,7 +55008,7 @@
 },
 "washington|00000000-11-0765-0012|2026-TD-267": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012"
 },
@@ -54526,7 +55032,7 @@
 },
 "washington|00000000-11-0778-0027|2026-TD-266": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027"
 },
@@ -54564,7 +55070,7 @@
 },
 "washington|00000000-12-1003-0025|2026-TD-265": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025"
 },
@@ -54582,13 +55088,13 @@
 },
 "washington|00000000-12-1006-0016|2026-TD-279": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016"
 },
 "washington|00000000-12-1007-0009|2026-TD-278": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009",
-"fetched_at": "2026-11-09T12:08:25+00:00",
+"fetched_at": "2026-11-17T12:28:54+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009"
 },
