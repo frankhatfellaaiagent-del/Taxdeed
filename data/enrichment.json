@@ -35,7 +35,7 @@
 },
 "alachua|01488-315-000|TD 2026-049": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=01488-315-000"
 },
@@ -75,7 +75,7 @@
 },
 "alachua|04165-005-000|TD 2026-046": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=04165-005-000"
 },
@@ -170,7 +170,7 @@
 },
 "alachua|07650-000-000|TD 2026-052": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=07650-000-000"
 },
@@ -194,7 +194,7 @@
 },
 "alachua|10677-020-000|TD 2026-051": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=10677-020-000"
 },
@@ -230,7 +230,7 @@
 },
 "alachua|14125-000-000|TD 2026-050": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=14125-000-000"
 },
@@ -242,19 +242,19 @@
 },
 "alachua|17751-003-000|TD 2026-057": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=17751-003-000"
 },
 "alachua|18354-059-001|TD 2026-055": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=18354-059-001"
 },
 "alachua|20002-005-002|TD 2026-056": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1081&LayerID=26490&PageTypeID=4&PageID=10770&Q=320373606&KeyValue=20002-005-002"
 },
@@ -724,7 +724,7 @@
 },
 "brevard|2001173|260409": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2001173",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2001173"
 },
@@ -748,7 +748,7 @@
 },
 "brevard|2106380|260477": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2106380",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2106380"
 },
@@ -802,7 +802,7 @@
 },
 "brevard|2210811|260407": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2210811",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2210811"
 },
@@ -826,13 +826,13 @@
 },
 "brevard|2304230|260484": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2304230",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2304230"
 },
 "brevard|2307229|260475": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2307229",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2307229"
 },
@@ -859,6 +859,12 @@
 "fetched_at": "2026-11-21T11:35:09+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2317337"
+},
+"brevard|2317806|260485": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2317806",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2317806"
 },
 "brevard|2400440|260215": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2400440",
@@ -988,7 +994,7 @@
 },
 "brevard|2434288|260476": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2434288",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2434288"
 },
@@ -997,6 +1003,12 @@
 "fetched_at": "2026-10-08T11:16:31+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2503643"
+},
+"brevard|2505494|260486": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2505494",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2505494"
 },
 "brevard|2535540|260253": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2535540",
@@ -1312,13 +1324,13 @@
 },
 "brevard|2928769|260479": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2928769",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2928769"
 },
 "brevard|2930081|260483": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2930081",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2930081"
 },
@@ -1340,6 +1352,12 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2936893"
 },
+"brevard|2936981|260487": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2936981",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2936981"
+},
 "brevard|2938170|260350": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2938170",
 "fetched_at": "2026-10-16T08:49:46+00:00",
@@ -1348,7 +1366,7 @@
 },
 "brevard|2940638|260480": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2940638",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2940638"
 },
@@ -1370,9 +1388,21 @@
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2944771"
 },
+"brevard|2946014|260489": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2946014",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2946014"
+},
+"brevard|2946119|260488": {
+"error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2946119",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.bcpao.us/PropertySearch/#/parcel/2946119"
+},
 "brevard|2947482|260482": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2947482",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2947482"
 },
@@ -5375,7 +5405,7 @@
 },
 "clay|210823-003514-000-00|2026-0110TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=830&LayerID=15008&PageTypeID=4&PageID=6756&Q=172585046&KeyValue=210823-003514-000-00"
 },
@@ -5557,6 +5587,15 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0025880050"
 },
+"duval|002651-0030|2026-0864TD": {
+"acreage": "$97,625.00",
+"assessed_value": 97625.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 97625.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0026510030"
+},
 "duval|002651-1505|2026-0576TD": {
 "assessed_value": 57200.0,
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -5606,6 +5645,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0036970000"
+},
+"duval|003698-0000|2026-0884TD": {
+"assessed_value": 55984.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 55984.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0036980000"
 },
 "duval|003708-0000|2026-0906TD": {
 "assessed_value": 132201.0,
@@ -5744,6 +5791,14 @@
 "source": "reportall"
 }
 },
+"duval|006552-0000|2026-0898TD": {
+"assessed_value": 9662.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 18480.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0065520000"
+},
 "duval|007221-0010|2026-1009TD": {
 "acreage": "$39,875.00",
 "assessed_value": 467777.0,
@@ -5776,6 +5831,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0114140010"
+},
+"duval|013219-0100|2026-0886TD": {
+"assessed_value": 30069.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 43650.0,
+"ok": true,
+"property_use": "0200 Mobile Home",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0132190100"
 },
 "duval|013717-0210|2026-0820TD": {
 "assessed_value": 58758.0,
@@ -7375,6 +7438,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0538160100"
 },
+"duval|053874-0000|2026-0885TD": {
+"assessed_value": 32188.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 47146.0,
+"ok": true,
+"property_use": "0810 Residential Mixed Units 3-9",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0538740000"
+},
 "duval|053910-0000|2026-0915TD": {
 "assessed_value": 273.0,
 "fetched_at": "2026-11-17T12:28:54+00:00",
@@ -7470,6 +7541,14 @@
 "parcel_address": "1311 CLEVELAND St",
 "source": "reportall"
 }
+},
+"duval|054703-0100|2026-0815TD": {
+"assessed_value": 54664.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 65136.0,
+"ok": true,
+"property_use": "0800 Multi-Family Units 2-9",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0547030100"
 },
 "duval|055205-0100|2026-0996TD": {
 "assessed_value": 42139.0,
@@ -7671,6 +7750,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0681820000"
+},
+"duval|068885-0000|2026-0734TD": {
+"assessed_value": 137662.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 137662.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0688850000"
 },
 "duval|070162-0000|2026-0255TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7976,6 +8063,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0863720000"
 },
+"duval|086488-0000|2026-0735TD": {
+"assessed_value": 110419.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 110419.0,
+"ok": true,
+"property_use": "7691 Mortuary",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0864880000"
+},
 "duval|086596-0000|2026-0616TD": {
 "assessed_value": 26801.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8119,6 +8214,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0885590000"
+},
+"duval|092556-0100|2026-0998TD": {
+"assessed_value": 468626.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 468626.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0925560100"
 },
 "duval|094815-0000|2026-0531TD": {
 "assessed_value": 122357.0,
@@ -8972,6 +9075,23 @@
 "source": "reportall"
 }
 },
+"duval|145339-0000|2026-0810TD": {
+"assessed_value": 170719.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 170719.0,
+"ok": true,
+"property_use": "3300 Night Club/Bar",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1453390000"
+},
+"duval|146036-0210|2026-0999TD": {
+"acreage": "$734.00",
+"assessed_value": 235155.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 270646.0,
+"ok": true,
+"property_use": "1000 Vacant Comm",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1460360210"
+},
 "duval|146036-4418|2026-0637TD": {
 "assessed_value": 195000.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8995,6 +9115,14 @@
 "parcel_address": "5536 BISHOP Ln",
 "source": "reportall"
 }
+},
+"duval|147977-0010|2026-0883TD": {
+"assessed_value": 56250.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 56250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1479770010"
 },
 "duval|147980-1605|2026-0297TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -9028,6 +9156,14 @@
 "source": "reportall"
 }
 },
+"duval|147984-0355|2026-0736TD": {
+"assessed_value": 218353.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 288507.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1479840355"
+},
 "duval|148515-0538|2026-0308TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -9059,6 +9195,14 @@
 "parcel_address": "4770 SAN JOSE MANOR W Dr",
 "source": "reportall"
 }
+},
+"duval|148521-0616|2026-0660TD": {
+"assessed_value": 167000.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 167000.0,
+"ok": true,
+"property_use": "0400 Residential Condo",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1485210616"
 },
 "duval|148924-0110|2026-0238TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -9149,6 +9293,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1564890000"
+},
+"duval|158762-1670|2026-0738TD": {
+"assessed_value": 240438.0,
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": 240438.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1587621670"
 },
 "duval|158763-0682|2026-0578TD": {
 "assessed_value": 258750.0,
@@ -10894,13 +11046,13 @@
 },
 "gilchrist|180815-0073000B-0200|26-0014-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=18-08-15-0073-000B-0200"
 },
 "gilchrist|201014-02820015-0040|26-0026-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=20-10-14-0282-0015-0040"
 },
@@ -11897,17 +12049,47 @@
 "property_use": "00 - VACANT RESIDENTIAL",
 "url": "https://propsearch.hernandocountypa-florida.us/parcel/01720784"
 },
+"highlands|A-22-33-28-010-0430-0020|25001202": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28332201004300020A (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28332201004300020A"
+},
 "highlands|C-01-33-28-070-0330-0070|25001134": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28330107003300070C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28330107003300070C"
 },
+"highlands|C-01-33-28-100-0480-0170|25001201": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28330110004800170C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28330110004800170C"
+},
+"highlands|C-03-36-29-100-0990-0000|25001118": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29360310009900000C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29360310009900000C"
+},
 "highlands|C-04-34-28-060-0760-0160|25001022": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340406007600160C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28340406007600160C"
+},
+"highlands|C-04-34-28-060-0770-0140|25001141": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340406007700140C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340406007700140C"
+},
+"highlands|C-04-34-28-060-0770-0150|25001203": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340406007700150C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340406007700150C"
 },
 "highlands|C-04-34-28-060-0770-0310|25001027": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340406007700310C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -11926,6 +12108,12 @@
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28340407009200160C"
+},
+"highlands|C-04-34-28-080-1000-0190|25001164": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340408010000190C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340408010000190C"
 },
 "highlands|C-04-34-28-080-1100-0170|25001105": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340408011000170C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -11960,6 +12148,12 @@
 "parcel_address": "8951 MANTUA Ave",
 "source": "reportall"
 }
+},
+"highlands|C-04-34-28-100-1700-0150|25001168": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340410017000150C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340410017000150C"
 },
 "highlands|C-04-34-28-100-1780-0310|24000599": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -12093,6 +12287,12 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28340411019600080C"
 },
+"highlands|C-04-34-28-110-2020-0190|25001169": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340411020200190C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340411020200190C"
+},
 "highlands|C-04-34-28-110-2020-0240|25000999": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340411020200240C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
@@ -12145,17 +12345,131 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28340414029900090C"
 },
+"highlands|C-04-34-28-160-3420-0510|25001210": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340416034200510C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340416034200510C"
+},
+"highlands|C-04-34-28-160-3590-0300|25001211": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28340416035900300C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28340416035900300C"
+},
+"highlands|C-06-34-29-040-00F0-00P4|25001212": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29340604000F000P4C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29340604000F000P4C"
+},
+"highlands|C-06-34-29-040-00F0-00P6|25001213": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29340604000F000P6C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29340604000F000P6C"
+},
+"highlands|C-06-34-29-040-00F0-00P7|25001214": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29340604000F000P7C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29340604000F000P7C"
+},
 "highlands|C-07-37-30-040-0110-0050|25001054": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30370704001100050C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30370704001100050C"
 },
+"highlands|C-12-35-29-040-0270-0160|25001135": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29351204002700160C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29351204002700160C"
+},
+"highlands|C-13-37-29-020-0120-0230|25001215": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371302001200230C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371302001200230C"
+},
+"highlands|C-13-37-29-020-0170-0150|25001114": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371302001700150C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371302001700150C"
+},
+"highlands|C-14-37-29-020-0120-0220|25001216": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371402001200220C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371402001200220C"
+},
+"highlands|C-14-37-29-040-0390-0090|25001218": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371404003900090C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371404003900090C"
+},
+"highlands|C-14-37-29-040-0410-0180|25001219": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371404004100180C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371404004100180C"
+},
+"highlands|C-14-37-29-050-0440-0120|25001220": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371405004400120C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371405004400120C"
+},
+"highlands|C-14-37-29-071-0770-0030|25001221": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371407107700030C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371407107700030C"
+},
+"highlands|C-14-37-29-080-0670-0220|25001140": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371408006700220C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371408006700220C"
+},
+"highlands|C-14-37-29-140-0930-0120|25001198": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371414009300120C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371414009300120C"
+},
+"highlands|C-14-37-29-300-2060-0020|25001139": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29371430020600020C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29371430020600020C"
+},
 "highlands|C-15-35-30-050-00Q0-0090|25001101": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351505000Q00090C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30351505000Q00090C"
+},
+"highlands|C-15-35-30-050-00R0-0100|25001170": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351505000R00100C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30351505000R00100C"
+},
+"highlands|C-15-35-30-050-00R0-0110|25001172": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351505000R00110C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30351505000R00110C"
+},
+"highlands|C-15-35-30-050-00R0-0120|25001171": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351505000R00120C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30351505000R00120C"
 },
 "highlands|C-15-35-30-050-00S0-0040|25001112": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351505000S00040C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -12175,11 +12489,23 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30351505000S00070C"
 },
+"highlands|C-15-35-30-060-00M0-0120|25001205": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30351506000M00120C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30351506000M00120C"
+},
 "highlands|C-16-35-31-011-0000-3590|25001050": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/31351601100003590C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/31351601100003590C"
+},
+"highlands|C-16-35-31-011-0000-3930|25001132": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/31351601100003930C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/31351601100003930C"
 },
 "highlands|C-16-35-31-011-0000-5210|25001038": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/31351601100005210C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -12192,6 +12518,24 @@
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/31351601100005220C"
+},
+"highlands|C-19-33-28-060-0120-0030|25001177": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28331906001200030C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28331906001200030C"
+},
+"highlands|C-19-33-28-060-0260-0091|25001178": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28331906002600091C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28331906002600091C"
+},
+"highlands|C-20-36-30-140-0070-0240|25001130": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30362014000700240C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30362014000700240C"
 },
 "highlands|C-20-36-30-140-0100-0160|25001129": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30362014001000160C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -12319,17 +12663,35 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/29362118050100250C"
 },
+"highlands|C-21-36-29-180-5610-0190|25001187": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29362118056100190C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29362118056100190C"
+},
 "highlands|C-21-36-29-180-5700-0180|25001037": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29362118057000180C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/29362118057000180C"
 },
+"highlands|C-22-34-28-010-0210-0060|25001175": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28342201002100060C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28342201002100060C"
+},
 "highlands|C-22-35-29-060-1760-0010|25001035": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29352206017600010C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/29352206017600010C"
+},
+"highlands|C-22-37-30-020-0360-0170|25001188": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372202003600170C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372202003600170C"
 },
 "highlands|C-22-37-30-020-0390-0030|25000558": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -12346,6 +12708,12 @@
 "parcel_address": "445 TWILIGHT Dr",
 "source": "reportall"
 }
+},
+"highlands|C-22-37-30-020-0430-0180|25001193": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372202004300180C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372202004300180C"
 },
 "highlands|C-22-37-30-020-0440-0110|25000818": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -12475,6 +12843,18 @@
 "source": "reportall"
 }
 },
+"highlands|C-22-37-30-050-0330-0170|25001181": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372205003300170C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372205003300170C"
+},
+"highlands|C-22-37-30-050-0340-0230|25001189": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372205003400230C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372205003400230C"
+},
 "highlands|C-22-37-30-050-0470-0040|25000867": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -12522,6 +12902,12 @@
 "parcel_address": "332 SUNNYSIDE Dr",
 "source": "reportall"
 }
+},
+"highlands|C-22-37-30-050-0500-0010|25001133": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372205005000010C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372205005000010C"
 },
 "highlands|C-22-37-30-050-0500-0030|25000821": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -12784,6 +13170,18 @@
 "parcel_address": "245 SENTIMENTAL Dr",
 "source": "reportall"
 }
+},
+"highlands|C-22-37-30-060-0560-0110|25001191": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372206005600110C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372206005600110C"
+},
+"highlands|C-22-37-30-060-0600-0190|25001192": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372206006000190C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372206006000190C"
 },
 "highlands|C-22-37-30-060-0620-0030|25001068": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372206006200030C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -13331,6 +13729,12 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30372209008200170C"
 },
+"highlands|C-22-37-30-090-1280-0010|25001116": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372209012800010C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372209012800010C"
+},
 "highlands|C-22-37-30-100-0910-0060|25001094": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372210009100060C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
@@ -13342,6 +13746,12 @@
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30372210010100040C"
+},
+"highlands|C-22-37-30-100-1120-0010|25001207": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372210011200010C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372210011200010C"
 },
 "highlands|C-22-37-30-110-0950-0060|25000858": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -13498,6 +13908,12 @@
 "parcel_address": "131 SUMMER OAK Dr",
 "source": "reportall"
 }
+},
+"highlands|C-22-37-30-120-1060-0200|25001115": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372212010600200C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372212010600200C"
 },
 "highlands|C-22-37-30-160-1660-0060|25000814": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -13659,6 +14075,18 @@
 "source": "reportall"
 }
 },
+"highlands|C-22-37-30-180-1980-0040|25001138": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372218019800040C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372218019800040C"
+},
+"highlands|C-22-37-30-190-2180-0210|25001200": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372219021800210C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372219021800210C"
+},
 "highlands|C-22-37-30-190-2180-0240|25001126": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372219021800240C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
@@ -13704,6 +14132,12 @@
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30372219022800090C"
+},
+"highlands|C-22-37-30-190-2280-0750|25001123": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372219022800750C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372219022800750C"
 },
 "highlands|C-22-37-30-190-2280-0770|25000824": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -13839,6 +14273,12 @@
 "source": "reportall"
 }
 },
+"highlands|C-22-37-30-191-1840-0340|25001183": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372219118400340C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372219118400340C"
+},
 "highlands|C-22-37-30-191-1960-0200|25000544": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -13971,11 +14411,23 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30372226034100260C"
 },
+"highlands|C-22-37-30-260-3440-0110|25001087": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372226034400110C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372226034400110C"
+},
 "highlands|C-22-37-30-260-3520-0130|25001070": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372226035200130C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/30372226035200130C"
+},
+"highlands|C-22-37-30-290-4200-0070|25001167": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372229042000070C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30372229042000070C"
 },
 "highlands|C-22-37-30-400-0020-0830|25001081": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30372240000200830C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -14037,6 +14489,18 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28352401000001990C"
 },
+"highlands|C-24-35-28-010-0000-2440|25001122": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352401000002440C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352401000002440C"
+},
+"highlands|C-24-35-28-010-0000-3390|25001125": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352401000003390C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352401000003390C"
+},
 "highlands|C-24-35-28-010-0000-3841|25000823": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -14087,6 +14551,18 @@
 "source": "reportall"
 }
 },
+"highlands|C-24-35-28-030-0050-0060|25001166": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352403000500060C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352403000500060C"
+},
+"highlands|C-24-35-28-030-0110-0080|25001197": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352403001100080C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352403001100080C"
+},
 "highlands|C-24-35-28-040-0040-0050|25000830": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -14134,6 +14610,24 @@
 "parcel_address": "5804 QUINCE Rd",
 "source": "reportall"
 }
+},
+"highlands|C-24-35-28-080-0010-0170|25001186": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352408000100170C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352408000100170C"
+},
+"highlands|C-24-35-28-080-0020-0180|25001176": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352408000200180C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352408000200180C"
+},
+"highlands|C-24-35-28-100-0030-049A|25001137": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/2835241000030049AC (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/2835241000030049AC"
 },
 "highlands|C-24-35-28-100-009A-0180|25000787": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
@@ -14311,6 +14805,12 @@
 "source": "reportall"
 }
 },
+"highlands|C-24-35-28-101-009A-0420|25001206": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/283524101009A0420C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/283524101009A0420C"
+},
 "highlands|C-24-35-28-101-009B-1310|25000847": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -14391,6 +14891,12 @@
 "source": "reportall"
 }
 },
+"highlands|C-24-35-28-121-0040-0090|25001136": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352412100400090C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352412100400090C"
+},
 "highlands|C-24-35-28-121-0100-0100|25000852": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -14467,6 +14973,12 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28352417007100090C"
 },
+"highlands|C-24-35-28-180-0820-0130|25001165": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28352418008200130C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28352418008200130C"
+},
 "highlands|C-24-35-28-180-0830-0050|25000809": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -14535,6 +15047,12 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/29353202000600020C"
 },
+"highlands|C-33-36-30-010-1400-0010|25001199": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/30363301014000010C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/30363301014000010C"
+},
 "highlands|C-35-34-28-010-0110-0210|25000988": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343501001100210C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
@@ -14601,11 +15119,29 @@
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28343502101500090C"
 },
+"highlands|C-35-34-28-021-0150-0190|25001185": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502101500190C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28343502101500190C"
+},
 "highlands|C-35-34-28-021-0170-0090|25001019": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502101700090C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28343502101700090C"
+},
+"highlands|C-35-34-28-021-0170-0250|25001195": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502101700250C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28343502101700250C"
+},
+"highlands|C-35-34-28-021-0180-0130|25001194": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502101800130C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28343502101800130C"
 },
 "highlands|C-35-34-28-022-0030-0090|25001021": {
 "error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502200300090C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
@@ -14618,6 +15154,18 @@
 "fetched_at": "2026-11-19T12:14:03+00:00",
 "ok": false,
 "url": "https://www.hcpao.org/Search/Parcel/28343502200300280C"
+},
+"highlands|C-35-34-28-022-0100-0030|25001196": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/28343502201000030C (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/28343502201000030C"
+},
+"highlands|S-33-34-29-100-1670-0130|25001174": {
+"error": "HTTPSConnectionPool(host='www.hcpao.org', port=443): Max retries exceeded with url: /Search/Parcel/29343310016700130S (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] ",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "https://www.hcpao.org/Search/Parcel/29343310016700130S"
 },
 "hillsborough|0014440000|2026-708": {
 "assessed_value": "Exemptions",
@@ -14770,6 +15318,15 @@
 "source": "reportall"
 }
 },
+"hillsborough|0325990200|2027-24": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0325990200"
+},
 "hillsborough|0335070100|2026-693": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -14787,6 +15344,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0338632364"
+},
+"hillsborough|0346796028|2027-25": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0346796028"
 },
 "hillsborough|0348737368|2026-769": {
 "assessed_value": "Exemptions",
@@ -14841,6 +15407,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0370488066"
+},
+"hillsborough|0374655500|2027-26": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0374655500"
 },
 "hillsborough|0382105202|2026-789": {
 "assessed_value": "Exemptions",
@@ -15229,6 +15804,15 @@
 "source": "reportall"
 }
 },
+"hillsborough|0806000110|2027-27": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0806000110"
+},
 "hillsborough|0810230300|2026-694": {
 "assessed_value": "Exemptions",
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -15282,6 +15866,15 @@
 "owner_name": "Search Clear",
 "property_use": "Description",
 "url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0828200500"
+},
+"hillsborough|0831990000|2027-40": {
+"assessed_value": "Exemptions",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"just_value": "Assessed Value",
+"ok": true,
+"owner_name": "Search Clear",
+"property_use": "Description",
+"url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0831990000"
 },
 "hillsborough|0832400000|2026-880": {
 "assessed_value": "Exemptions",
@@ -16622,13 +17215,13 @@
 },
 "jackson|02-2N-11-0086-0880-1430|1991 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1430"
 },
 "jackson|02-2N-11-0086-0880-1540|1992 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-0880-1540"
 },
@@ -33367,6 +33960,20 @@
 "tax_number": "100162017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
+"marion|Property Appraiser|100272021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "500 Server Error: Internal Server Error for url: http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "100272021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "100272021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
 "marion|Property Appraiser|11622017": {
 "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
 "applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
@@ -33669,7 +34276,7 @@
 },
 "miamidade|01-3122-052-2400|2026A00184": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0131220522400"
 },
@@ -33768,7 +34375,7 @@
 },
 "miamidade|02-3202-093-0290|2025A00272": {
 "error": "HTTPSConnectionPool(host='www.miamidade.gov', port=443): Read timed out. (read timeout=25)",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=0232020930290"
 },
@@ -34003,7 +34610,7 @@
 },
 "miamidade|34-2103-009-0570|2025A00631": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.miamidade.gov/Apps/PA/propertysearch/#/?folio=3421030090570"
 },
@@ -34066,7 +34673,7 @@
 },
 "nassau|04-2N-27-0000-0003-0450|452026XX000023TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=04-2N-27-0000-0003-0450 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=04-2N-27-0000-0003-0450"
 },
@@ -52622,7 +53229,7 @@
 },
 "santarosa|02-1N-28-0000-11500-0000|2026285": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=02-1N-28-0000-11500-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=02-1N-28-0000-11500-0000"
 },
@@ -52674,7 +53281,7 @@
 },
 "santarosa|09-1N-28-0000-05600-0000|2026280": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-28-0000-05600-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-28-0000-05600-0000"
 },
@@ -52708,13 +53315,13 @@
 },
 "santarosa|10-3S-29-4935-00000-0850|2026277": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-3S-29-4935-00000-0850 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-3S-29-4935-00000-0850"
 },
 "santarosa|12-1N-28-0000-00428-0000|2026264": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=12-1N-28-0000-00428-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=12-1N-28-0000-00428-0000"
 },
@@ -52732,7 +53339,7 @@
 },
 "santarosa|18-1N-28-0000-04203-0000|2026265": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=18-1N-28-0000-04203-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=18-1N-28-0000-04203-0000"
 },
@@ -52780,7 +53387,7 @@
 },
 "santarosa|22-1N-28-0000-04405-0000|2026266": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-1N-28-0000-04405-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-1N-28-0000-04405-0000"
 },
@@ -52792,7 +53399,7 @@
 },
 "santarosa|23-1N-29-1210-02100-0090|2026272": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=23-1N-29-1210-02100-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=23-1N-29-1210-02100-0090"
 },
@@ -52804,7 +53411,7 @@
 },
 "santarosa|28-2N-28-0000-04105-0000|2026267": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=28-2N-28-0000-04105-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=28-2N-28-0000-04105-0000"
 },
@@ -52846,13 +53453,13 @@
 },
 "santarosa|40-1N-28-0090-45000-0130|2026283": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-45000-0130 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-45000-0130"
 },
 "santarosa|40-1N-28-0090-47000-0160|2026268": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-47000-0160 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-47000-0160"
 },
@@ -52864,19 +53471,19 @@
 },
 "santarosa|40-1N-28-0090-52200-0150|2026269": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-52200-0150 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-52200-0150"
 },
 "santarosa|40-1N-28-0090-56200-0010|2026270": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56200-0010 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56200-0010"
 },
 "santarosa|40-1N-28-0090-56800-0110|2026286": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-56800-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-56800-0110"
 },
@@ -52894,7 +53501,7 @@
 },
 "santarosa|40-1N-28-0090-75800-0030|2026279": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-75800-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-75800-0030"
 },
@@ -53262,7 +53869,7 @@
 },
 "seminole|01-20-30-504-2800-0060|20260068/2024-000049 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=01-20-30-504-2800-0060"
 },
@@ -53274,7 +53881,7 @@
 },
 "seminole|07-21-30-505-0D00-0220|20260127/2024-000951": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=07-21-30-505-0D00-0220"
 },
@@ -53372,13 +53979,13 @@
 },
 "seminole|20-19-30-501-0000-3140|20260124/2021-000058 CS": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3140"
 },
 "seminole|20-19-30-501-0000-3180|20260125/2021-000059": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=20-19-30-501-0000-3180"
 },
@@ -53460,7 +54067,7 @@
 },
 "seminole|25-19-30-5AI-0913-0050|20260087 2024-004346 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=25-19-30-5AI-0913-0050"
 },
@@ -53500,7 +54107,7 @@
 },
 "seminole|33-19-31-300-1390-0000|20260110/2024-005542": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-300-1390-0000"
 },
@@ -53518,7 +54125,7 @@
 },
 "seminole|33-19-31-507-0000-1260|20260115 2024-005598 DP": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=33-19-31-507-0000-1260"
 },
@@ -53546,7 +54153,7 @@
 },
 "seminole|35-19-30-513-2200-0060|20260126/2021-000489 HD": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=35-19-30-513-2200-0060"
 },
@@ -53568,13 +54175,13 @@
 },
 "seminole|36-19-30-300-0320-0000|20260121/2024-006401": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-300-0320-0000"
 },
 "seminole|36-19-30-506-0000-061A|20260122/2024-006413": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://www.scpafl.org/search/parcels/details?PID=36-19-30-506-0000-061A"
 },
@@ -53610,7 +54217,7 @@
 },
 "stlucie|1432-806-0036-000-5|26-224": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/143280600360005"
 },
@@ -53640,7 +54247,7 @@
 },
 "stlucie|2405-501-0127-000-3|26-218": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240550101270003"
 },
@@ -53682,13 +54289,13 @@
 },
 "stlucie|2405-701-0042-000-7|26-213": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240570100420007"
 },
 "stlucie|2406-114-0009-000-5|26-214": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240611400090005"
 },
@@ -53700,13 +54307,13 @@
 },
 "stlucie|2409-122-0006-000-8|26-219": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240912200060008"
 },
 "stlucie|2409-501-0071-000-7|26-227": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240950100710007"
 },
@@ -53718,7 +54325,7 @@
 },
 "stlucie|2409-602-0154-000-3|26-228": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240960201540003"
 },
@@ -53736,13 +54343,13 @@
 },
 "stlucie|2409-820-0033-000-9|26-229": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982000330009"
 },
 "stlucie|2409-823-0043-000-1|26-216": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/240982300430001"
 },
@@ -53802,7 +54409,7 @@
 },
 "stlucie|3407-506-0040-000-3|26-226": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/340750600400003"
 },
@@ -53826,7 +54433,7 @@
 },
 "stlucie|3420-515-0259-000-0|26-024": {
 "error": "no recognizable fields on page",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://apps.paslc.gov/rerecordcard/342051502590000"
 },
@@ -55295,6 +55902,24 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
 },
+"volusia|581101110010|00181-24": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101110010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101110010"
+},
+"volusia|581101110170|00182-24": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101110170 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101110170"
+},
+"volusia|581101120130|00183-24": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101120130 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=581101120130"
+},
 "volusia|600516010110|00617-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=600516010110 (Caused by ConnectTimeoutErr",
 "fetched_at": "2026-11-13T11:35:53+00:00",
@@ -55324,6 +55949,12 @@
 "fetched_at": "2026-11-06T11:29:42+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=603812000680"
+},
+"volusia|611001010200|03545-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001010200 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001010200"
 },
 "volusia|611001240130|03550-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611001240130 (Caused by ConnectTimeoutErr",
@@ -55577,6 +56208,24 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=694301060020"
 },
+"volusia|700112000520|01586-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700112000520 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700112000520"
+},
+"volusia|700112000750|01598-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700112000750 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700112000750"
+},
+"volusia|700113002170|01653-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700113002170 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=700113002170"
+},
 "volusia|700113002430|01662-20": {
 "fetched_at": "2026-08-28T01:58:02+00:00",
 "geom_backfilled_at": "2026-08-28T01:58:02+00:00",
@@ -55729,11 +56378,29 @@
 "source": "reportall"
 }
 },
+"volusia|710401010010|05886-19": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710401010010 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710401010010"
+},
+"volusia|710501160360|04172-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710501160360 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710501160360"
+},
 "volusia|710601100080|02906-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710601100080 (Caused by ConnectTimeoutErr",
 "fetched_at": "2026-10-29T10:33:55+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710601100080"
+},
+"volusia|710901060140|14853-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710901060140 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=710901060140"
 },
 "volusia|712802110010|03294-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=712802110010 (Caused by ConnectTimeoutErr",
@@ -55886,6 +56553,12 @@
 "fetched_at": "2026-11-20T12:14:10+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791401050030"
+},
+"volusia|791401050160|00578-20": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791401050160 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791401050160"
 },
 "volusia|791502000491|06794-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=791502000491 (Caused by ConnectTimeoutErr",
@@ -56053,6 +56726,12 @@
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813011500010"
 },
+"volusia|813014120110|03722-24": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813014120110 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813014120110"
+},
 "volusia|813015200040|03733-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=813015200040 (Caused by ConnectTimeoutErr",
 "fetched_at": "2026-11-13T11:35:53+00:00",
@@ -56138,6 +56817,18 @@
 "fetched_at": "2026-11-13T11:35:53+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830401010360"
+},
+"volusia|830501050621|07860-24": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830501050621 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=830501050621"
+},
+"volusia|840201146230|08736-23": {
+"error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840201146230 (Caused by ConnectTimeoutErr",
+"fetched_at": "2026-11-24T14:18:28+00:00",
+"ok": false,
+"url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=840201146230"
 },
 "volusia|840500000120|10526-24": {
 "error": "no recognizable fields on page",
@@ -56401,7 +57092,7 @@
 },
 "washington|00000000-00-1539-0000|2026-TD-263": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-1539-0000"
 },
@@ -56413,7 +57104,7 @@
 },
 "washington|00000000-00-4096-0016|2026-TD-250": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4096-0016"
 },
@@ -56431,13 +57122,13 @@
 },
 "washington|00000000-00-4414-0312|2026-TD-251": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4414-0312"
 },
 "washington|00000000-00-4877-0000|2026-TD-317": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-4877-0000"
 },
@@ -56449,19 +57140,19 @@
 },
 "washington|00000000-00-5049-0005|2026-TD-252": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5049-0005"
 },
 "washington|00000000-00-5411-0121|2026-TD-318": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5411-0121"
 },
 "washington|00000000-00-5512-0001|2026-TD-277": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-00-5512-0001"
 },
@@ -56495,7 +57186,7 @@
 },
 "washington|00000000-01-0006-0017|2026-TD-233": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-01-0006-0017"
 },
@@ -56531,19 +57222,19 @@
 },
 "washington|00000000-02-0223-0026|2026-TD-236": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0223-0026"
 },
 "washington|00000000-02-0242-0009|2026-TD-255": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0242-0009"
 },
 "washington|00000000-02-0244-0017|2026-TD-240": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-02-0244-0017"
 },
@@ -56577,7 +57268,7 @@
 },
 "washington|00000000-04-0156-0038|2026-TD-276": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0156-0038"
 },
@@ -56623,7 +57314,7 @@
 },
 "washington|00000000-04-0206-0011|2026-TD-261": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-04-0206-0011"
 },
@@ -56657,7 +57348,7 @@
 },
 "washington|00000000-05-0318-0002|2026-TD-242": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-05-0318-0002"
 },
@@ -56699,7 +57390,7 @@
 },
 "washington|00000000-06-0348-0003|2026-TD-259": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0348-0003"
 },
@@ -56771,7 +57462,7 @@
 },
 "washington|00000000-06-0369-0019|2026-TD-254": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-06-0369-0019"
 },
@@ -56897,7 +57588,7 @@
 },
 "washington|00000000-07-0433-0033|2026-TD-241": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0433-0033"
 },
@@ -56947,7 +57638,7 @@
 },
 "washington|00000000-07-0464-0007|2026-TD-272": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-07-0464-0007"
 },
@@ -57267,7 +57958,7 @@
 },
 "washington|00000000-10-0567-0008|2026-TD-271": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-10-0567-0008"
 },
@@ -57353,13 +58044,13 @@
 },
 "washington|00000000-11-0753-0011|2026-TD-269": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0753-0011"
 },
 "washington|00000000-11-0757-0001|2026-TD-268": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0757-0001"
 },
@@ -57371,7 +58062,7 @@
 },
 "washington|00000000-11-0765-0012|2026-TD-267": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0765-0012"
 },
@@ -57395,7 +58086,7 @@
 },
 "washington|00000000-11-0778-0027|2026-TD-266": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-11-0778-0027"
 },
@@ -57433,7 +58124,7 @@
 },
 "washington|00000000-12-1003-0025|2026-TD-265": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1003-0025"
 },
@@ -57451,13 +58142,13 @@
 },
 "washington|00000000-12-1006-0016|2026-TD-279": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1006-0016"
 },
 "washington|00000000-12-1007-0009|2026-TD-278": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009",
-"fetched_at": "2026-11-17T12:28:54+00:00",
+"fetched_at": "2026-11-24T14:18:28+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=896&LayerID=16944&PageTypeID=4&PageID=7615&Q=2073331570&KeyValue=00000000-12-1007-0009"
 },
