@@ -718,7 +718,7 @@
 },
 "brevard|2000576|260358": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2000576",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2000576"
 },
@@ -1030,7 +1030,7 @@
 },
 "brevard|2624207|260422": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2624207",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2624207"
 },
@@ -1060,7 +1060,7 @@
 },
 "brevard|2712878|260323": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2712878",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2712878"
 },
@@ -1108,7 +1108,7 @@
 },
 "brevard|2742939|260371": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2742939",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2742939"
 },
@@ -1204,7 +1204,7 @@
 },
 "brevard|2835885|260337": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2835885",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2835885"
 },
@@ -1240,7 +1240,7 @@
 },
 "brevard|2848055|260413": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2848055",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2848055"
 },
@@ -1408,13 +1408,13 @@
 },
 "brevard|2949546|260472": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2949546",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2949546"
 },
 "brevard|2951109|260481": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/2951109",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/2951109"
 },
@@ -1432,7 +1432,7 @@
 },
 "brevard|3004355|260394": {
 "error": "403 Client Error: Forbidden for url: https://www.bcpao.us/PropertySearch/#/parcel/3004355",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://www.bcpao.us/PropertySearch/#/parcel/3004355"
 },
@@ -1579,6 +1579,13 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|484226-09-1080|54439": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 421740.0,
+"mailing_address": "101 NE 21 ST POMPANO BEACH FL 33060-4931",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484226091080"
+},
 "broward|484228-27-0250|54052": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-09-30T10:20:59+00:00",
@@ -1619,6 +1626,13 @@
 "mailing_address": "232 NW 14 WAY DANIA BEACH FL 33004",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484235320510"
+},
+"broward|484235-32-0530|54387": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 172800.0,
+"mailing_address": "232 NW 14 WAY DANIA BEACH FL 33004",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=484235320530"
 },
 "broward|484305-10-0390|54033": {
 "fetched_at": "2026-11-06T11:29:42+00:00",
@@ -1762,12 +1776,26 @@
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494125HG0380"
 },
+"broward|494125-HK-0440|54369": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 88630.0,
+"mailing_address": "2114 N FLAMINGO RD #514 PEMBROKE PINES FL 33028",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494125HK0440"
+},
 "broward|494125-HM-0590|53902": {
 "fetched_at": "2026-10-31T10:14:27+00:00",
 "just_value": 103000.0,
 "mailing_address": "140 BELLAMY LOOP #15A BRONX NY 10475",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494125HM0590"
+},
+"broward|494125-JD-0130|54431": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 72590.0,
+"mailing_address": "8950 SW 74 CT #2201-E7 MIAMI FL 33156",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494125JD0130"
 },
 "broward|494125-JH-0330|54631": {
 "fetched_at": "2026-11-21T11:35:09+00:00",
@@ -1788,6 +1816,13 @@
 "fetched_at": "2026-10-23T09:18:31+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
+},
+"broward|494126-AK-0030|54448": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 130000.0,
+"mailing_address": "2701 GRIFFIN RD FORT LAUDERDALE FL 33312",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494126AK0030"
 },
 "broward|494127-BB-0040|54080": {
 "error": "no recognizable fields on page",
@@ -1874,6 +1909,13 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|494202-03-1010|54414": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 143550.0,
+"mailing_address": "3631 NW 7 CT LAUDERHILL FL 33311",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494202031010"
+},
 "broward|494202-03-1011|54244": {
 "fetched_at": "2026-11-05T11:33:37+00:00",
 "just_value": 143570.0,
@@ -1957,6 +1999,13 @@
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494212NS0110"
 },
+"broward|494214-23-0030|54377": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 575190.0,
+"mailing_address": "4730 NE 18 AVE FORT LAUDERDALE FL 33334",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494214230030"
+},
 "broward|494222-08-0521|54208": {
 "fetched_at": "2026-11-07T10:45:09+00:00",
 "just_value": 674870.0,
@@ -1996,6 +2045,13 @@
 "fetched_at": "2026-10-16T08:49:46+00:00",
 "ok": false,
 "url": "https://bcpa.net/"
+},
+"broward|494233-28-2740|54434": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 477250.0,
+"mailing_address": "1830 W BROWARD BLVD FORT LAUDERDALE FL 33312",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=494233282740"
 },
 "broward|494234-05-8750|53985": {
 "error": "no recognizable fields on page",
@@ -2050,6 +2106,13 @@
 "ok": false,
 "url": "https://bcpa.net/"
 },
+"broward|504113-06-0040|54389": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 139170.0,
+"mailing_address": "6350 SW 1 CT PEMBROKE PINES FL 33023",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504113060040"
+},
 "broward|504117-CC-0310|53978": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-17T08:26:10+00:00",
@@ -2068,6 +2131,13 @@
 "mailing_address": "5793 SW 45 ST DAVIE FL 33314",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504126040370"
+},
+"broward|504127-04-0210|54390": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 172180.0,
+"mailing_address": "6350 SW 1 CT PEMBROKE PINES FL 33023",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504127040210"
 },
 "broward|504130-10-0030|54211": {
 "fetched_at": "2026-11-03T11:29:51+00:00",
@@ -2166,6 +2236,13 @@
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=504235AC0060"
 },
+"broward|514014-BA-2780|54380": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 151430.0,
+"mailing_address": "531 MAIN ST APT 826 NEW YORK NY 10044-0181",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514014BA2780"
+},
 "broward|514024-03-0181|53741": {
 "error": "no recognizable fields on page",
 "fetched_at": "2026-10-16T08:49:46+00:00",
@@ -2219,6 +2296,13 @@
 "mailing_address": "8911 S HOLLYBROOK BLVD #310 PEMBROKE PINES FL 33025-1352",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514117AB5200"
+},
+"broward|514117-AF-0950|54400": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 282480.0,
+"mailing_address": "6480 SW 195 AVE PEMBROKE PINES FL 33332",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514117AF0950"
 },
 "broward|514119-06-0741|53740": {
 "error": "no recognizable fields on page",
@@ -2321,6 +2405,13 @@
 "mailing_address": "2554 SMALLMAN ST UNIT 501 PITTSBURGH PA 15222-4636",
 "ok": true,
 "url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514224BB1150"
+},
+"broward|514224-BB-1990|54396": {
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 613410.0,
+"mailing_address": "2338 HOLLYWOOD BLVD HOLLYWOOD FL 33020",
+"ok": true,
+"url": "http://www.bcpa.net/RecInfo.asp?URL_Folio=514224BB1990"
 },
 "broward|514226-AL-0560|54552": {
 "fetched_at": "2026-11-21T11:35:09+00:00",
@@ -5562,6 +5653,15 @@
 "source": "reportall"
 }
 },
+"duval|001840-0000|2026-0917TD": {
+"acreage": "$1,974.00",
+"assessed_value": 1974.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 1974.0,
+"ok": true,
+"property_use": "9600 Waste Land",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0018400000"
+},
 "duval|002299-0000|2026-0381TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -5824,6 +5924,15 @@
 "source": "reportall"
 }
 },
+"duval|009573-0000|2026-0889TD": {
+"acreage": "$1,890.00",
+"assessed_value": 1890.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 1890.0,
+"ok": true,
+"property_use": "9600 Waste Land",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0095730000"
+},
 "duval|011414-0010|2026-0555TD": {
 "assessed_value": 157969.0,
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -5864,6 +5973,14 @@
 "source": "reportall"
 }
 },
+"duval|014603-5235|2026-0867TD": {
+"assessed_value": 84186.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 213165.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0146035235"
+},
 "duval|016027-0500|2026-0818TD": {
 "acreage": "$227,400.00",
 "assessed_value": 83496.0,
@@ -5896,6 +6013,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0160578410"
+},
+"duval|016057-9305|2026-0863TD": {
+"assessed_value": 223295.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 223295.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0160579305"
 },
 "duval|016279-0000|2026-0477TD": {
 "acreage": "$70,000.00",
@@ -5954,6 +6079,24 @@
 "parcel_address": "2515 LA TRELLE Ct",
 "source": "reportall"
 }
+},
+"duval|019702-0090|2026-0974TD": {
+"acreage": "$13,200.00",
+"assessed_value": 12468.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 13305.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0197020090"
+},
+"duval|019702-0100|2026-0975TD": {
+"acreage": "$11,000.00",
+"assessed_value": 8089.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 11000.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0197020100"
 },
 "duval|019704-2620|2026-0485TD": {
 "assessed_value": 75000.0,
@@ -6027,6 +6170,14 @@
 "source": "reportall"
 }
 },
+"duval|021211-0000|2026-0856TD": {
+"assessed_value": 95607.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 95607.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0212110000"
+},
 "duval|021578-0370|2026-0617TD": {
 "assessed_value": 28246.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6034,6 +6185,30 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0215780370"
+},
+"duval|021605-0000|2026-0848TD": {
+"assessed_value": 91548.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 91548.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0216050000"
+},
+"duval|021606-0000|2026-0857TD": {
+"assessed_value": 94248.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 94248.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0216060000"
+},
+"duval|021617-0000|2026-0973TD": {
+"assessed_value": 8327.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 14250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0216170000"
 },
 "duval|021743-0000|2026-0881TD": {
 "assessed_value": 19727.0,
@@ -6067,6 +6242,14 @@
 "source": "reportall"
 }
 },
+"duval|021863-0000|2026-0972TD": {
+"assessed_value": 7969.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 11250.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0218630000"
+},
 "duval|021896-0000|2026-0303TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -6082,6 +6265,14 @@
 "parcel_address": "8098 PIPIT Ave",
 "source": "reportall"
 }
+},
+"duval|021941-0000|2026-0971TD": {
+"assessed_value": 6721.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 11500.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0219410000"
 },
 "duval|021949-0000|2026-0422TD": {
 "assessed_value": 11137.0,
@@ -6220,6 +6411,30 @@
 "source": "reportall"
 }
 },
+"duval|023742-0000|2026-0874TD": {
+"assessed_value": 93232.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 93232.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0237420000"
+},
+"duval|023789-0000|2026-0854TD": {
+"assessed_value": 106933.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 106933.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0237890000"
+},
+"duval|023902-0000|2026-0852TD": {
+"assessed_value": 81567.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 94167.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0239020000"
+},
 "duval|024028-0000|2026-0225TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -6235,6 +6450,14 @@
 "parcel_address": "8281 CONCORD W Blvd",
 "source": "reportall"
 }
+},
+"duval|024977-0000|2026-0849TD": {
+"assessed_value": 107089.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 107089.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0249770000"
 },
 "duval|025522-0000|2026-0462TD": {
 "assessed_value": 21333.0,
@@ -6323,6 +6546,14 @@
 "ok": true,
 "property_use": "1700 Office 1-2 Story",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0269500000"
+},
+"duval|027134-0020|2026-0833TD": {
+"assessed_value": 23108.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 23108.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0271340020"
 },
 "duval|027370-0000|2026-0374TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6492,6 +6723,14 @@
 "source": "reportall"
 }
 },
+"duval|030470-0000|2026-0812TD": {
+"assessed_value": 31002.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 88560.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0304700000"
+},
 "duval|031020-0000|2026-0619TD": {
 "assessed_value": 66298.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6524,6 +6763,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0313200000"
 },
+"duval|031765-0000|2026-0846TD": {
+"assessed_value": 53336.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 63469.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0317650000"
+},
 "duval|031825-0000|2026-0598TD": {
 "assessed_value": 261635.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6555,6 +6802,22 @@
 "parcel_address": "610 CARLTON St",
 "source": "reportall"
 }
+},
+"duval|032196-0000|2026-0862TD": {
+"assessed_value": 184646.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 184646.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0321960000"
+},
+"duval|032613-0000|2026-0847TD": {
+"assessed_value": 92502.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 92502.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0326130000"
 },
 "duval|032633-0000|2026-0387TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6604,6 +6867,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0341250000"
 },
+"duval|035071-0000|2026-0859TD": {
+"assessed_value": 122268.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 122268.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0350710000"
+},
 "duval|035639-0000|2026-0921TD": {
 "assessed_value": 32624.0,
 "fetched_at": "2026-11-13T11:35:53+00:00",
@@ -6651,6 +6922,14 @@
 "ok": true,
 "property_use": "1192 Store,Retail/Multi Bldg",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0360620000"
+},
+"duval|036152-0000|2026-0860TD": {
+"assessed_value": 108944.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 128808.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0361520000"
 },
 "duval|036214-0000|2026-0258TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -6780,6 +7059,14 @@
 "source": "reportall"
 }
 },
+"duval|037379-0000|2026-0865TD": {
+"assessed_value": 133600.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 133600.0,
+"ok": true,
+"property_use": "1700 Office 1-2 Story",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0373790000"
+},
 "duval|037457-0000|2026-0366TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -6836,6 +7123,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0379820000"
+},
+"duval|037998-0000|2026-0871TD": {
+"assessed_value": 109008.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 112986.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0379980000"
 },
 "duval|038335-0000|2026-0821TD": {
 "assessed_value": 98645.0,
@@ -6974,6 +7269,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0414720000"
 },
+"duval|041769-0000|2026-0890TD": {
+"assessed_value": 3800.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 14462.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0417690000"
+},
 "duval|044273-0165|2026-0563TD": {
 "assessed_value": 99758.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -6981,6 +7284,14 @@
 "ok": true,
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0442730165"
+},
+"duval|044421-0000|2026-0828TD": {
+"assessed_value": 12980.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 14017.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0444210000"
 },
 "duval|044444-0000|2026-0449TD": {
 "assessed_value": 92887.0,
@@ -7021,6 +7332,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457090000"
+},
+"duval|045720-0000|2026-0891TD": {
+"assessed_value": 2575.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 5900.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0457200000"
 },
 "duval|045769-0000|2026-0953TD": {
 "assessed_value": 7165.0,
@@ -7294,6 +7613,22 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0515420000"
 },
+"duval|051574-0000|2026-0892TD": {
+"assessed_value": 4356.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 9968.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0515740000"
+},
+"duval|051667-0010|2026-0893TD": {
+"assessed_value": 2889.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 8640.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0516670010"
+},
 "duval|051739-0000|2026-0472TD": {
 "assessed_value": 67191.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -7381,6 +7716,14 @@
 "parcel_address": "1357 HART St",
 "source": "reportall"
 }
+},
+"duval|053470-0000|2026-0853TD": {
+"assessed_value": 75178.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 75178.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0534700000"
 },
 "duval|053712-0000|2026-0212TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -7494,6 +7837,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0542190000"
 },
+"duval|054528-0020|2026-0827TD": {
+"assessed_value": 45178.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 53355.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0545280020"
+},
 "duval|054566-0000|2026-0482TD": {
 "assessed_value": 21937.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -7557,6 +7908,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0552050100"
+},
+"duval|055488-0000|2026-0825TD": {
+"assessed_value": 36263.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 60893.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0554880000"
 },
 "duval|055543-0000|2026-0428TD": {
 "assessed_value": 25042.0,
@@ -7935,6 +8294,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0768950000"
 },
+"duval|077060-0000|2026-0894TD": {
+"assessed_value": 2296.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 7140.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0770600000"
+},
 "duval|077348-0000|2026-0961TD": {
 "assessed_value": 4870.0,
 "fetched_at": "2026-11-17T12:28:54+00:00",
@@ -8006,6 +8373,14 @@
 "parcel_address": "4417 GRUNTHAL St",
 "source": "reportall"
 }
+},
+"duval|085024-0000|2026-0895TD": {
+"assessed_value": 7433.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 11348.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0850240000"
 },
 "duval|085045-0000|2026-0206TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -8095,6 +8470,14 @@
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0867530000"
 },
+"duval|086860-0000|2026-0896TD": {
+"assessed_value": 4292.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 7791.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0868600000"
+},
 "duval|086901-0000|2026-0172TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -8174,6 +8557,14 @@
 "ok": true,
 "property_use": "0000 Vacant Res < 20 Acres",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0876660000"
+},
+"duval|087734-0000|2026-0845TD": {
+"assessed_value": 59749.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 68388.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=0877340000"
 },
 "duval|087949-0000|2026-0523TD": {
 "assessed_value": 88760.0,
@@ -8569,6 +8960,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1135180100"
 },
+"duval|114043-0000|2026-0813TD": {
+"assessed_value": 94649.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 94649.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1140430000"
+},
 "duval|114076-0000|2026-0173TD": {
 "assessed_value": 33069.0,
 "fetched_at": "2026-09-28T18:34:04+00:00",
@@ -8648,6 +9047,14 @@
 "ok": true,
 "property_use": "1200 Mixed Use Res/Store/Off",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1148160000"
+},
+"duval|114884-0000|2026-0832TD": {
+"assessed_value": 67274.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 67274.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1148840000"
 },
 "duval|115169-0000|2026-0842TD": {
 "acreage": "$10.00",
@@ -8786,6 +9193,15 @@
 "source": "reportall"
 }
 },
+"duval|123022-0005|2026-1008TD": {
+"acreage": "$2,586.00",
+"assessed_value": 5793.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 5793.0,
+"ok": true,
+"property_use": "9500 Submerged Land",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1230220005"
+},
 "duval|123741-0000|2026-0629TD": {
 "assessed_value": 177817.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8914,6 +9330,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1261950000"
 },
+"duval|126685-0000|2026-0897TD": {
+"assessed_value": 1485.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 2475.0,
+"ok": true,
+"property_use": "4000 Vacant Industrial",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1266850000"
+},
 "duval|127437-0000|2026-0181TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
 "geom_backfilled_at": "2026-08-28T02:16:31+00:00",
@@ -8946,6 +9370,14 @@
 "property_use": "0100 Single Family",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1318810000"
 },
+"duval|132550-0000|2026-0826TD": {
+"assessed_value": 58559.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 58559.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1325500000"
+},
 "duval|132706-0000|2026-0486TD": {
 "assessed_value": 10436.0,
 "fetched_at": "2026-09-29T12:21:51+00:00",
@@ -8953,6 +9385,22 @@
 "ok": true,
 "property_use": "7000 Vacant Institute",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1327060000"
+},
+"duval|133644-0000|2026-0823TD": {
+"assessed_value": 61449.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 61449.0,
+"ok": true,
+"property_use": "0100 Single Family",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1336440000"
+},
+"duval|133646-0000|2026-0824TD": {
+"assessed_value": 14018.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 14018.0,
+"ok": true,
+"property_use": "0000 Vacant Res < 20 Acres",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1336460000"
 },
 "duval|134012-0015|2026-0608TD": {
 "assessed_value": 246567.0,
@@ -9115,6 +9563,14 @@
 "parcel_address": "5536 BISHOP Ln",
 "source": "reportall"
 }
+},
+"duval|147818-0000|2026-0830TD": {
+"assessed_value": 104682.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 119000.0,
+"ok": true,
+"property_use": "1700 Office 1-2 Story",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1478180000"
 },
 "duval|147977-0010|2026-0883TD": {
 "assessed_value": 56250.0,
@@ -9445,6 +9901,14 @@
 "ok": true,
 "property_use": "0400 Residential Condo",
 "url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1734361066"
+},
+"duval|173864-0000|2026-0831TD": {
+"assessed_value": 998600.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"just_value": 998600.0,
+"ok": true,
+"property_use": "1700 Office 1-2 Story",
+"url": "https://paopropertysearch.coj.net/Basic/Detail.aspx?RE=1738640000"
 },
 "duval|175596-0000|2026-0340TD": {
 "fetched_at": "2026-08-28T02:16:31+00:00",
@@ -10991,7 +11455,7 @@
 },
 "gilchrist|150816-02200000-0090|26-0016-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=15-08-16-0220-0000-0090"
 },
@@ -11058,7 +11522,7 @@
 },
 "gilchrist|240816-08920000-0130|26-0015-TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=820&LayerID=15174&PageTypeID=4&PageID=6883&Q=1071567062&KeyValue=24-08-16-0892-0000-0130"
 },
@@ -11180,9 +11644,33 @@
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
+"hendry|1 29 43 17 040 0000-006.0|25-146": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 29 43 27 010 0001-012.2|25-140": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 29 43 27 010 0002-011.0|25-141": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
 "hendry|1 29 43 27 010 00B2-021.0|25-142": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
 "fetched_at": "2026-11-13T11:35:53+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|1 29 43 27 010 00D2-007.0|25-151": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -11210,6 +11698,12 @@
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
+"hendry|1 32 44 25 A00 0115.0100|25-137": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
 "hendry|1 32 44 36 A00 0176.0100|25-158": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
 "fetched_at": "2026-11-13T11:35:53+00:00",
@@ -11228,9 +11722,27 @@
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
+"hendry|1 34 43 21 010 0005-019.0|25-148": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
 "hendry|2 29 43 02 280 0000-082.0|25-113": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
 "fetched_at": "2026-11-13T11:35:53+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|2 29 43 02 670 000F-008.0|25-159": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|2 29 43 02 670 000G-002.1|25-160": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -11240,9 +11752,27 @@
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
+"hendry|3 34 43 01 010 0191-004.0|25-162": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
 "hendry|4 29 43 10 030 2136-021.0|25-145": {
 "error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
 "fetched_at": "2026-11-13T11:35:53+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 040 2166-004.0|25-170": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": false,
+"url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
+},
+"hendry|4 29 43 10 060 000E-001.2|25-171": {
+"error": "403 Client Error: Forbidden for url: https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144"
 },
@@ -16643,7 +17173,7 @@
 },
 "indianriver|32392100003012000009.0|2026-0068TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392100003012000009.0",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392100003012000009.0"
 },
@@ -16661,7 +17191,7 @@
 },
 "indianriver|32392300003001000026.0|2026-0067TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392300003001000026.0",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=32392300003001000026.0"
 },
@@ -16739,7 +17269,7 @@
 },
 "indianriver|33392600001014000001.0|2026-0069TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33392600001014000001.0",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=1109&LayerID=27655&PageTypeID=4&PageID=11279&Q=1438314085&KeyValue=33392600001014000001.0"
 },
@@ -17281,7 +17811,7 @@
 },
 "jackson|02-2N-11-0086-1120-0130|2071 OF 2019": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130",
-"fetched_at": "2026-11-14T11:02:55+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=851&LayerID=15884&PageTypeID=4&KeyValue=02-2N-11-0086-1120-0130"
 },
@@ -23344,6 +23874,20 @@
 "ok": false,
 "url": "https://www.manateepao.com/parcel/?parid=877732750"
 },
+"marion|0051-0021120|2642012": {
+"applicant": "5T WEALTH PARTNERS LP",
+"applicant_address": "2055 US HIGHWAY 1 VERO BEACH FL 32960",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "2642012",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "2642012",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=11193&YR=2026&mName=False&mSitus=False"
+},
 "marion|0051-103-015|4862016": {
 "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
 "applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
@@ -23387,9 +23931,17 @@
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3455673&YR=2026&mName=False&mSitus=False"
 },
 "marion|0051-110-018|5262016": {
-"error": "no recognizable fields on page",
-"fetched_at": "2026-11-18T12:18:15+00:00",
-"ok": false,
+"applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
+"applicant_address": "C/O BEDFORD GREENE PO BOX 5258 SALT SPRINGS FL 32134-5258",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5262016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "12/09/2026",
+"tax_number": "5262016",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2427108&YR=2026&mName=False&mSitus=False"
 },
 "marion|0051-110-030|5302016": {
@@ -23419,6 +23971,20 @@
 "sale_date": "10/14/2026",
 "tax_number": "4342021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=19577&YR=2026&mName=False&mSitus=False"
+},
+"marion|0051-113-021|5142020": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5142020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "5142020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=20052&YR=2026&mName=False&mSitus=False"
 },
 "marion|0051-117-004|5702016": {
 "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
@@ -23461,6 +24027,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "5452020",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=3457587&YR=2026&mName=False&mSitus=False"
+},
+"marion|0051-121-025|5562020": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "5562020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "5562020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2680008&YR=2026&mName=False&mSitus=False"
 },
 "marion|0051-123-025|6042016": {
 "applicant": "GREENE TAX CERTIFICATE INVESTMENTS",
@@ -23517,6 +24097,20 @@
 "sale_date": "08/19/2026",
 "tax_number": "5512021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2420073&YR=2026&mName=False&mSitus=False"
+},
+"marion|02280-000-00|7722018": {
+"applicant": "FUTURES SECURITY LLC SERIES 1",
+"applicant_address": "C/O LAURA SCHILLACI 540 GILFORD AVE TOMS RIVER NJ 08753",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "7722018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "7722018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=38148&YR=2026&mName=False&mSitus=False"
 },
 "marion|02850-001-00|7462021": {
 "applicant": "TLGFY LLC. CAPITAL ONE N.A. AS COLLATE",
@@ -23699,6 +24293,20 @@
 "tax_number": "14502015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=67628&YR=2026&mName=False&mSitus=False"
 },
+"marion|04913-000-00|12062021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "12062021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "12062021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=71269&YR=2026&mName=False&mSitus=False"
+},
 "marion|06892-000-00|20342017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -23712,6 +24320,20 @@
 "sale_date": "09/16/2026",
 "tax_number": "20342017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=105848&YR=2026&mName=False&mSitus=False"
+},
+"marion|0742-013-066|22452020": {
+"applicant": "JPL INVESTMENTS CORP",
+"applicant_address": "C/O OCEAN BANK 8724 SW 72ND ST #382 MIAMI FL 33173",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "22452020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "22452020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=117021&YR=2026&mName=False&mSitus=False"
 },
 "marion|0744-003-018|23272017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -23979,6 +24601,20 @@
 "tax_number": "40112021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1811023&YR=2026&mName=False&mSitus=False"
 },
+"marion|1303-017-034|40122021": {
+"applicant": "ATCF II FLORIDA-A LLC",
+"applicant_address": "PO BOX 69239 BALTIMORE MD 21264-9239",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "40122021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "40122021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=242250&YR=2026&mName=False&mSitus=False"
+},
 "marion|1328-001-023|48212015": {
 "applicant": "DWYANE L WILLIAMS OR BARBARA F WILLIAMS",
 "applicant_address": "2410 NW 63RD PLACE OCALA FL 34475-2458",
@@ -23992,6 +24628,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "48212015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=251801&YR=2026&mName=False&mSitus=False"
+},
+"marion|1328-003-026|42182021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "42182021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "42182021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=252336&YR=2026&mName=False&mSitus=False"
 },
 "marion|1454671|233502021": {
 "applicant": "RAJENDRA INC",
@@ -24167,6 +24817,20 @@
 "tax_number": "53082021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=325597&YR=2026&mName=False&mSitus=False"
 },
+"marion|16633-173-00|57532018": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "57532018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "57532018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=325767&YR=2026&mName=False&mSitus=False"
+},
 "marion|1740-001-011|59592018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -24201,6 +24865,20 @@
 "tax_number": "62952019",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=354970&YR=2026&mName=False&mSitus=False"
 },
+"marion|1801-004-020|63222018": {
+"applicant": "VINMAS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "63222018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "63222018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=361364&YR=2026&mName=False&mSitus=False"
+},
 "marion|1801-009-027|68472016": {
 "applicant": "BUFFALO BILL LLC",
 "applicant_address": "1500 HIGHWAY A1A VERO BEACH FL 32963",
@@ -24214,6 +24892,34 @@
 "sale_date": "12/09/2026",
 "tax_number": "68472016",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=362379&YR=2026&mName=False&mSitus=False"
+},
+"marion|1801-013-038|67022020": {
+"applicant": "VINMAS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "67022020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "67022020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=363839&YR=2026&mName=False&mSitus=False"
+},
+"marion|1801-017-010|67262020": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "67262020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "67262020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=365688&YR=2026&mName=False&mSitus=False"
 },
 "marion|1801-017-050|68952016": {
 "applicant": "KEYSTONE HOME INTEGRATION INC",
@@ -24271,6 +24977,104 @@
 "tax_number": "59542021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=373443&YR=2026&mName=False&mSitus=False"
 },
+"marion|1802-002-030|68522020": {
+"applicant": "EREBUS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "68522020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "68522020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=373605&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-003-005|59612021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59612021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "59612021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=374024&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-003-045|59672021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59672021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "59672021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=374423&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-003-049|59692021": {
+"applicant": "EREBUS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59692021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "59692021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=374466&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-004-002|59732021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59732021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "59732021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=374652&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-004-062|68822020": {
+"applicant": "EREBUS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "68822020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "68822020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=375241&YR=2026&mName=False&mSitus=False"
+},
+"marion|1802-004-064|59882021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "59882021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "59882021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=375268&YR=2026&mName=False&mSitus=False"
+},
 "marion|1802-014-015|69292020": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -24299,6 +25103,76 @@
 "tax_number": "70232015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=379336&YR=2026&mName=False&mSitus=False"
 },
+"marion|1804-003-048|70132020": {
+"applicant": "EREBUS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "70132020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "70132020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=383813&YR=2026&mName=False&mSitus=False"
+},
+"marion|1804-004-030|61172021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "61172021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "61172021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=384283&YR=2026&mName=False&mSitus=False"
+},
+"marion|1804-005-026|61312021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "61312021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "61312021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=384895&YR=2026&mName=False&mSitus=False"
+},
+"marion|1805-000-013|61922021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "61922021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "61922021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=389943&YR=2026&mName=False&mSitus=False"
+},
+"marion|1805-002-063|62152021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "62152021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "62152021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=391191&YR=2026&mName=False&mSitus=False"
+},
 "marion|1805-011-025|62692021": {
 "applicant": "FIG 20 LLC",
 "applicant_address": "FIG 20 LLC FBO SEC PTY PO BOX 12225 NEWARK NJ 07101-3411",
@@ -24313,6 +25187,62 @@
 "tax_number": "62692021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=394416&YR=2026&mName=False&mSitus=False"
 },
+"marion|1807-008-015|63932021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "63932021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "63932021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=405221&YR=2026&mName=False&mSitus=False"
+},
+"marion|1807-008-016|63942021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "63942021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "63942021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=405230&YR=2026&mName=False&mSitus=False"
+},
+"marion|1807-009-001|69762018": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "69762018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "69762018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=405426&YR=2026&mName=False&mSitus=False"
+},
+"marion|1807-009-020|64072021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "64072021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "64072021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=405612&YR=2026&mName=False&mSitus=False"
+},
 "marion|1807-014-016|70092018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -24326,6 +25256,48 @@
 "sale_date": "08/19/2026",
 "tax_number": "70092018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=407381&YR=2026&mName=False&mSitus=False"
+},
+"marion|1807-016-047|64462021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "64462021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "64462021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=408433&YR=2026&mName=False&mSitus=False"
+},
+"marion|1808-000-027|64492021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "64492021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "64492021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=408590&YR=2026&mName=False&mSitus=False"
+},
+"marion|1808-004-026|64822021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "64822021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "64822021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=409791&YR=2026&mName=False&mSitus=False"
 },
 "marion|1808-015-034|71152018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24355,6 +25327,34 @@
 "tax_number": "76052020",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=420662&YR=2026&mName=False&mSitus=False"
 },
+"marion|1810-005-023|72752019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "72752019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "72752019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=422568&YR=2026&mName=False&mSitus=False"
+},
+"marion|1810-013-028|75422017": {
+"applicant": "CIG REALTY GROUP LLC",
+"applicant_address": "SERGIO CESARIO 8765 AZALEA CT UNIT 203 TAMARAC FL 33321",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "75422017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "75422017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=425770&YR=2026&mName=False&mSitus=False"
+},
 "marion|1811-005-010|67922021": {
 "applicant": "KEYSTONE HOME INTEGRATION INC",
 "applicant_address": "C/O CHARLES TURNER 1636 N CEDAR CREST BLVD #134 ALLENTOWN PA 18104-0587",
@@ -24368,6 +25368,34 @@
 "sale_date": "11/18/2026",
 "tax_number": "67922021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=428914&YR=2026&mName=False&mSitus=False"
+},
+"marion|1811-006-030|68082021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "68082021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "68082021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=429651&YR=2026&mName=False&mSitus=False"
+},
+"marion|1811-010-023|74462019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "74462019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "74462019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=430960&YR=2026&mName=False&mSitus=False"
 },
 "marion|1811-015-040|74342018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24411,6 +25439,20 @@
 "tax_number": "69822021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=439681&YR=2026&mName=False&mSitus=False"
 },
+"marion|1812-108-003|80072020": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "80072020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "80072020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=440272&YR=2026&mName=False&mSitus=False"
+},
 "marion|1813-003-028|78722017": {
 "applicant": "KEYSTONE HOME INTEGRATION INC",
 "applicant_address": "C/O CHARLES TURNER 1636 N CEDAR CREST BLVD #134 ALLENTOWN PA 18104-0587",
@@ -24424,6 +25466,20 @@
 "sale_date": "10/14/2026",
 "tax_number": "78722017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=443328&YR=2026&mName=False&mSitus=False"
+},
+"marion|1813-006-004|70372021": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "70372021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "70372021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=444006&YR=2026&mName=False&mSitus=False"
 },
 "marion|1813-009-005|76772019": {
 "applicant": "KEYSTONE HOME INTEGRATION INC",
@@ -24439,6 +25495,48 @@
 "tax_number": "76772019",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=444944&YR=2026&mName=False&mSitus=False"
 },
+"marion|1814-006-016|81562020": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "81562020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "81562020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=448427&YR=2026&mName=False&mSitus=False"
+},
+"marion|1814-009-044|81972020": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "81972020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "81972020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=449695&YR=2026&mName=False&mSitus=False"
+},
+"marion|1814-015-008|80932017": {
+"applicant": "FUTURES SECURITY LLC SERIES 1",
+"applicant_address": "C/O LAURA SCHILLACI 540 GILFORD AVE TOMS RIVER NJ 08753",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "80932017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "80932017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=451754&YR=2026&mName=False&mSitus=False"
+},
 "marion|1814-016-023|82782020": {
 "applicant": "IL IRA INVESTMENTS LLC",
 "applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
@@ -24452,6 +25550,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "82782020",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=452548&YR=2026&mName=False&mSitus=False"
+},
+"marion|1814-017-041|79042019": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "79042019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "79042019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=453340&YR=2026&mName=False&mSitus=False"
 },
 "marion|1814-018-001|72782021": {
 "applicant": "IL IRA INVESTMENTS LLC",
@@ -24495,6 +25607,34 @@
 "tax_number": "79592018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=457647&YR=2026&mName=False&mSitus=False"
 },
+"marion|1814-028-021|80412019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "80412019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "80412019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=458481&YR=2026&mName=False&mSitus=False"
+},
+"marion|1814-030-008|80522019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "80522019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "80522019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=459071&YR=2026&mName=False&mSitus=False"
+},
 "marion|1814-037-044|81332019": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -24508,6 +25648,34 @@
 "sale_date": "09/16/2026",
 "tax_number": "81332019",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=462306&YR=2026&mName=False&mSitus=False"
+},
+"marion|1815-002-008|81472019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "81472019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "81472019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=462837&YR=2026&mName=False&mSitus=False"
+},
+"marion|1815-009-032|81642019": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "81642019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "81642019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=463795&YR=2026&mName=False&mSitus=False"
 },
 "marion|1815-014-010|277262018": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -24536,6 +25704,34 @@
 "sale_date": "12/09/2026",
 "tax_number": "85912015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=464741&YR=2026&mName=False&mSitus=False"
+},
+"marion|1815-033-024|76852021": {
+"applicant": "VINMAS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "76852021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "76852021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=470848&YR=2026&mName=False&mSitus=False"
+},
+"marion|18161002-030|84552019": {
+"applicant": "CIG REALTY GROUP LLC",
+"applicant_address": "SERGIO CESARIO 8765 AZALEA CT UNIT 203 TAMARAC FL 33321",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "84552019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "84552019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=475491&YR=2026&mName=False&mSitus=False"
 },
 "marion|195367|33702021": {
 "applicant": "IL IRA INVESTMENTS LLC",
@@ -29727,6 +30923,20 @@
 "tax_number": "96142017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2386363&YR=2026&mName=False&mSitus=False"
 },
+"marion|2004-211-007|88092021": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "88092021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "88092021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=508373&YR=2026&mName=False&mSitus=False"
+},
 "marion|2004-211-010|96152017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -31015,6 +32225,20 @@
 "tax_number": "109142016",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=554367&YR=2026&mName=False&mSitus=False"
 },
+"marion|2260-127-006|100272021": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "100272021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "100272021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1256089&YR=2026&mName=False&mSitus=False"
+},
 "marion|2301-005-021|113622017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 344212407",
@@ -31250,6 +32474,20 @@
 "sale_date": "08/19/2026",
 "tax_number": "116362017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=576395&YR=2026&mName=False&mSitus=False"
+},
+"marion|2311-126-019|112402018": {
+"applicant": "EREBUS HOLDINGS LLC",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "112402018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "112402018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=576425&YR=2026&mName=False&mSitus=False"
 },
 "marion|2311-126-067|116442017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -31710,6 +32948,34 @@
 "tax_number": "6322016",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
+"marion|27330-001-00|114092021": {
+"applicant": "BEAMIF A LLC",
+"applicant_address": "C/O BRIEN OBERSTEIN PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "114092021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "114092021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=642401&YR=2026&mName=False&mSitus=False"
+},
+"marion|2846-023-000|127422019": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "127422019",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "127422019",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1236991&YR=2026&mName=False&mSitus=False"
+},
 "marion|2856-003-001|133662015": {
 "applicant": "FRITZ JEAN-BAPTISTE",
 "applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
@@ -31737,6 +33003,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "23692021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
+},
+"marion|31850-009-00|138432017": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "138432017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "138432017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=733741&YR=2026&mName=False&mSitus=False"
 },
 "marion|325597|53082021": {
 "applicant": "JPL INVESTMENTS CORP",
@@ -31878,6 +33158,20 @@
 "tax_number": "152432017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=824224&YR=2026&mName=False&mSitus=False"
 },
+"marion|3492-068-107|149502018": {
+"applicant": "CHARLES E BERK FAMILY TRUST",
+"applicant_address": "1525 SE 59TH STREET OCALA FL 34480",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "149502018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "149502018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=826464&YR=2026&mName=False&mSitus=False"
+},
 "marion|3498-246-000|155112017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
 "applicant_address": "PO BOX 2407 BELLEVIEW FL 34421-2407",
@@ -31905,6 +33199,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "164492015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2338903&YR=2026&mName=False&mSitus=False"
+},
+"marion|3545-010-011|160812017": {
+"applicant": "PALLUM 401K PLAN",
+"applicant_address": "PO BOX 885 BOCA RATON FL 33429",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "160812017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "160812017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=875775&YR=2026&mName=False&mSitus=False"
 },
 "marion|354970|62952019": {
 "applicant": "BEAMIF A LLC",
@@ -32297,6 +33605,20 @@
 "tax_number": "176102018",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=989801&YR=2026&mName=False&mSitus=False"
 },
+"marion|4033-108-059|190412016": {
+"applicant": "DALE GREGORY SCHULTZ",
+"applicant_address": "18925 SE 106TH PLACE OCKLAWAHA FL 32179",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "190412016",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "190412016",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2219530&YR=2026&mName=False&mSitus=False"
+},
 "marion|4069-004-007|163402021": {
 "applicant": "IL IRA INVESTMENTS LLC",
 "applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
@@ -32462,6 +33784,20 @@
 "sale_date": "11/18/2026",
 "tax_number": "196302020",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1062187&YR=2026&mName=False&mSitus=False"
+},
+"marion|4214-174-007|193932017": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "193932017",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "193932017",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1064546&YR=2026&mName=False&mSitus=False"
 },
 "marion|4217-195-023|171702021": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -33047,6 +34383,34 @@
 "tax_number": "87662021",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=&YR=2026&mName=False&mSitus=False"
 },
+"marion|5075-002-020|209802018": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "209802018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "209802018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1198445&YR=2026&mName=False&mSitus=False"
+},
+"marion|5075-006-018|209982018": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "209982018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "209982018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1199018&YR=2026&mName=False&mSitus=False"
+},
 "marion|5075-006-051|221192015": {
 "applicant": "FRITZ JEAN-BAPTISTE",
 "applicant_address": "576 SW CRAWFISH DR PORT ST LUCIE FL 34953",
@@ -33060,6 +34424,20 @@
 "sale_date": "12/09/2026",
 "tax_number": "221192015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1199166&YR=2026&mName=False&mSitus=False"
+},
+"marion|5075-007-037|210162018": {
+"applicant": "IL IRA INVESTMENTS LLC",
+"applicant_address": "ILIRA 3641 N 52ND AVE HOLLYWOOD FL 33021",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "210162018",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "210162018",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1199387&YR=2026&mName=False&mSitus=False"
 },
 "marion|5075-010-024|221522015": {
 "applicant": "FRITZ JEAN-BAPTISTE",
@@ -33256,6 +34634,20 @@
 "tax_number": "228152015",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2143312&YR=2026&mName=False&mSitus=False"
 },
+"marion|8002-0043-17|200412021": {
+"applicant": "ATCF II FLORIDA-A LLC",
+"applicant_address": "PO BOX 69239 BALTIMORE MD 21264-9239",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "200412021",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "200412021",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1283884&YR=2026&mName=False&mSitus=False"
+},
 "marion|8005-0786-13|243172014": {
 "applicant": "CERTMAX LLC",
 "applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243",
@@ -33445,6 +34837,20 @@
 "sale_date": "10/14/2026",
 "tax_number": "259182014",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=2589060&YR=2026&mName=False&mSitus=False"
+},
+"marion|8012-1464-03|258662020": {
+"applicant": "RAJENDRA INC",
+"applicant_address": "14221 LAKE CANDLEWOOD CT MIAMI FL 33014",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "258662020",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "258662020",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=2570521&YR=2026&mName=False&mSitus=False"
 },
 "marion|878430|144472021": {
 "applicant": "JPL INVESTMENTS CORP",
@@ -33651,6 +35057,34 @@
 "sale_date": "08/19/2026",
 "tax_number": "309132017",
 "url": "http://www.pa.marion.fl.us/PRC.aspx?key=1467594&YR=2026&mName=False&mSitus=False"
+},
+"marion|9035-1007-11|280782015": {
+"applicant": "CERTMAX LLC",
+"applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "280782015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "280782015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1627150&YR=2026&mName=False&mSitus=False"
+},
+"marion|9035-1007-12|280792015": {
+"applicant": "CERTMAX LLC",
+"applicant_address": "8437 TUTTLE AVE #407 SARASOTA FL 34243",
+"appraiser_error": "no recognizable fields on page",
+"clerk_case_url": "https://nvweb.marioncountyclerk.org/browserviewtd/",
+"clerk_platform": "newvision",
+"clerk_search_value": "280792015",
+"deed_status": "READYSALE",
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"sale_date": "01/13/2027",
+"tax_number": "280792015",
+"url": "http://www.pa.marion.fl.us/PRC.aspx?key=1627176&YR=2026&mName=False&mSitus=False"
 },
 "marion|9035-1010-02|311162017": {
 "applicant": "JOCALBRO INC PROFIT SHARING PLAN TRUST",
@@ -34707,7 +36141,7 @@
 },
 "nassau|29-2N-28-0000-0001-0040|452026XX000022TDAXYX": {
 "error": "HTTPSConnectionPool(host='maps.nassauflpa.com', port=443): Max retries exceeded with url: /NassauDetails/ParcelSearchResults.html?PIN=29-2N-28-0000-0001-0040 (Caused by SSLError(SSLCertVerificationErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=29-2N-28-0000-0001-0040"
 },
@@ -37553,7 +38987,7 @@
 },
 "osceola|122730495000010061|23312022": {
 "error": "404 Client Error: Not Found for url: http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061"
 },
@@ -42266,9 +43700,23 @@
 "polk|232736016026000790|00092-2026": {
 "acreage": "0.02",
 "assessed_value": 12500.0,
-"fetched_at": "2026-08-15T03:01:17+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232736016026000790"
+},
+"polk|232801018000040171|00238-2026": {
+"acreage": "0.16",
+"assessed_value": 98950.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232801018000040171"
+},
+"polk|232810000000023014|00307-2026": {
+"acreage": "0.31",
+"assessed_value": 141596.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232810000000023014"
 },
 "polk|232811029500002260|00244-2026": {
 "acreage": "0.27",
@@ -42292,12 +43740,26 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812045500003100"
 },
+"polk|232812052500002090|00302-2026": {
+"acreage": "0.15",
+"assessed_value": 61051.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812052500002090"
+},
 "polk|232812055500001050|00135-2026": {
 "acreage": "0.12",
 "assessed_value": 36410.0,
 "fetched_at": "2026-08-19T17:58:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232812055500001050"
+},
+"polk|232813074500009052|00316-2026": {
+"acreage": "0.08",
+"assessed_value": 33504.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232813074500009052"
 },
 "polk|232814079500003120|00230-2026": {
 "acreage": "0.20",
@@ -42327,6 +43789,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000818"
 },
+"polk|232815085500000828|00303-2026": {
+"acreage": "0.10",
+"assessed_value": 103395.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232815085500000828"
+},
 "polk|232815085500001107|00112-2026": {
 "acreage": "0.21",
 "assessed_value": 28432.0,
@@ -42348,6 +43817,13 @@
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232822093500007220"
+},
+"polk|232823098500002150|00232-2026": {
+"acreage": "0.17",
+"assessed_value": 128963.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=232823098500002150"
 },
 "polk|232825127000006120|00139-2026": {
 "acreage": "0.14",
@@ -42418,6 +43894,13 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233001144120015050"
+},
+"polk|233004155203000020|00306-2026": {
+"acreage": "0.33",
+"assessed_value": 153957.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=233004155203000020"
 },
 "polk|233012000000031670|00231-2026": {
 "acreage": "0.13",
@@ -42868,6 +44351,13 @@
 "fetched_at": "2026-08-20T06:55:20+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827000000032020"
+},
+"polk|242827243000001050|00308-2026": {
+"acreage": "0.37",
+"assessed_value": 39344.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=242827243000001050"
 },
 "polk|242831261490008280|00221-2026": {
 "acreage": "0.16",
@@ -43465,6 +44955,14 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262808529000000040"
 },
+"polk|262816540500007100|00309-2026": {
+"acreage": "0.17",
+"assessed_value": 49457.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262816540500007100"
+},
 "polk|262819553671001050|00174-2026": {
 "acreage": "0.15",
 "assessed_value": 42793.0,
@@ -43472,12 +44970,40 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262819553671001050"
 },
+"polk|262821000000032040|00284-2026": {
+"acreage": "0.33",
+"assessed_value": 182024.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262821000000032040"
+},
+"polk|262822588000000013|00273-2026": {
+"acreage": "1.57",
+"assessed_value": 72240.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262822588000000013"
+},
+"polk|262828596500005121|00274-2026": {
+"acreage": "0.23",
+"assessed_value": 189585.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262828596500005121"
+},
 "polk|262829621000052060|00224-2026": {
 "acreage": "0.15",
 "assessed_value": 86384.0,
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262829621000052060"
+},
+"polk|262830000000022570|00286-2026": {
+"acreage": "0.16",
+"assessed_value": 228148.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262830000000022570"
 },
 "polk|262919000000014280|00213-2026": {
 "acreage": "1.04",
@@ -43496,7 +45022,7 @@
 "polk|262919000000032040|00215-2026": {
 "acreage": "1.01",
 "assessed_value": 504.0,
-"fetched_at": "2026-10-22T09:14:52+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032040"
 },
@@ -43513,6 +45039,13 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262919000000032220"
+},
+"polk|262928691004000220|00285-2026": {
+"acreage": "0.72",
+"assessed_value": 175628.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=262928691004000220"
 },
 "polk|263019000000021080|00160-2026": {
 "acreage": "0.85",
@@ -43748,6 +45281,29 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273212932575000680"
 },
+"polk|272604701107002070|00278-2026": {
+"acreage": "0.13",
+"assessed_value": 375314.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272604701107002070"
+},
+"polk|272606701208000730|00287-2026": {
+"acreage": "0.40",
+"assessed_value": 337699.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272606701208000730"
+},
+"polk|272610701303000470|00279-2026": {
+"acreage": "0.06",
+"assessed_value": 322500.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272610701303000470"
+},
 "polk|272612000000043040|00175-2026": {
 "acreage": "0.39",
 "assessed_value": 51469.0,
@@ -43755,12 +45311,33 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272612000000043040"
 },
+"polk|272703721523002660|00277-2026": {
+"acreage": "0.11",
+"assessed_value": 265162.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272703721523002660"
+},
 "polk|272720747300002160|00024-2026": {
 "acreage": "0.19",
 "assessed_value": 159785.0,
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272720747300002160"
+},
+"polk|272721753000000520|00289-2026": {
+"acreage": "0.09",
+"assessed_value": 88657.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721753000000520"
+},
+"polk|272721754000006040|00318-2026": {
+"acreage": "0.12",
+"assessed_value": 15374.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272721754000006040"
 },
 "polk|272725757862000140|00171-2026": {
 "acreage": "0.15",
@@ -43783,6 +45360,13 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835000000041120"
 },
+"polk|272835853050000040|00290-2026": {
+"acreage": "5.03",
+"assessed_value": 874002.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272835853050000040"
+},
 "polk|272909857300000170|00192-2026": {
 "acreage": "0.15",
 "assessed_value": 37555.0,
@@ -43797,6 +45381,35 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=272909857800000090"
 },
+"polk|273002905500001010|00315-2026": {
+"acreage": "0.38",
+"assessed_value": 151884.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"owner_name": "Owner Name2",
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273002905500001010"
+},
+"polk|273002910010000070|00321-2026": {
+"acreage": "0.21",
+"assessed_value": 63400.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273002910010000070"
+},
+"polk|273012925500002130|00322-2026": {
+"acreage": "0.30",
+"assessed_value": 73319.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273012925500002130"
+},
+"polk|273031000000014020|00310-2026": {
+"acreage": "1.16",
+"assessed_value": 93034.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273031000000014020"
+},
 "polk|273035000000012010|00191-2026": {
 "acreage": "0.12",
 "assessed_value": 65976.0,
@@ -43810,6 +45423,13 @@
 "fetched_at": "2026-09-21T15:26:16+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273035928520000250"
+},
+"polk|273203932511003870|00312-2026": {
+"acreage": "3.10",
+"assessed_value": 23065.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=273203932511003870"
 },
 "polk|273209932551000040|00182-2026": {
 "acreage": "2.85",
@@ -43973,12 +45593,47 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283208000000034200"
 },
+"polk|282618932901020690|00292-2026": {
+"acreage": "0.22",
+"assessed_value": 706700.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282618932901020690"
+},
 "polk|282707000000031050|00093-2026": {
 "acreage": "1.99",
 "assessed_value": 994.0,
 "fetched_at": "2026-08-15T03:01:17+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282707000000031050"
+},
+"polk|282722933910000960|00298-2026": {
+"acreage": "0.13",
+"assessed_value": 201284.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282722933910000960"
+},
+"polk|282733934460348010|00323-2026": {
+"acreage": "0.25",
+"assessed_value": 40000.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460348010"
+},
+"polk|282733934460366030|00324-2026": {
+"acreage": "0.16",
+"assessed_value": 28000.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460366030"
+},
+"polk|282733934460386050|00217-2026": {
+"acreage": "0.33",
+"assessed_value": 289925.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282733934460386050"
 },
 "polk|282733934460451070|00199-2026": {
 "acreage": "0.18",
@@ -44044,6 +45699,20 @@
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=282908000000044099"
 },
+"polk|283001939010028080|00326-2026": {
+"acreage": "0.10",
+"assessed_value": 156874.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283001939010028080"
+},
+"polk|283006940100004140|00297-2026": {
+"acreage": "0.22",
+"assessed_value": 157409.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283006940100004140"
+},
 "polk|283018947220000450|00054-2026": {
 "acreage": "0.19",
 "assessed_value": 59293.0,
@@ -44071,6 +45740,13 @@
 "fetched_at": "2026-10-22T09:14:52+00:00",
 "ok": true,
 "url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283128965000002210"
+},
+"polk|283205000000044360|00314-2026": {
+"acreage": "0.13",
+"assessed_value": 117324.0,
+"fetched_at": "2026-11-25T13:30:03+00:00",
+"ok": true,
+"url": "http://www.polkflpa.gov/CamaDisplay.aspx?OutputMode=Display&SearchType=RealEstate&Page=FindByID&ParcelID=283205000000044360"
 },
 "polk|283208000000034200|00201-2026": {
 "acreage": "0.31",
@@ -53223,7 +54899,7 @@
 },
 "santarosa|01-1N-28-0000-00418-0000|2026260": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=01-1N-28-0000-00418-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=01-1N-28-0000-00418-0000"
 },
@@ -53253,7 +54929,7 @@
 },
 "santarosa|05-1N-27-0000-00150-0000|2026232": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=05-1N-27-0000-00150-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=05-1N-27-0000-00150-0000"
 },
@@ -53287,7 +54963,7 @@
 },
 "santarosa|09-1N-29-5433-00A00-0220|2026252": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=09-1N-29-5433-00A00-0220 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=09-1N-29-5433-00A00-0220"
 },
@@ -53309,7 +54985,7 @@
 },
 "santarosa|10-1N-28-3040-00400-0030|2026261": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=10-1N-28-3040-00400-0030 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=10-1N-28-3040-00400-0030"
 },
@@ -53327,13 +55003,13 @@
 },
 "santarosa|15-1N-29-1290-00C00-0040|2026253": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=15-1N-29-1290-00C00-0040 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=15-1N-29-1290-00C00-0040"
 },
 "santarosa|16-2N-28-0000-04501-0000|2026236": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=16-2N-28-0000-04501-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=16-2N-28-0000-04501-0000"
 },
@@ -53363,7 +55039,7 @@
 },
 "santarosa|19-2S-27-1010-00A00-0830|2026228": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=19-2S-27-1010-00A00-0830 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=19-2S-27-1010-00A00-0830"
 },
@@ -53393,7 +55069,7 @@
 },
 "santarosa|22-5N-28-0000-01309-0000|2026259": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=22-5N-28-0000-01309-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=22-5N-28-0000-01309-0000"
 },
@@ -53405,7 +55081,7 @@
 },
 "santarosa|24-3N-30-0000-00903-0000|2026254": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=24-3N-30-0000-00903-0000 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=24-3N-30-0000-00903-0000"
 },
@@ -53447,7 +55123,7 @@
 },
 "santarosa|40-1N-28-0090-22500-0090|2026224": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-22500-0090 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-22500-0090"
 },
@@ -53489,13 +55165,13 @@
 },
 "santarosa|40-1N-28-0090-63700-0100|2026221": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0100 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0100"
 },
 "santarosa|40-1N-28-0090-63700-0110|2026258": {
 "error": "HTTPConnectionPool(host='srcpa.gov', port=80): Max retries exceeded with url: /Parcel/Index2?parcel=40-1N-28-0090-63700-0110 (Caused by ConnectTimeoutError(<HTTPConnection(host='srcpa.gov', port=80) a",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://srcpa.gov/Parcel/Index2?parcel=40-1N-28-0090-63700-0110"
 },
@@ -55818,7 +57494,7 @@
 },
 "volusia|533903700061|06725-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=533903700061"
 },
@@ -55898,7 +57574,7 @@
 },
 "volusia|580201590010|00150-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=580201590010"
 },
@@ -55986,13 +57662,13 @@
 },
 "volusia|611601250130|03068-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611601250130"
 },
 "volusia|611602020090|12107-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602020090"
 },
@@ -56004,7 +57680,7 @@
 },
 "volusia|611602210150|03578-20": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=611602210150"
 },
@@ -56056,13 +57732,13 @@
 },
 "volusia|613301070250|05074-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301070250"
 },
 "volusia|613301100260|10746-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301100260"
 },
@@ -56074,7 +57750,7 @@
 },
 "volusia|613301150090|14045-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=613301150090"
 },
@@ -56284,7 +57960,7 @@
 },
 "volusia|701531000030|01375-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=701531000030"
 },
@@ -56330,7 +58006,7 @@
 },
 "volusia|702003000010|01643-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702003000010"
 },
@@ -56342,7 +58018,7 @@
 },
 "volusia|702012030110|12279-19": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=702012030110"
 },
@@ -56508,7 +58184,7 @@
 },
 "volusia|743005040130|08124-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=743005040130"
 },
@@ -56526,7 +58202,7 @@
 },
 "volusia|744109010050|08201-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=744109010050"
 },
@@ -56620,7 +58296,7 @@
 },
 "volusia|801108280050|02083-24": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=801108280050"
 },
@@ -56672,7 +58348,7 @@
 },
 "volusia|810401010130|12166-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=810401010130"
 },
@@ -56876,7 +58552,7 @@
 },
 "volusia|844702060860|09589-21": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702060860"
 },
@@ -56898,7 +58574,7 @@
 },
 "volusia|844702073021|09753-23": {
 "error": "HTTPConnectionPool(host='publicaccess.vcgov.org', port=80): Max retries exceeded with url: /volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021 (Caused by ConnectTimeoutErr",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "http://publicaccess.vcgov.org/volusia/search/CommonSearch.aspx?mode=REALPROP&UseSearch=no&altpin=844702073021"
 },
@@ -57008,13 +58684,13 @@
 },
 "walton|15-3N-20-28070-026-0060|2026-0137TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=15-3N-20-28070-026-0060",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=15-3N-20-28070-026-0060"
 },
 "walton|18-3N-20-28130-002-0130|2026-0138TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=18-3N-20-28130-002-0130",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=18-3N-20-28130-002-0130"
 },
@@ -57032,7 +58708,7 @@
 },
 "walton|25-3N-19-19330-000-0017|2026-0135TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=25-3N-19-19330-000-0017"
 },
@@ -57050,7 +58726,7 @@
 },
 "walton|30-3N-18-10000-027-0130|2026-0128TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=30-3N-18-10000-027-0130"
 },
@@ -57068,7 +58744,7 @@
 },
 "walton|33-6N-20-31010-000-0500|2026-0133TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=33-6N-20-31010-000-0500"
 },
@@ -57080,7 +58756,7 @@
 },
 "walton|36-4N-20-29000-015-0000|2026-0139TD": {
 "error": "403 Client Error: Forbidden for url: https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=36-4N-20-29000-015-0000",
-"fetched_at": "2026-11-18T12:18:15+00:00",
+"fetched_at": "2026-11-25T13:30:03+00:00",
 "ok": false,
 "url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=835&LayerID=15172&PageTypeID=4&PageID=6829&KeyValue=36-4N-20-29000-015-0000"
 },

@@ -1,0 +1,11 @@
+county,sale_date,sale_time,parcel_id,case_number,certificate_number,owner_name,property_address,property_use,acreage,opening_bid,assessed_value,auction_status,auction_type,auction_url,appraiser_url,clerk_case_url,source_host,scraped_at
+sumter,01/07/2027,,F01-115,5088,385,"BROWN, GWENDOLYN LEWIS",,,,1852.29,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,F31B134,5087,478,"SEXTON, JOHNNY D AND MARILYN T",,,,3771.45,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,F32U009,5086,552,"HARDY, TIMOTHY L JR & RACHAL L",,,,5265.15,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,F35A152,5085,570,"HAYES, JESSIE MAE ESTATE",,,,4006.11,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,G26B12104,5081,820,GREEN VILLAGE OF OCALA CORP,,,,3962.64,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,G29A334,5079,838,"GRIFFITH, TOMMY",,,,33831.47,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://sumterpa.com,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,J23-075,5078,966,"DODD, KEITH A",,,,29687.53,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://sumterpa.com,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,M18A123,5083,1053,"WINE, HARRY A AND JOYCE A",,,,3287.41,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,N09-016,5080,1093,"BOHRER, WILLIAM",,,,25223.57,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
+sumter,01/07/2027,,N15-034,5084,1120,"MILLER, SAMMIE AND MARY M",,,,3356.7,,scheduled,TAXDEED,https://www.sumterclerk.com/tax-deed-sales,http://SUMTERPA.COM,,www.sumterclerk.com,2026-11-25T13:30:01+00:00
