@@ -1,0 +1,33 @@
+[
+  {
+    "county": "flagler",
+    "sale_date": "01/12/2027",
+    "sale_time": "09:00 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "26-077 TDC",
+    "certificate_number": "2022 / 38",
+    "parcel_id": "2110282775000400340",
+    "owner_name": "",
+    "property_address": "N/A, HASTINGS, FL- 32145",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 1313.15,
+    "assessed_value": 531.0,
+    "auction_status": "01/12/2027 09:00 AM ET",
+    "auction_url": "https://www.flagler.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530362&bypassPage=1",
+    "appraiser_url": "https://qpublic.schneidercorp.com/Application.aspx?AppID=598&LayerID=9801&PageTypeID=4&PageID=4330&Q=1542956115&KeyValue=21-10-28-2775-00040-0340",
+    "clerk_case_url": "",
+    "source_host": "www.flagler.realtaxdeed.com",
+    "scraped_at": "2026-11-26T12:42:36+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "26-077 TDC",
+      "certificate": "2022 / 38",
+      "opening bid": "$1,313.15",
+      "parcel id": "2110282775000400340",
+      "property address": "N/A",
+      "(cont:property_address)": "HASTINGS, FL- 32145",
+      "assessed value": "$531.00"
+    }
+  }
+]

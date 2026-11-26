@@ -1,0 +1,60 @@
+[
+  {
+    "county": "nassau",
+    "sale_date": "01/26/2027",
+    "sale_time": "11:30 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "452026XX000023TDAXYX",
+    "certificate_number": "846",
+    "parcel_id": "04-2N-27-0000-0003-0450",
+    "owner_name": "",
+    "property_address": "MACAW RD YULEE",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 6193.79,
+    "assessed_value": null,
+    "auction_status": "01/26/2027 11:30 AM ET",
+    "auction_url": "https://www.nassau.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529961&bypassPage=1",
+    "appraiser_url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=04-2N-27-0000-0003-0450",
+    "clerk_case_url": "",
+    "source_host": "www.nassau.realtaxdeed.com",
+    "scraped_at": "2026-11-26T12:55:36+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "452026XX000023TDAXYX",
+      "certificate": "846",
+      "opening bid": "$6,193.79",
+      "parcel id": "04-2N-27-0000-0003-0450",
+      "property address": "MACAW RD YULEE"
+    }
+  },
+  {
+    "county": "nassau",
+    "sale_date": "01/26/2027",
+    "sale_time": "11:30 AM ET",
+    "auction_type": "TAXDEED",
+    "case_number": "452026XX000022TDAXYX",
+    "certificate_number": "1147",
+    "parcel_id": "29-2N-28-0000-0001-0040",
+    "owner_name": "",
+    "property_address": "TABASCO RD FERNANDINA BEACH",
+    "property_use": "",
+    "acreage": "",
+    "opening_bid": 9558.86,
+    "assessed_value": null,
+    "auction_status": "01/26/2027 11:30 AM ET",
+    "auction_url": "https://www.nassau.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529250&bypassPage=1",
+    "appraiser_url": "https://maps.nassauflpa.com/NassauDetails/ParcelSearchResults.html?PIN=29-2N-28-0000-0001-0040",
+    "clerk_case_url": "",
+    "source_host": "www.nassau.realtaxdeed.com",
+    "scraped_at": "2026-11-26T12:55:36+00:00",
+    "raw_fields": {
+      "auction type": "TAXDEED",
+      "case": "452026XX000022TDAXYX",
+      "certificate": "1147",
+      "opening bid": "$9,558.86",
+      "parcel id": "29-2N-28-0000-0001-0040",
+      "property address": "TABASCO RD FERNANDINA BEACH"
+    }
+  }
+]

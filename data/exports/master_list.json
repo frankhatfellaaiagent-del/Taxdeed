@@ -1,49 +1,49 @@
 {
- "generated_at": "2026-11-25T13:48:59+00:00",
- "source_run": "2026-11-25T125359Z",
+ "generated_at": "2026-11-26T13:18:13+00:00",
+ "source_run": "2026-11-26T123237Z",
  "county_runs": {
-  "alachua": "2026-11-25T125359Z",
-  "baker": "2026-11-25T125359Z",
-  "bay": "2026-11-25T125359Z",
-  "brevard": "2026-11-25T125359Z",
-  "broward": "2026-11-25T125359Z",
-  "charlotte": "2026-11-25T125359Z",
-  "citrus": "2026-11-25T125359Z",
-  "clay": "2026-11-25T125359Z",
-  "duval": "2026-11-25T125359Z",
-  "escambia": "2026-11-25T125359Z",
-  "flagler": "2026-11-25T125359Z",
-  "gilchrist": "2026-11-25T125359Z",
-  "hendry": "2026-11-25T125359Z",
-  "hernando": "2026-11-25T125359Z",
-  "highlands": "2026-11-25T125359Z",
-  "hillsborough": "2026-11-25T125359Z",
-  "indianriver": "2026-11-25T125359Z",
-  "jackson": "2026-11-25T125359Z",
-  "lake": "2026-11-25T125359Z",
-  "lee": "2026-11-25T125359Z",
-  "levy": "2026-11-25T125359Z",
-  "manatee": "2026-11-25T125359Z",
-  "marion": "2026-11-25T125359Z",
-  "martin": "2026-11-25T125359Z",
-  "miamidade": "2026-11-25T125359Z",
-  "nassau": "2026-11-25T125359Z",
-  "okaloosa": "2026-11-25T125359Z",
-  "orange": "2026-11-25T125359Z",
-  "osceola": "2026-11-25T125359Z",
-  "palmbeach": "2026-11-25T125359Z",
-  "pasco": "2026-11-25T125359Z",
-  "pinellas": "2026-11-25T125359Z",
-  "polk": "2026-11-25T125359Z",
-  "putnam": "2026-11-25T125359Z",
-  "santarosa": "2026-11-25T125359Z",
-  "seminole": "2026-11-25T125359Z",
-  "stjohns": "2026-11-25T125359Z",
-  "stlucie": "2026-11-25T125359Z",
-  "sumter": "2026-11-25T125359Z",
-  "volusia": "2026-11-25T125359Z",
-  "walton": "2026-11-25T125359Z",
-  "washington": "2026-11-25T125359Z",
+  "alachua": "2026-11-26T123237Z",
+  "baker": "2026-11-26T123237Z",
+  "bay": "2026-11-26T123237Z",
+  "brevard": "2026-11-26T123237Z",
+  "broward": "2026-11-26T123237Z",
+  "charlotte": "2026-11-26T123237Z",
+  "citrus": "2026-11-26T123237Z",
+  "clay": "2026-11-26T123237Z",
+  "duval": "2026-11-26T123237Z",
+  "escambia": "2026-11-26T123237Z",
+  "flagler": "2026-11-26T123237Z",
+  "gilchrist": "2026-11-26T123237Z",
+  "hendry": "2026-11-26T123237Z",
+  "hernando": "2026-11-26T123237Z",
+  "highlands": "2026-11-26T123237Z",
+  "hillsborough": "2026-11-26T123237Z",
+  "indianriver": "2026-11-26T123237Z",
+  "jackson": "2026-11-26T123237Z",
+  "lake": "2026-11-26T123237Z",
+  "lee": "2026-11-26T123237Z",
+  "levy": "2026-11-26T123237Z",
+  "manatee": "2026-11-26T123237Z",
+  "marion": "2026-11-26T123237Z",
+  "martin": "2026-11-26T123237Z",
+  "miamidade": "2026-11-26T123237Z",
+  "nassau": "2026-11-26T123237Z",
+  "okaloosa": "2026-11-26T123237Z",
+  "orange": "2026-11-26T123237Z",
+  "osceola": "2026-11-26T123237Z",
+  "palmbeach": "2026-11-26T123237Z",
+  "pasco": "2026-11-26T123237Z",
+  "pinellas": "2026-11-26T123237Z",
+  "polk": "2026-11-26T123237Z",
+  "putnam": "2026-11-26T123237Z",
+  "santarosa": "2026-11-26T123237Z",
+  "seminole": "2026-11-26T123237Z",
+  "stjohns": "2026-11-26T123237Z",
+  "stlucie": "2026-11-26T123237Z",
+  "sumter": "2026-11-26T123237Z",
+  "volusia": "2026-11-26T123237Z",
+  "walton": "2026-11-26T123237Z",
+  "washington": "2026-11-26T123237Z",
   "columbia": "2026-08-31T154611Z",
   "hardee": "2026-10-28T094008Z",
   "leon": "2026-11-04T105440Z",
@@ -52,9 +52,9 @@
   "okeechobee": "2026-11-19T113901Z"
  },
  "counts": {
-  "total": 2445,
-  "scheduled": 1729,
-  "redeemed": 679,
+  "total": 2494,
+  "scheduled": 1757,
+  "redeemed": 700,
   "past_due": 37,
   "counties": 48,
   "counties_total": 67,
@@ -121,8 +121,8 @@
    },
    "escambia": {
     "total": 160,
-    "scheduled": 47,
-    "redeemed": 113,
+    "scheduled": 44,
+    "redeemed": 116,
     "past_due": 0
    },
    "flagler": {
@@ -157,14 +157,14 @@
    },
    "highlands": {
     "total": 179,
-    "scheduled": 173,
-    "redeemed": 6,
+    "scheduled": 172,
+    "redeemed": 7,
     "past_due": 0
    },
    "hillsborough": {
     "total": 67,
-    "scheduled": 39,
-    "redeemed": 28,
+    "scheduled": 38,
+    "redeemed": 29,
     "past_due": 0
    },
    "indianriver": {
@@ -180,15 +180,15 @@
     "past_due": 0
    },
    "lake": {
-    "total": 44,
-    "scheduled": 29,
+    "total": 72,
+    "scheduled": 57,
     "redeemed": 15,
     "past_due": 0
    },
    "lee": {
-    "total": 304,
-    "scheduled": 173,
-    "redeemed": 131,
+    "total": 324,
+    "scheduled": 187,
+    "redeemed": 137,
     "past_due": 0
    },
    "leon": {
@@ -199,20 +199,20 @@
    },
    "levy": {
     "total": 17,
-    "scheduled": 12,
-    "redeemed": 5,
+    "scheduled": 11,
+    "redeemed": 6,
     "past_due": 0
    },
    "manatee": {
     "total": 45,
-    "scheduled": 19,
-    "redeemed": 26,
+    "scheduled": 18,
+    "redeemed": 27,
     "past_due": 0
    },
    "marion": {
     "total": 138,
-    "scheduled": 135,
-    "redeemed": 3,
+    "scheduled": 133,
+    "redeemed": 5,
     "past_due": 0
    },
    "martin": {
@@ -234,8 +234,8 @@
     "past_due": 0
    },
    "okaloosa": {
-    "total": 3,
-    "scheduled": 3,
+    "total": 4,
+    "scheduled": 4,
     "redeemed": 0,
     "past_due": 0
    },
@@ -247,8 +247,8 @@
    },
    "orange": {
     "total": 109,
-    "scheduled": 55,
-    "redeemed": 54,
+    "scheduled": 54,
+    "redeemed": 55,
     "past_due": 0
    },
    "osceola": {
@@ -259,14 +259,14 @@
    },
    "palmbeach": {
     "total": 178,
-    "scheduled": 98,
-    "redeemed": 80,
+    "scheduled": 97,
+    "redeemed": 81,
     "past_due": 0
    },
    "pasco": {
     "total": 40,
-    "scheduled": 36,
-    "redeemed": 4,
+    "scheduled": 33,
+    "redeemed": 7,
     "past_due": 0
    },
    "pinellas": {
@@ -283,8 +283,8 @@
    },
    "putnam": {
     "total": 124,
-    "scheduled": 121,
-    "redeemed": 3,
+    "scheduled": 120,
+    "redeemed": 4,
     "past_due": 0
    },
    "santarosa": {
@@ -3581,8 +3581,8 @@
    "acreage": "",
    "enriched": false,
    "opening_bid": 3723.03,
-   "assessed_value": 4857.0,
-   "bid_to_value_pct": 77,
+   "assessed_value": 5343.0,
+   "bid_to_value_pct": 70,
    "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.bay.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530338&bypassPage=1",
@@ -5500,7 +5500,7 @@
   {
    "county": "lee",
    "sale_date": "12/01/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "14-43-25-00-00008.0400",
    "case_number": "2026000694",
    "certificate_number": "24-09768",
@@ -5513,8 +5513,10 @@
    "opening_bid": 7284.32,
    "assessed_value": 79366.0,
    "bid_to_value_pct": 9,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1522037&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=14-43-25-00-00008.0400",
    "lat": 26.732173,
@@ -9402,7 +9404,7 @@
   {
    "county": "escambia",
    "sale_date": "12/02/2026",
-   "sale_time": "10:00 AM",
+   "sale_time": "",
    "parcel_id": "111S313101000011",
    "case_number": "2024 TD 004058",
    "certificate_number": "04058",
@@ -9415,8 +9417,10 @@
    "opening_bid": 73426.67,
    "assessed_value": 130264.0,
    "bid_to_value_pct": 56,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.escambia.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1502337&bypassPage=1",
    "appraiser_url": "http://www.escpa.org/cama/Detail_a.aspx?s=111S313101000011",
    "lat": 30.525723,
@@ -9556,7 +9560,7 @@
   {
    "county": "escambia",
    "sale_date": "12/02/2026",
-   "sale_time": "10:00 AM",
+   "sale_time": "",
    "parcel_id": "161S302350022003",
    "case_number": "2024 TD 000715",
    "certificate_number": "00715",
@@ -9569,8 +9573,10 @@
    "opening_bid": 12533.07,
    "assessed_value": 211623.0,
    "bid_to_value_pct": 6,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.escambia.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1502317&bypassPage=1",
    "appraiser_url": "http://www.escpa.org/cama/Detail_a.aspx?s=161S302350022003",
    "lat": 30.527633,
@@ -10887,7 +10893,7 @@
   {
    "county": "highlands",
    "sale_date": "12/02/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "C-22-37-30-050-0530-0030",
    "case_number": "25000995",
    "certificate_number": "2023-9086",
@@ -10901,9 +10907,10 @@
    "assessed_value": 1464.0,
    "bid_to_value_pct": 120,
    "anomalies": [
-    "opening bid exceeds assessed value"
+    "opening bid exceeds assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.highlands.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1524787&bypassPage=1",
    "appraiser_url": "https://www.hcpao.org/Search/Parcel/30372205005300030C",
    "lat": null,
@@ -12743,7 +12750,7 @@
   {
    "county": "putnam",
    "sale_date": "12/02/2026",
-   "sale_time": "09:00 AM ET",
+   "sale_time": "",
    "parcel_id": "13-09-26-5965-0000-0130",
    "case_number": "2023-0010021",
    "certificate_number": "2023-0010021",
@@ -12757,9 +12764,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.putnam.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528129&bypassPage=1",
    "appraiser_url": "https://apps.putnam-fl.com/pa/property/?type=api&parcel=13-09-26-5965-0000-0130",
    "lat": 29.718076,
@@ -13294,7 +13302,7 @@
    "certificate_number": "2024-0015886",
    "owner_name": "EITMAN TAYLOR + DAVID SANTIAGO",
    "mailing_address": "PO BOX 18968 MEMPHIS TN 38181",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.43",
    "enriched": true,
@@ -13483,7 +13491,7 @@
    "certificate_number": "2024-0017146",
    "owner_name": "MILLER TWILA CONWAY HEIRS OF",
    "mailing_address": "PO BOX 1413 PALATKA FL 32178-1413",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.09",
    "enriched": true,
@@ -14932,7 +14940,7 @@
   {
    "county": "pasco",
    "sale_date": "12/03/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "08-26-16-0550-00000-2050",
    "case_number": "512026XX000232TDAXXX",
    "certificate_number": "2208397",
@@ -14945,8 +14953,10 @@
    "opening_bid": 12565.56,
    "assessed_value": 60918.0,
    "bid_to_value_pct": 21,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.pasco.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1526195&bypassPage=1",
    "appraiser_url": "http://search.pascopa.com/parcel.aspx?parcel=1626080550000002050",
    "lat": null,
@@ -15198,7 +15208,7 @@
   {
    "county": "pasco",
    "sale_date": "12/03/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "17-26-16-0250-00000-0410",
    "case_number": "512026XX000252TDAXXX",
    "certificate_number": "2208680",
@@ -15211,8 +15221,10 @@
    "opening_bid": 11779.94,
    "assessed_value": 65700.0,
    "bid_to_value_pct": 18,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.pasco.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1526207&bypassPage=1",
    "appraiser_url": "http://search.pascopa.com/parcel.aspx?parcel=1626170250000000410",
    "lat": null,
@@ -15464,7 +15476,7 @@
   {
    "county": "pasco",
    "sale_date": "12/03/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "24-24-16-0040-00000-0080",
    "case_number": "512026XX000209TDAXXX",
    "certificate_number": "2205875",
@@ -15477,8 +15489,10 @@
    "opening_bid": 3938.31,
    "assessed_value": 19079.0,
    "bid_to_value_pct": 21,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.pasco.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1526180&bypassPage=1",
    "appraiser_url": "http://search.pascopa.com/parcel.aspx?parcel=1624240040000000080",
    "lat": null,
@@ -15791,8 +15805,8 @@
    "acreage": "",
    "enriched": false,
    "opening_bid": 17341.02,
-   "assessed_value": 196973.0,
-   "bid_to_value_pct": 9,
+   "assessed_value": 211224.0,
+   "bid_to_value_pct": 8,
    "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.seminole.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1523051&bypassPage=1",
@@ -16073,8 +16087,8 @@
    "acreage": "",
    "enriched": false,
    "opening_bid": 3094.32,
-   "assessed_value": 17025.0,
-   "bid_to_value_pct": 18,
+   "assessed_value": 18728.0,
+   "bid_to_value_pct": 17,
    "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.seminole.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1523054&bypassPage=1",
@@ -16672,7 +16686,7 @@
   {
    "county": "manatee",
    "sale_date": "12/07/2026",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "6464600003",
    "case_number": "2026TD000239",
    "certificate_number": "2024-5228",
@@ -16685,8 +16699,10 @@
    "opening_bid": 17846.66,
    "assessed_value": 208910.0,
    "bid_to_value_pct": 9,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.manatee.realforeclose.com/index.cfm?zaction=auction&zmethod=details&AID=1513408&bypassPage=1",
    "appraiser_url": "https://www.manateepao.com/parcel/?parid=6464600003",
    "lat": 27.426092,
@@ -20093,6 +20109,32 @@
    "county": "okaloosa",
    "sale_date": "12/08/2026",
    "sale_time": "02:00 PM CT",
+   "parcel_id": "102N25000000060440",
+   "case_number": "",
+   "certificate_number": "",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "FLEET WING RD, HOLT, FL 32564",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 3250.0,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.bid4assets.com/auction/1329427",
+   "appraiser_url": "",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "okaloosa",
+   "sale_date": "12/08/2026",
+   "sale_time": "02:00 PM CT",
    "parcel_id": "263N24097000001230",
    "case_number": "",
    "certificate_number": "",
@@ -22779,7 +22821,7 @@
   {
    "county": "marion",
    "sale_date": "12/09/2026",
-   "sale_time": "09:00 AM ET",
+   "sale_time": "",
    "parcel_id": "1753-032-001",
    "case_number": "62952019",
    "certificate_number": "62952019",
@@ -22792,8 +22834,10 @@
    "opening_bid": 5935.38,
    "assessed_value": 10307.0,
    "bid_to_value_pct": 58,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525937&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=354970&YR=2026&mName=False&mSitus=False",
    "lat": null,
@@ -22865,7 +22909,7 @@
   {
    "county": "marion",
    "sale_date": "12/09/2026",
-   "sale_time": "09:00 AM ET",
+   "sale_time": "",
    "parcel_id": "1802-016-010",
    "case_number": "70232015",
    "certificate_number": "70232015",
@@ -22879,9 +22923,10 @@
    "assessed_value": 7528.0,
    "bid_to_value_pct": 101,
    "anomalies": [
-    "opening bid exceeds assessed value"
+    "opening bid exceeds assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.marion.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1525942&bypassPage=1",
    "appraiser_url": "http://www.pa.marion.fl.us/PRC.aspx?key=379336&YR=2026&mName=False&mSitus=False",
    "lat": null,
@@ -23819,7 +23864,7 @@
    "property_use": "",
    "acreage": "",
    "enriched": true,
-   "opening_bid": 4603.13,
+   "opening_bid": 4614.81,
    "assessed_value": 5610.0,
    "bid_to_value_pct": 82,
    "anomalies": [],
@@ -25375,23 +25420,21 @@
    "certificate_number": "24-660",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "1144 HULL ST, LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 57600.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531101&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.744851,
+   "lng": -81.444152,
    "parcel_geometry": ""
   },
   {
@@ -25403,23 +25446,21 @@
    "certificate_number": "24-1587",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "5980 SPENCER RD, LB RANCHETTES, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 309440.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531099&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.675633,
+   "lng": -81.434843,
    "parcel_geometry": ""
   },
   {
@@ -25431,23 +25472,21 @@
    "certificate_number": "24-1598",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "757 A RD, LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 1460263.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531100&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.707201,
+   "lng": -81.425641,
    "parcel_geometry": ""
   },
   {
@@ -25459,17 +25498,15 @@
    "certificate_number": "24-1669",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "5319 S SR 29, LB RANCHETTES, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 113438.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531103&bypassPage=1",
@@ -25487,23 +25524,21 @@
    "certificate_number": "23-1334",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "255 S QUEBRADA ST, MONTURA RANCHES, FL- 33440",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 38750.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531098&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.630815,
+   "lng": -81.095261,
    "parcel_geometry": ""
   },
   {
@@ -25515,23 +25550,21 @@
    "certificate_number": "24-853",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "1207 LOUISIANA AVE, HARLEM, FL- 33440",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 124762.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531102&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.734898,
+   "lng": -80.956181,
    "parcel_geometry": ""
   },
   {
@@ -25543,23 +25576,21 @@
    "certificate_number": "24-2710",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "889 EDISON AVE, LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 264563.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531104&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.750613,
+   "lng": -81.452313,
    "parcel_geometry": ""
   },
   {
@@ -25571,23 +25602,21 @@
    "certificate_number": "24-2713",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "810 DR M L KING JR BLVD, LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 104962.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531105&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.748547,
+   "lng": -81.450319,
    "parcel_geometry": ""
   },
   {
@@ -25599,23 +25628,21 @@
    "certificate_number": "24-2831",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "130 W CRESCENT DR, CLEWISTON, FL- 33440",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 97783.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531106&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.758546,
+   "lng": -80.933015,
    "parcel_geometry": ""
   },
   {
@@ -25627,23 +25654,21 @@
    "certificate_number": "24-3258",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "4005 BEAUMONT LN, PORT LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 191729.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531107&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.7564,
+   "lng": -81.404829,
    "parcel_geometry": ""
   },
   {
@@ -25655,23 +25680,21 @@
    "certificate_number": "24-3286",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "3165 DELLWOOD TER, PORT LABELLE, FL- 33935",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 0.0,
-   "assessed_value": null,
+   "assessed_value": 470845.0,
    "bid_to_value_pct": null,
    "anomalies": [
-    "opening bid <= 0",
-    "missing assessed value",
-    "missing property address"
+    "opening bid <= 0"
    ],
    "status": "Scheduled",
    "auction_url": "https://www.hendry.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531108&bypassPage=1",
    "appraiser_url": "https://beacon.schneidercorp.com/Application.aspx?AppID=1105&LayerID=27399&PageTypeID=2&PageID=11144",
-   "lat": null,
-   "lng": null,
+   "lat": 26.754449,
+   "lng": -81.386695,
    "parcel_geometry": ""
   },
   {
@@ -27070,9 +27093,10 @@
    "bid_to_value_pct": null,
    "anomalies": [
     "missing assessed value",
+    "status: REDEEMED",
     "missing property address"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://online.levyclerk.com/TaxSmartWeb",
    "appraiser_url": "",
    "lat": null,
@@ -28758,17 +28782,14 @@
    "certificate_number": "23312022",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "CANOE CREEK RD, SAINT CLOUD, FL- 34772",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 1423.88,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 3600.0,
+   "bid_to_value_pct": 40,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530127&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=122730495000010061",
@@ -29027,22 +29048,19 @@
    "certificate_number": "56742019",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "3651 ALLEGRA CIR, SAINT CLOUD, FL- 34772",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 12163.64,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 14100.0,
+   "bid_to_value_pct": 86,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528396&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010120",
-   "lat": null,
-   "lng": null,
+   "lat": 28.192598,
+   "lng": -81.291037,
    "parcel_geometry": ""
   },
   {
@@ -29054,22 +29072,19 @@
    "certificate_number": "56752019",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "3647 ALLEGRA CIR, SAINT CLOUD, FL- 34772",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 12137.34,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 14100.0,
+   "bid_to_value_pct": 86,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528397&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300010140",
-   "lat": null,
-   "lng": null,
+   "lat": 28.192524,
+   "lng": -81.29113,
    "parcel_geometry": ""
   },
   {
@@ -29081,22 +29096,19 @@
    "certificate_number": "58352019",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "1939 PORTOFINO VISTA BLVD, SAINT CLOUD, FL- 34772",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 12160.2,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 14100.0,
+   "bid_to_value_pct": 86,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528398&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012430",
-   "lat": null,
-   "lng": null,
+   "lat": 28.193274,
+   "lng": -81.292307,
    "parcel_geometry": ""
   },
   {
@@ -29108,22 +29120,19 @@
    "certificate_number": "58372019",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "1935 PORTOFINO VISTA BLVD, SAINT CLOUD, FL- 34772",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 12152.23,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 14100.0,
+   "bid_to_value_pct": 86,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528399&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=262630061300012450",
-   "lat": null,
-   "lng": null,
+   "lat": 28.193326,
+   "lng": -81.29223,
    "parcel_geometry": ""
   },
   {
@@ -29159,17 +29168,14 @@
    "certificate_number": "54802024",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "HOLOPAW GROVES RD, SAINT CLOUD, FL- 34771",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 1222.41,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 1800.0,
+   "bid_to_value_pct": 68,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528394&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260003242002G",
@@ -29186,17 +29192,14 @@
    "certificate_number": "55012024",
    "owner_name": "",
    "mailing_address": "",
-   "property_address": "",
+   "property_address": "HOLOPAW GROVES RD, SAINT CLOUD, FL- 34771",
    "property_use": "",
    "acreage": "",
    "enriched": false,
    "opening_bid": 1217.64,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value",
-    "missing property address"
-   ],
+   "assessed_value": 1800.0,
+   "bid_to_value_pct": 68,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.osceola.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528395&bypassPage=1",
    "appraiser_url": "http://ira.property-appraiser.org/PropertySearch/Default.aspx?PIN=30273260004442001G",
@@ -31438,13 +31441,13 @@
    "certificate_number": "24-3767",
    "owner_name": "Address Search",
    "mailing_address": "13314 E SHAWNEE TR",
-   "property_address": "13314 E SHAWNEE TRL",
+   "property_address": "13314 E SHAWNEE TRL, INVERNESS, 34450",
    "property_use": "Type",
    "acreage": "",
    "enriched": true,
    "opening_bid": 30252.12,
-   "assessed_value": 52789.0,
-   "bid_to_value_pct": 57,
+   "assessed_value": 54214.0,
+   "bid_to_value_pct": 56,
    "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.citrus.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529081&bypassPage=1",
@@ -36438,7 +36441,7 @@
    "certificate_number": "2024-0000749",
    "owner_name": "MBM LAND LLC",
    "mailing_address": "C/O DANA BROWN MGR 9035 107TH AVE VERO BEACH FL 32967",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.22",
    "enriched": true,
@@ -36465,7 +36468,7 @@
    "certificate_number": "2024-0002907",
    "owner_name": "NORTHERN FINANCIAL HOME MORTGAGE CORP",
    "mailing_address": "PO BOX 1461 BUZZARDS BAY MA 02532",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.1",
    "enriched": true,
@@ -36492,7 +36495,7 @@
    "certificate_number": "2024-0003327",
    "owner_name": "MOKIT MA",
    "mailing_address": "ROOM NO: 103 BLDING NO: 2372 MUWAILEH SHARJAH PO BOX 32640 SHARJAH UAE",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.1",
    "enriched": true,
@@ -36519,7 +36522,7 @@
    "certificate_number": "2020-0004315",
    "owner_name": "THANKI AMRATIAL VASHRAM",
    "mailing_address": "PO BOX 7996 DUBAI U A E",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.11",
    "enriched": true,
@@ -36546,7 +36549,7 @@
    "certificate_number": "2022-0004169",
    "owner_name": "THANKI AMRATIAL VASHRAM",
    "mailing_address": "PO BOX 7996 DUBAI U A E",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.11",
    "enriched": true,
@@ -36573,7 +36576,7 @@
    "certificate_number": "2020-0004324",
    "owner_name": "THANKI AMRATIAL VASHRAM",
    "mailing_address": "PO BOX 7996 DUBAI U A E",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.11",
    "enriched": true,
@@ -36600,7 +36603,7 @@
    "certificate_number": "2024-0004088",
    "owner_name": "TURNER CHARLES J HEIRS OF",
    "mailing_address": "C/O SAMMIE D TURNER 1810 LULLWATER RD ALBANY GA 31707-3147",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.22",
    "enriched": true,
@@ -36627,7 +36630,7 @@
    "certificate_number": "2024-0004126",
    "owner_name": "LIEB JOSEPH",
    "mailing_address": "394 S LIBERTY ST HAMMONTON NJ 08037",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.34",
    "enriched": true,
@@ -36654,7 +36657,7 @@
    "certificate_number": "2024-0004514",
    "owner_name": "ST LOUIS ERONNE",
    "mailing_address": "186 E RAMPO RD GARNERVILLE NY 10923",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.31",
    "enriched": true,
@@ -36762,7 +36765,7 @@
    "certificate_number": "2020-0007775",
    "owner_name": "NOVOTNY RUDOLPH HEIRS OF",
    "mailing_address": "C/O MARY N DANIELS 8469 HWY 581 RIVER KY 41254",
-   "property_address": "00 Unassigned Location RE",
+   "property_address": "00 UNASSIGNED LOCATION RE",
    "property_use": "00000 - Vacant",
    "acreage": "0.06",
    "enriched": true,
@@ -44224,7 +44227,7 @@
   {
    "county": "lee",
    "sale_date": "01/05/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "26-45-27-L4-09026.0290",
    "case_number": "2026000978",
    "certificate_number": "24-24877",
@@ -44238,9 +44241,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528650&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-45-27-L4-09026.0290",
    "lat": 26.53165,
@@ -44250,7 +44254,7 @@
   {
    "county": "lee",
    "sale_date": "01/05/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "26-45-27-L4-10033.0030",
    "case_number": "2026000979",
    "certificate_number": "24-24894",
@@ -44264,9 +44268,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1528651&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=26-45-27-L4-10033.0030",
    "lat": 26.533286,
@@ -46311,7 +46316,7 @@
   {
    "county": "escambia",
    "sale_date": "01/06/2027",
-   "sale_time": "10:00 AM",
+   "sale_time": "",
    "parcel_id": "152S301000016023",
    "case_number": "2024 TD 002561",
    "certificate_number": "02561",
@@ -46324,8 +46329,10 @@
    "opening_bid": 2297.44,
    "assessed_value": 122609.0,
    "bid_to_value_pct": 2,
-   "anomalies": [],
-   "status": "Scheduled",
+   "anomalies": [
+    "status: Redeemed"
+   ],
+   "status": "Redeemed",
    "auction_url": "https://www.escambia.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1503331&bypassPage=1",
    "appraiser_url": "http://www.escpa.org/cama/Detail_a.aspx?s=152S301000016023",
    "lat": null,
@@ -49550,7 +49557,7 @@
   {
    "county": "orange",
    "sale_date": "01/07/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "162330819815080",
    "case_number": "2024-16409",
    "certificate_number": "",
@@ -49565,9 +49572,10 @@
    "bid_to_value_pct": null,
    "anomalies": [
     "missing assessed value",
+    "status: Redeemed",
     "missing property address"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.orange.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530320&bypassPage=1",
    "appraiser_url": "https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/162330819815080",
    "lat": null,
@@ -51178,6 +51186,958 @@
    "parcel_geometry": ""
   },
   {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "01-22-24-250003700000",
+   "case_number": "01248-2024",
+   "certificate_number": "01248-2024",
+   "owner_name": "",
+   "mailing_address": "11263 SW 9TH CT PEMBROKE PINES, FL 33025 Update Mailing Address",
+   "property_address": "SHADY LN, GROVELAND, FL- 34736",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 14228.64,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531294&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=01-22-24-250003700000",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91610",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91610"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "02-22-24-000200000500",
+   "case_number": "01299-2024",
+   "certificate_number": "01299-2024",
+   "owner_name": "",
+   "mailing_address": "17630 COUNTY ROAD 33 GROVELAND, FL 34736 Update Mailing Address",
+   "property_address": "17630 COUNTY ROAD 33, GROVELAND, FL- 34736",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 10021.81,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531295&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=02-22-24-000200000500",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91526",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91526"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "05-24-25-010000000300",
+   "case_number": "02323-2024",
+   "certificate_number": "02323-2024",
+   "owner_name": "",
+   "mailing_address": "122 E LAKE AVE LONGWOOD, FL 32750 Update Mailing Address",
+   "property_address": "5529 STATE ROAD 33, CLERMONT, FL- 34714",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 17348.76,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531301&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=05-24-25-010000000300",
+   "lat": 28.427813,
+   "lng": -81.832449,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91612",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91612"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "08-18-27-010006801100",
+   "case_number": "03933-2024",
+   "certificate_number": "03933-2024",
+   "owner_name": "",
+   "mailing_address": "122 E LAKE AVE LONGWOOD, FL 32750 Update Mailing Address",
+   "property_address": "40542 W THIRD AVE, UMATILLA, FL- 32784",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 12890.8,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531313&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=08-18-27-010006801100",
+   "lat": 28.939255,
+   "lng": -81.637058,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91613",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91613"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "09-18-29-000300003600",
+   "case_number": "05418-2021",
+   "certificate_number": "05418-2021",
+   "owner_name": "",
+   "mailing_address": "40130 SWIFT RD EUSTIS, FL 32736-9560 Update Mailing Address",
+   "property_address": "40130 SWIFT RD, EUSTIS, FL- 32736",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 20951.72,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531319&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=09-18-29-000300003600",
+   "lat": 28.932176,
+   "lng": -81.418738,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/69502",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/69502"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "11-19-26-010004301400",
+   "case_number": "02670-2024",
+   "certificate_number": "02670-2024",
+   "owner_name": "",
+   "mailing_address": "110 DANVERS ST EUSTIS, FL 32726 Update Mailing Address",
+   "property_address": "110 DANVERS ST, EUSTIS, FL- 32726",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 38836.46,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531304&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=11-19-26-010004301400",
+   "lat": 28.853873,
+   "lng": -81.675361,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91865",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91865"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "11-22-26-040000030100",
+   "case_number": "03261-2024",
+   "certificate_number": "03261-2024",
+   "owner_name": "",
+   "mailing_address": "16300 COUNTY ROAD 455 UNIT 301 MONTVERDE, FL 34756 Update Mailing Address",
+   "property_address": "16300 COUNTY ROAD 455 # UNIT 3, MONTVERDE, FL- 34756",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 215820.28,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531311&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=11-22-26-040000030100",
+   "lat": 28.582042,
+   "lng": -81.67585,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91530",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91530"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "11-24-24-000100008700",
+   "case_number": "01653-2020",
+   "certificate_number": "01653-2020",
+   "owner_name": "",
+   "mailing_address": "3497 MCWILLIAMS RD MURRYSVILLE, PA 15668-1716 Update Mailing Address",
+   "property_address": "S FORK RANCH DR, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 1306.52,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531296&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=11-24-24-000100008700",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91524",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91524"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "12-18-26-060000500500",
+   "case_number": "02383-2024",
+   "certificate_number": "02383-2024",
+   "owner_name": "",
+   "mailing_address": "753 WINOGENE AVE UMATILLA, FL 32784 Update Mailing Address",
+   "property_address": "753 WINOGENE AVE, UMATILLA, FL- 32784",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 19996.14,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531302&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-18-26-060000500500",
+   "lat": 28.937544,
+   "lng": -81.669428,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91531",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91531"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "12-19-26-125000005700",
+   "case_number": "02728-2024",
+   "certificate_number": "02728-2024",
+   "owner_name": "",
+   "mailing_address": "933 MARIETTA LN EUSTIS, FL 32726 Update Mailing Address",
+   "property_address": "933 MARIETTA LN, EUSTIS, FL- 32726",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 114146.54,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531305&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=12-19-26-125000005700",
+   "lat": 28.845331,
+   "lng": -81.660771,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91527",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91527"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "13-18-26-080000000600",
+   "case_number": "02396-2024",
+   "certificate_number": "02396-2024",
+   "owner_name": "",
+   "mailing_address": "20 DAVIS AVE UMATILLA, FL 32784 Update Mailing Address",
+   "property_address": "20 DAVIS AVE, UMATILLA, FL- 32784",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 78719.75,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531303&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=13-18-26-080000000600",
+   "lat": 28.927314,
+   "lng": -81.671067,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91528",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91528"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "13-23-25-190500006700",
+   "case_number": "02280-2024",
+   "certificate_number": "02280-2024",
+   "owner_name": "",
+   "mailing_address": "PO BOX 311104 TAMPA, FL 33608-1104 Update Mailing Address",
+   "property_address": "9437 MEADOW CREST LN, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 29817.27,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531300&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=13-23-25-190500006700",
+   "lat": 28.483984,
+   "lng": -81.761541,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91529",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91529"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "16-19-27-000400000800",
+   "case_number": "04066-2024",
+   "certificate_number": "04066-2024",
+   "owner_name": "",
+   "mailing_address": "420 LEXINGTON AVE STE 2035 NEW YORK, NY 10170 Update Mailing Address",
+   "property_address": "KYLEJEN LN, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 26985.35,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531314&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=16-19-27-000400000800",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91533",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91533"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "21-19-28-000200000300",
+   "case_number": "04794-2024",
+   "certificate_number": "04794-2024",
+   "owner_name": "",
+   "mailing_address": "2549 ROUTE 22 DOVER PLAINS, NY 12522 Update Mailing Address",
+   "property_address": "ESTATES RIDGE DR, SORRENTO, FL- 32776",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 92192.76,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531318&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=21-19-28-000200000300",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91616",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91616"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "22-19-24-020000A00900",
+   "case_number": "00681-2024",
+   "certificate_number": "00681-2024",
+   "owner_name": "",
+   "mailing_address": "2338 OLIVET AVE LEESBURG, FL 34748 Update Mailing Address",
+   "property_address": "2338 OLIVET AVE, LEESBURG, FL- 34748",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7816.59,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531292&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=22-19-24-020000A00900",
+   "lat": 28.826939,
+   "lng": -81.901478,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91611",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91611"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "22-19-24-080000I00101",
+   "case_number": "00701-2024",
+   "certificate_number": "00701-2024",
+   "owner_name": "",
+   "mailing_address": "1004 NEBRASKA ST LEESBURG, FL 34748 Update Mailing Address",
+   "property_address": "1023 NEBRASKA ST, LEESBURG, FL- 34748",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 7481.75,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531293&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=22-19-24-080000I00101",
+   "lat": 28.823801,
+   "lng": -81.899476,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91608",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91608"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "25-24-26-191000012500",
+   "case_number": "03618-2024",
+   "certificate_number": "03618-2024",
+   "owner_name": "",
+   "mailing_address": "95 MORTIMER STREET SUITE 333 LONDON LONDON W1W 7GB Update Mailing Address",
+   "property_address": "17436 PLACIDITY AVE, CLERMONT, FL- 34714",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 21363.14,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531312&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=25-24-26-191000012500",
+   "lat": 28.369715,
+   "lng": -81.667405,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91607",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91607"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "26-19-26-060000A00100",
+   "case_number": "02878-2024",
+   "certificate_number": "02878-2024",
+   "owner_name": "",
+   "mailing_address": "6137 ROUND LAKE RD APOPKA, FL 32712 Update Mailing Address",
+   "property_address": "1595 TRIANGLE DR, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 16283.24,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531306&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=26-19-26-060000A00100",
+   "lat": 28.811709,
+   "lng": -81.684397,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91872",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91872"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "26-19-26-060000A00101",
+   "case_number": "02879-2024",
+   "certificate_number": "02879-2024",
+   "owner_name": "",
+   "mailing_address": "6137 ROUND LAKE RD APOPKA, FL 32712 Update Mailing Address",
+   "property_address": "4001 N HIGHWAY 19A, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 24617.41,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531307&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=26-19-26-060000A00101",
+   "lat": 28.812414,
+   "lng": -81.684365,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91870",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91870"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "27-19-26-040000001100",
+   "case_number": "02904-2024",
+   "certificate_number": "02904-2024",
+   "owner_name": "",
+   "mailing_address": "31304 SAUNDERS DR TAVARES, FL 32778 Update Mailing Address",
+   "property_address": "31304 SAUNDERS DR, TAVARES, FL- 32778",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 163158.5,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531308&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=27-19-26-040000001100",
+   "lat": 28.804889,
+   "lng": -81.696678,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91873",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91873"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "29-19-27-240000B00100",
+   "case_number": "04241-2024",
+   "certificate_number": "04241-2024",
+   "owner_name": "",
+   "mailing_address": "1465 N HIGHLAND ST MOUNT DORA, FL 32757 Update Mailing Address",
+   "property_address": "1465 N HIGHLAND ST, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 10718.26,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531315&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=29-19-27-240000B00100",
+   "lat": 28.809373,
+   "lng": -81.636572,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91866",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91866"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "31-19-26-022500004600",
+   "case_number": "02981-2024",
+   "certificate_number": "02981-2024",
+   "owner_name": "",
+   "mailing_address": "30015 TAVARES RIDGE BLVD TAVARES, FL 32778 Update Mailing Address",
+   "property_address": "30015 TAVARES RIDGE BLVD, TAVARES, FL- 32778",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 21439.19,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531309&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=31-19-26-022500004600",
+   "lat": 28.786169,
+   "lng": -81.748986,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91864",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91864"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "32-19-27-180000A01500",
+   "case_number": "04270-2024",
+   "certificate_number": "04270-2024",
+   "owner_name": "",
+   "mailing_address": "280 S SIMPSON ST MOUNT DORA, FL 32757 Update Mailing Address",
+   "property_address": "280 S SIMPSON ST, MOUNT DORA, FL- 32757",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 15959.98,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531316&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=32-19-27-180000A01500",
+   "lat": 28.79525,
+   "lng": -81.634119,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91875",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91875"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "34-21-26-000200002601",
+   "case_number": "03154-2024",
+   "certificate_number": "03154-2024",
+   "owner_name": "",
+   "mailing_address": "15210 FERNDALE RD MINNEOLA, FL 34715 Update Mailing Address",
+   "property_address": "15210 FERNDALE RD, MINNEOLA, FL- 34715",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 148416.27,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531310&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=34-21-26-000200002601",
+   "lat": 28.619211,
+   "lng": -81.702655,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91874",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91874"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "35-22-25-015000000100",
+   "case_number": "02250-2024",
+   "certificate_number": "02250-2024",
+   "owner_name": "",
+   "mailing_address": "856 SONGBIRD DR ORANGE PARK, FL 32065 Update Mailing Address",
+   "property_address": "CYPRESS LANDING AVE, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 11324.59,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531297&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=35-22-25-015000000100",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91868",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91868"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "35-22-25-015000000600",
+   "case_number": "02251-2024",
+   "certificate_number": "02251-2024",
+   "owner_name": "",
+   "mailing_address": "856 SONGBIRD DR ORANGE PARK, FL 32065 Update Mailing Address",
+   "property_address": "CYPRESS LANDING AVE, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 11353.45,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531298&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=35-22-25-015000000600",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91869",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91869"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "35-22-25-015000005800",
+   "case_number": "02252-2024",
+   "certificate_number": "02252-2024",
+   "owner_name": "",
+   "mailing_address": "856 SONG BIRD DR ORANGE PARK, FL 32065 Update Mailing Address",
+   "property_address": "CYPRESS LANDING AVE, CLERMONT, FL- 34711",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 11324.59,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531299&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=35-22-25-015000005800",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91867",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91867"
+    }
+   ]
+  },
+  {
+   "county": "lake",
+   "sale_date": "01/12/2027",
+   "sale_time": "11:15 AM ET",
+   "parcel_id": "36-17-28-010014200100",
+   "case_number": "04691-2024",
+   "certificate_number": "04691-2024",
+   "owner_name": "",
+   "mailing_address": "3729 CONNOR AVE SAINT LOUIS, MO 63121 Update Mailing Address",
+   "property_address": "TAMARAC ST, EUSTIS, FL- 32726",
+   "property_use": "Frontage",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 2587.64,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lake.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531317&bypassPage=1",
+   "appraiser_url": "https://lakecopropappr.com/property-details.aspx?ParcelID=36-17-28-010014200100",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": "",
+   "clerk_case_url": "http://lake.realtdm.com/public/cases/getCase/caseid/91525",
+   "case_docs": [
+    {
+     "name": "Tax deed record (clerk)",
+     "date": "",
+     "url": "http://lake.realtdm.com/public/cases/getCase/caseid/91525"
+    }
+   ]
+  },
+  {
    "county": "lee",
    "sale_date": "01/12/2027",
    "sale_time": "10:00 AM ET",
@@ -51968,7 +52928,7 @@
   {
    "county": "lee",
    "sale_date": "01/12/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "04-44-24-C4-01816.0106",
    "case_number": "2026001137",
    "certificate_number": "24-06756",
@@ -51982,9 +52942,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529338&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=04-44-24-C4-01816.0106",
    "lat": 26.669362,
@@ -52358,7 +53319,7 @@
   {
    "county": "lee",
    "sale_date": "01/12/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "16-47-25-B2-00200.0180",
    "case_number": "2026001210",
    "certificate_number": "24-12143",
@@ -52372,9 +53333,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529377&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=16-47-25-B2-00200.0180",
    "lat": 26.383817,
@@ -52619,7 +53581,7 @@
   {
    "county": "lee",
    "sale_date": "01/12/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "23-44-27-02-00005.0130",
    "case_number": "2026001176",
    "certificate_number": "24-20333",
@@ -52633,9 +53595,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1529347&bypassPage=1",
    "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=23-44-27-02-00005.0130",
    "lat": 26.62912,
@@ -62926,7 +63889,7 @@
   {
    "county": "palmbeach",
    "sale_date": "01/13/2027",
-   "sale_time": "09:30 AM ET",
+   "sale_time": "",
    "parcel_id": "50-43-44-14-01-003-2030",
    "case_number": "2026-3171TD",
    "certificate_number": "16501-2024",
@@ -62940,9 +63903,10 @@
    "assessed_value": null,
    "bid_to_value_pct": null,
    "anomalies": [
-    "missing assessed value"
+    "missing assessed value",
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.palmbeach.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1526780&bypassPage=1",
    "appraiser_url": "https://pbcpao.gov/Property/Details?parcelId=50-43-44-14-01-003-2030",
    "lat": 26.63712,
@@ -65733,6 +66697,526 @@
    "parcel_geometry": ""
   },
   {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "09-45-21-01-00000.0470",
+   "case_number": "2026001532",
+   "certificate_number": "24-00103",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "11645 FOSTER BAY DR, CAPTIVA, FL- 33924",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 6038.74,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531290&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-45-21-01-00000.0470",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "09-45-25-P3-00200.8503",
+   "case_number": "2026001416",
+   "certificate_number": "24-11293",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "8752 JAVIERA WAY 8503, FORT MYERS, FL- 33912",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 30197.72,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531280&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=09-45-25-P3-00200.8503",
+   "lat": 26.570509,
+   "lng": -81.810258,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "12-45-26-10-00101.0070",
+   "case_number": "2026000605",
+   "certificate_number": "24-16738",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "2603 36TH ST SW, LEHIGH ACRES, FL- 33976",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 6553.98,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531272&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=12-45-26-10-00101.0070",
+   "lat": 26.580357,
+   "lng": -81.667375,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "13-45-27-01-00004.0010",
+   "case_number": "2026001538",
+   "certificate_number": "23-19589",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1106 DEAN ST E, LEHIGH ACRES, FL- 33974",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 2774.83,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531291&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=13-45-27-01-00004.0010",
+   "lat": 26.569231,
+   "lng": -81.579543,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "16-44-27-05-00018.0030",
+   "case_number": "2026001294",
+   "certificate_number": "24-19653",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1318 LINCOLN AVE, LEHIGH ACRES, FL- 33972",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 2748.51,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531273&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=16-44-27-05-00018.0030",
+   "lat": 26.648133,
+   "lng": -81.622666,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "17-44-27-05-00020.0050",
+   "case_number": "2026001296",
+   "certificate_number": "24-19755",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1314 EDISON AVE, LEHIGH ACRES, FL- 33972",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 2704.2,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531274&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-27-05-00020.0050",
+   "lat": 26.647838,
+   "lng": -81.636455,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "17-44-27-10-00045.012A",
+   "case_number": "2026001525",
+   "certificate_number": "21-008924",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "206 W 15TH ST, LEHIGH ACRES, FL- 33972",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 3481.39,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531288&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-27-10-00045.012A",
+   "lat": null,
+   "lng": null,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "17-44-27-11-00043.0180",
+   "case_number": "2026001300",
+   "certificate_number": "24-19808",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1511 EDISON AVE, LEHIGH ACRES, FL- 33972",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 2748.51,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531275&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=17-44-27-11-00043.0180",
+   "lat": 26.654833,
+   "lng": -81.636519,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "19-43-24-C2-05587.0310",
+   "case_number": "2026001307",
+   "certificate_number": "24-05535",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "1149 NE 36TH LN, CAPE CORAL, FL- 33909",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 1770.87,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531276&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=19-43-24-C2-05587.0310",
+   "lat": 26.725251,
+   "lng": -81.948211,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "21-44-27-20-000L0.0010",
+   "case_number": "2026001324",
+   "certificate_number": "24-20248",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1124 EIGHTH AVE, LEHIGH ACRES, FL- 33972",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 2308.28,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531277&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=21-44-27-20-000L0.0010",
+   "lat": 26.640411,
+   "lng": -81.619732,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "22-44-27-11-00037.0140",
+   "case_number": "2026001415",
+   "certificate_number": "24-20308",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "1103 MICHAEL AVE, LEHIGH ACRES, FL- 33936",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 76364.31,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531279&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=22-44-27-11-00037.0140",
+   "lat": 26.639848,
+   "lng": -81.602659,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "24-44-23-C3-00973.0180",
+   "case_number": "2026001337",
+   "certificate_number": "24-04005",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "1536 SE 6TH AVE, CAPE CORAL, FL- 33990",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 30760.56,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531278&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=24-44-23-C3-00973.0180",
+   "lat": 26.623666,
+   "lng": -81.96161,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "25-47-25-B1-0180A.0300",
+   "case_number": "2026001435",
+   "certificate_number": "24-12262",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "26270 PRINCE PIERRE WAY, BONITA SPRINGS, FL- 34135",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 20318.25,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531282&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=25-47-25-B1-0180A.0300",
+   "lat": 26.356304,
+   "lng": -81.768147,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "27-45-25-05-00003.0320",
+   "case_number": "2026001436",
+   "certificate_number": "24-11433",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "14093 HICKORY MARSH LN, FORT MYERS, FL- 33912",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 88911.21,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531283&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=27-45-25-05-00003.0320",
+   "lat": 26.536932,
+   "lng": -81.802755,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "28-44-23-C3-04849.0630",
+   "case_number": "2026001530",
+   "certificate_number": "24-04118",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "2328 SW 19TH AVE, CAPE CORAL, FL- 33991",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 21201.91,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531289&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=28-44-23-C3-04849.0630",
+   "lat": 26.608431,
+   "lng": -82.013331,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "29-45-25-03-00003.3120",
+   "case_number": "2026001437",
+   "certificate_number": "24-11458",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "14509 AERIES WAY DR 312, FORT MYERS, FL- 33912",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 8934.69,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531284&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=29-45-25-03-00003.3120",
+   "lat": 26.535674,
+   "lng": -81.831356,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "30-43-25-00-00001.0170",
+   "case_number": "2026001438",
+   "certificate_number": "24-09871",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "16251 SLATER RD, NORTH FORT MYERS, FL- 33917",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 45225.54,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531285&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=30-43-25-00-00001.0170",
+   "lat": 26.700634,
+   "lng": -81.852685,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "30-43-26-01-00005.0050",
+   "case_number": "2026001439",
+   "certificate_number": "24-12857",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "12242 FIRST ST, FORT MYERS, FL- 33905",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 123885.16,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531286&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=30-43-26-01-00005.0050",
+   "lat": 26.703638,
+   "lng": -81.754838,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "31-44-27-02-00014.0110",
+   "case_number": "2026001440",
+   "certificate_number": "24-21032",
+   "owner_name": "Owner Of Record [Change Mailing Address] Address History Information Site Address Site Address maintained by E911 Program Addressing NOTE: This Property Description is a condensed version of the origi",
+   "mailing_address": "",
+   "property_address": "1210 CASEDALE ST, LEHIGH ACRES, FL- 33936",
+   "property_use": "",
+   "acreage": "",
+   "enriched": true,
+   "opening_bid": 16707.82,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531287&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=31-44-27-02-00014.0110",
+   "lat": 26.611796,
+   "lng": -81.647666,
+   "parcel_geometry": ""
+  },
+  {
+   "county": "lee",
+   "sale_date": "01/26/2027",
+   "sale_time": "10:00 AM ET",
+   "parcel_id": "32-44-27-07-00041.0030",
+   "case_number": "2026001417",
+   "certificate_number": "24-21091",
+   "owner_name": "",
+   "mailing_address": "",
+   "property_address": "20 KENTUCKY RD, LEHIGH ACRES, FL- 33936",
+   "property_use": "",
+   "acreage": "",
+   "enriched": false,
+   "opening_bid": 53245.3,
+   "assessed_value": null,
+   "bid_to_value_pct": null,
+   "anomalies": [
+    "missing assessed value"
+   ],
+   "status": "Scheduled",
+   "auction_url": "https://www.lee.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1531281&bypassPage=1",
+   "appraiser_url": "http://www.leepa.org/Scripts/PropertyQuery/PropertyQuery.aspx?STRAP=32-44-27-07-00041.0030",
+   "lat": 26.601063,
+   "lng": -81.636875,
+   "parcel_geometry": ""
+  },
+  {
    "county": "nassau",
    "sale_date": "01/26/2027",
    "sale_time": "11:30 AM ET",
@@ -66448,27 +67932,27 @@
   {
    "county": "hillsborough",
    "sale_date": "01/28/2027",
-   "sale_time": "10:00 AM ET",
+   "sale_time": "",
    "parcel_id": "0325990200",
    "case_number": "2027-24",
    "certificate_number": "2024 / 2611",
    "owner_name": "Search Clear",
    "mailing_address": "",
-   "property_address": "2406 METRO DR",
+   "property_address": "2406 METRO DR, RUSKIN, FL- 33570",
    "property_use": "Description",
    "acreage": "",
    "enriched": true,
    "opening_bid": 40894.35,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
+   "assessed_value": 71440.0,
+   "bid_to_value_pct": 57,
    "anomalies": [
-    "missing assessed value"
+    "status: Redeemed"
    ],
-   "status": "Scheduled",
+   "status": "Redeemed",
    "auction_url": "https://www.hillsborough.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530795&bypassPage=1",
    "appraiser_url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0325990200",
-   "lat": null,
-   "lng": null,
+   "lat": 27.684254,
+   "lng": -82.455564,
    "parcel_geometry": ""
   },
   {
@@ -66480,21 +67964,19 @@
    "certificate_number": "2024 / 2933",
    "owner_name": "Search Clear",
    "mailing_address": "",
-   "property_address": "15105 MORNING DR",
+   "property_address": "15105 MORNING DR, LUTZ, FL- 33559",
    "property_use": "Description",
    "acreage": "",
    "enriched": true,
    "opening_bid": 13858.27,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value"
-   ],
+   "assessed_value": 169171.0,
+   "bid_to_value_pct": 8,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.hillsborough.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530796&bypassPage=1",
    "appraiser_url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0346796028",
-   "lat": null,
-   "lng": null,
+   "lat": 28.086394,
+   "lng": -82.418666,
    "parcel_geometry": ""
   },
   {
@@ -66506,21 +67988,19 @@
    "certificate_number": "2024 / 3980",
    "owner_name": "Search Clear",
    "mailing_address": "",
-   "property_address": "11723 PRIMROSE LN",
+   "property_address": "11723 PRIMROSE LN, TEMPLE TERRACE, FL- 33637",
    "property_use": "Description",
    "acreage": "",
    "enriched": true,
    "opening_bid": 19300.95,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value"
-   ],
+   "assessed_value": 354584.0,
+   "bid_to_value_pct": 5,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.hillsborough.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530797&bypassPage=1",
    "appraiser_url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0374655500",
-   "lat": null,
-   "lng": null,
+   "lat": 28.056442,
+   "lng": -82.358513,
    "parcel_geometry": ""
   },
   {
@@ -66532,21 +68012,19 @@
    "certificate_number": "2024 / 9211",
    "owner_name": "Search Clear",
    "mailing_address": "",
-   "property_address": "5047 VARN RD",
+   "property_address": "5047 VARN RD, PLANT CITY, FL- 33565",
    "property_use": "Description",
    "acreage": "",
    "enriched": true,
    "opening_bid": 80292.59,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value"
-   ],
+   "assessed_value": 1390078.0,
+   "bid_to_value_pct": 6,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.hillsborough.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530793&bypassPage=1",
    "appraiser_url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0806000110",
-   "lat": null,
-   "lng": null,
+   "lat": 28.078108,
+   "lng": -82.156714,
    "parcel_geometry": ""
   },
   {
@@ -66558,21 +68036,19 @@
    "certificate_number": "2024 / 9521",
    "owner_name": "Search Clear",
    "mailing_address": "",
-   "property_address": "3852 LINDSEY ST",
+   "property_address": "3852 LINDSEY ST, DOVER, FL- 33527",
    "property_use": "Description",
    "acreage": "",
    "enriched": true,
    "opening_bid": 9202.45,
-   "assessed_value": null,
-   "bid_to_value_pct": null,
-   "anomalies": [
-    "missing assessed value"
-   ],
+   "assessed_value": 101025.0,
+   "bid_to_value_pct": 9,
+   "anomalies": [],
    "status": "Scheduled",
    "auction_url": "https://www.hillsborough.realtaxdeed.com/index.cfm?zaction=auction&zmethod=details&AID=1530794&bypassPage=1",
    "appraiser_url": "http://gis.hcpafl.org/propertysearch/#/search/basic/folio=0831990000",
-   "lat": null,
-   "lng": null,
+   "lat": 28.005902,
+   "lng": -82.211061,
    "parcel_geometry": ""
   },
   {
